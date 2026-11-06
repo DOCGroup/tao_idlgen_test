@@ -22,21 +22,16 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:147
-
-#ifndef _TAO_IDL_BUG_3819_REGRESSIONC_Y5A8RX_H_
-#define _TAO_IDL_BUG_3819_REGRESSIONC_Y5A8RX_H_
+#ifndef _TAO_IDL_BUG_3819_REGRESSIONC_H_
+#define _TAO_IDL_BUG_3819_REGRESSIONC_H_
 
 #include /**/ "ace/pre.h"
-
 
 #include /**/ "ace/config-all.h"
 
 #if !defined (ACE_LACKS_PRAGMA_ONCE)
 # pragma once
 #endif /* ACE_LACKS_PRAGMA_ONCE */
-
 
 #include /**/ "TAO_IDL_TEST_stub_export.h"
 #include "tao/AnyTypeCode/AnyTypeCode_methods.h"
@@ -59,20 +54,10 @@
 #if TAO_MAJOR_VERSION != 4 || TAO_MINOR_VERSION != 0 || TAO_MICRO_VERSION != 8
 #error This file should be regenerated with TAO_IDL
 #endif
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_module/module_ch.cpp:34
-
 namespace orange
 {
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_module/module_ch.cpp:34
-
   namespace apple
   {
-    // TAO_IDL - Generated from
-    // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_valuetype.cpp:563
-
-    
 
 #if !defined (_ORANGE_APPLE_FOO__VAR_OUT_CH_)
 #define _ORANGE_APPLE_FOO__VAR_OUT_CH_
@@ -82,10 +67,6 @@ namespace orange
     using Foo_out = TAO_Value_Out_T<Foo>;
 
 #endif /* end #if !defined */
-    // TAO_IDL - Generated from
-    // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_valuetype.cpp:563
-
-    
 
 #if !defined (_ORANGE_APPLE_FOO__VAR_OUT_CH_)
 #define _ORANGE_APPLE_FOO__VAR_OUT_CH_
@@ -95,16 +76,12 @@ namespace orange
     using Foo_out = TAO_Value_Out_T<Foo>;
 
 #endif /* end #if !defined */
-    // TAO_IDL - Generated from
-    // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_interface.cpp:742
-
-    
 
 #if !defined (_ORANGE_APPLE_BAR__VAR_OUT_CH_)
 #define _ORANGE_APPLE_BAR__VAR_OUT_CH_
 
     class AMI_BarHandler;
-    typedef AMI_BarHandler *AMI_BarHandler_ptr;
+    using AMI_BarHandler_ptr = AMI_BarHandler *;
 
     class Bar;
     using Bar_ptr = Bar*;
@@ -112,16 +89,12 @@ namespace orange
     using Bar_out = TAO_Objref_Out_T<Bar>;
 
 #endif /* end #if !defined */
-    // TAO_IDL - Generated from
-    // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_interface.cpp:742
-
-    
 
 #if !defined (_ORANGE_APPLE_BAR__VAR_OUT_CH_)
 #define _ORANGE_APPLE_BAR__VAR_OUT_CH_
 
     class AMI_BarHandler;
-    typedef AMI_BarHandler *AMI_BarHandler_ptr;
+    using AMI_BarHandler_ptr = AMI_BarHandler *;
 
     class Bar;
     using Bar_ptr = Bar*;
@@ -129,41 +102,22 @@ namespace orange
     using Bar_out = TAO_Objref_Out_T<Bar>;
 
 #endif /* end #if !defined */
-  
-  
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_module/module_ch.cpp:62
 
-  
   } // module orange::apple
 
-
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_module/module_ch.cpp:62
-
-
 } // module orange
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_arg_traits.cpp:64
-
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
 
 // Arg traits specializations.
 namespace TAO
 {
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_arg_traits.cpp:298
-
-  
 
 #if !defined (_MESSAGING_EXCEPTIONHOLDER__ARG_TRAITS_)
 #define _MESSAGING_EXCEPTIONHOLDER__ARG_TRAITS_
 
   template<>
-  class Arg_Traits< ::Messaging::ExceptionHolder>
+  class Arg_Traits<::Messaging::ExceptionHolder>
     : public
         Object_Arg_Traits_T<
             ::Messaging::ExceptionHolder *,
@@ -176,16 +130,12 @@ namespace TAO
   };
 
 #endif /* end #if !defined */
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_arg_traits.cpp:298
-
-  
 
 #if !defined (_ORANGE_APPLE_FOO__ARG_TRAITS_)
 #define _ORANGE_APPLE_FOO__ARG_TRAITS_
 
   template<>
-  class Arg_Traits< ::orange::apple::Foo>
+  class Arg_Traits<::orange::apple::Foo>
     : public
         Object_Arg_Traits_T<
             ::orange::apple::Foo *,
@@ -198,16 +148,12 @@ namespace TAO
   };
 
 #endif /* end #if !defined */
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_arg_traits.cpp:298
-
-  
 
 #if !defined (_ORANGE_APPLE_FOO__ARG_TRAITS_)
 #define _ORANGE_APPLE_FOO__ARG_TRAITS_
 
   template<>
-  class Arg_Traits< ::orange::apple::Foo>
+  class Arg_Traits<::orange::apple::Foo>
     : public
         Object_Arg_Traits_T<
             ::orange::apple::Foo *,
@@ -220,16 +166,12 @@ namespace TAO
   };
 
 #endif /* end #if !defined */
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_arg_traits.cpp:142
-
-  
 
 #if !defined (_ORANGE_APPLE_BAR__ARG_TRAITS_)
 #define _ORANGE_APPLE_BAR__ARG_TRAITS_
 
   template<>
-  class  Arg_Traits< ::orange::apple::Bar>
+  class  Arg_Traits<::orange::apple::Bar>
     : public Object_Arg_Traits_T<
         ::orange::apple::Bar_ptr,
         ::orange::apple::Bar_var,
@@ -240,16 +182,12 @@ namespace TAO
   };
 
 #endif /* end #if !defined */
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_arg_traits.cpp:142
-
-  
 
 #if !defined (_ORANGE_APPLE_BAR__ARG_TRAITS_)
 #define _ORANGE_APPLE_BAR__ARG_TRAITS_
 
   template<>
-  class  Arg_Traits< ::orange::apple::Bar>
+  class  Arg_Traits<::orange::apple::Bar>
     : public Object_Arg_Traits_T<
         ::orange::apple::Bar_ptr,
         ::orange::apple::Bar_var,
@@ -264,23 +202,12 @@ namespace TAO
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/obv_module.cpp:43
-
 namespace OBV_orange
 {
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/obv_module.cpp:43
-
   namespace apple
   {
   }
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_traits.cpp:58
-
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
@@ -318,7 +245,7 @@ namespace TAO
 #define _ORANGE_APPLE_BAR__TRAITS_
 
   template<>
-  struct TAO_IDL_TEST_STUB_Export Objref_Traits< ::orange::apple::Bar>
+  struct TAO_IDL_TEST_STUB_Export Objref_Traits<::orange::apple::Bar>
   {
     static ::orange::apple::Bar_ptr duplicate (::orange::apple::Bar_ptr p);
     static void release (::orange::apple::Bar_ptr p);
@@ -332,7 +259,7 @@ namespace TAO
 #define _ORANGE_APPLE_BAR__TRAITS_
 
   template<>
-  struct TAO_IDL_TEST_STUB_Export Objref_Traits< ::orange::apple::Bar>
+  struct TAO_IDL_TEST_STUB_Export Objref_Traits<::orange::apple::Bar>
   {
     static ::orange::apple::Bar_ptr duplicate (::orange::apple::Bar_ptr p);
     static void release (::orange::apple::Bar_ptr p);
@@ -344,10 +271,14 @@ namespace TAO
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
+TAO_BEGIN_VERSIONED_NAMESPACE_DECL
+namespace CORBA {
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype_fwd/any_op_ch.cpp:54
-
+TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, orange::apple::Foo *); // copying
+TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, orange::apple::Foo **); // non-copying
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (const ::CORBA::Any &, orange::apple::Foo *&);
+}
+TAO_END_VERSIONED_NAMESPACE_DECL
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
@@ -358,52 +289,23 @@ TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (const ::CORBA::Any &, ora
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype_fwd/any_op_ch.cpp:54
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
 
-TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, orange::apple::Foo *); // copying
-TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, orange::apple::Foo **); // non-copying
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (const ::CORBA::Any &, orange::apple::Foo *&);
+TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, orange::apple::Bar_ptr); // copying
+TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, orange::apple::Bar_ptr *); // non-copying
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, orange::apple::Bar *&);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface_fwd/any_op_ch.cpp:48
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
 
 TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, orange::apple::Bar_ptr); // copying
 TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, orange::apple::Bar_ptr *); // non-copying
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (const ::CORBA::Any &, orange::apple::Bar *&);
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, orange::apple::Bar *&);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface_fwd/any_op_ch.cpp:48
-
-
-TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-namespace CORBA {
-
-TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, orange::apple::Bar_ptr); // copying
-TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, orange::apple::Bar_ptr *); // non-copying
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (const ::CORBA::Any &, orange::apple::Bar *&);
-}
-TAO_END_VERSIONED_NAMESPACE_DECL
-
-
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_valuetype.cpp:452
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
@@ -414,22 +316,12 @@ namespace CORBA
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype_fwd/cdr_op_ch.cpp:65
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, const orange::apple::Foo *);
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, orange::apple::Foo *&);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_valuetype.cpp:452
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
@@ -440,11 +332,6 @@ namespace CORBA
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype_fwd/cdr_op_ch.cpp:65
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, const orange::apple::Foo *);
@@ -452,33 +339,19 @@ TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, orange::ap
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface_fwd/cdr_op_ch.cpp:46
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, const orange::apple::Bar_ptr );
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, orange::apple::Bar_ptr const );
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, orange::apple::Bar_ptr &);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface_fwd/cdr_op_ch.cpp:46
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, const orange::apple::Bar_ptr );
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, orange::apple::Bar_ptr const );
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, orange::apple::Bar_ptr &);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:1644
 
 #if defined (__ACE_INLINE__)
 #include "Bug_3819_RegressionC.inl"

@@ -22,11 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:454
-
-#ifndef _TAO_IDL_SEQUENCES_49SMHU_H_
-#define _TAO_IDL_SEQUENCES_49SMHU_H_
+#ifndef _TAO_IDL_SEQUENCES_H_
+#define _TAO_IDL_SEQUENCES_H_
 
 #include /**/ "ace/pre.h"
 
@@ -43,29 +40,19 @@
 # pragma once
 #endif /* ACE_LACKS_PRAGMA_ONCE */
 
-
 #include /**/ "TAO_IDL_TEST_stub_export.h"
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_arg_traits.cpp:64
-
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
 
 // Arg traits specializations.
 namespace TAO
 {
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_arg_traits.cpp:298
-
-  
 
 #if !defined (_MESSAGING_EXCEPTIONHOLDER__SARG_TRAITS_)
 #define _MESSAGING_EXCEPTIONHOLDER__SARG_TRAITS_
 
   template<>
-  class SArg_Traits< ::Messaging::ExceptionHolder>
+  class SArg_Traits<::Messaging::ExceptionHolder>
     : public
         Object_SArg_Traits_T<
             ::Messaging::ExceptionHolder *,
@@ -77,13 +64,9 @@ namespace TAO
   };
 
 #endif /* end #if !defined */
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_arg_traits.cpp:671
-
-  
 
   template<>
-  class SArg_Traits< ::myfoostructseq>
+  class SArg_Traits<::myfoostructseq>
     : public
         Var_Size_SArg_Traits_T<
             ::myfoostructseq,
@@ -91,13 +74,9 @@ namespace TAO
           >
   {
   };
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_arg_traits.cpp:931
-
-  
 
   template<>
-  class SArg_Traits< ::myfoostruct>
+  class SArg_Traits<::myfoostruct>
     : public
         Var_Size_SArg_Traits_T<
             ::myfoostruct,
@@ -105,13 +84,9 @@ namespace TAO
           >
   {
   };
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_arg_traits.cpp:671
-
-  
 
   template<>
-  class SArg_Traits< ::OctetSeqSeq>
+  class SArg_Traits<::OctetSeqSeq>
     : public
         Var_Size_SArg_Traits_T<
             ::OctetSeqSeq,
@@ -119,13 +94,9 @@ namespace TAO
           >
   {
   };
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_arg_traits.cpp:671
-
-  
 
   template<>
-  class SArg_Traits< ::seqLocalSeq>
+  class SArg_Traits<::seqLocalSeq>
     : public
         Var_Size_SArg_Traits_T<
             ::seqLocalSeq,
@@ -133,13 +104,9 @@ namespace TAO
           >
   {
   };
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_arg_traits.cpp:671
-
-  
 
   template<>
-  class SArg_Traits< ::Deployment::ComponentPackageDescriptions>
+  class SArg_Traits<::Deployment::ComponentPackageDescriptions>
     : public
         Var_Size_SArg_Traits_T<
             ::Deployment::ComponentPackageDescriptions,
@@ -147,13 +114,9 @@ namespace TAO
           >
   {
   };
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_arg_traits.cpp:931
-
-  
 
   template<>
-  class SArg_Traits< ::Deployment::ComponentAssemblyDescription>
+  class SArg_Traits<::Deployment::ComponentAssemblyDescription>
     : public
         Var_Size_SArg_Traits_T<
             ::Deployment::ComponentAssemblyDescription,
@@ -161,13 +124,9 @@ namespace TAO
           >
   {
   };
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_arg_traits.cpp:671
-
-  
 
   template<>
-  class SArg_Traits< ::Deployment::ComponentAssemblyDescriptions>
+  class SArg_Traits<::Deployment::ComponentAssemblyDescriptions>
     : public
         Var_Size_SArg_Traits_T<
             ::Deployment::ComponentAssemblyDescriptions,
@@ -175,13 +134,9 @@ namespace TAO
           >
   {
   };
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_arg_traits.cpp:671
-
-  
 
   template<>
-  class SArg_Traits< ::Deployment::NamedImplementationArtifacts>
+  class SArg_Traits<::Deployment::NamedImplementationArtifacts>
     : public
         Var_Size_SArg_Traits_T<
             ::Deployment::NamedImplementationArtifacts,
@@ -189,13 +144,9 @@ namespace TAO
           >
   {
   };
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_arg_traits.cpp:931
-
-  
 
   template<>
-  class SArg_Traits< ::Deployment::NamedImplementationArtifact>
+  class SArg_Traits<::Deployment::NamedImplementationArtifact>
     : public
         Var_Size_SArg_Traits_T<
             ::Deployment::NamedImplementationArtifact,
@@ -203,13 +154,9 @@ namespace TAO
           >
   {
   };
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_arg_traits.cpp:931
-
-  
 
   template<>
-  class SArg_Traits< ::Deployment::MonolithicImplementationDescription>
+  class SArg_Traits<::Deployment::MonolithicImplementationDescription>
     : public
         Var_Size_SArg_Traits_T<
             ::Deployment::MonolithicImplementationDescription,
@@ -217,13 +164,9 @@ namespace TAO
           >
   {
   };
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_arg_traits.cpp:671
-
-  
 
   template<>
-  class SArg_Traits< ::Deployment::MonolithicImplementationDescriptions>
+  class SArg_Traits<::Deployment::MonolithicImplementationDescriptions>
     : public
         Var_Size_SArg_Traits_T<
             ::Deployment::MonolithicImplementationDescriptions,
@@ -231,13 +174,9 @@ namespace TAO
           >
   {
   };
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_arg_traits.cpp:931
-
-  
 
   template<>
-  class SArg_Traits< ::Deployment::PackagedComponentImplementation>
+  class SArg_Traits<::Deployment::PackagedComponentImplementation>
     : public
         Var_Size_SArg_Traits_T<
             ::Deployment::PackagedComponentImplementation,
@@ -245,13 +184,9 @@ namespace TAO
           >
   {
   };
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_arg_traits.cpp:671
-
-  
 
   template<>
-  class SArg_Traits< ::Deployment::PackagedComponentImplementations>
+  class SArg_Traits<::Deployment::PackagedComponentImplementations>
     : public
         Var_Size_SArg_Traits_T<
             ::Deployment::PackagedComponentImplementations,
@@ -259,13 +194,9 @@ namespace TAO
           >
   {
   };
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_arg_traits.cpp:931
-
-  
 
   template<>
-  class SArg_Traits< ::Deployment::ComponentPackageDescription>
+  class SArg_Traits<::Deployment::ComponentPackageDescription>
     : public
         Var_Size_SArg_Traits_T<
             ::Deployment::ComponentPackageDescription,
@@ -277,22 +208,12 @@ namespace TAO
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_module/module_sh.cpp:34
-
 namespace POA_Deployment
 {
-  
-
-
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_module/module_sh.cpp:65
 
 } // module Deployment
 
 #include "sequenceS_T.h"
-
 
 #include /**/ "ace/post.h"
 

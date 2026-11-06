@@ -27,12 +27,6 @@
 
 BEGIN_USER_VERSIONED_NAMESPACE
 
-
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ci.cpp:58
-
-
-
 ACE_INLINE
 M1::LI::LI (
     TAO_Stub *objref,
@@ -50,23 +44,16 @@ M1::LI::LI (
   : ::CORBA::Object (ior, oc)
 {
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_ci.cpp:43
-
 ACE_INLINE
 M1::AMH_LIExceptionHolder::AMH_LIExceptionHolder ()
   : exception (nullptr)
 {}
 
-ACE_INLINE const char*
+ACE_INLINE char const *
 M1::AMH_LIExceptionHolder::_tao_obv_static_repository_id ()
 {
   return "IDL:M1/AMH_LIExceptionHolder:1.0";
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ci.cpp:58
-
-
 
 ACE_INLINE
 M1::L2::L2 (
@@ -85,28 +72,19 @@ M1::L2::L2 (
   : ::CORBA::Object (ior, oc)
 {
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_ci.cpp:43
-
 ACE_INLINE
 M1::AMH_L2ExceptionHolder::AMH_L2ExceptionHolder ()
   : exception (nullptr)
 {}
 
-ACE_INLINE const char*
+ACE_INLINE char const *
 M1::AMH_L2ExceptionHolder::_tao_obv_static_repository_id ()
 {
   return "IDL:M1/AMH_L2ExceptionHolder:1.0";
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union/union_ci.cpp:35
-
 // *************************************************************
 // Inline operations for union M1::BooleanUnion1
 // *************************************************************
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union/discriminant_ci.cpp:302
-
 ACE_INLINE
 void
 M1::BooleanUnion1::_default ()
@@ -144,9 +122,6 @@ M1::BooleanUnion1::_d () const
 {
   return this->disc_;
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union_branch/public_ci.cpp:326
-
 /// Accessor to set the member.
 ACE_INLINE
 void
@@ -155,7 +130,7 @@ M1::BooleanUnion1::valLocalIface (M1::L2_ptr val)
   // Set the discriminant value.
   this->_reset ();
   this->disc_ = true;
-  typedef M1::L2_var OBJECT_FIELD;
+  using OBJECT_FIELD = M1::L2_var;
   ACE_NEW (
       this->u_.valLocalIface_,
       OBJECT_FIELD (
@@ -175,15 +150,9 @@ M1::BooleanUnion1::valLocalIface () const
     }
   return this->u_.valLocalIface_->in ();
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union/union_ci.cpp:35
-
 // *************************************************************
 // Inline operations for union M1::BooleanUnion2
 // *************************************************************
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union/discriminant_ci.cpp:302
-
 ACE_INLINE
 void
 M1::BooleanUnion2::_default ()
@@ -221,9 +190,6 @@ M1::BooleanUnion2::_d () const
 {
   return this->disc_;
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union_branch/public_ci.cpp:917
-
 /// Accessor to set the member.
 ACE_INLINE
 void
@@ -238,7 +204,7 @@ M1::BooleanUnion2::valLocalIface (char *val)
 // Accessor to set the member.
 ACE_INLINE
 void
-M1::BooleanUnion2::valLocalIface (const char *val)
+M1::BooleanUnion2::valLocalIface (char const *val)
 {
   // Set the discriminant value.
   this->_reset ();
@@ -250,7 +216,7 @@ M1::BooleanUnion2::valLocalIface (const char *val)
 /// Accessor to set the member.
 ACE_INLINE
 void
-M1::BooleanUnion2::valLocalIface (const ::CORBA::String_var &val)
+M1::BooleanUnion2::valLocalIface (::CORBA::String_var const &val)
 {
   // Set the discriminant value.
   this->_reset ();
@@ -261,7 +227,7 @@ M1::BooleanUnion2::valLocalIface (const ::CORBA::String_var &val)
 }
 
 ACE_INLINE
-const char *
+char const *
 M1::BooleanUnion2::valLocalIface () const // get method
 {
   if (_tao_member_index (this->disc_) != 0UL)
@@ -270,22 +236,15 @@ M1::BooleanUnion2::valLocalIface () const // get method
     }
   return this->u_.valLocalIface_;
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_ci.cpp:43
-
 ACE_INLINE
 M1::V::V ()
 {}
 
-ACE_INLINE const char*
+ACE_INLINE char const *
 M1::V::_tao_obv_static_repository_id ()
 {
   return "IDL:M1/V:1.0";
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ci.cpp:58
-
-
 
 ACE_INLINE
 M2::M3::L3::L3 (
@@ -304,23 +263,16 @@ M2::M3::L3::L3 (
   : ::CORBA::Object (ior, oc)
 {
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_ci.cpp:43
-
 ACE_INLINE
 M2::M3::AMH_L3ExceptionHolder::AMH_L3ExceptionHolder ()
   : exception (nullptr)
 {}
 
-ACE_INLINE const char*
+ACE_INLINE char const *
 M2::M3::AMH_L3ExceptionHolder::_tao_obv_static_repository_id ()
 {
   return "IDL:M2/M3/AMH_L3ExceptionHolder:1.0";
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ci.cpp:58
-
-
 
 ACE_INLINE
 M2::M3::L4::L4 (
@@ -339,45 +291,34 @@ M2::M3::L4::L4 (
   : ::CORBA::Object (ior, oc)
 {
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_ci.cpp:43
-
 ACE_INLINE
 M2::M3::AMH_L4ExceptionHolder::AMH_L4ExceptionHolder ()
   : exception (nullptr)
 {}
 
-ACE_INLINE const char*
+ACE_INLINE char const *
 M2::M3::AMH_L4ExceptionHolder::_tao_obv_static_repository_id ()
 {
   return "IDL:M2/M3/AMH_L4ExceptionHolder:1.0";
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_ci.cpp:43
-
 ACE_INLINE
 M2::M3::V2::V2 ()
 {}
 
-ACE_INLINE const char*
+ACE_INLINE char const *
 M2::M3::V2::_tao_obv_static_repository_id ()
 {
   return "IDL:M2/M3/V2:1.0";
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_ci.cpp:43
-
 ACE_INLINE
 M2::M3::V3::V3 ()
 {}
 
-ACE_INLINE const char*
+ACE_INLINE char const *
 M2::M3::V3::_tao_obv_static_repository_id ()
 {
   return "IDL:M2/M3/V3:1.0";
 }
 
-
 END_USER_VERSIONED_NAMESPACE
-
 

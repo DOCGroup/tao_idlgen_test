@@ -22,13 +22,7 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_array/array_ci.cpp:142
-
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
 
 ACE_INLINE
 void
@@ -41,7 +35,7 @@ TAO::Array_Traits<TEST_TYPE_forany>::free (
 ACE_INLINE
 TEST_TYPE_slice *
 TAO::Array_Traits<TEST_TYPE_forany>::dup (
-    const TEST_TYPE_slice * _tao_slice)
+    TEST_TYPE_slice const * _tao_slice)
 {
   return TEST_TYPE_dup (_tao_slice);
 }
@@ -50,7 +44,7 @@ ACE_INLINE
 void
 TAO::Array_Traits<TEST_TYPE_forany>::copy (
     TEST_TYPE_slice * _tao_to,
-    const TEST_TYPE_slice * _tao_from)
+    TEST_TYPE_slice const * _tao_from)
 {
   TEST_TYPE_copy (_tao_to, _tao_from);
 }
@@ -74,7 +68,5 @@ TAO::Array_Traits<TEST_TYPE_forany>::alloc ()
   return TEST_TYPE_alloc ();
 }
 
-
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 

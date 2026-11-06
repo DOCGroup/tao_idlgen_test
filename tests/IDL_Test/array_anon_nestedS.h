@@ -22,11 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:454
-
-#ifndef _TAO_IDL_ARRAY_ANON_NESTEDS_JPCOPX_H_
-#define _TAO_IDL_ARRAY_ANON_NESTEDS_JPCOPX_H_
+#ifndef _TAO_IDL_ARRAY_ANON_NESTEDS_H_
+#define _TAO_IDL_ARRAY_ANON_NESTEDS_H_
 
 #include /**/ "ace/pre.h"
 
@@ -43,29 +40,19 @@
 # pragma once
 #endif /* ACE_LACKS_PRAGMA_ONCE */
 
-
 #include /**/ "TAO_IDL_TEST_stub_export.h"
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_arg_traits.cpp:64
-
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
 
 // Arg traits specializations.
 namespace TAO
 {
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_arg_traits.cpp:298
-
-  
 
 #if !defined (_MESSAGING_EXCEPTIONHOLDER__SARG_TRAITS_)
 #define _MESSAGING_EXCEPTIONHOLDER__SARG_TRAITS_
 
   template<>
-  class SArg_Traits< ::Messaging::ExceptionHolder>
+  class SArg_Traits<::Messaging::ExceptionHolder>
     : public
         Object_SArg_Traits_T<
             ::Messaging::ExceptionHolder *,
@@ -77,13 +64,9 @@ namespace TAO
   };
 
 #endif /* end #if !defined */
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_arg_traits.cpp:931
-
-  
 
   template<>
-  class SArg_Traits< ::teststruct>
+  class SArg_Traits<::teststruct>
     : public
         Fixed_Size_SArg_Traits_T<
             ::teststruct,
@@ -91,13 +74,9 @@ namespace TAO
           >
   {
   };
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_arg_traits.cpp:931
-
-  
 
   template<>
-  class SArg_Traits< ::teststruct::embeddedstruct>
+  class SArg_Traits<::teststruct::embeddedstruct>
     : public
         Fixed_Size_SArg_Traits_T<
             ::teststruct::embeddedstruct,
@@ -109,10 +88,7 @@ namespace TAO
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 #include "array_anon_nestedS_T.h"
-
 
 #include /**/ "ace/post.h"
 

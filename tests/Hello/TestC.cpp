@@ -22,24 +22,17 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:370
-
-
 #include "TestC.h"
+#include <cstring>
 #include <memory>
 #include "tao/CDR.h"
 #include "tao/Exception_Data.h"
 #include "tao/Invocation_Adapter.h"
 #include "tao/Object_T.h"
-#include <cstring>
 
 #if !defined (__ACE_INLINE__)
 #include "TestC.inl"
 #endif /* !defined INLINE */
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_cs.cpp:47
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
@@ -64,16 +57,12 @@ TAO::Objref_Traits<Test::Hello>::nil ()
 }
 
 ::CORBA::Boolean
-TAO::Objref_Traits<Test::Hello>::marshal (const Test::Hello_ptr p,TAO_OutputCDR & cdr)
+TAO::Objref_Traits<Test::Hello>::marshal (Test::Hello_ptr const p,TAO_OutputCDR & cdr)
 {
   return ::CORBA::Object::marshal (p, cdr);
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/operation_cs.cpp:87
 
 char *
 Test::Hello::get_string ()
@@ -82,8 +71,8 @@ Test::Hello::get_string ()
     {
       ::CORBA::Object::tao_object_initialize (this);
     }
-  
-  TAO::Arg_Traits< char *>::ret_val _tao_retval;
+
+  TAO::Arg_Traits<char *>::ret_val _tao_retval;
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
@@ -107,9 +96,6 @@ Test::Hello::get_string ()
 
   return _tao_retval.retn ();
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/operation_cs.cpp:87
-
 void
 Test::Hello::shutdown ()
 {
@@ -117,8 +103,8 @@ Test::Hello::shutdown ()
     {
       ::CORBA::Object::tao_object_initialize (this);
     }
-  
-  TAO::Arg_Traits< void>::ret_val _tao_retval;
+
+  TAO::Arg_Traits<void>::ret_val _tao_retval;
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
@@ -178,12 +164,10 @@ Test::Hello::_tao_release (Hello_ptr obj)
 }
 
 ::CORBA::Boolean
-Test::Hello::_is_a (const char *value)
+Test::Hello::_is_a (char const *value)
 {
-  if (
-      std::strcmp (value, "IDL:Test/Hello:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0
-      )
+  if (std::strcmp (value, "IDL:Test/Hello:1.0") == 0 ||
+      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0)
     {
       return true; // success using local knowledge
     }
@@ -193,7 +177,7 @@ Test::Hello::_is_a (const char *value)
     }
 }
 
-const char* Test::Hello::_interface_repository_id () const
+char const *Test::Hello::_interface_repository_id () const
 {
   return "IDL:Test/Hello:1.0";
 }
@@ -203,15 +187,12 @@ Test::Hello::marshal (TAO_OutputCDR &cdr)
 {
   return (cdr << this);
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/cdr_op_cs.cpp:50
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean operator<< (
     TAO_OutputCDR &strm,
-    const Test::Hello_ptr _tao_objref)
+    Test::Hello_ptr const _tao_objref)
 {
   ::CORBA::Object_ptr _tao_corba_obj = _tao_objref;
   return (strm << _tao_corba_obj);
@@ -227,14 +208,12 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
     {
       return false;
     }
-  
+
   // Narrow to the right type.
-  _tao_objref = TAO::Narrow_Utils< ::Test::Hello>::unchecked_narrow (obj.in ());
+  _tao_objref = TAO::Narrow_Utils<::Test::Hello>::unchecked_narrow (obj.in ());
 
   return true;
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-
 

@@ -22,11 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:454
-
-#ifndef _TAO_IDL_AMI_TESTS_I6CQCR_H_
-#define _TAO_IDL_AMI_TESTS_I6CQCR_H_
+#ifndef _TAO_IDL_AMI_TESTS_H_
+#define _TAO_IDL_AMI_TESTS_H_
 
 #include /**/ "ace/pre.h"
 
@@ -49,27 +46,18 @@
 #include "tao/Messaging/MessagingS.h"
 #include "tao/PortableServer/PortableServer.h"
 #include "tao/PortableServer/Servant_Base.h"
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_arg_traits.cpp:64
-
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
 
 // Arg traits specializations.
 namespace TAO
 {
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_arg_traits.cpp:298
-
-  
 
 #if !defined (_MESSAGING_EXCEPTIONHOLDER__SARG_TRAITS_)
 #define _MESSAGING_EXCEPTIONHOLDER__SARG_TRAITS_
 
   template<>
-  class SArg_Traits< ::Messaging::ExceptionHolder>
+  class SArg_Traits<::Messaging::ExceptionHolder>
     : public
         Object_SArg_Traits_T<
             ::Messaging::ExceptionHolder *,
@@ -81,16 +69,12 @@ namespace TAO
   };
 
 #endif /* end #if !defined */
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_arg_traits.cpp:142
-
-  
 
 #if !defined (_A_AMI_TEST__SARG_TRAITS_)
 #define _A_AMI_TEST__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits< ::A::AMI_Test>
+  class  SArg_Traits<::A::AMI_Test>
     : public Object_SArg_Traits_T<
         ::A::AMI_Test_ptr,
         ::A::AMI_Test_var,
@@ -100,16 +84,12 @@ namespace TAO
   };
 
 #endif /* end #if !defined */
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_arg_traits.cpp:142
-
-  
 
 #if !defined (_A_AMI_AMI_TESTHANDLER__SARG_TRAITS_)
 #define _A_AMI_AMI_TESTHANDLER__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits< ::A::AMI_AMI_TestHandler>
+  class  SArg_Traits<::A::AMI_AMI_TestHandler>
     : public Object_SArg_Traits_T<
         ::A::AMI_AMI_TestHandler_ptr,
         ::A::AMI_AMI_TestHandler_var,
@@ -119,16 +99,12 @@ namespace TAO
   };
 
 #endif /* end #if !defined */
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_arg_traits.cpp:142
-
-  
 
 #if !defined (_A_TEST_CHILD__SARG_TRAITS_)
 #define _A_TEST_CHILD__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits< ::A::Test_Child>
+  class  SArg_Traits<::A::Test_Child>
     : public Object_SArg_Traits_T<
         ::A::Test_Child_ptr,
         ::A::Test_Child_var,
@@ -138,16 +114,12 @@ namespace TAO
   };
 
 #endif /* end #if !defined */
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_arg_traits.cpp:142
-
-  
 
 #if !defined (_A_AMI_TEST_CHILDHANDLER__SARG_TRAITS_)
 #define _A_AMI_TEST_CHILDHANDLER__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits< ::A::AMI_Test_ChildHandler>
+  class  SArg_Traits<::A::AMI_Test_ChildHandler>
     : public Object_SArg_Traits_T<
         ::A::AMI_Test_ChildHandler_ptr,
         ::A::AMI_Test_ChildHandler_var,
@@ -161,71 +133,51 @@ namespace TAO
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_module/module_sh.cpp:34
-
 namespace POA_A
 {
-  
-
-  
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_sh.cpp:72
-
-  
 
   class AMI_Test;
-  typedef AMI_Test *AMI_Test_ptr;
+  using AMI_Test_ptr = AMI_Test *;
 
   class  AMI_Test
     : public virtual PortableServer::ServantBase
   {
   protected:
     AMI_Test ();
-  
+
   public:
     /// Useful for template programming.
-    typedef ::A::AMI_Test _stub_type;
-    typedef ::A::AMI_Test_ptr _stub_ptr_type;
-    typedef ::A::AMI_Test_var _stub_var_type;
+    using _stub_type = ::A::AMI_Test;
+    using _stub_ptr_type = ::A::AMI_Test_ptr;
+    using _stub_var_type = ::A::AMI_Test_var;
 
-    AMI_Test (const AMI_Test& rhs) = default;
-    virtual ~AMI_Test () = default;
+    AMI_Test (AMI_Test const &rhs) = default;
+    ~AMI_Test () override = default;
 
-    virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
+    ::CORBA::Boolean _is_a (char const *logical_type_id) override;
 
-    virtual void _dispatch (
+    void _dispatch (
         TAO_ServerRequest & req,
-        TAO::Portable_Server::Servant_Upcall *servant_upcall);
-    
-    ::A::AMI_Test *_this ();
-    
-    virtual const char* _interface_repository_id () const;
-    // TAO_IDL - Generated from
-    // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/operation_sh.cpp:35
+        TAO::Portable_Server::Servant_Upcall *servant_upcall) override;
 
+    ::A::AMI_Test *_this ();
+
+    char const *_interface_repository_id () const override;
     virtual ::CORBA::Long foo (
       ::CORBA::Long_out out_l,
       ::CORBA::Long in_l,
-      const char * in_str) = 0;
+      char const * in_str) = 0;
 
     static void foo_skel (
         TAO_ServerRequest &server_request,
         TAO::Portable_Server::Servant_Upcall *servant_upcall,
         TAO_ServantBase *servant);
-    // TAO_IDL - Generated from
-    // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/operation_sh.cpp:35
-
     virtual ::CORBA::Long yadda () = 0;
 
     static void _get_yadda_skel (
         TAO_ServerRequest &server_request,
         TAO::Portable_Server::Servant_Upcall *servant_upcall,
         TAO_ServantBase *servant);
-    // TAO_IDL - Generated from
-    // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/operation_sh.cpp:35
-
     virtual void yadda (
       ::CORBA::Long yadda) = 0;
 
@@ -233,18 +185,12 @@ namespace POA_A
         TAO_ServerRequest &server_request,
         TAO::Portable_Server::Servant_Upcall *servant_upcall,
         TAO_ServantBase *servant);
-    // TAO_IDL - Generated from
-    // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/operation_sh.cpp:35
-
     virtual void shutdown () = 0;
 
     static void shutdown_skel (
         TAO_ServerRequest &server_request,
         TAO::Portable_Server::Servant_Upcall *servant_upcall,
         TAO_ServantBase *servant);
-    // TAO_IDL - Generated from
-    // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/operation_sh.cpp:35
-
     virtual void inout_arg_test (
       char *& str) = 0;
 
@@ -254,42 +200,33 @@ namespace POA_A
         TAO_ServantBase *servant);
   };
 
-  
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_sh.cpp:72
-
-  
-
   class AMI_AMI_TestHandler;
-  typedef AMI_AMI_TestHandler *AMI_AMI_TestHandler_ptr;
+  using AMI_AMI_TestHandler_ptr = AMI_AMI_TestHandler *;
 
   class  AMI_AMI_TestHandler
     : public virtual POA_Messaging::ReplyHandler
   {
   protected:
     AMI_AMI_TestHandler ();
-  
+
   public:
     /// Useful for template programming.
-    typedef ::A::AMI_AMI_TestHandler _stub_type;
-    typedef ::A::AMI_AMI_TestHandler_ptr _stub_ptr_type;
-    typedef ::A::AMI_AMI_TestHandler_var _stub_var_type;
+    using _stub_type = ::A::AMI_AMI_TestHandler;
+    using _stub_ptr_type = ::A::AMI_AMI_TestHandler_ptr;
+    using _stub_var_type = ::A::AMI_AMI_TestHandler_var;
 
-    AMI_AMI_TestHandler (const AMI_AMI_TestHandler& rhs) = default;
-    virtual ~AMI_AMI_TestHandler () = default;
+    AMI_AMI_TestHandler (AMI_AMI_TestHandler const &rhs) = default;
+    ~AMI_AMI_TestHandler () override = default;
 
-    virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
+    ::CORBA::Boolean _is_a (char const *logical_type_id) override;
 
-    virtual void _dispatch (
+    void _dispatch (
         TAO_ServerRequest & req,
-        TAO::Portable_Server::Servant_Upcall *servant_upcall);
-    
-    ::A::AMI_AMI_TestHandler *_this ();
-    
-    virtual const char* _interface_repository_id () const;
-    // TAO_IDL - Generated from
-    // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/operation_sh.cpp:35
+        TAO::Portable_Server::Servant_Upcall *servant_upcall) override;
 
+    ::A::AMI_AMI_TestHandler *_this ();
+
+    char const *_interface_repository_id () const override;
     virtual void foo (
       ::CORBA::Long ami_return_val,
       ::CORBA::Long out_l) = 0;
@@ -298,9 +235,6 @@ namespace POA_A
         TAO_ServerRequest &server_request,
         TAO::Portable_Server::Servant_Upcall *servant_upcall,
         TAO_ServantBase *servant);
-    // TAO_IDL - Generated from
-    // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/operation_sh.cpp:35
-
     virtual void foo_excep (
       ::Messaging::ExceptionHolder * excep_holder) = 0;
 
@@ -308,9 +242,6 @@ namespace POA_A
         TAO_ServerRequest &server_request,
         TAO::Portable_Server::Servant_Upcall *servant_upcall,
         TAO_ServantBase *servant);
-    // TAO_IDL - Generated from
-    // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/operation_sh.cpp:35
-
     virtual void get_yadda (
       ::CORBA::Long ami_return_val) = 0;
 
@@ -318,9 +249,6 @@ namespace POA_A
         TAO_ServerRequest &server_request,
         TAO::Portable_Server::Servant_Upcall *servant_upcall,
         TAO_ServantBase *servant);
-    // TAO_IDL - Generated from
-    // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/operation_sh.cpp:35
-
     virtual void get_yadda_excep (
       ::Messaging::ExceptionHolder * excep_holder) = 0;
 
@@ -328,18 +256,12 @@ namespace POA_A
         TAO_ServerRequest &server_request,
         TAO::Portable_Server::Servant_Upcall *servant_upcall,
         TAO_ServantBase *servant);
-    // TAO_IDL - Generated from
-    // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/operation_sh.cpp:35
-
     virtual void set_yadda () = 0;
 
     static void set_yadda_skel (
         TAO_ServerRequest &server_request,
         TAO::Portable_Server::Servant_Upcall *servant_upcall,
         TAO_ServantBase *servant);
-    // TAO_IDL - Generated from
-    // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/operation_sh.cpp:35
-
     virtual void set_yadda_excep (
       ::Messaging::ExceptionHolder * excep_holder) = 0;
 
@@ -347,19 +269,13 @@ namespace POA_A
         TAO_ServerRequest &server_request,
         TAO::Portable_Server::Servant_Upcall *servant_upcall,
         TAO_ServantBase *servant);
-    // TAO_IDL - Generated from
-    // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/operation_sh.cpp:35
-
     virtual void inout_arg_test (
-      const char * str) = 0;
+      char const * str) = 0;
 
     static void inout_arg_test_skel (
         TAO_ServerRequest &server_request,
         TAO::Portable_Server::Servant_Upcall *servant_upcall,
         TAO_ServantBase *servant);
-    // TAO_IDL - Generated from
-    // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/operation_sh.cpp:35
-
     virtual void inout_arg_test_excep (
       ::Messaging::ExceptionHolder * excep_holder) = 0;
 
@@ -369,42 +285,33 @@ namespace POA_A
         TAO_ServantBase *servant);
   };
 
-  
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_sh.cpp:72
-
-  
-
   class Test_Child;
-  typedef Test_Child *Test_Child_ptr;
+  using Test_Child_ptr = Test_Child *;
 
   class  Test_Child
     : public virtual POA_A::AMI_Test
   {
   protected:
     Test_Child ();
-  
+
   public:
     /// Useful for template programming.
-    typedef ::A::Test_Child _stub_type;
-    typedef ::A::Test_Child_ptr _stub_ptr_type;
-    typedef ::A::Test_Child_var _stub_var_type;
+    using _stub_type = ::A::Test_Child;
+    using _stub_ptr_type = ::A::Test_Child_ptr;
+    using _stub_var_type = ::A::Test_Child_var;
 
-    Test_Child (const Test_Child& rhs) = default;
-    virtual ~Test_Child () = default;
+    Test_Child (Test_Child const &rhs) = default;
+    ~Test_Child () override = default;
 
-    virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
+    ::CORBA::Boolean _is_a (char const *logical_type_id) override;
 
-    virtual void _dispatch (
+    void _dispatch (
         TAO_ServerRequest & req,
-        TAO::Portable_Server::Servant_Upcall *servant_upcall);
-    
-    ::A::Test_Child *_this ();
-    
-    virtual const char* _interface_repository_id () const;
-    // TAO_IDL - Generated from
-    // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/operation_sh.cpp:35
+        TAO::Portable_Server::Servant_Upcall *servant_upcall) override;
 
+    ::A::Test_Child *_this ();
+
+    char const *_interface_repository_id () const override;
     virtual void child_op () = 0;
 
     static void child_op_skel (
@@ -413,51 +320,39 @@ namespace POA_A
         TAO_ServantBase *servant);
   };
 
-  
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_sh.cpp:72
-
-  
-
   class AMI_Test_ChildHandler;
-  typedef AMI_Test_ChildHandler *AMI_Test_ChildHandler_ptr;
+  using AMI_Test_ChildHandler_ptr = AMI_Test_ChildHandler *;
 
   class  AMI_Test_ChildHandler
     : public virtual POA_A::AMI_AMI_TestHandler
   {
   protected:
     AMI_Test_ChildHandler ();
-  
+
   public:
     /// Useful for template programming.
-    typedef ::A::AMI_Test_ChildHandler _stub_type;
-    typedef ::A::AMI_Test_ChildHandler_ptr _stub_ptr_type;
-    typedef ::A::AMI_Test_ChildHandler_var _stub_var_type;
+    using _stub_type = ::A::AMI_Test_ChildHandler;
+    using _stub_ptr_type = ::A::AMI_Test_ChildHandler_ptr;
+    using _stub_var_type = ::A::AMI_Test_ChildHandler_var;
 
-    AMI_Test_ChildHandler (const AMI_Test_ChildHandler& rhs) = default;
-    virtual ~AMI_Test_ChildHandler () = default;
+    AMI_Test_ChildHandler (AMI_Test_ChildHandler const &rhs) = default;
+    ~AMI_Test_ChildHandler () override = default;
 
-    virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
+    ::CORBA::Boolean _is_a (char const *logical_type_id) override;
 
-    virtual void _dispatch (
+    void _dispatch (
         TAO_ServerRequest & req,
-        TAO::Portable_Server::Servant_Upcall *servant_upcall);
-    
-    ::A::AMI_Test_ChildHandler *_this ();
-    
-    virtual const char* _interface_repository_id () const;
-    // TAO_IDL - Generated from
-    // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/operation_sh.cpp:35
+        TAO::Portable_Server::Servant_Upcall *servant_upcall) override;
 
+    ::A::AMI_Test_ChildHandler *_this ();
+
+    char const *_interface_repository_id () const override;
     virtual void child_op () = 0;
 
     static void child_op_skel (
         TAO_ServerRequest &server_request,
         TAO::Portable_Server::Servant_Upcall *servant_upcall,
         TAO_ServantBase *servant);
-    // TAO_IDL - Generated from
-    // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/operation_sh.cpp:35
-
     virtual void child_op_excep (
       ::Messaging::ExceptionHolder * excep_holder) = 0;
 
@@ -466,10 +361,6 @@ namespace POA_A
         TAO::Portable_Server::Servant_Upcall *servant_upcall,
         TAO_ServantBase *servant);
   };
-
-
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_module/module_sh.cpp:65
 
 } // module A
 

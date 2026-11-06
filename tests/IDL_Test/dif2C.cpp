@@ -22,11 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:370
-
-
 #include "dif2C.h"
+#include <cstring>
 #include <memory>
 #include "tao/CDR.h"
 #include "tao/Exception_Data.h"
@@ -34,14 +31,10 @@
 #include "tao/Messaging/Asynch_Invocation_Adapter.h"
 #include "tao/Messaging/ExceptionHolder_i.h"
 #include "tao/Object_T.h"
-#include <cstring>
 
 #if !defined (__ACE_INLINE__)
 #include "dif2C.inl"
 #endif /* !defined INLINE */
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_cs.cpp:47
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
@@ -66,16 +59,12 @@ TAO::Objref_Traits<OldDif2::ex1>::nil ()
 }
 
 ::CORBA::Boolean
-TAO::Objref_Traits<OldDif2::ex1>::marshal (const OldDif2::ex1_ptr p,TAO_OutputCDR & cdr)
+TAO::Objref_Traits<OldDif2::ex1>::marshal (OldDif2::ex1_ptr const p,TAO_OutputCDR & cdr)
 {
   return ::CORBA::Object::marshal (p, cdr);
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/operation_cs.cpp:87
 
 void
 OldDif2::ex1::op0 ()
@@ -84,8 +73,8 @@ OldDif2::ex1::op0 ()
     {
       ::CORBA::Object::tao_object_initialize (this);
     }
-  
-  TAO::Arg_Traits< void>::ret_val _tao_retval;
+
+  TAO::Arg_Traits<void>::ret_val _tao_retval;
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
@@ -107,9 +96,6 @@ OldDif2::ex1::op0 ()
 
   _invocation_call.invoke (nullptr, 0);
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/operation_cs.cpp:87
-
 ::CORBA::Float
 OldDif2::ex1::op1 (
   ::CORBA::Float f,
@@ -120,11 +106,11 @@ OldDif2::ex1::op1 (
     {
       ::CORBA::Object::tao_object_initialize (this);
     }
-  
-  TAO::Arg_Traits< ::CORBA::Float>::ret_val _tao_retval;
-  TAO::Arg_Traits< ::CORBA::Float>::in_arg_val _tao_f (f);
-  TAO::Arg_Traits< ::CORBA::Double>::out_arg_val _tao_d (d);
-  TAO::Arg_Traits< ::CORBA::Long>::inout_arg_val _tao_l (l);
+
+  TAO::Arg_Traits<::CORBA::Float>::ret_val _tao_retval;
+  TAO::Arg_Traits<::CORBA::Float>::in_arg_val _tao_f (f);
+  TAO::Arg_Traits<::CORBA::Double>::out_arg_val _tao_d (d);
+  TAO::Arg_Traits<::CORBA::Long>::inout_arg_val _tao_l (l);
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
@@ -141,16 +127,13 @@ OldDif2::ex1::op1 (
       "op1",
       3,
       TAO::TAO_CO_NONE | TAO::TAO_CO_DIRECT_STRATEGY | TAO::TAO_CO_THRU_POA_STRATEGY
-      
+
     );
 
   _invocation_call.invoke (nullptr, 0);
 
   return _tao_retval.retn ();
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/operation_cs.cpp:87
-
 ::CORBA::Double
 OldDif2::ex1::op2 (
   ::CORBA::Double d,
@@ -161,11 +144,11 @@ OldDif2::ex1::op2 (
     {
       ::CORBA::Object::tao_object_initialize (this);
     }
-  
-  TAO::Arg_Traits< ::CORBA::Double>::ret_val _tao_retval;
-  TAO::Arg_Traits< ::CORBA::Double>::in_arg_val _tao_d (d);
-  TAO::Arg_Traits< ::CORBA::Long>::out_arg_val _tao_l (l);
-  TAO::Arg_Traits< ::CORBA::Short>::inout_arg_val _tao_s (s);
+
+  TAO::Arg_Traits<::CORBA::Double>::ret_val _tao_retval;
+  TAO::Arg_Traits<::CORBA::Double>::in_arg_val _tao_d (d);
+  TAO::Arg_Traits<::CORBA::Long>::out_arg_val _tao_l (l);
+  TAO::Arg_Traits<::CORBA::Short>::inout_arg_val _tao_s (s);
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
@@ -182,16 +165,13 @@ OldDif2::ex1::op2 (
       "op2",
       3,
       TAO::TAO_CO_NONE | TAO::TAO_CO_DIRECT_STRATEGY | TAO::TAO_CO_THRU_POA_STRATEGY
-      
+
     );
 
   _invocation_call.invoke (nullptr, 0);
 
   return _tao_retval.retn ();
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/operation_cs.cpp:87
-
 ::CORBA::Long
 OldDif2::ex1::op3 (
   ::CORBA::Long l,
@@ -202,11 +182,11 @@ OldDif2::ex1::op3 (
     {
       ::CORBA::Object::tao_object_initialize (this);
     }
-  
-  TAO::Arg_Traits< ::CORBA::Long>::ret_val _tao_retval;
-  TAO::Arg_Traits< ::CORBA::Long>::in_arg_val _tao_l (l);
-  TAO::Arg_Traits< ::CORBA::Short>::out_arg_val _tao_s (s);
-  TAO::Arg_Traits< ::CORBA::ULong>::inout_arg_val _tao_ul (ul);
+
+  TAO::Arg_Traits<::CORBA::Long>::ret_val _tao_retval;
+  TAO::Arg_Traits<::CORBA::Long>::in_arg_val _tao_l (l);
+  TAO::Arg_Traits<::CORBA::Short>::out_arg_val _tao_s (s);
+  TAO::Arg_Traits<::CORBA::ULong>::inout_arg_val _tao_ul (ul);
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
@@ -223,16 +203,13 @@ OldDif2::ex1::op3 (
       "op3",
       3,
       TAO::TAO_CO_NONE | TAO::TAO_CO_DIRECT_STRATEGY | TAO::TAO_CO_THRU_POA_STRATEGY
-      
+
     );
 
   _invocation_call.invoke (nullptr, 0);
 
   return _tao_retval.retn ();
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/operation_cs.cpp:87
-
 ::CORBA::Short
 OldDif2::ex1::op4 (
   ::CORBA::Short s,
@@ -243,11 +220,11 @@ OldDif2::ex1::op4 (
     {
       ::CORBA::Object::tao_object_initialize (this);
     }
-  
-  TAO::Arg_Traits< ::CORBA::Short>::ret_val _tao_retval;
-  TAO::Arg_Traits< ::CORBA::Short>::in_arg_val _tao_s (s);
-  TAO::Arg_Traits< ::CORBA::ULong>::out_arg_val _tao_ul (ul);
-  TAO::Arg_Traits< ::CORBA::UShort>::inout_arg_val _tao_us (us);
+
+  TAO::Arg_Traits<::CORBA::Short>::ret_val _tao_retval;
+  TAO::Arg_Traits<::CORBA::Short>::in_arg_val _tao_s (s);
+  TAO::Arg_Traits<::CORBA::ULong>::out_arg_val _tao_ul (ul);
+  TAO::Arg_Traits<::CORBA::UShort>::inout_arg_val _tao_us (us);
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
@@ -264,16 +241,13 @@ OldDif2::ex1::op4 (
       "op4",
       3,
       TAO::TAO_CO_NONE | TAO::TAO_CO_DIRECT_STRATEGY | TAO::TAO_CO_THRU_POA_STRATEGY
-      
+
     );
 
   _invocation_call.invoke (nullptr, 0);
 
   return _tao_retval.retn ();
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/operation_cs.cpp:87
-
 ::CORBA::ULong
 OldDif2::ex1::op5 (
   ::CORBA::ULong & ul,
@@ -285,12 +259,12 @@ OldDif2::ex1::op5 (
     {
       ::CORBA::Object::tao_object_initialize (this);
     }
-  
-  TAO::Arg_Traits< ::CORBA::ULong>::ret_val _tao_retval;
-  TAO::Arg_Traits< ::CORBA::ULong>::inout_arg_val _tao_ul (ul);
-  TAO::Arg_Traits< ::CORBA::UShort>::in_arg_val _tao_us (us);
-  TAO::Arg_Traits< ::ACE_InputCDR::to_char>::out_arg_val _tao_c (c);
-  TAO::Arg_Traits< ::ACE_InputCDR::to_boolean>::in_arg_val _tao_b (b);
+
+  TAO::Arg_Traits<::CORBA::ULong>::ret_val _tao_retval;
+  TAO::Arg_Traits<::CORBA::ULong>::inout_arg_val _tao_ul (ul);
+  TAO::Arg_Traits<::CORBA::UShort>::in_arg_val _tao_us (us);
+  TAO::Arg_Traits<::ACE_InputCDR::to_char>::out_arg_val _tao_c (c);
+  TAO::Arg_Traits<::ACE_InputCDR::to_boolean>::in_arg_val _tao_b (b);
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
@@ -308,16 +282,13 @@ OldDif2::ex1::op5 (
       "op5",
       3,
       TAO::TAO_CO_NONE | TAO::TAO_CO_DIRECT_STRATEGY | TAO::TAO_CO_THRU_POA_STRATEGY
-      
+
     );
 
   _invocation_call.invoke (nullptr, 0);
 
   return _tao_retval.retn ();
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/operation_cs.cpp:87
-
 ::CORBA::UShort
 OldDif2::ex1::op6 (
   ::CORBA::UShort_out us,
@@ -327,10 +298,10 @@ OldDif2::ex1::op6 (
     {
       ::CORBA::Object::tao_object_initialize (this);
     }
-  
-  TAO::Arg_Traits< ::CORBA::UShort>::ret_val _tao_retval;
-  TAO::Arg_Traits< ::CORBA::UShort>::out_arg_val _tao_us (us);
-  TAO::Arg_Traits< ::ACE_InputCDR::to_char>::inout_arg_val _tao_c (c);
+
+  TAO::Arg_Traits<::CORBA::UShort>::ret_val _tao_retval;
+  TAO::Arg_Traits<::CORBA::UShort>::out_arg_val _tao_us (us);
+  TAO::Arg_Traits<::ACE_InputCDR::to_char>::inout_arg_val _tao_c (c);
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
@@ -346,17 +317,13 @@ OldDif2::ex1::op6 (
       "op6",
       3,
       TAO::TAO_CO_NONE | TAO::TAO_CO_DIRECT_STRATEGY | TAO::TAO_CO_THRU_POA_STRATEGY
-      
+
     );
 
   _invocation_call.invoke (nullptr, 0);
 
   return _tao_retval.retn ();
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/ami_cs.cpp:54
-
-
 
 void
 OldDif2::ex1::sendc_op0 (
@@ -366,8 +333,6 @@ OldDif2::ex1::sendc_op0 (
     {
       ::CORBA::Object::tao_object_initialize (this);
     }
-  
-  
 
   TAO::Argument ** _the_tao_operation_signature {};
 
@@ -385,10 +350,6 @@ OldDif2::ex1::sendc_op0 (
       &OldDif2::AMI_ex1Handler::op0_reply_stub
     );
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/ami_cs.cpp:54
-
-
 
 void
 OldDif2::ex1::sendc_op1 (
@@ -400,12 +361,10 @@ OldDif2::ex1::sendc_op1 (
     {
       ::CORBA::Object::tao_object_initialize (this);
     }
-  
-  
-  
+
   TAO::Arg_Traits<void>::ret_val _tao_retval;
-  TAO::Arg_Traits< ::CORBA::Float>::in_arg_val _tao_f (f);
-  TAO::Arg_Traits< ::CORBA::Long>::in_arg_val _tao_l (l);
+  TAO::Arg_Traits<::CORBA::Float>::in_arg_val _tao_f (f);
+  TAO::Arg_Traits<::CORBA::Long>::in_arg_val _tao_l (l);
 
   TAO::Argument *_the_tao_operation_signature[] =
     {
@@ -428,10 +387,6 @@ OldDif2::ex1::sendc_op1 (
       &OldDif2::AMI_ex1Handler::op1_reply_stub
     );
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/ami_cs.cpp:54
-
-
 
 void
 OldDif2::ex1::sendc_op2 (
@@ -443,12 +398,10 @@ OldDif2::ex1::sendc_op2 (
     {
       ::CORBA::Object::tao_object_initialize (this);
     }
-  
-  
-  
+
   TAO::Arg_Traits<void>::ret_val _tao_retval;
-  TAO::Arg_Traits< ::CORBA::Double>::in_arg_val _tao_d (d);
-  TAO::Arg_Traits< ::CORBA::Short>::in_arg_val _tao_s (s);
+  TAO::Arg_Traits<::CORBA::Double>::in_arg_val _tao_d (d);
+  TAO::Arg_Traits<::CORBA::Short>::in_arg_val _tao_s (s);
 
   TAO::Argument *_the_tao_operation_signature[] =
     {
@@ -471,10 +424,6 @@ OldDif2::ex1::sendc_op2 (
       &OldDif2::AMI_ex1Handler::op2_reply_stub
     );
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/ami_cs.cpp:54
-
-
 
 void
 OldDif2::ex1::sendc_op3 (
@@ -486,12 +435,10 @@ OldDif2::ex1::sendc_op3 (
     {
       ::CORBA::Object::tao_object_initialize (this);
     }
-  
-  
-  
+
   TAO::Arg_Traits<void>::ret_val _tao_retval;
-  TAO::Arg_Traits< ::CORBA::Long>::in_arg_val _tao_l (l);
-  TAO::Arg_Traits< ::CORBA::ULong>::in_arg_val _tao_ul (ul);
+  TAO::Arg_Traits<::CORBA::Long>::in_arg_val _tao_l (l);
+  TAO::Arg_Traits<::CORBA::ULong>::in_arg_val _tao_ul (ul);
 
   TAO::Argument *_the_tao_operation_signature[] =
     {
@@ -514,10 +461,6 @@ OldDif2::ex1::sendc_op3 (
       &OldDif2::AMI_ex1Handler::op3_reply_stub
     );
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/ami_cs.cpp:54
-
-
 
 void
 OldDif2::ex1::sendc_op4 (
@@ -529,12 +472,10 @@ OldDif2::ex1::sendc_op4 (
     {
       ::CORBA::Object::tao_object_initialize (this);
     }
-  
-  
-  
+
   TAO::Arg_Traits<void>::ret_val _tao_retval;
-  TAO::Arg_Traits< ::CORBA::Short>::in_arg_val _tao_s (s);
-  TAO::Arg_Traits< ::CORBA::UShort>::in_arg_val _tao_us (us);
+  TAO::Arg_Traits<::CORBA::Short>::in_arg_val _tao_s (s);
+  TAO::Arg_Traits<::CORBA::UShort>::in_arg_val _tao_us (us);
 
   TAO::Argument *_the_tao_operation_signature[] =
     {
@@ -557,10 +498,6 @@ OldDif2::ex1::sendc_op4 (
       &OldDif2::AMI_ex1Handler::op4_reply_stub
     );
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/ami_cs.cpp:54
-
-
 
 void
 OldDif2::ex1::sendc_op5 (
@@ -573,13 +510,11 @@ OldDif2::ex1::sendc_op5 (
     {
       ::CORBA::Object::tao_object_initialize (this);
     }
-  
-  
-  
+
   TAO::Arg_Traits<void>::ret_val _tao_retval;
-  TAO::Arg_Traits< ::CORBA::ULong>::in_arg_val _tao_ul (ul);
-  TAO::Arg_Traits< ::CORBA::UShort>::in_arg_val _tao_us (us);
-  TAO::Arg_Traits< ::ACE_InputCDR::to_boolean>::in_arg_val _tao_b (b);
+  TAO::Arg_Traits<::CORBA::ULong>::in_arg_val _tao_ul (ul);
+  TAO::Arg_Traits<::CORBA::UShort>::in_arg_val _tao_us (us);
+  TAO::Arg_Traits<::ACE_InputCDR::to_boolean>::in_arg_val _tao_b (b);
 
   TAO::Argument *_the_tao_operation_signature[] =
     {
@@ -603,10 +538,6 @@ OldDif2::ex1::sendc_op5 (
       &OldDif2::AMI_ex1Handler::op5_reply_stub
     );
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/ami_cs.cpp:54
-
-
 
 void
 OldDif2::ex1::sendc_op6 (
@@ -617,11 +548,9 @@ OldDif2::ex1::sendc_op6 (
     {
       ::CORBA::Object::tao_object_initialize (this);
     }
-  
-  
-  
+
   TAO::Arg_Traits<void>::ret_val _tao_retval;
-  TAO::Arg_Traits< ::ACE_InputCDR::to_char>::in_arg_val _tao_c (c);
+  TAO::Arg_Traits<::ACE_InputCDR::to_char>::in_arg_val _tao_c (c);
 
   TAO::Argument *_the_tao_operation_signature[] =
     {
@@ -689,12 +618,10 @@ OldDif2::ex1::_tao_release (ex1_ptr obj)
 }
 
 ::CORBA::Boolean
-OldDif2::ex1::_is_a (const char *value)
+OldDif2::ex1::_is_a (char const *value)
 {
-  if (
-      std::strcmp (value, "IDL:OldDif2/ex1:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0
-      )
+  if (std::strcmp (value, "IDL:OldDif2/ex1:1.0") == 0 ||
+      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0)
     {
       return true; // success using local knowledge
     }
@@ -704,17 +631,17 @@ OldDif2::ex1::_is_a (const char *value)
     }
 }
 
-const char* OldDif2::ex1::_interface_repository_id () const
+char const *OldDif2::ex1::_interface_repository_id () const
 {
   return "IDL:OldDif2/ex1:1.0";
 }
 
-const char* OldDif2::ex1::_desc_repository_id ()
+char const *OldDif2::ex1::_desc_repository_id ()
 {
   return "IDL:OldDif2/ex1:1.0";
 }
 
-const char* OldDif2::ex1::_desc_interface_name ()
+char const *OldDif2::ex1::_desc_interface_name ()
 {
   return "ex1";
 }
@@ -724,13 +651,8 @@ OldDif2::ex1::marshal (TAO_OutputCDR &cdr)
 {
   return (cdr << this);
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_cs.cpp:52
-
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
 
 void
 TAO::Value_Traits<OldDif2::AMH_ex1ExceptionHolder>::add_ref (OldDif2::AMH_ex1ExceptionHolder * p)
@@ -752,15 +674,13 @@ TAO::Value_Traits<OldDif2::AMH_ex1ExceptionHolder>::release (OldDif2::AMH_ex1Exc
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 OldDif2::AMH_ex1ExceptionHolder *
 OldDif2::AMH_ex1ExceptionHolder::_downcast (::CORBA::ValueBase *v)
 {
   return dynamic_cast<::OldDif2::AMH_ex1ExceptionHolder *> (v);
 }
 
-const char *
+char const *
 OldDif2::AMH_ex1ExceptionHolder::_tao_obv_repository_id () const
 {
   return this->_tao_obv_static_repository_id ();
@@ -839,173 +759,127 @@ OldDif2::AMH_ex1ExceptionHolder::_tao_unmarshal (
         is_null_object,
         is_indirected
       );
-  
+
   ::CORBA::ValueBase_var owner (base);
 
   if (!retval)
     return false;
-  
+
   if (is_null_object)
     return true;
-  
+
   if (!is_indirected && !base->_tao_unmarshal_v (strm))
     return false;
-  
+
   // Now base must point to the unmarshaled object.
   // Align the pointer to the right subobject.
   new_object = AMH_ex1ExceptionHolder::_downcast (base);
   if (nullptr == new_object)
     return false;
-  
+
   if (is_indirected)
     new_object->_add_ref ();
-  
+
   owner._retn ();
   return true;
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_cs.cpp:440
-
 void
 OldDif2::AMH_ex1ExceptionHolder::raise_op0 ()
 {
-  std::unique_ptr< ::CORBA::Exception> safety (this->exception);
+  std::unique_ptr<::CORBA::Exception> safety (this->exception);
   this->exception->_raise ();
 }
-
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_cs.cpp:440
 
 void
 OldDif2::AMH_ex1ExceptionHolder::raise_op1 ()
 {
-  std::unique_ptr< ::CORBA::Exception> safety (this->exception);
+  std::unique_ptr<::CORBA::Exception> safety (this->exception);
   this->exception->_raise ();
 }
-
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_cs.cpp:440
 
 void
 OldDif2::AMH_ex1ExceptionHolder::raise_op2 ()
 {
-  std::unique_ptr< ::CORBA::Exception> safety (this->exception);
+  std::unique_ptr<::CORBA::Exception> safety (this->exception);
   this->exception->_raise ();
 }
-
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_cs.cpp:440
 
 void
 OldDif2::AMH_ex1ExceptionHolder::raise_op3 ()
 {
-  std::unique_ptr< ::CORBA::Exception> safety (this->exception);
+  std::unique_ptr<::CORBA::Exception> safety (this->exception);
   this->exception->_raise ();
 }
-
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_cs.cpp:440
 
 void
 OldDif2::AMH_ex1ExceptionHolder::raise_op4 ()
 {
-  std::unique_ptr< ::CORBA::Exception> safety (this->exception);
+  std::unique_ptr<::CORBA::Exception> safety (this->exception);
   this->exception->_raise ();
 }
-
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_cs.cpp:440
 
 void
 OldDif2::AMH_ex1ExceptionHolder::raise_op5 ()
 {
-  std::unique_ptr< ::CORBA::Exception> safety (this->exception);
+  std::unique_ptr<::CORBA::Exception> safety (this->exception);
   this->exception->_raise ();
 }
-
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_cs.cpp:440
 
 void
 OldDif2::AMH_ex1ExceptionHolder::raise_op6 ()
 {
-  std::unique_ptr< ::CORBA::Exception> safety (this->exception);
+  std::unique_ptr<::CORBA::Exception> safety (this->exception);
   this->exception->_raise ();
 }
-
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_cs.cpp:440
 
 void
 OldDif2::AMH_ex1ExceptionHolder::raise_sendc_op0 ()
 {
-  std::unique_ptr< ::CORBA::Exception> safety (this->exception);
+  std::unique_ptr<::CORBA::Exception> safety (this->exception);
   this->exception->_raise ();
 }
-
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_cs.cpp:440
 
 void
 OldDif2::AMH_ex1ExceptionHolder::raise_sendc_op1 ()
 {
-  std::unique_ptr< ::CORBA::Exception> safety (this->exception);
+  std::unique_ptr<::CORBA::Exception> safety (this->exception);
   this->exception->_raise ();
 }
-
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_cs.cpp:440
 
 void
 OldDif2::AMH_ex1ExceptionHolder::raise_sendc_op2 ()
 {
-  std::unique_ptr< ::CORBA::Exception> safety (this->exception);
+  std::unique_ptr<::CORBA::Exception> safety (this->exception);
   this->exception->_raise ();
 }
-
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_cs.cpp:440
 
 void
 OldDif2::AMH_ex1ExceptionHolder::raise_sendc_op3 ()
 {
-  std::unique_ptr< ::CORBA::Exception> safety (this->exception);
+  std::unique_ptr<::CORBA::Exception> safety (this->exception);
   this->exception->_raise ();
 }
-
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_cs.cpp:440
 
 void
 OldDif2::AMH_ex1ExceptionHolder::raise_sendc_op4 ()
 {
-  std::unique_ptr< ::CORBA::Exception> safety (this->exception);
+  std::unique_ptr<::CORBA::Exception> safety (this->exception);
   this->exception->_raise ();
 }
-
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_cs.cpp:440
 
 void
 OldDif2::AMH_ex1ExceptionHolder::raise_sendc_op5 ()
 {
-  std::unique_ptr< ::CORBA::Exception> safety (this->exception);
+  std::unique_ptr<::CORBA::Exception> safety (this->exception);
   this->exception->_raise ();
 }
-
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_cs.cpp:440
 
 void
 OldDif2::AMH_ex1ExceptionHolder::raise_sendc_op6 ()
 {
-  std::unique_ptr< ::CORBA::Exception> safety (this->exception);
+  std::unique_ptr<::CORBA::Exception> safety (this->exception);
   this->exception->_raise ();
 }
-
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_cs.cpp:47
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
@@ -1030,14 +904,12 @@ TAO::Objref_Traits<OldDif2::AMH_ex1ResponseHandler>::nil ()
 }
 
 ::CORBA::Boolean
-TAO::Objref_Traits<OldDif2::AMH_ex1ResponseHandler>::marshal (const OldDif2::AMH_ex1ResponseHandler_ptr p,TAO_OutputCDR & cdr)
+TAO::Objref_Traits<OldDif2::AMH_ex1ResponseHandler>::marshal (OldDif2::AMH_ex1ResponseHandler_ptr const p,TAO_OutputCDR & cdr)
 {
   return ::CORBA::Object::marshal (p, cdr);
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-
 
 OldDif2::AMH_ex1ResponseHandler::AMH_ex1ResponseHandler ()
 {}
@@ -1086,13 +958,11 @@ OldDif2::AMH_ex1ResponseHandler::_tao_release (AMH_ex1ResponseHandler_ptr obj)
 }
 
 ::CORBA::Boolean
-OldDif2::AMH_ex1ResponseHandler::_is_a (const char *value)
+OldDif2::AMH_ex1ResponseHandler::_is_a (char const *value)
 {
-  if (
-      std::strcmp (value, "IDL:OldDif2/AMH_ex1ResponseHandler:1.0") == 0 ||
+  if (std::strcmp (value, "IDL:OldDif2/AMH_ex1ResponseHandler:1.0") == 0 ||
       std::strcmp (value, "IDL:omg.org/CORBA/LocalObject:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0
-      )
+      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0)
     {
       return true; // success using local knowledge
     }
@@ -1102,17 +972,17 @@ OldDif2::AMH_ex1ResponseHandler::_is_a (const char *value)
     }
 }
 
-const char* OldDif2::AMH_ex1ResponseHandler::_interface_repository_id () const
+char const *OldDif2::AMH_ex1ResponseHandler::_interface_repository_id () const
 {
   return "IDL:OldDif2/AMH_ex1ResponseHandler:1.0";
 }
 
-const char* OldDif2::AMH_ex1ResponseHandler::_desc_repository_id ()
+char const *OldDif2::AMH_ex1ResponseHandler::_desc_repository_id ()
 {
   return "IDL:OldDif2/AMH_ex1ResponseHandler:1.0";
 }
 
-const char* OldDif2::AMH_ex1ResponseHandler::_desc_interface_name ()
+char const *OldDif2::AMH_ex1ResponseHandler::_desc_interface_name ()
 {
   return "AMH_ex1ResponseHandler";
 }
@@ -1122,9 +992,6 @@ OldDif2::AMH_ex1ResponseHandler::marshal (TAO_OutputCDR & /* cdr */)
 {
   return false;
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_cs.cpp:47
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
@@ -1149,16 +1016,12 @@ TAO::Objref_Traits<OldDif2::AMI_ex1Handler>::nil ()
 }
 
 ::CORBA::Boolean
-TAO::Objref_Traits<OldDif2::AMI_ex1Handler>::marshal (const OldDif2::AMI_ex1Handler_ptr p,TAO_OutputCDR & cdr)
+TAO::Objref_Traits<OldDif2::AMI_ex1Handler>::marshal (OldDif2::AMI_ex1Handler_ptr const p,TAO_OutputCDR & cdr)
 {
   return ::CORBA::Object::marshal (p, cdr);
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/operation_cs.cpp:87
 
 void
 OldDif2::AMI_ex1Handler::op0 ()
@@ -1167,8 +1030,8 @@ OldDif2::AMI_ex1Handler::op0 ()
     {
       ::CORBA::Object::tao_object_initialize (this);
     }
-  
-  TAO::Arg_Traits< void>::ret_val _tao_retval;
+
+  TAO::Arg_Traits<void>::ret_val _tao_retval;
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
@@ -1209,7 +1072,7 @@ OldDif2::AMI_ex1Handler::op0_reply_stub (
       // Demarshall all the arguments.
       // Invoke the call back method.
       _tao_reply_handler_object->op0 (
-          
+
         );
       break;
     }
@@ -1233,7 +1096,7 @@ OldDif2::AMI_ex1Handler::op0_reply_stub (
             0,
             _tao_in.char_translator (),
             _tao_in.wchar_translator ()));
-        
+
       ::Messaging::ExceptionHolder_var exception_holder_var = exception_holder_ptr;
       _tao_reply_handler_object->op0_excep (
           exception_holder_var);
@@ -1245,9 +1108,6 @@ OldDif2::AMI_ex1Handler::op0_reply_stub (
       break;
   }
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/operation_cs.cpp:87
-
 void
 OldDif2::AMI_ex1Handler::op0_excep (
   ::Messaging::ExceptionHolder * excep_holder)
@@ -1256,9 +1116,9 @@ OldDif2::AMI_ex1Handler::op0_excep (
     {
       ::CORBA::Object::tao_object_initialize (this);
     }
-  
-  TAO::Arg_Traits< void>::ret_val _tao_retval;
-  TAO::Arg_Traits< ::Messaging::ExceptionHolder>::in_arg_val _tao_excep_holder (excep_holder);
+
+  TAO::Arg_Traits<void>::ret_val _tao_retval;
+  TAO::Arg_Traits<::Messaging::ExceptionHolder>::in_arg_val _tao_excep_holder (excep_holder);
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
@@ -1273,14 +1133,11 @@ OldDif2::AMI_ex1Handler::op0_excep (
       "op0_excep",
       9,
       TAO::TAO_CO_NONE | TAO::TAO_CO_DIRECT_STRATEGY | TAO::TAO_CO_THRU_POA_STRATEGY
-      
+
     );
 
   _invocation_call.invoke (nullptr, 0);
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/operation_cs.cpp:87
-
 void
 OldDif2::AMI_ex1Handler::op1 (
   ::CORBA::Float ami_return_val,
@@ -1291,11 +1148,11 @@ OldDif2::AMI_ex1Handler::op1 (
     {
       ::CORBA::Object::tao_object_initialize (this);
     }
-  
-  TAO::Arg_Traits< void>::ret_val _tao_retval;
-  TAO::Arg_Traits< ::CORBA::Float>::in_arg_val _tao_ami_return_val (ami_return_val);
-  TAO::Arg_Traits< ::CORBA::Double>::in_arg_val _tao_d (d);
-  TAO::Arg_Traits< ::CORBA::Long>::in_arg_val _tao_l (l);
+
+  TAO::Arg_Traits<void>::ret_val _tao_retval;
+  TAO::Arg_Traits<::CORBA::Float>::in_arg_val _tao_ami_return_val (ami_return_val);
+  TAO::Arg_Traits<::CORBA::Double>::in_arg_val _tao_d (d);
+  TAO::Arg_Traits<::CORBA::Long>::in_arg_val _tao_l (l);
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
@@ -1312,7 +1169,7 @@ OldDif2::AMI_ex1Handler::op1 (
       "op1",
       3,
       TAO::TAO_CO_NONE | TAO::TAO_CO_DIRECT_STRATEGY | TAO::TAO_CO_THRU_POA_STRATEGY
-      
+
     );
 
   _invocation_call.invoke (nullptr, 0);
@@ -1344,14 +1201,14 @@ OldDif2::AMI_ex1Handler::op1_reply_stub (
             (_tao_in >> l)
          ))
         throw ::CORBA::MARSHAL ();
-      
+
       // Invoke the call back method.
       _tao_reply_handler_object->op1 (
-          
+
           ami_return_val,
-          
+
           d,
-          
+
           l
         );
       break;
@@ -1376,7 +1233,7 @@ OldDif2::AMI_ex1Handler::op1_reply_stub (
             0,
             _tao_in.char_translator (),
             _tao_in.wchar_translator ()));
-        
+
       ::Messaging::ExceptionHolder_var exception_holder_var = exception_holder_ptr;
       _tao_reply_handler_object->op1_excep (
           exception_holder_var);
@@ -1388,9 +1245,6 @@ OldDif2::AMI_ex1Handler::op1_reply_stub (
       break;
   }
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/operation_cs.cpp:87
-
 void
 OldDif2::AMI_ex1Handler::op1_excep (
   ::Messaging::ExceptionHolder * excep_holder)
@@ -1399,9 +1253,9 @@ OldDif2::AMI_ex1Handler::op1_excep (
     {
       ::CORBA::Object::tao_object_initialize (this);
     }
-  
-  TAO::Arg_Traits< void>::ret_val _tao_retval;
-  TAO::Arg_Traits< ::Messaging::ExceptionHolder>::in_arg_val _tao_excep_holder (excep_holder);
+
+  TAO::Arg_Traits<void>::ret_val _tao_retval;
+  TAO::Arg_Traits<::Messaging::ExceptionHolder>::in_arg_val _tao_excep_holder (excep_holder);
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
@@ -1416,14 +1270,11 @@ OldDif2::AMI_ex1Handler::op1_excep (
       "op1_excep",
       9,
       TAO::TAO_CO_NONE | TAO::TAO_CO_DIRECT_STRATEGY | TAO::TAO_CO_THRU_POA_STRATEGY
-      
+
     );
 
   _invocation_call.invoke (nullptr, 0);
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/operation_cs.cpp:87
-
 void
 OldDif2::AMI_ex1Handler::op2 (
   ::CORBA::Double ami_return_val,
@@ -1434,11 +1285,11 @@ OldDif2::AMI_ex1Handler::op2 (
     {
       ::CORBA::Object::tao_object_initialize (this);
     }
-  
-  TAO::Arg_Traits< void>::ret_val _tao_retval;
-  TAO::Arg_Traits< ::CORBA::Double>::in_arg_val _tao_ami_return_val (ami_return_val);
-  TAO::Arg_Traits< ::CORBA::Long>::in_arg_val _tao_l (l);
-  TAO::Arg_Traits< ::CORBA::Short>::in_arg_val _tao_s (s);
+
+  TAO::Arg_Traits<void>::ret_val _tao_retval;
+  TAO::Arg_Traits<::CORBA::Double>::in_arg_val _tao_ami_return_val (ami_return_val);
+  TAO::Arg_Traits<::CORBA::Long>::in_arg_val _tao_l (l);
+  TAO::Arg_Traits<::CORBA::Short>::in_arg_val _tao_s (s);
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
@@ -1455,7 +1306,7 @@ OldDif2::AMI_ex1Handler::op2 (
       "op2",
       3,
       TAO::TAO_CO_NONE | TAO::TAO_CO_DIRECT_STRATEGY | TAO::TAO_CO_THRU_POA_STRATEGY
-      
+
     );
 
   _invocation_call.invoke (nullptr, 0);
@@ -1487,14 +1338,14 @@ OldDif2::AMI_ex1Handler::op2_reply_stub (
             (_tao_in >> s)
          ))
         throw ::CORBA::MARSHAL ();
-      
+
       // Invoke the call back method.
       _tao_reply_handler_object->op2 (
-          
+
           ami_return_val,
-          
+
           l,
-          
+
           s
         );
       break;
@@ -1519,7 +1370,7 @@ OldDif2::AMI_ex1Handler::op2_reply_stub (
             0,
             _tao_in.char_translator (),
             _tao_in.wchar_translator ()));
-        
+
       ::Messaging::ExceptionHolder_var exception_holder_var = exception_holder_ptr;
       _tao_reply_handler_object->op2_excep (
           exception_holder_var);
@@ -1531,9 +1382,6 @@ OldDif2::AMI_ex1Handler::op2_reply_stub (
       break;
   }
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/operation_cs.cpp:87
-
 void
 OldDif2::AMI_ex1Handler::op2_excep (
   ::Messaging::ExceptionHolder * excep_holder)
@@ -1542,9 +1390,9 @@ OldDif2::AMI_ex1Handler::op2_excep (
     {
       ::CORBA::Object::tao_object_initialize (this);
     }
-  
-  TAO::Arg_Traits< void>::ret_val _tao_retval;
-  TAO::Arg_Traits< ::Messaging::ExceptionHolder>::in_arg_val _tao_excep_holder (excep_holder);
+
+  TAO::Arg_Traits<void>::ret_val _tao_retval;
+  TAO::Arg_Traits<::Messaging::ExceptionHolder>::in_arg_val _tao_excep_holder (excep_holder);
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
@@ -1559,14 +1407,11 @@ OldDif2::AMI_ex1Handler::op2_excep (
       "op2_excep",
       9,
       TAO::TAO_CO_NONE | TAO::TAO_CO_DIRECT_STRATEGY | TAO::TAO_CO_THRU_POA_STRATEGY
-      
+
     );
 
   _invocation_call.invoke (nullptr, 0);
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/operation_cs.cpp:87
-
 void
 OldDif2::AMI_ex1Handler::op3 (
   ::CORBA::Long ami_return_val,
@@ -1577,11 +1422,11 @@ OldDif2::AMI_ex1Handler::op3 (
     {
       ::CORBA::Object::tao_object_initialize (this);
     }
-  
-  TAO::Arg_Traits< void>::ret_val _tao_retval;
-  TAO::Arg_Traits< ::CORBA::Long>::in_arg_val _tao_ami_return_val (ami_return_val);
-  TAO::Arg_Traits< ::CORBA::Short>::in_arg_val _tao_s (s);
-  TAO::Arg_Traits< ::CORBA::ULong>::in_arg_val _tao_ul (ul);
+
+  TAO::Arg_Traits<void>::ret_val _tao_retval;
+  TAO::Arg_Traits<::CORBA::Long>::in_arg_val _tao_ami_return_val (ami_return_val);
+  TAO::Arg_Traits<::CORBA::Short>::in_arg_val _tao_s (s);
+  TAO::Arg_Traits<::CORBA::ULong>::in_arg_val _tao_ul (ul);
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
@@ -1598,7 +1443,7 @@ OldDif2::AMI_ex1Handler::op3 (
       "op3",
       3,
       TAO::TAO_CO_NONE | TAO::TAO_CO_DIRECT_STRATEGY | TAO::TAO_CO_THRU_POA_STRATEGY
-      
+
     );
 
   _invocation_call.invoke (nullptr, 0);
@@ -1630,14 +1475,14 @@ OldDif2::AMI_ex1Handler::op3_reply_stub (
             (_tao_in >> ul)
          ))
         throw ::CORBA::MARSHAL ();
-      
+
       // Invoke the call back method.
       _tao_reply_handler_object->op3 (
-          
+
           ami_return_val,
-          
+
           s,
-          
+
           ul
         );
       break;
@@ -1662,7 +1507,7 @@ OldDif2::AMI_ex1Handler::op3_reply_stub (
             0,
             _tao_in.char_translator (),
             _tao_in.wchar_translator ()));
-        
+
       ::Messaging::ExceptionHolder_var exception_holder_var = exception_holder_ptr;
       _tao_reply_handler_object->op3_excep (
           exception_holder_var);
@@ -1674,9 +1519,6 @@ OldDif2::AMI_ex1Handler::op3_reply_stub (
       break;
   }
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/operation_cs.cpp:87
-
 void
 OldDif2::AMI_ex1Handler::op3_excep (
   ::Messaging::ExceptionHolder * excep_holder)
@@ -1685,9 +1527,9 @@ OldDif2::AMI_ex1Handler::op3_excep (
     {
       ::CORBA::Object::tao_object_initialize (this);
     }
-  
-  TAO::Arg_Traits< void>::ret_val _tao_retval;
-  TAO::Arg_Traits< ::Messaging::ExceptionHolder>::in_arg_val _tao_excep_holder (excep_holder);
+
+  TAO::Arg_Traits<void>::ret_val _tao_retval;
+  TAO::Arg_Traits<::Messaging::ExceptionHolder>::in_arg_val _tao_excep_holder (excep_holder);
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
@@ -1702,14 +1544,11 @@ OldDif2::AMI_ex1Handler::op3_excep (
       "op3_excep",
       9,
       TAO::TAO_CO_NONE | TAO::TAO_CO_DIRECT_STRATEGY | TAO::TAO_CO_THRU_POA_STRATEGY
-      
+
     );
 
   _invocation_call.invoke (nullptr, 0);
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/operation_cs.cpp:87
-
 void
 OldDif2::AMI_ex1Handler::op4 (
   ::CORBA::Short ami_return_val,
@@ -1720,11 +1559,11 @@ OldDif2::AMI_ex1Handler::op4 (
     {
       ::CORBA::Object::tao_object_initialize (this);
     }
-  
-  TAO::Arg_Traits< void>::ret_val _tao_retval;
-  TAO::Arg_Traits< ::CORBA::Short>::in_arg_val _tao_ami_return_val (ami_return_val);
-  TAO::Arg_Traits< ::CORBA::ULong>::in_arg_val _tao_ul (ul);
-  TAO::Arg_Traits< ::CORBA::UShort>::in_arg_val _tao_us (us);
+
+  TAO::Arg_Traits<void>::ret_val _tao_retval;
+  TAO::Arg_Traits<::CORBA::Short>::in_arg_val _tao_ami_return_val (ami_return_val);
+  TAO::Arg_Traits<::CORBA::ULong>::in_arg_val _tao_ul (ul);
+  TAO::Arg_Traits<::CORBA::UShort>::in_arg_val _tao_us (us);
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
@@ -1741,7 +1580,7 @@ OldDif2::AMI_ex1Handler::op4 (
       "op4",
       3,
       TAO::TAO_CO_NONE | TAO::TAO_CO_DIRECT_STRATEGY | TAO::TAO_CO_THRU_POA_STRATEGY
-      
+
     );
 
   _invocation_call.invoke (nullptr, 0);
@@ -1773,14 +1612,14 @@ OldDif2::AMI_ex1Handler::op4_reply_stub (
             (_tao_in >> us)
          ))
         throw ::CORBA::MARSHAL ();
-      
+
       // Invoke the call back method.
       _tao_reply_handler_object->op4 (
-          
+
           ami_return_val,
-          
+
           ul,
-          
+
           us
         );
       break;
@@ -1805,7 +1644,7 @@ OldDif2::AMI_ex1Handler::op4_reply_stub (
             0,
             _tao_in.char_translator (),
             _tao_in.wchar_translator ()));
-        
+
       ::Messaging::ExceptionHolder_var exception_holder_var = exception_holder_ptr;
       _tao_reply_handler_object->op4_excep (
           exception_holder_var);
@@ -1817,9 +1656,6 @@ OldDif2::AMI_ex1Handler::op4_reply_stub (
       break;
   }
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/operation_cs.cpp:87
-
 void
 OldDif2::AMI_ex1Handler::op4_excep (
   ::Messaging::ExceptionHolder * excep_holder)
@@ -1828,9 +1664,9 @@ OldDif2::AMI_ex1Handler::op4_excep (
     {
       ::CORBA::Object::tao_object_initialize (this);
     }
-  
-  TAO::Arg_Traits< void>::ret_val _tao_retval;
-  TAO::Arg_Traits< ::Messaging::ExceptionHolder>::in_arg_val _tao_excep_holder (excep_holder);
+
+  TAO::Arg_Traits<void>::ret_val _tao_retval;
+  TAO::Arg_Traits<::Messaging::ExceptionHolder>::in_arg_val _tao_excep_holder (excep_holder);
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
@@ -1845,14 +1681,11 @@ OldDif2::AMI_ex1Handler::op4_excep (
       "op4_excep",
       9,
       TAO::TAO_CO_NONE | TAO::TAO_CO_DIRECT_STRATEGY | TAO::TAO_CO_THRU_POA_STRATEGY
-      
+
     );
 
   _invocation_call.invoke (nullptr, 0);
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/operation_cs.cpp:87
-
 void
 OldDif2::AMI_ex1Handler::op5 (
   ::CORBA::ULong ami_return_val,
@@ -1863,11 +1696,11 @@ OldDif2::AMI_ex1Handler::op5 (
     {
       ::CORBA::Object::tao_object_initialize (this);
     }
-  
-  TAO::Arg_Traits< void>::ret_val _tao_retval;
-  TAO::Arg_Traits< ::CORBA::ULong>::in_arg_val _tao_ami_return_val (ami_return_val);
-  TAO::Arg_Traits< ::CORBA::ULong>::in_arg_val _tao_ul (ul);
-  TAO::Arg_Traits< ::ACE_InputCDR::to_char>::in_arg_val _tao_c (c);
+
+  TAO::Arg_Traits<void>::ret_val _tao_retval;
+  TAO::Arg_Traits<::CORBA::ULong>::in_arg_val _tao_ami_return_val (ami_return_val);
+  TAO::Arg_Traits<::CORBA::ULong>::in_arg_val _tao_ul (ul);
+  TAO::Arg_Traits<::ACE_InputCDR::to_char>::in_arg_val _tao_c (c);
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
@@ -1884,7 +1717,7 @@ OldDif2::AMI_ex1Handler::op5 (
       "op5",
       3,
       TAO::TAO_CO_NONE | TAO::TAO_CO_DIRECT_STRATEGY | TAO::TAO_CO_THRU_POA_STRATEGY
-      
+
     );
 
   _invocation_call.invoke (nullptr, 0);
@@ -1916,14 +1749,14 @@ OldDif2::AMI_ex1Handler::op5_reply_stub (
             (_tao_in >> ::ACE_InputCDR::to_char (c))
          ))
         throw ::CORBA::MARSHAL ();
-      
+
       // Invoke the call back method.
       _tao_reply_handler_object->op5 (
-          
+
           ami_return_val,
-          
+
           ul,
-          
+
           c
         );
       break;
@@ -1948,7 +1781,7 @@ OldDif2::AMI_ex1Handler::op5_reply_stub (
             0,
             _tao_in.char_translator (),
             _tao_in.wchar_translator ()));
-        
+
       ::Messaging::ExceptionHolder_var exception_holder_var = exception_holder_ptr;
       _tao_reply_handler_object->op5_excep (
           exception_holder_var);
@@ -1960,9 +1793,6 @@ OldDif2::AMI_ex1Handler::op5_reply_stub (
       break;
   }
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/operation_cs.cpp:87
-
 void
 OldDif2::AMI_ex1Handler::op5_excep (
   ::Messaging::ExceptionHolder * excep_holder)
@@ -1971,9 +1801,9 @@ OldDif2::AMI_ex1Handler::op5_excep (
     {
       ::CORBA::Object::tao_object_initialize (this);
     }
-  
-  TAO::Arg_Traits< void>::ret_val _tao_retval;
-  TAO::Arg_Traits< ::Messaging::ExceptionHolder>::in_arg_val _tao_excep_holder (excep_holder);
+
+  TAO::Arg_Traits<void>::ret_val _tao_retval;
+  TAO::Arg_Traits<::Messaging::ExceptionHolder>::in_arg_val _tao_excep_holder (excep_holder);
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
@@ -1988,14 +1818,11 @@ OldDif2::AMI_ex1Handler::op5_excep (
       "op5_excep",
       9,
       TAO::TAO_CO_NONE | TAO::TAO_CO_DIRECT_STRATEGY | TAO::TAO_CO_THRU_POA_STRATEGY
-      
+
     );
 
   _invocation_call.invoke (nullptr, 0);
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/operation_cs.cpp:87
-
 void
 OldDif2::AMI_ex1Handler::op6 (
   ::CORBA::UShort ami_return_val,
@@ -2006,11 +1833,11 @@ OldDif2::AMI_ex1Handler::op6 (
     {
       ::CORBA::Object::tao_object_initialize (this);
     }
-  
-  TAO::Arg_Traits< void>::ret_val _tao_retval;
-  TAO::Arg_Traits< ::CORBA::UShort>::in_arg_val _tao_ami_return_val (ami_return_val);
-  TAO::Arg_Traits< ::CORBA::UShort>::in_arg_val _tao_us (us);
-  TAO::Arg_Traits< ::ACE_InputCDR::to_char>::in_arg_val _tao_c (c);
+
+  TAO::Arg_Traits<void>::ret_val _tao_retval;
+  TAO::Arg_Traits<::CORBA::UShort>::in_arg_val _tao_ami_return_val (ami_return_val);
+  TAO::Arg_Traits<::CORBA::UShort>::in_arg_val _tao_us (us);
+  TAO::Arg_Traits<::ACE_InputCDR::to_char>::in_arg_val _tao_c (c);
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
@@ -2027,7 +1854,7 @@ OldDif2::AMI_ex1Handler::op6 (
       "op6",
       3,
       TAO::TAO_CO_NONE | TAO::TAO_CO_DIRECT_STRATEGY | TAO::TAO_CO_THRU_POA_STRATEGY
-      
+
     );
 
   _invocation_call.invoke (nullptr, 0);
@@ -2059,14 +1886,14 @@ OldDif2::AMI_ex1Handler::op6_reply_stub (
             (_tao_in >> ::ACE_InputCDR::to_char (c))
          ))
         throw ::CORBA::MARSHAL ();
-      
+
       // Invoke the call back method.
       _tao_reply_handler_object->op6 (
-          
+
           ami_return_val,
-          
+
           us,
-          
+
           c
         );
       break;
@@ -2091,7 +1918,7 @@ OldDif2::AMI_ex1Handler::op6_reply_stub (
             0,
             _tao_in.char_translator (),
             _tao_in.wchar_translator ()));
-        
+
       ::Messaging::ExceptionHolder_var exception_holder_var = exception_holder_ptr;
       _tao_reply_handler_object->op6_excep (
           exception_holder_var);
@@ -2103,9 +1930,6 @@ OldDif2::AMI_ex1Handler::op6_reply_stub (
       break;
   }
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/operation_cs.cpp:87
-
 void
 OldDif2::AMI_ex1Handler::op6_excep (
   ::Messaging::ExceptionHolder * excep_holder)
@@ -2114,9 +1938,9 @@ OldDif2::AMI_ex1Handler::op6_excep (
     {
       ::CORBA::Object::tao_object_initialize (this);
     }
-  
-  TAO::Arg_Traits< void>::ret_val _tao_retval;
-  TAO::Arg_Traits< ::Messaging::ExceptionHolder>::in_arg_val _tao_excep_holder (excep_holder);
+
+  TAO::Arg_Traits<void>::ret_val _tao_retval;
+  TAO::Arg_Traits<::Messaging::ExceptionHolder>::in_arg_val _tao_excep_holder (excep_holder);
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
@@ -2131,7 +1955,7 @@ OldDif2::AMI_ex1Handler::op6_excep (
       "op6_excep",
       9,
       TAO::TAO_CO_NONE | TAO::TAO_CO_DIRECT_STRATEGY | TAO::TAO_CO_THRU_POA_STRATEGY
-      
+
     );
 
   _invocation_call.invoke (nullptr, 0);
@@ -2182,13 +2006,11 @@ OldDif2::AMI_ex1Handler::_tao_release (AMI_ex1Handler_ptr obj)
 }
 
 ::CORBA::Boolean
-OldDif2::AMI_ex1Handler::_is_a (const char *value)
+OldDif2::AMI_ex1Handler::_is_a (char const *value)
 {
-  if (
-      std::strcmp (value, "IDL:omg.org/Messaging/ReplyHandler:1.0") == 0 ||
+  if (std::strcmp (value, "IDL:omg.org/Messaging/ReplyHandler:1.0") == 0 ||
       std::strcmp (value, "IDL:OldDif2/AMI_ex1Handler:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0
-      )
+      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0)
     {
       return true; // success using local knowledge
     }
@@ -2198,17 +2020,17 @@ OldDif2::AMI_ex1Handler::_is_a (const char *value)
     }
 }
 
-const char* OldDif2::AMI_ex1Handler::_interface_repository_id () const
+char const *OldDif2::AMI_ex1Handler::_interface_repository_id () const
 {
   return "IDL:OldDif2/AMI_ex1Handler:1.0";
 }
 
-const char* OldDif2::AMI_ex1Handler::_desc_repository_id ()
+char const *OldDif2::AMI_ex1Handler::_desc_repository_id ()
 {
   return "IDL:OldDif2/AMI_ex1Handler:1.0";
 }
 
-const char* OldDif2::AMI_ex1Handler::_desc_interface_name ()
+char const *OldDif2::AMI_ex1Handler::_desc_interface_name ()
 {
   return "AMI_ex1Handler";
 }
@@ -2218,9 +2040,6 @@ OldDif2::AMI_ex1Handler::marshal (TAO_OutputCDR &cdr)
 {
   return (cdr << this);
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_cs.cpp:47
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
@@ -2245,16 +2064,12 @@ TAO::Objref_Traits<OldDif2::ex2>::nil ()
 }
 
 ::CORBA::Boolean
-TAO::Objref_Traits<OldDif2::ex2>::marshal (const OldDif2::ex2_ptr p,TAO_OutputCDR & cdr)
+TAO::Objref_Traits<OldDif2::ex2>::marshal (OldDif2::ex2_ptr const p,TAO_OutputCDR & cdr)
 {
   return ::CORBA::Object::marshal (p, cdr);
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/operation_cs.cpp:87
 
 ::CORBA::Char
 OldDif2::ex2::op7 (
@@ -2266,11 +2081,11 @@ OldDif2::ex2::op7 (
     {
       ::CORBA::Object::tao_object_initialize (this);
     }
-  
-  TAO::Arg_Traits< ::ACE_InputCDR::to_char>::ret_val _tao_retval;
-  TAO::Arg_Traits< ::ACE_InputCDR::to_char>::in_arg_val _tao_c (c);
-  TAO::Arg_Traits< ::ACE_InputCDR::to_boolean>::out_arg_val _tao_b (b);
-  TAO::Arg_Traits< ::ACE_InputCDR::to_octet>::inout_arg_val _tao_o (o);
+
+  TAO::Arg_Traits<::ACE_InputCDR::to_char>::ret_val _tao_retval;
+  TAO::Arg_Traits<::ACE_InputCDR::to_char>::in_arg_val _tao_c (c);
+  TAO::Arg_Traits<::ACE_InputCDR::to_boolean>::out_arg_val _tao_b (b);
+  TAO::Arg_Traits<::ACE_InputCDR::to_octet>::inout_arg_val _tao_o (o);
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
@@ -2287,16 +2102,13 @@ OldDif2::ex2::op7 (
       "op7",
       3,
       TAO::TAO_CO_NONE | TAO::TAO_CO_DIRECT_STRATEGY | TAO::TAO_CO_THRU_POA_STRATEGY
-      
+
     );
 
   _invocation_call.invoke (nullptr, 0);
 
   return _tao_retval.retn ();
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/operation_cs.cpp:87
-
 ::CORBA::Boolean
 OldDif2::ex2::op8 (
   ::CORBA::Boolean_out b,
@@ -2306,10 +2118,10 @@ OldDif2::ex2::op8 (
     {
       ::CORBA::Object::tao_object_initialize (this);
     }
-  
-  TAO::Arg_Traits< ::ACE_InputCDR::to_boolean>::ret_val _tao_retval;
-  TAO::Arg_Traits< ::ACE_InputCDR::to_boolean>::out_arg_val _tao_b (b);
-  TAO::Arg_Traits< ::ACE_InputCDR::to_octet>::in_arg_val _tao_o (o);
+
+  TAO::Arg_Traits<::ACE_InputCDR::to_boolean>::ret_val _tao_retval;
+  TAO::Arg_Traits<::ACE_InputCDR::to_boolean>::out_arg_val _tao_b (b);
+  TAO::Arg_Traits<::ACE_InputCDR::to_octet>::in_arg_val _tao_o (o);
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
@@ -2325,33 +2137,30 @@ OldDif2::ex2::op8 (
       "op8",
       3,
       TAO::TAO_CO_NONE | TAO::TAO_CO_DIRECT_STRATEGY | TAO::TAO_CO_THRU_POA_STRATEGY
-      
+
     );
 
   _invocation_call.invoke (nullptr, 0);
 
   return _tao_retval.retn ();
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/operation_cs.cpp:87
-
 ::CORBA::Octet
 OldDif2::ex2::op9 (
   ::CORBA::Octet & o,
   ::CORBA::String_out s,
-  const char * ls,
+  char const * ls,
   ::CORBA::Long & l)
 {
   if (!this->is_evaluated ())
     {
       ::CORBA::Object::tao_object_initialize (this);
     }
-  
-  TAO::Arg_Traits< ::ACE_InputCDR::to_octet>::ret_val _tao_retval;
-  TAO::Arg_Traits< ::ACE_InputCDR::to_octet>::inout_arg_val _tao_o (o);
-  TAO::Arg_Traits< char *>::out_arg_val _tao_s (s);
-  TAO::Arg_Traits< ::TAO::OldDif2_ex2_op9_ls>::in_arg_val _tao_ls (ls);
-  TAO::Arg_Traits< ::CORBA::Long>::inout_arg_val _tao_l (l);
+
+  TAO::Arg_Traits<::ACE_InputCDR::to_octet>::ret_val _tao_retval;
+  TAO::Arg_Traits<::ACE_InputCDR::to_octet>::inout_arg_val _tao_o (o);
+  TAO::Arg_Traits<char *>::out_arg_val _tao_s (s);
+  TAO::Arg_Traits<::TAO::OldDif2_ex2_op9_ls>::in_arg_val _tao_ls (ls);
+  TAO::Arg_Traits<::CORBA::Long>::inout_arg_val _tao_l (l);
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
@@ -2369,29 +2178,26 @@ OldDif2::ex2::op9 (
       "op9",
       3,
       TAO::TAO_CO_NONE | TAO::TAO_CO_DIRECT_STRATEGY | TAO::TAO_CO_THRU_POA_STRATEGY
-      
+
     );
 
   _invocation_call.invoke (nullptr, 0);
 
   return _tao_retval.retn ();
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/operation_cs.cpp:87
-
 char *
 OldDif2::ex2::op10 (
-  const char * s,
+  char const * s,
   ::CORBA::String_out ls)
 {
   if (!this->is_evaluated ())
     {
       ::CORBA::Object::tao_object_initialize (this);
     }
-  
-  TAO::Arg_Traits< char *>::ret_val _tao_retval;
-  TAO::Arg_Traits< char *>::in_arg_val _tao_s (s);
-  TAO::Arg_Traits< ::TAO::OldDif2_ex2_op10_ls>::out_arg_val _tao_ls (ls);
+
+  TAO::Arg_Traits<char *>::ret_val _tao_retval;
+  TAO::Arg_Traits<char *>::in_arg_val _tao_s (s);
+  TAO::Arg_Traits<::TAO::OldDif2_ex2_op10_ls>::out_arg_val _tao_ls (ls);
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
@@ -2407,16 +2213,13 @@ OldDif2::ex2::op10 (
       "op10",
       4,
       TAO::TAO_CO_NONE | TAO::TAO_CO_DIRECT_STRATEGY | TAO::TAO_CO_THRU_POA_STRATEGY
-      
+
     );
 
   _invocation_call.invoke (nullptr, 0);
 
   return _tao_retval.retn ();
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/operation_cs.cpp:87
-
 char *
 OldDif2::ex2::op11 (
   char *& ls,
@@ -2426,10 +2229,10 @@ OldDif2::ex2::op11 (
     {
       ::CORBA::Object::tao_object_initialize (this);
     }
-  
-  TAO::Arg_Traits< ::TAO::OldDif2_ex2_op11>::ret_val _tao_retval;
-  TAO::Arg_Traits< ::TAO::OldDif2_ex2_op11_ls>::inout_arg_val _tao_ls (ls);
-  TAO::Arg_Traits< ::CORBA::Long>::out_arg_val _tao_l (l);
+
+  TAO::Arg_Traits<::TAO::OldDif2_ex2_op11>::ret_val _tao_retval;
+  TAO::Arg_Traits<::TAO::OldDif2_ex2_op11_ls>::inout_arg_val _tao_ls (ls);
+  TAO::Arg_Traits<::CORBA::Long>::out_arg_val _tao_l (l);
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
@@ -2445,16 +2248,13 @@ OldDif2::ex2::op11 (
       "op11",
       4,
       TAO::TAO_CO_NONE | TAO::TAO_CO_DIRECT_STRATEGY | TAO::TAO_CO_THRU_POA_STRATEGY
-      
+
     );
 
   _invocation_call.invoke (nullptr, 0);
 
   return _tao_retval.retn ();
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/operation_cs.cpp:87
-
 ::CORBA::Long
 OldDif2::ex2::op12 (
   ::CORBA::Long l)
@@ -2463,9 +2263,9 @@ OldDif2::ex2::op12 (
     {
       ::CORBA::Object::tao_object_initialize (this);
     }
-  
-  TAO::Arg_Traits< ::CORBA::Long>::ret_val _tao_retval;
-  TAO::Arg_Traits< ::CORBA::Long>::in_arg_val _tao_l (l);
+
+  TAO::Arg_Traits<::CORBA::Long>::ret_val _tao_retval;
+  TAO::Arg_Traits<::CORBA::Long>::in_arg_val _tao_l (l);
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
@@ -2480,17 +2280,13 @@ OldDif2::ex2::op12 (
       "op12",
       4,
       TAO::TAO_CO_NONE | TAO::TAO_CO_DIRECT_STRATEGY | TAO::TAO_CO_THRU_POA_STRATEGY
-      
+
     );
 
   _invocation_call.invoke (nullptr, 0);
 
   return _tao_retval.retn ();
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/ami_cs.cpp:54
-
-
 
 void
 OldDif2::ex2::sendc_op7 (
@@ -2502,12 +2298,10 @@ OldDif2::ex2::sendc_op7 (
     {
       ::CORBA::Object::tao_object_initialize (this);
     }
-  
-  
-  
+
   TAO::Arg_Traits<void>::ret_val _tao_retval;
-  TAO::Arg_Traits< ::ACE_InputCDR::to_char>::in_arg_val _tao_c (c);
-  TAO::Arg_Traits< ::ACE_InputCDR::to_octet>::in_arg_val _tao_o (o);
+  TAO::Arg_Traits<::ACE_InputCDR::to_char>::in_arg_val _tao_c (c);
+  TAO::Arg_Traits<::ACE_InputCDR::to_octet>::in_arg_val _tao_o (o);
 
   TAO::Argument *_the_tao_operation_signature[] =
     {
@@ -2530,10 +2324,6 @@ OldDif2::ex2::sendc_op7 (
       &OldDif2::AMI_ex2Handler::op7_reply_stub
     );
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/ami_cs.cpp:54
-
-
 
 void
 OldDif2::ex2::sendc_op8 (
@@ -2544,11 +2334,9 @@ OldDif2::ex2::sendc_op8 (
     {
       ::CORBA::Object::tao_object_initialize (this);
     }
-  
-  
-  
+
   TAO::Arg_Traits<void>::ret_val _tao_retval;
-  TAO::Arg_Traits< ::ACE_InputCDR::to_octet>::in_arg_val _tao_o (o);
+  TAO::Arg_Traits<::ACE_InputCDR::to_octet>::in_arg_val _tao_o (o);
 
   TAO::Argument *_the_tao_operation_signature[] =
     {
@@ -2570,29 +2358,23 @@ OldDif2::ex2::sendc_op8 (
       &OldDif2::AMI_ex2Handler::op8_reply_stub
     );
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/ami_cs.cpp:54
-
-
 
 void
 OldDif2::ex2::sendc_op9 (
   ::OldDif2::AMI_ex2Handler_ptr ami_handler,
   ::CORBA::Octet o,
-  const char * ls,
+  char const * ls,
   ::CORBA::Long l)
 {
   if (!this->is_evaluated ())
     {
       ::CORBA::Object::tao_object_initialize (this);
     }
-  
-  
-  
+
   TAO::Arg_Traits<void>::ret_val _tao_retval;
-  TAO::Arg_Traits< ::ACE_InputCDR::to_octet>::in_arg_val _tao_o (o);
-  TAO::Arg_Traits< ::TAO::OldDif2_ex2_op9_ls>::in_arg_val _tao_ls (ls);
-  TAO::Arg_Traits< ::CORBA::Long>::in_arg_val _tao_l (l);
+  TAO::Arg_Traits<::ACE_InputCDR::to_octet>::in_arg_val _tao_o (o);
+  TAO::Arg_Traits<::TAO::OldDif2_ex2_op9_ls>::in_arg_val _tao_ls (ls);
+  TAO::Arg_Traits<::CORBA::Long>::in_arg_val _tao_l (l);
 
   TAO::Argument *_the_tao_operation_signature[] =
     {
@@ -2616,25 +2398,19 @@ OldDif2::ex2::sendc_op9 (
       &OldDif2::AMI_ex2Handler::op9_reply_stub
     );
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/ami_cs.cpp:54
-
-
 
 void
 OldDif2::ex2::sendc_op10 (
   ::OldDif2::AMI_ex2Handler_ptr ami_handler,
-  const char * s)
+  char const * s)
 {
   if (!this->is_evaluated ())
     {
       ::CORBA::Object::tao_object_initialize (this);
     }
-  
-  
-  
+
   TAO::Arg_Traits<void>::ret_val _tao_retval;
-  TAO::Arg_Traits< char *>::in_arg_val _tao_s (s);
+  TAO::Arg_Traits<char *>::in_arg_val _tao_s (s);
 
   TAO::Argument *_the_tao_operation_signature[] =
     {
@@ -2656,25 +2432,19 @@ OldDif2::ex2::sendc_op10 (
       &OldDif2::AMI_ex2Handler::op10_reply_stub
     );
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/ami_cs.cpp:54
-
-
 
 void
 OldDif2::ex2::sendc_op11 (
   ::OldDif2::AMI_ex2Handler_ptr ami_handler,
-  const char * ls)
+  char const * ls)
 {
   if (!this->is_evaluated ())
     {
       ::CORBA::Object::tao_object_initialize (this);
     }
-  
-  
-  
+
   TAO::Arg_Traits<void>::ret_val _tao_retval;
-  TAO::Arg_Traits< ::TAO::OldDif2_ex2_op11_ls>::in_arg_val _tao_ls (ls);
+  TAO::Arg_Traits<::TAO::OldDif2_ex2_op11_ls>::in_arg_val _tao_ls (ls);
 
   TAO::Argument *_the_tao_operation_signature[] =
     {
@@ -2696,10 +2466,6 @@ OldDif2::ex2::sendc_op11 (
       &OldDif2::AMI_ex2Handler::op11_reply_stub
     );
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/ami_cs.cpp:54
-
-
 
 void
 OldDif2::ex2::sendc_op12 (
@@ -2710,11 +2476,9 @@ OldDif2::ex2::sendc_op12 (
     {
       ::CORBA::Object::tao_object_initialize (this);
     }
-  
-  
-  
+
   TAO::Arg_Traits<void>::ret_val _tao_retval;
-  TAO::Arg_Traits< ::CORBA::Long>::in_arg_val _tao_l (l);
+  TAO::Arg_Traits<::CORBA::Long>::in_arg_val _tao_l (l);
 
   TAO::Argument *_the_tao_operation_signature[] =
     {
@@ -2782,13 +2546,11 @@ OldDif2::ex2::_tao_release (ex2_ptr obj)
 }
 
 ::CORBA::Boolean
-OldDif2::ex2::_is_a (const char *value)
+OldDif2::ex2::_is_a (char const *value)
 {
-  if (
-      std::strcmp (value, "IDL:OldDif2/ex1:1.0") == 0 ||
+  if (std::strcmp (value, "IDL:OldDif2/ex1:1.0") == 0 ||
       std::strcmp (value, "IDL:OldDif2/ex2:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0
-      )
+      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0)
     {
       return true; // success using local knowledge
     }
@@ -2798,17 +2560,17 @@ OldDif2::ex2::_is_a (const char *value)
     }
 }
 
-const char* OldDif2::ex2::_interface_repository_id () const
+char const *OldDif2::ex2::_interface_repository_id () const
 {
   return "IDL:OldDif2/ex2:1.0";
 }
 
-const char* OldDif2::ex2::_desc_repository_id ()
+char const *OldDif2::ex2::_desc_repository_id ()
 {
   return "IDL:OldDif2/ex2:1.0";
 }
 
-const char* OldDif2::ex2::_desc_interface_name ()
+char const *OldDif2::ex2::_desc_interface_name ()
 {
   return "ex2";
 }
@@ -2818,13 +2580,8 @@ OldDif2::ex2::marshal (TAO_OutputCDR &cdr)
 {
   return (cdr << this);
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_cs.cpp:52
-
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
 
 void
 TAO::Value_Traits<OldDif2::AMH_ex2ExceptionHolder>::add_ref (OldDif2::AMH_ex2ExceptionHolder * p)
@@ -2846,15 +2603,13 @@ TAO::Value_Traits<OldDif2::AMH_ex2ExceptionHolder>::release (OldDif2::AMH_ex2Exc
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 OldDif2::AMH_ex2ExceptionHolder *
 OldDif2::AMH_ex2ExceptionHolder::_downcast (::CORBA::ValueBase *v)
 {
   return dynamic_cast<::OldDif2::AMH_ex2ExceptionHolder *> (v);
 }
 
-const char *
+char const *
 OldDif2::AMH_ex2ExceptionHolder::_tao_obv_repository_id () const
 {
   return this->_tao_obv_static_repository_id ();
@@ -2933,153 +2688,113 @@ OldDif2::AMH_ex2ExceptionHolder::_tao_unmarshal (
         is_null_object,
         is_indirected
       );
-  
+
   ::CORBA::ValueBase_var owner (base);
 
   if (!retval)
     return false;
-  
+
   if (is_null_object)
     return true;
-  
+
   if (!is_indirected && !base->_tao_unmarshal_v (strm))
     return false;
-  
+
   // Now base must point to the unmarshaled object.
   // Align the pointer to the right subobject.
   new_object = AMH_ex2ExceptionHolder::_downcast (base);
   if (nullptr == new_object)
     return false;
-  
+
   if (is_indirected)
     new_object->_add_ref ();
-  
+
   owner._retn ();
   return true;
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_cs.cpp:440
-
 void
 OldDif2::AMH_ex2ExceptionHolder::raise_op7 ()
 {
-  std::unique_ptr< ::CORBA::Exception> safety (this->exception);
+  std::unique_ptr<::CORBA::Exception> safety (this->exception);
   this->exception->_raise ();
 }
-
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_cs.cpp:440
 
 void
 OldDif2::AMH_ex2ExceptionHolder::raise_op8 ()
 {
-  std::unique_ptr< ::CORBA::Exception> safety (this->exception);
+  std::unique_ptr<::CORBA::Exception> safety (this->exception);
   this->exception->_raise ();
 }
-
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_cs.cpp:440
 
 void
 OldDif2::AMH_ex2ExceptionHolder::raise_op9 ()
 {
-  std::unique_ptr< ::CORBA::Exception> safety (this->exception);
+  std::unique_ptr<::CORBA::Exception> safety (this->exception);
   this->exception->_raise ();
 }
-
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_cs.cpp:440
 
 void
 OldDif2::AMH_ex2ExceptionHolder::raise_op10 ()
 {
-  std::unique_ptr< ::CORBA::Exception> safety (this->exception);
+  std::unique_ptr<::CORBA::Exception> safety (this->exception);
   this->exception->_raise ();
 }
-
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_cs.cpp:440
 
 void
 OldDif2::AMH_ex2ExceptionHolder::raise_op11 ()
 {
-  std::unique_ptr< ::CORBA::Exception> safety (this->exception);
+  std::unique_ptr<::CORBA::Exception> safety (this->exception);
   this->exception->_raise ();
 }
-
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_cs.cpp:440
 
 void
 OldDif2::AMH_ex2ExceptionHolder::raise_op12 ()
 {
-  std::unique_ptr< ::CORBA::Exception> safety (this->exception);
+  std::unique_ptr<::CORBA::Exception> safety (this->exception);
   this->exception->_raise ();
 }
-
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_cs.cpp:440
 
 void
 OldDif2::AMH_ex2ExceptionHolder::raise_sendc_op7 ()
 {
-  std::unique_ptr< ::CORBA::Exception> safety (this->exception);
+  std::unique_ptr<::CORBA::Exception> safety (this->exception);
   this->exception->_raise ();
 }
-
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_cs.cpp:440
 
 void
 OldDif2::AMH_ex2ExceptionHolder::raise_sendc_op8 ()
 {
-  std::unique_ptr< ::CORBA::Exception> safety (this->exception);
+  std::unique_ptr<::CORBA::Exception> safety (this->exception);
   this->exception->_raise ();
 }
-
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_cs.cpp:440
 
 void
 OldDif2::AMH_ex2ExceptionHolder::raise_sendc_op9 ()
 {
-  std::unique_ptr< ::CORBA::Exception> safety (this->exception);
+  std::unique_ptr<::CORBA::Exception> safety (this->exception);
   this->exception->_raise ();
 }
-
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_cs.cpp:440
 
 void
 OldDif2::AMH_ex2ExceptionHolder::raise_sendc_op10 ()
 {
-  std::unique_ptr< ::CORBA::Exception> safety (this->exception);
+  std::unique_ptr<::CORBA::Exception> safety (this->exception);
   this->exception->_raise ();
 }
-
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_cs.cpp:440
 
 void
 OldDif2::AMH_ex2ExceptionHolder::raise_sendc_op11 ()
 {
-  std::unique_ptr< ::CORBA::Exception> safety (this->exception);
+  std::unique_ptr<::CORBA::Exception> safety (this->exception);
   this->exception->_raise ();
 }
-
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_cs.cpp:440
 
 void
 OldDif2::AMH_ex2ExceptionHolder::raise_sendc_op12 ()
 {
-  std::unique_ptr< ::CORBA::Exception> safety (this->exception);
+  std::unique_ptr<::CORBA::Exception> safety (this->exception);
   this->exception->_raise ();
 }
-
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_cs.cpp:47
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
@@ -3104,14 +2819,12 @@ TAO::Objref_Traits<OldDif2::AMH_ex2ResponseHandler>::nil ()
 }
 
 ::CORBA::Boolean
-TAO::Objref_Traits<OldDif2::AMH_ex2ResponseHandler>::marshal (const OldDif2::AMH_ex2ResponseHandler_ptr p,TAO_OutputCDR & cdr)
+TAO::Objref_Traits<OldDif2::AMH_ex2ResponseHandler>::marshal (OldDif2::AMH_ex2ResponseHandler_ptr const p,TAO_OutputCDR & cdr)
 {
   return ::CORBA::Object::marshal (p, cdr);
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-
 
 OldDif2::AMH_ex2ResponseHandler::AMH_ex2ResponseHandler ()
 {}
@@ -3160,13 +2873,11 @@ OldDif2::AMH_ex2ResponseHandler::_tao_release (AMH_ex2ResponseHandler_ptr obj)
 }
 
 ::CORBA::Boolean
-OldDif2::AMH_ex2ResponseHandler::_is_a (const char *value)
+OldDif2::AMH_ex2ResponseHandler::_is_a (char const *value)
 {
-  if (
-      std::strcmp (value, "IDL:OldDif2/AMH_ex2ResponseHandler:1.0") == 0 ||
+  if (std::strcmp (value, "IDL:OldDif2/AMH_ex2ResponseHandler:1.0") == 0 ||
       std::strcmp (value, "IDL:omg.org/CORBA/LocalObject:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0
-      )
+      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0)
     {
       return true; // success using local knowledge
     }
@@ -3176,17 +2887,17 @@ OldDif2::AMH_ex2ResponseHandler::_is_a (const char *value)
     }
 }
 
-const char* OldDif2::AMH_ex2ResponseHandler::_interface_repository_id () const
+char const *OldDif2::AMH_ex2ResponseHandler::_interface_repository_id () const
 {
   return "IDL:OldDif2/AMH_ex2ResponseHandler:1.0";
 }
 
-const char* OldDif2::AMH_ex2ResponseHandler::_desc_repository_id ()
+char const *OldDif2::AMH_ex2ResponseHandler::_desc_repository_id ()
 {
   return "IDL:OldDif2/AMH_ex2ResponseHandler:1.0";
 }
 
-const char* OldDif2::AMH_ex2ResponseHandler::_desc_interface_name ()
+char const *OldDif2::AMH_ex2ResponseHandler::_desc_interface_name ()
 {
   return "AMH_ex2ResponseHandler";
 }
@@ -3196,9 +2907,6 @@ OldDif2::AMH_ex2ResponseHandler::marshal (TAO_OutputCDR & /* cdr */)
 {
   return false;
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_cs.cpp:47
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
@@ -3223,16 +2931,12 @@ TAO::Objref_Traits<OldDif2::AMI_ex2Handler>::nil ()
 }
 
 ::CORBA::Boolean
-TAO::Objref_Traits<OldDif2::AMI_ex2Handler>::marshal (const OldDif2::AMI_ex2Handler_ptr p,TAO_OutputCDR & cdr)
+TAO::Objref_Traits<OldDif2::AMI_ex2Handler>::marshal (OldDif2::AMI_ex2Handler_ptr const p,TAO_OutputCDR & cdr)
 {
   return ::CORBA::Object::marshal (p, cdr);
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/operation_cs.cpp:87
 
 void
 OldDif2::AMI_ex2Handler::op7 (
@@ -3244,11 +2948,11 @@ OldDif2::AMI_ex2Handler::op7 (
     {
       ::CORBA::Object::tao_object_initialize (this);
     }
-  
-  TAO::Arg_Traits< void>::ret_val _tao_retval;
-  TAO::Arg_Traits< ::ACE_InputCDR::to_char>::in_arg_val _tao_ami_return_val (ami_return_val);
-  TAO::Arg_Traits< ::ACE_InputCDR::to_boolean>::in_arg_val _tao_b (b);
-  TAO::Arg_Traits< ::ACE_InputCDR::to_octet>::in_arg_val _tao_o (o);
+
+  TAO::Arg_Traits<void>::ret_val _tao_retval;
+  TAO::Arg_Traits<::ACE_InputCDR::to_char>::in_arg_val _tao_ami_return_val (ami_return_val);
+  TAO::Arg_Traits<::ACE_InputCDR::to_boolean>::in_arg_val _tao_b (b);
+  TAO::Arg_Traits<::ACE_InputCDR::to_octet>::in_arg_val _tao_o (o);
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
@@ -3265,7 +2969,7 @@ OldDif2::AMI_ex2Handler::op7 (
       "op7",
       3,
       TAO::TAO_CO_NONE | TAO::TAO_CO_DIRECT_STRATEGY | TAO::TAO_CO_THRU_POA_STRATEGY
-      
+
     );
 
   _invocation_call.invoke (nullptr, 0);
@@ -3297,14 +3001,14 @@ OldDif2::AMI_ex2Handler::op7_reply_stub (
             (_tao_in >> ::ACE_InputCDR::to_octet (o))
          ))
         throw ::CORBA::MARSHAL ();
-      
+
       // Invoke the call back method.
       _tao_reply_handler_object->op7 (
-          
+
           ami_return_val,
-          
+
           b,
-          
+
           o
         );
       break;
@@ -3329,7 +3033,7 @@ OldDif2::AMI_ex2Handler::op7_reply_stub (
             0,
             _tao_in.char_translator (),
             _tao_in.wchar_translator ()));
-        
+
       ::Messaging::ExceptionHolder_var exception_holder_var = exception_holder_ptr;
       _tao_reply_handler_object->op7_excep (
           exception_holder_var);
@@ -3341,9 +3045,6 @@ OldDif2::AMI_ex2Handler::op7_reply_stub (
       break;
   }
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/operation_cs.cpp:87
-
 void
 OldDif2::AMI_ex2Handler::op7_excep (
   ::Messaging::ExceptionHolder * excep_holder)
@@ -3352,9 +3053,9 @@ OldDif2::AMI_ex2Handler::op7_excep (
     {
       ::CORBA::Object::tao_object_initialize (this);
     }
-  
-  TAO::Arg_Traits< void>::ret_val _tao_retval;
-  TAO::Arg_Traits< ::Messaging::ExceptionHolder>::in_arg_val _tao_excep_holder (excep_holder);
+
+  TAO::Arg_Traits<void>::ret_val _tao_retval;
+  TAO::Arg_Traits<::Messaging::ExceptionHolder>::in_arg_val _tao_excep_holder (excep_holder);
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
@@ -3369,14 +3070,11 @@ OldDif2::AMI_ex2Handler::op7_excep (
       "op7_excep",
       9,
       TAO::TAO_CO_NONE | TAO::TAO_CO_DIRECT_STRATEGY | TAO::TAO_CO_THRU_POA_STRATEGY
-      
+
     );
 
   _invocation_call.invoke (nullptr, 0);
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/operation_cs.cpp:87
-
 void
 OldDif2::AMI_ex2Handler::op8 (
   ::CORBA::Boolean ami_return_val,
@@ -3386,10 +3084,10 @@ OldDif2::AMI_ex2Handler::op8 (
     {
       ::CORBA::Object::tao_object_initialize (this);
     }
-  
-  TAO::Arg_Traits< void>::ret_val _tao_retval;
-  TAO::Arg_Traits< ::ACE_InputCDR::to_boolean>::in_arg_val _tao_ami_return_val (ami_return_val);
-  TAO::Arg_Traits< ::ACE_InputCDR::to_boolean>::in_arg_val _tao_b (b);
+
+  TAO::Arg_Traits<void>::ret_val _tao_retval;
+  TAO::Arg_Traits<::ACE_InputCDR::to_boolean>::in_arg_val _tao_ami_return_val (ami_return_val);
+  TAO::Arg_Traits<::ACE_InputCDR::to_boolean>::in_arg_val _tao_b (b);
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
@@ -3405,7 +3103,7 @@ OldDif2::AMI_ex2Handler::op8 (
       "op8",
       3,
       TAO::TAO_CO_NONE | TAO::TAO_CO_DIRECT_STRATEGY | TAO::TAO_CO_THRU_POA_STRATEGY
-      
+
     );
 
   _invocation_call.invoke (nullptr, 0);
@@ -3435,12 +3133,12 @@ OldDif2::AMI_ex2Handler::op8_reply_stub (
             (_tao_in >> ::ACE_InputCDR::to_boolean (b))
          ))
         throw ::CORBA::MARSHAL ();
-      
+
       // Invoke the call back method.
       _tao_reply_handler_object->op8 (
-          
+
           ami_return_val,
-          
+
           b
         );
       break;
@@ -3465,7 +3163,7 @@ OldDif2::AMI_ex2Handler::op8_reply_stub (
             0,
             _tao_in.char_translator (),
             _tao_in.wchar_translator ()));
-        
+
       ::Messaging::ExceptionHolder_var exception_holder_var = exception_holder_ptr;
       _tao_reply_handler_object->op8_excep (
           exception_holder_var);
@@ -3477,9 +3175,6 @@ OldDif2::AMI_ex2Handler::op8_reply_stub (
       break;
   }
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/operation_cs.cpp:87
-
 void
 OldDif2::AMI_ex2Handler::op8_excep (
   ::Messaging::ExceptionHolder * excep_holder)
@@ -3488,9 +3183,9 @@ OldDif2::AMI_ex2Handler::op8_excep (
     {
       ::CORBA::Object::tao_object_initialize (this);
     }
-  
-  TAO::Arg_Traits< void>::ret_val _tao_retval;
-  TAO::Arg_Traits< ::Messaging::ExceptionHolder>::in_arg_val _tao_excep_holder (excep_holder);
+
+  TAO::Arg_Traits<void>::ret_val _tao_retval;
+  TAO::Arg_Traits<::Messaging::ExceptionHolder>::in_arg_val _tao_excep_holder (excep_holder);
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
@@ -3505,31 +3200,28 @@ OldDif2::AMI_ex2Handler::op8_excep (
       "op8_excep",
       9,
       TAO::TAO_CO_NONE | TAO::TAO_CO_DIRECT_STRATEGY | TAO::TAO_CO_THRU_POA_STRATEGY
-      
+
     );
 
   _invocation_call.invoke (nullptr, 0);
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/operation_cs.cpp:87
-
 void
 OldDif2::AMI_ex2Handler::op9 (
   ::CORBA::Octet ami_return_val,
   ::CORBA::Octet o,
-  const char * s,
+  char const * s,
   ::CORBA::Long l)
 {
   if (!this->is_evaluated ())
     {
       ::CORBA::Object::tao_object_initialize (this);
     }
-  
-  TAO::Arg_Traits< void>::ret_val _tao_retval;
-  TAO::Arg_Traits< ::ACE_InputCDR::to_octet>::in_arg_val _tao_ami_return_val (ami_return_val);
-  TAO::Arg_Traits< ::ACE_InputCDR::to_octet>::in_arg_val _tao_o (o);
-  TAO::Arg_Traits< char *>::in_arg_val _tao_s (s);
-  TAO::Arg_Traits< ::CORBA::Long>::in_arg_val _tao_l (l);
+
+  TAO::Arg_Traits<void>::ret_val _tao_retval;
+  TAO::Arg_Traits<::ACE_InputCDR::to_octet>::in_arg_val _tao_ami_return_val (ami_return_val);
+  TAO::Arg_Traits<::ACE_InputCDR::to_octet>::in_arg_val _tao_o (o);
+  TAO::Arg_Traits<char *>::in_arg_val _tao_s (s);
+  TAO::Arg_Traits<::CORBA::Long>::in_arg_val _tao_l (l);
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
@@ -3547,7 +3239,7 @@ OldDif2::AMI_ex2Handler::op9 (
       "op9",
       3,
       TAO::TAO_CO_NONE | TAO::TAO_CO_DIRECT_STRATEGY | TAO::TAO_CO_THRU_POA_STRATEGY
-      
+
     );
 
   _invocation_call.invoke (nullptr, 0);
@@ -3581,16 +3273,16 @@ OldDif2::AMI_ex2Handler::op9_reply_stub (
             (_tao_in >> l)
          ))
         throw ::CORBA::MARSHAL ();
-      
+
       // Invoke the call back method.
       _tao_reply_handler_object->op9 (
-          
+
           ami_return_val,
-          
+
           o,
-          
+
           s.in (),
-          
+
           l
         );
       break;
@@ -3615,7 +3307,7 @@ OldDif2::AMI_ex2Handler::op9_reply_stub (
             0,
             _tao_in.char_translator (),
             _tao_in.wchar_translator ()));
-        
+
       ::Messaging::ExceptionHolder_var exception_holder_var = exception_holder_ptr;
       _tao_reply_handler_object->op9_excep (
           exception_holder_var);
@@ -3627,9 +3319,6 @@ OldDif2::AMI_ex2Handler::op9_reply_stub (
       break;
   }
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/operation_cs.cpp:87
-
 void
 OldDif2::AMI_ex2Handler::op9_excep (
   ::Messaging::ExceptionHolder * excep_holder)
@@ -3638,9 +3327,9 @@ OldDif2::AMI_ex2Handler::op9_excep (
     {
       ::CORBA::Object::tao_object_initialize (this);
     }
-  
-  TAO::Arg_Traits< void>::ret_val _tao_retval;
-  TAO::Arg_Traits< ::Messaging::ExceptionHolder>::in_arg_val _tao_excep_holder (excep_holder);
+
+  TAO::Arg_Traits<void>::ret_val _tao_retval;
+  TAO::Arg_Traits<::Messaging::ExceptionHolder>::in_arg_val _tao_excep_holder (excep_holder);
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
@@ -3655,27 +3344,24 @@ OldDif2::AMI_ex2Handler::op9_excep (
       "op9_excep",
       9,
       TAO::TAO_CO_NONE | TAO::TAO_CO_DIRECT_STRATEGY | TAO::TAO_CO_THRU_POA_STRATEGY
-      
+
     );
 
   _invocation_call.invoke (nullptr, 0);
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/operation_cs.cpp:87
-
 void
 OldDif2::AMI_ex2Handler::op10 (
-  const char * ami_return_val,
-  const char * ls)
+  char const * ami_return_val,
+  char const * ls)
 {
   if (!this->is_evaluated ())
     {
       ::CORBA::Object::tao_object_initialize (this);
     }
-  
-  TAO::Arg_Traits< void>::ret_val _tao_retval;
-  TAO::Arg_Traits< char *>::in_arg_val _tao_ami_return_val (ami_return_val);
-  TAO::Arg_Traits< ::TAO::OldDif2_ex2_op10_ls>::in_arg_val _tao_ls (ls);
+
+  TAO::Arg_Traits<void>::ret_val _tao_retval;
+  TAO::Arg_Traits<char *>::in_arg_val _tao_ami_return_val (ami_return_val);
+  TAO::Arg_Traits<::TAO::OldDif2_ex2_op10_ls>::in_arg_val _tao_ls (ls);
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
@@ -3691,7 +3377,7 @@ OldDif2::AMI_ex2Handler::op10 (
       "op10",
       4,
       TAO::TAO_CO_NONE | TAO::TAO_CO_DIRECT_STRATEGY | TAO::TAO_CO_THRU_POA_STRATEGY
-      
+
     );
 
   _invocation_call.invoke (nullptr, 0);
@@ -3721,12 +3407,12 @@ OldDif2::AMI_ex2Handler::op10_reply_stub (
             (_tao_in >> ::ACE_InputCDR::to_string (ls.out (), 10))
          ))
         throw ::CORBA::MARSHAL ();
-      
+
       // Invoke the call back method.
       _tao_reply_handler_object->op10 (
-          
+
           ami_return_val.in (),
-          
+
           ls.in ()
         );
       break;
@@ -3751,7 +3437,7 @@ OldDif2::AMI_ex2Handler::op10_reply_stub (
             0,
             _tao_in.char_translator (),
             _tao_in.wchar_translator ()));
-        
+
       ::Messaging::ExceptionHolder_var exception_holder_var = exception_holder_ptr;
       _tao_reply_handler_object->op10_excep (
           exception_holder_var);
@@ -3763,9 +3449,6 @@ OldDif2::AMI_ex2Handler::op10_reply_stub (
       break;
   }
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/operation_cs.cpp:87
-
 void
 OldDif2::AMI_ex2Handler::op10_excep (
   ::Messaging::ExceptionHolder * excep_holder)
@@ -3774,9 +3457,9 @@ OldDif2::AMI_ex2Handler::op10_excep (
     {
       ::CORBA::Object::tao_object_initialize (this);
     }
-  
-  TAO::Arg_Traits< void>::ret_val _tao_retval;
-  TAO::Arg_Traits< ::Messaging::ExceptionHolder>::in_arg_val _tao_excep_holder (excep_holder);
+
+  TAO::Arg_Traits<void>::ret_val _tao_retval;
+  TAO::Arg_Traits<::Messaging::ExceptionHolder>::in_arg_val _tao_excep_holder (excep_holder);
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
@@ -3791,29 +3474,26 @@ OldDif2::AMI_ex2Handler::op10_excep (
       "op10_excep",
       10,
       TAO::TAO_CO_NONE | TAO::TAO_CO_DIRECT_STRATEGY | TAO::TAO_CO_THRU_POA_STRATEGY
-      
+
     );
 
   _invocation_call.invoke (nullptr, 0);
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/operation_cs.cpp:87
-
 void
 OldDif2::AMI_ex2Handler::op11 (
-  const char * ami_return_val,
-  const char * ls,
+  char const * ami_return_val,
+  char const * ls,
   ::CORBA::Long l)
 {
   if (!this->is_evaluated ())
     {
       ::CORBA::Object::tao_object_initialize (this);
     }
-  
-  TAO::Arg_Traits< void>::ret_val _tao_retval;
-  TAO::Arg_Traits< ::TAO::OldDif2_AMI_ex2Handler_op11_ami_return_val>::in_arg_val _tao_ami_return_val (ami_return_val);
-  TAO::Arg_Traits< ::TAO::OldDif2_ex2_op11_ls>::in_arg_val _tao_ls (ls);
-  TAO::Arg_Traits< ::CORBA::Long>::in_arg_val _tao_l (l);
+
+  TAO::Arg_Traits<void>::ret_val _tao_retval;
+  TAO::Arg_Traits<::TAO::OldDif2_AMI_ex2Handler_op11_ami_return_val>::in_arg_val _tao_ami_return_val (ami_return_val);
+  TAO::Arg_Traits<::TAO::OldDif2_ex2_op11_ls>::in_arg_val _tao_ls (ls);
+  TAO::Arg_Traits<::CORBA::Long>::in_arg_val _tao_l (l);
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
@@ -3830,7 +3510,7 @@ OldDif2::AMI_ex2Handler::op11 (
       "op11",
       4,
       TAO::TAO_CO_NONE | TAO::TAO_CO_DIRECT_STRATEGY | TAO::TAO_CO_THRU_POA_STRATEGY
-      
+
     );
 
   _invocation_call.invoke (nullptr, 0);
@@ -3862,14 +3542,14 @@ OldDif2::AMI_ex2Handler::op11_reply_stub (
             (_tao_in >> l)
          ))
         throw ::CORBA::MARSHAL ();
-      
+
       // Invoke the call back method.
       _tao_reply_handler_object->op11 (
-          
+
           ami_return_val.in (),
-          
+
           ls.in (),
-          
+
           l
         );
       break;
@@ -3894,7 +3574,7 @@ OldDif2::AMI_ex2Handler::op11_reply_stub (
             0,
             _tao_in.char_translator (),
             _tao_in.wchar_translator ()));
-        
+
       ::Messaging::ExceptionHolder_var exception_holder_var = exception_holder_ptr;
       _tao_reply_handler_object->op11_excep (
           exception_holder_var);
@@ -3906,9 +3586,6 @@ OldDif2::AMI_ex2Handler::op11_reply_stub (
       break;
   }
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/operation_cs.cpp:87
-
 void
 OldDif2::AMI_ex2Handler::op11_excep (
   ::Messaging::ExceptionHolder * excep_holder)
@@ -3917,9 +3594,9 @@ OldDif2::AMI_ex2Handler::op11_excep (
     {
       ::CORBA::Object::tao_object_initialize (this);
     }
-  
-  TAO::Arg_Traits< void>::ret_val _tao_retval;
-  TAO::Arg_Traits< ::Messaging::ExceptionHolder>::in_arg_val _tao_excep_holder (excep_holder);
+
+  TAO::Arg_Traits<void>::ret_val _tao_retval;
+  TAO::Arg_Traits<::Messaging::ExceptionHolder>::in_arg_val _tao_excep_holder (excep_holder);
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
@@ -3934,14 +3611,11 @@ OldDif2::AMI_ex2Handler::op11_excep (
       "op11_excep",
       10,
       TAO::TAO_CO_NONE | TAO::TAO_CO_DIRECT_STRATEGY | TAO::TAO_CO_THRU_POA_STRATEGY
-      
+
     );
 
   _invocation_call.invoke (nullptr, 0);
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/operation_cs.cpp:87
-
 void
 OldDif2::AMI_ex2Handler::op12 (
   ::CORBA::Long ami_return_val)
@@ -3950,9 +3624,9 @@ OldDif2::AMI_ex2Handler::op12 (
     {
       ::CORBA::Object::tao_object_initialize (this);
     }
-  
-  TAO::Arg_Traits< void>::ret_val _tao_retval;
-  TAO::Arg_Traits< ::CORBA::Long>::in_arg_val _tao_ami_return_val (ami_return_val);
+
+  TAO::Arg_Traits<void>::ret_val _tao_retval;
+  TAO::Arg_Traits<::CORBA::Long>::in_arg_val _tao_ami_return_val (ami_return_val);
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
@@ -3967,7 +3641,7 @@ OldDif2::AMI_ex2Handler::op12 (
       "op12",
       4,
       TAO::TAO_CO_NONE | TAO::TAO_CO_DIRECT_STRATEGY | TAO::TAO_CO_THRU_POA_STRATEGY
-      
+
     );
 
   _invocation_call.invoke (nullptr, 0);
@@ -3995,10 +3669,10 @@ OldDif2::AMI_ex2Handler::op12_reply_stub (
             (_tao_in >> ami_return_val)
          ))
         throw ::CORBA::MARSHAL ();
-      
+
       // Invoke the call back method.
       _tao_reply_handler_object->op12 (
-          
+
           ami_return_val
         );
       break;
@@ -4023,7 +3697,7 @@ OldDif2::AMI_ex2Handler::op12_reply_stub (
             0,
             _tao_in.char_translator (),
             _tao_in.wchar_translator ()));
-        
+
       ::Messaging::ExceptionHolder_var exception_holder_var = exception_holder_ptr;
       _tao_reply_handler_object->op12_excep (
           exception_holder_var);
@@ -4035,9 +3709,6 @@ OldDif2::AMI_ex2Handler::op12_reply_stub (
       break;
   }
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/operation_cs.cpp:87
-
 void
 OldDif2::AMI_ex2Handler::op12_excep (
   ::Messaging::ExceptionHolder * excep_holder)
@@ -4046,9 +3717,9 @@ OldDif2::AMI_ex2Handler::op12_excep (
     {
       ::CORBA::Object::tao_object_initialize (this);
     }
-  
-  TAO::Arg_Traits< void>::ret_val _tao_retval;
-  TAO::Arg_Traits< ::Messaging::ExceptionHolder>::in_arg_val _tao_excep_holder (excep_holder);
+
+  TAO::Arg_Traits<void>::ret_val _tao_retval;
+  TAO::Arg_Traits<::Messaging::ExceptionHolder>::in_arg_val _tao_excep_holder (excep_holder);
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
@@ -4063,7 +3734,7 @@ OldDif2::AMI_ex2Handler::op12_excep (
       "op12_excep",
       10,
       TAO::TAO_CO_NONE | TAO::TAO_CO_DIRECT_STRATEGY | TAO::TAO_CO_THRU_POA_STRATEGY
-      
+
     );
 
   _invocation_call.invoke (nullptr, 0);
@@ -4114,14 +3785,12 @@ OldDif2::AMI_ex2Handler::_tao_release (AMI_ex2Handler_ptr obj)
 }
 
 ::CORBA::Boolean
-OldDif2::AMI_ex2Handler::_is_a (const char *value)
+OldDif2::AMI_ex2Handler::_is_a (char const *value)
 {
-  if (
-      std::strcmp (value, "IDL:omg.org/Messaging/ReplyHandler:1.0") == 0 ||
+  if (std::strcmp (value, "IDL:omg.org/Messaging/ReplyHandler:1.0") == 0 ||
       std::strcmp (value, "IDL:OldDif2/AMI_ex1Handler:1.0") == 0 ||
       std::strcmp (value, "IDL:OldDif2/AMI_ex2Handler:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0
-      )
+      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0)
     {
       return true; // success using local knowledge
     }
@@ -4131,17 +3800,17 @@ OldDif2::AMI_ex2Handler::_is_a (const char *value)
     }
 }
 
-const char* OldDif2::AMI_ex2Handler::_interface_repository_id () const
+char const *OldDif2::AMI_ex2Handler::_interface_repository_id () const
 {
   return "IDL:OldDif2/AMI_ex2Handler:1.0";
 }
 
-const char* OldDif2::AMI_ex2Handler::_desc_repository_id ()
+char const *OldDif2::AMI_ex2Handler::_desc_repository_id ()
 {
   return "IDL:OldDif2/AMI_ex2Handler:1.0";
 }
 
-const char* OldDif2::AMI_ex2Handler::_desc_interface_name ()
+char const *OldDif2::AMI_ex2Handler::_desc_interface_name ()
 {
   return "AMI_ex2Handler";
 }
@@ -4151,9 +3820,6 @@ OldDif2::AMI_ex2Handler::marshal (TAO_OutputCDR &cdr)
 {
   return (cdr << this);
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_cs.cpp:47
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
@@ -4178,16 +3844,12 @@ TAO::Objref_Traits<OldDif2::ex3>::nil ()
 }
 
 ::CORBA::Boolean
-TAO::Objref_Traits<OldDif2::ex3>::marshal (const OldDif2::ex3_ptr p,TAO_OutputCDR & cdr)
+TAO::Objref_Traits<OldDif2::ex3>::marshal (OldDif2::ex3_ptr const p,TAO_OutputCDR & cdr)
 {
   return ::CORBA::Object::marshal (p, cdr);
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/operation_cs.cpp:87
 
 ::CORBA::Float
 OldDif2::ex3::float_attribute ()
@@ -4196,8 +3858,8 @@ OldDif2::ex3::float_attribute ()
     {
       ::CORBA::Object::tao_object_initialize (this);
     }
-  
-  TAO::Arg_Traits< ::CORBA::Float>::ret_val _tao_retval;
+
+  TAO::Arg_Traits<::CORBA::Float>::ret_val _tao_retval;
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
@@ -4221,9 +3883,6 @@ OldDif2::ex3::float_attribute ()
 
   return _tao_retval.retn ();
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/operation_cs.cpp:87
-
 ::CORBA::Double
 OldDif2::ex3::double_attribute ()
 {
@@ -4231,8 +3890,8 @@ OldDif2::ex3::double_attribute ()
     {
       ::CORBA::Object::tao_object_initialize (this);
     }
-  
-  TAO::Arg_Traits< ::CORBA::Double>::ret_val _tao_retval;
+
+  TAO::Arg_Traits<::CORBA::Double>::ret_val _tao_retval;
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
@@ -4256,9 +3915,6 @@ OldDif2::ex3::double_attribute ()
 
   return _tao_retval.retn ();
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/operation_cs.cpp:87
-
 void
 OldDif2::ex3::double_attribute (
   ::CORBA::Double double_attribute)
@@ -4267,9 +3923,9 @@ OldDif2::ex3::double_attribute (
     {
       ::CORBA::Object::tao_object_initialize (this);
     }
-  
-  TAO::Arg_Traits< void>::ret_val _tao_retval;
-  TAO::Arg_Traits< ::CORBA::Double>::in_arg_val _tao_double_attribute (double_attribute);
+
+  TAO::Arg_Traits<void>::ret_val _tao_retval;
+  TAO::Arg_Traits<::CORBA::Double>::in_arg_val _tao_double_attribute (double_attribute);
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
@@ -4284,14 +3940,11 @@ OldDif2::ex3::double_attribute (
       "_set_double_attribute",
       21,
       TAO::TAO_CO_NONE | TAO::TAO_CO_DIRECT_STRATEGY | TAO::TAO_CO_THRU_POA_STRATEGY
-      
+
     );
 
   _invocation_call.invoke (nullptr, 0);
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/operation_cs.cpp:87
-
 ::CORBA::Long
 OldDif2::ex3::long_attribute ()
 {
@@ -4299,8 +3952,8 @@ OldDif2::ex3::long_attribute ()
     {
       ::CORBA::Object::tao_object_initialize (this);
     }
-  
-  TAO::Arg_Traits< ::CORBA::Long>::ret_val _tao_retval;
+
+  TAO::Arg_Traits<::CORBA::Long>::ret_val _tao_retval;
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
@@ -4324,9 +3977,6 @@ OldDif2::ex3::long_attribute ()
 
   return _tao_retval.retn ();
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/operation_cs.cpp:87
-
 ::CORBA::Short
 OldDif2::ex3::short_attribute ()
 {
@@ -4334,8 +3984,8 @@ OldDif2::ex3::short_attribute ()
     {
       ::CORBA::Object::tao_object_initialize (this);
     }
-  
-  TAO::Arg_Traits< ::CORBA::Short>::ret_val _tao_retval;
+
+  TAO::Arg_Traits<::CORBA::Short>::ret_val _tao_retval;
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
@@ -4359,9 +4009,6 @@ OldDif2::ex3::short_attribute ()
 
   return _tao_retval.retn ();
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/operation_cs.cpp:87
-
 void
 OldDif2::ex3::short_attribute (
   ::CORBA::Short short_attribute)
@@ -4370,9 +4017,9 @@ OldDif2::ex3::short_attribute (
     {
       ::CORBA::Object::tao_object_initialize (this);
     }
-  
-  TAO::Arg_Traits< void>::ret_val _tao_retval;
-  TAO::Arg_Traits< ::CORBA::Short>::in_arg_val _tao_short_attribute (short_attribute);
+
+  TAO::Arg_Traits<void>::ret_val _tao_retval;
+  TAO::Arg_Traits<::CORBA::Short>::in_arg_val _tao_short_attribute (short_attribute);
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
@@ -4387,14 +4034,11 @@ OldDif2::ex3::short_attribute (
       "_set_short_attribute",
       20,
       TAO::TAO_CO_NONE | TAO::TAO_CO_DIRECT_STRATEGY | TAO::TAO_CO_THRU_POA_STRATEGY
-      
+
     );
 
   _invocation_call.invoke (nullptr, 0);
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/operation_cs.cpp:87
-
 ::CORBA::ULong
 OldDif2::ex3::unsigned_long_attribute ()
 {
@@ -4402,8 +4046,8 @@ OldDif2::ex3::unsigned_long_attribute ()
     {
       ::CORBA::Object::tao_object_initialize (this);
     }
-  
-  TAO::Arg_Traits< ::CORBA::ULong>::ret_val _tao_retval;
+
+  TAO::Arg_Traits<::CORBA::ULong>::ret_val _tao_retval;
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
@@ -4427,10 +4071,6 @@ OldDif2::ex3::unsigned_long_attribute ()
 
   return _tao_retval.retn ();
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/ami_cs.cpp:54
-
-
 
 void
 OldDif2::ex3::sendc_get_float_attribute (
@@ -4440,8 +4080,6 @@ OldDif2::ex3::sendc_get_float_attribute (
     {
       ::CORBA::Object::tao_object_initialize (this);
     }
-  
-  
 
   TAO::Argument ** _the_tao_operation_signature {};
 
@@ -4459,10 +4097,6 @@ OldDif2::ex3::sendc_get_float_attribute (
       &OldDif2::AMI_ex3Handler::get_float_attribute_reply_stub
     );
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/ami_cs.cpp:54
-
-
 
 void
 OldDif2::ex3::sendc_set_double_attribute (
@@ -4473,11 +4107,9 @@ OldDif2::ex3::sendc_set_double_attribute (
     {
       ::CORBA::Object::tao_object_initialize (this);
     }
-  
-  
-  
+
   TAO::Arg_Traits<void>::ret_val _tao_retval;
-  TAO::Arg_Traits< ::CORBA::Double>::in_arg_val _tao_double_attribute (double_attribute);
+  TAO::Arg_Traits<::CORBA::Double>::in_arg_val _tao_double_attribute (double_attribute);
 
   TAO::Argument *_the_tao_operation_signature[] =
     {
@@ -4499,10 +4131,6 @@ OldDif2::ex3::sendc_set_double_attribute (
       &OldDif2::AMI_ex3Handler::set_double_attribute_reply_stub
     );
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/ami_cs.cpp:54
-
-
 
 void
 OldDif2::ex3::sendc_get_double_attribute (
@@ -4512,8 +4140,6 @@ OldDif2::ex3::sendc_get_double_attribute (
     {
       ::CORBA::Object::tao_object_initialize (this);
     }
-  
-  
 
   TAO::Argument ** _the_tao_operation_signature {};
 
@@ -4531,10 +4157,6 @@ OldDif2::ex3::sendc_get_double_attribute (
       &OldDif2::AMI_ex3Handler::get_double_attribute_reply_stub
     );
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/ami_cs.cpp:54
-
-
 
 void
 OldDif2::ex3::sendc_get_long_attribute (
@@ -4544,8 +4166,6 @@ OldDif2::ex3::sendc_get_long_attribute (
     {
       ::CORBA::Object::tao_object_initialize (this);
     }
-  
-  
 
   TAO::Argument ** _the_tao_operation_signature {};
 
@@ -4563,10 +4183,6 @@ OldDif2::ex3::sendc_get_long_attribute (
       &OldDif2::AMI_ex3Handler::get_long_attribute_reply_stub
     );
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/ami_cs.cpp:54
-
-
 
 void
 OldDif2::ex3::sendc_set_short_attribute (
@@ -4577,11 +4193,9 @@ OldDif2::ex3::sendc_set_short_attribute (
     {
       ::CORBA::Object::tao_object_initialize (this);
     }
-  
-  
-  
+
   TAO::Arg_Traits<void>::ret_val _tao_retval;
-  TAO::Arg_Traits< ::CORBA::Short>::in_arg_val _tao_short_attribute (short_attribute);
+  TAO::Arg_Traits<::CORBA::Short>::in_arg_val _tao_short_attribute (short_attribute);
 
   TAO::Argument *_the_tao_operation_signature[] =
     {
@@ -4603,10 +4217,6 @@ OldDif2::ex3::sendc_set_short_attribute (
       &OldDif2::AMI_ex3Handler::set_short_attribute_reply_stub
     );
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/ami_cs.cpp:54
-
-
 
 void
 OldDif2::ex3::sendc_get_short_attribute (
@@ -4616,8 +4226,6 @@ OldDif2::ex3::sendc_get_short_attribute (
     {
       ::CORBA::Object::tao_object_initialize (this);
     }
-  
-  
 
   TAO::Argument ** _the_tao_operation_signature {};
 
@@ -4635,10 +4243,6 @@ OldDif2::ex3::sendc_get_short_attribute (
       &OldDif2::AMI_ex3Handler::get_short_attribute_reply_stub
     );
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/ami_cs.cpp:54
-
-
 
 void
 OldDif2::ex3::sendc_get_unsigned_long_attribute (
@@ -4648,8 +4252,6 @@ OldDif2::ex3::sendc_get_unsigned_long_attribute (
     {
       ::CORBA::Object::tao_object_initialize (this);
     }
-  
-  
 
   TAO::Argument ** _the_tao_operation_signature {};
 
@@ -4713,13 +4315,11 @@ OldDif2::ex3::_tao_release (ex3_ptr obj)
 }
 
 ::CORBA::Boolean
-OldDif2::ex3::_is_a (const char *value)
+OldDif2::ex3::_is_a (char const *value)
 {
-  if (
-      std::strcmp (value, "IDL:OldDif2/ex1:1.0") == 0 ||
+  if (std::strcmp (value, "IDL:OldDif2/ex1:1.0") == 0 ||
       std::strcmp (value, "IDL:OldDif2/ex3:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0
-      )
+      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0)
     {
       return true; // success using local knowledge
     }
@@ -4729,17 +4329,17 @@ OldDif2::ex3::_is_a (const char *value)
     }
 }
 
-const char* OldDif2::ex3::_interface_repository_id () const
+char const *OldDif2::ex3::_interface_repository_id () const
 {
   return "IDL:OldDif2/ex3:1.0";
 }
 
-const char* OldDif2::ex3::_desc_repository_id ()
+char const *OldDif2::ex3::_desc_repository_id ()
 {
   return "IDL:OldDif2/ex3:1.0";
 }
 
-const char* OldDif2::ex3::_desc_interface_name ()
+char const *OldDif2::ex3::_desc_interface_name ()
 {
   return "ex3";
 }
@@ -4749,13 +4349,8 @@ OldDif2::ex3::marshal (TAO_OutputCDR &cdr)
 {
   return (cdr << this);
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_cs.cpp:52
-
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
 
 void
 TAO::Value_Traits<OldDif2::AMH_ex3ExceptionHolder>::add_ref (OldDif2::AMH_ex3ExceptionHolder * p)
@@ -4777,15 +4372,13 @@ TAO::Value_Traits<OldDif2::AMH_ex3ExceptionHolder>::release (OldDif2::AMH_ex3Exc
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 OldDif2::AMH_ex3ExceptionHolder *
 OldDif2::AMH_ex3ExceptionHolder::_downcast (::CORBA::ValueBase *v)
 {
   return dynamic_cast<::OldDif2::AMH_ex3ExceptionHolder *> (v);
 }
 
-const char *
+char const *
 OldDif2::AMH_ex3ExceptionHolder::_tao_obv_repository_id () const
 {
   return this->_tao_obv_static_repository_id ();
@@ -4864,173 +4457,127 @@ OldDif2::AMH_ex3ExceptionHolder::_tao_unmarshal (
         is_null_object,
         is_indirected
       );
-  
+
   ::CORBA::ValueBase_var owner (base);
 
   if (!retval)
     return false;
-  
+
   if (is_null_object)
     return true;
-  
+
   if (!is_indirected && !base->_tao_unmarshal_v (strm))
     return false;
-  
+
   // Now base must point to the unmarshaled object.
   // Align the pointer to the right subobject.
   new_object = AMH_ex3ExceptionHolder::_downcast (base);
   if (nullptr == new_object)
     return false;
-  
+
   if (is_indirected)
     new_object->_add_ref ();
-  
+
   owner._retn ();
   return true;
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_cs.cpp:440
-
 void
 OldDif2::AMH_ex3ExceptionHolder::raise_get_float_attribute ()
 {
-  std::unique_ptr< ::CORBA::Exception> safety (this->exception);
+  std::unique_ptr<::CORBA::Exception> safety (this->exception);
   this->exception->_raise ();
 }
-
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_cs.cpp:440
 
 void
 OldDif2::AMH_ex3ExceptionHolder::raise_get_double_attribute ()
 {
-  std::unique_ptr< ::CORBA::Exception> safety (this->exception);
+  std::unique_ptr<::CORBA::Exception> safety (this->exception);
   this->exception->_raise ();
 }
-
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_cs.cpp:440
 
 void
 OldDif2::AMH_ex3ExceptionHolder::raise_set_double_attribute ()
 {
-  std::unique_ptr< ::CORBA::Exception> safety (this->exception);
+  std::unique_ptr<::CORBA::Exception> safety (this->exception);
   this->exception->_raise ();
 }
-
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_cs.cpp:440
 
 void
 OldDif2::AMH_ex3ExceptionHolder::raise_get_long_attribute ()
 {
-  std::unique_ptr< ::CORBA::Exception> safety (this->exception);
+  std::unique_ptr<::CORBA::Exception> safety (this->exception);
   this->exception->_raise ();
 }
-
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_cs.cpp:440
 
 void
 OldDif2::AMH_ex3ExceptionHolder::raise_get_short_attribute ()
 {
-  std::unique_ptr< ::CORBA::Exception> safety (this->exception);
+  std::unique_ptr<::CORBA::Exception> safety (this->exception);
   this->exception->_raise ();
 }
-
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_cs.cpp:440
 
 void
 OldDif2::AMH_ex3ExceptionHolder::raise_set_short_attribute ()
 {
-  std::unique_ptr< ::CORBA::Exception> safety (this->exception);
+  std::unique_ptr<::CORBA::Exception> safety (this->exception);
   this->exception->_raise ();
 }
-
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_cs.cpp:440
 
 void
 OldDif2::AMH_ex3ExceptionHolder::raise_get_unsigned_long_attribute ()
 {
-  std::unique_ptr< ::CORBA::Exception> safety (this->exception);
+  std::unique_ptr<::CORBA::Exception> safety (this->exception);
   this->exception->_raise ();
 }
-
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_cs.cpp:440
 
 void
 OldDif2::AMH_ex3ExceptionHolder::raise_sendc_get_float_attribute ()
 {
-  std::unique_ptr< ::CORBA::Exception> safety (this->exception);
+  std::unique_ptr<::CORBA::Exception> safety (this->exception);
   this->exception->_raise ();
 }
-
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_cs.cpp:440
 
 void
 OldDif2::AMH_ex3ExceptionHolder::raise_sendc_set_double_attribute ()
 {
-  std::unique_ptr< ::CORBA::Exception> safety (this->exception);
+  std::unique_ptr<::CORBA::Exception> safety (this->exception);
   this->exception->_raise ();
 }
-
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_cs.cpp:440
 
 void
 OldDif2::AMH_ex3ExceptionHolder::raise_sendc_get_double_attribute ()
 {
-  std::unique_ptr< ::CORBA::Exception> safety (this->exception);
+  std::unique_ptr<::CORBA::Exception> safety (this->exception);
   this->exception->_raise ();
 }
-
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_cs.cpp:440
 
 void
 OldDif2::AMH_ex3ExceptionHolder::raise_sendc_get_long_attribute ()
 {
-  std::unique_ptr< ::CORBA::Exception> safety (this->exception);
+  std::unique_ptr<::CORBA::Exception> safety (this->exception);
   this->exception->_raise ();
 }
-
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_cs.cpp:440
 
 void
 OldDif2::AMH_ex3ExceptionHolder::raise_sendc_set_short_attribute ()
 {
-  std::unique_ptr< ::CORBA::Exception> safety (this->exception);
+  std::unique_ptr<::CORBA::Exception> safety (this->exception);
   this->exception->_raise ();
 }
-
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_cs.cpp:440
 
 void
 OldDif2::AMH_ex3ExceptionHolder::raise_sendc_get_short_attribute ()
 {
-  std::unique_ptr< ::CORBA::Exception> safety (this->exception);
+  std::unique_ptr<::CORBA::Exception> safety (this->exception);
   this->exception->_raise ();
 }
-
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_cs.cpp:440
 
 void
 OldDif2::AMH_ex3ExceptionHolder::raise_sendc_get_unsigned_long_attribute ()
 {
-  std::unique_ptr< ::CORBA::Exception> safety (this->exception);
+  std::unique_ptr<::CORBA::Exception> safety (this->exception);
   this->exception->_raise ();
 }
-
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_cs.cpp:47
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
@@ -5055,14 +4602,12 @@ TAO::Objref_Traits<OldDif2::AMH_ex3ResponseHandler>::nil ()
 }
 
 ::CORBA::Boolean
-TAO::Objref_Traits<OldDif2::AMH_ex3ResponseHandler>::marshal (const OldDif2::AMH_ex3ResponseHandler_ptr p,TAO_OutputCDR & cdr)
+TAO::Objref_Traits<OldDif2::AMH_ex3ResponseHandler>::marshal (OldDif2::AMH_ex3ResponseHandler_ptr const p,TAO_OutputCDR & cdr)
 {
   return ::CORBA::Object::marshal (p, cdr);
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-
 
 OldDif2::AMH_ex3ResponseHandler::AMH_ex3ResponseHandler ()
 {}
@@ -5111,13 +4656,11 @@ OldDif2::AMH_ex3ResponseHandler::_tao_release (AMH_ex3ResponseHandler_ptr obj)
 }
 
 ::CORBA::Boolean
-OldDif2::AMH_ex3ResponseHandler::_is_a (const char *value)
+OldDif2::AMH_ex3ResponseHandler::_is_a (char const *value)
 {
-  if (
-      std::strcmp (value, "IDL:OldDif2/AMH_ex3ResponseHandler:1.0") == 0 ||
+  if (std::strcmp (value, "IDL:OldDif2/AMH_ex3ResponseHandler:1.0") == 0 ||
       std::strcmp (value, "IDL:omg.org/CORBA/LocalObject:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0
-      )
+      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0)
     {
       return true; // success using local knowledge
     }
@@ -5127,17 +4670,17 @@ OldDif2::AMH_ex3ResponseHandler::_is_a (const char *value)
     }
 }
 
-const char* OldDif2::AMH_ex3ResponseHandler::_interface_repository_id () const
+char const *OldDif2::AMH_ex3ResponseHandler::_interface_repository_id () const
 {
   return "IDL:OldDif2/AMH_ex3ResponseHandler:1.0";
 }
 
-const char* OldDif2::AMH_ex3ResponseHandler::_desc_repository_id ()
+char const *OldDif2::AMH_ex3ResponseHandler::_desc_repository_id ()
 {
   return "IDL:OldDif2/AMH_ex3ResponseHandler:1.0";
 }
 
-const char* OldDif2::AMH_ex3ResponseHandler::_desc_interface_name ()
+char const *OldDif2::AMH_ex3ResponseHandler::_desc_interface_name ()
 {
   return "AMH_ex3ResponseHandler";
 }
@@ -5147,9 +4690,6 @@ OldDif2::AMH_ex3ResponseHandler::marshal (TAO_OutputCDR & /* cdr */)
 {
   return false;
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_cs.cpp:47
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
@@ -5174,16 +4714,12 @@ TAO::Objref_Traits<OldDif2::AMI_ex3Handler>::nil ()
 }
 
 ::CORBA::Boolean
-TAO::Objref_Traits<OldDif2::AMI_ex3Handler>::marshal (const OldDif2::AMI_ex3Handler_ptr p,TAO_OutputCDR & cdr)
+TAO::Objref_Traits<OldDif2::AMI_ex3Handler>::marshal (OldDif2::AMI_ex3Handler_ptr const p,TAO_OutputCDR & cdr)
 {
   return ::CORBA::Object::marshal (p, cdr);
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/operation_cs.cpp:87
 
 void
 OldDif2::AMI_ex3Handler::get_float_attribute (
@@ -5193,9 +4729,9 @@ OldDif2::AMI_ex3Handler::get_float_attribute (
     {
       ::CORBA::Object::tao_object_initialize (this);
     }
-  
-  TAO::Arg_Traits< void>::ret_val _tao_retval;
-  TAO::Arg_Traits< ::CORBA::Float>::in_arg_val _tao_ami_return_val (ami_return_val);
+
+  TAO::Arg_Traits<void>::ret_val _tao_retval;
+  TAO::Arg_Traits<::CORBA::Float>::in_arg_val _tao_ami_return_val (ami_return_val);
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
@@ -5210,7 +4746,7 @@ OldDif2::AMI_ex3Handler::get_float_attribute (
       "get_float_attribute",
       19,
       TAO::TAO_CO_NONE | TAO::TAO_CO_DIRECT_STRATEGY | TAO::TAO_CO_THRU_POA_STRATEGY
-      
+
     );
 
   _invocation_call.invoke (nullptr, 0);
@@ -5238,10 +4774,10 @@ OldDif2::AMI_ex3Handler::get_float_attribute_reply_stub (
             (_tao_in >> ami_return_val)
          ))
         throw ::CORBA::MARSHAL ();
-      
+
       // Invoke the call back method.
       _tao_reply_handler_object->get_float_attribute (
-          
+
           ami_return_val
         );
       break;
@@ -5266,7 +4802,7 @@ OldDif2::AMI_ex3Handler::get_float_attribute_reply_stub (
             0,
             _tao_in.char_translator (),
             _tao_in.wchar_translator ()));
-        
+
       ::Messaging::ExceptionHolder_var exception_holder_var = exception_holder_ptr;
       _tao_reply_handler_object->get_float_attribute_excep (
           exception_holder_var);
@@ -5278,9 +4814,6 @@ OldDif2::AMI_ex3Handler::get_float_attribute_reply_stub (
       break;
   }
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/operation_cs.cpp:87
-
 void
 OldDif2::AMI_ex3Handler::get_float_attribute_excep (
   ::Messaging::ExceptionHolder * excep_holder)
@@ -5289,9 +4822,9 @@ OldDif2::AMI_ex3Handler::get_float_attribute_excep (
     {
       ::CORBA::Object::tao_object_initialize (this);
     }
-  
-  TAO::Arg_Traits< void>::ret_val _tao_retval;
-  TAO::Arg_Traits< ::Messaging::ExceptionHolder>::in_arg_val _tao_excep_holder (excep_holder);
+
+  TAO::Arg_Traits<void>::ret_val _tao_retval;
+  TAO::Arg_Traits<::Messaging::ExceptionHolder>::in_arg_val _tao_excep_holder (excep_holder);
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
@@ -5306,14 +4839,11 @@ OldDif2::AMI_ex3Handler::get_float_attribute_excep (
       "get_float_attribute_excep",
       25,
       TAO::TAO_CO_NONE | TAO::TAO_CO_DIRECT_STRATEGY | TAO::TAO_CO_THRU_POA_STRATEGY
-      
+
     );
 
   _invocation_call.invoke (nullptr, 0);
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/operation_cs.cpp:87
-
 void
 OldDif2::AMI_ex3Handler::get_double_attribute (
   ::CORBA::Double ami_return_val)
@@ -5322,9 +4852,9 @@ OldDif2::AMI_ex3Handler::get_double_attribute (
     {
       ::CORBA::Object::tao_object_initialize (this);
     }
-  
-  TAO::Arg_Traits< void>::ret_val _tao_retval;
-  TAO::Arg_Traits< ::CORBA::Double>::in_arg_val _tao_ami_return_val (ami_return_val);
+
+  TAO::Arg_Traits<void>::ret_val _tao_retval;
+  TAO::Arg_Traits<::CORBA::Double>::in_arg_val _tao_ami_return_val (ami_return_val);
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
@@ -5339,7 +4869,7 @@ OldDif2::AMI_ex3Handler::get_double_attribute (
       "get_double_attribute",
       20,
       TAO::TAO_CO_NONE | TAO::TAO_CO_DIRECT_STRATEGY | TAO::TAO_CO_THRU_POA_STRATEGY
-      
+
     );
 
   _invocation_call.invoke (nullptr, 0);
@@ -5367,10 +4897,10 @@ OldDif2::AMI_ex3Handler::get_double_attribute_reply_stub (
             (_tao_in >> ami_return_val)
          ))
         throw ::CORBA::MARSHAL ();
-      
+
       // Invoke the call back method.
       _tao_reply_handler_object->get_double_attribute (
-          
+
           ami_return_val
         );
       break;
@@ -5395,7 +4925,7 @@ OldDif2::AMI_ex3Handler::get_double_attribute_reply_stub (
             0,
             _tao_in.char_translator (),
             _tao_in.wchar_translator ()));
-        
+
       ::Messaging::ExceptionHolder_var exception_holder_var = exception_holder_ptr;
       _tao_reply_handler_object->get_double_attribute_excep (
           exception_holder_var);
@@ -5407,9 +4937,6 @@ OldDif2::AMI_ex3Handler::get_double_attribute_reply_stub (
       break;
   }
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/operation_cs.cpp:87
-
 void
 OldDif2::AMI_ex3Handler::get_double_attribute_excep (
   ::Messaging::ExceptionHolder * excep_holder)
@@ -5418,9 +4945,9 @@ OldDif2::AMI_ex3Handler::get_double_attribute_excep (
     {
       ::CORBA::Object::tao_object_initialize (this);
     }
-  
-  TAO::Arg_Traits< void>::ret_val _tao_retval;
-  TAO::Arg_Traits< ::Messaging::ExceptionHolder>::in_arg_val _tao_excep_holder (excep_holder);
+
+  TAO::Arg_Traits<void>::ret_val _tao_retval;
+  TAO::Arg_Traits<::Messaging::ExceptionHolder>::in_arg_val _tao_excep_holder (excep_holder);
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
@@ -5435,14 +4962,11 @@ OldDif2::AMI_ex3Handler::get_double_attribute_excep (
       "get_double_attribute_excep",
       26,
       TAO::TAO_CO_NONE | TAO::TAO_CO_DIRECT_STRATEGY | TAO::TAO_CO_THRU_POA_STRATEGY
-      
+
     );
 
   _invocation_call.invoke (nullptr, 0);
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/operation_cs.cpp:87
-
 void
 OldDif2::AMI_ex3Handler::set_double_attribute ()
 {
@@ -5450,8 +4974,8 @@ OldDif2::AMI_ex3Handler::set_double_attribute ()
     {
       ::CORBA::Object::tao_object_initialize (this);
     }
-  
-  TAO::Arg_Traits< void>::ret_val _tao_retval;
+
+  TAO::Arg_Traits<void>::ret_val _tao_retval;
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
@@ -5492,7 +5016,7 @@ OldDif2::AMI_ex3Handler::set_double_attribute_reply_stub (
       // Demarshall all the arguments.
       // Invoke the call back method.
       _tao_reply_handler_object->set_double_attribute (
-          
+
         );
       break;
     }
@@ -5516,7 +5040,7 @@ OldDif2::AMI_ex3Handler::set_double_attribute_reply_stub (
             0,
             _tao_in.char_translator (),
             _tao_in.wchar_translator ()));
-        
+
       ::Messaging::ExceptionHolder_var exception_holder_var = exception_holder_ptr;
       _tao_reply_handler_object->set_double_attribute_excep (
           exception_holder_var);
@@ -5528,9 +5052,6 @@ OldDif2::AMI_ex3Handler::set_double_attribute_reply_stub (
       break;
   }
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/operation_cs.cpp:87
-
 void
 OldDif2::AMI_ex3Handler::set_double_attribute_excep (
   ::Messaging::ExceptionHolder * excep_holder)
@@ -5539,9 +5060,9 @@ OldDif2::AMI_ex3Handler::set_double_attribute_excep (
     {
       ::CORBA::Object::tao_object_initialize (this);
     }
-  
-  TAO::Arg_Traits< void>::ret_val _tao_retval;
-  TAO::Arg_Traits< ::Messaging::ExceptionHolder>::in_arg_val _tao_excep_holder (excep_holder);
+
+  TAO::Arg_Traits<void>::ret_val _tao_retval;
+  TAO::Arg_Traits<::Messaging::ExceptionHolder>::in_arg_val _tao_excep_holder (excep_holder);
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
@@ -5556,14 +5077,11 @@ OldDif2::AMI_ex3Handler::set_double_attribute_excep (
       "set_double_attribute_excep",
       26,
       TAO::TAO_CO_NONE | TAO::TAO_CO_DIRECT_STRATEGY | TAO::TAO_CO_THRU_POA_STRATEGY
-      
+
     );
 
   _invocation_call.invoke (nullptr, 0);
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/operation_cs.cpp:87
-
 void
 OldDif2::AMI_ex3Handler::get_long_attribute (
   ::CORBA::Long ami_return_val)
@@ -5572,9 +5090,9 @@ OldDif2::AMI_ex3Handler::get_long_attribute (
     {
       ::CORBA::Object::tao_object_initialize (this);
     }
-  
-  TAO::Arg_Traits< void>::ret_val _tao_retval;
-  TAO::Arg_Traits< ::CORBA::Long>::in_arg_val _tao_ami_return_val (ami_return_val);
+
+  TAO::Arg_Traits<void>::ret_val _tao_retval;
+  TAO::Arg_Traits<::CORBA::Long>::in_arg_val _tao_ami_return_val (ami_return_val);
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
@@ -5589,7 +5107,7 @@ OldDif2::AMI_ex3Handler::get_long_attribute (
       "get_long_attribute",
       18,
       TAO::TAO_CO_NONE | TAO::TAO_CO_DIRECT_STRATEGY | TAO::TAO_CO_THRU_POA_STRATEGY
-      
+
     );
 
   _invocation_call.invoke (nullptr, 0);
@@ -5617,10 +5135,10 @@ OldDif2::AMI_ex3Handler::get_long_attribute_reply_stub (
             (_tao_in >> ami_return_val)
          ))
         throw ::CORBA::MARSHAL ();
-      
+
       // Invoke the call back method.
       _tao_reply_handler_object->get_long_attribute (
-          
+
           ami_return_val
         );
       break;
@@ -5645,7 +5163,7 @@ OldDif2::AMI_ex3Handler::get_long_attribute_reply_stub (
             0,
             _tao_in.char_translator (),
             _tao_in.wchar_translator ()));
-        
+
       ::Messaging::ExceptionHolder_var exception_holder_var = exception_holder_ptr;
       _tao_reply_handler_object->get_long_attribute_excep (
           exception_holder_var);
@@ -5657,9 +5175,6 @@ OldDif2::AMI_ex3Handler::get_long_attribute_reply_stub (
       break;
   }
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/operation_cs.cpp:87
-
 void
 OldDif2::AMI_ex3Handler::get_long_attribute_excep (
   ::Messaging::ExceptionHolder * excep_holder)
@@ -5668,9 +5183,9 @@ OldDif2::AMI_ex3Handler::get_long_attribute_excep (
     {
       ::CORBA::Object::tao_object_initialize (this);
     }
-  
-  TAO::Arg_Traits< void>::ret_val _tao_retval;
-  TAO::Arg_Traits< ::Messaging::ExceptionHolder>::in_arg_val _tao_excep_holder (excep_holder);
+
+  TAO::Arg_Traits<void>::ret_val _tao_retval;
+  TAO::Arg_Traits<::Messaging::ExceptionHolder>::in_arg_val _tao_excep_holder (excep_holder);
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
@@ -5685,14 +5200,11 @@ OldDif2::AMI_ex3Handler::get_long_attribute_excep (
       "get_long_attribute_excep",
       24,
       TAO::TAO_CO_NONE | TAO::TAO_CO_DIRECT_STRATEGY | TAO::TAO_CO_THRU_POA_STRATEGY
-      
+
     );
 
   _invocation_call.invoke (nullptr, 0);
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/operation_cs.cpp:87
-
 void
 OldDif2::AMI_ex3Handler::get_short_attribute (
   ::CORBA::Short ami_return_val)
@@ -5701,9 +5213,9 @@ OldDif2::AMI_ex3Handler::get_short_attribute (
     {
       ::CORBA::Object::tao_object_initialize (this);
     }
-  
-  TAO::Arg_Traits< void>::ret_val _tao_retval;
-  TAO::Arg_Traits< ::CORBA::Short>::in_arg_val _tao_ami_return_val (ami_return_val);
+
+  TAO::Arg_Traits<void>::ret_val _tao_retval;
+  TAO::Arg_Traits<::CORBA::Short>::in_arg_val _tao_ami_return_val (ami_return_val);
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
@@ -5718,7 +5230,7 @@ OldDif2::AMI_ex3Handler::get_short_attribute (
       "get_short_attribute",
       19,
       TAO::TAO_CO_NONE | TAO::TAO_CO_DIRECT_STRATEGY | TAO::TAO_CO_THRU_POA_STRATEGY
-      
+
     );
 
   _invocation_call.invoke (nullptr, 0);
@@ -5746,10 +5258,10 @@ OldDif2::AMI_ex3Handler::get_short_attribute_reply_stub (
             (_tao_in >> ami_return_val)
          ))
         throw ::CORBA::MARSHAL ();
-      
+
       // Invoke the call back method.
       _tao_reply_handler_object->get_short_attribute (
-          
+
           ami_return_val
         );
       break;
@@ -5774,7 +5286,7 @@ OldDif2::AMI_ex3Handler::get_short_attribute_reply_stub (
             0,
             _tao_in.char_translator (),
             _tao_in.wchar_translator ()));
-        
+
       ::Messaging::ExceptionHolder_var exception_holder_var = exception_holder_ptr;
       _tao_reply_handler_object->get_short_attribute_excep (
           exception_holder_var);
@@ -5786,9 +5298,6 @@ OldDif2::AMI_ex3Handler::get_short_attribute_reply_stub (
       break;
   }
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/operation_cs.cpp:87
-
 void
 OldDif2::AMI_ex3Handler::get_short_attribute_excep (
   ::Messaging::ExceptionHolder * excep_holder)
@@ -5797,9 +5306,9 @@ OldDif2::AMI_ex3Handler::get_short_attribute_excep (
     {
       ::CORBA::Object::tao_object_initialize (this);
     }
-  
-  TAO::Arg_Traits< void>::ret_val _tao_retval;
-  TAO::Arg_Traits< ::Messaging::ExceptionHolder>::in_arg_val _tao_excep_holder (excep_holder);
+
+  TAO::Arg_Traits<void>::ret_val _tao_retval;
+  TAO::Arg_Traits<::Messaging::ExceptionHolder>::in_arg_val _tao_excep_holder (excep_holder);
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
@@ -5814,14 +5323,11 @@ OldDif2::AMI_ex3Handler::get_short_attribute_excep (
       "get_short_attribute_excep",
       25,
       TAO::TAO_CO_NONE | TAO::TAO_CO_DIRECT_STRATEGY | TAO::TAO_CO_THRU_POA_STRATEGY
-      
+
     );
 
   _invocation_call.invoke (nullptr, 0);
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/operation_cs.cpp:87
-
 void
 OldDif2::AMI_ex3Handler::set_short_attribute ()
 {
@@ -5829,8 +5335,8 @@ OldDif2::AMI_ex3Handler::set_short_attribute ()
     {
       ::CORBA::Object::tao_object_initialize (this);
     }
-  
-  TAO::Arg_Traits< void>::ret_val _tao_retval;
+
+  TAO::Arg_Traits<void>::ret_val _tao_retval;
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
@@ -5871,7 +5377,7 @@ OldDif2::AMI_ex3Handler::set_short_attribute_reply_stub (
       // Demarshall all the arguments.
       // Invoke the call back method.
       _tao_reply_handler_object->set_short_attribute (
-          
+
         );
       break;
     }
@@ -5895,7 +5401,7 @@ OldDif2::AMI_ex3Handler::set_short_attribute_reply_stub (
             0,
             _tao_in.char_translator (),
             _tao_in.wchar_translator ()));
-        
+
       ::Messaging::ExceptionHolder_var exception_holder_var = exception_holder_ptr;
       _tao_reply_handler_object->set_short_attribute_excep (
           exception_holder_var);
@@ -5907,9 +5413,6 @@ OldDif2::AMI_ex3Handler::set_short_attribute_reply_stub (
       break;
   }
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/operation_cs.cpp:87
-
 void
 OldDif2::AMI_ex3Handler::set_short_attribute_excep (
   ::Messaging::ExceptionHolder * excep_holder)
@@ -5918,9 +5421,9 @@ OldDif2::AMI_ex3Handler::set_short_attribute_excep (
     {
       ::CORBA::Object::tao_object_initialize (this);
     }
-  
-  TAO::Arg_Traits< void>::ret_val _tao_retval;
-  TAO::Arg_Traits< ::Messaging::ExceptionHolder>::in_arg_val _tao_excep_holder (excep_holder);
+
+  TAO::Arg_Traits<void>::ret_val _tao_retval;
+  TAO::Arg_Traits<::Messaging::ExceptionHolder>::in_arg_val _tao_excep_holder (excep_holder);
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
@@ -5935,14 +5438,11 @@ OldDif2::AMI_ex3Handler::set_short_attribute_excep (
       "set_short_attribute_excep",
       25,
       TAO::TAO_CO_NONE | TAO::TAO_CO_DIRECT_STRATEGY | TAO::TAO_CO_THRU_POA_STRATEGY
-      
+
     );
 
   _invocation_call.invoke (nullptr, 0);
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/operation_cs.cpp:87
-
 void
 OldDif2::AMI_ex3Handler::get_unsigned_long_attribute (
   ::CORBA::ULong ami_return_val)
@@ -5951,9 +5451,9 @@ OldDif2::AMI_ex3Handler::get_unsigned_long_attribute (
     {
       ::CORBA::Object::tao_object_initialize (this);
     }
-  
-  TAO::Arg_Traits< void>::ret_val _tao_retval;
-  TAO::Arg_Traits< ::CORBA::ULong>::in_arg_val _tao_ami_return_val (ami_return_val);
+
+  TAO::Arg_Traits<void>::ret_val _tao_retval;
+  TAO::Arg_Traits<::CORBA::ULong>::in_arg_val _tao_ami_return_val (ami_return_val);
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
@@ -5968,7 +5468,7 @@ OldDif2::AMI_ex3Handler::get_unsigned_long_attribute (
       "get_unsigned_long_attribute",
       27,
       TAO::TAO_CO_NONE | TAO::TAO_CO_DIRECT_STRATEGY | TAO::TAO_CO_THRU_POA_STRATEGY
-      
+
     );
 
   _invocation_call.invoke (nullptr, 0);
@@ -5996,10 +5496,10 @@ OldDif2::AMI_ex3Handler::get_unsigned_long_attribute_reply_stub (
             (_tao_in >> ami_return_val)
          ))
         throw ::CORBA::MARSHAL ();
-      
+
       // Invoke the call back method.
       _tao_reply_handler_object->get_unsigned_long_attribute (
-          
+
           ami_return_val
         );
       break;
@@ -6024,7 +5524,7 @@ OldDif2::AMI_ex3Handler::get_unsigned_long_attribute_reply_stub (
             0,
             _tao_in.char_translator (),
             _tao_in.wchar_translator ()));
-        
+
       ::Messaging::ExceptionHolder_var exception_holder_var = exception_holder_ptr;
       _tao_reply_handler_object->get_unsigned_long_attribute_excep (
           exception_holder_var);
@@ -6036,9 +5536,6 @@ OldDif2::AMI_ex3Handler::get_unsigned_long_attribute_reply_stub (
       break;
   }
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/operation_cs.cpp:87
-
 void
 OldDif2::AMI_ex3Handler::get_unsigned_long_attribute_excep (
   ::Messaging::ExceptionHolder * excep_holder)
@@ -6047,9 +5544,9 @@ OldDif2::AMI_ex3Handler::get_unsigned_long_attribute_excep (
     {
       ::CORBA::Object::tao_object_initialize (this);
     }
-  
-  TAO::Arg_Traits< void>::ret_val _tao_retval;
-  TAO::Arg_Traits< ::Messaging::ExceptionHolder>::in_arg_val _tao_excep_holder (excep_holder);
+
+  TAO::Arg_Traits<void>::ret_val _tao_retval;
+  TAO::Arg_Traits<::Messaging::ExceptionHolder>::in_arg_val _tao_excep_holder (excep_holder);
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
@@ -6064,7 +5561,7 @@ OldDif2::AMI_ex3Handler::get_unsigned_long_attribute_excep (
       "get_unsigned_long_attribute_excep",
       33,
       TAO::TAO_CO_NONE | TAO::TAO_CO_DIRECT_STRATEGY | TAO::TAO_CO_THRU_POA_STRATEGY
-      
+
     );
 
   _invocation_call.invoke (nullptr, 0);
@@ -6115,14 +5612,12 @@ OldDif2::AMI_ex3Handler::_tao_release (AMI_ex3Handler_ptr obj)
 }
 
 ::CORBA::Boolean
-OldDif2::AMI_ex3Handler::_is_a (const char *value)
+OldDif2::AMI_ex3Handler::_is_a (char const *value)
 {
-  if (
-      std::strcmp (value, "IDL:omg.org/Messaging/ReplyHandler:1.0") == 0 ||
+  if (std::strcmp (value, "IDL:omg.org/Messaging/ReplyHandler:1.0") == 0 ||
       std::strcmp (value, "IDL:OldDif2/AMI_ex1Handler:1.0") == 0 ||
       std::strcmp (value, "IDL:OldDif2/AMI_ex3Handler:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0
-      )
+      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0)
     {
       return true; // success using local knowledge
     }
@@ -6132,17 +5627,17 @@ OldDif2::AMI_ex3Handler::_is_a (const char *value)
     }
 }
 
-const char* OldDif2::AMI_ex3Handler::_interface_repository_id () const
+char const *OldDif2::AMI_ex3Handler::_interface_repository_id () const
 {
   return "IDL:OldDif2/AMI_ex3Handler:1.0";
 }
 
-const char* OldDif2::AMI_ex3Handler::_desc_repository_id ()
+char const *OldDif2::AMI_ex3Handler::_desc_repository_id ()
 {
   return "IDL:OldDif2/AMI_ex3Handler:1.0";
 }
 
-const char* OldDif2::AMI_ex3Handler::_desc_interface_name ()
+char const *OldDif2::AMI_ex3Handler::_desc_interface_name ()
 {
   return "AMI_ex3Handler";
 }
@@ -6152,9 +5647,6 @@ OldDif2::AMI_ex3Handler::marshal (TAO_OutputCDR &cdr)
 {
   return (cdr << this);
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_cs.cpp:47
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
@@ -6179,16 +5671,12 @@ TAO::Objref_Traits<OldDif2::ex4>::nil ()
 }
 
 ::CORBA::Boolean
-TAO::Objref_Traits<OldDif2::ex4>::marshal (const OldDif2::ex4_ptr p,TAO_OutputCDR & cdr)
+TAO::Objref_Traits<OldDif2::ex4>::marshal (OldDif2::ex4_ptr const p,TAO_OutputCDR & cdr)
 {
   return ::CORBA::Object::marshal (p, cdr);
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/operation_cs.cpp:87
 
 ::CORBA::UShort
 OldDif2::ex4::unsigned_short_attribute ()
@@ -6197,8 +5685,8 @@ OldDif2::ex4::unsigned_short_attribute ()
     {
       ::CORBA::Object::tao_object_initialize (this);
     }
-  
-  TAO::Arg_Traits< ::CORBA::UShort>::ret_val _tao_retval;
+
+  TAO::Arg_Traits<::CORBA::UShort>::ret_val _tao_retval;
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
@@ -6222,9 +5710,6 @@ OldDif2::ex4::unsigned_short_attribute ()
 
   return _tao_retval.retn ();
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/operation_cs.cpp:87
-
 void
 OldDif2::ex4::unsigned_short_attribute (
   ::CORBA::UShort unsigned_short_attribute)
@@ -6233,9 +5718,9 @@ OldDif2::ex4::unsigned_short_attribute (
     {
       ::CORBA::Object::tao_object_initialize (this);
     }
-  
-  TAO::Arg_Traits< void>::ret_val _tao_retval;
-  TAO::Arg_Traits< ::CORBA::UShort>::in_arg_val _tao_unsigned_short_attribute (unsigned_short_attribute);
+
+  TAO::Arg_Traits<void>::ret_val _tao_retval;
+  TAO::Arg_Traits<::CORBA::UShort>::in_arg_val _tao_unsigned_short_attribute (unsigned_short_attribute);
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
@@ -6250,14 +5735,11 @@ OldDif2::ex4::unsigned_short_attribute (
       "_set_unsigned_short_attribute",
       29,
       TAO::TAO_CO_NONE | TAO::TAO_CO_DIRECT_STRATEGY | TAO::TAO_CO_THRU_POA_STRATEGY
-      
+
     );
 
   _invocation_call.invoke (nullptr, 0);
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/operation_cs.cpp:87
-
 ::CORBA::Char
 OldDif2::ex4::char_attribute ()
 {
@@ -6265,8 +5747,8 @@ OldDif2::ex4::char_attribute ()
     {
       ::CORBA::Object::tao_object_initialize (this);
     }
-  
-  TAO::Arg_Traits< ::ACE_InputCDR::to_char>::ret_val _tao_retval;
+
+  TAO::Arg_Traits<::ACE_InputCDR::to_char>::ret_val _tao_retval;
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
@@ -6290,9 +5772,6 @@ OldDif2::ex4::char_attribute ()
 
   return _tao_retval.retn ();
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/operation_cs.cpp:87
-
 ::CORBA::Boolean
 OldDif2::ex4::boolean_attribute ()
 {
@@ -6300,8 +5779,8 @@ OldDif2::ex4::boolean_attribute ()
     {
       ::CORBA::Object::tao_object_initialize (this);
     }
-  
-  TAO::Arg_Traits< ::ACE_InputCDR::to_boolean>::ret_val _tao_retval;
+
+  TAO::Arg_Traits<::ACE_InputCDR::to_boolean>::ret_val _tao_retval;
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
@@ -6325,9 +5804,6 @@ OldDif2::ex4::boolean_attribute ()
 
   return _tao_retval.retn ();
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/operation_cs.cpp:87
-
 void
 OldDif2::ex4::boolean_attribute (
   ::CORBA::Boolean boolean_attribute)
@@ -6336,9 +5812,9 @@ OldDif2::ex4::boolean_attribute (
     {
       ::CORBA::Object::tao_object_initialize (this);
     }
-  
-  TAO::Arg_Traits< void>::ret_val _tao_retval;
-  TAO::Arg_Traits< ::ACE_InputCDR::to_boolean>::in_arg_val _tao_boolean_attribute (boolean_attribute);
+
+  TAO::Arg_Traits<void>::ret_val _tao_retval;
+  TAO::Arg_Traits<::ACE_InputCDR::to_boolean>::in_arg_val _tao_boolean_attribute (boolean_attribute);
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
@@ -6353,14 +5829,11 @@ OldDif2::ex4::boolean_attribute (
       "_set_boolean_attribute",
       22,
       TAO::TAO_CO_NONE | TAO::TAO_CO_DIRECT_STRATEGY | TAO::TAO_CO_THRU_POA_STRATEGY
-      
+
     );
 
   _invocation_call.invoke (nullptr, 0);
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/operation_cs.cpp:87
-
 ::CORBA::Octet
 OldDif2::ex4::octet_attribute ()
 {
@@ -6368,8 +5841,8 @@ OldDif2::ex4::octet_attribute ()
     {
       ::CORBA::Object::tao_object_initialize (this);
     }
-  
-  TAO::Arg_Traits< ::ACE_InputCDR::to_octet>::ret_val _tao_retval;
+
+  TAO::Arg_Traits<::ACE_InputCDR::to_octet>::ret_val _tao_retval;
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
@@ -6393,9 +5866,6 @@ OldDif2::ex4::octet_attribute ()
 
   return _tao_retval.retn ();
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/operation_cs.cpp:87
-
 char *
 OldDif2::ex4::string_attribute ()
 {
@@ -6403,8 +5873,8 @@ OldDif2::ex4::string_attribute ()
     {
       ::CORBA::Object::tao_object_initialize (this);
     }
-  
-  TAO::Arg_Traits< char *>::ret_val _tao_retval;
+
+  TAO::Arg_Traits<char *>::ret_val _tao_retval;
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
@@ -6428,20 +5898,17 @@ OldDif2::ex4::string_attribute ()
 
   return _tao_retval.retn ();
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/operation_cs.cpp:87
-
 void
 OldDif2::ex4::string_attribute (
-  const char * string_attribute)
+  char const * string_attribute)
 {
   if (!this->is_evaluated ())
     {
       ::CORBA::Object::tao_object_initialize (this);
     }
-  
-  TAO::Arg_Traits< void>::ret_val _tao_retval;
-  TAO::Arg_Traits< char *>::in_arg_val _tao_string_attribute (string_attribute);
+
+  TAO::Arg_Traits<void>::ret_val _tao_retval;
+  TAO::Arg_Traits<char *>::in_arg_val _tao_string_attribute (string_attribute);
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
@@ -6456,14 +5923,11 @@ OldDif2::ex4::string_attribute (
       "_set_string_attribute",
       21,
       TAO::TAO_CO_NONE | TAO::TAO_CO_DIRECT_STRATEGY | TAO::TAO_CO_THRU_POA_STRATEGY
-      
+
     );
 
   _invocation_call.invoke (nullptr, 0);
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/operation_cs.cpp:87
-
 char *
 OldDif2::ex4::limited_string_attribute ()
 {
@@ -6471,8 +5935,8 @@ OldDif2::ex4::limited_string_attribute ()
     {
       ::CORBA::Object::tao_object_initialize (this);
     }
-  
-  TAO::Arg_Traits< ::TAO::OldDif2_ex4_limited_string_attribute>::ret_val _tao_retval;
+
+  TAO::Arg_Traits<::TAO::OldDif2_ex4_limited_string_attribute>::ret_val _tao_retval;
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
@@ -6496,9 +5960,6 @@ OldDif2::ex4::limited_string_attribute ()
 
   return _tao_retval.retn ();
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/operation_cs.cpp:87
-
 ::OldDif2::ex4_ptr
 OldDif2::ex4::an_object_attribute ()
 {
@@ -6506,8 +5967,8 @@ OldDif2::ex4::an_object_attribute ()
     {
       ::CORBA::Object::tao_object_initialize (this);
     }
-  
-  TAO::Arg_Traits< ::OldDif2::ex4>::ret_val _tao_retval;
+
+  TAO::Arg_Traits<::OldDif2::ex4>::ret_val _tao_retval;
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
@@ -6531,10 +5992,6 @@ OldDif2::ex4::an_object_attribute ()
 
   return _tao_retval.retn ();
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/ami_cs.cpp:54
-
-
 
 void
 OldDif2::ex4::sendc_set_unsigned_short_attribute (
@@ -6545,11 +6002,9 @@ OldDif2::ex4::sendc_set_unsigned_short_attribute (
     {
       ::CORBA::Object::tao_object_initialize (this);
     }
-  
-  
-  
+
   TAO::Arg_Traits<void>::ret_val _tao_retval;
-  TAO::Arg_Traits< ::CORBA::UShort>::in_arg_val _tao_unsigned_short_attribute (unsigned_short_attribute);
+  TAO::Arg_Traits<::CORBA::UShort>::in_arg_val _tao_unsigned_short_attribute (unsigned_short_attribute);
 
   TAO::Argument *_the_tao_operation_signature[] =
     {
@@ -6571,10 +6026,6 @@ OldDif2::ex4::sendc_set_unsigned_short_attribute (
       &OldDif2::AMI_ex4Handler::set_unsigned_short_attribute_reply_stub
     );
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/ami_cs.cpp:54
-
-
 
 void
 OldDif2::ex4::sendc_get_unsigned_short_attribute (
@@ -6584,8 +6035,6 @@ OldDif2::ex4::sendc_get_unsigned_short_attribute (
     {
       ::CORBA::Object::tao_object_initialize (this);
     }
-  
-  
 
   TAO::Argument ** _the_tao_operation_signature {};
 
@@ -6603,10 +6052,6 @@ OldDif2::ex4::sendc_get_unsigned_short_attribute (
       &OldDif2::AMI_ex4Handler::get_unsigned_short_attribute_reply_stub
     );
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/ami_cs.cpp:54
-
-
 
 void
 OldDif2::ex4::sendc_get_char_attribute (
@@ -6616,8 +6061,6 @@ OldDif2::ex4::sendc_get_char_attribute (
     {
       ::CORBA::Object::tao_object_initialize (this);
     }
-  
-  
 
   TAO::Argument ** _the_tao_operation_signature {};
 
@@ -6635,10 +6078,6 @@ OldDif2::ex4::sendc_get_char_attribute (
       &OldDif2::AMI_ex4Handler::get_char_attribute_reply_stub
     );
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/ami_cs.cpp:54
-
-
 
 void
 OldDif2::ex4::sendc_set_boolean_attribute (
@@ -6649,11 +6088,9 @@ OldDif2::ex4::sendc_set_boolean_attribute (
     {
       ::CORBA::Object::tao_object_initialize (this);
     }
-  
-  
-  
+
   TAO::Arg_Traits<void>::ret_val _tao_retval;
-  TAO::Arg_Traits< ::ACE_InputCDR::to_boolean>::in_arg_val _tao_boolean_attribute (boolean_attribute);
+  TAO::Arg_Traits<::ACE_InputCDR::to_boolean>::in_arg_val _tao_boolean_attribute (boolean_attribute);
 
   TAO::Argument *_the_tao_operation_signature[] =
     {
@@ -6675,10 +6112,6 @@ OldDif2::ex4::sendc_set_boolean_attribute (
       &OldDif2::AMI_ex4Handler::set_boolean_attribute_reply_stub
     );
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/ami_cs.cpp:54
-
-
 
 void
 OldDif2::ex4::sendc_get_boolean_attribute (
@@ -6688,8 +6121,6 @@ OldDif2::ex4::sendc_get_boolean_attribute (
     {
       ::CORBA::Object::tao_object_initialize (this);
     }
-  
-  
 
   TAO::Argument ** _the_tao_operation_signature {};
 
@@ -6707,10 +6138,6 @@ OldDif2::ex4::sendc_get_boolean_attribute (
       &OldDif2::AMI_ex4Handler::get_boolean_attribute_reply_stub
     );
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/ami_cs.cpp:54
-
-
 
 void
 OldDif2::ex4::sendc_get_octet_attribute (
@@ -6720,8 +6147,6 @@ OldDif2::ex4::sendc_get_octet_attribute (
     {
       ::CORBA::Object::tao_object_initialize (this);
     }
-  
-  
 
   TAO::Argument ** _the_tao_operation_signature {};
 
@@ -6739,25 +6164,19 @@ OldDif2::ex4::sendc_get_octet_attribute (
       &OldDif2::AMI_ex4Handler::get_octet_attribute_reply_stub
     );
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/ami_cs.cpp:54
-
-
 
 void
 OldDif2::ex4::sendc_set_string_attribute (
   ::OldDif2::AMI_ex4Handler_ptr ami_handler,
-  const char * string_attribute)
+  char const * string_attribute)
 {
   if (!this->is_evaluated ())
     {
       ::CORBA::Object::tao_object_initialize (this);
     }
-  
-  
-  
+
   TAO::Arg_Traits<void>::ret_val _tao_retval;
-  TAO::Arg_Traits< char *>::in_arg_val _tao_string_attribute (string_attribute);
+  TAO::Arg_Traits<char *>::in_arg_val _tao_string_attribute (string_attribute);
 
   TAO::Argument *_the_tao_operation_signature[] =
     {
@@ -6779,10 +6198,6 @@ OldDif2::ex4::sendc_set_string_attribute (
       &OldDif2::AMI_ex4Handler::set_string_attribute_reply_stub
     );
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/ami_cs.cpp:54
-
-
 
 void
 OldDif2::ex4::sendc_get_string_attribute (
@@ -6792,8 +6207,6 @@ OldDif2::ex4::sendc_get_string_attribute (
     {
       ::CORBA::Object::tao_object_initialize (this);
     }
-  
-  
 
   TAO::Argument ** _the_tao_operation_signature {};
 
@@ -6811,10 +6224,6 @@ OldDif2::ex4::sendc_get_string_attribute (
       &OldDif2::AMI_ex4Handler::get_string_attribute_reply_stub
     );
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/ami_cs.cpp:54
-
-
 
 void
 OldDif2::ex4::sendc_get_limited_string_attribute (
@@ -6824,8 +6233,6 @@ OldDif2::ex4::sendc_get_limited_string_attribute (
     {
       ::CORBA::Object::tao_object_initialize (this);
     }
-  
-  
 
   TAO::Argument ** _the_tao_operation_signature {};
 
@@ -6843,10 +6250,6 @@ OldDif2::ex4::sendc_get_limited_string_attribute (
       &OldDif2::AMI_ex4Handler::get_limited_string_attribute_reply_stub
     );
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/ami_cs.cpp:54
-
-
 
 void
 OldDif2::ex4::sendc_get_an_object_attribute (
@@ -6856,8 +6259,6 @@ OldDif2::ex4::sendc_get_an_object_attribute (
     {
       ::CORBA::Object::tao_object_initialize (this);
     }
-  
-  
 
   TAO::Argument ** _the_tao_operation_signature {};
 
@@ -6921,15 +6322,13 @@ OldDif2::ex4::_tao_release (ex4_ptr obj)
 }
 
 ::CORBA::Boolean
-OldDif2::ex4::_is_a (const char *value)
+OldDif2::ex4::_is_a (char const *value)
 {
-  if (
-      std::strcmp (value, "IDL:OldDif2/ex1:1.0") == 0 ||
+  if (std::strcmp (value, "IDL:OldDif2/ex1:1.0") == 0 ||
       std::strcmp (value, "IDL:OldDif2/ex2:1.0") == 0 ||
       std::strcmp (value, "IDL:OldDif2/ex3:1.0") == 0 ||
       std::strcmp (value, "IDL:OldDif2/ex4:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0
-      )
+      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0)
     {
       return true; // success using local knowledge
     }
@@ -6939,17 +6338,17 @@ OldDif2::ex4::_is_a (const char *value)
     }
 }
 
-const char* OldDif2::ex4::_interface_repository_id () const
+char const *OldDif2::ex4::_interface_repository_id () const
 {
   return "IDL:OldDif2/ex4:1.0";
 }
 
-const char* OldDif2::ex4::_desc_repository_id ()
+char const *OldDif2::ex4::_desc_repository_id ()
 {
   return "IDL:OldDif2/ex4:1.0";
 }
 
-const char* OldDif2::ex4::_desc_interface_name ()
+char const *OldDif2::ex4::_desc_interface_name ()
 {
   return "ex4";
 }
@@ -6959,13 +6358,8 @@ OldDif2::ex4::marshal (TAO_OutputCDR &cdr)
 {
   return (cdr << this);
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_cs.cpp:52
-
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
 
 void
 TAO::Value_Traits<OldDif2::AMH_ex4ExceptionHolder>::add_ref (OldDif2::AMH_ex4ExceptionHolder * p)
@@ -6987,15 +6381,13 @@ TAO::Value_Traits<OldDif2::AMH_ex4ExceptionHolder>::release (OldDif2::AMH_ex4Exc
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 OldDif2::AMH_ex4ExceptionHolder *
 OldDif2::AMH_ex4ExceptionHolder::_downcast (::CORBA::ValueBase *v)
 {
   return dynamic_cast<::OldDif2::AMH_ex4ExceptionHolder *> (v);
 }
 
-const char *
+char const *
 OldDif2::AMH_ex4ExceptionHolder::_tao_obv_repository_id () const
 {
   return this->_tao_obv_static_repository_id ();
@@ -7074,233 +6466,169 @@ OldDif2::AMH_ex4ExceptionHolder::_tao_unmarshal (
         is_null_object,
         is_indirected
       );
-  
+
   ::CORBA::ValueBase_var owner (base);
 
   if (!retval)
     return false;
-  
+
   if (is_null_object)
     return true;
-  
+
   if (!is_indirected && !base->_tao_unmarshal_v (strm))
     return false;
-  
+
   // Now base must point to the unmarshaled object.
   // Align the pointer to the right subobject.
   new_object = AMH_ex4ExceptionHolder::_downcast (base);
   if (nullptr == new_object)
     return false;
-  
+
   if (is_indirected)
     new_object->_add_ref ();
-  
+
   owner._retn ();
   return true;
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_cs.cpp:440
-
 void
 OldDif2::AMH_ex4ExceptionHolder::raise_get_unsigned_short_attribute ()
 {
-  std::unique_ptr< ::CORBA::Exception> safety (this->exception);
+  std::unique_ptr<::CORBA::Exception> safety (this->exception);
   this->exception->_raise ();
 }
-
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_cs.cpp:440
 
 void
 OldDif2::AMH_ex4ExceptionHolder::raise_set_unsigned_short_attribute ()
 {
-  std::unique_ptr< ::CORBA::Exception> safety (this->exception);
+  std::unique_ptr<::CORBA::Exception> safety (this->exception);
   this->exception->_raise ();
 }
-
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_cs.cpp:440
 
 void
 OldDif2::AMH_ex4ExceptionHolder::raise_get_char_attribute ()
 {
-  std::unique_ptr< ::CORBA::Exception> safety (this->exception);
+  std::unique_ptr<::CORBA::Exception> safety (this->exception);
   this->exception->_raise ();
 }
-
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_cs.cpp:440
 
 void
 OldDif2::AMH_ex4ExceptionHolder::raise_get_boolean_attribute ()
 {
-  std::unique_ptr< ::CORBA::Exception> safety (this->exception);
+  std::unique_ptr<::CORBA::Exception> safety (this->exception);
   this->exception->_raise ();
 }
-
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_cs.cpp:440
 
 void
 OldDif2::AMH_ex4ExceptionHolder::raise_set_boolean_attribute ()
 {
-  std::unique_ptr< ::CORBA::Exception> safety (this->exception);
+  std::unique_ptr<::CORBA::Exception> safety (this->exception);
   this->exception->_raise ();
 }
-
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_cs.cpp:440
 
 void
 OldDif2::AMH_ex4ExceptionHolder::raise_get_octet_attribute ()
 {
-  std::unique_ptr< ::CORBA::Exception> safety (this->exception);
+  std::unique_ptr<::CORBA::Exception> safety (this->exception);
   this->exception->_raise ();
 }
-
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_cs.cpp:440
 
 void
 OldDif2::AMH_ex4ExceptionHolder::raise_get_string_attribute ()
 {
-  std::unique_ptr< ::CORBA::Exception> safety (this->exception);
+  std::unique_ptr<::CORBA::Exception> safety (this->exception);
   this->exception->_raise ();
 }
-
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_cs.cpp:440
 
 void
 OldDif2::AMH_ex4ExceptionHolder::raise_set_string_attribute ()
 {
-  std::unique_ptr< ::CORBA::Exception> safety (this->exception);
+  std::unique_ptr<::CORBA::Exception> safety (this->exception);
   this->exception->_raise ();
 }
-
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_cs.cpp:440
 
 void
 OldDif2::AMH_ex4ExceptionHolder::raise_get_limited_string_attribute ()
 {
-  std::unique_ptr< ::CORBA::Exception> safety (this->exception);
+  std::unique_ptr<::CORBA::Exception> safety (this->exception);
   this->exception->_raise ();
 }
-
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_cs.cpp:440
 
 void
 OldDif2::AMH_ex4ExceptionHolder::raise_get_an_object_attribute ()
 {
-  std::unique_ptr< ::CORBA::Exception> safety (this->exception);
+  std::unique_ptr<::CORBA::Exception> safety (this->exception);
   this->exception->_raise ();
 }
-
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_cs.cpp:440
 
 void
 OldDif2::AMH_ex4ExceptionHolder::raise_sendc_set_unsigned_short_attribute ()
 {
-  std::unique_ptr< ::CORBA::Exception> safety (this->exception);
+  std::unique_ptr<::CORBA::Exception> safety (this->exception);
   this->exception->_raise ();
 }
-
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_cs.cpp:440
 
 void
 OldDif2::AMH_ex4ExceptionHolder::raise_sendc_get_unsigned_short_attribute ()
 {
-  std::unique_ptr< ::CORBA::Exception> safety (this->exception);
+  std::unique_ptr<::CORBA::Exception> safety (this->exception);
   this->exception->_raise ();
 }
-
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_cs.cpp:440
 
 void
 OldDif2::AMH_ex4ExceptionHolder::raise_sendc_get_char_attribute ()
 {
-  std::unique_ptr< ::CORBA::Exception> safety (this->exception);
+  std::unique_ptr<::CORBA::Exception> safety (this->exception);
   this->exception->_raise ();
 }
-
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_cs.cpp:440
 
 void
 OldDif2::AMH_ex4ExceptionHolder::raise_sendc_set_boolean_attribute ()
 {
-  std::unique_ptr< ::CORBA::Exception> safety (this->exception);
+  std::unique_ptr<::CORBA::Exception> safety (this->exception);
   this->exception->_raise ();
 }
-
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_cs.cpp:440
 
 void
 OldDif2::AMH_ex4ExceptionHolder::raise_sendc_get_boolean_attribute ()
 {
-  std::unique_ptr< ::CORBA::Exception> safety (this->exception);
+  std::unique_ptr<::CORBA::Exception> safety (this->exception);
   this->exception->_raise ();
 }
-
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_cs.cpp:440
 
 void
 OldDif2::AMH_ex4ExceptionHolder::raise_sendc_get_octet_attribute ()
 {
-  std::unique_ptr< ::CORBA::Exception> safety (this->exception);
+  std::unique_ptr<::CORBA::Exception> safety (this->exception);
   this->exception->_raise ();
 }
-
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_cs.cpp:440
 
 void
 OldDif2::AMH_ex4ExceptionHolder::raise_sendc_set_string_attribute ()
 {
-  std::unique_ptr< ::CORBA::Exception> safety (this->exception);
+  std::unique_ptr<::CORBA::Exception> safety (this->exception);
   this->exception->_raise ();
 }
-
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_cs.cpp:440
 
 void
 OldDif2::AMH_ex4ExceptionHolder::raise_sendc_get_string_attribute ()
 {
-  std::unique_ptr< ::CORBA::Exception> safety (this->exception);
+  std::unique_ptr<::CORBA::Exception> safety (this->exception);
   this->exception->_raise ();
 }
-
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_cs.cpp:440
 
 void
 OldDif2::AMH_ex4ExceptionHolder::raise_sendc_get_limited_string_attribute ()
 {
-  std::unique_ptr< ::CORBA::Exception> safety (this->exception);
+  std::unique_ptr<::CORBA::Exception> safety (this->exception);
   this->exception->_raise ();
 }
-
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_cs.cpp:440
 
 void
 OldDif2::AMH_ex4ExceptionHolder::raise_sendc_get_an_object_attribute ()
 {
-  std::unique_ptr< ::CORBA::Exception> safety (this->exception);
+  std::unique_ptr<::CORBA::Exception> safety (this->exception);
   this->exception->_raise ();
 }
-
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_cs.cpp:47
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
@@ -7325,14 +6653,12 @@ TAO::Objref_Traits<OldDif2::AMH_ex4ResponseHandler>::nil ()
 }
 
 ::CORBA::Boolean
-TAO::Objref_Traits<OldDif2::AMH_ex4ResponseHandler>::marshal (const OldDif2::AMH_ex4ResponseHandler_ptr p,TAO_OutputCDR & cdr)
+TAO::Objref_Traits<OldDif2::AMH_ex4ResponseHandler>::marshal (OldDif2::AMH_ex4ResponseHandler_ptr const p,TAO_OutputCDR & cdr)
 {
   return ::CORBA::Object::marshal (p, cdr);
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-
 
 OldDif2::AMH_ex4ResponseHandler::AMH_ex4ResponseHandler ()
 {}
@@ -7381,13 +6707,11 @@ OldDif2::AMH_ex4ResponseHandler::_tao_release (AMH_ex4ResponseHandler_ptr obj)
 }
 
 ::CORBA::Boolean
-OldDif2::AMH_ex4ResponseHandler::_is_a (const char *value)
+OldDif2::AMH_ex4ResponseHandler::_is_a (char const *value)
 {
-  if (
-      std::strcmp (value, "IDL:OldDif2/AMH_ex4ResponseHandler:1.0") == 0 ||
+  if (std::strcmp (value, "IDL:OldDif2/AMH_ex4ResponseHandler:1.0") == 0 ||
       std::strcmp (value, "IDL:omg.org/CORBA/LocalObject:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0
-      )
+      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0)
     {
       return true; // success using local knowledge
     }
@@ -7397,17 +6721,17 @@ OldDif2::AMH_ex4ResponseHandler::_is_a (const char *value)
     }
 }
 
-const char* OldDif2::AMH_ex4ResponseHandler::_interface_repository_id () const
+char const *OldDif2::AMH_ex4ResponseHandler::_interface_repository_id () const
 {
   return "IDL:OldDif2/AMH_ex4ResponseHandler:1.0";
 }
 
-const char* OldDif2::AMH_ex4ResponseHandler::_desc_repository_id ()
+char const *OldDif2::AMH_ex4ResponseHandler::_desc_repository_id ()
 {
   return "IDL:OldDif2/AMH_ex4ResponseHandler:1.0";
 }
 
-const char* OldDif2::AMH_ex4ResponseHandler::_desc_interface_name ()
+char const *OldDif2::AMH_ex4ResponseHandler::_desc_interface_name ()
 {
   return "AMH_ex4ResponseHandler";
 }
@@ -7417,9 +6741,6 @@ OldDif2::AMH_ex4ResponseHandler::marshal (TAO_OutputCDR & /* cdr */)
 {
   return false;
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_cs.cpp:47
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
@@ -7444,16 +6765,12 @@ TAO::Objref_Traits<OldDif2::AMI_ex4Handler>::nil ()
 }
 
 ::CORBA::Boolean
-TAO::Objref_Traits<OldDif2::AMI_ex4Handler>::marshal (const OldDif2::AMI_ex4Handler_ptr p,TAO_OutputCDR & cdr)
+TAO::Objref_Traits<OldDif2::AMI_ex4Handler>::marshal (OldDif2::AMI_ex4Handler_ptr const p,TAO_OutputCDR & cdr)
 {
   return ::CORBA::Object::marshal (p, cdr);
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/operation_cs.cpp:87
 
 void
 OldDif2::AMI_ex4Handler::get_unsigned_short_attribute (
@@ -7463,9 +6780,9 @@ OldDif2::AMI_ex4Handler::get_unsigned_short_attribute (
     {
       ::CORBA::Object::tao_object_initialize (this);
     }
-  
-  TAO::Arg_Traits< void>::ret_val _tao_retval;
-  TAO::Arg_Traits< ::CORBA::UShort>::in_arg_val _tao_ami_return_val (ami_return_val);
+
+  TAO::Arg_Traits<void>::ret_val _tao_retval;
+  TAO::Arg_Traits<::CORBA::UShort>::in_arg_val _tao_ami_return_val (ami_return_val);
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
@@ -7480,7 +6797,7 @@ OldDif2::AMI_ex4Handler::get_unsigned_short_attribute (
       "get_unsigned_short_attribute",
       28,
       TAO::TAO_CO_NONE | TAO::TAO_CO_DIRECT_STRATEGY | TAO::TAO_CO_THRU_POA_STRATEGY
-      
+
     );
 
   _invocation_call.invoke (nullptr, 0);
@@ -7508,10 +6825,10 @@ OldDif2::AMI_ex4Handler::get_unsigned_short_attribute_reply_stub (
             (_tao_in >> ami_return_val)
          ))
         throw ::CORBA::MARSHAL ();
-      
+
       // Invoke the call back method.
       _tao_reply_handler_object->get_unsigned_short_attribute (
-          
+
           ami_return_val
         );
       break;
@@ -7536,7 +6853,7 @@ OldDif2::AMI_ex4Handler::get_unsigned_short_attribute_reply_stub (
             0,
             _tao_in.char_translator (),
             _tao_in.wchar_translator ()));
-        
+
       ::Messaging::ExceptionHolder_var exception_holder_var = exception_holder_ptr;
       _tao_reply_handler_object->get_unsigned_short_attribute_excep (
           exception_holder_var);
@@ -7548,9 +6865,6 @@ OldDif2::AMI_ex4Handler::get_unsigned_short_attribute_reply_stub (
       break;
   }
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/operation_cs.cpp:87
-
 void
 OldDif2::AMI_ex4Handler::get_unsigned_short_attribute_excep (
   ::Messaging::ExceptionHolder * excep_holder)
@@ -7559,9 +6873,9 @@ OldDif2::AMI_ex4Handler::get_unsigned_short_attribute_excep (
     {
       ::CORBA::Object::tao_object_initialize (this);
     }
-  
-  TAO::Arg_Traits< void>::ret_val _tao_retval;
-  TAO::Arg_Traits< ::Messaging::ExceptionHolder>::in_arg_val _tao_excep_holder (excep_holder);
+
+  TAO::Arg_Traits<void>::ret_val _tao_retval;
+  TAO::Arg_Traits<::Messaging::ExceptionHolder>::in_arg_val _tao_excep_holder (excep_holder);
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
@@ -7576,14 +6890,11 @@ OldDif2::AMI_ex4Handler::get_unsigned_short_attribute_excep (
       "get_unsigned_short_attribute_excep",
       34,
       TAO::TAO_CO_NONE | TAO::TAO_CO_DIRECT_STRATEGY | TAO::TAO_CO_THRU_POA_STRATEGY
-      
+
     );
 
   _invocation_call.invoke (nullptr, 0);
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/operation_cs.cpp:87
-
 void
 OldDif2::AMI_ex4Handler::set_unsigned_short_attribute ()
 {
@@ -7591,8 +6902,8 @@ OldDif2::AMI_ex4Handler::set_unsigned_short_attribute ()
     {
       ::CORBA::Object::tao_object_initialize (this);
     }
-  
-  TAO::Arg_Traits< void>::ret_val _tao_retval;
+
+  TAO::Arg_Traits<void>::ret_val _tao_retval;
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
@@ -7633,7 +6944,7 @@ OldDif2::AMI_ex4Handler::set_unsigned_short_attribute_reply_stub (
       // Demarshall all the arguments.
       // Invoke the call back method.
       _tao_reply_handler_object->set_unsigned_short_attribute (
-          
+
         );
       break;
     }
@@ -7657,7 +6968,7 @@ OldDif2::AMI_ex4Handler::set_unsigned_short_attribute_reply_stub (
             0,
             _tao_in.char_translator (),
             _tao_in.wchar_translator ()));
-        
+
       ::Messaging::ExceptionHolder_var exception_holder_var = exception_holder_ptr;
       _tao_reply_handler_object->set_unsigned_short_attribute_excep (
           exception_holder_var);
@@ -7669,9 +6980,6 @@ OldDif2::AMI_ex4Handler::set_unsigned_short_attribute_reply_stub (
       break;
   }
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/operation_cs.cpp:87
-
 void
 OldDif2::AMI_ex4Handler::set_unsigned_short_attribute_excep (
   ::Messaging::ExceptionHolder * excep_holder)
@@ -7680,9 +6988,9 @@ OldDif2::AMI_ex4Handler::set_unsigned_short_attribute_excep (
     {
       ::CORBA::Object::tao_object_initialize (this);
     }
-  
-  TAO::Arg_Traits< void>::ret_val _tao_retval;
-  TAO::Arg_Traits< ::Messaging::ExceptionHolder>::in_arg_val _tao_excep_holder (excep_holder);
+
+  TAO::Arg_Traits<void>::ret_val _tao_retval;
+  TAO::Arg_Traits<::Messaging::ExceptionHolder>::in_arg_val _tao_excep_holder (excep_holder);
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
@@ -7697,14 +7005,11 @@ OldDif2::AMI_ex4Handler::set_unsigned_short_attribute_excep (
       "set_unsigned_short_attribute_excep",
       34,
       TAO::TAO_CO_NONE | TAO::TAO_CO_DIRECT_STRATEGY | TAO::TAO_CO_THRU_POA_STRATEGY
-      
+
     );
 
   _invocation_call.invoke (nullptr, 0);
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/operation_cs.cpp:87
-
 void
 OldDif2::AMI_ex4Handler::get_char_attribute (
   ::CORBA::Char ami_return_val)
@@ -7713,9 +7018,9 @@ OldDif2::AMI_ex4Handler::get_char_attribute (
     {
       ::CORBA::Object::tao_object_initialize (this);
     }
-  
-  TAO::Arg_Traits< void>::ret_val _tao_retval;
-  TAO::Arg_Traits< ::ACE_InputCDR::to_char>::in_arg_val _tao_ami_return_val (ami_return_val);
+
+  TAO::Arg_Traits<void>::ret_val _tao_retval;
+  TAO::Arg_Traits<::ACE_InputCDR::to_char>::in_arg_val _tao_ami_return_val (ami_return_val);
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
@@ -7730,7 +7035,7 @@ OldDif2::AMI_ex4Handler::get_char_attribute (
       "get_char_attribute",
       18,
       TAO::TAO_CO_NONE | TAO::TAO_CO_DIRECT_STRATEGY | TAO::TAO_CO_THRU_POA_STRATEGY
-      
+
     );
 
   _invocation_call.invoke (nullptr, 0);
@@ -7758,10 +7063,10 @@ OldDif2::AMI_ex4Handler::get_char_attribute_reply_stub (
             (_tao_in >> ::ACE_InputCDR::to_char (ami_return_val))
          ))
         throw ::CORBA::MARSHAL ();
-      
+
       // Invoke the call back method.
       _tao_reply_handler_object->get_char_attribute (
-          
+
           ami_return_val
         );
       break;
@@ -7786,7 +7091,7 @@ OldDif2::AMI_ex4Handler::get_char_attribute_reply_stub (
             0,
             _tao_in.char_translator (),
             _tao_in.wchar_translator ()));
-        
+
       ::Messaging::ExceptionHolder_var exception_holder_var = exception_holder_ptr;
       _tao_reply_handler_object->get_char_attribute_excep (
           exception_holder_var);
@@ -7798,9 +7103,6 @@ OldDif2::AMI_ex4Handler::get_char_attribute_reply_stub (
       break;
   }
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/operation_cs.cpp:87
-
 void
 OldDif2::AMI_ex4Handler::get_char_attribute_excep (
   ::Messaging::ExceptionHolder * excep_holder)
@@ -7809,9 +7111,9 @@ OldDif2::AMI_ex4Handler::get_char_attribute_excep (
     {
       ::CORBA::Object::tao_object_initialize (this);
     }
-  
-  TAO::Arg_Traits< void>::ret_val _tao_retval;
-  TAO::Arg_Traits< ::Messaging::ExceptionHolder>::in_arg_val _tao_excep_holder (excep_holder);
+
+  TAO::Arg_Traits<void>::ret_val _tao_retval;
+  TAO::Arg_Traits<::Messaging::ExceptionHolder>::in_arg_val _tao_excep_holder (excep_holder);
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
@@ -7826,14 +7128,11 @@ OldDif2::AMI_ex4Handler::get_char_attribute_excep (
       "get_char_attribute_excep",
       24,
       TAO::TAO_CO_NONE | TAO::TAO_CO_DIRECT_STRATEGY | TAO::TAO_CO_THRU_POA_STRATEGY
-      
+
     );
 
   _invocation_call.invoke (nullptr, 0);
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/operation_cs.cpp:87
-
 void
 OldDif2::AMI_ex4Handler::get_boolean_attribute (
   ::CORBA::Boolean ami_return_val)
@@ -7842,9 +7141,9 @@ OldDif2::AMI_ex4Handler::get_boolean_attribute (
     {
       ::CORBA::Object::tao_object_initialize (this);
     }
-  
-  TAO::Arg_Traits< void>::ret_val _tao_retval;
-  TAO::Arg_Traits< ::ACE_InputCDR::to_boolean>::in_arg_val _tao_ami_return_val (ami_return_val);
+
+  TAO::Arg_Traits<void>::ret_val _tao_retval;
+  TAO::Arg_Traits<::ACE_InputCDR::to_boolean>::in_arg_val _tao_ami_return_val (ami_return_val);
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
@@ -7859,7 +7158,7 @@ OldDif2::AMI_ex4Handler::get_boolean_attribute (
       "get_boolean_attribute",
       21,
       TAO::TAO_CO_NONE | TAO::TAO_CO_DIRECT_STRATEGY | TAO::TAO_CO_THRU_POA_STRATEGY
-      
+
     );
 
   _invocation_call.invoke (nullptr, 0);
@@ -7887,10 +7186,10 @@ OldDif2::AMI_ex4Handler::get_boolean_attribute_reply_stub (
             (_tao_in >> ::ACE_InputCDR::to_boolean (ami_return_val))
          ))
         throw ::CORBA::MARSHAL ();
-      
+
       // Invoke the call back method.
       _tao_reply_handler_object->get_boolean_attribute (
-          
+
           ami_return_val
         );
       break;
@@ -7915,7 +7214,7 @@ OldDif2::AMI_ex4Handler::get_boolean_attribute_reply_stub (
             0,
             _tao_in.char_translator (),
             _tao_in.wchar_translator ()));
-        
+
       ::Messaging::ExceptionHolder_var exception_holder_var = exception_holder_ptr;
       _tao_reply_handler_object->get_boolean_attribute_excep (
           exception_holder_var);
@@ -7927,9 +7226,6 @@ OldDif2::AMI_ex4Handler::get_boolean_attribute_reply_stub (
       break;
   }
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/operation_cs.cpp:87
-
 void
 OldDif2::AMI_ex4Handler::get_boolean_attribute_excep (
   ::Messaging::ExceptionHolder * excep_holder)
@@ -7938,9 +7234,9 @@ OldDif2::AMI_ex4Handler::get_boolean_attribute_excep (
     {
       ::CORBA::Object::tao_object_initialize (this);
     }
-  
-  TAO::Arg_Traits< void>::ret_val _tao_retval;
-  TAO::Arg_Traits< ::Messaging::ExceptionHolder>::in_arg_val _tao_excep_holder (excep_holder);
+
+  TAO::Arg_Traits<void>::ret_val _tao_retval;
+  TAO::Arg_Traits<::Messaging::ExceptionHolder>::in_arg_val _tao_excep_holder (excep_holder);
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
@@ -7955,14 +7251,11 @@ OldDif2::AMI_ex4Handler::get_boolean_attribute_excep (
       "get_boolean_attribute_excep",
       27,
       TAO::TAO_CO_NONE | TAO::TAO_CO_DIRECT_STRATEGY | TAO::TAO_CO_THRU_POA_STRATEGY
-      
+
     );
 
   _invocation_call.invoke (nullptr, 0);
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/operation_cs.cpp:87
-
 void
 OldDif2::AMI_ex4Handler::set_boolean_attribute ()
 {
@@ -7970,8 +7263,8 @@ OldDif2::AMI_ex4Handler::set_boolean_attribute ()
     {
       ::CORBA::Object::tao_object_initialize (this);
     }
-  
-  TAO::Arg_Traits< void>::ret_val _tao_retval;
+
+  TAO::Arg_Traits<void>::ret_val _tao_retval;
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
@@ -8012,7 +7305,7 @@ OldDif2::AMI_ex4Handler::set_boolean_attribute_reply_stub (
       // Demarshall all the arguments.
       // Invoke the call back method.
       _tao_reply_handler_object->set_boolean_attribute (
-          
+
         );
       break;
     }
@@ -8036,7 +7329,7 @@ OldDif2::AMI_ex4Handler::set_boolean_attribute_reply_stub (
             0,
             _tao_in.char_translator (),
             _tao_in.wchar_translator ()));
-        
+
       ::Messaging::ExceptionHolder_var exception_holder_var = exception_holder_ptr;
       _tao_reply_handler_object->set_boolean_attribute_excep (
           exception_holder_var);
@@ -8048,9 +7341,6 @@ OldDif2::AMI_ex4Handler::set_boolean_attribute_reply_stub (
       break;
   }
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/operation_cs.cpp:87
-
 void
 OldDif2::AMI_ex4Handler::set_boolean_attribute_excep (
   ::Messaging::ExceptionHolder * excep_holder)
@@ -8059,9 +7349,9 @@ OldDif2::AMI_ex4Handler::set_boolean_attribute_excep (
     {
       ::CORBA::Object::tao_object_initialize (this);
     }
-  
-  TAO::Arg_Traits< void>::ret_val _tao_retval;
-  TAO::Arg_Traits< ::Messaging::ExceptionHolder>::in_arg_val _tao_excep_holder (excep_holder);
+
+  TAO::Arg_Traits<void>::ret_val _tao_retval;
+  TAO::Arg_Traits<::Messaging::ExceptionHolder>::in_arg_val _tao_excep_holder (excep_holder);
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
@@ -8076,14 +7366,11 @@ OldDif2::AMI_ex4Handler::set_boolean_attribute_excep (
       "set_boolean_attribute_excep",
       27,
       TAO::TAO_CO_NONE | TAO::TAO_CO_DIRECT_STRATEGY | TAO::TAO_CO_THRU_POA_STRATEGY
-      
+
     );
 
   _invocation_call.invoke (nullptr, 0);
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/operation_cs.cpp:87
-
 void
 OldDif2::AMI_ex4Handler::get_octet_attribute (
   ::CORBA::Octet ami_return_val)
@@ -8092,9 +7379,9 @@ OldDif2::AMI_ex4Handler::get_octet_attribute (
     {
       ::CORBA::Object::tao_object_initialize (this);
     }
-  
-  TAO::Arg_Traits< void>::ret_val _tao_retval;
-  TAO::Arg_Traits< ::ACE_InputCDR::to_octet>::in_arg_val _tao_ami_return_val (ami_return_val);
+
+  TAO::Arg_Traits<void>::ret_val _tao_retval;
+  TAO::Arg_Traits<::ACE_InputCDR::to_octet>::in_arg_val _tao_ami_return_val (ami_return_val);
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
@@ -8109,7 +7396,7 @@ OldDif2::AMI_ex4Handler::get_octet_attribute (
       "get_octet_attribute",
       19,
       TAO::TAO_CO_NONE | TAO::TAO_CO_DIRECT_STRATEGY | TAO::TAO_CO_THRU_POA_STRATEGY
-      
+
     );
 
   _invocation_call.invoke (nullptr, 0);
@@ -8137,10 +7424,10 @@ OldDif2::AMI_ex4Handler::get_octet_attribute_reply_stub (
             (_tao_in >> ::ACE_InputCDR::to_octet (ami_return_val))
          ))
         throw ::CORBA::MARSHAL ();
-      
+
       // Invoke the call back method.
       _tao_reply_handler_object->get_octet_attribute (
-          
+
           ami_return_val
         );
       break;
@@ -8165,7 +7452,7 @@ OldDif2::AMI_ex4Handler::get_octet_attribute_reply_stub (
             0,
             _tao_in.char_translator (),
             _tao_in.wchar_translator ()));
-        
+
       ::Messaging::ExceptionHolder_var exception_holder_var = exception_holder_ptr;
       _tao_reply_handler_object->get_octet_attribute_excep (
           exception_holder_var);
@@ -8177,9 +7464,6 @@ OldDif2::AMI_ex4Handler::get_octet_attribute_reply_stub (
       break;
   }
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/operation_cs.cpp:87
-
 void
 OldDif2::AMI_ex4Handler::get_octet_attribute_excep (
   ::Messaging::ExceptionHolder * excep_holder)
@@ -8188,9 +7472,9 @@ OldDif2::AMI_ex4Handler::get_octet_attribute_excep (
     {
       ::CORBA::Object::tao_object_initialize (this);
     }
-  
-  TAO::Arg_Traits< void>::ret_val _tao_retval;
-  TAO::Arg_Traits< ::Messaging::ExceptionHolder>::in_arg_val _tao_excep_holder (excep_holder);
+
+  TAO::Arg_Traits<void>::ret_val _tao_retval;
+  TAO::Arg_Traits<::Messaging::ExceptionHolder>::in_arg_val _tao_excep_holder (excep_holder);
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
@@ -8205,25 +7489,22 @@ OldDif2::AMI_ex4Handler::get_octet_attribute_excep (
       "get_octet_attribute_excep",
       25,
       TAO::TAO_CO_NONE | TAO::TAO_CO_DIRECT_STRATEGY | TAO::TAO_CO_THRU_POA_STRATEGY
-      
+
     );
 
   _invocation_call.invoke (nullptr, 0);
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/operation_cs.cpp:87
-
 void
 OldDif2::AMI_ex4Handler::get_string_attribute (
-  const char * ami_return_val)
+  char const * ami_return_val)
 {
   if (!this->is_evaluated ())
     {
       ::CORBA::Object::tao_object_initialize (this);
     }
-  
-  TAO::Arg_Traits< void>::ret_val _tao_retval;
-  TAO::Arg_Traits< char *>::in_arg_val _tao_ami_return_val (ami_return_val);
+
+  TAO::Arg_Traits<void>::ret_val _tao_retval;
+  TAO::Arg_Traits<char *>::in_arg_val _tao_ami_return_val (ami_return_val);
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
@@ -8238,7 +7519,7 @@ OldDif2::AMI_ex4Handler::get_string_attribute (
       "get_string_attribute",
       20,
       TAO::TAO_CO_NONE | TAO::TAO_CO_DIRECT_STRATEGY | TAO::TAO_CO_THRU_POA_STRATEGY
-      
+
     );
 
   _invocation_call.invoke (nullptr, 0);
@@ -8266,10 +7547,10 @@ OldDif2::AMI_ex4Handler::get_string_attribute_reply_stub (
             (_tao_in >> ami_return_val.out ())
          ))
         throw ::CORBA::MARSHAL ();
-      
+
       // Invoke the call back method.
       _tao_reply_handler_object->get_string_attribute (
-          
+
           ami_return_val.in ()
         );
       break;
@@ -8294,7 +7575,7 @@ OldDif2::AMI_ex4Handler::get_string_attribute_reply_stub (
             0,
             _tao_in.char_translator (),
             _tao_in.wchar_translator ()));
-        
+
       ::Messaging::ExceptionHolder_var exception_holder_var = exception_holder_ptr;
       _tao_reply_handler_object->get_string_attribute_excep (
           exception_holder_var);
@@ -8306,9 +7587,6 @@ OldDif2::AMI_ex4Handler::get_string_attribute_reply_stub (
       break;
   }
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/operation_cs.cpp:87
-
 void
 OldDif2::AMI_ex4Handler::get_string_attribute_excep (
   ::Messaging::ExceptionHolder * excep_holder)
@@ -8317,9 +7595,9 @@ OldDif2::AMI_ex4Handler::get_string_attribute_excep (
     {
       ::CORBA::Object::tao_object_initialize (this);
     }
-  
-  TAO::Arg_Traits< void>::ret_val _tao_retval;
-  TAO::Arg_Traits< ::Messaging::ExceptionHolder>::in_arg_val _tao_excep_holder (excep_holder);
+
+  TAO::Arg_Traits<void>::ret_val _tao_retval;
+  TAO::Arg_Traits<::Messaging::ExceptionHolder>::in_arg_val _tao_excep_holder (excep_holder);
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
@@ -8334,14 +7612,11 @@ OldDif2::AMI_ex4Handler::get_string_attribute_excep (
       "get_string_attribute_excep",
       26,
       TAO::TAO_CO_NONE | TAO::TAO_CO_DIRECT_STRATEGY | TAO::TAO_CO_THRU_POA_STRATEGY
-      
+
     );
 
   _invocation_call.invoke (nullptr, 0);
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/operation_cs.cpp:87
-
 void
 OldDif2::AMI_ex4Handler::set_string_attribute ()
 {
@@ -8349,8 +7624,8 @@ OldDif2::AMI_ex4Handler::set_string_attribute ()
     {
       ::CORBA::Object::tao_object_initialize (this);
     }
-  
-  TAO::Arg_Traits< void>::ret_val _tao_retval;
+
+  TAO::Arg_Traits<void>::ret_val _tao_retval;
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
@@ -8391,7 +7666,7 @@ OldDif2::AMI_ex4Handler::set_string_attribute_reply_stub (
       // Demarshall all the arguments.
       // Invoke the call back method.
       _tao_reply_handler_object->set_string_attribute (
-          
+
         );
       break;
     }
@@ -8415,7 +7690,7 @@ OldDif2::AMI_ex4Handler::set_string_attribute_reply_stub (
             0,
             _tao_in.char_translator (),
             _tao_in.wchar_translator ()));
-        
+
       ::Messaging::ExceptionHolder_var exception_holder_var = exception_holder_ptr;
       _tao_reply_handler_object->set_string_attribute_excep (
           exception_holder_var);
@@ -8427,9 +7702,6 @@ OldDif2::AMI_ex4Handler::set_string_attribute_reply_stub (
       break;
   }
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/operation_cs.cpp:87
-
 void
 OldDif2::AMI_ex4Handler::set_string_attribute_excep (
   ::Messaging::ExceptionHolder * excep_holder)
@@ -8438,9 +7710,9 @@ OldDif2::AMI_ex4Handler::set_string_attribute_excep (
     {
       ::CORBA::Object::tao_object_initialize (this);
     }
-  
-  TAO::Arg_Traits< void>::ret_val _tao_retval;
-  TAO::Arg_Traits< ::Messaging::ExceptionHolder>::in_arg_val _tao_excep_holder (excep_holder);
+
+  TAO::Arg_Traits<void>::ret_val _tao_retval;
+  TAO::Arg_Traits<::Messaging::ExceptionHolder>::in_arg_val _tao_excep_holder (excep_holder);
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
@@ -8455,25 +7727,22 @@ OldDif2::AMI_ex4Handler::set_string_attribute_excep (
       "set_string_attribute_excep",
       26,
       TAO::TAO_CO_NONE | TAO::TAO_CO_DIRECT_STRATEGY | TAO::TAO_CO_THRU_POA_STRATEGY
-      
+
     );
 
   _invocation_call.invoke (nullptr, 0);
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/operation_cs.cpp:87
-
 void
 OldDif2::AMI_ex4Handler::get_limited_string_attribute (
-  const char * ami_return_val)
+  char const * ami_return_val)
 {
   if (!this->is_evaluated ())
     {
       ::CORBA::Object::tao_object_initialize (this);
     }
-  
-  TAO::Arg_Traits< void>::ret_val _tao_retval;
-  TAO::Arg_Traits< ::TAO::OldDif2_AMI_ex4Handler_get_limited_string_attribute_ami_return_val>::in_arg_val _tao_ami_return_val (ami_return_val);
+
+  TAO::Arg_Traits<void>::ret_val _tao_retval;
+  TAO::Arg_Traits<::TAO::OldDif2_AMI_ex4Handler_get_limited_string_attribute_ami_return_val>::in_arg_val _tao_ami_return_val (ami_return_val);
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
@@ -8488,7 +7757,7 @@ OldDif2::AMI_ex4Handler::get_limited_string_attribute (
       "get_limited_string_attribute",
       28,
       TAO::TAO_CO_NONE | TAO::TAO_CO_DIRECT_STRATEGY | TAO::TAO_CO_THRU_POA_STRATEGY
-      
+
     );
 
   _invocation_call.invoke (nullptr, 0);
@@ -8516,10 +7785,10 @@ OldDif2::AMI_ex4Handler::get_limited_string_attribute_reply_stub (
             (_tao_in >> ::ACE_InputCDR::to_string (ami_return_val.out (), 10))
          ))
         throw ::CORBA::MARSHAL ();
-      
+
       // Invoke the call back method.
       _tao_reply_handler_object->get_limited_string_attribute (
-          
+
           ami_return_val.in ()
         );
       break;
@@ -8544,7 +7813,7 @@ OldDif2::AMI_ex4Handler::get_limited_string_attribute_reply_stub (
             0,
             _tao_in.char_translator (),
             _tao_in.wchar_translator ()));
-        
+
       ::Messaging::ExceptionHolder_var exception_holder_var = exception_holder_ptr;
       _tao_reply_handler_object->get_limited_string_attribute_excep (
           exception_holder_var);
@@ -8556,9 +7825,6 @@ OldDif2::AMI_ex4Handler::get_limited_string_attribute_reply_stub (
       break;
   }
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/operation_cs.cpp:87
-
 void
 OldDif2::AMI_ex4Handler::get_limited_string_attribute_excep (
   ::Messaging::ExceptionHolder * excep_holder)
@@ -8567,9 +7833,9 @@ OldDif2::AMI_ex4Handler::get_limited_string_attribute_excep (
     {
       ::CORBA::Object::tao_object_initialize (this);
     }
-  
-  TAO::Arg_Traits< void>::ret_val _tao_retval;
-  TAO::Arg_Traits< ::Messaging::ExceptionHolder>::in_arg_val _tao_excep_holder (excep_holder);
+
+  TAO::Arg_Traits<void>::ret_val _tao_retval;
+  TAO::Arg_Traits<::Messaging::ExceptionHolder>::in_arg_val _tao_excep_holder (excep_holder);
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
@@ -8584,14 +7850,11 @@ OldDif2::AMI_ex4Handler::get_limited_string_attribute_excep (
       "get_limited_string_attribute_excep",
       34,
       TAO::TAO_CO_NONE | TAO::TAO_CO_DIRECT_STRATEGY | TAO::TAO_CO_THRU_POA_STRATEGY
-      
+
     );
 
   _invocation_call.invoke (nullptr, 0);
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/operation_cs.cpp:87
-
 void
 OldDif2::AMI_ex4Handler::get_an_object_attribute (
   ::OldDif2::ex4_ptr ami_return_val)
@@ -8600,9 +7863,9 @@ OldDif2::AMI_ex4Handler::get_an_object_attribute (
     {
       ::CORBA::Object::tao_object_initialize (this);
     }
-  
-  TAO::Arg_Traits< void>::ret_val _tao_retval;
-  TAO::Arg_Traits< ::OldDif2::ex4>::in_arg_val _tao_ami_return_val (ami_return_val);
+
+  TAO::Arg_Traits<void>::ret_val _tao_retval;
+  TAO::Arg_Traits<::OldDif2::ex4>::in_arg_val _tao_ami_return_val (ami_return_val);
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
@@ -8617,7 +7880,7 @@ OldDif2::AMI_ex4Handler::get_an_object_attribute (
       "get_an_object_attribute",
       23,
       TAO::TAO_CO_NONE | TAO::TAO_CO_DIRECT_STRATEGY | TAO::TAO_CO_THRU_POA_STRATEGY
-      
+
     );
 
   _invocation_call.invoke (nullptr, 0);
@@ -8645,10 +7908,10 @@ OldDif2::AMI_ex4Handler::get_an_object_attribute_reply_stub (
             (_tao_in >> ami_return_val.out ())
          ))
         throw ::CORBA::MARSHAL ();
-      
+
       // Invoke the call back method.
       _tao_reply_handler_object->get_an_object_attribute (
-          
+
           ami_return_val.in ()
         );
       break;
@@ -8673,7 +7936,7 @@ OldDif2::AMI_ex4Handler::get_an_object_attribute_reply_stub (
             0,
             _tao_in.char_translator (),
             _tao_in.wchar_translator ()));
-        
+
       ::Messaging::ExceptionHolder_var exception_holder_var = exception_holder_ptr;
       _tao_reply_handler_object->get_an_object_attribute_excep (
           exception_holder_var);
@@ -8685,9 +7948,6 @@ OldDif2::AMI_ex4Handler::get_an_object_attribute_reply_stub (
       break;
   }
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/operation_cs.cpp:87
-
 void
 OldDif2::AMI_ex4Handler::get_an_object_attribute_excep (
   ::Messaging::ExceptionHolder * excep_holder)
@@ -8696,9 +7956,9 @@ OldDif2::AMI_ex4Handler::get_an_object_attribute_excep (
     {
       ::CORBA::Object::tao_object_initialize (this);
     }
-  
-  TAO::Arg_Traits< void>::ret_val _tao_retval;
-  TAO::Arg_Traits< ::Messaging::ExceptionHolder>::in_arg_val _tao_excep_holder (excep_holder);
+
+  TAO::Arg_Traits<void>::ret_val _tao_retval;
+  TAO::Arg_Traits<::Messaging::ExceptionHolder>::in_arg_val _tao_excep_holder (excep_holder);
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
@@ -8713,7 +7973,7 @@ OldDif2::AMI_ex4Handler::get_an_object_attribute_excep (
       "get_an_object_attribute_excep",
       29,
       TAO::TAO_CO_NONE | TAO::TAO_CO_DIRECT_STRATEGY | TAO::TAO_CO_THRU_POA_STRATEGY
-      
+
     );
 
   _invocation_call.invoke (nullptr, 0);
@@ -8764,16 +8024,14 @@ OldDif2::AMI_ex4Handler::_tao_release (AMI_ex4Handler_ptr obj)
 }
 
 ::CORBA::Boolean
-OldDif2::AMI_ex4Handler::_is_a (const char *value)
+OldDif2::AMI_ex4Handler::_is_a (char const *value)
 {
-  if (
-      std::strcmp (value, "IDL:omg.org/Messaging/ReplyHandler:1.0") == 0 ||
+  if (std::strcmp (value, "IDL:omg.org/Messaging/ReplyHandler:1.0") == 0 ||
       std::strcmp (value, "IDL:OldDif2/AMI_ex1Handler:1.0") == 0 ||
       std::strcmp (value, "IDL:OldDif2/AMI_ex2Handler:1.0") == 0 ||
       std::strcmp (value, "IDL:OldDif2/AMI_ex3Handler:1.0") == 0 ||
       std::strcmp (value, "IDL:OldDif2/AMI_ex4Handler:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0
-      )
+      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0)
     {
       return true; // success using local knowledge
     }
@@ -8783,17 +8041,17 @@ OldDif2::AMI_ex4Handler::_is_a (const char *value)
     }
 }
 
-const char* OldDif2::AMI_ex4Handler::_interface_repository_id () const
+char const *OldDif2::AMI_ex4Handler::_interface_repository_id () const
 {
   return "IDL:OldDif2/AMI_ex4Handler:1.0";
 }
 
-const char* OldDif2::AMI_ex4Handler::_desc_repository_id ()
+char const *OldDif2::AMI_ex4Handler::_desc_repository_id ()
 {
   return "IDL:OldDif2/AMI_ex4Handler:1.0";
 }
 
-const char* OldDif2::AMI_ex4Handler::_desc_interface_name ()
+char const *OldDif2::AMI_ex4Handler::_desc_interface_name ()
 {
   return "AMI_ex4Handler";
 }
@@ -8803,9 +8061,6 @@ OldDif2::AMI_ex4Handler::marshal (TAO_OutputCDR &cdr)
 {
   return (cdr << this);
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_obv_cs.cpp:43
-
 OBV_OldDif2::AMH_ex1ExceptionHolder::~AMH_ex1ExceptionHolder ()
 {}
 
@@ -8820,9 +8075,6 @@ OBV_OldDif2::AMH_ex1ExceptionHolder::_tao_unmarshal__OldDif2_AMH_ex1ExceptionHol
 {
   return _tao_unmarshal_state (strm, ci);
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_obv_cs.cpp:43
-
 OBV_OldDif2::AMH_ex2ExceptionHolder::~AMH_ex2ExceptionHolder ()
 {}
 
@@ -8837,9 +8089,6 @@ OBV_OldDif2::AMH_ex2ExceptionHolder::_tao_unmarshal__OldDif2_AMH_ex2ExceptionHol
 {
   return _tao_unmarshal_state (strm, ci);
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_obv_cs.cpp:43
-
 OBV_OldDif2::AMH_ex3ExceptionHolder::~AMH_ex3ExceptionHolder ()
 {}
 
@@ -8854,9 +8103,6 @@ OBV_OldDif2::AMH_ex3ExceptionHolder::_tao_unmarshal__OldDif2_AMH_ex3ExceptionHol
 {
   return _tao_unmarshal_state (strm, ci);
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_obv_cs.cpp:43
-
 OBV_OldDif2::AMH_ex4ExceptionHolder::~AMH_ex4ExceptionHolder ()
 {}
 
@@ -8871,15 +8117,12 @@ OBV_OldDif2::AMH_ex4ExceptionHolder::_tao_unmarshal__OldDif2_AMH_ex4ExceptionHol
 {
   return _tao_unmarshal_state (strm, ci);
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/cdr_op_cs.cpp:50
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean operator<< (
     TAO_OutputCDR &strm,
-    const OldDif2::ex1_ptr _tao_objref)
+    OldDif2::ex1_ptr const _tao_objref)
 {
   ::CORBA::Object_ptr _tao_corba_obj = _tao_objref;
   return (strm << _tao_corba_obj);
@@ -8895,26 +8138,20 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
     {
       return false;
     }
-  
+
   // Narrow to the right type.
-  _tao_objref = TAO::Narrow_Utils< ::OldDif2::ex1>::unchecked_narrow (obj.in ());
+  _tao_objref = TAO::Narrow_Utils<::OldDif2::ex1>::unchecked_narrow (obj.in ());
 
   return true;
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_valuetype.cpp:506
-
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 void
 CORBA::add_ref (OldDif2::AMH_ex1ExceptionHolder * vt)
 {
-  if (vt != 0)
+  if (vt != nullptr)
     {
       vt->_add_ref ();
     }
@@ -8923,7 +8160,7 @@ CORBA::add_ref (OldDif2::AMH_ex1ExceptionHolder * vt)
 void
 CORBA::remove_ref (OldDif2::AMH_ex1ExceptionHolder * vt)
 {
-  if (vt != 0)
+  if (vt != nullptr)
     {
       vt->_remove_ref ();
     }
@@ -8931,17 +8168,12 @@ CORBA::remove_ref (OldDif2::AMH_ex1ExceptionHolder * vt)
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/cdr_op_cs.cpp:59
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean
 operator<< (
     TAO_OutputCDR &strm,
-    const OldDif2::AMH_ex1ExceptionHolder *_tao_valuetype)
+    OldDif2::AMH_ex1ExceptionHolder const *_tao_valuetype)
 {
   return
     ::CORBA::ValueBase::_tao_marshal (
@@ -8958,12 +8190,7 @@ operator>> (
   return OldDif2::AMH_ex1ExceptionHolder::_tao_unmarshal (strm, _tao_valuetype);
 }
 
-
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/marshal_cs.cpp:189
 
 ::CORBA::Boolean
 OBV_OldDif2::AMH_ex1ExceptionHolder::_tao_marshal_state (TAO_OutputCDR &, TAO_ChunkInfo &) const
@@ -8983,16 +8210,11 @@ OBV_OldDif2::AMH_ex1ExceptionHolder::truncation_hook ()
   this->require_truncation_ = true;
 }
 
-
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/cdr_op_cs.cpp:50
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean operator<< (
     TAO_OutputCDR &strm,
-    const OldDif2::AMI_ex1Handler_ptr _tao_objref)
+    OldDif2::AMI_ex1Handler_ptr const _tao_objref)
 {
   ::CORBA::Object_ptr _tao_corba_obj = _tao_objref;
   return (strm << _tao_corba_obj);
@@ -9008,25 +8230,20 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
     {
       return false;
     }
-  
+
   // Narrow to the right type.
-  _tao_objref = TAO::Narrow_Utils< ::OldDif2::AMI_ex1Handler>::unchecked_narrow (obj.in ());
+  _tao_objref = TAO::Narrow_Utils<::OldDif2::AMI_ex1Handler>::unchecked_narrow (obj.in ());
 
   return true;
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/cdr_op_cs.cpp:50
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean operator<< (
     TAO_OutputCDR &strm,
-    const OldDif2::ex2_ptr _tao_objref)
+    OldDif2::ex2_ptr const _tao_objref)
 {
   ::CORBA::Object_ptr _tao_corba_obj = _tao_objref;
   return (strm << _tao_corba_obj);
@@ -9042,26 +8259,20 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
     {
       return false;
     }
-  
+
   // Narrow to the right type.
-  _tao_objref = TAO::Narrow_Utils< ::OldDif2::ex2>::unchecked_narrow (obj.in ());
+  _tao_objref = TAO::Narrow_Utils<::OldDif2::ex2>::unchecked_narrow (obj.in ());
 
   return true;
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_valuetype.cpp:506
-
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 void
 CORBA::add_ref (OldDif2::AMH_ex2ExceptionHolder * vt)
 {
-  if (vt != 0)
+  if (vt != nullptr)
     {
       vt->_add_ref ();
     }
@@ -9070,7 +8281,7 @@ CORBA::add_ref (OldDif2::AMH_ex2ExceptionHolder * vt)
 void
 CORBA::remove_ref (OldDif2::AMH_ex2ExceptionHolder * vt)
 {
-  if (vt != 0)
+  if (vt != nullptr)
     {
       vt->_remove_ref ();
     }
@@ -9078,17 +8289,12 @@ CORBA::remove_ref (OldDif2::AMH_ex2ExceptionHolder * vt)
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/cdr_op_cs.cpp:59
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean
 operator<< (
     TAO_OutputCDR &strm,
-    const OldDif2::AMH_ex2ExceptionHolder *_tao_valuetype)
+    OldDif2::AMH_ex2ExceptionHolder const *_tao_valuetype)
 {
   return
     ::CORBA::ValueBase::_tao_marshal (
@@ -9105,12 +8311,7 @@ operator>> (
   return OldDif2::AMH_ex2ExceptionHolder::_tao_unmarshal (strm, _tao_valuetype);
 }
 
-
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/marshal_cs.cpp:189
 
 ::CORBA::Boolean
 OBV_OldDif2::AMH_ex2ExceptionHolder::_tao_marshal_state (TAO_OutputCDR &, TAO_ChunkInfo &) const
@@ -9130,16 +8331,11 @@ OBV_OldDif2::AMH_ex2ExceptionHolder::truncation_hook ()
   this->require_truncation_ = true;
 }
 
-
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/cdr_op_cs.cpp:50
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean operator<< (
     TAO_OutputCDR &strm,
-    const OldDif2::AMI_ex2Handler_ptr _tao_objref)
+    OldDif2::AMI_ex2Handler_ptr const _tao_objref)
 {
   ::CORBA::Object_ptr _tao_corba_obj = _tao_objref;
   return (strm << _tao_corba_obj);
@@ -9155,25 +8351,20 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
     {
       return false;
     }
-  
+
   // Narrow to the right type.
-  _tao_objref = TAO::Narrow_Utils< ::OldDif2::AMI_ex2Handler>::unchecked_narrow (obj.in ());
+  _tao_objref = TAO::Narrow_Utils<::OldDif2::AMI_ex2Handler>::unchecked_narrow (obj.in ());
 
   return true;
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/cdr_op_cs.cpp:50
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean operator<< (
     TAO_OutputCDR &strm,
-    const OldDif2::ex3_ptr _tao_objref)
+    OldDif2::ex3_ptr const _tao_objref)
 {
   ::CORBA::Object_ptr _tao_corba_obj = _tao_objref;
   return (strm << _tao_corba_obj);
@@ -9189,26 +8380,20 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
     {
       return false;
     }
-  
+
   // Narrow to the right type.
-  _tao_objref = TAO::Narrow_Utils< ::OldDif2::ex3>::unchecked_narrow (obj.in ());
+  _tao_objref = TAO::Narrow_Utils<::OldDif2::ex3>::unchecked_narrow (obj.in ());
 
   return true;
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_valuetype.cpp:506
-
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 void
 CORBA::add_ref (OldDif2::AMH_ex3ExceptionHolder * vt)
 {
-  if (vt != 0)
+  if (vt != nullptr)
     {
       vt->_add_ref ();
     }
@@ -9217,7 +8402,7 @@ CORBA::add_ref (OldDif2::AMH_ex3ExceptionHolder * vt)
 void
 CORBA::remove_ref (OldDif2::AMH_ex3ExceptionHolder * vt)
 {
-  if (vt != 0)
+  if (vt != nullptr)
     {
       vt->_remove_ref ();
     }
@@ -9225,17 +8410,12 @@ CORBA::remove_ref (OldDif2::AMH_ex3ExceptionHolder * vt)
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/cdr_op_cs.cpp:59
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean
 operator<< (
     TAO_OutputCDR &strm,
-    const OldDif2::AMH_ex3ExceptionHolder *_tao_valuetype)
+    OldDif2::AMH_ex3ExceptionHolder const *_tao_valuetype)
 {
   return
     ::CORBA::ValueBase::_tao_marshal (
@@ -9252,12 +8432,7 @@ operator>> (
   return OldDif2::AMH_ex3ExceptionHolder::_tao_unmarshal (strm, _tao_valuetype);
 }
 
-
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/marshal_cs.cpp:189
 
 ::CORBA::Boolean
 OBV_OldDif2::AMH_ex3ExceptionHolder::_tao_marshal_state (TAO_OutputCDR &, TAO_ChunkInfo &) const
@@ -9277,16 +8452,11 @@ OBV_OldDif2::AMH_ex3ExceptionHolder::truncation_hook ()
   this->require_truncation_ = true;
 }
 
-
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/cdr_op_cs.cpp:50
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean operator<< (
     TAO_OutputCDR &strm,
-    const OldDif2::AMI_ex3Handler_ptr _tao_objref)
+    OldDif2::AMI_ex3Handler_ptr const _tao_objref)
 {
   ::CORBA::Object_ptr _tao_corba_obj = _tao_objref;
   return (strm << _tao_corba_obj);
@@ -9302,25 +8472,20 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
     {
       return false;
     }
-  
+
   // Narrow to the right type.
-  _tao_objref = TAO::Narrow_Utils< ::OldDif2::AMI_ex3Handler>::unchecked_narrow (obj.in ());
+  _tao_objref = TAO::Narrow_Utils<::OldDif2::AMI_ex3Handler>::unchecked_narrow (obj.in ());
 
   return true;
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/cdr_op_cs.cpp:50
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean operator<< (
     TAO_OutputCDR &strm,
-    const OldDif2::ex4_ptr _tao_objref)
+    OldDif2::ex4_ptr const _tao_objref)
 {
   ::CORBA::Object_ptr _tao_corba_obj = _tao_objref;
   return (strm << _tao_corba_obj);
@@ -9336,26 +8501,20 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
     {
       return false;
     }
-  
+
   // Narrow to the right type.
-  _tao_objref = TAO::Narrow_Utils< ::OldDif2::ex4>::unchecked_narrow (obj.in ());
+  _tao_objref = TAO::Narrow_Utils<::OldDif2::ex4>::unchecked_narrow (obj.in ());
 
   return true;
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_valuetype.cpp:506
-
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 void
 CORBA::add_ref (OldDif2::AMH_ex4ExceptionHolder * vt)
 {
-  if (vt != 0)
+  if (vt != nullptr)
     {
       vt->_add_ref ();
     }
@@ -9364,7 +8523,7 @@ CORBA::add_ref (OldDif2::AMH_ex4ExceptionHolder * vt)
 void
 CORBA::remove_ref (OldDif2::AMH_ex4ExceptionHolder * vt)
 {
-  if (vt != 0)
+  if (vt != nullptr)
     {
       vt->_remove_ref ();
     }
@@ -9372,17 +8531,12 @@ CORBA::remove_ref (OldDif2::AMH_ex4ExceptionHolder * vt)
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/cdr_op_cs.cpp:59
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean
 operator<< (
     TAO_OutputCDR &strm,
-    const OldDif2::AMH_ex4ExceptionHolder *_tao_valuetype)
+    OldDif2::AMH_ex4ExceptionHolder const *_tao_valuetype)
 {
   return
     ::CORBA::ValueBase::_tao_marshal (
@@ -9399,12 +8553,7 @@ operator>> (
   return OldDif2::AMH_ex4ExceptionHolder::_tao_unmarshal (strm, _tao_valuetype);
 }
 
-
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/marshal_cs.cpp:189
 
 ::CORBA::Boolean
 OBV_OldDif2::AMH_ex4ExceptionHolder::_tao_marshal_state (TAO_OutputCDR &, TAO_ChunkInfo &) const
@@ -9424,16 +8573,11 @@ OBV_OldDif2::AMH_ex4ExceptionHolder::truncation_hook ()
   this->require_truncation_ = true;
 }
 
-
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/cdr_op_cs.cpp:50
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean operator<< (
     TAO_OutputCDR &strm,
-    const OldDif2::AMI_ex4Handler_ptr _tao_objref)
+    OldDif2::AMI_ex4Handler_ptr const _tao_objref)
 {
   ::CORBA::Object_ptr _tao_corba_obj = _tao_objref;
   return (strm << _tao_corba_obj);
@@ -9449,14 +8593,12 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
     {
       return false;
     }
-  
+
   // Narrow to the right type.
-  _tao_objref = TAO::Narrow_Utils< ::OldDif2::AMI_ex4Handler>::unchecked_narrow (obj.in ());
+  _tao_objref = TAO::Narrow_Utils<::OldDif2::AMI_ex4Handler>::unchecked_narrow (obj.in ());
 
   return true;
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-
 

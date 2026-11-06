@@ -22,11 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:454
-
-#ifndef _TAO_IDL_CONSTANTSS_LCF3AU_H_
-#define _TAO_IDL_CONSTANTSS_LCF3AU_H_
+#ifndef _TAO_IDL_CONSTANTSS_H_
+#define _TAO_IDL_CONSTANTSS_H_
 
 #include /**/ "ace/pre.h"
 
@@ -51,27 +48,18 @@
 #include "tao/Messaging/AMH_Response_Handler.h"
 
 #include /**/ "TAO_IDL_TEST_stub_export.h"
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_arg_traits.cpp:64
-
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
 
 // Arg traits specializations.
 namespace TAO
 {
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_arg_traits.cpp:298
-
-  
 
 #if !defined (_MESSAGING_EXCEPTIONHOLDER__SARG_TRAITS_)
 #define _MESSAGING_EXCEPTIONHOLDER__SARG_TRAITS_
 
   template<>
-  class SArg_Traits< ::Messaging::ExceptionHolder>
+  class SArg_Traits<::Messaging::ExceptionHolder>
     : public
         Object_SArg_Traits_T<
             ::Messaging::ExceptionHolder *,
@@ -83,13 +71,9 @@ namespace TAO
   };
 
 #endif /* end #if !defined */
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_arg_traits.cpp:889
-
-  
 
   template<>
-  class SArg_Traits< ::m_a::enum_a>
+  class SArg_Traits<::m_a::enum_a>
     : public
         Basic_SArg_Traits_T<
             ::m_a::enum_a,
@@ -97,16 +81,12 @@ namespace TAO
           >
   {
   };
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_arg_traits.cpp:142
-
-  
 
 #if !defined (_CLASSCONSTANTS_IFACE__SARG_TRAITS_)
 #define _CLASSCONSTANTS_IFACE__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits< ::ClassConstants::Iface>
+  class  SArg_Traits<::ClassConstants::Iface>
     : public Object_SArg_Traits_T<
         ::ClassConstants::Iface_ptr,
         ::ClassConstants::Iface_var,
@@ -116,16 +96,12 @@ namespace TAO
   };
 
 #endif /* end #if !defined */
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_arg_traits.cpp:298
-
-  
 
 #if !defined (_CLASSCONSTANTS_AMH_IFACEEXCEPTIONHOLDER__SARG_TRAITS_)
 #define _CLASSCONSTANTS_AMH_IFACEEXCEPTIONHOLDER__SARG_TRAITS_
 
   template<>
-  class SArg_Traits< ::ClassConstants::AMH_IfaceExceptionHolder>
+  class SArg_Traits<::ClassConstants::AMH_IfaceExceptionHolder>
     : public
         Object_SArg_Traits_T<
             ::ClassConstants::AMH_IfaceExceptionHolder *,
@@ -137,16 +113,12 @@ namespace TAO
   };
 
 #endif /* end #if !defined */
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_arg_traits.cpp:142
-
-  
 
 #if !defined (_CLASSCONSTANTS_AMI_IFACEHANDLER__SARG_TRAITS_)
 #define _CLASSCONSTANTS_AMI_IFACEHANDLER__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits< ::ClassConstants::AMI_IfaceHandler>
+  class  SArg_Traits<::ClassConstants::AMI_IfaceHandler>
     : public Object_SArg_Traits_T<
         ::ClassConstants::AMI_IfaceHandler_ptr,
         ::ClassConstants::AMI_IfaceHandler_var,
@@ -156,16 +128,12 @@ namespace TAO
   };
 
 #endif /* end #if !defined */
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_arg_traits.cpp:298
-
-  
 
 #if !defined (_CLASSCONSTANTS_VT__SARG_TRAITS_)
 #define _CLASSCONSTANTS_VT__SARG_TRAITS_
 
   template<>
-  class SArg_Traits< ::ClassConstants::Vt>
+  class SArg_Traits<::ClassConstants::Vt>
     : public
         Object_SArg_Traits_T<
             ::ClassConstants::Vt *,
@@ -181,85 +149,47 @@ namespace TAO
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_module/module_sh.cpp:34
-
 namespace POA_m_a
 {
-  
-
-
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_module/module_sh.cpp:65
 
 } // module m_a
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_module/module_sh.cpp:34
-
 namespace POA_m_b
 {
-  
-
-
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_module/module_sh.cpp:65
 
 } // module m_b
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_module/module_sh.cpp:34
-
 namespace POA_problems
 {
-  
-
-
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_module/module_sh.cpp:65
 
 } // module problems
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_module/module_sh.cpp:34
-
 namespace POA_ClassConstants
 {
-  
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/amh_sh.cpp:45
 
   class AMH_Iface;
-  typedef AMH_Iface *AMH_Iface_ptr;
+  using AMH_Iface_ptr = AMH_Iface *;
 
   class TAO_IDL_TEST_STUB_Export AMH_Iface
     : public virtual PortableServer::ServantBase
   {
   protected:
     AMH_Iface ();
-  
+
   public:
-    AMH_Iface (const AMH_Iface& rhs);
-    virtual ~AMH_Iface () = default;
+    AMH_Iface (AMH_Iface const &rhs);
+    ~AMH_Iface () override = default;
 
+    ::CORBA::Boolean _is_a (char const *logical_type_id) override;
 
-    virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
-
-    virtual void _dispatch (
+    void _dispatch (
         TAO_ServerRequest &req,
-        TAO::Portable_Server::Servant_Upcall *_servant_upcall);
-    
+        TAO::Portable_Server::Servant_Upcall *_servant_upcall) override;
+
     ClassConstants::Iface *_this ();
 
-  virtual const char* _interface_repository_id () const;
+  char const *_interface_repository_id () const override;
 };
 
-
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_sh.cpp:72
-
-
-
 class Iface;
-typedef Iface *Iface_ptr;
+using Iface_ptr = Iface *;
 
 class _TAO_Iface_Direct_Proxy_Impl;
 
@@ -271,27 +201,23 @@ protected:
 
 public:
   /// Useful for template programming.
-  typedef ::ClassConstants::Iface _stub_type;
-  typedef ::ClassConstants::Iface_ptr _stub_ptr_type;
-  typedef ::ClassConstants::Iface_var _stub_var_type;
+  using _stub_type = ::ClassConstants::Iface;
+  using _stub_ptr_type = ::ClassConstants::Iface_ptr;
+  using _stub_var_type = ::ClassConstants::Iface_var;
 
-  Iface (const Iface& rhs) = default;
-  virtual ~Iface () = default;
+  Iface (Iface const &rhs) = default;
+  ~Iface () override = default;
 
-  virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
+  ::CORBA::Boolean _is_a (char const *logical_type_id) override;
 
-  virtual void _dispatch (
+  void _dispatch (
       TAO_ServerRequest & req,
-      TAO::Portable_Server::Servant_Upcall *servant_upcall);
-  
+      TAO::Portable_Server::Servant_Upcall *servant_upcall) override;
+
   ::ClassConstants::Iface *_this ();
-  
-  virtual const char* _interface_repository_id () const;
+
+  char const *_interface_repository_id () const override;
 };
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/direct_proxy_impl_sh.cpp:23
-
-
 
 ///////////////////////////////////////////////////////////////////////
 //                    Direct  Impl. Declaration
@@ -307,12 +233,8 @@ public:
 //                Direct  Proxy Impl. Declaration
 ///////////////////////////////////////////////////////////////////////
 
-
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/amh_rh_sh.cpp:49
-
 class TAO_AMH_IfaceResponseHandler;
-typedef TAO_AMH_IfaceResponseHandler *TAO_AMH_IfaceResponseHandler_ptr;
+using TAO_AMH_IfaceResponseHandler_ptr = TAO_AMH_IfaceResponseHandler *;
 
 class TAO_IDL_TEST_STUB_Export TAO_AMH_IfaceResponseHandler
   : public TAO_AMH_Response_Handler,
@@ -323,14 +245,8 @@ public:
   virtual ~TAO_AMH_IfaceResponseHandler () = default;
 };
 
-
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_sh.cpp:72
-
-
-
 class AMI_IfaceHandler;
-typedef AMI_IfaceHandler *AMI_IfaceHandler_ptr;
+using AMI_IfaceHandler_ptr = AMI_IfaceHandler *;
 
 class _TAO_AMI_IfaceHandler_Direct_Proxy_Impl;
 
@@ -342,27 +258,23 @@ protected:
 
 public:
   /// Useful for template programming.
-  typedef ::ClassConstants::AMI_IfaceHandler _stub_type;
-  typedef ::ClassConstants::AMI_IfaceHandler_ptr _stub_ptr_type;
-  typedef ::ClassConstants::AMI_IfaceHandler_var _stub_var_type;
+  using _stub_type = ::ClassConstants::AMI_IfaceHandler;
+  using _stub_ptr_type = ::ClassConstants::AMI_IfaceHandler_ptr;
+  using _stub_var_type = ::ClassConstants::AMI_IfaceHandler_var;
 
-  AMI_IfaceHandler (const AMI_IfaceHandler& rhs) = default;
-  virtual ~AMI_IfaceHandler () = default;
+  AMI_IfaceHandler (AMI_IfaceHandler const &rhs) = default;
+  ~AMI_IfaceHandler () override = default;
 
-  virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
+  ::CORBA::Boolean _is_a (char const *logical_type_id) override;
 
-  virtual void _dispatch (
+  void _dispatch (
       TAO_ServerRequest & req,
-      TAO::Portable_Server::Servant_Upcall *servant_upcall);
-  
+      TAO::Portable_Server::Servant_Upcall *servant_upcall) override;
+
   ::ClassConstants::AMI_IfaceHandler *_this ();
-  
-  virtual const char* _interface_repository_id () const;
+
+  char const *_interface_repository_id () const override;
 };
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/direct_proxy_impl_sh.cpp:23
-
-
 
 ///////////////////////////////////////////////////////////////////////
 //                    Direct  Impl. Declaration
@@ -379,40 +291,17 @@ public:
 //                Direct  Proxy Impl. Declaration
 ///////////////////////////////////////////////////////////////////////
 
-
-
-
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_module/module_sh.cpp:65
-
 } // module ClassConstants
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_module/module_sh.cpp:34
-
 namespace POA_CoercionBug
 {
-  
-
-
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_module/module_sh.cpp:65
 
 } // module CoercionBug
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_module/module_sh.cpp:34
-
 namespace POA_SignedGen
 {
-  
-
-
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_module/module_sh.cpp:65
 
 } // module SignedGen
 
 #include "constantsS_T.h"
-
 
 #include /**/ "ace/post.h"
 

@@ -22,13 +22,7 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_array/array_ci.cpp:142
-
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
 
 ACE_INLINE
 void
@@ -41,7 +35,7 @@ TAO::Array_Traits<OldArray::str22_forany>::free (
 ACE_INLINE
 OldArray::str22_slice *
 TAO::Array_Traits<OldArray::str22_forany>::dup (
-    const OldArray::str22_slice * _tao_slice)
+    OldArray::str22_slice const * _tao_slice)
 {
   return OldArray::str22_dup (_tao_slice);
 }
@@ -50,7 +44,7 @@ ACE_INLINE
 void
 TAO::Array_Traits<OldArray::str22_forany>::copy (
     OldArray::str22_slice * _tao_to,
-    const OldArray::str22_slice * _tao_from)
+    OldArray::str22_slice const * _tao_from)
 {
   OldArray::str22_copy (_tao_to, _tao_from);
 }
@@ -77,16 +71,9 @@ TAO::Array_Traits<OldArray::str22_forany>::alloc ()
   return OldArray::str22_alloc ();
 }
 
-
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_array/array_ci.cpp:142
-
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
 
 ACE_INLINE
 void
@@ -99,7 +86,7 @@ TAO::Array_Traits<OldArray::boolarray_forany>::free (
 ACE_INLINE
 OldArray::boolarray_slice *
 TAO::Array_Traits<OldArray::boolarray_forany>::dup (
-    const OldArray::boolarray_slice * _tao_slice)
+    OldArray::boolarray_slice const * _tao_slice)
 {
   return OldArray::boolarray_dup (_tao_slice);
 }
@@ -108,7 +95,7 @@ ACE_INLINE
 void
 TAO::Array_Traits<OldArray::boolarray_forany>::copy (
     OldArray::boolarray_slice * _tao_to,
-    const OldArray::boolarray_slice * _tao_from)
+    OldArray::boolarray_slice const * _tao_from)
 {
   OldArray::boolarray_copy (_tao_to, _tao_from);
 }
@@ -135,16 +122,9 @@ TAO::Array_Traits<OldArray::boolarray_forany>::alloc ()
   return OldArray::boolarray_alloc ();
 }
 
-
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_array/array_ci.cpp:142
-
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
 
 ACE_INLINE
 void
@@ -157,7 +137,7 @@ TAO::Array_Traits<OldArray::char_17_forany>::free (
 ACE_INLINE
 OldArray::char_17_slice *
 TAO::Array_Traits<OldArray::char_17_forany>::dup (
-    const OldArray::char_17_slice * _tao_slice)
+    OldArray::char_17_slice const * _tao_slice)
 {
   return OldArray::char_17_dup (_tao_slice);
 }
@@ -166,7 +146,7 @@ ACE_INLINE
 void
 TAO::Array_Traits<OldArray::char_17_forany>::copy (
     OldArray::char_17_slice * _tao_to,
-    const OldArray::char_17_slice * _tao_from)
+    OldArray::char_17_slice const * _tao_from)
 {
   OldArray::char_17_copy (_tao_to, _tao_from);
 }
@@ -190,16 +170,9 @@ TAO::Array_Traits<OldArray::char_17_forany>::alloc ()
   return OldArray::char_17_alloc ();
 }
 
-
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_array/array_ci.cpp:142
-
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
 
 ACE_INLINE
 void
@@ -212,7 +185,7 @@ TAO::Array_Traits<OldArray::char_10_2_forany>::free (
 ACE_INLINE
 OldArray::char_10_2_slice *
 TAO::Array_Traits<OldArray::char_10_2_forany>::dup (
-    const OldArray::char_10_2_slice * _tao_slice)
+    OldArray::char_10_2_slice const * _tao_slice)
 {
   return OldArray::char_10_2_dup (_tao_slice);
 }
@@ -221,7 +194,7 @@ ACE_INLINE
 void
 TAO::Array_Traits<OldArray::char_10_2_forany>::copy (
     OldArray::char_10_2_slice * _tao_to,
-    const OldArray::char_10_2_slice * _tao_from)
+    OldArray::char_10_2_slice const * _tao_from)
 {
   OldArray::char_10_2_copy (_tao_to, _tao_from);
 }
@@ -248,16 +221,9 @@ TAO::Array_Traits<OldArray::char_10_2_forany>::alloc ()
   return OldArray::char_10_2_alloc ();
 }
 
-
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_array/array_ci.cpp:142
-
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
 
 ACE_INLINE
 void
@@ -270,7 +236,7 @@ TAO::Array_Traits<OldArray::A_matrix_forany>::free (
 ACE_INLINE
 OldArray::A_matrix_slice *
 TAO::Array_Traits<OldArray::A_matrix_forany>::dup (
-    const OldArray::A_matrix_slice * _tao_slice)
+    OldArray::A_matrix_slice const * _tao_slice)
 {
   return OldArray::A_matrix_dup (_tao_slice);
 }
@@ -279,7 +245,7 @@ ACE_INLINE
 void
 TAO::Array_Traits<OldArray::A_matrix_forany>::copy (
     OldArray::A_matrix_slice * _tao_to,
-    const OldArray::A_matrix_slice * _tao_from)
+    OldArray::A_matrix_slice const * _tao_from)
 {
   OldArray::A_matrix_copy (_tao_to, _tao_from);
 }
@@ -309,16 +275,9 @@ TAO::Array_Traits<OldArray::A_matrix_forany>::alloc ()
   return OldArray::A_matrix_alloc ();
 }
 
-
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_array/array_ci.cpp:142
-
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
 
 ACE_INLINE
 void
@@ -331,7 +290,7 @@ TAO::Array_Traits<OldArray::B_matrix_forany>::free (
 ACE_INLINE
 OldArray::B_matrix_slice *
 TAO::Array_Traits<OldArray::B_matrix_forany>::dup (
-    const OldArray::B_matrix_slice * _tao_slice)
+    OldArray::B_matrix_slice const * _tao_slice)
 {
   return OldArray::B_matrix_dup (_tao_slice);
 }
@@ -340,7 +299,7 @@ ACE_INLINE
 void
 TAO::Array_Traits<OldArray::B_matrix_forany>::copy (
     OldArray::B_matrix_slice * _tao_to,
-    const OldArray::B_matrix_slice * _tao_from)
+    OldArray::B_matrix_slice const * _tao_from)
 {
   OldArray::B_matrix_copy (_tao_to, _tao_from);
 }
@@ -370,16 +329,9 @@ TAO::Array_Traits<OldArray::B_matrix_forany>::alloc ()
   return OldArray::B_matrix_alloc ();
 }
 
-
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_array/array_ci.cpp:142
-
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
 
 ACE_INLINE
 void
@@ -392,7 +344,7 @@ TAO::Array_Traits<OldArray::C_matrix_forany>::free (
 ACE_INLINE
 OldArray::C_matrix_slice *
 TAO::Array_Traits<OldArray::C_matrix_forany>::dup (
-    const OldArray::C_matrix_slice * _tao_slice)
+    OldArray::C_matrix_slice const * _tao_slice)
 {
   return OldArray::C_matrix_dup (_tao_slice);
 }
@@ -401,7 +353,7 @@ ACE_INLINE
 void
 TAO::Array_Traits<OldArray::C_matrix_forany>::copy (
     OldArray::C_matrix_slice * _tao_to,
-    const OldArray::C_matrix_slice * _tao_from)
+    OldArray::C_matrix_slice const * _tao_from)
 {
   OldArray::C_matrix_copy (_tao_to, _tao_from);
 }
@@ -431,16 +383,9 @@ TAO::Array_Traits<OldArray::C_matrix_forany>::alloc ()
   return OldArray::C_matrix_alloc ();
 }
 
-
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_array/array_ci.cpp:142
-
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
 
 ACE_INLINE
 void
@@ -453,7 +398,7 @@ TAO::Array_Traits<OldArray::A_rmatrix_forany>::free (
 ACE_INLINE
 OldArray::A_rmatrix_slice *
 TAO::Array_Traits<OldArray::A_rmatrix_forany>::dup (
-    const OldArray::A_rmatrix_slice * _tao_slice)
+    OldArray::A_rmatrix_slice const * _tao_slice)
 {
   return OldArray::A_rmatrix_dup (_tao_slice);
 }
@@ -462,7 +407,7 @@ ACE_INLINE
 void
 TAO::Array_Traits<OldArray::A_rmatrix_forany>::copy (
     OldArray::A_rmatrix_slice * _tao_to,
-    const OldArray::A_rmatrix_slice * _tao_from)
+    OldArray::A_rmatrix_slice const * _tao_from)
 {
   OldArray::A_rmatrix_copy (_tao_to, _tao_from);
 }
@@ -496,13 +441,7 @@ TAO::Array_Traits<OldArray::A_rmatrix_forany>::alloc ()
   return OldArray::A_rmatrix_alloc ();
 }
 
-
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ci.cpp:58
-
-
 
 ACE_INLINE
 OldArray::A_i::A_i (
@@ -521,23 +460,16 @@ OldArray::A_i::A_i (
   : ::CORBA::Object (ior, oc)
 {
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_ci.cpp:43
-
 ACE_INLINE
 OldArray::AMH_A_iExceptionHolder::AMH_A_iExceptionHolder ()
   : exception (nullptr)
 {}
 
-ACE_INLINE const char*
+ACE_INLINE char const *
 OldArray::AMH_A_iExceptionHolder::_tao_obv_static_repository_id ()
 {
   return "IDL:OldArray/AMH_A_iExceptionHolder:1.0";
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ci.cpp:58
-
-
 
 ACE_INLINE
 OldArray::AMI_A_iHandler::AMI_A_iHandler (

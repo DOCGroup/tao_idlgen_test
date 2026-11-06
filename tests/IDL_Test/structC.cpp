@@ -22,14 +22,12 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:370
-
-
 #include "structC.h"
+#include <cstring>
 #include <memory>
 #include "tao/AnyTypeCode/Null_RefCount_Policy.h"
 #include "tao/AnyTypeCode/TypeCode_Constants.h"
+#include "tao/AnyTypeCode/Fixed_TypeCode_Static.h"
 #include "tao/AnyTypeCode/Alias_TypeCode_Static.h"
 #include "tao/AnyTypeCode/Enum_TypeCode_Static.h"
 #include "tao/AnyTypeCode/Sequence_TypeCode_Static.h"
@@ -50,20 +48,16 @@
 #include "tao/AnyTypeCode/Any_Dual_Impl_T.h"
 #include "tao/AnyTypeCode/Any_Array_Impl_T.h"
 #include "tao/AnyTypeCode/Any_Basic_Impl_T.h"
-#include <cstring>
 
 #if !defined (__ACE_INLINE__)
 #include "structC.inl"
 #endif /* !defined INLINE */
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_typecode/struct_typecode.cpp:84
-
 static TAO::TypeCode::Struct_Field<
   char const *,
   ::CORBA::TypeCode_ptr const *> const
     _tao_fields_Test_S1[] =
       {
-        { "hello", &CORBA::_tc_string }
+        { "hello", std::addressof (CORBA::_tc_string) }
       };
 
 static TAO::TypeCode::Struct<
@@ -80,44 +74,28 @@ _tao_tc_Test_S1 (
   _tao_fields_Test_S1,
   1);
 
-
 namespace Test
 {
   ::CORBA::TypeCode_ptr const _tc_S1 = std::addressof(_tao_tc_Test_S1);
 }
 
-
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_structure/structure_cs.cpp:55
-
-void
-Test::S1::_tao_any_destructor (
-    void *_tao_void_pointer)
+void Test::S1::_tao_any_destructor (void *_tao_void_pointer)
 {
   S1 *tmp = static_cast<S1 *> (_tao_void_pointer);
   delete tmp;
 }
 
-
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_sequence/sequence_cs.cpp:104
-
-
-
 #if !defined (_TEST_TS3SEQ_CS_)
 #define _TEST_TS3SEQ_CS_
 
-Test::TS3Seq::TS3Seq (
-    ::CORBA::ULong max)
-  : ::TAO::unbounded_value_sequence< S3> (max)
-{}
+Test::TS3Seq::TS3Seq (::CORBA::ULong max)
+  : ::TAO::unbounded_value_sequence<S3> (max) {}
 
-Test::TS3Seq::TS3Seq (
-    ::CORBA::ULong max,
-    ::CORBA::ULong length,
-    Test::S3 * buffer,
-    ::CORBA::Boolean release)
-  : ::TAO::unbounded_value_sequence< S3>
+Test::TS3Seq::TS3Seq (::CORBA::ULong max,
+  ::CORBA::ULong length,
+  Test::S3 * buffer,
+  ::CORBA::Boolean release)
+  : ::TAO::unbounded_value_sequence<S3>
     (max, length, buffer, release)
 {}
 
@@ -129,13 +107,6 @@ void Test::TS3Seq::_tao_any_destructor (
 }
 
 #endif /* end #if !defined */
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_typecode/alias_typecode.cpp:46
-
-
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_typecode/typecode_defn.cpp:454
-
 
 #ifndef _TAO_TYPECODE_Test_TS3Seq_GUARD
 #define _TAO_TYPECODE_Test_TS3Seq_GUARD
@@ -148,17 +119,13 @@ namespace TAO
   {
     namespace
     {
-      TAO::TypeCode::Sequence< ::CORBA::TypeCode_ptr const *,
-                              TAO::Null_RefCount_Policy>
-        Test_TS3Seq_0 (
-          ::CORBA::tk_sequence,
-          &Test::_tc_S3,
-          0U);
-        
-      ::CORBA::TypeCode_ptr const tc_Test_TS3Seq_0 =
-        &Test_TS3Seq_0;
-    }
+      TAO::TypeCode::Sequence<::CORBA::TypeCode_ptr const *, TAO::Null_RefCount_Policy> Test_TS3Seq_0 (
+        ::CORBA::tk_sequence, std::addressof (Test::_tc_S3), 0U);
+
+    ::CORBA::TypeCode_ptr const tc_Test_TS3Seq_0 =
+      std::addressof (Test_TS3Seq_0);
   }
+}
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
@@ -172,27 +139,20 @@ static TAO::TypeCode::Alias<char const *,
     ::CORBA::tk_alias,
     "IDL:Test/TS3Seq:1.0",
     "TS3Seq",
-    &TAO::TypeCode::tc_Test_TS3Seq_0);
-  
+    std::addressof (TAO::TypeCode::tc_Test_TS3Seq_0));
 
 namespace Test
 {
   ::CORBA::TypeCode_ptr const _tc_TS3Seq = std::addressof(_tao_tc_Test_TS3Seq);
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_typecode/struct_typecode.cpp:84
-
-
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_typecode/typecode_defn.cpp:454
 
 static TAO::TypeCode::Struct_Field<
   char const *,
   ::CORBA::TypeCode_ptr const *> const
     _tao_fields_Test_S3[] =
       {
-        { "m_seq", &Test::_tc_TS3Seq },
-        { "m_has_more", &CORBA::_tc_boolean }
+        { "m_seq", std::addressof (Test::_tc_TS3Seq) },
+        { "m_has_more", std::addressof (CORBA::_tc_boolean) }
       };
 
 static TAO::TypeCode::Recursive_Type<
@@ -214,44 +174,28 @@ _tao_tc_Test_S3 (
   _tao_fields_Test_S3,
   2);
 
-
 namespace Test
 {
   ::CORBA::TypeCode_ptr const _tc_S3 = std::addressof(_tao_tc_Test_S3);
 }
 
-
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_structure/structure_cs.cpp:55
-
-void
-Test::S3::_tao_any_destructor (
-    void *_tao_void_pointer)
+void Test::S3::_tao_any_destructor (void *_tao_void_pointer)
 {
   S3 *tmp = static_cast<S3 *> (_tao_void_pointer);
   delete tmp;
 }
 
-
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_sequence/sequence_cs.cpp:104
-
-
-
 #if !defined (_TEST_TS4SEQ_CS_)
 #define _TEST_TS4SEQ_CS_
 
-Test::TS4Seq::TS4Seq (
-    ::CORBA::ULong max)
-  : ::TAO::unbounded_value_sequence< S4> (max)
-{}
+Test::TS4Seq::TS4Seq (::CORBA::ULong max)
+  : ::TAO::unbounded_value_sequence<S4> (max) {}
 
-Test::TS4Seq::TS4Seq (
-    ::CORBA::ULong max,
-    ::CORBA::ULong length,
-    Test::S4 * buffer,
-    ::CORBA::Boolean release)
-  : ::TAO::unbounded_value_sequence< S4>
+Test::TS4Seq::TS4Seq (::CORBA::ULong max,
+  ::CORBA::ULong length,
+  Test::S4 * buffer,
+  ::CORBA::Boolean release)
+  : ::TAO::unbounded_value_sequence<S4>
     (max, length, buffer, release)
 {}
 
@@ -263,13 +207,6 @@ void Test::TS4Seq::_tao_any_destructor (
 }
 
 #endif /* end #if !defined */
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_typecode/alias_typecode.cpp:46
-
-
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_typecode/typecode_defn.cpp:454
-
 
 #ifndef _TAO_TYPECODE_Test_TS4Seq_GUARD
 #define _TAO_TYPECODE_Test_TS4Seq_GUARD
@@ -282,17 +219,13 @@ namespace TAO
   {
     namespace
     {
-      TAO::TypeCode::Sequence< ::CORBA::TypeCode_ptr const *,
-                              TAO::Null_RefCount_Policy>
-        Test_TS4Seq_0 (
-          ::CORBA::tk_sequence,
-          &Test::_tc_S4,
-          0U);
-        
-      ::CORBA::TypeCode_ptr const tc_Test_TS4Seq_0 =
-        &Test_TS4Seq_0;
-    }
+      TAO::TypeCode::Sequence<::CORBA::TypeCode_ptr const *, TAO::Null_RefCount_Policy> Test_TS4Seq_0 (
+        ::CORBA::tk_sequence, std::addressof (Test::_tc_S4), 0U);
+
+    ::CORBA::TypeCode_ptr const tc_Test_TS4Seq_0 =
+      std::addressof (Test_TS4Seq_0);
   }
+}
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
@@ -306,34 +239,24 @@ static TAO::TypeCode::Alias<char const *,
     ::CORBA::tk_alias,
     "IDL:Test/TS4Seq:1.0",
     "TS4Seq",
-    &TAO::TypeCode::tc_Test_TS4Seq_0);
-  
+    std::addressof (TAO::TypeCode::tc_Test_TS4Seq_0));
 
 namespace Test
 {
   ::CORBA::TypeCode_ptr const _tc_TS4Seq = std::addressof(_tao_tc_Test_TS4Seq);
 }
 
-
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_sequence/sequence_cs.cpp:104
-
-
-
 #if !defined (_TEST_TS5SEQ_CS_)
 #define _TEST_TS5SEQ_CS_
 
-Test::TS5Seq::TS5Seq (
-    ::CORBA::ULong max)
-  : ::TAO::unbounded_value_sequence< S5> (max)
-{}
+Test::TS5Seq::TS5Seq (::CORBA::ULong max)
+  : ::TAO::unbounded_value_sequence<S5> (max) {}
 
-Test::TS5Seq::TS5Seq (
-    ::CORBA::ULong max,
-    ::CORBA::ULong length,
-    Test::S5 * buffer,
-    ::CORBA::Boolean release)
-  : ::TAO::unbounded_value_sequence< S5>
+Test::TS5Seq::TS5Seq (::CORBA::ULong max,
+  ::CORBA::ULong length,
+  Test::S5 * buffer,
+  ::CORBA::Boolean release)
+  : ::TAO::unbounded_value_sequence<S5>
     (max, length, buffer, release)
 {}
 
@@ -345,13 +268,6 @@ void Test::TS5Seq::_tao_any_destructor (
 }
 
 #endif /* end #if !defined */
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_typecode/alias_typecode.cpp:46
-
-
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_typecode/typecode_defn.cpp:454
-
 
 #ifndef _TAO_TYPECODE_Test_TS5Seq_GUARD
 #define _TAO_TYPECODE_Test_TS5Seq_GUARD
@@ -364,17 +280,13 @@ namespace TAO
   {
     namespace
     {
-      TAO::TypeCode::Sequence< ::CORBA::TypeCode_ptr const *,
-                              TAO::Null_RefCount_Policy>
-        Test_TS5Seq_0 (
-          ::CORBA::tk_sequence,
-          &Test::_tc_S5,
-          0U);
-        
-      ::CORBA::TypeCode_ptr const tc_Test_TS5Seq_0 =
-        &Test_TS5Seq_0;
-    }
+      TAO::TypeCode::Sequence<::CORBA::TypeCode_ptr const *, TAO::Null_RefCount_Policy> Test_TS5Seq_0 (
+        ::CORBA::tk_sequence, std::addressof (Test::_tc_S5), 0U);
+
+    ::CORBA::TypeCode_ptr const tc_Test_TS5Seq_0 =
+      std::addressof (Test_TS5Seq_0);
   }
+}
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
@@ -388,22 +300,18 @@ static TAO::TypeCode::Alias<char const *,
     ::CORBA::tk_alias,
     "IDL:Test/TS5Seq:1.0",
     "TS5Seq",
-    &TAO::TypeCode::tc_Test_TS5Seq_0);
-  
+    std::addressof (TAO::TypeCode::tc_Test_TS5Seq_0));
 
 namespace Test
 {
   ::CORBA::TypeCode_ptr const _tc_TS5Seq = std::addressof(_tao_tc_Test_TS5Seq);
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_typecode/struct_typecode.cpp:84
-
 static TAO::TypeCode::Struct_Field<
   char const *,
   ::CORBA::TypeCode_ptr const *> const
     _tao_fields_Test_S4[] =
       {
-        { "a", &CORBA::_tc_boolean }
+        { "a", std::addressof (CORBA::_tc_boolean) }
       };
 
 static TAO::TypeCode::Struct<
@@ -420,32 +328,22 @@ _tao_tc_Test_S4 (
   _tao_fields_Test_S4,
   1);
 
-
 namespace Test
 {
   ::CORBA::TypeCode_ptr const _tc_S4 = std::addressof(_tao_tc_Test_S4);
 }
 
-
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_structure/structure_cs.cpp:55
-
-void
-Test::S4::_tao_any_destructor (
-    void *_tao_void_pointer)
+void Test::S4::_tao_any_destructor (void *_tao_void_pointer)
 {
   S4 *tmp = static_cast<S4 *> (_tao_void_pointer);
   delete tmp;
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_typecode/struct_typecode.cpp:84
-
 static TAO::TypeCode::Struct_Field<
   char const *,
   ::CORBA::TypeCode_ptr const *> const
     _tao_fields_Test_S5[] =
       {
-        { "b", &CORBA::_tc_boolean }
+        { "b", std::addressof (CORBA::_tc_boolean) }
       };
 
 static TAO::TypeCode::Struct<
@@ -462,26 +360,16 @@ _tao_tc_Test_S5 (
   _tao_fields_Test_S5,
   1);
 
-
 namespace Test
 {
   ::CORBA::TypeCode_ptr const _tc_S5 = std::addressof(_tao_tc_Test_S5);
 }
 
-
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_structure/structure_cs.cpp:55
-
-void
-Test::S5::_tao_any_destructor (
-    void *_tao_void_pointer)
+void Test::S5::_tao_any_destructor (void *_tao_void_pointer)
 {
   S5 *tmp = static_cast<S5 *> (_tao_void_pointer);
   delete tmp;
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_typecode/alias_typecode.cpp:46
-
 static TAO::TypeCode::Alias<char const *,
                             ::CORBA::TypeCode_ptr const *,
                             TAO::Null_RefCount_Policy>
@@ -489,23 +377,19 @@ static TAO::TypeCode::Alias<char const *,
     ::CORBA::tk_alias,
     "IDL:Test/FooType:1.0",
     "FooType",
-    &CORBA::_tc_long);
-  
+    std::addressof (CORBA::_tc_long));
 
 namespace Test
 {
   ::CORBA::TypeCode_ptr const _tc_FooType = std::addressof(_tao_tc_Test_FooType);
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_typecode/struct_typecode.cpp:84
-
 static TAO::TypeCode::Struct_Field<
   char const *,
   ::CORBA::TypeCode_ptr const *> const
     _tao_fields_Test_FooStruct[] =
       {
-        { "Foo1", &Test::_tc_FooType },
-        { "Foo2", &Test::_tc_FooType }
+        { "Foo1", std::addressof (Test::_tc_FooType) },
+        { "Foo2", std::addressof (Test::_tc_FooType) }
       };
 
 static TAO::TypeCode::Struct<
@@ -522,26 +406,16 @@ _tao_tc_Test_FooStruct (
   _tao_fields_Test_FooStruct,
   2);
 
-
 namespace Test
 {
   ::CORBA::TypeCode_ptr const _tc_FooStruct = std::addressof(_tao_tc_Test_FooStruct);
 }
 
-
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_structure/structure_cs.cpp:55
-
-void
-Test::FooStruct::_tao_any_destructor (
-    void *_tao_void_pointer)
+void Test::FooStruct::_tao_any_destructor (void *_tao_void_pointer)
 {
   FooStruct *tmp = static_cast<FooStruct *> (_tao_void_pointer);
   delete tmp;
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_typecode/enum_typecode.cpp:27
-
 static char const * const _tao_enumerators_Test_S90[] =
   {
     "S90_1",
@@ -556,25 +430,21 @@ static TAO::TypeCode::Enum<char const *,
     "S90",
     _tao_enumerators_Test_S90,
     2);
-  
 
 namespace Test
 {
   ::CORBA::TypeCode_ptr const _tc_S90 = std::addressof(_tao_tc_Test_S90);
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_array/array_cs.cpp:89
-
 Test::S90Array_slice *
-Test::S90Array_dup (const Test::S90Array_slice *_tao_src_array)
+Test::S90Array_dup (Test::S90Array_slice const *_tao_src_array)
 {
   Test::S90Array_slice *_tao_dup_array = Test::S90Array_alloc ();
-  
+
   if (_tao_dup_array)
     {
       Test::S90Array_copy (_tao_dup_array, _tao_src_array);
     }
-  
+
   return _tao_dup_array;
 }
 
@@ -595,7 +465,7 @@ Test::S90Array_free (Test::S90Array_slice *_tao_slice)
 void
 Test::S90Array_copy (
     Test::S90Array_slice * _tao_to,
-    const Test::S90Array_slice *_tao_from)
+    Test::S90Array_slice const *_tao_from)
 {
   // Copy each individual element.
   for (::CORBA::ULong i0 = 0; i0 < 2; ++i0)
@@ -603,13 +473,6 @@ Test::S90Array_copy (
       _tao_to[i0] = _tao_from[i0];
     }
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_typecode/alias_typecode.cpp:46
-
-
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_typecode/typecode_defn.cpp:293
-
 
 #ifndef _TAO_TYPECODE_Test_S90Array_GUARD
 #define _TAO_TYPECODE_Test_S90Array_GUARD
@@ -622,17 +485,15 @@ namespace TAO
   {
     namespace
     {
-      TAO::TypeCode::Sequence< ::CORBA::TypeCode_ptr const *,
-                              TAO::Null_RefCount_Policy>
-        Test_S90Array_2 (
-          ::CORBA::tk_array,
-          &Test::_tc_S90,
-          2U);
-        
-      ::CORBA::TypeCode_ptr const tc_Test_S90Array =
-        &Test_S90Array_2;
-    }
+      TAO::TypeCode::Sequence<::CORBA::TypeCode_ptr const *, TAO::Null_RefCount_Policy> Test_S90Array_2 (
+        ::CORBA::tk_array,
+        std::addressof (Test::_tc_S90),
+        2U);
+
+    ::CORBA::TypeCode_ptr const tc_Test_S90Array =
+      std::addressof (Test_S90Array_2);
   }
+}
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
@@ -645,26 +506,22 @@ static TAO::TypeCode::Alias<char const *,
     ::CORBA::tk_alias,
     "IDL:Test/S90Array:1.0",
     "S90Array",
-    &TAO::TypeCode::tc_Test_S90Array);
-  
+    std::addressof (TAO::TypeCode::tc_Test_S90Array));
 
 namespace Test
 {
   ::CORBA::TypeCode_ptr const _tc_S90Array = std::addressof(_tao_tc_Test_S90Array);
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_array/array_cs.cpp:89
-
 Test::S42_slice *
-Test::S42_dup (const Test::S42_slice *_tao_src_array)
+Test::S42_dup (Test::S42_slice const *_tao_src_array)
 {
   Test::S42_slice *_tao_dup_array = Test::S42_alloc ();
-  
+
   if (_tao_dup_array)
     {
       Test::S42_copy (_tao_dup_array, _tao_src_array);
     }
-  
+
   return _tao_dup_array;
 }
 
@@ -685,7 +542,7 @@ Test::S42_free (Test::S42_slice *_tao_slice)
 void
 Test::S42_copy (
     Test::S42_slice * _tao_to,
-    const Test::S42_slice *_tao_from)
+    Test::S42_slice const *_tao_from)
 {
   // Copy each individual element.
   for (::CORBA::ULong i0 = 0; i0 < 2; ++i0)
@@ -693,13 +550,6 @@ Test::S42_copy (
       _tao_to[i0] = _tao_from[i0];
     }
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_typecode/alias_typecode.cpp:46
-
-
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_typecode/typecode_defn.cpp:293
-
 
 #ifndef _TAO_TYPECODE_Test_S42_GUARD
 #define _TAO_TYPECODE_Test_S42_GUARD
@@ -712,17 +562,15 @@ namespace TAO
   {
     namespace
     {
-      TAO::TypeCode::Sequence< ::CORBA::TypeCode_ptr const *,
-                              TAO::Null_RefCount_Policy>
-        Test_S42_2 (
-          ::CORBA::tk_array,
-          &CORBA::_tc_long,
-          2U);
-        
-      ::CORBA::TypeCode_ptr const tc_Test_S42 =
-        &Test_S42_2;
-    }
+      TAO::TypeCode::Sequence<::CORBA::TypeCode_ptr const *, TAO::Null_RefCount_Policy> Test_S42_2 (
+        ::CORBA::tk_array,
+        std::addressof (CORBA::_tc_long),
+        2U);
+
+    ::CORBA::TypeCode_ptr const tc_Test_S42 =
+      std::addressof (Test_S42_2);
   }
+}
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
@@ -735,26 +583,22 @@ static TAO::TypeCode::Alias<char const *,
     ::CORBA::tk_alias,
     "IDL:Test/S42:1.0",
     "S42",
-    &TAO::TypeCode::tc_Test_S42);
-  
+    std::addressof (TAO::TypeCode::tc_Test_S42));
 
 namespace Test
 {
   ::CORBA::TypeCode_ptr const _tc_S42 = std::addressof(_tao_tc_Test_S42);
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_array/array_cs.cpp:89
-
 Test::SString43_slice *
-Test::SString43_dup (const Test::SString43_slice *_tao_src_array)
+Test::SString43_dup (Test::SString43_slice const *_tao_src_array)
 {
   Test::SString43_slice *_tao_dup_array = Test::SString43_alloc ();
-  
+
   if (_tao_dup_array)
     {
       Test::SString43_copy (_tao_dup_array, _tao_src_array);
     }
-  
+
   return _tao_dup_array;
 }
 
@@ -775,7 +619,7 @@ Test::SString43_free (Test::SString43_slice *_tao_slice)
 void
 Test::SString43_copy (
     Test::SString43_slice * _tao_to,
-    const Test::SString43_slice *_tao_from)
+    Test::SString43_slice const *_tao_from)
 {
   // Copy each individual element.
   for (::CORBA::ULong i0 = 0; i0 < 2; ++i0)
@@ -783,13 +627,6 @@ Test::SString43_copy (
       _tao_to[i0] = _tao_from[i0];
     }
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_typecode/alias_typecode.cpp:46
-
-
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_typecode/typecode_defn.cpp:293
-
 
 #ifndef _TAO_TYPECODE_Test_SString43_GUARD
 #define _TAO_TYPECODE_Test_SString43_GUARD
@@ -802,17 +639,15 @@ namespace TAO
   {
     namespace
     {
-      TAO::TypeCode::Sequence< ::CORBA::TypeCode_ptr const *,
-                              TAO::Null_RefCount_Policy>
-        Test_SString43_2 (
-          ::CORBA::tk_array,
-          &CORBA::_tc_string,
-          2U);
-        
-      ::CORBA::TypeCode_ptr const tc_Test_SString43 =
-        &Test_SString43_2;
-    }
+      TAO::TypeCode::Sequence<::CORBA::TypeCode_ptr const *, TAO::Null_RefCount_Policy> Test_SString43_2 (
+        ::CORBA::tk_array,
+        std::addressof (CORBA::_tc_string),
+        2U);
+
+    ::CORBA::TypeCode_ptr const tc_Test_SString43 =
+      std::addressof (Test_SString43_2);
   }
+}
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
@@ -825,26 +660,22 @@ static TAO::TypeCode::Alias<char const *,
     ::CORBA::tk_alias,
     "IDL:Test/SString43:1.0",
     "SString43",
-    &TAO::TypeCode::tc_Test_SString43);
-  
+    std::addressof (TAO::TypeCode::tc_Test_SString43));
 
 namespace Test
 {
   ::CORBA::TypeCode_ptr const _tc_SString43 = std::addressof(_tao_tc_Test_SString43);
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_array/array_cs.cpp:89
-
 Test::S4Array_slice *
-Test::S4Array_dup (const Test::S4Array_slice *_tao_src_array)
+Test::S4Array_dup (Test::S4Array_slice const *_tao_src_array)
 {
   Test::S4Array_slice *_tao_dup_array = Test::S4Array_alloc ();
-  
+
   if (_tao_dup_array)
     {
       Test::S4Array_copy (_tao_dup_array, _tao_src_array);
     }
-  
+
   return _tao_dup_array;
 }
 
@@ -865,7 +696,7 @@ Test::S4Array_free (Test::S4Array_slice *_tao_slice)
 void
 Test::S4Array_copy (
     Test::S4Array_slice * _tao_to,
-    const Test::S4Array_slice *_tao_from)
+    Test::S4Array_slice const *_tao_from)
 {
   // Copy each individual element.
   for (::CORBA::ULong i0 = 0; i0 < 2; ++i0)
@@ -873,13 +704,6 @@ Test::S4Array_copy (
       _tao_to[i0] = _tao_from[i0];
     }
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_typecode/alias_typecode.cpp:46
-
-
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_typecode/typecode_defn.cpp:293
-
 
 #ifndef _TAO_TYPECODE_Test_S4Array_GUARD
 #define _TAO_TYPECODE_Test_S4Array_GUARD
@@ -892,17 +716,15 @@ namespace TAO
   {
     namespace
     {
-      TAO::TypeCode::Sequence< ::CORBA::TypeCode_ptr const *,
-                              TAO::Null_RefCount_Policy>
-        Test_S4Array_2 (
-          ::CORBA::tk_array,
-          &Test::_tc_S4,
-          2U);
-        
-      ::CORBA::TypeCode_ptr const tc_Test_S4Array =
-        &Test_S4Array_2;
-    }
+      TAO::TypeCode::Sequence<::CORBA::TypeCode_ptr const *, TAO::Null_RefCount_Policy> Test_S4Array_2 (
+        ::CORBA::tk_array,
+        std::addressof (Test::_tc_S4),
+        2U);
+
+    ::CORBA::TypeCode_ptr const tc_Test_S4Array =
+      std::addressof (Test_S4Array_2);
   }
+}
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
@@ -915,33 +737,22 @@ static TAO::TypeCode::Alias<char const *,
     ::CORBA::tk_alias,
     "IDL:Test/S4Array:1.0",
     "S4Array",
-    &TAO::TypeCode::tc_Test_S4Array);
-  
+    std::addressof (TAO::TypeCode::tc_Test_S4Array));
 
 namespace Test
 {
   ::CORBA::TypeCode_ptr const _tc_S4Array = std::addressof(_tao_tc_Test_S4Array);
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_typecode/struct_typecode.cpp:84
-
-
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_typecode/typecode_defn.cpp:293
-
-
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_typecode/typecode_defn.cpp:293
 
 static TAO::TypeCode::Struct_Field<
   char const *,
   ::CORBA::TypeCode_ptr const *> const
     _tao_fields_Test_S10[] =
       {
-        { "s10_1", &Test::_tc_S90 },
-        { "s10_2", &Test::_tc_S42 },
-        { "s10_3", &Test::_tc_SString43 },
-        { "s10_4", &Test::_tc_S4 }
+        { "s10_1", std::addressof (Test::_tc_S90) },
+        { "s10_2", std::addressof (Test::_tc_S42) },
+        { "s10_3", std::addressof (Test::_tc_SString43) },
+        { "s10_4", std::addressof (Test::_tc_S4) }
       };
 
 static TAO::TypeCode::Struct<
@@ -958,41 +769,28 @@ _tao_tc_Test_S10 (
   _tao_fields_Test_S10,
   4);
 
-
 namespace Test
 {
   ::CORBA::TypeCode_ptr const _tc_S10 = std::addressof(_tao_tc_Test_S10);
 }
 
-
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_structure/structure_cs.cpp:55
-
-void
-Test::S10::_tao_any_destructor (
-    void *_tao_void_pointer)
+void Test::S10::_tao_any_destructor (void *_tao_void_pointer)
 {
   S10 *tmp = static_cast<S10 *> (_tao_void_pointer);
   delete tmp;
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_typecode/struct_typecode.cpp:84
-
-
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_typecode/typecode_defn.cpp:293
 
 static TAO::TypeCode::Struct_Field<
   char const *,
   ::CORBA::TypeCode_ptr const *> const
     _tao_fields_Test_DefaultInitialized[] =
       {
-        { "boolean_value", &CORBA::_tc_boolean },
-        { "long_value", &CORBA::_tc_long },
-        { "double_value", &CORBA::_tc_double },
-        { "enum_value", &Test::_tc_S90 },
-        { "array_value", &Test::_tc_S42 },
-        { "nested_value", &Test::_tc_S4 }
+        { "boolean_value", std::addressof (CORBA::_tc_boolean) },
+        { "long_value", std::addressof (CORBA::_tc_long) },
+        { "double_value", std::addressof (CORBA::_tc_double) },
+        { "enum_value", std::addressof (Test::_tc_S90) },
+        { "array_value", std::addressof (Test::_tc_S42) },
+        { "nested_value", std::addressof (Test::_tc_S4) }
       };
 
 static TAO::TypeCode::Struct<
@@ -1009,27 +807,16 @@ _tao_tc_Test_DefaultInitialized (
   _tao_fields_Test_DefaultInitialized,
   6);
 
-
 namespace Test
 {
   ::CORBA::TypeCode_ptr const _tc_DefaultInitialized = std::addressof(_tao_tc_Test_DefaultInitialized);
 }
 
-
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_structure/structure_cs.cpp:55
-
-void
-Test::DefaultInitialized::_tao_any_destructor (
-    void *_tao_void_pointer)
+void Test::DefaultInitialized::_tao_any_destructor (void *_tao_void_pointer)
 {
   DefaultInitialized *tmp = static_cast<DefaultInitialized *> (_tao_void_pointer);
   delete tmp;
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_exception/exception_ctor.cpp:50
-
-
 
 Test::DefaultInitializedException::DefaultInitializedException (
     ::CORBA::Boolean _tao_boolean_value,
@@ -1041,10 +828,6 @@ Test::DefaultInitializedException::DefaultInitializedException (
   this->boolean_value = _tao_boolean_value;
   this->long_value = _tao_long_value;
 }
-
-
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_exception/exception_cs.cpp:97
 
 Test::DefaultInitializedException::DefaultInitializedException ()
   : ::CORBA::UserException (
@@ -1083,10 +866,10 @@ Test::DefaultInitializedException::_downcast (::CORBA::Exception *_tao_excp)
   return dynamic_cast<DefaultInitializedException *> (_tao_excp);
 }
 
-const Test::DefaultInitializedException *
+Test::DefaultInitializedException const *
 Test::DefaultInitializedException::_downcast (::CORBA::Exception const *_tao_excp)
 {
-  return dynamic_cast<const DefaultInitializedException *> (_tao_excp);
+  return dynamic_cast<DefaultInitializedException const *> (_tao_excp);
 }
 
 ::CORBA::Exception *Test::DefaultInitializedException::_alloc ()
@@ -1130,16 +913,13 @@ void Test::DefaultInitializedException::_tao_decode (TAO_InputCDR &cdr)
 {
   return ::Test::_tc_DefaultInitializedException;
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_typecode/struct_typecode.cpp:84
-
 static TAO::TypeCode::Struct_Field<
   char const *,
   ::CORBA::TypeCode_ptr const *> const
     _tao_fields_Test_DefaultInitializedException[] =
       {
-        { "boolean_value", &CORBA::_tc_boolean },
-        { "long_value", &CORBA::_tc_long }
+        { "boolean_value", std::addressof (CORBA::_tc_boolean) },
+        { "long_value", std::addressof (CORBA::_tc_long) }
       };
 
 static TAO::TypeCode::Struct<
@@ -1156,14 +936,10 @@ _tao_tc_Test_DefaultInitializedException (
   _tao_fields_Test_DefaultInitializedException,
   2);
 
-
 namespace Test
 {
   ::CORBA::TypeCode_ptr const _tc_DefaultInitializedException = std::addressof(_tao_tc_Test_DefaultInitializedException);
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_structure/any_op_cs.cpp:37
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
@@ -1171,9 +947,9 @@ namespace CORBA {
 /// Copying insertion.
 void operator<<= (
   ::CORBA::Any &_tao_any,
-  const ::Test::S1 &_tao_elem)
+  ::Test::S1 const &_tao_elem)
 {
-  TAO::Any_Dual_Impl_T< ::Test::S1>::insert_copy (
+  TAO::Any_Dual_Impl_T<::Test::S1>::insert_copy (
     _tao_any,
     ::Test::S1::_tao_any_destructor,
     Test::_tc_S1,
@@ -1185,7 +961,7 @@ void operator<<= (
   ::CORBA::Any &_tao_any,
   ::Test::S1 *_tao_elem)
 {
-  TAO::Any_Dual_Impl_T< ::Test::S1>::insert (
+  TAO::Any_Dual_Impl_T<::Test::S1>::insert (
     _tao_any,
     ::Test::S1::_tao_any_destructor,
     Test::_tc_S1,
@@ -1194,10 +970,10 @@ void operator<<= (
 
 /// Extraction to const pointer.
 ::CORBA::Boolean operator>>= (
-  const ::CORBA::Any &_tao_any,
-  const ::Test::S1 *&_tao_elem)
+  ::CORBA::Any const &_tao_any,
+  ::Test::S1 const *&_tao_elem)
 {
-  return TAO::Any_Dual_Impl_T< ::Test::S1>::extract (
+  return TAO::Any_Dual_Impl_T<::Test::S1>::extract (
     _tao_any,
     ::Test::S1::_tao_any_destructor,
     Test::_tc_S1,
@@ -1206,21 +982,15 @@ void operator<<= (
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_sequence/any_op_cs.cpp:43
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
-
 
 /// Copying insertion.
 void operator<<= (
   ::CORBA::Any &_tao_any,
-  const ::Test::TS3Seq &_tao_elem)
+  ::Test::TS3Seq const &_tao_elem)
 {
-  TAO::Any_Dual_Impl_T< ::Test::TS3Seq>::insert_copy (
+  TAO::Any_Dual_Impl_T<::Test::TS3Seq>::insert_copy (
     _tao_any,
     ::Test::TS3Seq::_tao_any_destructor,
     ::Test::_tc_TS3Seq,
@@ -1232,7 +1002,7 @@ void operator<<= (
   ::CORBA::Any &_tao_any,
   ::Test::TS3Seq *_tao_elem)
 {
-  TAO::Any_Dual_Impl_T< ::Test::TS3Seq>::insert (
+  TAO::Any_Dual_Impl_T<::Test::TS3Seq>::insert (
     _tao_any,
     ::Test::TS3Seq::_tao_any_destructor,
     ::Test::_tc_TS3Seq,
@@ -1241,10 +1011,10 @@ void operator<<= (
 
 /// Extraction to const pointer.
 ::CORBA::Boolean operator>>= (
-  const ::CORBA::Any &_tao_any,
-  const ::Test::TS3Seq *&_tao_elem)
+  ::CORBA::Any const &_tao_any,
+  ::Test::TS3Seq const *&_tao_elem)
 {
-  return TAO::Any_Dual_Impl_T< ::Test::TS3Seq>::extract (
+  return TAO::Any_Dual_Impl_T<::Test::TS3Seq>::extract (
     _tao_any,
     ::Test::TS3Seq::_tao_any_destructor,
     ::Test::_tc_TS3Seq,
@@ -1253,20 +1023,15 @@ void operator<<= (
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_structure/any_op_cs.cpp:37
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
 
 /// Copying insertion.
 void operator<<= (
   ::CORBA::Any &_tao_any,
-  const ::Test::S3 &_tao_elem)
+  ::Test::S3 const &_tao_elem)
 {
-  TAO::Any_Dual_Impl_T< ::Test::S3>::insert_copy (
+  TAO::Any_Dual_Impl_T<::Test::S3>::insert_copy (
     _tao_any,
     ::Test::S3::_tao_any_destructor,
     Test::_tc_S3,
@@ -1278,7 +1043,7 @@ void operator<<= (
   ::CORBA::Any &_tao_any,
   ::Test::S3 *_tao_elem)
 {
-  TAO::Any_Dual_Impl_T< ::Test::S3>::insert (
+  TAO::Any_Dual_Impl_T<::Test::S3>::insert (
     _tao_any,
     ::Test::S3::_tao_any_destructor,
     Test::_tc_S3,
@@ -1287,10 +1052,10 @@ void operator<<= (
 
 /// Extraction to const pointer.
 ::CORBA::Boolean operator>>= (
-  const ::CORBA::Any &_tao_any,
-  const ::Test::S3 *&_tao_elem)
+  ::CORBA::Any const &_tao_any,
+  ::Test::S3 const *&_tao_elem)
 {
-  return TAO::Any_Dual_Impl_T< ::Test::S3>::extract (
+  return TAO::Any_Dual_Impl_T<::Test::S3>::extract (
     _tao_any,
     ::Test::S3::_tao_any_destructor,
     Test::_tc_S3,
@@ -1299,21 +1064,15 @@ void operator<<= (
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_sequence/any_op_cs.cpp:43
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
-
 
 /// Copying insertion.
 void operator<<= (
   ::CORBA::Any &_tao_any,
-  const ::Test::TS4Seq &_tao_elem)
+  ::Test::TS4Seq const &_tao_elem)
 {
-  TAO::Any_Dual_Impl_T< ::Test::TS4Seq>::insert_copy (
+  TAO::Any_Dual_Impl_T<::Test::TS4Seq>::insert_copy (
     _tao_any,
     ::Test::TS4Seq::_tao_any_destructor,
     ::Test::_tc_TS4Seq,
@@ -1325,7 +1084,7 @@ void operator<<= (
   ::CORBA::Any &_tao_any,
   ::Test::TS4Seq *_tao_elem)
 {
-  TAO::Any_Dual_Impl_T< ::Test::TS4Seq>::insert (
+  TAO::Any_Dual_Impl_T<::Test::TS4Seq>::insert (
     _tao_any,
     ::Test::TS4Seq::_tao_any_destructor,
     ::Test::_tc_TS4Seq,
@@ -1334,10 +1093,10 @@ void operator<<= (
 
 /// Extraction to const pointer.
 ::CORBA::Boolean operator>>= (
-  const ::CORBA::Any &_tao_any,
-  const ::Test::TS4Seq *&_tao_elem)
+  ::CORBA::Any const &_tao_any,
+  ::Test::TS4Seq const *&_tao_elem)
 {
-  return TAO::Any_Dual_Impl_T< ::Test::TS4Seq>::extract (
+  return TAO::Any_Dual_Impl_T<::Test::TS4Seq>::extract (
     _tao_any,
     ::Test::TS4Seq::_tao_any_destructor,
     ::Test::_tc_TS4Seq,
@@ -1346,21 +1105,15 @@ void operator<<= (
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_sequence/any_op_cs.cpp:43
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
-
 
 /// Copying insertion.
 void operator<<= (
   ::CORBA::Any &_tao_any,
-  const ::Test::TS5Seq &_tao_elem)
+  ::Test::TS5Seq const &_tao_elem)
 {
-  TAO::Any_Dual_Impl_T< ::Test::TS5Seq>::insert_copy (
+  TAO::Any_Dual_Impl_T<::Test::TS5Seq>::insert_copy (
     _tao_any,
     ::Test::TS5Seq::_tao_any_destructor,
     ::Test::_tc_TS5Seq,
@@ -1372,7 +1125,7 @@ void operator<<= (
   ::CORBA::Any &_tao_any,
   ::Test::TS5Seq *_tao_elem)
 {
-  TAO::Any_Dual_Impl_T< ::Test::TS5Seq>::insert (
+  TAO::Any_Dual_Impl_T<::Test::TS5Seq>::insert (
     _tao_any,
     ::Test::TS5Seq::_tao_any_destructor,
     ::Test::_tc_TS5Seq,
@@ -1381,10 +1134,10 @@ void operator<<= (
 
 /// Extraction to const pointer.
 ::CORBA::Boolean operator>>= (
-  const ::CORBA::Any &_tao_any,
-  const ::Test::TS5Seq *&_tao_elem)
+  ::CORBA::Any const &_tao_any,
+  ::Test::TS5Seq const *&_tao_elem)
 {
-  return TAO::Any_Dual_Impl_T< ::Test::TS5Seq>::extract (
+  return TAO::Any_Dual_Impl_T<::Test::TS5Seq>::extract (
     _tao_any,
     ::Test::TS5Seq::_tao_any_destructor,
     ::Test::_tc_TS5Seq,
@@ -1393,20 +1146,15 @@ void operator<<= (
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_structure/any_op_cs.cpp:37
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
 
 /// Copying insertion.
 void operator<<= (
   ::CORBA::Any &_tao_any,
-  const ::Test::S4 &_tao_elem)
+  ::Test::S4 const &_tao_elem)
 {
-  TAO::Any_Dual_Impl_T< ::Test::S4>::insert_copy (
+  TAO::Any_Dual_Impl_T<::Test::S4>::insert_copy (
     _tao_any,
     ::Test::S4::_tao_any_destructor,
     Test::_tc_S4,
@@ -1418,7 +1166,7 @@ void operator<<= (
   ::CORBA::Any &_tao_any,
   ::Test::S4 *_tao_elem)
 {
-  TAO::Any_Dual_Impl_T< ::Test::S4>::insert (
+  TAO::Any_Dual_Impl_T<::Test::S4>::insert (
     _tao_any,
     ::Test::S4::_tao_any_destructor,
     Test::_tc_S4,
@@ -1427,10 +1175,10 @@ void operator<<= (
 
 /// Extraction to const pointer.
 ::CORBA::Boolean operator>>= (
-  const ::CORBA::Any &_tao_any,
-  const ::Test::S4 *&_tao_elem)
+  ::CORBA::Any const &_tao_any,
+  ::Test::S4 const *&_tao_elem)
 {
-  return TAO::Any_Dual_Impl_T< ::Test::S4>::extract (
+  return TAO::Any_Dual_Impl_T<::Test::S4>::extract (
     _tao_any,
     ::Test::S4::_tao_any_destructor,
     Test::_tc_S4,
@@ -1439,20 +1187,15 @@ void operator<<= (
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_structure/any_op_cs.cpp:37
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
 
 /// Copying insertion.
 void operator<<= (
   ::CORBA::Any &_tao_any,
-  const ::Test::S5 &_tao_elem)
+  ::Test::S5 const &_tao_elem)
 {
-  TAO::Any_Dual_Impl_T< ::Test::S5>::insert_copy (
+  TAO::Any_Dual_Impl_T<::Test::S5>::insert_copy (
     _tao_any,
     ::Test::S5::_tao_any_destructor,
     Test::_tc_S5,
@@ -1464,7 +1207,7 @@ void operator<<= (
   ::CORBA::Any &_tao_any,
   ::Test::S5 *_tao_elem)
 {
-  TAO::Any_Dual_Impl_T< ::Test::S5>::insert (
+  TAO::Any_Dual_Impl_T<::Test::S5>::insert (
     _tao_any,
     ::Test::S5::_tao_any_destructor,
     Test::_tc_S5,
@@ -1473,10 +1216,10 @@ void operator<<= (
 
 /// Extraction to const pointer.
 ::CORBA::Boolean operator>>= (
-  const ::CORBA::Any &_tao_any,
-  const ::Test::S5 *&_tao_elem)
+  ::CORBA::Any const &_tao_any,
+  ::Test::S5 const *&_tao_elem)
 {
-  return TAO::Any_Dual_Impl_T< ::Test::S5>::extract (
+  return TAO::Any_Dual_Impl_T<::Test::S5>::extract (
     _tao_any,
     ::Test::S5::_tao_any_destructor,
     Test::_tc_S5,
@@ -1485,20 +1228,15 @@ void operator<<= (
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_structure/any_op_cs.cpp:37
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
 
 /// Copying insertion.
 void operator<<= (
   ::CORBA::Any &_tao_any,
-  const ::Test::FooStruct &_tao_elem)
+  ::Test::FooStruct const &_tao_elem)
 {
-  TAO::Any_Dual_Impl_T< ::Test::FooStruct>::insert_copy (
+  TAO::Any_Dual_Impl_T<::Test::FooStruct>::insert_copy (
     _tao_any,
     ::Test::FooStruct::_tao_any_destructor,
     Test::_tc_FooStruct,
@@ -1510,7 +1248,7 @@ void operator<<= (
   ::CORBA::Any &_tao_any,
   ::Test::FooStruct *_tao_elem)
 {
-  TAO::Any_Dual_Impl_T< ::Test::FooStruct>::insert (
+  TAO::Any_Dual_Impl_T<::Test::FooStruct>::insert (
     _tao_any,
     ::Test::FooStruct::_tao_any_destructor,
     Test::_tc_FooStruct,
@@ -1519,10 +1257,10 @@ void operator<<= (
 
 /// Extraction to const pointer.
 ::CORBA::Boolean operator>>= (
-  const ::CORBA::Any &_tao_any,
-  const ::Test::FooStruct *&_tao_elem)
+  ::CORBA::Any const &_tao_any,
+  ::Test::FooStruct const *&_tao_elem)
 {
-  return TAO::Any_Dual_Impl_T< ::Test::FooStruct>::extract (
+  return TAO::Any_Dual_Impl_T<::Test::FooStruct>::extract (
     _tao_any,
     ::Test::FooStruct::_tao_any_destructor,
     Test::_tc_FooStruct,
@@ -1531,16 +1269,9 @@ void operator<<= (
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_enum/any_op_cs.cpp:34
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
-
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
@@ -1556,7 +1287,7 @@ void operator<<= (
 }
 
 ::CORBA::Boolean operator>>= (
-    const ::CORBA::Any &_tao_any,
+    ::CORBA::Any const &_tao_any,
     Test::S90 &_tao_elem)
 {
   return
@@ -1568,18 +1299,13 @@ void operator<<= (
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_array/any_op_cs.cpp:31
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
 
 void operator<<= (
     ::CORBA::Any &_tao_any,
-    const Test::S90Array_forany &_tao_elem)
-  
+    Test::S90Array_forany const &_tao_elem)
+
 {
   TAO::Any_Array_Impl_T<
       Test::S90Array_slice,
@@ -1595,9 +1321,9 @@ void operator<<= (
 }
 
 ::CORBA::Boolean operator>>= (
-    const ::CORBA::Any &_tao_any,
+    ::CORBA::Any const &_tao_any,
     Test::S90Array_forany &_tao_elem)
-  
+
 {
   return
     TAO::Any_Array_Impl_T<
@@ -1612,18 +1338,13 @@ void operator<<= (
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_array/any_op_cs.cpp:31
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
 
 void operator<<= (
     ::CORBA::Any &_tao_any,
-    const Test::S42_forany &_tao_elem)
-  
+    Test::S42_forany const &_tao_elem)
+
 {
   TAO::Any_Array_Impl_T<
       Test::S42_slice,
@@ -1639,9 +1360,9 @@ void operator<<= (
 }
 
 ::CORBA::Boolean operator>>= (
-    const ::CORBA::Any &_tao_any,
+    ::CORBA::Any const &_tao_any,
     Test::S42_forany &_tao_elem)
-  
+
 {
   return
     TAO::Any_Array_Impl_T<
@@ -1656,18 +1377,13 @@ void operator<<= (
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_array/any_op_cs.cpp:31
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
 
 void operator<<= (
     ::CORBA::Any &_tao_any,
-    const Test::SString43_forany &_tao_elem)
-  
+    Test::SString43_forany const &_tao_elem)
+
 {
   TAO::Any_Array_Impl_T<
       Test::SString43_slice,
@@ -1683,9 +1399,9 @@ void operator<<= (
 }
 
 ::CORBA::Boolean operator>>= (
-    const ::CORBA::Any &_tao_any,
+    ::CORBA::Any const &_tao_any,
     Test::SString43_forany &_tao_elem)
-  
+
 {
   return
     TAO::Any_Array_Impl_T<
@@ -1700,18 +1416,13 @@ void operator<<= (
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_array/any_op_cs.cpp:31
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
 
 void operator<<= (
     ::CORBA::Any &_tao_any,
-    const Test::S4Array_forany &_tao_elem)
-  
+    Test::S4Array_forany const &_tao_elem)
+
 {
   TAO::Any_Array_Impl_T<
       Test::S4Array_slice,
@@ -1727,9 +1438,9 @@ void operator<<= (
 }
 
 ::CORBA::Boolean operator>>= (
-    const ::CORBA::Any &_tao_any,
+    ::CORBA::Any const &_tao_any,
     Test::S4Array_forany &_tao_elem)
-  
+
 {
   return
     TAO::Any_Array_Impl_T<
@@ -1744,20 +1455,15 @@ void operator<<= (
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_structure/any_op_cs.cpp:37
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
 
 /// Copying insertion.
 void operator<<= (
   ::CORBA::Any &_tao_any,
-  const ::Test::S10 &_tao_elem)
+  ::Test::S10 const &_tao_elem)
 {
-  TAO::Any_Dual_Impl_T< ::Test::S10>::insert_copy (
+  TAO::Any_Dual_Impl_T<::Test::S10>::insert_copy (
     _tao_any,
     ::Test::S10::_tao_any_destructor,
     Test::_tc_S10,
@@ -1769,7 +1475,7 @@ void operator<<= (
   ::CORBA::Any &_tao_any,
   ::Test::S10 *_tao_elem)
 {
-  TAO::Any_Dual_Impl_T< ::Test::S10>::insert (
+  TAO::Any_Dual_Impl_T<::Test::S10>::insert (
     _tao_any,
     ::Test::S10::_tao_any_destructor,
     Test::_tc_S10,
@@ -1778,10 +1484,10 @@ void operator<<= (
 
 /// Extraction to const pointer.
 ::CORBA::Boolean operator>>= (
-  const ::CORBA::Any &_tao_any,
-  const ::Test::S10 *&_tao_elem)
+  ::CORBA::Any const &_tao_any,
+  ::Test::S10 const *&_tao_elem)
 {
-  return TAO::Any_Dual_Impl_T< ::Test::S10>::extract (
+  return TAO::Any_Dual_Impl_T<::Test::S10>::extract (
     _tao_any,
     ::Test::S10::_tao_any_destructor,
     Test::_tc_S10,
@@ -1790,20 +1496,15 @@ void operator<<= (
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_structure/any_op_cs.cpp:37
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
 
 /// Copying insertion.
 void operator<<= (
   ::CORBA::Any &_tao_any,
-  const ::Test::DefaultInitialized &_tao_elem)
+  ::Test::DefaultInitialized const &_tao_elem)
 {
-  TAO::Any_Dual_Impl_T< ::Test::DefaultInitialized>::insert_copy (
+  TAO::Any_Dual_Impl_T<::Test::DefaultInitialized>::insert_copy (
     _tao_any,
     ::Test::DefaultInitialized::_tao_any_destructor,
     Test::_tc_DefaultInitialized,
@@ -1815,7 +1516,7 @@ void operator<<= (
   ::CORBA::Any &_tao_any,
   ::Test::DefaultInitialized *_tao_elem)
 {
-  TAO::Any_Dual_Impl_T< ::Test::DefaultInitialized>::insert (
+  TAO::Any_Dual_Impl_T<::Test::DefaultInitialized>::insert (
     _tao_any,
     ::Test::DefaultInitialized::_tao_any_destructor,
     Test::_tc_DefaultInitialized,
@@ -1824,10 +1525,10 @@ void operator<<= (
 
 /// Extraction to const pointer.
 ::CORBA::Boolean operator>>= (
-  const ::CORBA::Any &_tao_any,
-  const ::Test::DefaultInitialized *&_tao_elem)
+  ::CORBA::Any const &_tao_any,
+  ::Test::DefaultInitialized const *&_tao_elem)
 {
-  return TAO::Any_Dual_Impl_T< ::Test::DefaultInitialized>::extract (
+  return TAO::Any_Dual_Impl_T<::Test::DefaultInitialized>::extract (
     _tao_any,
     ::Test::DefaultInitialized::_tao_any_destructor,
     Test::_tc_DefaultInitialized,
@@ -1836,14 +1537,7 @@ void operator<<= (
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_exception/any_op_cs.cpp:36
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
-
 
 namespace TAO
 {
@@ -1857,7 +1551,7 @@ namespace TAO
       {
         return false;
       }
-    
+
     try
       {
         this->value_->_tao_decode (cdr);
@@ -1872,16 +1566,13 @@ namespace TAO
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
-
-
 
 /// Copying insertion.
 void operator<<= (
   ::CORBA::Any &_tao_any,
-  const Test::DefaultInitializedException &_tao_elem)
+  Test::DefaultInitializedException const &_tao_elem)
 {
   TAO::Any_Dual_Impl_T<Test::DefaultInitializedException>::insert_copy (
     _tao_any,
@@ -1904,8 +1595,8 @@ void operator<<= (
 
 /// Extraction to const pointer.
 ::CORBA::Boolean operator>>= (
-  const ::CORBA::Any &_tao_any,
-  const Test::DefaultInitializedException *&_tao_elem)
+  ::CORBA::Any const &_tao_any,
+  Test::DefaultInitializedException const *&_tao_elem)
 {
   return TAO::Any_Dual_Impl_T<Test::DefaultInitializedException>::extract (
     _tao_any,
@@ -1916,16 +1607,11 @@ void operator<<= (
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_structure/cdr_op_cs.cpp:48
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean operator<< (
     TAO_OutputCDR &strm,
-    const Test::S1 &_tao_aggregate)
+    Test::S1 const &_tao_aggregate)
 {
   return
     (strm << _tao_aggregate.hello.in ()) &&
@@ -1943,10 +1629,6 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_sequence/cdr_op_cs.cpp:92
-
 #if !defined _TAO_CDR_OP_Test_TS3Seq_CPP_
 #define _TAO_CDR_OP_Test_TS3Seq_CPP_
 
@@ -1954,7 +1636,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean operator<< (
     TAO_OutputCDR &strm,
-    const Test::TS3Seq &_tao_sequence)
+    Test::TS3Seq const &_tao_sequence)
 {
   return TAO::marshal_sequence(strm, _tao_sequence);
 }
@@ -1966,19 +1648,15 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
   return TAO::demarshal_sequence(strm, _tao_sequence);
 }
 
-
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 #endif /* _TAO_CDR_OP_Test_TS3Seq_CPP_ */
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_structure/cdr_op_cs.cpp:48
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean operator<< (
     TAO_OutputCDR &strm,
-    const Test::S3 &_tao_aggregate)
+    Test::S3 const &_tao_aggregate)
 {
   return
     (strm << _tao_aggregate.m_seq) &&
@@ -1998,10 +1676,6 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_sequence/cdr_op_cs.cpp:92
-
 #if !defined _TAO_CDR_OP_Test_TS4Seq_CPP_
 #define _TAO_CDR_OP_Test_TS4Seq_CPP_
 
@@ -2009,7 +1683,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean operator<< (
     TAO_OutputCDR &strm,
-    const Test::TS4Seq &_tao_sequence)
+    Test::TS4Seq const &_tao_sequence)
 {
   return TAO::marshal_sequence(strm, _tao_sequence);
 }
@@ -2021,13 +1695,9 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
   return TAO::demarshal_sequence(strm, _tao_sequence);
 }
 
-
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 #endif /* _TAO_CDR_OP_Test_TS4Seq_CPP_ */
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_sequence/cdr_op_cs.cpp:92
-
 #if !defined _TAO_CDR_OP_Test_TS5Seq_CPP_
 #define _TAO_CDR_OP_Test_TS5Seq_CPP_
 
@@ -2035,7 +1705,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean operator<< (
     TAO_OutputCDR &strm,
-    const Test::TS5Seq &_tao_sequence)
+    Test::TS5Seq const &_tao_sequence)
 {
   return TAO::marshal_sequence(strm, _tao_sequence);
 }
@@ -2047,19 +1717,15 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
   return TAO::demarshal_sequence(strm, _tao_sequence);
 }
 
-
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 #endif /* _TAO_CDR_OP_Test_TS5Seq_CPP_ */
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_structure/cdr_op_cs.cpp:48
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean operator<< (
     TAO_OutputCDR &strm,
-    const Test::S4 &_tao_aggregate)
+    Test::S4 const &_tao_aggregate)
 {
   return
     (strm << ::ACE_OutputCDR::from_boolean (_tao_aggregate.a)) &&
@@ -2077,16 +1743,11 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_structure/cdr_op_cs.cpp:48
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean operator<< (
     TAO_OutputCDR &strm,
-    const Test::S5 &_tao_aggregate)
+    Test::S5 const &_tao_aggregate)
 {
   return
     (strm << ::ACE_OutputCDR::from_boolean (_tao_aggregate.b)) &&
@@ -2104,16 +1765,11 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_structure/cdr_op_cs.cpp:48
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean operator<< (
     TAO_OutputCDR &strm,
-    const Test::FooStruct &_tao_aggregate)
+    Test::FooStruct const &_tao_aggregate)
 {
   return
     (strm << _tao_aggregate.Foo1) &&
@@ -2133,46 +1789,36 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_enum/cdr_op_cs.cpp:29
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean operator<< (TAO_OutputCDR &strm, Test::S90 _tao_enumerator)
 {
-  return strm << static_cast< ::CORBA::ULong> (_tao_enumerator);
+  return strm << static_cast<::CORBA::ULong> (_tao_enumerator);
 }
 
 ::CORBA::Boolean operator>> (TAO_InputCDR &strm, Test::S90 & _tao_enumerator)
 {
   ::CORBA::ULong _tao_temp = 0;
   ::CORBA::Boolean const _tao_success = strm >> _tao_temp;
-  
+
   if (_tao_success)
     {
       _tao_enumerator = static_cast<Test::S90> (_tao_temp);
     }
-  
+
   return _tao_success;
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_array/cdr_op_cs.cpp:162
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean operator<< (
     TAO_OutputCDR &strm,
-    const Test::S90Array_forany &_tao_array)
+    Test::S90Array_forany const &_tao_array)
 {
   CORBA::Boolean _tao_marshal_flag = true;
-  
+
   for (::CORBA::ULong i0 = 0; i0 < 2 && _tao_marshal_flag; ++i0)
     {
       _tao_marshal_flag = (strm << _tao_array [i0]);
@@ -2186,7 +1832,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
     Test::S90Array_forany &_tao_array)
 {
   CORBA::Boolean _tao_marshal_flag = true;
-  
+
   for (::CORBA::ULong i0 = 0; i0 < 2 && _tao_marshal_flag; ++i0)
     {
       _tao_marshal_flag = (strm >> _tao_array [i0]);
@@ -2197,16 +1843,11 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_array/cdr_op_cs.cpp:162
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean operator<< (
     TAO_OutputCDR &strm,
-    const Test::S42_forany &_tao_array)
+    Test::S42_forany const &_tao_array)
 {
   return strm.write_long_array (
       reinterpret_cast <const ACE_CDR::Long *> (_tao_array.in ()),
@@ -2224,19 +1865,14 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_array/cdr_op_cs.cpp:162
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean operator<< (
     TAO_OutputCDR &strm,
-    const Test::SString43_forany &_tao_array)
+    Test::SString43_forany const &_tao_array)
 {
   CORBA::Boolean _tao_marshal_flag = true;
-  
+
   for (::CORBA::ULong i0 = 0; i0 < 2 && _tao_marshal_flag; ++i0)
     {
       _tao_marshal_flag = (strm << _tao_array [i0].in ());
@@ -2250,7 +1886,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
     Test::SString43_forany &_tao_array)
 {
   CORBA::Boolean _tao_marshal_flag = true;
-  
+
   for (::CORBA::ULong i0 = 0; i0 < 2 && _tao_marshal_flag; ++i0)
     {
       _tao_marshal_flag = (strm >> _tao_array [i0].out ());
@@ -2261,19 +1897,14 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_array/cdr_op_cs.cpp:162
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean operator<< (
     TAO_OutputCDR &strm,
-    const Test::S4Array_forany &_tao_array)
+    Test::S4Array_forany const &_tao_array)
 {
   CORBA::Boolean _tao_marshal_flag = true;
-  
+
   for (::CORBA::ULong i0 = 0; i0 < 2 && _tao_marshal_flag; ++i0)
     {
       _tao_marshal_flag = (strm << _tao_array [i0]);
@@ -2287,7 +1918,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
     Test::S4Array_forany &_tao_array)
 {
   CORBA::Boolean _tao_marshal_flag = true;
-  
+
   for (::CORBA::ULong i0 = 0; i0 < 2 && _tao_marshal_flag; ++i0)
     {
       _tao_marshal_flag = (strm >> _tao_array [i0]);
@@ -2298,16 +1929,11 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_structure/cdr_op_cs.cpp:48
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean operator<< (
     TAO_OutputCDR &strm,
-    const Test::S10 &_tao_aggregate)
+    Test::S10 const &_tao_aggregate)
 {
   Test::S42_forany _tao_aggregate_s10_2
     (const_cast<Test::S42_slice*> (
@@ -2343,16 +1969,11 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_structure/cdr_op_cs.cpp:48
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean operator<< (
     TAO_OutputCDR &strm,
-    const Test::DefaultInitialized &_tao_aggregate)
+    Test::DefaultInitialized const &_tao_aggregate)
 {
   Test::S42_forany _tao_aggregate_array_value
     (const_cast<Test::S42_slice*> (
@@ -2386,18 +2007,11 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_exception/cdr_op_cs.cpp:47
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
-
 
 ::CORBA::Boolean operator<< (
     TAO_OutputCDR &strm,
-    const Test::DefaultInitializedException &_tao_aggregate)
+    Test::DefaultInitializedException const &_tao_aggregate)
 {
   // First marshal the repository ID.
   if (strm << _tao_aggregate._rep_id ())
@@ -2426,6 +2040,4 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-
 

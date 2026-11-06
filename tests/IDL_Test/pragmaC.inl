@@ -22,11 +22,6 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ci.cpp:58
-
-
-
 ACE_INLINE
 hello::hello (
     TAO_Stub *objref,
@@ -44,23 +39,16 @@ hello::hello (
   : ::CORBA::Object (ior, oc)
 {
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_ci.cpp:43
-
 ACE_INLINE
 AMH_helloExceptionHolder::AMH_helloExceptionHolder ()
   : exception (nullptr)
 {}
 
-ACE_INLINE const char*
+ACE_INLINE char const *
 AMH_helloExceptionHolder::_tao_obv_static_repository_id ()
 {
   return "IDL:anvil.com/AMH_helloExceptionHolder:1.0";
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ci.cpp:58
-
-
 
 ACE_INLINE
 AMI_helloHandler::AMI_helloHandler (
@@ -79,10 +67,6 @@ AMI_helloHandler::AMI_helloHandler (
   : ::CORBA::Object (ior, oc)
 {
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ci.cpp:58
-
-
 
 ACE_INLINE
 goodbye::goodbye (
@@ -101,23 +85,16 @@ goodbye::goodbye (
   : ::CORBA::Object (ior, oc)
 {
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_ci.cpp:43
-
 ACE_INLINE
 AMH_goodbyeExceptionHolder::AMH_goodbyeExceptionHolder ()
   : exception (nullptr)
 {}
 
-ACE_INLINE const char*
+ACE_INLINE char const *
 AMH_goodbyeExceptionHolder::_tao_obv_static_repository_id ()
 {
   return "IDL:anvil.com/AMH_goodbyeExceptionHolder:1.0";
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ci.cpp:58
-
-
 
 ACE_INLINE
 AMI_goodbyeHandler::AMI_goodbyeHandler (
@@ -136,10 +113,6 @@ AMI_goodbyeHandler::AMI_goodbyeHandler (
   : ::CORBA::Object (ior, oc)
 {
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ci.cpp:58
-
-
 
 ACE_INLINE
 salutation::sayonara::sayonara (
@@ -158,23 +131,16 @@ salutation::sayonara::sayonara (
   : ::CORBA::Object (ior, oc)
 {
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_ci.cpp:43
-
 ACE_INLINE
 salutation::AMH_sayonaraExceptionHolder::AMH_sayonaraExceptionHolder ()
   : exception (nullptr)
 {}
 
-ACE_INLINE const char*
+ACE_INLINE char const *
 salutation::AMH_sayonaraExceptionHolder::_tao_obv_static_repository_id ()
 {
   return "IDL:hammer.com/salutation/AMH_sayonaraExceptionHolder:1.0";
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ci.cpp:58
-
-
 
 ACE_INLINE
 salutation::AMI_sayonaraHandler::AMI_sayonaraHandler (
@@ -193,10 +159,6 @@ salutation::AMI_sayonaraHandler::AMI_sayonaraHandler (
   : ::CORBA::Object (ior, oc)
 {
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ci.cpp:58
-
-
 
 ACE_INLINE
 ciao::ciao (
@@ -215,23 +177,16 @@ ciao::ciao (
   : ::CORBA::Object (ior, oc)
 {
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_ci.cpp:43
-
 ACE_INLINE
 AMH_ciaoExceptionHolder::AMH_ciaoExceptionHolder ()
   : exception (nullptr)
 {}
 
-ACE_INLINE const char*
+ACE_INLINE char const *
 AMH_ciaoExceptionHolder::_tao_obv_static_repository_id ()
 {
   return "IDL:anvil.com/AMH_ciaoExceptionHolder:1.0";
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ci.cpp:58
-
-
 
 ACE_INLINE
 AMI_ciaoHandler::AMI_ciaoHandler (
@@ -250,10 +205,6 @@ AMI_ciaoHandler::AMI_ciaoHandler (
   : ::CORBA::Object (ior, oc)
 {
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ci.cpp:58
-
-
 
 ACE_INLINE
 aloha::aloha (
@@ -272,23 +223,16 @@ aloha::aloha (
   : ::CORBA::Object (ior, oc)
 {
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_ci.cpp:43
-
 ACE_INLINE
 AMH_alohaExceptionHolder::AMH_alohaExceptionHolder ()
   : exception (nullptr)
 {}
 
-ACE_INLINE const char*
+ACE_INLINE char const *
 AMH_alohaExceptionHolder::_tao_obv_static_repository_id ()
 {
   return "IDL:anvil.com/AMH_alohaExceptionHolder:1.0";
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ci.cpp:58
-
-
 
 ACE_INLINE
 AMI_alohaHandler::AMI_alohaHandler (

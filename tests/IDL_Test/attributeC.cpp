@@ -22,14 +22,12 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:370
-
-
 #include "attributeC.h"
+#include <cstring>
 #include <memory>
 #include "tao/AnyTypeCode/Null_RefCount_Policy.h"
 #include "tao/AnyTypeCode/TypeCode_Constants.h"
+#include "tao/AnyTypeCode/Fixed_TypeCode_Static.h"
 #include "tao/AnyTypeCode/Alias_TypeCode_Static.h"
 #include "tao/AnyTypeCode/Objref_TypeCode_Static.h"
 #include "tao/AnyTypeCode/Struct_TypeCode_Static.h"
@@ -47,14 +45,10 @@
 #include "tao/AnyTypeCode/Any.h"
 #include "tao/AnyTypeCode/Any_Impl_T.h"
 #include "tao/AnyTypeCode/Any_Dual_Impl_T.h"
-#include <cstring>
 
 #if !defined (__ACE_INLINE__)
 #include "attributeC.inl"
 #endif /* !defined INLINE */
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_exception/exception_cs.cpp:97
-
 Hello::InternalErrorA::InternalErrorA ()
   : ::CORBA::UserException (
         "IDL:Hello/InternalErrorA:1.0",
@@ -88,10 +82,10 @@ Hello::InternalErrorA::_downcast (::CORBA::Exception *_tao_excp)
   return dynamic_cast<InternalErrorA *> (_tao_excp);
 }
 
-const Hello::InternalErrorA *
+Hello::InternalErrorA const *
 Hello::InternalErrorA::_downcast (::CORBA::Exception const *_tao_excp)
 {
-  return dynamic_cast<const InternalErrorA *> (_tao_excp);
+  return dynamic_cast<InternalErrorA const *> (_tao_excp);
 }
 
 ::CORBA::Exception *Hello::InternalErrorA::_alloc ()
@@ -135,13 +129,10 @@ void Hello::InternalErrorA::_tao_decode (TAO_InputCDR &cdr)
 {
   return ::Hello::_tc_InternalErrorA;
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_typecode/struct_typecode.cpp:84
-
 static TAO::TypeCode::Struct_Field<
   char const *,
   ::CORBA::TypeCode_ptr const *> const * const
-    _tao_fields_Hello_InternalErrorA = nullptr;
+    _tao_fields_Hello_InternalErrorA {};
 
 static TAO::TypeCode::Struct<
   char const *,
@@ -157,14 +148,10 @@ _tao_tc_Hello_InternalErrorA (
   _tao_fields_Hello_InternalErrorA,
   0);
 
-
 namespace Hello
 {
   ::CORBA::TypeCode_ptr const _tc_InternalErrorA = std::addressof(_tao_tc_Hello_InternalErrorA);
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_exception/exception_cs.cpp:97
-
 Hello::InternalErrorB::InternalErrorB ()
   : ::CORBA::UserException (
         "IDL:Hello/InternalErrorB:1.0",
@@ -198,10 +185,10 @@ Hello::InternalErrorB::_downcast (::CORBA::Exception *_tao_excp)
   return dynamic_cast<InternalErrorB *> (_tao_excp);
 }
 
-const Hello::InternalErrorB *
+Hello::InternalErrorB const *
 Hello::InternalErrorB::_downcast (::CORBA::Exception const *_tao_excp)
 {
-  return dynamic_cast<const InternalErrorB *> (_tao_excp);
+  return dynamic_cast<InternalErrorB const *> (_tao_excp);
 }
 
 ::CORBA::Exception *Hello::InternalErrorB::_alloc ()
@@ -245,13 +232,10 @@ void Hello::InternalErrorB::_tao_decode (TAO_InputCDR &cdr)
 {
   return ::Hello::_tc_InternalErrorB;
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_typecode/struct_typecode.cpp:84
-
 static TAO::TypeCode::Struct_Field<
   char const *,
   ::CORBA::TypeCode_ptr const *> const * const
-    _tao_fields_Hello_InternalErrorB = nullptr;
+    _tao_fields_Hello_InternalErrorB {};
 
 static TAO::TypeCode::Struct<
   char const *,
@@ -267,14 +251,10 @@ _tao_tc_Hello_InternalErrorB (
   _tao_fields_Hello_InternalErrorB,
   0);
 
-
 namespace Hello
 {
   ::CORBA::TypeCode_ptr const _tc_InternalErrorB = std::addressof(_tao_tc_Hello_InternalErrorB);
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_typecode/alias_typecode.cpp:46
-
 static TAO::TypeCode::Alias<char const *,
                             ::CORBA::TypeCode_ptr const *,
                             TAO::Null_RefCount_Policy>
@@ -282,16 +262,12 @@ static TAO::TypeCode::Alias<char const *,
     ::CORBA::tk_alias,
     "IDL:Hello/MyType:1.0",
     "MyType",
-    &CORBA::_tc_short);
-  
+    std::addressof (CORBA::_tc_short));
 
 namespace Hello
 {
   ::CORBA::TypeCode_ptr const _tc_MyType = std::addressof(_tao_tc_Hello_MyType);
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_cs.cpp:47
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
@@ -316,16 +292,12 @@ TAO::Objref_Traits<Hello::MyFoo>::nil ()
 }
 
 ::CORBA::Boolean
-TAO::Objref_Traits<Hello::MyFoo>::marshal (const Hello::MyFoo_ptr p,TAO_OutputCDR & cdr)
+TAO::Objref_Traits<Hello::MyFoo>::marshal (Hello::MyFoo_ptr const p,TAO_OutputCDR & cdr)
 {
   return ::CORBA::Object::marshal (p, cdr);
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/operation_cs.cpp:87
 
 ::Hello::MyType
 Hello::MyFoo::rw_attrib_mytype ()
@@ -334,8 +306,8 @@ Hello::MyFoo::rw_attrib_mytype ()
     {
       ::CORBA::Object::tao_object_initialize (this);
     }
-  
-  TAO::Arg_Traits< ::CORBA::Short>::ret_val _tao_retval;
+
+  TAO::Arg_Traits<::CORBA::Short>::ret_val _tao_retval;
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
@@ -343,7 +315,7 @@ Hello::MyFoo::rw_attrib_mytype ()
     };
 
   static TAO::Exception_Data
-  _tao_Hello_MyFoo_rw_attrib_mytype_exceptiondata [] = 
+  _tao_Hello_MyFoo_rw_attrib_mytype_exceptiondata [] =
     {
       {
         "IDL:Hello/InternalErrorA:1.0",
@@ -374,9 +346,6 @@ Hello::MyFoo::rw_attrib_mytype ()
 
   return _tao_retval.retn ();
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/operation_cs.cpp:87
-
 void
 Hello::MyFoo::rw_attrib_mytype (
   ::Hello::MyType rw_attrib_mytype)
@@ -385,9 +354,9 @@ Hello::MyFoo::rw_attrib_mytype (
     {
       ::CORBA::Object::tao_object_initialize (this);
     }
-  
-  TAO::Arg_Traits< void>::ret_val _tao_retval;
-  TAO::Arg_Traits< ::CORBA::Short>::in_arg_val _tao_rw_attrib_mytype (rw_attrib_mytype);
+
+  TAO::Arg_Traits<void>::ret_val _tao_retval;
+  TAO::Arg_Traits<::CORBA::Short>::in_arg_val _tao_rw_attrib_mytype (rw_attrib_mytype);
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
@@ -396,7 +365,7 @@ Hello::MyFoo::rw_attrib_mytype (
     };
 
   static TAO::Exception_Data
-  _tao_Hello_MyFoo_rw_attrib_mytype_exceptiondata [] = 
+  _tao_Hello_MyFoo_rw_attrib_mytype_exceptiondata [] =
     {
       {
         "IDL:Hello/InternalErrorB:1.0",
@@ -414,7 +383,7 @@ Hello::MyFoo::rw_attrib_mytype (
       "_set_rw_attrib_mytype",
       21,
       TAO::TAO_CO_NONE | TAO::TAO_CO_DIRECT_STRATEGY | TAO::TAO_CO_THRU_POA_STRATEGY
-      
+
     );
 
   _invocation_call.invoke (
@@ -422,9 +391,6 @@ Hello::MyFoo::rw_attrib_mytype (
       1
     );
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/operation_cs.cpp:87
-
 ::CORBA::Short
 Hello::MyFoo::rw_attrib ()
 {
@@ -432,8 +398,8 @@ Hello::MyFoo::rw_attrib ()
     {
       ::CORBA::Object::tao_object_initialize (this);
     }
-  
-  TAO::Arg_Traits< ::CORBA::Short>::ret_val _tao_retval;
+
+  TAO::Arg_Traits<::CORBA::Short>::ret_val _tao_retval;
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
@@ -441,7 +407,7 @@ Hello::MyFoo::rw_attrib ()
     };
 
   static TAO::Exception_Data
-  _tao_Hello_MyFoo_rw_attrib_exceptiondata [] = 
+  _tao_Hello_MyFoo_rw_attrib_exceptiondata [] =
     {
       {
         "IDL:Hello/InternalErrorA:1.0",
@@ -472,9 +438,6 @@ Hello::MyFoo::rw_attrib ()
 
   return _tao_retval.retn ();
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/operation_cs.cpp:87
-
 void
 Hello::MyFoo::rw_attrib (
   ::CORBA::Short rw_attrib)
@@ -483,9 +446,9 @@ Hello::MyFoo::rw_attrib (
     {
       ::CORBA::Object::tao_object_initialize (this);
     }
-  
-  TAO::Arg_Traits< void>::ret_val _tao_retval;
-  TAO::Arg_Traits< ::CORBA::Short>::in_arg_val _tao_rw_attrib (rw_attrib);
+
+  TAO::Arg_Traits<void>::ret_val _tao_retval;
+  TAO::Arg_Traits<::CORBA::Short>::in_arg_val _tao_rw_attrib (rw_attrib);
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
@@ -494,7 +457,7 @@ Hello::MyFoo::rw_attrib (
     };
 
   static TAO::Exception_Data
-  _tao_Hello_MyFoo_rw_attrib_exceptiondata [] = 
+  _tao_Hello_MyFoo_rw_attrib_exceptiondata [] =
     {
       {
         "IDL:Hello/InternalErrorB:1.0",
@@ -512,7 +475,7 @@ Hello::MyFoo::rw_attrib (
       "_set_rw_attrib",
       14,
       TAO::TAO_CO_NONE | TAO::TAO_CO_DIRECT_STRATEGY | TAO::TAO_CO_THRU_POA_STRATEGY
-      
+
     );
 
   _invocation_call.invoke (
@@ -520,9 +483,6 @@ Hello::MyFoo::rw_attrib (
       1
     );
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/operation_cs.cpp:87
-
 ::CORBA::Short
 Hello::MyFoo::rw_attrib_reverted ()
 {
@@ -530,8 +490,8 @@ Hello::MyFoo::rw_attrib_reverted ()
     {
       ::CORBA::Object::tao_object_initialize (this);
     }
-  
-  TAO::Arg_Traits< ::CORBA::Short>::ret_val _tao_retval;
+
+  TAO::Arg_Traits<::CORBA::Short>::ret_val _tao_retval;
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
@@ -539,7 +499,7 @@ Hello::MyFoo::rw_attrib_reverted ()
     };
 
   static TAO::Exception_Data
-  _tao_Hello_MyFoo_rw_attrib_reverted_exceptiondata [] = 
+  _tao_Hello_MyFoo_rw_attrib_reverted_exceptiondata [] =
     {
       {
         "IDL:Hello/InternalErrorB:1.0",
@@ -570,9 +530,6 @@ Hello::MyFoo::rw_attrib_reverted ()
 
   return _tao_retval.retn ();
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/operation_cs.cpp:87
-
 void
 Hello::MyFoo::rw_attrib_reverted (
   ::CORBA::Short rw_attrib_reverted)
@@ -581,9 +538,9 @@ Hello::MyFoo::rw_attrib_reverted (
     {
       ::CORBA::Object::tao_object_initialize (this);
     }
-  
-  TAO::Arg_Traits< void>::ret_val _tao_retval;
-  TAO::Arg_Traits< ::CORBA::Short>::in_arg_val _tao_rw_attrib_reverted (rw_attrib_reverted);
+
+  TAO::Arg_Traits<void>::ret_val _tao_retval;
+  TAO::Arg_Traits<::CORBA::Short>::in_arg_val _tao_rw_attrib_reverted (rw_attrib_reverted);
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
@@ -592,7 +549,7 @@ Hello::MyFoo::rw_attrib_reverted (
     };
 
   static TAO::Exception_Data
-  _tao_Hello_MyFoo_rw_attrib_reverted_exceptiondata [] = 
+  _tao_Hello_MyFoo_rw_attrib_reverted_exceptiondata [] =
     {
       {
         "IDL:Hello/InternalErrorA:1.0",
@@ -610,7 +567,7 @@ Hello::MyFoo::rw_attrib_reverted (
       "_set_rw_attrib_reverted",
       23,
       TAO::TAO_CO_NONE | TAO::TAO_CO_DIRECT_STRATEGY | TAO::TAO_CO_THRU_POA_STRATEGY
-      
+
     );
 
   _invocation_call.invoke (
@@ -618,9 +575,6 @@ Hello::MyFoo::rw_attrib_reverted (
       1
     );
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/operation_cs.cpp:87
-
 ::CORBA::Short
 Hello::MyFoo::rw_attribB ()
 {
@@ -628,8 +582,8 @@ Hello::MyFoo::rw_attribB ()
     {
       ::CORBA::Object::tao_object_initialize (this);
     }
-  
-  TAO::Arg_Traits< ::CORBA::Short>::ret_val _tao_retval;
+
+  TAO::Arg_Traits<::CORBA::Short>::ret_val _tao_retval;
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
@@ -637,7 +591,7 @@ Hello::MyFoo::rw_attribB ()
     };
 
   static TAO::Exception_Data
-  _tao_Hello_MyFoo_rw_attribB_exceptiondata [] = 
+  _tao_Hello_MyFoo_rw_attribB_exceptiondata [] =
     {
       {
         "IDL:Hello/InternalErrorB:1.0",
@@ -668,9 +622,6 @@ Hello::MyFoo::rw_attribB ()
 
   return _tao_retval.retn ();
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/operation_cs.cpp:87
-
 void
 Hello::MyFoo::rw_attribB (
   ::CORBA::Short rw_attribB)
@@ -679,9 +630,9 @@ Hello::MyFoo::rw_attribB (
     {
       ::CORBA::Object::tao_object_initialize (this);
     }
-  
-  TAO::Arg_Traits< void>::ret_val _tao_retval;
-  TAO::Arg_Traits< ::CORBA::Short>::in_arg_val _tao_rw_attribB (rw_attribB);
+
+  TAO::Arg_Traits<void>::ret_val _tao_retval;
+  TAO::Arg_Traits<::CORBA::Short>::in_arg_val _tao_rw_attribB (rw_attribB);
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
@@ -696,14 +647,11 @@ Hello::MyFoo::rw_attribB (
       "_set_rw_attribB",
       15,
       TAO::TAO_CO_NONE | TAO::TAO_CO_DIRECT_STRATEGY | TAO::TAO_CO_THRU_POA_STRATEGY
-      
+
     );
 
   _invocation_call.invoke (nullptr, 0);
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/operation_cs.cpp:87
-
 ::CORBA::Short
 Hello::MyFoo::ro_attrib ()
 {
@@ -711,8 +659,8 @@ Hello::MyFoo::ro_attrib ()
     {
       ::CORBA::Object::tao_object_initialize (this);
     }
-  
-  TAO::Arg_Traits< ::CORBA::Short>::ret_val _tao_retval;
+
+  TAO::Arg_Traits<::CORBA::Short>::ret_val _tao_retval;
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
@@ -720,7 +668,7 @@ Hello::MyFoo::ro_attrib ()
     };
 
   static TAO::Exception_Data
-  _tao_Hello_MyFoo_ro_attrib_exceptiondata [] = 
+  _tao_Hello_MyFoo_ro_attrib_exceptiondata [] =
     {
       {
         "IDL:Hello/InternalErrorB:1.0",
@@ -751,10 +699,6 @@ Hello::MyFoo::ro_attrib ()
 
   return _tao_retval.retn ();
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/ami_cs.cpp:54
-
-
 
 void
 Hello::MyFoo::sendc_set_rw_attrib_mytype (
@@ -765,11 +709,9 @@ Hello::MyFoo::sendc_set_rw_attrib_mytype (
     {
       ::CORBA::Object::tao_object_initialize (this);
     }
-  
-  
-  
+
   TAO::Arg_Traits<void>::ret_val _tao_retval;
-  TAO::Arg_Traits< ::CORBA::Short>::in_arg_val _tao_rw_attrib_mytype (rw_attrib_mytype);
+  TAO::Arg_Traits<::CORBA::Short>::in_arg_val _tao_rw_attrib_mytype (rw_attrib_mytype);
 
   TAO::Argument *_the_tao_operation_signature[] =
     {
@@ -791,10 +733,6 @@ Hello::MyFoo::sendc_set_rw_attrib_mytype (
       &Hello::AMI_MyFooHandler::set_rw_attrib_mytype_reply_stub
     );
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/ami_cs.cpp:54
-
-
 
 void
 Hello::MyFoo::sendc_get_rw_attrib_mytype (
@@ -804,8 +742,6 @@ Hello::MyFoo::sendc_get_rw_attrib_mytype (
     {
       ::CORBA::Object::tao_object_initialize (this);
     }
-  
-  
 
   TAO::Argument ** _the_tao_operation_signature {};
 
@@ -823,10 +759,6 @@ Hello::MyFoo::sendc_get_rw_attrib_mytype (
       &Hello::AMI_MyFooHandler::get_rw_attrib_mytype_reply_stub
     );
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/ami_cs.cpp:54
-
-
 
 void
 Hello::MyFoo::sendc_set_rw_attrib (
@@ -837,11 +769,9 @@ Hello::MyFoo::sendc_set_rw_attrib (
     {
       ::CORBA::Object::tao_object_initialize (this);
     }
-  
-  
-  
+
   TAO::Arg_Traits<void>::ret_val _tao_retval;
-  TAO::Arg_Traits< ::CORBA::Short>::in_arg_val _tao_rw_attrib (rw_attrib);
+  TAO::Arg_Traits<::CORBA::Short>::in_arg_val _tao_rw_attrib (rw_attrib);
 
   TAO::Argument *_the_tao_operation_signature[] =
     {
@@ -863,10 +793,6 @@ Hello::MyFoo::sendc_set_rw_attrib (
       &Hello::AMI_MyFooHandler::set_rw_attrib_reply_stub
     );
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/ami_cs.cpp:54
-
-
 
 void
 Hello::MyFoo::sendc_get_rw_attrib (
@@ -876,8 +802,6 @@ Hello::MyFoo::sendc_get_rw_attrib (
     {
       ::CORBA::Object::tao_object_initialize (this);
     }
-  
-  
 
   TAO::Argument ** _the_tao_operation_signature {};
 
@@ -895,10 +819,6 @@ Hello::MyFoo::sendc_get_rw_attrib (
       &Hello::AMI_MyFooHandler::get_rw_attrib_reply_stub
     );
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/ami_cs.cpp:54
-
-
 
 void
 Hello::MyFoo::sendc_set_rw_attrib_reverted (
@@ -909,11 +829,9 @@ Hello::MyFoo::sendc_set_rw_attrib_reverted (
     {
       ::CORBA::Object::tao_object_initialize (this);
     }
-  
-  
-  
+
   TAO::Arg_Traits<void>::ret_val _tao_retval;
-  TAO::Arg_Traits< ::CORBA::Short>::in_arg_val _tao_rw_attrib_reverted (rw_attrib_reverted);
+  TAO::Arg_Traits<::CORBA::Short>::in_arg_val _tao_rw_attrib_reverted (rw_attrib_reverted);
 
   TAO::Argument *_the_tao_operation_signature[] =
     {
@@ -935,10 +853,6 @@ Hello::MyFoo::sendc_set_rw_attrib_reverted (
       &Hello::AMI_MyFooHandler::set_rw_attrib_reverted_reply_stub
     );
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/ami_cs.cpp:54
-
-
 
 void
 Hello::MyFoo::sendc_get_rw_attrib_reverted (
@@ -948,8 +862,6 @@ Hello::MyFoo::sendc_get_rw_attrib_reverted (
     {
       ::CORBA::Object::tao_object_initialize (this);
     }
-  
-  
 
   TAO::Argument ** _the_tao_operation_signature {};
 
@@ -967,10 +879,6 @@ Hello::MyFoo::sendc_get_rw_attrib_reverted (
       &Hello::AMI_MyFooHandler::get_rw_attrib_reverted_reply_stub
     );
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/ami_cs.cpp:54
-
-
 
 void
 Hello::MyFoo::sendc_set_rw_attribB (
@@ -981,11 +889,9 @@ Hello::MyFoo::sendc_set_rw_attribB (
     {
       ::CORBA::Object::tao_object_initialize (this);
     }
-  
-  
-  
+
   TAO::Arg_Traits<void>::ret_val _tao_retval;
-  TAO::Arg_Traits< ::CORBA::Short>::in_arg_val _tao_rw_attribB (rw_attribB);
+  TAO::Arg_Traits<::CORBA::Short>::in_arg_val _tao_rw_attribB (rw_attribB);
 
   TAO::Argument *_the_tao_operation_signature[] =
     {
@@ -1007,10 +913,6 @@ Hello::MyFoo::sendc_set_rw_attribB (
       &Hello::AMI_MyFooHandler::set_rw_attribB_reply_stub
     );
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/ami_cs.cpp:54
-
-
 
 void
 Hello::MyFoo::sendc_get_rw_attribB (
@@ -1020,8 +922,6 @@ Hello::MyFoo::sendc_get_rw_attribB (
     {
       ::CORBA::Object::tao_object_initialize (this);
     }
-  
-  
 
   TAO::Argument ** _the_tao_operation_signature {};
 
@@ -1039,10 +939,6 @@ Hello::MyFoo::sendc_get_rw_attribB (
       &Hello::AMI_MyFooHandler::get_rw_attribB_reply_stub
     );
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/ami_cs.cpp:54
-
-
 
 void
 Hello::MyFoo::sendc_get_ro_attrib (
@@ -1052,8 +948,6 @@ Hello::MyFoo::sendc_get_ro_attrib (
     {
       ::CORBA::Object::tao_object_initialize (this);
     }
-  
-  
 
   TAO::Argument ** _the_tao_operation_signature {};
 
@@ -1117,12 +1011,10 @@ Hello::MyFoo::_tao_release (MyFoo_ptr obj)
 }
 
 ::CORBA::Boolean
-Hello::MyFoo::_is_a (const char *value)
+Hello::MyFoo::_is_a (char const *value)
 {
-  if (
-      std::strcmp (value, "IDL:Hello/MyFoo:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0
-      )
+  if (std::strcmp (value, "IDL:Hello/MyFoo:1.0") == 0 ||
+      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0)
     {
       return true; // success using local knowledge
     }
@@ -1132,17 +1024,17 @@ Hello::MyFoo::_is_a (const char *value)
     }
 }
 
-const char* Hello::MyFoo::_interface_repository_id () const
+char const *Hello::MyFoo::_interface_repository_id () const
 {
   return "IDL:Hello/MyFoo:1.0";
 }
 
-const char* Hello::MyFoo::_desc_repository_id ()
+char const *Hello::MyFoo::_desc_repository_id ()
 {
   return "IDL:Hello/MyFoo:1.0";
 }
 
-const char* Hello::MyFoo::_desc_interface_name ()
+char const *Hello::MyFoo::_desc_interface_name ()
 {
   return "MyFoo";
 }
@@ -1152,25 +1044,18 @@ Hello::MyFoo::marshal (TAO_OutputCDR &cdr)
 {
   return (cdr << this);
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_typecode/objref_typecode.cpp:68
-
 static TAO::TypeCode::Objref<char const *,
                              TAO::Null_RefCount_Policy>
   _tao_tc_Hello_MyFoo (
     ::CORBA::tk_objref,
     "IDL:Hello/MyFoo:1.0",
     "MyFoo");
-  
 
 namespace Hello
 {
   ::CORBA::TypeCode_ptr const _tc_MyFoo = std::addressof(_tao_tc_Hello_MyFoo);
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_typecode/value_typecode.cpp:63
-
-static TAO::TypeCode::Value_Field<char const *, ::CORBA::TypeCode_ptr const *> const * const _tao_fields_Hello_AMH_MyFooExceptionHolder = 0;
+static TAO::TypeCode::Value_Field<char const *, ::CORBA::TypeCode_ptr const *> const * const _tao_fields_Hello_AMH_MyFooExceptionHolder {};
 static TAO::TypeCode::Value<char const *,
                      ::CORBA::TypeCode_ptr const *,
                      TAO::TypeCode::Value_Field<char const *, ::CORBA::TypeCode_ptr const *> const *,
@@ -1180,22 +1065,16 @@ static TAO::TypeCode::Value<char const *,
     "IDL:Hello/AMH_MyFooExceptionHolder:1.0",
     "AMH_MyFooExceptionHolder",
     ::CORBA::VM_NONE,
-    &::CORBA::_tc_null,
+    std::addressof (::CORBA::_tc_null),
     _tao_fields_Hello_AMH_MyFooExceptionHolder,
     0);
-  
 
 namespace Hello
 {
   ::CORBA::TypeCode_ptr const _tc_AMH_MyFooExceptionHolder = std::addressof(_tao_tc_Hello_AMH_MyFooExceptionHolder);
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_cs.cpp:52
-
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
 
 void
 TAO::Value_Traits<Hello::AMH_MyFooExceptionHolder>::add_ref (Hello::AMH_MyFooExceptionHolder * p)
@@ -1217,15 +1096,13 @@ TAO::Value_Traits<Hello::AMH_MyFooExceptionHolder>::release (Hello::AMH_MyFooExc
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 Hello::AMH_MyFooExceptionHolder *
 Hello::AMH_MyFooExceptionHolder::_downcast (::CORBA::ValueBase *v)
 {
   return dynamic_cast<::Hello::AMH_MyFooExceptionHolder *> (v);
 }
 
-const char *
+char const *
 Hello::AMH_MyFooExceptionHolder::_tao_obv_repository_id () const
 {
   return this->_tao_obv_static_repository_id ();
@@ -1310,213 +1187,155 @@ Hello::AMH_MyFooExceptionHolder::_tao_unmarshal (
         is_null_object,
         is_indirected
       );
-  
+
   ::CORBA::ValueBase_var owner (base);
 
   if (!retval)
     return false;
-  
+
   if (is_null_object)
     return true;
-  
+
   if (!is_indirected && !base->_tao_unmarshal_v (strm))
     return false;
-  
+
   // Now base must point to the unmarshaled object.
   // Align the pointer to the right subobject.
   new_object = AMH_MyFooExceptionHolder::_downcast (base);
   if (nullptr == new_object)
     return false;
-  
+
   if (is_indirected)
     new_object->_add_ref ();
-  
+
   owner._retn ();
   return true;
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_cs.cpp:440
-
 void
 Hello::AMH_MyFooExceptionHolder::raise_get_rw_attrib_mytype ()
 {
-  std::unique_ptr< ::CORBA::Exception> safety (this->exception);
+  std::unique_ptr<::CORBA::Exception> safety (this->exception);
   this->exception->_raise ();
 }
-
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_cs.cpp:440
 
 void
 Hello::AMH_MyFooExceptionHolder::raise_set_rw_attrib_mytype ()
 {
-  std::unique_ptr< ::CORBA::Exception> safety (this->exception);
+  std::unique_ptr<::CORBA::Exception> safety (this->exception);
   this->exception->_raise ();
 }
-
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_cs.cpp:440
 
 void
 Hello::AMH_MyFooExceptionHolder::raise_get_rw_attrib ()
 {
-  std::unique_ptr< ::CORBA::Exception> safety (this->exception);
+  std::unique_ptr<::CORBA::Exception> safety (this->exception);
   this->exception->_raise ();
 }
-
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_cs.cpp:440
 
 void
 Hello::AMH_MyFooExceptionHolder::raise_set_rw_attrib ()
 {
-  std::unique_ptr< ::CORBA::Exception> safety (this->exception);
+  std::unique_ptr<::CORBA::Exception> safety (this->exception);
   this->exception->_raise ();
 }
-
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_cs.cpp:440
 
 void
 Hello::AMH_MyFooExceptionHolder::raise_get_rw_attrib_reverted ()
 {
-  std::unique_ptr< ::CORBA::Exception> safety (this->exception);
+  std::unique_ptr<::CORBA::Exception> safety (this->exception);
   this->exception->_raise ();
 }
-
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_cs.cpp:440
 
 void
 Hello::AMH_MyFooExceptionHolder::raise_set_rw_attrib_reverted ()
 {
-  std::unique_ptr< ::CORBA::Exception> safety (this->exception);
+  std::unique_ptr<::CORBA::Exception> safety (this->exception);
   this->exception->_raise ();
 }
-
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_cs.cpp:440
 
 void
 Hello::AMH_MyFooExceptionHolder::raise_get_rw_attribB ()
 {
-  std::unique_ptr< ::CORBA::Exception> safety (this->exception);
+  std::unique_ptr<::CORBA::Exception> safety (this->exception);
   this->exception->_raise ();
 }
-
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_cs.cpp:440
 
 void
 Hello::AMH_MyFooExceptionHolder::raise_set_rw_attribB ()
 {
-  std::unique_ptr< ::CORBA::Exception> safety (this->exception);
+  std::unique_ptr<::CORBA::Exception> safety (this->exception);
   this->exception->_raise ();
 }
-
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_cs.cpp:440
 
 void
 Hello::AMH_MyFooExceptionHolder::raise_get_ro_attrib ()
 {
-  std::unique_ptr< ::CORBA::Exception> safety (this->exception);
+  std::unique_ptr<::CORBA::Exception> safety (this->exception);
   this->exception->_raise ();
 }
-
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_cs.cpp:440
 
 void
 Hello::AMH_MyFooExceptionHolder::raise_sendc_set_rw_attrib_mytype ()
 {
-  std::unique_ptr< ::CORBA::Exception> safety (this->exception);
+  std::unique_ptr<::CORBA::Exception> safety (this->exception);
   this->exception->_raise ();
 }
-
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_cs.cpp:440
 
 void
 Hello::AMH_MyFooExceptionHolder::raise_sendc_get_rw_attrib_mytype ()
 {
-  std::unique_ptr< ::CORBA::Exception> safety (this->exception);
+  std::unique_ptr<::CORBA::Exception> safety (this->exception);
   this->exception->_raise ();
 }
-
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_cs.cpp:440
 
 void
 Hello::AMH_MyFooExceptionHolder::raise_sendc_set_rw_attrib ()
 {
-  std::unique_ptr< ::CORBA::Exception> safety (this->exception);
+  std::unique_ptr<::CORBA::Exception> safety (this->exception);
   this->exception->_raise ();
 }
-
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_cs.cpp:440
 
 void
 Hello::AMH_MyFooExceptionHolder::raise_sendc_get_rw_attrib ()
 {
-  std::unique_ptr< ::CORBA::Exception> safety (this->exception);
+  std::unique_ptr<::CORBA::Exception> safety (this->exception);
   this->exception->_raise ();
 }
-
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_cs.cpp:440
 
 void
 Hello::AMH_MyFooExceptionHolder::raise_sendc_set_rw_attrib_reverted ()
 {
-  std::unique_ptr< ::CORBA::Exception> safety (this->exception);
+  std::unique_ptr<::CORBA::Exception> safety (this->exception);
   this->exception->_raise ();
 }
-
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_cs.cpp:440
 
 void
 Hello::AMH_MyFooExceptionHolder::raise_sendc_get_rw_attrib_reverted ()
 {
-  std::unique_ptr< ::CORBA::Exception> safety (this->exception);
+  std::unique_ptr<::CORBA::Exception> safety (this->exception);
   this->exception->_raise ();
 }
-
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_cs.cpp:440
 
 void
 Hello::AMH_MyFooExceptionHolder::raise_sendc_set_rw_attribB ()
 {
-  std::unique_ptr< ::CORBA::Exception> safety (this->exception);
+  std::unique_ptr<::CORBA::Exception> safety (this->exception);
   this->exception->_raise ();
 }
-
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_cs.cpp:440
 
 void
 Hello::AMH_MyFooExceptionHolder::raise_sendc_get_rw_attribB ()
 {
-  std::unique_ptr< ::CORBA::Exception> safety (this->exception);
+  std::unique_ptr<::CORBA::Exception> safety (this->exception);
   this->exception->_raise ();
 }
-
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_cs.cpp:440
 
 void
 Hello::AMH_MyFooExceptionHolder::raise_sendc_get_ro_attrib ()
 {
-  std::unique_ptr< ::CORBA::Exception> safety (this->exception);
+  std::unique_ptr<::CORBA::Exception> safety (this->exception);
   this->exception->_raise ();
 }
-
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_cs.cpp:47
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
@@ -1541,14 +1360,12 @@ TAO::Objref_Traits<Hello::AMH_MyFooResponseHandler>::nil ()
 }
 
 ::CORBA::Boolean
-TAO::Objref_Traits<Hello::AMH_MyFooResponseHandler>::marshal (const Hello::AMH_MyFooResponseHandler_ptr p,TAO_OutputCDR & cdr)
+TAO::Objref_Traits<Hello::AMH_MyFooResponseHandler>::marshal (Hello::AMH_MyFooResponseHandler_ptr const p,TAO_OutputCDR & cdr)
 {
   return ::CORBA::Object::marshal (p, cdr);
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-
 
 Hello::AMH_MyFooResponseHandler::AMH_MyFooResponseHandler ()
 {}
@@ -1597,13 +1414,11 @@ Hello::AMH_MyFooResponseHandler::_tao_release (AMH_MyFooResponseHandler_ptr obj)
 }
 
 ::CORBA::Boolean
-Hello::AMH_MyFooResponseHandler::_is_a (const char *value)
+Hello::AMH_MyFooResponseHandler::_is_a (char const *value)
 {
-  if (
-      std::strcmp (value, "IDL:Hello/AMH_MyFooResponseHandler:1.0") == 0 ||
+  if (std::strcmp (value, "IDL:Hello/AMH_MyFooResponseHandler:1.0") == 0 ||
       std::strcmp (value, "IDL:omg.org/CORBA/LocalObject:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0
-      )
+      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0)
     {
       return true; // success using local knowledge
     }
@@ -1613,17 +1428,17 @@ Hello::AMH_MyFooResponseHandler::_is_a (const char *value)
     }
 }
 
-const char* Hello::AMH_MyFooResponseHandler::_interface_repository_id () const
+char const *Hello::AMH_MyFooResponseHandler::_interface_repository_id () const
 {
   return "IDL:Hello/AMH_MyFooResponseHandler:1.0";
 }
 
-const char* Hello::AMH_MyFooResponseHandler::_desc_repository_id ()
+char const *Hello::AMH_MyFooResponseHandler::_desc_repository_id ()
 {
   return "IDL:Hello/AMH_MyFooResponseHandler:1.0";
 }
 
-const char* Hello::AMH_MyFooResponseHandler::_desc_interface_name ()
+char const *Hello::AMH_MyFooResponseHandler::_desc_interface_name ()
 {
   return "AMH_MyFooResponseHandler";
 }
@@ -1633,24 +1448,17 @@ Hello::AMH_MyFooResponseHandler::marshal (TAO_OutputCDR & /* cdr */)
 {
   return false;
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_typecode/objref_typecode.cpp:68
-
 static TAO::TypeCode::Objref<char const *,
                              TAO::Null_RefCount_Policy>
   _tao_tc_Hello_AMH_MyFooResponseHandler (
     ::CORBA::tk_local_interface,
     "IDL:Hello/AMH_MyFooResponseHandler:1.0",
     "AMH_MyFooResponseHandler");
-  
 
 namespace Hello
 {
   ::CORBA::TypeCode_ptr const _tc_AMH_MyFooResponseHandler = std::addressof(_tao_tc_Hello_AMH_MyFooResponseHandler);
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_cs.cpp:47
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
@@ -1675,16 +1483,12 @@ TAO::Objref_Traits<Hello::AMI_MyFooHandler>::nil ()
 }
 
 ::CORBA::Boolean
-TAO::Objref_Traits<Hello::AMI_MyFooHandler>::marshal (const Hello::AMI_MyFooHandler_ptr p,TAO_OutputCDR & cdr)
+TAO::Objref_Traits<Hello::AMI_MyFooHandler>::marshal (Hello::AMI_MyFooHandler_ptr const p,TAO_OutputCDR & cdr)
 {
   return ::CORBA::Object::marshal (p, cdr);
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/operation_cs.cpp:87
 
 void
 Hello::AMI_MyFooHandler::get_rw_attrib_mytype (
@@ -1694,9 +1498,9 @@ Hello::AMI_MyFooHandler::get_rw_attrib_mytype (
     {
       ::CORBA::Object::tao_object_initialize (this);
     }
-  
-  TAO::Arg_Traits< void>::ret_val _tao_retval;
-  TAO::Arg_Traits< ::CORBA::Short>::in_arg_val _tao_ami_return_val (ami_return_val);
+
+  TAO::Arg_Traits<void>::ret_val _tao_retval;
+  TAO::Arg_Traits<::CORBA::Short>::in_arg_val _tao_ami_return_val (ami_return_val);
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
@@ -1705,7 +1509,7 @@ Hello::AMI_MyFooHandler::get_rw_attrib_mytype (
     };
 
   static TAO::Exception_Data
-  _tao_Hello_AMI_MyFooHandler_get_rw_attrib_mytype_exceptiondata [] = 
+  _tao_Hello_AMI_MyFooHandler_get_rw_attrib_mytype_exceptiondata [] =
     {
       {
         "IDL:Hello/InternalErrorA:1.0",
@@ -1723,7 +1527,7 @@ Hello::AMI_MyFooHandler::get_rw_attrib_mytype (
       "get_rw_attrib_mytype",
       20,
       TAO::TAO_CO_NONE | TAO::TAO_CO_DIRECT_STRATEGY | TAO::TAO_CO_THRU_POA_STRATEGY
-      
+
     );
 
   _invocation_call.invoke (
@@ -1754,10 +1558,10 @@ Hello::AMI_MyFooHandler::get_rw_attrib_mytype_reply_stub (
             (_tao_in >> ami_return_val)
          ))
         throw ::CORBA::MARSHAL ();
-      
+
       // Invoke the call back method.
       _tao_reply_handler_object->get_rw_attrib_mytype (
-          
+
           ami_return_val
         );
       break;
@@ -1766,7 +1570,7 @@ Hello::AMI_MyFooHandler::get_rw_attrib_mytype_reply_stub (
     case TAO_AMI_REPLY_SYSTEM_EXCEPTION:
     {
       const ACE_Message_Block* cdr = _tao_in.start ();
-      
+
       static TAO::Exception_Data exceptions_data [] =
       {
         {
@@ -1794,7 +1598,7 @@ Hello::AMI_MyFooHandler::get_rw_attrib_mytype_reply_stub (
             1,
             _tao_in.char_translator (),
             _tao_in.wchar_translator ()));
-        
+
       ::Messaging::ExceptionHolder_var exception_holder_var = exception_holder_ptr;
       _tao_reply_handler_object->get_rw_attrib_mytype_excep (
           exception_holder_var);
@@ -1806,9 +1610,6 @@ Hello::AMI_MyFooHandler::get_rw_attrib_mytype_reply_stub (
       break;
   }
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/operation_cs.cpp:87
-
 void
 Hello::AMI_MyFooHandler::get_rw_attrib_mytype_excep (
   ::Messaging::ExceptionHolder * excep_holder)
@@ -1817,9 +1618,9 @@ Hello::AMI_MyFooHandler::get_rw_attrib_mytype_excep (
     {
       ::CORBA::Object::tao_object_initialize (this);
     }
-  
-  TAO::Arg_Traits< void>::ret_val _tao_retval;
-  TAO::Arg_Traits< ::Messaging::ExceptionHolder>::in_arg_val _tao_excep_holder (excep_holder);
+
+  TAO::Arg_Traits<void>::ret_val _tao_retval;
+  TAO::Arg_Traits<::Messaging::ExceptionHolder>::in_arg_val _tao_excep_holder (excep_holder);
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
@@ -1828,7 +1629,7 @@ Hello::AMI_MyFooHandler::get_rw_attrib_mytype_excep (
     };
 
   static TAO::Exception_Data
-  _tao_Hello_AMI_MyFooHandler_get_rw_attrib_mytype_excep_exceptiondata [] = 
+  _tao_Hello_AMI_MyFooHandler_get_rw_attrib_mytype_excep_exceptiondata [] =
     {
       {
         "IDL:Hello/InternalErrorA:1.0",
@@ -1846,7 +1647,7 @@ Hello::AMI_MyFooHandler::get_rw_attrib_mytype_excep (
       "get_rw_attrib_mytype_excep",
       26,
       TAO::TAO_CO_NONE | TAO::TAO_CO_DIRECT_STRATEGY | TAO::TAO_CO_THRU_POA_STRATEGY
-      
+
     );
 
   _invocation_call.invoke (
@@ -1854,9 +1655,6 @@ Hello::AMI_MyFooHandler::get_rw_attrib_mytype_excep (
       1
     );
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/operation_cs.cpp:87
-
 void
 Hello::AMI_MyFooHandler::set_rw_attrib_mytype ()
 {
@@ -1864,8 +1662,8 @@ Hello::AMI_MyFooHandler::set_rw_attrib_mytype ()
     {
       ::CORBA::Object::tao_object_initialize (this);
     }
-  
-  TAO::Arg_Traits< void>::ret_val _tao_retval;
+
+  TAO::Arg_Traits<void>::ret_val _tao_retval;
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
@@ -1873,7 +1671,7 @@ Hello::AMI_MyFooHandler::set_rw_attrib_mytype ()
     };
 
   static TAO::Exception_Data
-  _tao_Hello_AMI_MyFooHandler_set_rw_attrib_mytype_exceptiondata [] = 
+  _tao_Hello_AMI_MyFooHandler_set_rw_attrib_mytype_exceptiondata [] =
     {
       {
         "IDL:Hello/InternalErrorB:1.0",
@@ -1921,7 +1719,7 @@ Hello::AMI_MyFooHandler::set_rw_attrib_mytype_reply_stub (
       // Demarshall all the arguments.
       // Invoke the call back method.
       _tao_reply_handler_object->set_rw_attrib_mytype (
-          
+
         );
       break;
     }
@@ -1929,7 +1727,7 @@ Hello::AMI_MyFooHandler::set_rw_attrib_mytype_reply_stub (
     case TAO_AMI_REPLY_SYSTEM_EXCEPTION:
     {
       const ACE_Message_Block* cdr = _tao_in.start ();
-      
+
       static TAO::Exception_Data exceptions_data [] =
       {
         {
@@ -1957,7 +1755,7 @@ Hello::AMI_MyFooHandler::set_rw_attrib_mytype_reply_stub (
             1,
             _tao_in.char_translator (),
             _tao_in.wchar_translator ()));
-        
+
       ::Messaging::ExceptionHolder_var exception_holder_var = exception_holder_ptr;
       _tao_reply_handler_object->set_rw_attrib_mytype_excep (
           exception_holder_var);
@@ -1969,9 +1767,6 @@ Hello::AMI_MyFooHandler::set_rw_attrib_mytype_reply_stub (
       break;
   }
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/operation_cs.cpp:87
-
 void
 Hello::AMI_MyFooHandler::set_rw_attrib_mytype_excep (
   ::Messaging::ExceptionHolder * excep_holder)
@@ -1980,9 +1775,9 @@ Hello::AMI_MyFooHandler::set_rw_attrib_mytype_excep (
     {
       ::CORBA::Object::tao_object_initialize (this);
     }
-  
-  TAO::Arg_Traits< void>::ret_val _tao_retval;
-  TAO::Arg_Traits< ::Messaging::ExceptionHolder>::in_arg_val _tao_excep_holder (excep_holder);
+
+  TAO::Arg_Traits<void>::ret_val _tao_retval;
+  TAO::Arg_Traits<::Messaging::ExceptionHolder>::in_arg_val _tao_excep_holder (excep_holder);
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
@@ -1991,7 +1786,7 @@ Hello::AMI_MyFooHandler::set_rw_attrib_mytype_excep (
     };
 
   static TAO::Exception_Data
-  _tao_Hello_AMI_MyFooHandler_set_rw_attrib_mytype_excep_exceptiondata [] = 
+  _tao_Hello_AMI_MyFooHandler_set_rw_attrib_mytype_excep_exceptiondata [] =
     {
       {
         "IDL:Hello/InternalErrorB:1.0",
@@ -2009,7 +1804,7 @@ Hello::AMI_MyFooHandler::set_rw_attrib_mytype_excep (
       "set_rw_attrib_mytype_excep",
       26,
       TAO::TAO_CO_NONE | TAO::TAO_CO_DIRECT_STRATEGY | TAO::TAO_CO_THRU_POA_STRATEGY
-      
+
     );
 
   _invocation_call.invoke (
@@ -2017,9 +1812,6 @@ Hello::AMI_MyFooHandler::set_rw_attrib_mytype_excep (
       1
     );
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/operation_cs.cpp:87
-
 void
 Hello::AMI_MyFooHandler::get_rw_attrib (
   ::CORBA::Short ami_return_val)
@@ -2028,9 +1820,9 @@ Hello::AMI_MyFooHandler::get_rw_attrib (
     {
       ::CORBA::Object::tao_object_initialize (this);
     }
-  
-  TAO::Arg_Traits< void>::ret_val _tao_retval;
-  TAO::Arg_Traits< ::CORBA::Short>::in_arg_val _tao_ami_return_val (ami_return_val);
+
+  TAO::Arg_Traits<void>::ret_val _tao_retval;
+  TAO::Arg_Traits<::CORBA::Short>::in_arg_val _tao_ami_return_val (ami_return_val);
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
@@ -2039,7 +1831,7 @@ Hello::AMI_MyFooHandler::get_rw_attrib (
     };
 
   static TAO::Exception_Data
-  _tao_Hello_AMI_MyFooHandler_get_rw_attrib_exceptiondata [] = 
+  _tao_Hello_AMI_MyFooHandler_get_rw_attrib_exceptiondata [] =
     {
       {
         "IDL:Hello/InternalErrorA:1.0",
@@ -2057,7 +1849,7 @@ Hello::AMI_MyFooHandler::get_rw_attrib (
       "get_rw_attrib",
       13,
       TAO::TAO_CO_NONE | TAO::TAO_CO_DIRECT_STRATEGY | TAO::TAO_CO_THRU_POA_STRATEGY
-      
+
     );
 
   _invocation_call.invoke (
@@ -2088,10 +1880,10 @@ Hello::AMI_MyFooHandler::get_rw_attrib_reply_stub (
             (_tao_in >> ami_return_val)
          ))
         throw ::CORBA::MARSHAL ();
-      
+
       // Invoke the call back method.
       _tao_reply_handler_object->get_rw_attrib (
-          
+
           ami_return_val
         );
       break;
@@ -2100,7 +1892,7 @@ Hello::AMI_MyFooHandler::get_rw_attrib_reply_stub (
     case TAO_AMI_REPLY_SYSTEM_EXCEPTION:
     {
       const ACE_Message_Block* cdr = _tao_in.start ();
-      
+
       static TAO::Exception_Data exceptions_data [] =
       {
         {
@@ -2128,7 +1920,7 @@ Hello::AMI_MyFooHandler::get_rw_attrib_reply_stub (
             1,
             _tao_in.char_translator (),
             _tao_in.wchar_translator ()));
-        
+
       ::Messaging::ExceptionHolder_var exception_holder_var = exception_holder_ptr;
       _tao_reply_handler_object->get_rw_attrib_excep (
           exception_holder_var);
@@ -2140,9 +1932,6 @@ Hello::AMI_MyFooHandler::get_rw_attrib_reply_stub (
       break;
   }
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/operation_cs.cpp:87
-
 void
 Hello::AMI_MyFooHandler::get_rw_attrib_excep (
   ::Messaging::ExceptionHolder * excep_holder)
@@ -2151,9 +1940,9 @@ Hello::AMI_MyFooHandler::get_rw_attrib_excep (
     {
       ::CORBA::Object::tao_object_initialize (this);
     }
-  
-  TAO::Arg_Traits< void>::ret_val _tao_retval;
-  TAO::Arg_Traits< ::Messaging::ExceptionHolder>::in_arg_val _tao_excep_holder (excep_holder);
+
+  TAO::Arg_Traits<void>::ret_val _tao_retval;
+  TAO::Arg_Traits<::Messaging::ExceptionHolder>::in_arg_val _tao_excep_holder (excep_holder);
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
@@ -2162,7 +1951,7 @@ Hello::AMI_MyFooHandler::get_rw_attrib_excep (
     };
 
   static TAO::Exception_Data
-  _tao_Hello_AMI_MyFooHandler_get_rw_attrib_excep_exceptiondata [] = 
+  _tao_Hello_AMI_MyFooHandler_get_rw_attrib_excep_exceptiondata [] =
     {
       {
         "IDL:Hello/InternalErrorA:1.0",
@@ -2180,7 +1969,7 @@ Hello::AMI_MyFooHandler::get_rw_attrib_excep (
       "get_rw_attrib_excep",
       19,
       TAO::TAO_CO_NONE | TAO::TAO_CO_DIRECT_STRATEGY | TAO::TAO_CO_THRU_POA_STRATEGY
-      
+
     );
 
   _invocation_call.invoke (
@@ -2188,9 +1977,6 @@ Hello::AMI_MyFooHandler::get_rw_attrib_excep (
       1
     );
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/operation_cs.cpp:87
-
 void
 Hello::AMI_MyFooHandler::set_rw_attrib ()
 {
@@ -2198,8 +1984,8 @@ Hello::AMI_MyFooHandler::set_rw_attrib ()
     {
       ::CORBA::Object::tao_object_initialize (this);
     }
-  
-  TAO::Arg_Traits< void>::ret_val _tao_retval;
+
+  TAO::Arg_Traits<void>::ret_val _tao_retval;
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
@@ -2207,7 +1993,7 @@ Hello::AMI_MyFooHandler::set_rw_attrib ()
     };
 
   static TAO::Exception_Data
-  _tao_Hello_AMI_MyFooHandler_set_rw_attrib_exceptiondata [] = 
+  _tao_Hello_AMI_MyFooHandler_set_rw_attrib_exceptiondata [] =
     {
       {
         "IDL:Hello/InternalErrorB:1.0",
@@ -2255,7 +2041,7 @@ Hello::AMI_MyFooHandler::set_rw_attrib_reply_stub (
       // Demarshall all the arguments.
       // Invoke the call back method.
       _tao_reply_handler_object->set_rw_attrib (
-          
+
         );
       break;
     }
@@ -2263,7 +2049,7 @@ Hello::AMI_MyFooHandler::set_rw_attrib_reply_stub (
     case TAO_AMI_REPLY_SYSTEM_EXCEPTION:
     {
       const ACE_Message_Block* cdr = _tao_in.start ();
-      
+
       static TAO::Exception_Data exceptions_data [] =
       {
         {
@@ -2291,7 +2077,7 @@ Hello::AMI_MyFooHandler::set_rw_attrib_reply_stub (
             1,
             _tao_in.char_translator (),
             _tao_in.wchar_translator ()));
-        
+
       ::Messaging::ExceptionHolder_var exception_holder_var = exception_holder_ptr;
       _tao_reply_handler_object->set_rw_attrib_excep (
           exception_holder_var);
@@ -2303,9 +2089,6 @@ Hello::AMI_MyFooHandler::set_rw_attrib_reply_stub (
       break;
   }
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/operation_cs.cpp:87
-
 void
 Hello::AMI_MyFooHandler::set_rw_attrib_excep (
   ::Messaging::ExceptionHolder * excep_holder)
@@ -2314,9 +2097,9 @@ Hello::AMI_MyFooHandler::set_rw_attrib_excep (
     {
       ::CORBA::Object::tao_object_initialize (this);
     }
-  
-  TAO::Arg_Traits< void>::ret_val _tao_retval;
-  TAO::Arg_Traits< ::Messaging::ExceptionHolder>::in_arg_val _tao_excep_holder (excep_holder);
+
+  TAO::Arg_Traits<void>::ret_val _tao_retval;
+  TAO::Arg_Traits<::Messaging::ExceptionHolder>::in_arg_val _tao_excep_holder (excep_holder);
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
@@ -2325,7 +2108,7 @@ Hello::AMI_MyFooHandler::set_rw_attrib_excep (
     };
 
   static TAO::Exception_Data
-  _tao_Hello_AMI_MyFooHandler_set_rw_attrib_excep_exceptiondata [] = 
+  _tao_Hello_AMI_MyFooHandler_set_rw_attrib_excep_exceptiondata [] =
     {
       {
         "IDL:Hello/InternalErrorB:1.0",
@@ -2343,7 +2126,7 @@ Hello::AMI_MyFooHandler::set_rw_attrib_excep (
       "set_rw_attrib_excep",
       19,
       TAO::TAO_CO_NONE | TAO::TAO_CO_DIRECT_STRATEGY | TAO::TAO_CO_THRU_POA_STRATEGY
-      
+
     );
 
   _invocation_call.invoke (
@@ -2351,9 +2134,6 @@ Hello::AMI_MyFooHandler::set_rw_attrib_excep (
       1
     );
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/operation_cs.cpp:87
-
 void
 Hello::AMI_MyFooHandler::get_rw_attrib_reverted (
   ::CORBA::Short ami_return_val)
@@ -2362,9 +2142,9 @@ Hello::AMI_MyFooHandler::get_rw_attrib_reverted (
     {
       ::CORBA::Object::tao_object_initialize (this);
     }
-  
-  TAO::Arg_Traits< void>::ret_val _tao_retval;
-  TAO::Arg_Traits< ::CORBA::Short>::in_arg_val _tao_ami_return_val (ami_return_val);
+
+  TAO::Arg_Traits<void>::ret_val _tao_retval;
+  TAO::Arg_Traits<::CORBA::Short>::in_arg_val _tao_ami_return_val (ami_return_val);
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
@@ -2373,7 +2153,7 @@ Hello::AMI_MyFooHandler::get_rw_attrib_reverted (
     };
 
   static TAO::Exception_Data
-  _tao_Hello_AMI_MyFooHandler_get_rw_attrib_reverted_exceptiondata [] = 
+  _tao_Hello_AMI_MyFooHandler_get_rw_attrib_reverted_exceptiondata [] =
     {
       {
         "IDL:Hello/InternalErrorB:1.0",
@@ -2391,7 +2171,7 @@ Hello::AMI_MyFooHandler::get_rw_attrib_reverted (
       "get_rw_attrib_reverted",
       22,
       TAO::TAO_CO_NONE | TAO::TAO_CO_DIRECT_STRATEGY | TAO::TAO_CO_THRU_POA_STRATEGY
-      
+
     );
 
   _invocation_call.invoke (
@@ -2422,10 +2202,10 @@ Hello::AMI_MyFooHandler::get_rw_attrib_reverted_reply_stub (
             (_tao_in >> ami_return_val)
          ))
         throw ::CORBA::MARSHAL ();
-      
+
       // Invoke the call back method.
       _tao_reply_handler_object->get_rw_attrib_reverted (
-          
+
           ami_return_val
         );
       break;
@@ -2434,7 +2214,7 @@ Hello::AMI_MyFooHandler::get_rw_attrib_reverted_reply_stub (
     case TAO_AMI_REPLY_SYSTEM_EXCEPTION:
     {
       const ACE_Message_Block* cdr = _tao_in.start ();
-      
+
       static TAO::Exception_Data exceptions_data [] =
       {
         {
@@ -2462,7 +2242,7 @@ Hello::AMI_MyFooHandler::get_rw_attrib_reverted_reply_stub (
             1,
             _tao_in.char_translator (),
             _tao_in.wchar_translator ()));
-        
+
       ::Messaging::ExceptionHolder_var exception_holder_var = exception_holder_ptr;
       _tao_reply_handler_object->get_rw_attrib_reverted_excep (
           exception_holder_var);
@@ -2474,9 +2254,6 @@ Hello::AMI_MyFooHandler::get_rw_attrib_reverted_reply_stub (
       break;
   }
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/operation_cs.cpp:87
-
 void
 Hello::AMI_MyFooHandler::get_rw_attrib_reverted_excep (
   ::Messaging::ExceptionHolder * excep_holder)
@@ -2485,9 +2262,9 @@ Hello::AMI_MyFooHandler::get_rw_attrib_reverted_excep (
     {
       ::CORBA::Object::tao_object_initialize (this);
     }
-  
-  TAO::Arg_Traits< void>::ret_val _tao_retval;
-  TAO::Arg_Traits< ::Messaging::ExceptionHolder>::in_arg_val _tao_excep_holder (excep_holder);
+
+  TAO::Arg_Traits<void>::ret_val _tao_retval;
+  TAO::Arg_Traits<::Messaging::ExceptionHolder>::in_arg_val _tao_excep_holder (excep_holder);
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
@@ -2496,7 +2273,7 @@ Hello::AMI_MyFooHandler::get_rw_attrib_reverted_excep (
     };
 
   static TAO::Exception_Data
-  _tao_Hello_AMI_MyFooHandler_get_rw_attrib_reverted_excep_exceptiondata [] = 
+  _tao_Hello_AMI_MyFooHandler_get_rw_attrib_reverted_excep_exceptiondata [] =
     {
       {
         "IDL:Hello/InternalErrorB:1.0",
@@ -2514,7 +2291,7 @@ Hello::AMI_MyFooHandler::get_rw_attrib_reverted_excep (
       "get_rw_attrib_reverted_excep",
       28,
       TAO::TAO_CO_NONE | TAO::TAO_CO_DIRECT_STRATEGY | TAO::TAO_CO_THRU_POA_STRATEGY
-      
+
     );
 
   _invocation_call.invoke (
@@ -2522,9 +2299,6 @@ Hello::AMI_MyFooHandler::get_rw_attrib_reverted_excep (
       1
     );
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/operation_cs.cpp:87
-
 void
 Hello::AMI_MyFooHandler::set_rw_attrib_reverted ()
 {
@@ -2532,8 +2306,8 @@ Hello::AMI_MyFooHandler::set_rw_attrib_reverted ()
     {
       ::CORBA::Object::tao_object_initialize (this);
     }
-  
-  TAO::Arg_Traits< void>::ret_val _tao_retval;
+
+  TAO::Arg_Traits<void>::ret_val _tao_retval;
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
@@ -2541,7 +2315,7 @@ Hello::AMI_MyFooHandler::set_rw_attrib_reverted ()
     };
 
   static TAO::Exception_Data
-  _tao_Hello_AMI_MyFooHandler_set_rw_attrib_reverted_exceptiondata [] = 
+  _tao_Hello_AMI_MyFooHandler_set_rw_attrib_reverted_exceptiondata [] =
     {
       {
         "IDL:Hello/InternalErrorA:1.0",
@@ -2589,7 +2363,7 @@ Hello::AMI_MyFooHandler::set_rw_attrib_reverted_reply_stub (
       // Demarshall all the arguments.
       // Invoke the call back method.
       _tao_reply_handler_object->set_rw_attrib_reverted (
-          
+
         );
       break;
     }
@@ -2597,7 +2371,7 @@ Hello::AMI_MyFooHandler::set_rw_attrib_reverted_reply_stub (
     case TAO_AMI_REPLY_SYSTEM_EXCEPTION:
     {
       const ACE_Message_Block* cdr = _tao_in.start ();
-      
+
       static TAO::Exception_Data exceptions_data [] =
       {
         {
@@ -2625,7 +2399,7 @@ Hello::AMI_MyFooHandler::set_rw_attrib_reverted_reply_stub (
             1,
             _tao_in.char_translator (),
             _tao_in.wchar_translator ()));
-        
+
       ::Messaging::ExceptionHolder_var exception_holder_var = exception_holder_ptr;
       _tao_reply_handler_object->set_rw_attrib_reverted_excep (
           exception_holder_var);
@@ -2637,9 +2411,6 @@ Hello::AMI_MyFooHandler::set_rw_attrib_reverted_reply_stub (
       break;
   }
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/operation_cs.cpp:87
-
 void
 Hello::AMI_MyFooHandler::set_rw_attrib_reverted_excep (
   ::Messaging::ExceptionHolder * excep_holder)
@@ -2648,9 +2419,9 @@ Hello::AMI_MyFooHandler::set_rw_attrib_reverted_excep (
     {
       ::CORBA::Object::tao_object_initialize (this);
     }
-  
-  TAO::Arg_Traits< void>::ret_val _tao_retval;
-  TAO::Arg_Traits< ::Messaging::ExceptionHolder>::in_arg_val _tao_excep_holder (excep_holder);
+
+  TAO::Arg_Traits<void>::ret_val _tao_retval;
+  TAO::Arg_Traits<::Messaging::ExceptionHolder>::in_arg_val _tao_excep_holder (excep_holder);
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
@@ -2659,7 +2430,7 @@ Hello::AMI_MyFooHandler::set_rw_attrib_reverted_excep (
     };
 
   static TAO::Exception_Data
-  _tao_Hello_AMI_MyFooHandler_set_rw_attrib_reverted_excep_exceptiondata [] = 
+  _tao_Hello_AMI_MyFooHandler_set_rw_attrib_reverted_excep_exceptiondata [] =
     {
       {
         "IDL:Hello/InternalErrorA:1.0",
@@ -2677,7 +2448,7 @@ Hello::AMI_MyFooHandler::set_rw_attrib_reverted_excep (
       "set_rw_attrib_reverted_excep",
       28,
       TAO::TAO_CO_NONE | TAO::TAO_CO_DIRECT_STRATEGY | TAO::TAO_CO_THRU_POA_STRATEGY
-      
+
     );
 
   _invocation_call.invoke (
@@ -2685,9 +2456,6 @@ Hello::AMI_MyFooHandler::set_rw_attrib_reverted_excep (
       1
     );
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/operation_cs.cpp:87
-
 void
 Hello::AMI_MyFooHandler::get_rw_attribB (
   ::CORBA::Short ami_return_val)
@@ -2696,9 +2464,9 @@ Hello::AMI_MyFooHandler::get_rw_attribB (
     {
       ::CORBA::Object::tao_object_initialize (this);
     }
-  
-  TAO::Arg_Traits< void>::ret_val _tao_retval;
-  TAO::Arg_Traits< ::CORBA::Short>::in_arg_val _tao_ami_return_val (ami_return_val);
+
+  TAO::Arg_Traits<void>::ret_val _tao_retval;
+  TAO::Arg_Traits<::CORBA::Short>::in_arg_val _tao_ami_return_val (ami_return_val);
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
@@ -2707,7 +2475,7 @@ Hello::AMI_MyFooHandler::get_rw_attribB (
     };
 
   static TAO::Exception_Data
-  _tao_Hello_AMI_MyFooHandler_get_rw_attribB_exceptiondata [] = 
+  _tao_Hello_AMI_MyFooHandler_get_rw_attribB_exceptiondata [] =
     {
       {
         "IDL:Hello/InternalErrorB:1.0",
@@ -2725,7 +2493,7 @@ Hello::AMI_MyFooHandler::get_rw_attribB (
       "get_rw_attribB",
       14,
       TAO::TAO_CO_NONE | TAO::TAO_CO_DIRECT_STRATEGY | TAO::TAO_CO_THRU_POA_STRATEGY
-      
+
     );
 
   _invocation_call.invoke (
@@ -2756,10 +2524,10 @@ Hello::AMI_MyFooHandler::get_rw_attribB_reply_stub (
             (_tao_in >> ami_return_val)
          ))
         throw ::CORBA::MARSHAL ();
-      
+
       // Invoke the call back method.
       _tao_reply_handler_object->get_rw_attribB (
-          
+
           ami_return_val
         );
       break;
@@ -2768,7 +2536,7 @@ Hello::AMI_MyFooHandler::get_rw_attribB_reply_stub (
     case TAO_AMI_REPLY_SYSTEM_EXCEPTION:
     {
       const ACE_Message_Block* cdr = _tao_in.start ();
-      
+
       static TAO::Exception_Data exceptions_data [] =
       {
         {
@@ -2796,7 +2564,7 @@ Hello::AMI_MyFooHandler::get_rw_attribB_reply_stub (
             1,
             _tao_in.char_translator (),
             _tao_in.wchar_translator ()));
-        
+
       ::Messaging::ExceptionHolder_var exception_holder_var = exception_holder_ptr;
       _tao_reply_handler_object->get_rw_attribB_excep (
           exception_holder_var);
@@ -2808,9 +2576,6 @@ Hello::AMI_MyFooHandler::get_rw_attribB_reply_stub (
       break;
   }
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/operation_cs.cpp:87
-
 void
 Hello::AMI_MyFooHandler::get_rw_attribB_excep (
   ::Messaging::ExceptionHolder * excep_holder)
@@ -2819,9 +2584,9 @@ Hello::AMI_MyFooHandler::get_rw_attribB_excep (
     {
       ::CORBA::Object::tao_object_initialize (this);
     }
-  
-  TAO::Arg_Traits< void>::ret_val _tao_retval;
-  TAO::Arg_Traits< ::Messaging::ExceptionHolder>::in_arg_val _tao_excep_holder (excep_holder);
+
+  TAO::Arg_Traits<void>::ret_val _tao_retval;
+  TAO::Arg_Traits<::Messaging::ExceptionHolder>::in_arg_val _tao_excep_holder (excep_holder);
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
@@ -2830,7 +2595,7 @@ Hello::AMI_MyFooHandler::get_rw_attribB_excep (
     };
 
   static TAO::Exception_Data
-  _tao_Hello_AMI_MyFooHandler_get_rw_attribB_excep_exceptiondata [] = 
+  _tao_Hello_AMI_MyFooHandler_get_rw_attribB_excep_exceptiondata [] =
     {
       {
         "IDL:Hello/InternalErrorB:1.0",
@@ -2848,7 +2613,7 @@ Hello::AMI_MyFooHandler::get_rw_attribB_excep (
       "get_rw_attribB_excep",
       20,
       TAO::TAO_CO_NONE | TAO::TAO_CO_DIRECT_STRATEGY | TAO::TAO_CO_THRU_POA_STRATEGY
-      
+
     );
 
   _invocation_call.invoke (
@@ -2856,9 +2621,6 @@ Hello::AMI_MyFooHandler::get_rw_attribB_excep (
       1
     );
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/operation_cs.cpp:87
-
 void
 Hello::AMI_MyFooHandler::set_rw_attribB ()
 {
@@ -2866,8 +2628,8 @@ Hello::AMI_MyFooHandler::set_rw_attribB ()
     {
       ::CORBA::Object::tao_object_initialize (this);
     }
-  
-  TAO::Arg_Traits< void>::ret_val _tao_retval;
+
+  TAO::Arg_Traits<void>::ret_val _tao_retval;
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
@@ -2908,7 +2670,7 @@ Hello::AMI_MyFooHandler::set_rw_attribB_reply_stub (
       // Demarshall all the arguments.
       // Invoke the call back method.
       _tao_reply_handler_object->set_rw_attribB (
-          
+
         );
       break;
     }
@@ -2932,7 +2694,7 @@ Hello::AMI_MyFooHandler::set_rw_attribB_reply_stub (
             0,
             _tao_in.char_translator (),
             _tao_in.wchar_translator ()));
-        
+
       ::Messaging::ExceptionHolder_var exception_holder_var = exception_holder_ptr;
       _tao_reply_handler_object->set_rw_attribB_excep (
           exception_holder_var);
@@ -2944,9 +2706,6 @@ Hello::AMI_MyFooHandler::set_rw_attribB_reply_stub (
       break;
   }
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/operation_cs.cpp:87
-
 void
 Hello::AMI_MyFooHandler::set_rw_attribB_excep (
   ::Messaging::ExceptionHolder * excep_holder)
@@ -2955,9 +2714,9 @@ Hello::AMI_MyFooHandler::set_rw_attribB_excep (
     {
       ::CORBA::Object::tao_object_initialize (this);
     }
-  
-  TAO::Arg_Traits< void>::ret_val _tao_retval;
-  TAO::Arg_Traits< ::Messaging::ExceptionHolder>::in_arg_val _tao_excep_holder (excep_holder);
+
+  TAO::Arg_Traits<void>::ret_val _tao_retval;
+  TAO::Arg_Traits<::Messaging::ExceptionHolder>::in_arg_val _tao_excep_holder (excep_holder);
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
@@ -2972,14 +2731,11 @@ Hello::AMI_MyFooHandler::set_rw_attribB_excep (
       "set_rw_attribB_excep",
       20,
       TAO::TAO_CO_NONE | TAO::TAO_CO_DIRECT_STRATEGY | TAO::TAO_CO_THRU_POA_STRATEGY
-      
+
     );
 
   _invocation_call.invoke (nullptr, 0);
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/operation_cs.cpp:87
-
 void
 Hello::AMI_MyFooHandler::get_ro_attrib (
   ::CORBA::Short ami_return_val)
@@ -2988,9 +2744,9 @@ Hello::AMI_MyFooHandler::get_ro_attrib (
     {
       ::CORBA::Object::tao_object_initialize (this);
     }
-  
-  TAO::Arg_Traits< void>::ret_val _tao_retval;
-  TAO::Arg_Traits< ::CORBA::Short>::in_arg_val _tao_ami_return_val (ami_return_val);
+
+  TAO::Arg_Traits<void>::ret_val _tao_retval;
+  TAO::Arg_Traits<::CORBA::Short>::in_arg_val _tao_ami_return_val (ami_return_val);
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
@@ -2999,7 +2755,7 @@ Hello::AMI_MyFooHandler::get_ro_attrib (
     };
 
   static TAO::Exception_Data
-  _tao_Hello_AMI_MyFooHandler_get_ro_attrib_exceptiondata [] = 
+  _tao_Hello_AMI_MyFooHandler_get_ro_attrib_exceptiondata [] =
     {
       {
         "IDL:Hello/InternalErrorB:1.0",
@@ -3017,7 +2773,7 @@ Hello::AMI_MyFooHandler::get_ro_attrib (
       "get_ro_attrib",
       13,
       TAO::TAO_CO_NONE | TAO::TAO_CO_DIRECT_STRATEGY | TAO::TAO_CO_THRU_POA_STRATEGY
-      
+
     );
 
   _invocation_call.invoke (
@@ -3048,10 +2804,10 @@ Hello::AMI_MyFooHandler::get_ro_attrib_reply_stub (
             (_tao_in >> ami_return_val)
          ))
         throw ::CORBA::MARSHAL ();
-      
+
       // Invoke the call back method.
       _tao_reply_handler_object->get_ro_attrib (
-          
+
           ami_return_val
         );
       break;
@@ -3060,7 +2816,7 @@ Hello::AMI_MyFooHandler::get_ro_attrib_reply_stub (
     case TAO_AMI_REPLY_SYSTEM_EXCEPTION:
     {
       const ACE_Message_Block* cdr = _tao_in.start ();
-      
+
       static TAO::Exception_Data exceptions_data [] =
       {
         {
@@ -3088,7 +2844,7 @@ Hello::AMI_MyFooHandler::get_ro_attrib_reply_stub (
             1,
             _tao_in.char_translator (),
             _tao_in.wchar_translator ()));
-        
+
       ::Messaging::ExceptionHolder_var exception_holder_var = exception_holder_ptr;
       _tao_reply_handler_object->get_ro_attrib_excep (
           exception_holder_var);
@@ -3100,9 +2856,6 @@ Hello::AMI_MyFooHandler::get_ro_attrib_reply_stub (
       break;
   }
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/operation_cs.cpp:87
-
 void
 Hello::AMI_MyFooHandler::get_ro_attrib_excep (
   ::Messaging::ExceptionHolder * excep_holder)
@@ -3111,9 +2864,9 @@ Hello::AMI_MyFooHandler::get_ro_attrib_excep (
     {
       ::CORBA::Object::tao_object_initialize (this);
     }
-  
-  TAO::Arg_Traits< void>::ret_val _tao_retval;
-  TAO::Arg_Traits< ::Messaging::ExceptionHolder>::in_arg_val _tao_excep_holder (excep_holder);
+
+  TAO::Arg_Traits<void>::ret_val _tao_retval;
+  TAO::Arg_Traits<::Messaging::ExceptionHolder>::in_arg_val _tao_excep_holder (excep_holder);
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
@@ -3122,7 +2875,7 @@ Hello::AMI_MyFooHandler::get_ro_attrib_excep (
     };
 
   static TAO::Exception_Data
-  _tao_Hello_AMI_MyFooHandler_get_ro_attrib_excep_exceptiondata [] = 
+  _tao_Hello_AMI_MyFooHandler_get_ro_attrib_excep_exceptiondata [] =
     {
       {
         "IDL:Hello/InternalErrorB:1.0",
@@ -3140,7 +2893,7 @@ Hello::AMI_MyFooHandler::get_ro_attrib_excep (
       "get_ro_attrib_excep",
       19,
       TAO::TAO_CO_NONE | TAO::TAO_CO_DIRECT_STRATEGY | TAO::TAO_CO_THRU_POA_STRATEGY
-      
+
     );
 
   _invocation_call.invoke (
@@ -3194,13 +2947,11 @@ Hello::AMI_MyFooHandler::_tao_release (AMI_MyFooHandler_ptr obj)
 }
 
 ::CORBA::Boolean
-Hello::AMI_MyFooHandler::_is_a (const char *value)
+Hello::AMI_MyFooHandler::_is_a (char const *value)
 {
-  if (
-      std::strcmp (value, "IDL:omg.org/Messaging/ReplyHandler:1.0") == 0 ||
+  if (std::strcmp (value, "IDL:omg.org/Messaging/ReplyHandler:1.0") == 0 ||
       std::strcmp (value, "IDL:Hello/AMI_MyFooHandler:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0
-      )
+      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0)
     {
       return true; // success using local knowledge
     }
@@ -3210,17 +2961,17 @@ Hello::AMI_MyFooHandler::_is_a (const char *value)
     }
 }
 
-const char* Hello::AMI_MyFooHandler::_interface_repository_id () const
+char const *Hello::AMI_MyFooHandler::_interface_repository_id () const
 {
   return "IDL:Hello/AMI_MyFooHandler:1.0";
 }
 
-const char* Hello::AMI_MyFooHandler::_desc_repository_id ()
+char const *Hello::AMI_MyFooHandler::_desc_repository_id ()
 {
   return "IDL:Hello/AMI_MyFooHandler:1.0";
 }
 
-const char* Hello::AMI_MyFooHandler::_desc_interface_name ()
+char const *Hello::AMI_MyFooHandler::_desc_interface_name ()
 {
   return "AMI_MyFooHandler";
 }
@@ -3230,24 +2981,17 @@ Hello::AMI_MyFooHandler::marshal (TAO_OutputCDR &cdr)
 {
   return (cdr << this);
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_typecode/objref_typecode.cpp:68
-
 static TAO::TypeCode::Objref<char const *,
                              TAO::Null_RefCount_Policy>
   _tao_tc_Hello_AMI_MyFooHandler (
     ::CORBA::tk_objref,
     "IDL:Hello/AMI_MyFooHandler:1.0",
     "AMI_MyFooHandler");
-  
 
 namespace Hello
 {
   ::CORBA::TypeCode_ptr const _tc_AMI_MyFooHandler = std::addressof(_tao_tc_Hello_AMI_MyFooHandler);
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_obv_cs.cpp:43
-
 OBV_Hello::AMH_MyFooExceptionHolder::~AMH_MyFooExceptionHolder ()
 {}
 
@@ -3262,13 +3006,8 @@ OBV_Hello::AMH_MyFooExceptionHolder::_tao_unmarshal__Hello_AMH_MyFooExceptionHol
 {
   return _tao_unmarshal_state (strm, ci);
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_exception/any_op_cs.cpp:36
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
-
 
 namespace TAO
 {
@@ -3282,7 +3021,7 @@ namespace TAO
       {
         return false;
       }
-    
+
     try
       {
         this->value_->_tao_decode (cdr);
@@ -3297,16 +3036,13 @@ namespace TAO
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
-
-
 
 /// Copying insertion.
 void operator<<= (
   ::CORBA::Any &_tao_any,
-  const Hello::InternalErrorA &_tao_elem)
+  Hello::InternalErrorA const &_tao_elem)
 {
   TAO::Any_Dual_Impl_T<Hello::InternalErrorA>::insert_copy (
     _tao_any,
@@ -3329,8 +3065,8 @@ void operator<<= (
 
 /// Extraction to const pointer.
 ::CORBA::Boolean operator>>= (
-  const ::CORBA::Any &_tao_any,
-  const Hello::InternalErrorA *&_tao_elem)
+  ::CORBA::Any const &_tao_any,
+  Hello::InternalErrorA const *&_tao_elem)
 {
   return TAO::Any_Dual_Impl_T<Hello::InternalErrorA>::extract (
     _tao_any,
@@ -3341,14 +3077,7 @@ void operator<<= (
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_exception/any_op_cs.cpp:36
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
-
 
 namespace TAO
 {
@@ -3362,7 +3091,7 @@ namespace TAO
       {
         return false;
       }
-    
+
     try
       {
         this->value_->_tao_decode (cdr);
@@ -3377,16 +3106,13 @@ namespace TAO
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
-
-
 
 /// Copying insertion.
 void operator<<= (
   ::CORBA::Any &_tao_any,
-  const Hello::InternalErrorB &_tao_elem)
+  Hello::InternalErrorB const &_tao_elem)
 {
   TAO::Any_Dual_Impl_T<Hello::InternalErrorB>::insert_copy (
     _tao_any,
@@ -3409,8 +3135,8 @@ void operator<<= (
 
 /// Extraction to const pointer.
 ::CORBA::Boolean operator>>= (
-  const ::CORBA::Any &_tao_any,
-  const Hello::InternalErrorB *&_tao_elem)
+  ::CORBA::Any const &_tao_any,
+  Hello::InternalErrorB const *&_tao_elem)
 {
   return TAO::Any_Dual_Impl_T<Hello::InternalErrorB>::extract (
     _tao_any,
@@ -3421,14 +3147,7 @@ void operator<<= (
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/any_op_cs.cpp:37
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
-
 
 namespace TAO
 {
@@ -3443,11 +3162,8 @@ namespace TAO
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
-
-
 
 /// Copying insertion.
 void
@@ -3475,7 +3191,7 @@ operator<<= (
 
 ::CORBA::Boolean
 operator>>= (
-    const ::CORBA::Any &_tao_any,
+    ::CORBA::Any const &_tao_any,
     Hello::MyFoo_ptr &_tao_elem)
 {
   return
@@ -3489,14 +3205,7 @@ operator>>= (
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/any_op_cs.cpp:44
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
-
 
 namespace TAO
 {
@@ -3511,9 +3220,7 @@ namespace TAO
   }
 }
 
-
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
@@ -3551,7 +3258,7 @@ operator<<= (
 
 ::CORBA::Boolean
 operator>>= (
-    const ::CORBA::Any &_tao_any,
+    ::CORBA::Any const &_tao_any,
     Hello::AMH_MyFooExceptionHolder *&_tao_elem)
 {
   return
@@ -3562,18 +3269,10 @@ operator>>= (
         _tao_elem);
 }
 
-
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/any_op_cs.cpp:37
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
-
 
 namespace TAO
 {
@@ -3605,11 +3304,8 @@ namespace TAO
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
-
-
 
 /// Copying insertion.
 void
@@ -3637,7 +3333,7 @@ operator<<= (
 
 ::CORBA::Boolean
 operator>>= (
-    const ::CORBA::Any &_tao_any,
+    ::CORBA::Any const &_tao_any,
     Hello::AMH_MyFooResponseHandler_ptr &_tao_elem)
 {
   return
@@ -3651,14 +3347,7 @@ operator>>= (
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/any_op_cs.cpp:37
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
-
 
 namespace TAO
 {
@@ -3673,11 +3362,8 @@ namespace TAO
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
-
-
 
 /// Copying insertion.
 void
@@ -3705,7 +3391,7 @@ operator<<= (
 
 ::CORBA::Boolean
 operator>>= (
-    const ::CORBA::Any &_tao_any,
+    ::CORBA::Any const &_tao_any,
     Hello::AMI_MyFooHandler_ptr &_tao_elem)
 {
   return
@@ -3719,18 +3405,11 @@ operator>>= (
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_exception/cdr_op_cs.cpp:47
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
-
 
 ::CORBA::Boolean operator<< (
     TAO_OutputCDR &strm,
-    const Hello::InternalErrorA &_tao_aggregate)
+    Hello::InternalErrorA const &_tao_aggregate)
 {
   // Marshal the repository ID.
   return (strm << _tao_aggregate._rep_id ());
@@ -3745,18 +3424,11 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_exception/cdr_op_cs.cpp:47
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
-
 
 ::CORBA::Boolean operator<< (
     TAO_OutputCDR &strm,
-    const Hello::InternalErrorB &_tao_aggregate)
+    Hello::InternalErrorB const &_tao_aggregate)
 {
   // Marshal the repository ID.
   return (strm << _tao_aggregate._rep_id ());
@@ -3771,16 +3443,11 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/cdr_op_cs.cpp:50
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean operator<< (
     TAO_OutputCDR &strm,
-    const Hello::MyFoo_ptr _tao_objref)
+    Hello::MyFoo_ptr const _tao_objref)
 {
   ::CORBA::Object_ptr _tao_corba_obj = _tao_objref;
   return (strm << _tao_corba_obj);
@@ -3796,26 +3463,20 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
     {
       return false;
     }
-  
+
   // Narrow to the right type.
-  _tao_objref = TAO::Narrow_Utils< ::Hello::MyFoo>::unchecked_narrow (obj.in ());
+  _tao_objref = TAO::Narrow_Utils<::Hello::MyFoo>::unchecked_narrow (obj.in ());
 
   return true;
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_valuetype.cpp:506
-
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 void
 CORBA::add_ref (Hello::AMH_MyFooExceptionHolder * vt)
 {
-  if (vt != 0)
+  if (vt != nullptr)
     {
       vt->_add_ref ();
     }
@@ -3824,7 +3485,7 @@ CORBA::add_ref (Hello::AMH_MyFooExceptionHolder * vt)
 void
 CORBA::remove_ref (Hello::AMH_MyFooExceptionHolder * vt)
 {
-  if (vt != 0)
+  if (vt != nullptr)
     {
       vt->_remove_ref ();
     }
@@ -3832,17 +3493,12 @@ CORBA::remove_ref (Hello::AMH_MyFooExceptionHolder * vt)
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/cdr_op_cs.cpp:59
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean
 operator<< (
     TAO_OutputCDR &strm,
-    const Hello::AMH_MyFooExceptionHolder *_tao_valuetype)
+    Hello::AMH_MyFooExceptionHolder const *_tao_valuetype)
 {
   return
     ::CORBA::ValueBase::_tao_marshal (
@@ -3859,12 +3515,7 @@ operator>> (
   return Hello::AMH_MyFooExceptionHolder::_tao_unmarshal (strm, _tao_valuetype);
 }
 
-
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/marshal_cs.cpp:189
 
 ::CORBA::Boolean
 OBV_Hello::AMH_MyFooExceptionHolder::_tao_marshal_state (TAO_OutputCDR &, TAO_ChunkInfo &) const
@@ -3884,16 +3535,11 @@ OBV_Hello::AMH_MyFooExceptionHolder::truncation_hook ()
   this->require_truncation_ = true;
 }
 
-
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/cdr_op_cs.cpp:50
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean operator<< (
     TAO_OutputCDR &strm,
-    const Hello::AMI_MyFooHandler_ptr _tao_objref)
+    Hello::AMI_MyFooHandler_ptr const _tao_objref)
 {
   ::CORBA::Object_ptr _tao_corba_obj = _tao_objref;
   return (strm << _tao_corba_obj);
@@ -3909,14 +3555,12 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
     {
       return false;
     }
-  
+
   // Narrow to the right type.
-  _tao_objref = TAO::Narrow_Utils< ::Hello::AMI_MyFooHandler>::unchecked_narrow (obj.in ());
+  _tao_objref = TAO::Narrow_Utils<::Hello::AMI_MyFooHandler>::unchecked_narrow (obj.in ());
 
   return true;
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-
 

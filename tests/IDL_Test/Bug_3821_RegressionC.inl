@@ -24,15 +24,9 @@
 
 #include <memory>
 #include <new>
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union/union_ci.cpp:35
-
 // *************************************************************
 // Inline operations for union test::UnionAllCovered_EnumerationDiscriminant
 // *************************************************************
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union/discriminant_ci.cpp:195
-
 ACE_INLINE
 void
 test::UnionAllCovered_EnumerationDiscriminant::_default ()
@@ -40,8 +34,6 @@ test::UnionAllCovered_EnumerationDiscriminant::_default ()
   this->_reset ();
   this->disc_ = static_cast <test::Enumeration> (-1);
 }
-
-
 
 ACE_INLINE
 unsigned long
@@ -82,9 +74,6 @@ test::UnionAllCovered_EnumerationDiscriminant::_d () const
 {
   return this->disc_;
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union_branch/public_ci.cpp:606
-
 // Accessor to set the member.
 ACE_INLINE
 void
@@ -108,9 +97,6 @@ test::UnionAllCovered_EnumerationDiscriminant::e_enum1 () const
     }
   return this->u_.e_enum1_;
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union_branch/public_ci.cpp:606
-
 // Accessor to set the member.
 ACE_INLINE
 void
@@ -134,9 +120,6 @@ test::UnionAllCovered_EnumerationDiscriminant::e_enum2 () const
     }
   return this->u_.e_enum2_;
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union_branch/public_ci.cpp:606
-
 // Accessor to set the member.
 ACE_INLINE
 void
@@ -160,16 +143,9 @@ test::UnionAllCovered_EnumerationDiscriminant::e_enum3 () const
     }
   return this->u_.e_enum3_;
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union/union_ci.cpp:35
-
 // *************************************************************
 // Inline operations for union test::UnionAllCoveredWithDefault_EnumerationDiscriminant
 // *************************************************************
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union/discriminant_ci.cpp:195
-
-
 
 ACE_INLINE
 unsigned long
@@ -210,9 +186,6 @@ test::UnionAllCoveredWithDefault_EnumerationDiscriminant::_d () const
 {
   return this->disc_;
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union_branch/public_ci.cpp:606
-
 // Accessor to set the member.
 ACE_INLINE
 void
@@ -236,9 +209,6 @@ test::UnionAllCoveredWithDefault_EnumerationDiscriminant::e_enum1 () const
     }
   return this->u_.e_enum1_;
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union_branch/public_ci.cpp:606
-
 // Accessor to set the member.
 ACE_INLINE
 void
@@ -262,9 +232,6 @@ test::UnionAllCoveredWithDefault_EnumerationDiscriminant::e_enum2 () const
     }
   return this->u_.e_enum2_;
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union_branch/public_ci.cpp:606
-
 // Accessor to set the member.
 ACE_INLINE
 void
@@ -288,16 +255,9 @@ test::UnionAllCoveredWithDefault_EnumerationDiscriminant::e_def () const
     }
   return this->u_.e_def_;
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union/union_ci.cpp:35
-
 // *************************************************************
 // Inline operations for union test::UnionWithDefault_EnumerationDiscriminant
 // *************************************************************
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union/discriminant_ci.cpp:195
-
-
 
 ACE_INLINE
 unsigned long
@@ -336,9 +296,6 @@ test::UnionWithDefault_EnumerationDiscriminant::_d () const
 {
   return this->disc_;
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union_branch/public_ci.cpp:606
-
 // Accessor to set the member.
 ACE_INLINE
 void
@@ -362,9 +319,6 @@ test::UnionWithDefault_EnumerationDiscriminant::e_enum1 () const
     }
   return this->u_.e_enum1_;
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union_branch/public_ci.cpp:606
-
 // Accessor to set the member.
 ACE_INLINE
 void
@@ -388,9 +342,6 @@ test::UnionWithDefault_EnumerationDiscriminant::e_enum2 () const
     }
   return this->u_.e_enum2_;
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union_branch/public_ci.cpp:606
-
 // Accessor to set the member.
 ACE_INLINE
 void
@@ -414,15 +365,9 @@ test::UnionWithDefault_EnumerationDiscriminant::e_def () const
     }
   return this->u_.e_def_;
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union/union_ci.cpp:35
-
 // *************************************************************
 // Inline operations for union test::UnionWithImplicitDefault_EnumerationDiscriminant
 // *************************************************************
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union/discriminant_ci.cpp:195
-
 ACE_INLINE
 void
 test::UnionWithImplicitDefault_EnumerationDiscriminant::_default ()
@@ -430,8 +375,6 @@ test::UnionWithImplicitDefault_EnumerationDiscriminant::_default ()
   this->_reset ();
   this->disc_ = test::Enum3;
 }
-
-
 
 ACE_INLINE
 unsigned long
@@ -470,9 +413,6 @@ test::UnionWithImplicitDefault_EnumerationDiscriminant::_d () const
 {
   return this->disc_;
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union_branch/public_ci.cpp:606
-
 // Accessor to set the member.
 ACE_INLINE
 void
@@ -496,9 +436,6 @@ test::UnionWithImplicitDefault_EnumerationDiscriminant::e_enum1 () const
     }
   return this->u_.e_enum1_;
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union_branch/public_ci.cpp:606
-
 // Accessor to set the member.
 ACE_INLINE
 void
@@ -522,15 +459,9 @@ test::UnionWithImplicitDefault_EnumerationDiscriminant::e_enum2 () const
     }
   return this->u_.e_enum2_;
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union/union_ci.cpp:35
-
 // *************************************************************
 // Inline operations for union test::UnionAllCovered_TypedefedEnumerationDiscriminant
 // *************************************************************
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union/discriminant_ci.cpp:195
-
 ACE_INLINE
 void
 test::UnionAllCovered_TypedefedEnumerationDiscriminant::_default ()
@@ -538,8 +469,6 @@ test::UnionAllCovered_TypedefedEnumerationDiscriminant::_default ()
   this->_reset ();
   this->disc_ = static_cast <test::Enumeration> (-1);
 }
-
-
 
 ACE_INLINE
 unsigned long
@@ -580,9 +509,6 @@ test::UnionAllCovered_TypedefedEnumerationDiscriminant::_d () const
 {
   return this->disc_;
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union_branch/public_ci.cpp:606
-
 // Accessor to set the member.
 ACE_INLINE
 void
@@ -606,9 +532,6 @@ test::UnionAllCovered_TypedefedEnumerationDiscriminant::e_enum1 () const
     }
   return this->u_.e_enum1_;
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union_branch/public_ci.cpp:606
-
 // Accessor to set the member.
 ACE_INLINE
 void
@@ -632,9 +555,6 @@ test::UnionAllCovered_TypedefedEnumerationDiscriminant::e_enum2 () const
     }
   return this->u_.e_enum2_;
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union_branch/public_ci.cpp:606
-
 // Accessor to set the member.
 ACE_INLINE
 void
@@ -658,16 +578,9 @@ test::UnionAllCovered_TypedefedEnumerationDiscriminant::e_enum3 () const
     }
   return this->u_.e_enum3_;
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union/union_ci.cpp:35
-
 // *************************************************************
 // Inline operations for union test::UnionAllCoveredWithDefault_TypedefedEnumerationDiscriminant
 // *************************************************************
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union/discriminant_ci.cpp:195
-
-
 
 ACE_INLINE
 unsigned long
@@ -708,9 +621,6 @@ test::UnionAllCoveredWithDefault_TypedefedEnumerationDiscriminant::_d () const
 {
   return this->disc_;
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union_branch/public_ci.cpp:606
-
 // Accessor to set the member.
 ACE_INLINE
 void
@@ -734,9 +644,6 @@ test::UnionAllCoveredWithDefault_TypedefedEnumerationDiscriminant::e_enum1 () co
     }
   return this->u_.e_enum1_;
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union_branch/public_ci.cpp:606
-
 // Accessor to set the member.
 ACE_INLINE
 void
@@ -760,9 +667,6 @@ test::UnionAllCoveredWithDefault_TypedefedEnumerationDiscriminant::e_enum2 () co
     }
   return this->u_.e_enum2_;
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union_branch/public_ci.cpp:606
-
 // Accessor to set the member.
 ACE_INLINE
 void
@@ -786,16 +690,9 @@ test::UnionAllCoveredWithDefault_TypedefedEnumerationDiscriminant::e_def () cons
     }
   return this->u_.e_def_;
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union/union_ci.cpp:35
-
 // *************************************************************
 // Inline operations for union test::UnionWithDefault_TypedefedEnumerationDiscriminant
 // *************************************************************
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union/discriminant_ci.cpp:195
-
-
 
 ACE_INLINE
 unsigned long
@@ -834,9 +731,6 @@ test::UnionWithDefault_TypedefedEnumerationDiscriminant::_d () const
 {
   return this->disc_;
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union_branch/public_ci.cpp:606
-
 // Accessor to set the member.
 ACE_INLINE
 void
@@ -860,9 +754,6 @@ test::UnionWithDefault_TypedefedEnumerationDiscriminant::e_enum1 () const
     }
   return this->u_.e_enum1_;
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union_branch/public_ci.cpp:606
-
 // Accessor to set the member.
 ACE_INLINE
 void
@@ -886,9 +777,6 @@ test::UnionWithDefault_TypedefedEnumerationDiscriminant::e_enum2 () const
     }
   return this->u_.e_enum2_;
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union_branch/public_ci.cpp:606
-
 // Accessor to set the member.
 ACE_INLINE
 void
@@ -912,15 +800,9 @@ test::UnionWithDefault_TypedefedEnumerationDiscriminant::e_def () const
     }
   return this->u_.e_def_;
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union/union_ci.cpp:35
-
 // *************************************************************
 // Inline operations for union test::UnionWithImplicitDefault_TypedefedEnumerationDiscriminant
 // *************************************************************
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union/discriminant_ci.cpp:195
-
 ACE_INLINE
 void
 test::UnionWithImplicitDefault_TypedefedEnumerationDiscriminant::_default ()
@@ -928,8 +810,6 @@ test::UnionWithImplicitDefault_TypedefedEnumerationDiscriminant::_default ()
   this->_reset ();
   this->disc_ = test::Enum3;
 }
-
-
 
 ACE_INLINE
 unsigned long
@@ -968,9 +848,6 @@ test::UnionWithImplicitDefault_TypedefedEnumerationDiscriminant::_d () const
 {
   return this->disc_;
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union_branch/public_ci.cpp:606
-
 // Accessor to set the member.
 ACE_INLINE
 void
@@ -994,9 +871,6 @@ test::UnionWithImplicitDefault_TypedefedEnumerationDiscriminant::e_enum1 () cons
     }
   return this->u_.e_enum1_;
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union_branch/public_ci.cpp:606
-
 // Accessor to set the member.
 ACE_INLINE
 void
@@ -1020,16 +894,9 @@ test::UnionWithImplicitDefault_TypedefedEnumerationDiscriminant::e_enum2 () cons
     }
   return this->u_.e_enum2_;
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union/union_ci.cpp:35
-
 // *************************************************************
 // Inline operations for union test::UnionAllCovered_BooleanDiscriminant
 // *************************************************************
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union/discriminant_ci.cpp:302
-
-
 
 ACE_INLINE
 unsigned long
@@ -1060,9 +927,6 @@ test::UnionAllCovered_BooleanDiscriminant::_d () const
 {
   return this->disc_;
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union_branch/public_ci.cpp:606
-
 // Accessor to set the member.
 ACE_INLINE
 void
@@ -1086,9 +950,6 @@ test::UnionAllCovered_BooleanDiscriminant::e_true () const
     }
   return this->u_.e_true_;
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union_branch/public_ci.cpp:606
-
 // Accessor to set the member.
 ACE_INLINE
 void
@@ -1112,16 +973,9 @@ test::UnionAllCovered_BooleanDiscriminant::e_false () const
     }
   return this->u_.e_false_;
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union/union_ci.cpp:35
-
 // *************************************************************
 // Inline operations for union test::UnionWithDefault_BooleanDiscriminant
 // *************************************************************
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union/discriminant_ci.cpp:302
-
-
 
 ACE_INLINE
 unsigned long
@@ -1152,9 +1006,6 @@ test::UnionWithDefault_BooleanDiscriminant::_d () const
 {
   return this->disc_;
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union_branch/public_ci.cpp:606
-
 // Accessor to set the member.
 ACE_INLINE
 void
@@ -1178,9 +1029,6 @@ test::UnionWithDefault_BooleanDiscriminant::e_true () const
     }
   return this->u_.e_true_;
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union_branch/public_ci.cpp:606
-
 // Accessor to set the member.
 ACE_INLINE
 void
@@ -1204,15 +1052,9 @@ test::UnionWithDefault_BooleanDiscriminant::e_def () const
     }
   return this->u_.e_def_;
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union/union_ci.cpp:35
-
 // *************************************************************
 // Inline operations for union test::UnionWithImplicitDefault_BooleanDiscriminant
 // *************************************************************
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union/discriminant_ci.cpp:302
-
 ACE_INLINE
 void
 test::UnionWithImplicitDefault_BooleanDiscriminant::_default ()
@@ -1250,9 +1092,6 @@ test::UnionWithImplicitDefault_BooleanDiscriminant::_d () const
 {
   return this->disc_;
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union_branch/public_ci.cpp:606
-
 // Accessor to set the member.
 ACE_INLINE
 void
@@ -1276,16 +1115,9 @@ test::UnionWithImplicitDefault_BooleanDiscriminant::e_true () const
     }
   return this->u_.e_true_;
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union/union_ci.cpp:35
-
 // *************************************************************
 // Inline operations for union test::UnionAllCovered_CharDiscriminant
 // *************************************************************
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union/discriminant_ci.cpp:302
-
-
 
 ACE_INLINE
 unsigned long
@@ -1570,9 +1402,6 @@ test::UnionAllCovered_CharDiscriminant::_d () const
 {
   return this->disc_;
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union_branch/public_ci.cpp:606
-
 // Accessor to set the member.
 ACE_INLINE
 void
@@ -1596,16 +1425,9 @@ test::UnionAllCovered_CharDiscriminant::e_chars () const
     }
   return this->u_.e_chars_;
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union/union_ci.cpp:35
-
 // *************************************************************
 // Inline operations for union test::UnionWithDefault_CharDiscriminant
 // *************************************************************
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union/discriminant_ci.cpp:302
-
-
 
 ACE_INLINE
 unsigned long
@@ -1649,9 +1471,6 @@ test::UnionWithDefault_CharDiscriminant::_d () const
 {
   return this->disc_;
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union_branch/public_ci.cpp:606
-
 // Accessor to set the member.
 ACE_INLINE
 void
@@ -1675,9 +1494,6 @@ test::UnionWithDefault_CharDiscriminant::e_chars () const
     }
   return this->u_.e_chars_;
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union_branch/public_ci.cpp:606
-
 // Accessor to set the member.
 ACE_INLINE
 void
@@ -1701,15 +1517,9 @@ test::UnionWithDefault_CharDiscriminant::e_def () const
     }
   return this->u_.e_def_;
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union/union_ci.cpp:35
-
 // *************************************************************
 // Inline operations for union test::UnionWithImplicitDefault_CharDiscriminant
 // *************************************************************
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union/discriminant_ci.cpp:302
-
 ACE_INLINE
 void
 test::UnionWithImplicitDefault_CharDiscriminant::_default ()
@@ -1760,9 +1570,6 @@ test::UnionWithImplicitDefault_CharDiscriminant::_d () const
 {
   return this->disc_;
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union_branch/public_ci.cpp:606
-
 // Accessor to set the member.
 ACE_INLINE
 void
@@ -1786,16 +1593,9 @@ test::UnionWithImplicitDefault_CharDiscriminant::e_chars () const
     }
   return this->u_.e_chars_;
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union/union_ci.cpp:35
-
 // *************************************************************
 // Inline operations for union test::UnionWithDefault_LongDiscriminant
 // *************************************************************
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union/discriminant_ci.cpp:302
-
-
 
 ACE_INLINE
 unsigned long
@@ -1836,9 +1636,6 @@ test::UnionWithDefault_LongDiscriminant::_d () const
 {
   return this->disc_;
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union_branch/public_ci.cpp:606
-
 // Accessor to set the member.
 ACE_INLINE
 void
@@ -1862,9 +1659,6 @@ test::UnionWithDefault_LongDiscriminant::e_case1 () const
     }
   return this->u_.e_case1_;
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union_branch/public_ci.cpp:606
-
 // Accessor to set the member.
 ACE_INLINE
 void
@@ -1888,9 +1682,6 @@ test::UnionWithDefault_LongDiscriminant::e_case2 () const
     }
   return this->u_.e_case2_;
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union_branch/public_ci.cpp:606
-
 // Accessor to set the member.
 ACE_INLINE
 void
@@ -1914,9 +1705,6 @@ test::UnionWithDefault_LongDiscriminant::e_case3 () const
     }
   return this->u_.e_case3_;
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union_branch/public_ci.cpp:606
-
 // Accessor to set the member.
 ACE_INLINE
 void
@@ -1940,15 +1728,9 @@ test::UnionWithDefault_LongDiscriminant::e_def () const
     }
   return this->u_.e_def_;
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union/union_ci.cpp:35
-
 // *************************************************************
 // Inline operations for union test::UnionWithImplicitDefault_LongDiscriminant
 // *************************************************************
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union/discriminant_ci.cpp:302
-
 ACE_INLINE
 void
 test::UnionWithImplicitDefault_LongDiscriminant::_default ()
@@ -1996,9 +1778,6 @@ test::UnionWithImplicitDefault_LongDiscriminant::_d () const
 {
   return this->disc_;
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union_branch/public_ci.cpp:606
-
 // Accessor to set the member.
 ACE_INLINE
 void
@@ -2022,9 +1801,6 @@ test::UnionWithImplicitDefault_LongDiscriminant::e_case1 () const
     }
   return this->u_.e_case1_;
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union_branch/public_ci.cpp:606
-
 // Accessor to set the member.
 ACE_INLINE
 void
@@ -2048,9 +1824,6 @@ test::UnionWithImplicitDefault_LongDiscriminant::e_case2 () const
     }
   return this->u_.e_case2_;
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union_branch/public_ci.cpp:606
-
 // Accessor to set the member.
 ACE_INLINE
 void

@@ -24,15 +24,9 @@
 
 #include <memory>
 #include <new>
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union/union_ci.cpp:35
-
 // *************************************************************
 // Inline operations for union CallMe::YourColorBaby
 // *************************************************************
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union/discriminant_ci.cpp:195
-
 ACE_INLINE
 void
 CallMe::YourColorBaby::_default ()
@@ -40,8 +34,6 @@ CallMe::YourColorBaby::_default ()
   this->_reset ();
   this->disc_ = static_cast <CallMe::YourColorBaby::ColorMe> (-1);
 }
-
-
 
 ACE_INLINE
 unsigned long
@@ -80,9 +72,6 @@ CallMe::YourColorBaby::_d () const
 {
   return this->disc_;
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union_branch/public_ci.cpp:254
-
 /// Accessor to set the member.
 ACE_INLINE
 void
@@ -106,9 +95,6 @@ CallMe::YourColorBaby::c_1 () const
     }
   return this->u_.c_1_;
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union_branch/public_ci.cpp:606
-
 // Accessor to set the member.
 ACE_INLINE
 void
@@ -132,15 +118,9 @@ CallMe::YourColorBaby::c_2 () const
     }
   return this->u_.c_2_;
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union/union_ci.cpp:35
-
 // *************************************************************
 // Inline operations for union CallMe::YourCar
 // *************************************************************
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union/discriminant_ci.cpp:195
-
 ACE_INLINE
 void
 CallMe::YourCar::_default ()
@@ -148,8 +128,6 @@ CallMe::YourCar::_default ()
   this->_reset ();
   this->disc_ = static_cast <CallMe::YourCar::ColorMe> (-1);
 }
-
-
 
 ACE_INLINE
 unsigned long
@@ -188,9 +166,6 @@ CallMe::YourCar::_d () const
 {
   return this->disc_;
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union_branch/public_ci.cpp:606
-
 // Accessor to set the member.
 ACE_INLINE
 void
@@ -214,9 +189,6 @@ CallMe::YourCar::c_1 () const
     }
   return this->u_.c_1_;
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union_branch/public_ci.cpp:606
-
 // Accessor to set the member.
 ACE_INLINE
 void

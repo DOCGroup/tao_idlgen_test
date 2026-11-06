@@ -22,11 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:454
-
-#ifndef _TAO_IDL_TESTVERSIONEDNAMESPACES_1TC3UN_H_
-#define _TAO_IDL_TESTVERSIONEDNAMESPACES_1TC3UN_H_
+#ifndef _TAO_IDL_TESTVERSIONEDNAMESPACES_H_
+#define _TAO_IDL_TESTVERSIONEDNAMESPACES_H_
 
 #include /**/ "ace/pre.h"
 
@@ -43,32 +40,18 @@
 # pragma once
 #endif /* ACE_LACKS_PRAGMA_ONCE */
 
-
 BEGIN_USER_VERSIONED_NAMESPACE
-
-
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_arg_traits.cpp:64
-
-
-
 
 END_USER_VERSIONED_NAMESPACE
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
 
 // Arg traits specializations.
 namespace TAO
 {
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_arg_traits.cpp:931
-
-  
 
   template<>
-  class SArg_Traits< ::M1::S1>
+  class SArg_Traits<::M1::S1>
     : public
         Fixed_Size_SArg_Traits_T<
             ::M1::S1,
@@ -76,16 +59,12 @@ namespace TAO
           >
   {
   };
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_arg_traits.cpp:298
-
-  
 
 #if !defined (_M1_V__SARG_TRAITS_)
 #define _M1_V__SARG_TRAITS_
 
   template<>
-  class SArg_Traits< ::M1::V>
+  class SArg_Traits<::M1::V>
     : public
         Object_SArg_Traits_T<
             ::M1::V *,
@@ -101,27 +80,14 @@ namespace TAO
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
 BEGIN_USER_VERSIONED_NAMESPACE
-
-
-
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_module/module_sh.cpp:34
 
 namespace POA_M1
 {
-  
-
-
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_module/module_sh.cpp:65
 
 } // module M1
 
 END_USER_VERSIONED_NAMESPACE
-
-
 
 #include /**/ "ace/post.h"
 

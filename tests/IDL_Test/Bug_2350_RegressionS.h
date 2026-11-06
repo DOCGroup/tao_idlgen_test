@@ -22,11 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:454
-
-#ifndef _TAO_IDL_BUG_2350_REGRESSIONS_PG4NQ9_H_
-#define _TAO_IDL_BUG_2350_REGRESSIONS_PG4NQ9_H_
+#ifndef _TAO_IDL_BUG_2350_REGRESSIONS_H_
+#define _TAO_IDL_BUG_2350_REGRESSIONS_H_
 
 #include /**/ "ace/pre.h"
 
@@ -52,27 +49,18 @@
 #include "tao/Messaging/AMH_Response_Handler.h"
 
 #include /**/ "TAO_IDL_TEST_stub_export.h"
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_arg_traits.cpp:64
-
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
 
 // Arg traits specializations.
 namespace TAO
 {
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_arg_traits.cpp:298
-
-  
 
 #if !defined (_MESSAGING_EXCEPTIONHOLDER__SARG_TRAITS_)
 #define _MESSAGING_EXCEPTIONHOLDER__SARG_TRAITS_
 
   template<>
-  class SArg_Traits< ::Messaging::ExceptionHolder>
+  class SArg_Traits<::Messaging::ExceptionHolder>
     : public
         Object_SArg_Traits_T<
             ::Messaging::ExceptionHolder *,
@@ -84,13 +72,9 @@ namespace TAO
   };
 
 #endif /* end #if !defined */
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_arg_traits.cpp:931
-
-  
 
   template<>
-  class SArg_Traits< ::user_ExceptionHolder>
+  class SArg_Traits<::user_ExceptionHolder>
     : public
         Fixed_Size_SArg_Traits_T<
             ::user_ExceptionHolder,
@@ -98,16 +82,12 @@ namespace TAO
           >
   {
   };
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_arg_traits.cpp:142
-
-  
 
 #if !defined (_BUG_2350_REGRESSION__SARG_TRAITS_)
 #define _BUG_2350_REGRESSION__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits< ::Bug_2350_Regression>
+  class  SArg_Traits<::Bug_2350_Regression>
     : public Object_SArg_Traits_T<
         ::Bug_2350_Regression_ptr,
         ::Bug_2350_Regression_var,
@@ -117,16 +97,12 @@ namespace TAO
   };
 
 #endif /* end #if !defined */
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_arg_traits.cpp:298
-
-  
 
 #if !defined (_AMH_BUG_2350_REGRESSIONEXCEPTIONHOLDER__SARG_TRAITS_)
 #define _AMH_BUG_2350_REGRESSIONEXCEPTIONHOLDER__SARG_TRAITS_
 
   template<>
-  class SArg_Traits< ::AMH_Bug_2350_RegressionExceptionHolder>
+  class SArg_Traits<::AMH_Bug_2350_RegressionExceptionHolder>
     : public
         Object_SArg_Traits_T<
             ::AMH_Bug_2350_RegressionExceptionHolder *,
@@ -138,16 +114,12 @@ namespace TAO
   };
 
 #endif /* end #if !defined */
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_arg_traits.cpp:142
-
-  
 
 #if !defined (_AMI_BUG_2350_REGRESSIONHANDLER__SARG_TRAITS_)
 #define _AMI_BUG_2350_REGRESSIONHANDLER__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits< ::AMI_Bug_2350_RegressionHandler>
+  class  SArg_Traits<::AMI_Bug_2350_RegressionHandler>
     : public Object_SArg_Traits_T<
         ::AMI_Bug_2350_RegressionHandler_ptr,
         ::AMI_Bug_2350_RegressionHandler_var,
@@ -161,12 +133,8 @@ namespace TAO
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/amh_sh.cpp:45
-
 class POA_AMH_Bug_2350_Regression;
-typedef POA_AMH_Bug_2350_Regression *POA_AMH_Bug_2350_Regression_ptr;
+using POA_AMH_Bug_2350_Regression_ptr = POA_AMH_Bug_2350_Regression *;
 
 class TAO_IDL_TEST_STUB_Export POA_AMH_Bug_2350_Regression
   : public virtual PortableServer::ServantBase
@@ -175,42 +143,31 @@ protected:
   POA_AMH_Bug_2350_Regression ();
 
 public:
-  POA_AMH_Bug_2350_Regression (const POA_AMH_Bug_2350_Regression& rhs);
-  virtual ~POA_AMH_Bug_2350_Regression () = default;
+  POA_AMH_Bug_2350_Regression (POA_AMH_Bug_2350_Regression const &rhs);
+  ~POA_AMH_Bug_2350_Regression () override = default;
 
+  ::CORBA::Boolean _is_a (char const *logical_type_id) override;
 
-  virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
-
-  virtual void _dispatch (
+  void _dispatch (
       TAO_ServerRequest &req,
-      TAO::Portable_Server::Servant_Upcall *_servant_upcall);
-  
+      TAO::Portable_Server::Servant_Upcall *_servant_upcall) override;
+
   Bug_2350_Regression *_this ();
 
-virtual const char* _interface_repository_id () const;
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/amh_sh.cpp:126
-
+char const *_interface_repository_id () const override;
 static void Bug_2350_Regression_excep_skel (
     TAO_ServerRequest &_tao_req,
     TAO::Portable_Server::Servant_Upcall *_tao_obj,
     TAO_ServantBase *_tao_servant_upcall);
-  
+
 virtual void Bug_2350_Regression_excep (
     AMH_Bug_2350_RegressionResponseHandler_ptr _tao_rh,
-    const ::user_ExceptionHolder & a
-  ) = 0;
+    ::user_ExceptionHolder const & a) = 0;
 
 };
 
-
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_sh.cpp:72
-
-
-
 class POA_Bug_2350_Regression;
-typedef POA_Bug_2350_Regression *POA_Bug_2350_Regression_ptr;
+using POA_Bug_2350_Regression_ptr = POA_Bug_2350_Regression *;
 
 class _TAO_Bug_2350_Regression_Direct_Proxy_Impl;
 
@@ -222,37 +179,30 @@ protected:
 
 public:
   /// Useful for template programming.
-  typedef ::Bug_2350_Regression _stub_type;
-  typedef ::Bug_2350_Regression_ptr _stub_ptr_type;
-  typedef ::Bug_2350_Regression_var _stub_var_type;
+  using _stub_type = ::Bug_2350_Regression;
+  using _stub_ptr_type = ::Bug_2350_Regression_ptr;
+  using _stub_var_type = ::Bug_2350_Regression_var;
 
-  POA_Bug_2350_Regression (const POA_Bug_2350_Regression& rhs) = default;
-  virtual ~POA_Bug_2350_Regression () = default;
+  POA_Bug_2350_Regression (POA_Bug_2350_Regression const &rhs) = default;
+  ~POA_Bug_2350_Regression () override = default;
 
-  virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
+  ::CORBA::Boolean _is_a (char const *logical_type_id) override;
 
-  virtual void _dispatch (
+  void _dispatch (
       TAO_ServerRequest & req,
-      TAO::Portable_Server::Servant_Upcall *servant_upcall);
-  
-  ::Bug_2350_Regression *_this ();
-  
-  virtual const char* _interface_repository_id () const;
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/operation_sh.cpp:35
+      TAO::Portable_Server::Servant_Upcall *servant_upcall) override;
 
+  ::Bug_2350_Regression *_this ();
+
+  char const *_interface_repository_id () const override;
   virtual void Bug_2350_Regression_excep (
-    const ::user_ExceptionHolder & a) = 0;
+    ::user_ExceptionHolder const & a) = 0;
 
   static void Bug_2350_Regression_excep_skel (
       TAO_ServerRequest &server_request,
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
 };
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/direct_proxy_impl_sh.cpp:23
-
-
 
 ///////////////////////////////////////////////////////////////////////
 //                    Direct  Impl. Declaration
@@ -262,25 +212,18 @@ class TAO_IDL_TEST_STUB_Export _TAO_Bug_2350_Regression_Direct_Proxy_Impl
 {
 public:
   virtual ~_TAO_Bug_2350_Regression_Direct_Proxy_Impl ();
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/proxy_impl_xh.cpp:25
-
   static void
   Bug_2350_Regression_excep (
     TAO_Abstract_ServantBase *servant, TAO::Argument **args);
-  
+
 };
 
 //
 //                Direct  Proxy Impl. Declaration
 ///////////////////////////////////////////////////////////////////////
 
-
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/amh_rh_sh.cpp:49
-
 class POA_TAO_AMH_Bug_2350_RegressionResponseHandler;
-typedef POA_TAO_AMH_Bug_2350_RegressionResponseHandler *POA_TAO_AMH_Bug_2350_RegressionResponseHandler_ptr;
+using POA_TAO_AMH_Bug_2350_RegressionResponseHandler_ptr = POA_TAO_AMH_Bug_2350_RegressionResponseHandler *;
 
 class TAO_IDL_TEST_STUB_Export POA_TAO_AMH_Bug_2350_RegressionResponseHandler
   : public TAO_AMH_Response_Handler,
@@ -289,25 +232,13 @@ class TAO_IDL_TEST_STUB_Export POA_TAO_AMH_Bug_2350_RegressionResponseHandler
 public:
   POA_TAO_AMH_Bug_2350_RegressionResponseHandler () = default;
   virtual ~POA_TAO_AMH_Bug_2350_RegressionResponseHandler () = default;
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/amh_rh_sh.cpp:59
-
   void Bug_2350_Regression_excep () override;
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/amh_rh_sh.cpp:59
-
   void Bug_2350_Regression_excep_excep (
     ::AMH_Bug_2350_RegressionExceptionHolder * holder) override;
 };
 
-
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_sh.cpp:72
-
-
-
 class POA_AMI_Bug_2350_RegressionHandler;
-typedef POA_AMI_Bug_2350_RegressionHandler *POA_AMI_Bug_2350_RegressionHandler_ptr;
+using POA_AMI_Bug_2350_RegressionHandler_ptr = POA_AMI_Bug_2350_RegressionHandler *;
 
 class _TAO_AMI_Bug_2350_RegressionHandler_Direct_Proxy_Impl;
 
@@ -319,34 +250,28 @@ protected:
 
 public:
   /// Useful for template programming.
-  typedef ::AMI_Bug_2350_RegressionHandler _stub_type;
-  typedef ::AMI_Bug_2350_RegressionHandler_ptr _stub_ptr_type;
-  typedef ::AMI_Bug_2350_RegressionHandler_var _stub_var_type;
+  using _stub_type = ::AMI_Bug_2350_RegressionHandler;
+  using _stub_ptr_type = ::AMI_Bug_2350_RegressionHandler_ptr;
+  using _stub_var_type = ::AMI_Bug_2350_RegressionHandler_var;
 
-  POA_AMI_Bug_2350_RegressionHandler (const POA_AMI_Bug_2350_RegressionHandler& rhs) = default;
-  virtual ~POA_AMI_Bug_2350_RegressionHandler () = default;
+  POA_AMI_Bug_2350_RegressionHandler (POA_AMI_Bug_2350_RegressionHandler const &rhs) = default;
+  ~POA_AMI_Bug_2350_RegressionHandler () override = default;
 
-  virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
+  ::CORBA::Boolean _is_a (char const *logical_type_id) override;
 
-  virtual void _dispatch (
+  void _dispatch (
       TAO_ServerRequest & req,
-      TAO::Portable_Server::Servant_Upcall *servant_upcall);
-  
-  ::AMI_Bug_2350_RegressionHandler *_this ();
-  
-  virtual const char* _interface_repository_id () const;
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/operation_sh.cpp:35
+      TAO::Portable_Server::Servant_Upcall *servant_upcall) override;
 
+  ::AMI_Bug_2350_RegressionHandler *_this ();
+
+  char const *_interface_repository_id () const override;
   virtual void Bug_2350_Regression_excep () = 0;
 
   static void Bug_2350_Regression_excep_skel (
       TAO_ServerRequest &server_request,
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/operation_sh.cpp:35
-
   virtual void Bug_2350_Regression_excep_excep (
     ::Messaging::ExceptionHolder * excep_holder) = 0;
 
@@ -355,10 +280,6 @@ public:
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
 };
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/direct_proxy_impl_sh.cpp:23
-
-
 
 ///////////////////////////////////////////////////////////////////////
 //                    Direct  Impl. Declaration
@@ -369,30 +290,21 @@ class TAO_IDL_TEST_STUB_Export _TAO_AMI_Bug_2350_RegressionHandler_Direct_Proxy_
 {
 public:
   virtual ~_TAO_AMI_Bug_2350_RegressionHandler_Direct_Proxy_Impl ();
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/proxy_impl_xh.cpp:25
-
   static void
   Bug_2350_Regression_excep (
     TAO_Abstract_ServantBase *servant, TAO::Argument **args);
-  
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/proxy_impl_xh.cpp:25
 
   static void
   Bug_2350_Regression_excep_excep (
     TAO_Abstract_ServantBase *servant, TAO::Argument **args);
-  
+
 };
 
 //
 //                Direct  Proxy Impl. Declaration
 ///////////////////////////////////////////////////////////////////////
 
-
-
 #include "Bug_2350_RegressionS_T.h"
-
 
 #include /**/ "ace/post.h"
 

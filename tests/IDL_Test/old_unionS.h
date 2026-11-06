@@ -22,11 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:454
-
-#ifndef _TAO_IDL_OLD_UNIONS_WHUYTM_H_
-#define _TAO_IDL_OLD_UNIONS_WHUYTM_H_
+#ifndef _TAO_IDL_OLD_UNIONS_H_
+#define _TAO_IDL_OLD_UNIONS_H_
 
 #include /**/ "ace/pre.h"
 
@@ -52,27 +49,18 @@
 #include "tao/Messaging/AMH_Response_Handler.h"
 
 #include /**/ "TAO_IDL_TEST_stub_export.h"
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_arg_traits.cpp:64
-
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
 
 // Arg traits specializations.
 namespace TAO
 {
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_arg_traits.cpp:298
-
-  
 
 #if !defined (_MESSAGING_EXCEPTIONHOLDER__SARG_TRAITS_)
 #define _MESSAGING_EXCEPTIONHOLDER__SARG_TRAITS_
 
   template<>
-  class SArg_Traits< ::Messaging::ExceptionHolder>
+  class SArg_Traits<::Messaging::ExceptionHolder>
     : public
         Object_SArg_Traits_T<
             ::Messaging::ExceptionHolder *,
@@ -84,13 +72,9 @@ namespace TAO
   };
 
 #endif /* end #if !defined */
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_arg_traits.cpp:931
-
-  
 
   template<>
-  class SArg_Traits< ::OldUnion::Bar>
+  class SArg_Traits<::OldUnion::Bar>
     : public
         Fixed_Size_SArg_Traits_T<
             ::OldUnion::Bar,
@@ -98,13 +82,9 @@ namespace TAO
           >
   {
   };
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_arg_traits.cpp:1041
-
-  
 
   template<>
-  class SArg_Traits< ::OldUnion::Foo>
+  class SArg_Traits<::OldUnion::Foo>
     : public
         Fixed_Size_SArg_Traits_T<
             ::OldUnion::Foo,
@@ -112,13 +92,9 @@ namespace TAO
           >
   {
   };
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_arg_traits.cpp:1041
-
-  
 
   template<>
-  class SArg_Traits< ::OldUnion::Foo2>
+  class SArg_Traits<::OldUnion::Foo2>
     : public
         Fixed_Size_SArg_Traits_T<
             ::OldUnion::Foo2,
@@ -126,16 +102,12 @@ namespace TAO
           >
   {
   };
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_arg_traits.cpp:142
-
-  
 
 #if !defined (_OLDUNION_A__SARG_TRAITS_)
 #define _OLDUNION_A__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits< ::OldUnion::a>
+  class  SArg_Traits<::OldUnion::a>
     : public Object_SArg_Traits_T<
         ::OldUnion::a_ptr,
         ::OldUnion::a_var,
@@ -145,13 +117,9 @@ namespace TAO
   };
 
 #endif /* end #if !defined */
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_arg_traits.cpp:931
-
-  
 
   template<>
-  class SArg_Traits< ::OldUnion::a::astruct>
+  class SArg_Traits<::OldUnion::a::astruct>
     : public
         Fixed_Size_SArg_Traits_T<
             ::OldUnion::a::astruct,
@@ -159,16 +127,12 @@ namespace TAO
           >
   {
   };
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_arg_traits.cpp:298
-
-  
 
 #if !defined (_OLDUNION_AMH_AEXCEPTIONHOLDER__SARG_TRAITS_)
 #define _OLDUNION_AMH_AEXCEPTIONHOLDER__SARG_TRAITS_
 
   template<>
-  class SArg_Traits< ::OldUnion::AMH_aExceptionHolder>
+  class SArg_Traits<::OldUnion::AMH_aExceptionHolder>
     : public
         Object_SArg_Traits_T<
             ::OldUnion::AMH_aExceptionHolder *,
@@ -180,16 +144,12 @@ namespace TAO
   };
 
 #endif /* end #if !defined */
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_arg_traits.cpp:142
-
-  
 
 #if !defined (_OLDUNION_AMI_AHANDLER__SARG_TRAITS_)
 #define _OLDUNION_AMI_AHANDLER__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits< ::OldUnion::AMI_aHandler>
+  class  SArg_Traits<::OldUnion::AMI_aHandler>
     : public Object_SArg_Traits_T<
         ::OldUnion::AMI_aHandler_ptr,
         ::OldUnion::AMI_aHandler_var,
@@ -203,62 +163,44 @@ namespace TAO
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_module/module_sh.cpp:34
-
 namespace POA_OldUnion
 {
-  
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/amh_sh.cpp:45
 
   class AMH_a;
-  typedef AMH_a *AMH_a_ptr;
+  using AMH_a_ptr = AMH_a *;
 
   class TAO_IDL_TEST_STUB_Export AMH_a
     : public virtual PortableServer::ServantBase
   {
   protected:
     AMH_a ();
-  
+
   public:
-    AMH_a (const AMH_a& rhs);
-    virtual ~AMH_a () = default;
+    AMH_a (AMH_a const &rhs);
+    ~AMH_a () override = default;
 
+    ::CORBA::Boolean _is_a (char const *logical_type_id) override;
 
-    virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
-
-    virtual void _dispatch (
+    void _dispatch (
         TAO_ServerRequest &req,
-        TAO::Portable_Server::Servant_Upcall *_servant_upcall);
-    
+        TAO::Portable_Server::Servant_Upcall *_servant_upcall) override;
+
     OldUnion::a *_this ();
 
-  virtual const char* _interface_repository_id () const;
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/amh_sh.cpp:126
-
+  char const *_interface_repository_id () const override;
   static void opA_skel (
       TAO_ServerRequest &_tao_req,
       TAO::Portable_Server::Servant_Upcall *_tao_obj,
       TAO_ServantBase *_tao_servant_upcall);
-    
+
   virtual void opA (
       OldUnion::AMH_aResponseHandler_ptr _tao_rh,
-      const ::OldUnion::a::astruct & b
-    ) = 0;
-  
+      ::OldUnion::a::astruct const & b) = 0;
+
 };
 
-
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_sh.cpp:72
-
-
-
 class a;
-typedef a *a_ptr;
+using a_ptr = a *;
 
 class _TAO_a_Direct_Proxy_Impl;
 
@@ -270,37 +212,30 @@ protected:
 
 public:
   /// Useful for template programming.
-  typedef ::OldUnion::a _stub_type;
-  typedef ::OldUnion::a_ptr _stub_ptr_type;
-  typedef ::OldUnion::a_var _stub_var_type;
+  using _stub_type = ::OldUnion::a;
+  using _stub_ptr_type = ::OldUnion::a_ptr;
+  using _stub_var_type = ::OldUnion::a_var;
 
-  a (const a& rhs) = default;
-  virtual ~a () = default;
+  a (a const &rhs) = default;
+  ~a () override = default;
 
-  virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
+  ::CORBA::Boolean _is_a (char const *logical_type_id) override;
 
-  virtual void _dispatch (
+  void _dispatch (
       TAO_ServerRequest & req,
-      TAO::Portable_Server::Servant_Upcall *servant_upcall);
-  
-  ::OldUnion::a *_this ();
-  
-  virtual const char* _interface_repository_id () const;
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/operation_sh.cpp:35
+      TAO::Portable_Server::Servant_Upcall *servant_upcall) override;
 
+  ::OldUnion::a *_this ();
+
+  char const *_interface_repository_id () const override;
   virtual ::OldUnion::Foo2 opA (
-    const ::OldUnion::a::astruct & b) = 0;
+    ::OldUnion::a::astruct const & b) = 0;
 
   static void opA_skel (
       TAO_ServerRequest &server_request,
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
 };
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/direct_proxy_impl_sh.cpp:23
-
-
 
 ///////////////////////////////////////////////////////////////////////
 //                    Direct  Impl. Declaration
@@ -310,25 +245,18 @@ class TAO_IDL_TEST_STUB_Export _TAO_a_Direct_Proxy_Impl
 {
 public:
   virtual ~_TAO_a_Direct_Proxy_Impl ();
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/proxy_impl_xh.cpp:25
-
   static void
   opA (
     TAO_Abstract_ServantBase *servant, TAO::Argument **args);
-  
+
 };
 
 //
 //                Direct  Proxy Impl. Declaration
 ///////////////////////////////////////////////////////////////////////
 
-
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/amh_rh_sh.cpp:49
-
 class TAO_AMH_aResponseHandler;
-typedef TAO_AMH_aResponseHandler *TAO_AMH_aResponseHandler_ptr;
+using TAO_AMH_aResponseHandler_ptr = TAO_AMH_aResponseHandler *;
 
 class TAO_IDL_TEST_STUB_Export TAO_AMH_aResponseHandler
   : public TAO_AMH_Response_Handler,
@@ -337,26 +265,14 @@ class TAO_IDL_TEST_STUB_Export TAO_AMH_aResponseHandler
 public:
   TAO_AMH_aResponseHandler () = default;
   virtual ~TAO_AMH_aResponseHandler () = default;
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/amh_rh_sh.cpp:59
-
   void opA (
-    const ::OldUnion::Foo2 & return_value) override;
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/amh_rh_sh.cpp:59
-
+    ::OldUnion::Foo2 const & return_value) override;
   void opA_excep (
     ::OldUnion::AMH_aExceptionHolder * holder) override;
 };
 
-
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_sh.cpp:72
-
-
-
 class AMI_aHandler;
-typedef AMI_aHandler *AMI_aHandler_ptr;
+using AMI_aHandler_ptr = AMI_aHandler *;
 
 class _TAO_AMI_aHandler_Direct_Proxy_Impl;
 
@@ -368,35 +284,29 @@ protected:
 
 public:
   /// Useful for template programming.
-  typedef ::OldUnion::AMI_aHandler _stub_type;
-  typedef ::OldUnion::AMI_aHandler_ptr _stub_ptr_type;
-  typedef ::OldUnion::AMI_aHandler_var _stub_var_type;
+  using _stub_type = ::OldUnion::AMI_aHandler;
+  using _stub_ptr_type = ::OldUnion::AMI_aHandler_ptr;
+  using _stub_var_type = ::OldUnion::AMI_aHandler_var;
 
-  AMI_aHandler (const AMI_aHandler& rhs) = default;
-  virtual ~AMI_aHandler () = default;
+  AMI_aHandler (AMI_aHandler const &rhs) = default;
+  ~AMI_aHandler () override = default;
 
-  virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
+  ::CORBA::Boolean _is_a (char const *logical_type_id) override;
 
-  virtual void _dispatch (
+  void _dispatch (
       TAO_ServerRequest & req,
-      TAO::Portable_Server::Servant_Upcall *servant_upcall);
-  
-  ::OldUnion::AMI_aHandler *_this ();
-  
-  virtual const char* _interface_repository_id () const;
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/operation_sh.cpp:35
+      TAO::Portable_Server::Servant_Upcall *servant_upcall) override;
 
+  ::OldUnion::AMI_aHandler *_this ();
+
+  char const *_interface_repository_id () const override;
   virtual void opA (
-    const ::OldUnion::Foo2 & ami_return_val) = 0;
+    ::OldUnion::Foo2 const & ami_return_val) = 0;
 
   static void opA_skel (
       TAO_ServerRequest &server_request,
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/operation_sh.cpp:35
-
   virtual void opA_excep (
     ::Messaging::ExceptionHolder * excep_holder) = 0;
 
@@ -405,10 +315,6 @@ public:
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
 };
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/direct_proxy_impl_sh.cpp:23
-
-
 
 ///////////////////////////////////////////////////////////////////////
 //                    Direct  Impl. Declaration
@@ -419,36 +325,23 @@ class TAO_IDL_TEST_STUB_Export _TAO_AMI_aHandler_Direct_Proxy_Impl
 {
 public:
   virtual ~_TAO_AMI_aHandler_Direct_Proxy_Impl ();
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/proxy_impl_xh.cpp:25
-
   static void
   opA (
     TAO_Abstract_ServantBase *servant, TAO::Argument **args);
-  
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/proxy_impl_xh.cpp:25
 
   static void
   opA_excep (
     TAO_Abstract_ServantBase *servant, TAO::Argument **args);
-  
+
 };
 
 //
 //                Direct  Proxy Impl. Declaration
 ///////////////////////////////////////////////////////////////////////
 
-
-
-
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_module/module_sh.cpp:65
-
 } // module OldUnion
 
 #include "old_unionS_T.h"
-
 
 #include /**/ "ace/post.h"
 

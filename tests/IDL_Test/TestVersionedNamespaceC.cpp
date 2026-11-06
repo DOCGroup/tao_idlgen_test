@@ -22,14 +22,12 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:370
-
-
 #include "TestVersionedNamespaceC.h"
+#include <cstring>
 #include <memory>
 #include "tao/AnyTypeCode/Null_RefCount_Policy.h"
 #include "tao/AnyTypeCode/TypeCode_Constants.h"
+#include "tao/AnyTypeCode/Fixed_TypeCode_Static.h"
 #include "tao/AnyTypeCode/Alias_TypeCode_Static.h"
 #include "tao/AnyTypeCode/Objref_TypeCode_Static.h"
 #include "tao/AnyTypeCode/String_TypeCode_Static.h"
@@ -38,7 +36,6 @@
 #include "tao/AnyTypeCode/Value_TypeCode_Static.h"
 #include "tao/AnyTypeCode/TypeCode_Value_Field.h"
 #include "tao/CDR.h"
-#include <cstring>
 
 #if !defined (__ACE_INLINE__)
 #include "TestVersionedNamespaceC.inl"
@@ -46,16 +43,12 @@
 
 BEGIN_USER_VERSIONED_NAMESPACE
 
-
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_typecode/struct_typecode.cpp:84
-
 static TAO::TypeCode::Struct_Field<
   char const *,
   ::CORBA::TypeCode_ptr const *> const
     _tao_fields_M1_S1[] =
       {
-        { "o", &CORBA::_tc_octet }
+        { "o", std::addressof (CORBA::_tc_octet) }
       };
 
 static TAO::TypeCode::Struct<
@@ -72,18 +65,12 @@ _tao_tc_M1_S1 (
   _tao_fields_M1_S1,
   1);
 
-
 namespace M1
 {
   ::CORBA::TypeCode_ptr const _tc_S1 = std::addressof(_tao_tc_M1_S1);
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_cs.cpp:47
-
-
 
 END_USER_VERSIONED_NAMESPACE
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
@@ -108,18 +95,14 @@ TAO::Objref_Traits<M1::LI>::nil ()
 }
 
 ::CORBA::Boolean
-TAO::Objref_Traits<M1::LI>::marshal (const M1::LI_ptr p,TAO_OutputCDR & cdr)
+TAO::Objref_Traits<M1::LI>::marshal (M1::LI_ptr const p,TAO_OutputCDR & cdr)
 {
   return ::CORBA::Object::marshal (p, cdr);
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
 BEGIN_USER_VERSIONED_NAMESPACE
-
-
-
 
 M1::LI::LI ()
 {}
@@ -161,13 +144,11 @@ M1::LI::_tao_release (LI_ptr obj)
 }
 
 ::CORBA::Boolean
-M1::LI::_is_a (const char *value)
+M1::LI::_is_a (char const *value)
 {
-  if (
-      std::strcmp (value, "IDL:M1/LI:1.0") == 0 ||
+  if (std::strcmp (value, "IDL:M1/LI:1.0") == 0 ||
       std::strcmp (value, "IDL:omg.org/CORBA/LocalObject:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0
-      )
+      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0)
     {
       return true; // success using local knowledge
     }
@@ -177,7 +158,7 @@ M1::LI::_is_a (const char *value)
     }
 }
 
-const char* M1::LI::_interface_repository_id () const
+char const *M1::LI::_interface_repository_id () const
 {
   return "IDL:M1/LI:1.0";
 }
@@ -187,30 +168,23 @@ M1::LI::marshal (TAO_OutputCDR & /* cdr */)
 {
   return false;
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_typecode/objref_typecode.cpp:68
-
 static TAO::TypeCode::Objref<char const *,
                              TAO::Null_RefCount_Policy>
   _tao_tc_M1_LI (
     ::CORBA::tk_local_interface,
     "IDL:M1/LI:1.0",
     "LI");
-  
 
 namespace M1
 {
   ::CORBA::TypeCode_ptr const _tc_LI = std::addressof(_tao_tc_M1_LI);
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_typecode/value_typecode.cpp:63
-
 static TAO::TypeCode::Value_Field<char const *, ::CORBA::TypeCode_ptr const *> const _tao_fields_M1_V[] =
   {
-    { "valString", &CORBA::_tc_string, ::CORBA::PUBLIC_MEMBER },
-    { "valStruct", &M1::_tc_S1, ::CORBA::PUBLIC_MEMBER },
-    { "valLocalIface", &M1::_tc_LI, ::CORBA::PUBLIC_MEMBER }
-    
+    { "valString", std::addressof (CORBA::_tc_string), ::CORBA::PUBLIC_MEMBER },
+    { "valStruct", std::addressof (M1::_tc_S1), ::CORBA::PUBLIC_MEMBER },
+    { "valLocalIface", std::addressof (M1::_tc_LI), ::CORBA::PUBLIC_MEMBER }
+
   };
 static TAO::TypeCode::Value<char const *,
                      ::CORBA::TypeCode_ptr const *,
@@ -221,26 +195,18 @@ static TAO::TypeCode::Value<char const *,
     "IDL:M1/V:1.0",
     "V",
     ::CORBA::VM_NONE,
-    &::CORBA::_tc_null,
+    std::addressof (::CORBA::_tc_null),
     _tao_fields_M1_V,
     3);
-  
 
 namespace M1
 {
   ::CORBA::TypeCode_ptr const _tc_V = std::addressof(_tao_tc_M1_V);
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_cs.cpp:52
-
-
-
 
 END_USER_VERSIONED_NAMESPACE
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
 
 void
 TAO::Value_Traits<M1::V>::add_ref (M1::V * p)
@@ -262,11 +228,7 @@ TAO::Value_Traits<M1::V>::release (M1::V * p)
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
 BEGIN_USER_VERSIONED_NAMESPACE
-
-
-
 
 M1::V *
 M1::V::_downcast (::CORBA::ValueBase *v)
@@ -274,7 +236,7 @@ M1::V::_downcast (::CORBA::ValueBase *v)
   return dynamic_cast<::M1::V *> (v);
 }
 
-const char *
+char const *
 M1::V::_tao_obv_repository_id () const
 {
   return this->_tao_obv_static_repository_id ();
@@ -329,34 +291,30 @@ M1::V::_tao_unmarshal (
         is_null_object,
         is_indirected
       );
-  
+
   ::CORBA::ValueBase_var owner (base);
 
   if (!retval)
     return false;
-  
+
   if (is_null_object)
     return true;
-  
+
   if (!is_indirected && !base->_tao_unmarshal_v (strm))
     return false;
-  
+
   // Now base must point to the unmarshaled object.
   // Align the pointer to the right subobject.
   new_object = V::_downcast (base);
   if (nullptr == new_object)
     return false;
-  
+
   if (is_indirected)
     new_object->_add_ref ();
-  
+
   owner._retn ();
   return true;
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_init_cs.cpp:72
-
-
 
 M1::V_init::V_init ()
 {
@@ -372,7 +330,7 @@ M1::V_init::_downcast (::CORBA::ValueFactoryBase *v)
   return dynamic_cast<::M1::V_init *> (v);
 }
 
-const char*
+char const *
 M1::V_init::tao_repository_id ()
 {
   return ::M1::V::_tao_obv_static_repository_id ();
@@ -388,12 +346,9 @@ M1::V_init::create_for_unmarshal ()
       ::CORBA::NO_MEMORY ());
   return ret_val;
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_obv_cs.cpp:43
-
 OBV_M1::V::V (
-    const char * _tao_init_valString,
-    const ::M1::S1 & _tao_init_valStruct,
+    char const * _tao_init_valString,
+    ::M1::S1 const & _tao_init_valStruct,
     ::M1::LI_ptr _tao_init_valLocalIface)
 {
   valString (_tao_init_valString);
@@ -418,9 +373,6 @@ OBV_M1::V::_copy_value ()
     ::CORBA::NO_MEMORY ());
   return ret_val;
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/field_cs.cpp:825
-
 /// Accessor to set the member.
 void
 OBV_M1::V::valString (char *val)
@@ -430,7 +382,7 @@ OBV_M1::V::valString (char *val)
 
 /// Accessor to set the member.
 void
-OBV_M1::V::valString (const char *val)
+OBV_M1::V::valString (char const *val)
 {
   // Set the value.
   this->_pd_valString = ::CORBA::string_dup (val);
@@ -438,28 +390,25 @@ OBV_M1::V::valString (const char *val)
 
 /// Accessor to set the member.
 void
-OBV_M1::V::valString (const ::CORBA::String_var &val)
+OBV_M1::V::valString (::CORBA::String_var const &val)
 {
   ::CORBA::String_var valString_var = val;
   this->_pd_valString = valString_var._retn ();
 }
 
-const char *
+char const *
 OBV_M1::V::valString () const // get method
 {
   return this->_pd_valString;
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/field_cs.cpp:993
-
 /// Accessor to set the member.
 void
-OBV_M1::V::valStruct (const M1::S1 &val)
+OBV_M1::V::valStruct (M1::S1 const &val)
 {
   this->_pd_valStruct = val;
 }
 /// Readonly get method.
-const M1::S1 &
+M1::S1 const &
 OBV_M1::V::valStruct () const
 {
   return this->_pd_valStruct;
@@ -470,15 +419,12 @@ OBV_M1::V::valStruct ()
 {
   return this->_pd_valStruct;
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/field_cs.cpp:284
-
 /// Accessor to set the member.
 void
 OBV_M1::V::valLocalIface (M1::LI_ptr val)
 {
   this->_pd_valLocalIface =
-    TAO::Objref_Traits< ::M1::LI>::duplicate (val);
+    TAO::Objref_Traits<::M1::LI>::duplicate (val);
 }
 
 /// Retrieve the member.
@@ -488,7 +434,5 @@ OBV_M1::V::valLocalIface () const
   return this->_pd_valLocalIface.in ();
 }
 
-
 END_USER_VERSIONED_NAMESPACE
-
 

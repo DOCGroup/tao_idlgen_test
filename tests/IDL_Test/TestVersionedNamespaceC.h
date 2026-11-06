@@ -22,21 +22,16 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:147
-
-#ifndef _TAO_IDL_TESTVERSIONEDNAMESPACEC_7I6JKY_H_
-#define _TAO_IDL_TESTVERSIONEDNAMESPACEC_7I6JKY_H_
+#ifndef _TAO_IDL_TESTVERSIONEDNAMESPACEC_H_
+#define _TAO_IDL_TESTVERSIONEDNAMESPACEC_H_
 
 #include /**/ "ace/pre.h"
-
 
 #include /**/ "ace/config-all.h"
 
 #if !defined (ACE_LACKS_PRAGMA_ONCE)
 # pragma once
 #endif /* ACE_LACKS_PRAGMA_ONCE */
-
 
 #include "tao/AnyTypeCode/AnyTypeCode_methods.h"
 #include "tao/AnyTypeCode/Any.h"
@@ -69,54 +64,26 @@
 
 BEGIN_USER_VERSIONED_NAMESPACE
 
-
-
 END_USER_VERSIONED_NAMESPACE
-
-
 
 BEGIN_USER_VERSIONED_NAMESPACE
 
-
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_module/module_ch.cpp:34
-
 namespace M1
 {
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_type.cpp:258
-
-  
 
   struct S1;
   using S1_var = ::TAO_Fixed_Var_T<S1>;
   using S1_out = S1&;
 
-  
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_structure/structure_ch.cpp:47
-
-  
-
   struct  S1
   {
-    // TAO_IDL - Generated from
-    // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_type.cpp:297
 
-    
     using _var_type = S1_var;
     using _out_type = S1_out;
-    
+
     ::CORBA::Octet o {};
   };
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_typecode/typecode_decl.cpp:33
-
   extern  ::CORBA::TypeCode_ptr const _tc_S1;
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_interface.cpp:742
-
-  
 
 #if !defined (_M1_LI__VAR_OUT_CH_)
 #define _M1_LI__VAR_OUT_CH_
@@ -128,19 +95,10 @@ namespace M1
 
 #endif /* end #if !defined */
 
-  
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ch.cpp:39
-
-  
-
   class  LI
     : public virtual ::CORBA::Object
   {
   public:
-    // TAO_IDL - Generated from
-    // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_type.cpp:297
-
     using _ptr_type = LI_ptr;
     using _var_type = LI_var;
     using _out_type = LI_out;
@@ -155,41 +113,26 @@ namespace M1
     static LI_ptr _nil ();
 
     virtual void op (
-      const ::M1::S1 & s) = 0;
+      ::M1::S1 const & s) = 0;
 
-    
-    // TAO_IDL - Generated from
-    // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ch.cpp:135
+    ::CORBA::Boolean _is_a (char const *type_id) override;
+    char const *_interface_repository_id () const override;
+    ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
 
-    
-
-    virtual ::CORBA::Boolean _is_a (const char *type_id);
-    virtual const char* _interface_repository_id () const;
-    virtual ::CORBA::Boolean marshal (TAO_OutputCDR &cdr);
-  
   protected:
     // Abstract or local interface only.
     LI ();
 
-    
+    ~LI () override = default;
 
-    virtual ~LI () = default;
-  
   private:
     // Private and unimplemented for concrete interfaces.
-    LI (const LI &) = delete;
+    LI (LI const &) = delete;
     LI (LI &&) = delete;
-    LI &operator= (const LI &) = delete;
+    LI &operator= (LI const &) = delete;
     LI &operator= (LI &&) = delete;
   };
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_typecode/typecode_decl.cpp:33
-
   extern  ::CORBA::TypeCode_ptr const _tc_LI;
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_valuetype.cpp:563
-
-  
 
 #if !defined (_M1_V__VAR_OUT_CH_)
 #define _M1_V__VAR_OUT_CH_
@@ -199,83 +142,60 @@ namespace M1
   using V_out = TAO_Value_Out_T<V>;
 
 #endif /* end #if !defined */
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_ch.cpp:49
-
-  
 
   class  V
     : public virtual ::CORBA::ValueBase
   {
   public:
-    // TAO_IDL - Generated from
-    // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_type.cpp:297
-
     using _ptr_type = V*;
     using _var_type = V_var;
     using _out_type = V_out;
 
     static V* _downcast (::CORBA::ValueBase *v);
-    
+
     /// TAO extensions or internals
     static ::CORBA::Boolean _tao_unmarshal (
         TAO_InputCDR &strm,
         V *&new_object);
-    
-    virtual const char* _tao_obv_repository_id () const;
 
-    virtual void _tao_obv_truncatable_repo_ids (Repository_Id_List &) const;
+    char const * _tao_obv_repository_id () const override;
 
-    static const char* _tao_obv_static_repository_id ();
+    void _tao_obv_truncatable_repo_ids (Repository_Id_List &) const override;
 
-    virtual ::CORBA::TypeCode_ptr _tao_type () const;
-  
+    static char const * _tao_obv_static_repository_id ();
+
+    ::CORBA::TypeCode_ptr _tao_type () const override;
+
   public:
-    // TAO_IDL - Generated from
-    // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/field_ch.cpp:598
-
     virtual void valString (char *val) = 0;
-    virtual void valString (const char *val) = 0;
-    virtual void valString (const ::CORBA::String_var &val) = 0;
-    virtual const char *valString () const = 0;
-  
-  public:
-    // TAO_IDL - Generated from
-    // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/field_ch.cpp:663
+    virtual void valString (char const *val) = 0;
+    virtual void valString (::CORBA::String_var const &val) = 0;
+    virtual char const *valString () const = 0;
 
-    virtual void valStruct (const M1::S1 &) = 0;
-    virtual const M1::S1 &valStruct () const = 0;
+  public:
+    virtual void valStruct (M1::S1 const &) = 0;
+    virtual M1::S1 const &valStruct () const = 0;
     virtual M1::S1 &valStruct () = 0;
-  
-  public:
-    // TAO_IDL - Generated from
-    // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/field_ch.cpp:229
 
+  public:
     virtual void valLocalIface (::M1::LI_ptr) = 0;
     virtual ::M1::LI_ptr valLocalIface () const = 0;
-    // TAO_IDL - Generated from
-    // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_ch.cpp:236
 
-    
-  
   protected:
     V ();
-    virtual ~V ();
+    ~V () override;
 
-    virtual ::CORBA::Boolean _tao_marshal_v (TAO_OutputCDR &) const;
-    virtual ::CORBA::Boolean _tao_unmarshal_v (TAO_InputCDR &);
-    virtual ::CORBA::Boolean _tao_match_formal_type (ptrdiff_t) const;
-    
+    ::CORBA::Boolean _tao_marshal_v (TAO_OutputCDR &) const override;
+    ::CORBA::Boolean _tao_unmarshal_v (TAO_InputCDR &) override;
+    ::CORBA::Boolean _tao_match_formal_type (ptrdiff_t) const override;
+
   private:
-    V (const V &);
-    void operator= (const V &);
-    
-  protected:
-    
-  };
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_init_ch.cpp:56
+    V (V const &);
+    void operator= (V const &);
 
+  protected:
+
+  };
   class  V_init
     : public virtual ::CORBA::ValueFactoryBase
   {
@@ -284,48 +204,29 @@ namespace M1
 
     static V_init* _downcast (::CORBA::ValueFactoryBase *);
 
-    virtual ::CORBA::ValueBase *create_for_unmarshal ();
+    ::CORBA::ValueBase *create_for_unmarshal () override;
 
     // TAO-specific extensions
   public:
-    virtual const char* tao_repository_id ();
-  
+    virtual char const * tao_repository_id ();
+
   protected:
     virtual ~V_init ();
   };
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_typecode/typecode_decl.cpp:33
-
   extern  ::CORBA::TypeCode_ptr const _tc_V;
 
-
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_module/module_ch.cpp:62
-
-
 } // module M1
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_arg_traits.cpp:64
-
-
-
 
 END_USER_VERSIONED_NAMESPACE
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
 
 // Arg traits specializations.
 namespace TAO
 {
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_arg_traits.cpp:931
-
-  
 
   template<>
-  class Arg_Traits< ::M1::S1>
+  class Arg_Traits<::M1::S1>
     : public
         Fixed_Size_Arg_Traits_T<
             ::M1::S1,
@@ -333,16 +234,12 @@ namespace TAO
           >
   {
   };
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_arg_traits.cpp:298
-
-  
 
 #if !defined (_M1_V__ARG_TRAITS_)
 #define _M1_V__ARG_TRAITS_
 
   template<>
-  class Arg_Traits< ::M1::V>
+  class Arg_Traits<::M1::V>
     : public
         Object_Arg_Traits_T<
             ::M1::V *,
@@ -359,20 +256,10 @@ namespace TAO
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
 BEGIN_USER_VERSIONED_NAMESPACE
-
-
-
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/obv_module.cpp:43
 
 namespace OBV_M1
 {
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_obv_ch.cpp:43
-
-  
 
   // OBV_ class
   class  V
@@ -381,53 +268,38 @@ namespace OBV_M1
   {
 
 public:
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/field_ch.cpp:598
-
-  virtual void valString (char *val);
-  virtual void valString (const char *val);
-  virtual void valString (const ::CORBA::String_var &val);
-  virtual const char *valString () const;
+  void valString (char *val) override;
+  void valString (char const *val) override;
+  void valString (::CORBA::String_var const &val) override;
+  char const *valString () const override;
 
 public:
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/field_ch.cpp:663
-
-  virtual void valStruct (const M1::S1 &);
-  virtual const M1::S1 &valStruct () const;
-  virtual M1::S1 &valStruct ();
+  void valStruct (M1::S1 const &) override;
+  M1::S1 const &valStruct () const override;
+  M1::S1 &valStruct () override;
 
 public:
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/field_ch.cpp:229
-
-  virtual void valLocalIface (::M1::LI_ptr);
-  virtual ::M1::LI_ptr valLocalIface () const;
+  void valLocalIface (::M1::LI_ptr) override;
+  ::M1::LI_ptr valLocalIface () const override;
 
 public:
   V () = default;
   V (
-      const char * _tao_init_valString,
-      const ::M1::S1 & _tao_init_valStruct,
+      char const * _tao_init_valString,
+      ::M1::S1 const & _tao_init_valStruct,
       ::M1::LI_ptr _tao_init_valLocalIface
     );
-  virtual ~V ();
+  ~V () override;
 
 public:
-  virtual ::CORBA::ValueBase *_copy_value ();private:
+  ::CORBA::ValueBase *_copy_value () override;private:
     ::TAO::String_Manager _pd_valString {};
     M1::S1 _pd_valStruct {};
     M1::LI_var _pd_valLocalIface {};
   };
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_traits.cpp:58
-
-
-
 
 END_USER_VERSIONED_NAMESPACE
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
@@ -439,7 +311,7 @@ namespace TAO
 #define _M1_LI__TRAITS_
 
   template<>
-  struct  Objref_Traits< ::M1::LI>
+  struct  Objref_Traits<::M1::LI>
   {
     static ::M1::LI_ptr duplicate (::M1::LI_ptr p);
     static void release (::M1::LI_ptr p);
@@ -464,15 +336,7 @@ namespace TAO
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
 BEGIN_USER_VERSIONED_NAMESPACE
-
-
-
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:1644
-
-
 
 END_USER_VERSIONED_NAMESPACE
 

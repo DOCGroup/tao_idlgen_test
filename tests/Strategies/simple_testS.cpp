@@ -22,15 +22,15 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:631
-
-#ifndef _TAO_IDL_SIMPLE_TESTS_JU2V0Q_CPP_
-#define _TAO_IDL_SIMPLE_TESTS_JU2V0Q_CPP_
-
+#ifndef _TAO_IDL_SIMPLE_TESTS_CPP_
+#define _TAO_IDL_SIMPLE_TESTS_CPP_
 
 #include "simple_testS.h"
 #include "tao/PortableServer/Operation_Table_Perfect_Hash.h"
+#include <array>
+#include <cstddef>
+#include <cstring>
+#include <memory>
 #include "tao/PortableServer/Upcall_Command.h"
 #include "tao/PortableServer/Upcall_Wrapper.h"
 #include "tao/TAO_Server_Request.h"
@@ -46,27 +46,23 @@
 #include "tao/PortableInterceptor.h"
 #include "ace/Dynamic_Service.h"
 #include "ace/Malloc_Allocator.h"
-#include <cstring>
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_interface.cpp:1853
 
 class TAO_Simple_Server_Perfect_Hash_OpTable
   : public TAO_Perfect_Hash_OpTable
 {
 private:
-  unsigned int hash (const char *str, unsigned int len) override;
-
+  std::size_t hash (char const *str, std::size_t len) override;
 public:
-  const TAO_operation_db_entry * lookup (const char *str, unsigned int len) override;
+  TAO_operation_db_entry const * lookup (char const *str, std::size_t len) override;
 };
 
-/* C++ code produced by gperf version 2.8 (ACE version) */
-/* Command-line: ace_gperf -m -M -J -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++ -Z TAO_Simple_Server_Perfect_Hash_OpTable -N lookup */
+/* C++ code produced by gperf version 2.8 (ACE version 8.0.8) */
+/* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F nullptr,nullptr -a -o -t -p -K opname -L C++17 -Z TAO_Simple_Server_Perfect_Hash_OpTable -N lookup */
 
-unsigned int
-TAO_Simple_Server_Perfect_Hash_OpTable::hash (const char *str, unsigned int len)
+std::size_t
+TAO_Simple_Server_Perfect_Hash_OpTable::hash (char const *str, std::size_t len)
 {
-  static constexpr unsigned char asso_values[] =
+  static constexpr std::array<unsigned char, 128> asso_values =
     {
      16, 16, 16, 16, 16, 16, 16, 16, 16, 16,
      16, 16, 16, 16, 16, 16, 16, 16, 16, 16,
@@ -82,92 +78,73 @@ TAO_Simple_Server_Perfect_Hash_OpTable::hash (const char *str, unsigned int len)
       0, 16,  0, 16, 16,  0,  0, 16, 16, 16,
      16, 16, 16, 16, 16, 16, 16, 16,
     };
-  return len + asso_values[static_cast<int>(str[len - 1])] + asso_values[static_cast<int>(str[0])];
+  unsigned char const last_char = static_cast<unsigned char> (str[len - 1]);
+  unsigned char const first_char = static_cast<unsigned char> (str[0]);
+  return len + asso_values[last_char % asso_values.size ()] + asso_values[first_char % asso_values.size ()];
 }
 
-const TAO_operation_db_entry *
-TAO_Simple_Server_Perfect_Hash_OpTable::lookup (const char *str, unsigned int len)
+TAO_operation_db_entry const *
+TAO_Simple_Server_Perfect_Hash_OpTable::lookup (char const *str, std::size_t len)
 {
-  enum
-    {
-      TOTAL_KEYWORDS = 7,
-      MIN_WORD_LENGTH = 5,
-      MAX_WORD_LENGTH = 14,
-      MIN_HASH_VALUE = 5,
-      MAX_HASH_VALUE = 15,
-      HASH_VALUE_RANGE = 11,
-      DUPLICATES = 0,
-      WORDLIST_SIZE = 12
-    };
+  constexpr std::size_t MIN_WORD_LENGTH {5};
+  constexpr std::size_t MAX_WORD_LENGTH {14};
+  constexpr int MIN_HASH_VALUE {5};
+  constexpr int MAX_HASH_VALUE {15};
 
-  static const TAO_operation_db_entry wordlist[] =
-    {
-      {"",0,0},{"",0,0},{"",0,0},{"",0,0},{"",0,0},
+  static constexpr std::array<TAO_operation_db_entry, 16> wordlist =
+    {{
+      {"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},
       {"_is_a", std::addressof(TAO_ServantBase::_is_a_thru_poa_skel), nullptr},
-      {"",0,0},{"",0,0},
+      {"",nullptr,nullptr},{"",nullptr,nullptr},
       {"shutdown", std::addressof(POA_Simple_Server::shutdown_skel), nullptr},
-      {"",0,0},
+      {"",nullptr,nullptr},
       {"_component", std::addressof(TAO_ServantBase::_component_thru_poa_skel), nullptr},
-      {"",0,0},
+      {"",nullptr,nullptr},
       {"print_status", std::addressof(POA_Simple_Server::print_status_skel), nullptr},
       {"_non_existent", std::addressof(TAO_ServantBase::_non_existent_thru_poa_skel), nullptr},
       {"_repository_id", std::addressof(TAO_ServantBase::_repository_id_thru_poa_skel), nullptr},
       {"_interface", std::addressof(TAO_ServantBase::_interface_skel), nullptr},
-    };
+    }};
 
   if (len <= MAX_WORD_LENGTH && len >= MIN_WORD_LENGTH)
     {
-      unsigned int const key = hash (str, len);
+      std::size_t const key = hash (str, len);
 
       if (key <= MAX_HASH_VALUE && key >= MIN_HASH_VALUE)
         {
-          const char *s = wordlist[key].opname;
+          char const *s = wordlist[key].opname;
 
-          if (*str == *s && !ACE_OS::strncmp (str + 1, s + 1, len - 1))
-            return &wordlist[key];
+          if (*str == *s && !std::strncmp (str + 1, s + 1, len - 1))
+            return std::addressof (wordlist[key]);
         }
     }
-  return 0;
+  return nullptr;
 }
 
 static TAO_Simple_Server_Perfect_Hash_OpTable tao_Simple_Server_optable;
-
-
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ss.cpp:89
-
-
 
 POA_Simple_Server::POA_Simple_Server ()
 {
   this->optable_ = std::addressof (tao_Simple_Server_optable);
 }
 
-
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/upcall_command_ss.cpp:79
-
-class print_status_Simple_Server
-  : public TAO::Upcall_Command
+class print_status_Simple_Server : public TAO::Upcall_Command
 {
 public:
-  inline print_status_Simple_Server (
-    POA_Simple_Server * servant,
+  inline print_status_Simple_Server (POA_Simple_Server * servant,
     TAO_Operation_Details const * operation_details,
     TAO::Argument * const args[])
     : servant_ (servant)
       , operation_details_ (operation_details)
-      , args_ (args)
-  {
-  }
+      , args_ (args) {}
 
   void execute () override
   {
-    TAO::SArg_Traits< ::ACE_InputCDR::to_boolean>::ret_arg_type retval =
-      TAO::Portable_Server::get_ret_arg< ::ACE_InputCDR::to_boolean> (
+    TAO::SArg_Traits<::ACE_InputCDR::to_boolean>::ret_arg_type retval =
+      TAO::Portable_Server::get_ret_arg<::ACE_InputCDR::to_boolean> (
         this->operation_details_,
         this->args_);
-    
+
     retval =
       this->servant_->print_status ();
   }
@@ -177,22 +154,19 @@ private:
   TAO_Operation_Details const * const operation_details_;
   TAO::Argument * const * const args_;
 };
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/operation_ss.cpp:167
-
 void POA_Simple_Server::print_status_skel (
   TAO_ServerRequest & server_request,
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
-{TAO::SArg_Traits< ::ACE_InputCDR::to_boolean>::ret_val retval;
+{
+  TAO::SArg_Traits<::ACE_InputCDR::to_boolean>::ret_val retval;
 
   TAO::Argument * const args[] =
     {
       std::addressof(retval)
     };
-  
-  POA_Simple_Server * const impl =
-    dynamic_cast<POA_Simple_Server *> (servant);
+
+  POA_Simple_Server * const impl = dynamic_cast<POA_Simple_Server *> (servant);
 
   if (!impl)
     {
@@ -203,7 +177,7 @@ void POA_Simple_Server::print_status_skel (
     impl,
     server_request.operation_details (),
     args);
-  
+
   TAO::Upcall_Wrapper upcall_wrapper;
   upcall_wrapper.upcall (server_request
                          , args
@@ -217,19 +191,11 @@ void POA_Simple_Server::print_status_skel (
                          );
 }
 
-
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/upcall_command_ss.cpp:79
-
-class shutdown_Simple_Server
-  : public TAO::Upcall_Command
+class shutdown_Simple_Server : public TAO::Upcall_Command
 {
 public:
-  inline shutdown_Simple_Server (
-    POA_Simple_Server * servant)
-    : servant_ (servant)
-  {
-  }
+  inline shutdown_Simple_Server (POA_Simple_Server * servant)
+    : servant_ (servant) {}
 
   void execute () override
   {
@@ -239,31 +205,27 @@ public:
 private:
   POA_Simple_Server * const servant_;
 };
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/operation_ss.cpp:167
-
 void POA_Simple_Server::shutdown_skel (
   TAO_ServerRequest & server_request,
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
-{TAO::SArg_Traits< void>::ret_val retval;
+{
+  TAO::SArg_Traits<void>::ret_val retval;
 
   TAO::Argument * const args[] =
     {
       std::addressof(retval)
     };
-  
-  POA_Simple_Server * const impl =
-    dynamic_cast<POA_Simple_Server *> (servant);
+
+  POA_Simple_Server * const impl = dynamic_cast<POA_Simple_Server *> (servant);
 
   if (!impl)
     {
       throw ::CORBA::INTERNAL ();
     }
 
-  shutdown_Simple_Server command (
-    impl);
-  
+  shutdown_Simple_Server command (impl);
+
   TAO::Upcall_Wrapper upcall_wrapper;
   upcall_wrapper.upcall (server_request
                          , args
@@ -277,17 +239,7 @@ void POA_Simple_Server::shutdown_skel (
                          );
 }
 
-
-
-
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ss.cpp:139
-
-
-
-
-
-::CORBA::Boolean POA_Simple_Server::_is_a (const char* value)
+::CORBA::Boolean POA_Simple_Server::_is_a (char const *value)
 {
   return
     (
@@ -296,16 +248,10 @@ void POA_Simple_Server::shutdown_skel (
     );
 }
 
-const char* POA_Simple_Server::_interface_repository_id () const
+char const *POA_Simple_Server::_interface_repository_id () const
 {
   return "IDL:Simple_Server:1.0";
 }
-
-
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ss.cpp:378
-
-
 
 void POA_Simple_Server::_dispatch (
   TAO_ServerRequest & req,
@@ -314,17 +260,11 @@ void POA_Simple_Server::_dispatch (
   this->synchronous_upcall_dispatch (req, servant_upcall, this);
 }
 
-
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ss.cpp:338
-
-
-
 Simple_Server *
 POA_Simple_Server::_this ()
 {
   TAO_Stub_Auto_Ptr stub (this->_create_stub ());
-  ::CORBA::Boolean const _tao_opt_colloc = stub->servant_orb_var ()->orb_core ()->optimize_collocation_objects ();
+  bool const _tao_opt_colloc = stub->servant_orb_var ()->orb_core ()->optimize_collocation_objects ();
   ::CORBA::Object_var obj = new (std::nothrow) ::CORBA::Object (stub.get (), _tao_opt_colloc, this);
   if (obj.ptr ())
     {

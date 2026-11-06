@@ -24,15 +24,9 @@
 
 #include <memory>
 #include <new>
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union/union_ci.cpp:35
-
 // *************************************************************
 // Inline operations for union OldUnion2::Foo
 // *************************************************************
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union/discriminant_ci.cpp:195
-
 ACE_INLINE
 void
 OldUnion2::Foo::_default ()
@@ -40,8 +34,6 @@ OldUnion2::Foo::_default ()
   this->_reset ();
   this->disc_ = static_cast <OldUnion2::FooDisc> (-1);
 }
-
-
 
 ACE_INLINE
 unsigned long
@@ -80,9 +72,6 @@ OldUnion2::Foo::_d () const
 {
   return this->disc_;
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union_branch/public_ci.cpp:606
-
 // Accessor to set the member.
 ACE_INLINE
 void
@@ -106,9 +95,6 @@ OldUnion2::Foo::x () const
     }
   return this->u_.x_;
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union_branch/public_ci.cpp:917
-
 /// Accessor to set the member.
 ACE_INLINE
 void
@@ -123,7 +109,7 @@ OldUnion2::Foo::y (char *val)
 // Accessor to set the member.
 ACE_INLINE
 void
-OldUnion2::Foo::y (const char *val)
+OldUnion2::Foo::y (char const *val)
 {
   // Set the discriminant value.
   this->_reset ();
@@ -135,7 +121,7 @@ OldUnion2::Foo::y (const char *val)
 /// Accessor to set the member.
 ACE_INLINE
 void
-OldUnion2::Foo::y (const ::CORBA::String_var &val)
+OldUnion2::Foo::y (::CORBA::String_var const &val)
 {
   // Set the discriminant value.
   this->_reset ();
@@ -146,7 +132,7 @@ OldUnion2::Foo::y (const ::CORBA::String_var &val)
 }
 
 ACE_INLINE
-const char *
+char const *
 OldUnion2::Foo::y () const // get method
 {
   if (_tao_member_index (this->disc_) != 1UL)
@@ -155,15 +141,9 @@ OldUnion2::Foo::y () const // get method
     }
   return this->u_.y_;
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union/union_ci.cpp:35
-
 // *************************************************************
 // Inline operations for union OldUnion2::Bar::Foo
 // *************************************************************
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union/discriminant_ci.cpp:195
-
 ACE_INLINE
 void
 OldUnion2::Bar::Foo::_default ()
@@ -171,8 +151,6 @@ OldUnion2::Bar::Foo::_default ()
   this->_reset ();
   this->disc_ = static_cast <OldUnion2::Bar::BarDisc> (-1);
 }
-
-
 
 ACE_INLINE
 unsigned long
@@ -211,9 +189,6 @@ OldUnion2::Bar::Foo::_d () const
 {
   return this->disc_;
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union_branch/public_ci.cpp:606
-
 // Accessor to set the member.
 ACE_INLINE
 void
@@ -237,9 +212,6 @@ OldUnion2::Bar::Foo::x () const
     }
   return this->u_.x_;
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union_branch/public_ci.cpp:606
-
 // Accessor to set the member.
 ACE_INLINE
 void

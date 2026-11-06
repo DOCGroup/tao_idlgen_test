@@ -22,11 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:454
-
-#ifndef _TAO_IDL_TESTVERSIONEDNAMESPACE2S_NU8QOP_H_
-#define _TAO_IDL_TESTVERSIONEDNAMESPACE2S_NU8QOP_H_
+#ifndef _TAO_IDL_TESTVERSIONEDNAMESPACE2S_H_
+#define _TAO_IDL_TESTVERSIONEDNAMESPACE2S_H_
 
 #include /**/ "ace/pre.h"
 
@@ -52,29 +49,16 @@
 
 BEGIN_USER_VERSIONED_NAMESPACE
 
-
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_arg_traits.cpp:64
-
-
-
-
 END_USER_VERSIONED_NAMESPACE
 
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
 
 // Arg traits specializations.
 namespace TAO
 {
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_arg_traits.cpp:931
-
-  
 
   template<>
-  class SArg_Traits< ::M1::S1>
+  class SArg_Traits<::M1::S1>
     : public
         Fixed_Size_SArg_Traits_T<
             ::M1::S1,
@@ -82,16 +66,12 @@ namespace TAO
           >
   {
   };
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_arg_traits.cpp:142
-
-  
 
 #if !defined (_M1_LI__SARG_TRAITS_)
 #define _M1_LI__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits< ::M1::LI>
+  class  SArg_Traits<::M1::LI>
     : public Object_SArg_Traits_T<
         ::M1::LI_ptr,
         ::M1::LI_var,
@@ -101,16 +81,12 @@ namespace TAO
   };
 
 #endif /* end #if !defined */
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_arg_traits.cpp:298
-
-  
 
 #if !defined (_M1_AMH_LIEXCEPTIONHOLDER__SARG_TRAITS_)
 #define _M1_AMH_LIEXCEPTIONHOLDER__SARG_TRAITS_
 
   template<>
-  class SArg_Traits< ::M1::AMH_LIExceptionHolder>
+  class SArg_Traits<::M1::AMH_LIExceptionHolder>
     : public
         Object_SArg_Traits_T<
             ::M1::AMH_LIExceptionHolder *,
@@ -122,16 +98,12 @@ namespace TAO
   };
 
 #endif /* end #if !defined */
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_arg_traits.cpp:142
-
-  
 
 #if !defined (_M1_L2__SARG_TRAITS_)
 #define _M1_L2__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits< ::M1::L2>
+  class  SArg_Traits<::M1::L2>
     : public Object_SArg_Traits_T<
         ::M1::L2_ptr,
         ::M1::L2_var,
@@ -141,16 +113,12 @@ namespace TAO
   };
 
 #endif /* end #if !defined */
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_arg_traits.cpp:298
-
-  
 
 #if !defined (_M1_AMH_L2EXCEPTIONHOLDER__SARG_TRAITS_)
 #define _M1_AMH_L2EXCEPTIONHOLDER__SARG_TRAITS_
 
   template<>
-  class SArg_Traits< ::M1::AMH_L2ExceptionHolder>
+  class SArg_Traits<::M1::AMH_L2ExceptionHolder>
     : public
         Object_SArg_Traits_T<
             ::M1::AMH_L2ExceptionHolder *,
@@ -162,13 +130,9 @@ namespace TAO
   };
 
 #endif /* end #if !defined */
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_arg_traits.cpp:931
-
-  
 
   template<>
-  class SArg_Traits< ::M1::X>
+  class SArg_Traits<::M1::X>
     : public
         Var_Size_SArg_Traits_T<
             ::M1::X,
@@ -176,13 +140,9 @@ namespace TAO
           >
   {
   };
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_arg_traits.cpp:1041
-
-  
 
   template<>
-  class SArg_Traits< ::M1::BooleanUnion1>
+  class SArg_Traits<::M1::BooleanUnion1>
     : public
         Var_Size_SArg_Traits_T<
             ::M1::BooleanUnion1,
@@ -190,13 +150,9 @@ namespace TAO
           >
   {
   };
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_arg_traits.cpp:1041
-
-  
 
   template<>
-  class SArg_Traits< ::M1::BooleanUnion2>
+  class SArg_Traits<::M1::BooleanUnion2>
     : public
         Var_Size_SArg_Traits_T<
             ::M1::BooleanUnion2,
@@ -204,16 +160,12 @@ namespace TAO
           >
   {
   };
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_arg_traits.cpp:298
-
-  
 
 #if !defined (_M1_V__SARG_TRAITS_)
 #define _M1_V__SARG_TRAITS_
 
   template<>
-  class SArg_Traits< ::M1::V>
+  class SArg_Traits<::M1::V>
     : public
         Object_SArg_Traits_T<
             ::M1::V *,
@@ -225,13 +177,9 @@ namespace TAO
   };
 
 #endif /* end #if !defined */
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_arg_traits.cpp:931
-
-  
 
   template<>
-  class SArg_Traits< ::M2::M3::S2>
+  class SArg_Traits<::M2::M3::S2>
     : public
         Fixed_Size_SArg_Traits_T<
             ::M2::M3::S2,
@@ -239,16 +187,12 @@ namespace TAO
           >
   {
   };
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_arg_traits.cpp:142
-
-  
 
 #if !defined (_M2_M3_L3__SARG_TRAITS_)
 #define _M2_M3_L3__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits< ::M2::M3::L3>
+  class  SArg_Traits<::M2::M3::L3>
     : public Object_SArg_Traits_T<
         ::M2::M3::L3_ptr,
         ::M2::M3::L3_var,
@@ -258,16 +202,12 @@ namespace TAO
   };
 
 #endif /* end #if !defined */
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_arg_traits.cpp:298
-
-  
 
 #if !defined (_M2_M3_AMH_L3EXCEPTIONHOLDER__SARG_TRAITS_)
 #define _M2_M3_AMH_L3EXCEPTIONHOLDER__SARG_TRAITS_
 
   template<>
-  class SArg_Traits< ::M2::M3::AMH_L3ExceptionHolder>
+  class SArg_Traits<::M2::M3::AMH_L3ExceptionHolder>
     : public
         Object_SArg_Traits_T<
             ::M2::M3::AMH_L3ExceptionHolder *,
@@ -279,16 +219,12 @@ namespace TAO
   };
 
 #endif /* end #if !defined */
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_arg_traits.cpp:142
-
-  
 
 #if !defined (_M2_M3_L4__SARG_TRAITS_)
 #define _M2_M3_L4__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits< ::M2::M3::L4>
+  class  SArg_Traits<::M2::M3::L4>
     : public Object_SArg_Traits_T<
         ::M2::M3::L4_ptr,
         ::M2::M3::L4_var,
@@ -298,16 +234,12 @@ namespace TAO
   };
 
 #endif /* end #if !defined */
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_arg_traits.cpp:298
-
-  
 
 #if !defined (_M2_M3_AMH_L4EXCEPTIONHOLDER__SARG_TRAITS_)
 #define _M2_M3_AMH_L4EXCEPTIONHOLDER__SARG_TRAITS_
 
   template<>
-  class SArg_Traits< ::M2::M3::AMH_L4ExceptionHolder>
+  class SArg_Traits<::M2::M3::AMH_L4ExceptionHolder>
     : public
         Object_SArg_Traits_T<
             ::M2::M3::AMH_L4ExceptionHolder *,
@@ -319,16 +251,12 @@ namespace TAO
   };
 
 #endif /* end #if !defined */
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_arg_traits.cpp:298
-
-  
 
 #if !defined (_M2_M3_V2__SARG_TRAITS_)
 #define _M2_M3_V2__SARG_TRAITS_
 
   template<>
-  class SArg_Traits< ::M2::M3::V2>
+  class SArg_Traits<::M2::M3::V2>
     : public
         Object_SArg_Traits_T<
             ::M2::M3::V2 *,
@@ -340,16 +268,12 @@ namespace TAO
   };
 
 #endif /* end #if !defined */
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_arg_traits.cpp:298
-
-  
 
 #if !defined (_M2_M3_V3__SARG_TRAITS_)
 #define _M2_M3_V3__SARG_TRAITS_
 
   template<>
-  class SArg_Traits< ::M2::M3::V3>
+  class SArg_Traits<::M2::M3::V3>
     : public
         Object_SArg_Traits_T<
             ::M2::M3::V3 *,
@@ -365,66 +289,46 @@ namespace TAO
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
 BEGIN_USER_VERSIONED_NAMESPACE
-
-
-
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_module/module_sh.cpp:34
 
 namespace POA_M1
 {
-  
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/amh_sh.cpp:45
 
   class AMH_LI;
-  typedef AMH_LI *AMH_LI_ptr;
+  using AMH_LI_ptr = AMH_LI *;
 
   class  AMH_LI
     : public virtual PortableServer::ServantBase
   {
   protected:
     AMH_LI ();
-  
+
   public:
-    AMH_LI (const AMH_LI& rhs);
-    virtual ~AMH_LI () = default;
+    AMH_LI (AMH_LI const &rhs);
+    ~AMH_LI () override = default;
 
+    ::CORBA::Boolean _is_a (char const *logical_type_id) override;
 
-    virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
-
-    virtual void _dispatch (
+    void _dispatch (
         TAO_ServerRequest &req,
-        TAO::Portable_Server::Servant_Upcall *_servant_upcall);
-    
+        TAO::Portable_Server::Servant_Upcall *_servant_upcall) override;
+
     M1::LI *_this ();
 
-  virtual const char* _interface_repository_id () const;
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/amh_sh.cpp:126
-
+  char const *_interface_repository_id () const override;
   static void op_skel (
       TAO_ServerRequest &_tao_req,
       TAO::Portable_Server::Servant_Upcall *_tao_obj,
       TAO_ServantBase *_tao_servant_upcall);
-    
+
   virtual void op (
       M1::AMH_LIResponseHandler_ptr _tao_rh,
-      const ::M1::S1 & s
-    ) = 0;
-  
+      ::M1::S1 const & s) = 0;
+
 };
 
-
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_sh.cpp:72
-
-
-
 class LI;
-typedef LI *LI_ptr;
+using LI_ptr = LI *;
 
 class  LI
   : public virtual PortableServer::ServantBase
@@ -434,38 +338,32 @@ protected:
 
 public:
   /// Useful for template programming.
-  typedef ::M1::LI _stub_type;
-  typedef ::M1::LI_ptr _stub_ptr_type;
-  typedef ::M1::LI_var _stub_var_type;
+  using _stub_type = ::M1::LI;
+  using _stub_ptr_type = ::M1::LI_ptr;
+  using _stub_var_type = ::M1::LI_var;
 
-  LI (const LI& rhs) = default;
-  virtual ~LI () = default;
+  LI (LI const &rhs) = default;
+  ~LI () override = default;
 
-  virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
+  ::CORBA::Boolean _is_a (char const *logical_type_id) override;
 
-  virtual void _dispatch (
+  void _dispatch (
       TAO_ServerRequest & req,
-      TAO::Portable_Server::Servant_Upcall *servant_upcall);
-  
-  ::M1::LI *_this ();
-  
-  virtual const char* _interface_repository_id () const;
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/operation_sh.cpp:35
+      TAO::Portable_Server::Servant_Upcall *servant_upcall) override;
 
+  ::M1::LI *_this ();
+
+  char const *_interface_repository_id () const override;
   virtual void op (
-    const ::M1::S1 & s) = 0;
+    ::M1::S1 const & s) = 0;
 
   static void op_skel (
       TAO_ServerRequest &server_request,
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
 };
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/amh_rh_sh.cpp:49
-
 class TAO_AMH_LIResponseHandler;
-typedef TAO_AMH_LIResponseHandler *TAO_AMH_LIResponseHandler_ptr;
+using TAO_AMH_LIResponseHandler_ptr = TAO_AMH_LIResponseHandler *;
 
 class  TAO_AMH_LIResponseHandler
   : public TAO_AMH_Response_Handler,
@@ -474,21 +372,12 @@ class  TAO_AMH_LIResponseHandler
 public:
   TAO_AMH_LIResponseHandler () = default;
   virtual ~TAO_AMH_LIResponseHandler () = default;
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/amh_rh_sh.cpp:59
-
   void op () override;
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/amh_rh_sh.cpp:59
-
   void op_excep (
     ::M1::AMH_LIExceptionHolder * holder) override;
 };
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/amh_sh.cpp:45
-
 class AMH_L2;
-typedef AMH_L2 *AMH_L2_ptr;
+using AMH_L2_ptr = AMH_L2 *;
 
 class  AMH_L2
   : public virtual PortableServer::ServantBase
@@ -497,42 +386,31 @@ protected:
   AMH_L2 ();
 
 public:
-  AMH_L2 (const AMH_L2& rhs);
-  virtual ~AMH_L2 () = default;
+  AMH_L2 (AMH_L2 const &rhs);
+  ~AMH_L2 () override = default;
 
+  ::CORBA::Boolean _is_a (char const *logical_type_id) override;
 
-  virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
-
-  virtual void _dispatch (
+  void _dispatch (
       TAO_ServerRequest &req,
-      TAO::Portable_Server::Servant_Upcall *_servant_upcall);
-  
+      TAO::Portable_Server::Servant_Upcall *_servant_upcall) override;
+
   M1::L2 *_this ();
 
-virtual const char* _interface_repository_id () const;
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/amh_sh.cpp:126
-
+char const *_interface_repository_id () const override;
 static void op_skel (
     TAO_ServerRequest &_tao_req,
     TAO::Portable_Server::Servant_Upcall *_tao_obj,
     TAO_ServantBase *_tao_servant_upcall);
-  
+
 virtual void op (
     M1::AMH_L2ResponseHandler_ptr _tao_rh,
-    const ::M1::S1 & s
-  ) = 0;
+    ::M1::S1 const & s) = 0;
 
 };
 
-
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_sh.cpp:72
-
-
-
 class L2;
-typedef L2 *L2_ptr;
+using L2_ptr = L2 *;
 
 class  L2
   : public virtual PortableServer::ServantBase
@@ -542,38 +420,32 @@ protected:
 
 public:
   /// Useful for template programming.
-  typedef ::M1::L2 _stub_type;
-  typedef ::M1::L2_ptr _stub_ptr_type;
-  typedef ::M1::L2_var _stub_var_type;
+  using _stub_type = ::M1::L2;
+  using _stub_ptr_type = ::M1::L2_ptr;
+  using _stub_var_type = ::M1::L2_var;
 
-  L2 (const L2& rhs) = default;
-  virtual ~L2 () = default;
+  L2 (L2 const &rhs) = default;
+  ~L2 () override = default;
 
-  virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
+  ::CORBA::Boolean _is_a (char const *logical_type_id) override;
 
-  virtual void _dispatch (
+  void _dispatch (
       TAO_ServerRequest & req,
-      TAO::Portable_Server::Servant_Upcall *servant_upcall);
-  
-  ::M1::L2 *_this ();
-  
-  virtual const char* _interface_repository_id () const;
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/operation_sh.cpp:35
+      TAO::Portable_Server::Servant_Upcall *servant_upcall) override;
 
+  ::M1::L2 *_this ();
+
+  char const *_interface_repository_id () const override;
   virtual void op (
-    const ::M1::S1 & s) = 0;
+    ::M1::S1 const & s) = 0;
 
   static void op_skel (
       TAO_ServerRequest &server_request,
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
 };
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/amh_rh_sh.cpp:49
-
 class TAO_AMH_L2ResponseHandler;
-typedef TAO_AMH_L2ResponseHandler *TAO_AMH_L2ResponseHandler_ptr;
+using TAO_AMH_L2ResponseHandler_ptr = TAO_AMH_L2ResponseHandler *;
 
 class  TAO_AMH_L2ResponseHandler
   : public TAO_AMH_Response_Handler,
@@ -582,124 +454,88 @@ class  TAO_AMH_L2ResponseHandler
 public:
   TAO_AMH_L2ResponseHandler () = default;
   virtual ~TAO_AMH_L2ResponseHandler () = default;
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/amh_rh_sh.cpp:59
-
   void op () override;
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/amh_rh_sh.cpp:59
-
   void op_excep (
     ::M1::AMH_L2ExceptionHolder * holder) override;
 };
 
-
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_module/module_sh.cpp:65
-
 } // module M1
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_module/module_sh.cpp:34
-
 namespace POA_M2
 {
-  
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_module/module_sh.cpp:34
 
   namespace M3
   {
-    
-    // TAO_IDL - Generated from
-    // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/amh_sh.cpp:45
 
     class AMH_L3;
-    typedef AMH_L3 *AMH_L3_ptr;
+    using AMH_L3_ptr = AMH_L3 *;
 
     class  AMH_L3
       : public virtual PortableServer::ServantBase
     {
     protected:
       AMH_L3 ();
-    
+
     public:
-      AMH_L3 (const AMH_L3& rhs);
-      virtual ~AMH_L3 () = default;
+      AMH_L3 (AMH_L3 const &rhs);
+      ~AMH_L3 () override = default;
 
+      ::CORBA::Boolean _is_a (char const *logical_type_id) override;
 
-      virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
-
-      virtual void _dispatch (
+      void _dispatch (
           TAO_ServerRequest &req,
-          TAO::Portable_Server::Servant_Upcall *_servant_upcall);
-      
+          TAO::Portable_Server::Servant_Upcall *_servant_upcall) override;
+
       M2::M3::L3 *_this ();
 
-    virtual const char* _interface_repository_id () const;
-    // TAO_IDL - Generated from
-    // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/amh_sh.cpp:126
-
+    char const *_interface_repository_id () const override;
     static void op_skel (
         TAO_ServerRequest &_tao_req,
         TAO::Portable_Server::Servant_Upcall *_tao_obj,
         TAO_ServantBase *_tao_servant_upcall);
-      
+
     virtual void op (
         M2::M3::AMH_L3ResponseHandler_ptr _tao_rh,
-        const ::M2::M3::S2 & s
-      ) = 0;
-    
+        ::M2::M3::S2 const & s) = 0;
+
   };
 
-  
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_sh.cpp:72
-
-  
-
   class L3;
-  typedef L3 *L3_ptr;
+  using L3_ptr = L3 *;
 
   class  L3
     : public virtual PortableServer::ServantBase
   {
   protected:
     L3 ();
-  
+
   public:
     /// Useful for template programming.
-    typedef ::M2::M3::L3 _stub_type;
-    typedef ::M2::M3::L3_ptr _stub_ptr_type;
-    typedef ::M2::M3::L3_var _stub_var_type;
+    using _stub_type = ::M2::M3::L3;
+    using _stub_ptr_type = ::M2::M3::L3_ptr;
+    using _stub_var_type = ::M2::M3::L3_var;
 
-    L3 (const L3& rhs) = default;
-    virtual ~L3 () = default;
+    L3 (L3 const &rhs) = default;
+    ~L3 () override = default;
 
-    virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
+    ::CORBA::Boolean _is_a (char const *logical_type_id) override;
 
-    virtual void _dispatch (
+    void _dispatch (
         TAO_ServerRequest & req,
-        TAO::Portable_Server::Servant_Upcall *servant_upcall);
-    
-    ::M2::M3::L3 *_this ();
-    
-    virtual const char* _interface_repository_id () const;
-    // TAO_IDL - Generated from
-    // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/operation_sh.cpp:35
+        TAO::Portable_Server::Servant_Upcall *servant_upcall) override;
 
+    ::M2::M3::L3 *_this ();
+
+    char const *_interface_repository_id () const override;
     virtual void op (
-      const ::M2::M3::S2 & s) = 0;
+      ::M2::M3::S2 const & s) = 0;
 
     static void op_skel (
         TAO_ServerRequest &server_request,
         TAO::Portable_Server::Servant_Upcall *servant_upcall,
         TAO_ServantBase *servant);
   };
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/amh_rh_sh.cpp:49
-
   class TAO_AMH_L3ResponseHandler;
-  typedef TAO_AMH_L3ResponseHandler *TAO_AMH_L3ResponseHandler_ptr;
+  using TAO_AMH_L3ResponseHandler_ptr = TAO_AMH_L3ResponseHandler *;
 
   class  TAO_AMH_L3ResponseHandler
     : public TAO_AMH_Response_Handler,
@@ -708,65 +544,45 @@ namespace POA_M2
   public:
     TAO_AMH_L3ResponseHandler () = default;
     virtual ~TAO_AMH_L3ResponseHandler () = default;
-    // TAO_IDL - Generated from
-    // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/amh_rh_sh.cpp:59
-
     void op () override;
-    // TAO_IDL - Generated from
-    // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/amh_rh_sh.cpp:59
-
     void op_excep (
       ::M2::M3::AMH_L3ExceptionHolder * holder) override;
   };
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/amh_sh.cpp:45
-
   class AMH_L4;
-  typedef AMH_L4 *AMH_L4_ptr;
+  using AMH_L4_ptr = AMH_L4 *;
 
   class  AMH_L4
     : public virtual PortableServer::ServantBase
   {
   protected:
     AMH_L4 ();
-  
+
   public:
-    AMH_L4 (const AMH_L4& rhs);
-    virtual ~AMH_L4 () = default;
+    AMH_L4 (AMH_L4 const &rhs);
+    ~AMH_L4 () override = default;
 
+    ::CORBA::Boolean _is_a (char const *logical_type_id) override;
 
-    virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
-
-    virtual void _dispatch (
+    void _dispatch (
         TAO_ServerRequest &req,
-        TAO::Portable_Server::Servant_Upcall *_servant_upcall);
-    
+        TAO::Portable_Server::Servant_Upcall *_servant_upcall) override;
+
     M2::M3::L4 *_this ();
 
-  virtual const char* _interface_repository_id () const;
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/amh_sh.cpp:126
-
+  char const *_interface_repository_id () const override;
   static void op_skel (
       TAO_ServerRequest &_tao_req,
       TAO::Portable_Server::Servant_Upcall *_tao_obj,
       TAO_ServantBase *_tao_servant_upcall);
-    
+
   virtual void op (
       M2::M3::AMH_L4ResponseHandler_ptr _tao_rh,
-      const ::M2::M3::S2 & s
-    ) = 0;
-  
+      ::M2::M3::S2 const & s) = 0;
+
 };
 
-
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_sh.cpp:72
-
-
-
 class L4;
-typedef L4 *L4_ptr;
+using L4_ptr = L4 *;
 
 class  L4
   : public virtual PortableServer::ServantBase
@@ -776,38 +592,32 @@ protected:
 
 public:
   /// Useful for template programming.
-  typedef ::M2::M3::L4 _stub_type;
-  typedef ::M2::M3::L4_ptr _stub_ptr_type;
-  typedef ::M2::M3::L4_var _stub_var_type;
+  using _stub_type = ::M2::M3::L4;
+  using _stub_ptr_type = ::M2::M3::L4_ptr;
+  using _stub_var_type = ::M2::M3::L4_var;
 
-  L4 (const L4& rhs) = default;
-  virtual ~L4 () = default;
+  L4 (L4 const &rhs) = default;
+  ~L4 () override = default;
 
-  virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
+  ::CORBA::Boolean _is_a (char const *logical_type_id) override;
 
-  virtual void _dispatch (
+  void _dispatch (
       TAO_ServerRequest & req,
-      TAO::Portable_Server::Servant_Upcall *servant_upcall);
-  
-  ::M2::M3::L4 *_this ();
-  
-  virtual const char* _interface_repository_id () const;
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/operation_sh.cpp:35
+      TAO::Portable_Server::Servant_Upcall *servant_upcall) override;
 
+  ::M2::M3::L4 *_this ();
+
+  char const *_interface_repository_id () const override;
   virtual void op (
-    const ::M2::M3::S2 & s) = 0;
+    ::M2::M3::S2 const & s) = 0;
 
   static void op_skel (
       TAO_ServerRequest &server_request,
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
 };
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/amh_rh_sh.cpp:49
-
 class TAO_AMH_L4ResponseHandler;
-typedef TAO_AMH_L4ResponseHandler *TAO_AMH_L4ResponseHandler_ptr;
+using TAO_AMH_L4ResponseHandler_ptr = TAO_AMH_L4ResponseHandler *;
 
 class  TAO_AMH_L4ResponseHandler
   : public TAO_AMH_Response_Handler,
@@ -816,32 +626,16 @@ class  TAO_AMH_L4ResponseHandler
 public:
   TAO_AMH_L4ResponseHandler () = default;
   virtual ~TAO_AMH_L4ResponseHandler () = default;
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/amh_rh_sh.cpp:59
-
   void op () override;
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/amh_rh_sh.cpp:59
-
   void op_excep (
     ::M2::M3::AMH_L4ExceptionHolder * holder) override;
 };
 
-
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_module/module_sh.cpp:65
-
 } // module M2::M3
-
-
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_module/module_sh.cpp:65
 
 } // module M2
 
 END_USER_VERSIONED_NAMESPACE
-
-
 
 #include /**/ "ace/post.h"
 

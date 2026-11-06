@@ -22,21 +22,16 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:147
-
-#ifndef _TAO_IDL_SIMPLE_TESTC_IY0LC3_H_
-#define _TAO_IDL_SIMPLE_TESTC_IY0LC3_H_
+#ifndef _TAO_IDL_SIMPLE_TESTC_H_
+#define _TAO_IDL_SIMPLE_TESTC_H_
 
 #include /**/ "ace/pre.h"
-
 
 #include /**/ "ace/config-all.h"
 
 #if !defined (ACE_LACKS_PRAGMA_ONCE)
 # pragma once
 #endif /* ACE_LACKS_PRAGMA_ONCE */
-
 
 #include "tao/ORB.h"
 #include "tao/SystemException.h"
@@ -58,25 +53,14 @@
 #if TAO_MAJOR_VERSION != 4 || TAO_MINOR_VERSION != 0 || TAO_MICRO_VERSION != 8
 #error This file should be regenerated with TAO_IDL
 #endif
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_root/root_ch.cpp:155
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
-
 
 namespace TAO
 {
   template<typename T> class Narrow_Utils;
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_interface.cpp:742
-
-
 
 #if !defined (_SIMPLE_SERVER__VAR_OUT_CH_)
 #define _SIMPLE_SERVER__VAR_OUT_CH_
@@ -88,20 +72,11 @@ using Simple_Server_out = TAO_Objref_Out_T<Simple_Server>;
 
 #endif /* end #if !defined */
 
-
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ch.cpp:39
-
-
-
 class  Simple_Server
   : public virtual ::CORBA::Object
 {
 public:
   friend class TAO::Narrow_Utils<Simple_Server>;
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_type.cpp:297
-
   using _ptr_type = Simple_Server_ptr;
   using _var_type = Simple_Server_var;
   using _out_type = Simple_Server_out;
@@ -119,15 +94,9 @@ public:
 
   virtual void shutdown ();
 
-  
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ch.cpp:135
-
-  
-
-  virtual ::CORBA::Boolean _is_a (const char *type_id);
-  virtual const char* _interface_repository_id () const;
-  virtual ::CORBA::Boolean marshal (TAO_OutputCDR &cdr);
+  ::CORBA::Boolean _is_a (char const *type_id) override;
+  char const *_interface_repository_id () const override;
+  ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
 
 protected:
   // Concrete interface only.
@@ -135,7 +104,7 @@ protected:
 
   // Concrete non-local interface only.
   Simple_Server (::IOP::IOR *ior, TAO_ORB_Core *orb_core);
-  
+
   // Non-local interface only.
   Simple_Server (
       TAO_Stub *objref,
@@ -143,36 +112,27 @@ protected:
       TAO_Abstract_ServantBase *servant = nullptr,
       TAO_ORB_Core *orb_core = nullptr);
 
-  virtual ~Simple_Server () = default;
+  ~Simple_Server () override = default;
 
 private:
   // Private and unimplemented for concrete interfaces.
-  Simple_Server (const Simple_Server &) = delete;
+  Simple_Server (Simple_Server const &) = delete;
   Simple_Server (Simple_Server &&) = delete;
-  Simple_Server &operator= (const Simple_Server &) = delete;
+  Simple_Server &operator= (Simple_Server const &) = delete;
   Simple_Server &operator= (Simple_Server &&) = delete;
 };
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_arg_traits.cpp:64
-
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
 
 // Arg traits specializations.
 namespace TAO
 {
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_arg_traits.cpp:142
-
-  
 
 #if !defined (_SIMPLE_SERVER__ARG_TRAITS_)
 #define _SIMPLE_SERVER__ARG_TRAITS_
 
   template<>
-  class  Arg_Traits< ::Simple_Server>
+  class  Arg_Traits<::Simple_Server>
     : public Object_Arg_Traits_T<
         ::Simple_Server_ptr,
         ::Simple_Server_var,
@@ -187,12 +147,6 @@ namespace TAO
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_traits.cpp:58
-
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 // Traits specializations.
@@ -203,7 +157,7 @@ namespace TAO
 #define _SIMPLE_SERVER__TRAITS_
 
   template<>
-  struct  Objref_Traits< ::Simple_Server>
+  struct  Objref_Traits<::Simple_Server>
   {
     static ::Simple_Server_ptr duplicate (::Simple_Server_ptr p);
     static void release (::Simple_Server_ptr p);
@@ -215,24 +169,12 @@ namespace TAO
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
-
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/cdr_op_ch.cpp:40
-
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
- ::CORBA::Boolean operator<< (TAO_OutputCDR &, const Simple_Server_ptr );
+ ::CORBA::Boolean operator<< (TAO_OutputCDR &, Simple_Server_ptr const);
  ::CORBA::Boolean operator>> (TAO_InputCDR &, Simple_Server_ptr &);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:1644
 
 #if defined (__ACE_INLINE__)
 #include "simple_testC.inl"

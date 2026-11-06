@@ -22,11 +22,6 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ci.cpp:58
-
-
-
 ACE_INLINE
 FieldDevice_T::FieldDevice_T (
     TAO_Stub *objref,
@@ -44,23 +39,16 @@ FieldDevice_T::FieldDevice_T (
   : ::CORBA::Object (ior, oc)
 {
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_ci.cpp:43
-
 ACE_INLINE
 AMH_FieldDevice_TExceptionHolder::AMH_FieldDevice_TExceptionHolder ()
   : exception (nullptr)
 {}
 
-ACE_INLINE const char*
+ACE_INLINE char const *
 AMH_FieldDevice_TExceptionHolder::_tao_obv_static_repository_id ()
 {
   return "IDL:AMH_FieldDevice_TExceptionHolder:1.0";
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ci.cpp:58
-
-
 
 ACE_INLINE
 AMI_FieldDevice_THandler::AMI_FieldDevice_THandler (

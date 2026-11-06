@@ -22,24 +22,17 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:370
-
-
 #include "repo_id_modC.h"
+#include <cstring>
 #include <memory>
 #include "tao/CDR.h"
 #include "tao/Messaging/Asynch_Invocation_Adapter.h"
 #include "tao/Messaging/ExceptionHolder_i.h"
 #include "tao/Valuetype/ValueFactory.h"
-#include <cstring>
 
 #if !defined (__ACE_INLINE__)
 #include "repo_id_modC.inl"
 #endif /* !defined INLINE */
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_cs.cpp:47
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
@@ -64,14 +57,12 @@ TAO::Objref_Traits<gleep::schmooze>::nil ()
 }
 
 ::CORBA::Boolean
-TAO::Objref_Traits<gleep::schmooze>::marshal (const gleep::schmooze_ptr p,TAO_OutputCDR & cdr)
+TAO::Objref_Traits<gleep::schmooze>::marshal (gleep::schmooze_ptr const p,TAO_OutputCDR & cdr)
 {
   return ::CORBA::Object::marshal (p, cdr);
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-
 
 gleep::schmooze::schmooze ()
 {}
@@ -120,13 +111,11 @@ gleep::schmooze::_tao_release (schmooze_ptr obj)
 }
 
 ::CORBA::Boolean
-gleep::schmooze::_is_a (const char *value)
+gleep::schmooze::_is_a (char const *value)
 {
-  if (
-      std::strcmp (value, "IDL:gleep_prefix/gleep/schmooze:1.0") == 0 ||
+  if (std::strcmp (value, "IDL:gleep_prefix/gleep/schmooze:1.0") == 0 ||
       std::strcmp (value, "IDL:omg.org/CORBA/LocalObject:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0
-      )
+      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0)
     {
       return true; // success using local knowledge
     }
@@ -136,17 +125,17 @@ gleep::schmooze::_is_a (const char *value)
     }
 }
 
-const char* gleep::schmooze::_interface_repository_id () const
+char const *gleep::schmooze::_interface_repository_id () const
 {
   return "IDL:gleep_prefix/gleep/schmooze:1.0";
 }
 
-const char* gleep::schmooze::_desc_repository_id ()
+char const *gleep::schmooze::_desc_repository_id ()
 {
   return "IDL:gleep_prefix/gleep/schmooze:1.0";
 }
 
-const char* gleep::schmooze::_desc_interface_name ()
+char const *gleep::schmooze::_desc_interface_name ()
 {
   return "schmooze";
 }
@@ -156,9 +145,6 @@ gleep::schmooze::marshal (TAO_OutputCDR & /* cdr */)
 {
   return false;
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_cs.cpp:47
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
@@ -183,14 +169,12 @@ TAO::Objref_Traits<gleep::schmeer>::nil ()
 }
 
 ::CORBA::Boolean
-TAO::Objref_Traits<gleep::schmeer>::marshal (const gleep::schmeer_ptr p,TAO_OutputCDR & cdr)
+TAO::Objref_Traits<gleep::schmeer>::marshal (gleep::schmeer_ptr const p,TAO_OutputCDR & cdr)
 {
   return ::CORBA::Object::marshal (p, cdr);
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-
 
 gleep::schmeer::schmeer ()
 {}
@@ -239,13 +223,11 @@ gleep::schmeer::_tao_release (schmeer_ptr obj)
 }
 
 ::CORBA::Boolean
-gleep::schmeer::_is_a (const char *value)
+gleep::schmeer::_is_a (char const *value)
 {
-  if (
-      std::strcmp (value, "IDL:gleep_prefix/gleep/schmeer:1.0") == 0 ||
+  if (std::strcmp (value, "IDL:gleep_prefix/gleep/schmeer:1.0") == 0 ||
       std::strcmp (value, "IDL:omg.org/CORBA/LocalObject:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0
-      )
+      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0)
     {
       return true; // success using local knowledge
     }
@@ -255,17 +237,17 @@ gleep::schmeer::_is_a (const char *value)
     }
 }
 
-const char* gleep::schmeer::_interface_repository_id () const
+char const *gleep::schmeer::_interface_repository_id () const
 {
   return "IDL:gleep_prefix/gleep/schmeer:1.0";
 }
 
-const char* gleep::schmeer::_desc_repository_id ()
+char const *gleep::schmeer::_desc_repository_id ()
 {
   return "IDL:gleep_prefix/gleep/schmeer:1.0";
 }
 
-const char* gleep::schmeer::_desc_interface_name ()
+char const *gleep::schmeer::_desc_interface_name ()
 {
   return "schmeer";
 }
@@ -275,9 +257,6 @@ gleep::schmeer::marshal (TAO_OutputCDR & /* cdr */)
 {
   return false;
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_cs.cpp:47
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
@@ -302,14 +281,12 @@ TAO::Objref_Traits<gleep::schlemiel>::nil ()
 }
 
 ::CORBA::Boolean
-TAO::Objref_Traits<gleep::schlemiel>::marshal (const gleep::schlemiel_ptr p,TAO_OutputCDR & cdr)
+TAO::Objref_Traits<gleep::schlemiel>::marshal (gleep::schlemiel_ptr const p,TAO_OutputCDR & cdr)
 {
   return ::CORBA::Object::marshal (p, cdr);
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-
 
 gleep::schlemiel::schlemiel ()
 {}
@@ -358,13 +335,11 @@ gleep::schlemiel::_tao_release (schlemiel_ptr obj)
 }
 
 ::CORBA::Boolean
-gleep::schlemiel::_is_a (const char *value)
+gleep::schlemiel::_is_a (char const *value)
 {
-  if (
-      std::strcmp (value, "IDL:gleep_prefix/gleep/schlemiel:1.0") == 0 ||
+  if (std::strcmp (value, "IDL:gleep_prefix/gleep/schlemiel:1.0") == 0 ||
       std::strcmp (value, "IDL:omg.org/CORBA/LocalObject:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0
-      )
+      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0)
     {
       return true; // success using local knowledge
     }
@@ -374,17 +349,17 @@ gleep::schlemiel::_is_a (const char *value)
     }
 }
 
-const char* gleep::schlemiel::_interface_repository_id () const
+char const *gleep::schlemiel::_interface_repository_id () const
 {
   return "IDL:gleep_prefix/gleep/schlemiel:1.0";
 }
 
-const char* gleep::schlemiel::_desc_repository_id ()
+char const *gleep::schlemiel::_desc_repository_id ()
 {
   return "IDL:gleep_prefix/gleep/schlemiel:1.0";
 }
 
-const char* gleep::schlemiel::_desc_interface_name ()
+char const *gleep::schlemiel::_desc_interface_name ()
 {
   return "schlemiel";
 }
@@ -394,9 +369,6 @@ gleep::schlemiel::marshal (TAO_OutputCDR & /* cdr */)
 {
   return false;
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_cs.cpp:47
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
@@ -421,14 +393,12 @@ TAO::Objref_Traits<gleep::spilkis>::nil ()
 }
 
 ::CORBA::Boolean
-TAO::Objref_Traits<gleep::spilkis>::marshal (const gleep::spilkis_ptr p,TAO_OutputCDR & cdr)
+TAO::Objref_Traits<gleep::spilkis>::marshal (gleep::spilkis_ptr const p,TAO_OutputCDR & cdr)
 {
   return ::CORBA::Object::marshal (p, cdr);
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-
 
 gleep::spilkis::spilkis ()
 {}
@@ -477,13 +447,11 @@ gleep::spilkis::_tao_release (spilkis_ptr obj)
 }
 
 ::CORBA::Boolean
-gleep::spilkis::_is_a (const char *value)
+gleep::spilkis::_is_a (char const *value)
 {
-  if (
-      std::strcmp (value, "IDL:gleep_prefix/gleep/spilkis:1.0") == 0 ||
+  if (std::strcmp (value, "IDL:gleep_prefix/gleep/spilkis:1.0") == 0 ||
       std::strcmp (value, "IDL:omg.org/CORBA/LocalObject:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0
-      )
+      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0)
     {
       return true; // success using local knowledge
     }
@@ -493,17 +461,17 @@ gleep::spilkis::_is_a (const char *value)
     }
 }
 
-const char* gleep::spilkis::_interface_repository_id () const
+char const *gleep::spilkis::_interface_repository_id () const
 {
   return "IDL:gleep_prefix/gleep/spilkis:1.0";
 }
 
-const char* gleep::spilkis::_desc_repository_id ()
+char const *gleep::spilkis::_desc_repository_id ()
 {
   return "IDL:gleep_prefix/gleep/spilkis:1.0";
 }
 
-const char* gleep::spilkis::_desc_interface_name ()
+char const *gleep::spilkis::_desc_interface_name ()
 {
   return "spilkis";
 }
@@ -513,9 +481,6 @@ gleep::spilkis::marshal (TAO_OutputCDR & /* cdr */)
 {
   return false;
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_cs.cpp:47
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
@@ -540,14 +505,12 @@ TAO::Objref_Traits<gleep::floop::schmuck>::nil ()
 }
 
 ::CORBA::Boolean
-TAO::Objref_Traits<gleep::floop::schmuck>::marshal (const gleep::floop::schmuck_ptr p,TAO_OutputCDR & cdr)
+TAO::Objref_Traits<gleep::floop::schmuck>::marshal (gleep::floop::schmuck_ptr const p,TAO_OutputCDR & cdr)
 {
   return ::CORBA::Object::marshal (p, cdr);
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-
 
 gleep::floop::schmuck::schmuck ()
 {}
@@ -596,13 +559,11 @@ gleep::floop::schmuck::_tao_release (schmuck_ptr obj)
 }
 
 ::CORBA::Boolean
-gleep::floop::schmuck::_is_a (const char *value)
+gleep::floop::schmuck::_is_a (char const *value)
 {
-  if (
-      std::strcmp (value, "ABRA:cadabra/hocus/pocus:1.23") == 0 ||
+  if (std::strcmp (value, "ABRA:cadabra/hocus/pocus:1.23") == 0 ||
       std::strcmp (value, "IDL:omg.org/CORBA/LocalObject:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0
-      )
+      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0)
     {
       return true; // success using local knowledge
     }
@@ -612,17 +573,17 @@ gleep::floop::schmuck::_is_a (const char *value)
     }
 }
 
-const char* gleep::floop::schmuck::_interface_repository_id () const
+char const *gleep::floop::schmuck::_interface_repository_id () const
 {
   return "ABRA:cadabra/hocus/pocus:1.23";
 }
 
-const char* gleep::floop::schmuck::_desc_repository_id ()
+char const *gleep::floop::schmuck::_desc_repository_id ()
 {
   return "ABRA:cadabra/hocus/pocus:1.23";
 }
 
-const char* gleep::floop::schmuck::_desc_interface_name ()
+char const *gleep::floop::schmuck::_desc_interface_name ()
 {
   return "schmuck";
 }
@@ -632,9 +593,6 @@ gleep::floop::schmuck::marshal (TAO_OutputCDR & /* cdr */)
 {
   return false;
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_cs.cpp:47
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
@@ -659,14 +617,12 @@ TAO::Objref_Traits<gleep::floop::schmendrick>::nil ()
 }
 
 ::CORBA::Boolean
-TAO::Objref_Traits<gleep::floop::schmendrick>::marshal (const gleep::floop::schmendrick_ptr p,TAO_OutputCDR & cdr)
+TAO::Objref_Traits<gleep::floop::schmendrick>::marshal (gleep::floop::schmendrick_ptr const p,TAO_OutputCDR & cdr)
 {
   return ::CORBA::Object::marshal (p, cdr);
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-
 
 gleep::floop::schmendrick::schmendrick ()
 {}
@@ -715,13 +671,11 @@ gleep::floop::schmendrick::_tao_release (schmendrick_ptr obj)
 }
 
 ::CORBA::Boolean
-gleep::floop::schmendrick::_is_a (const char *value)
+gleep::floop::schmendrick::_is_a (char const *value)
 {
-  if (
-      std::strcmp (value, "IDL:floop_prefix/gleep/floop/schmendrick:524.23") == 0 ||
+  if (std::strcmp (value, "IDL:floop_prefix/gleep/floop/schmendrick:524.23") == 0 ||
       std::strcmp (value, "IDL:omg.org/CORBA/LocalObject:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0
-      )
+      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0)
     {
       return true; // success using local knowledge
     }
@@ -731,17 +685,17 @@ gleep::floop::schmendrick::_is_a (const char *value)
     }
 }
 
-const char* gleep::floop::schmendrick::_interface_repository_id () const
+char const *gleep::floop::schmendrick::_interface_repository_id () const
 {
   return "IDL:floop_prefix/gleep/floop/schmendrick:524.23";
 }
 
-const char* gleep::floop::schmendrick::_desc_repository_id ()
+char const *gleep::floop::schmendrick::_desc_repository_id ()
 {
   return "IDL:floop_prefix/gleep/floop/schmendrick:524.23";
 }
 
-const char* gleep::floop::schmendrick::_desc_interface_name ()
+char const *gleep::floop::schmendrick::_desc_interface_name ()
 {
   return "schmendrick";
 }
@@ -751,9 +705,6 @@ gleep::floop::schmendrick::marshal (TAO_OutputCDR & /* cdr */)
 {
   return false;
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_cs.cpp:47
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
@@ -778,14 +729,12 @@ TAO::Objref_Traits<gleep::floop::verklempt::schlemazel>::nil ()
 }
 
 ::CORBA::Boolean
-TAO::Objref_Traits<gleep::floop::verklempt::schlemazel>::marshal (const gleep::floop::verklempt::schlemazel_ptr p,TAO_OutputCDR & cdr)
+TAO::Objref_Traits<gleep::floop::verklempt::schlemazel>::marshal (gleep::floop::verklempt::schlemazel_ptr const p,TAO_OutputCDR & cdr)
 {
   return ::CORBA::Object::marshal (p, cdr);
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-
 
 gleep::floop::verklempt::schlemazel::schlemazel ()
 {}
@@ -834,13 +783,11 @@ gleep::floop::verklempt::schlemazel::_tao_release (schlemazel_ptr obj)
 }
 
 ::CORBA::Boolean
-gleep::floop::verklempt::schlemazel::_is_a (const char *value)
+gleep::floop::verklempt::schlemazel::_is_a (char const *value)
 {
-  if (
-      std::strcmp (value, "IDL:verklempt_prefix/gleep/floop/verklempt/schlemazel:1.0") == 0 ||
+  if (std::strcmp (value, "IDL:verklempt_prefix/gleep/floop/verklempt/schlemazel:1.0") == 0 ||
       std::strcmp (value, "IDL:omg.org/CORBA/LocalObject:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0
-      )
+      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0)
     {
       return true; // success using local knowledge
     }
@@ -850,17 +797,17 @@ gleep::floop::verklempt::schlemazel::_is_a (const char *value)
     }
 }
 
-const char* gleep::floop::verklempt::schlemazel::_interface_repository_id () const
+char const *gleep::floop::verklempt::schlemazel::_interface_repository_id () const
 {
   return "IDL:verklempt_prefix/gleep/floop/verklempt/schlemazel:1.0";
 }
 
-const char* gleep::floop::verklempt::schlemazel::_desc_repository_id ()
+char const *gleep::floop::verklempt::schlemazel::_desc_repository_id ()
 {
   return "IDL:verklempt_prefix/gleep/floop/verklempt/schlemazel:1.0";
 }
 
-const char* gleep::floop::verklempt::schlemazel::_desc_interface_name ()
+char const *gleep::floop::verklempt::schlemazel::_desc_interface_name ()
 {
   return "schlemazel";
 }
@@ -870,9 +817,6 @@ gleep::floop::verklempt::schlemazel::marshal (TAO_OutputCDR & /* cdr */)
 {
   return false;
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_cs.cpp:47
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
@@ -897,14 +841,12 @@ TAO::Objref_Traits<gleep::schmegegging>::nil ()
 }
 
 ::CORBA::Boolean
-TAO::Objref_Traits<gleep::schmegegging>::marshal (const gleep::schmegegging_ptr p,TAO_OutputCDR & cdr)
+TAO::Objref_Traits<gleep::schmegegging>::marshal (gleep::schmegegging_ptr const p,TAO_OutputCDR & cdr)
 {
   return ::CORBA::Object::marshal (p, cdr);
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-
 
 gleep::schmegegging::schmegegging ()
 {}
@@ -953,13 +895,11 @@ gleep::schmegegging::_tao_release (schmegegging_ptr obj)
 }
 
 ::CORBA::Boolean
-gleep::schmegegging::_is_a (const char *value)
+gleep::schmegegging::_is_a (char const *value)
 {
-  if (
-      std::strcmp (value, "IDL:gleep_prefix/gleep/schmegegging:1.0") == 0 ||
+  if (std::strcmp (value, "IDL:gleep_prefix/gleep/schmegegging:1.0") == 0 ||
       std::strcmp (value, "IDL:omg.org/CORBA/LocalObject:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0
-      )
+      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0)
     {
       return true; // success using local knowledge
     }
@@ -969,17 +909,17 @@ gleep::schmegegging::_is_a (const char *value)
     }
 }
 
-const char* gleep::schmegegging::_interface_repository_id () const
+char const *gleep::schmegegging::_interface_repository_id () const
 {
   return "IDL:gleep_prefix/gleep/schmegegging:1.0";
 }
 
-const char* gleep::schmegegging::_desc_repository_id ()
+char const *gleep::schmegegging::_desc_repository_id ()
 {
   return "IDL:gleep_prefix/gleep/schmegegging:1.0";
 }
 
-const char* gleep::schmegegging::_desc_interface_name ()
+char const *gleep::schmegegging::_desc_interface_name ()
 {
   return "schmegegging";
 }

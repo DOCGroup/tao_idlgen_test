@@ -22,11 +22,6 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ci.cpp:58
-
-
-
 ACE_INLINE
 seqTest::seqTest (
     TAO_Stub *objref,
@@ -44,23 +39,16 @@ seqTest::seqTest (
   : ::CORBA::Object (ior, oc)
 {
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_ci.cpp:43
-
 ACE_INLINE
 AMH_seqTestExceptionHolder::AMH_seqTestExceptionHolder ()
   : exception (nullptr)
 {}
 
-ACE_INLINE const char*
+ACE_INLINE char const *
 AMH_seqTestExceptionHolder::_tao_obv_static_repository_id ()
 {
   return "IDL:AMH_seqTestExceptionHolder:1.0";
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ci.cpp:58
-
-
 
 ACE_INLINE
 AMI_seqTestHandler::AMI_seqTestHandler (

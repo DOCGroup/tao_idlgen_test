@@ -22,15 +22,15 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:631
-
-#ifndef _TAO_IDL_TESTS_5O56LK_CPP_
-#define _TAO_IDL_TESTS_5O56LK_CPP_
-
+#ifndef _TAO_IDL_TESTS_CPP_
+#define _TAO_IDL_TESTS_CPP_
 
 #include "TestS.h"
 #include "tao/PortableServer/Operation_Table_Perfect_Hash.h"
+#include <array>
+#include <cstddef>
+#include <cstring>
+#include <memory>
 #include "tao/PortableServer/Upcall_Command.h"
 #include "tao/PortableServer/Upcall_Wrapper.h"
 #include "tao/TAO_Server_Request.h"
@@ -50,27 +50,23 @@
 #include "ace/Auto_Functor.h"
 #include "ace/Dynamic_Service.h"
 #include "ace/Malloc_Allocator.h"
-#include <cstring>
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_interface.cpp:1853
 
 class TAO_Test_AMH_Roundtrip_Perfect_Hash_OpTable
   : public TAO_Perfect_Hash_OpTable
 {
 private:
-  unsigned int hash (const char *str, unsigned int len) override;
-
+  std::size_t hash (char const *str, std::size_t len) override;
 public:
-  const TAO_operation_db_entry * lookup (const char *str, unsigned int len) override;
+  TAO_operation_db_entry const * lookup (char const *str, std::size_t len) override;
 };
 
-/* C++ code produced by gperf version 2.8 (ACE version) */
-/* Command-line: ace_gperf -m -M -J -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++ -Z TAO_Test_AMH_Roundtrip_Perfect_Hash_OpTable -N lookup */
+/* C++ code produced by gperf version 2.8 (ACE version 8.0.8) */
+/* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F nullptr,nullptr -a -o -t -p -K opname -L C++17 -Z TAO_Test_AMH_Roundtrip_Perfect_Hash_OpTable -N lookup */
 
-unsigned int
-TAO_Test_AMH_Roundtrip_Perfect_Hash_OpTable::hash (const char *str, unsigned int len)
+std::size_t
+TAO_Test_AMH_Roundtrip_Perfect_Hash_OpTable::hash (char const *str, std::size_t len)
 {
-  static constexpr unsigned char asso_values[] =
+  static constexpr std::array<unsigned char, 128> asso_values =
     {
      16, 16, 16, 16, 16, 16, 16, 16, 16, 16,
      16, 16, 16, 16, 16, 16, 16, 16, 16, 16,
@@ -86,70 +82,55 @@ TAO_Test_AMH_Roundtrip_Perfect_Hash_OpTable::hash (const char *str, unsigned int
       0, 16, 16, 16, 16,  0,  0, 16, 16, 16,
      16, 16, 16, 16, 16, 16, 16, 16,
     };
-  return len + asso_values[static_cast<int>(str[len - 1])] + asso_values[static_cast<int>(str[0])];
+  unsigned char const last_char = static_cast<unsigned char> (str[len - 1]);
+  unsigned char const first_char = static_cast<unsigned char> (str[0]);
+  return len + asso_values[last_char % asso_values.size ()] + asso_values[first_char % asso_values.size ()];
 }
 
-const TAO_operation_db_entry *
-TAO_Test_AMH_Roundtrip_Perfect_Hash_OpTable::lookup (const char *str, unsigned int len)
+TAO_operation_db_entry const *
+TAO_Test_AMH_Roundtrip_Perfect_Hash_OpTable::lookup (char const *str, std::size_t len)
 {
-  enum
-    {
-      TOTAL_KEYWORDS = 7,
-      MIN_WORD_LENGTH = 5,
-      MAX_WORD_LENGTH = 14,
-      MIN_HASH_VALUE = 5,
-      MAX_HASH_VALUE = 15,
-      HASH_VALUE_RANGE = 11,
-      DUPLICATES = 0,
-      WORDLIST_SIZE = 12
-    };
+  constexpr std::size_t MIN_WORD_LENGTH {5};
+  constexpr std::size_t MAX_WORD_LENGTH {14};
+  constexpr int MIN_HASH_VALUE {5};
+  constexpr int MAX_HASH_VALUE {15};
 
-  static const TAO_operation_db_entry wordlist[] =
-    {
-      {"",0,0},{"",0,0},{"",0,0},{"",0,0},{"",0,0},
+  static constexpr std::array<TAO_operation_db_entry, 16> wordlist =
+    {{
+      {"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},
       {"_is_a", std::addressof(TAO_AMH_Skeletons::_is_a_amh_skel), nullptr},
-      {"",0,0},{"",0,0},
+      {"",nullptr,nullptr},{"",nullptr,nullptr},
       {"shutdown", std::addressof(POA_Test::AMH_Roundtrip::shutdown_skel), nullptr},
-      {"",0,0},
+      {"",nullptr,nullptr},
       {"_component", std::addressof(TAO_AMH_Skeletons::_component_amh_skel), nullptr},
       {"test_method", std::addressof(POA_Test::AMH_Roundtrip::test_method_skel), nullptr},
-      {"",0,0},
+      {"",nullptr,nullptr},
       {"_non_existent", std::addressof(TAO_AMH_Skeletons::_non_existent_amh_skel), nullptr},
       {"_repository_id", std::addressof(TAO_AMH_Skeletons::_repository_id_amh_skel), nullptr},
       {"_interface", std::addressof(TAO_AMH_Skeletons::_interface_amh_skel), nullptr},
-    };
+    }};
 
   if (len <= MAX_WORD_LENGTH && len >= MIN_WORD_LENGTH)
     {
-      unsigned int const key = hash (str, len);
+      std::size_t const key = hash (str, len);
 
       if (key <= MAX_HASH_VALUE && key >= MIN_HASH_VALUE)
         {
-          const char *s = wordlist[key].opname;
+          char const *s = wordlist[key].opname;
 
-          if (*str == *s && !ACE_OS::strncmp (str + 1, s + 1, len - 1))
-            return &wordlist[key];
+          if (*str == *s && !std::strncmp (str + 1, s + 1, len - 1))
+            return std::addressof (wordlist[key]);
         }
     }
-  return 0;
+  return nullptr;
 }
 
 static TAO_Test_AMH_Roundtrip_Perfect_Hash_OpTable tao_Test_AMH_Roundtrip_optable;
-
-
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ss.cpp:89
-
-
 
 POA_Test::AMH_Roundtrip::AMH_Roundtrip ()
 {
   this->optable_ = std::addressof (tao_Test_AMH_Roundtrip_optable);
 }
-
-
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/amh_ss.cpp:303
 
 void
 POA_Test::AMH_Roundtrip::test_method_skel (
@@ -161,7 +142,7 @@ POA_Test::AMH_Roundtrip::test_method_skel (
     dynamic_cast<POA_Test::AMH_Roundtrip *> (_tao_servant);
   if (!_tao_impl)
     throw ::CORBA::INTERNAL ();
-  
+
   ::Test::Timestamp send_time;
   TAO_InputCDR & _tao_in = *_tao_server_request.incoming ();
 
@@ -169,36 +150,31 @@ POA_Test::AMH_Roundtrip::test_method_skel (
       (_tao_in >> send_time)
     ))
     throw ::CORBA::MARSHAL();
-  
+
   TAO_ORB_Core *orb_core =
     _tao_server_request.orb ()->orb_core ();
-  
+
   TAO_AMH_BUFFER_ALLOCATOR* amh_allocator =
     orb_core->lane_resources ().amh_response_handler_allocator ();
-  
+
   TAO::TAO_Buffer_Allocator<
       POA_Test::TAO_AMH_RoundtripResponseHandler,
       TAO_AMH_BUFFER_ALLOCATOR
     > buffer_allocator (amh_allocator);
-  
-  POA_Test::TAO_AMH_RoundtripResponseHandler_ptr _tao_rh_ptr = 
-    buffer_allocator.allocate();
-  
-  if (!_tao_rh_ptr) 
+
+  POA_Test::TAO_AMH_RoundtripResponseHandler_ptr _tao_rh_ptr = buffer_allocator.allocate();
+  if (!_tao_rh_ptr)
     throw ::CORBA::NO_MEMORY ();
-  
+
   _tao_rh_ptr->init (_tao_server_request, amh_allocator);
-  
+
   ACE_Utils::Auto_Functor <POA_Test::TAO_AMH_RoundtripResponseHandler, TAO::ARH_Refcount_Functor> safe_rd_(_tao_rh_ptr);
-  
+
   _tao_impl->test_method (
       safe_rd_.get (),
       send_time
     );
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/amh_ss.cpp:303
-
 void
 POA_Test::AMH_Roundtrip::shutdown_skel (
     TAO_ServerRequest & _tao_server_request,
@@ -209,42 +185,32 @@ POA_Test::AMH_Roundtrip::shutdown_skel (
     dynamic_cast<POA_Test::AMH_Roundtrip *> (_tao_servant);
   if (!_tao_impl)
     throw ::CORBA::INTERNAL ();
-  
+
   TAO_ORB_Core *orb_core =
     _tao_server_request.orb ()->orb_core ();
-  
+
   TAO_AMH_BUFFER_ALLOCATOR* amh_allocator =
     orb_core->lane_resources ().amh_response_handler_allocator ();
-  
+
   TAO::TAO_Buffer_Allocator<
       POA_Test::TAO_AMH_RoundtripResponseHandler,
       TAO_AMH_BUFFER_ALLOCATOR
     > buffer_allocator (amh_allocator);
-  
-  POA_Test::TAO_AMH_RoundtripResponseHandler_ptr _tao_rh_ptr = 
-    buffer_allocator.allocate();
-  
-  if (!_tao_rh_ptr) 
+
+  POA_Test::TAO_AMH_RoundtripResponseHandler_ptr _tao_rh_ptr = buffer_allocator.allocate();
+  if (!_tao_rh_ptr)
     throw ::CORBA::NO_MEMORY ();
-  
+
   _tao_rh_ptr->init (_tao_server_request, amh_allocator);
-  
+
   ACE_Utils::Auto_Functor <POA_Test::TAO_AMH_RoundtripResponseHandler, TAO::ARH_Refcount_Functor> safe_rd_(_tao_rh_ptr);
-  
+
   _tao_impl->shutdown (
       safe_rd_.get ()
     );
 }
 
-
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ss.cpp:139
-
-
-
-
-
-::CORBA::Boolean POA_Test::AMH_Roundtrip::_is_a (const char* value)
+::CORBA::Boolean POA_Test::AMH_Roundtrip::_is_a (char const *value)
 {
   return
     (
@@ -253,13 +219,10 @@ POA_Test::AMH_Roundtrip::shutdown_skel (
     );
 }
 
-const char* POA_Test::AMH_Roundtrip::_interface_repository_id () const
+char const *POA_Test::AMH_Roundtrip::_interface_repository_id () const
 {
   return "IDL:Test/Roundtrip:1.0";
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/amh_ss.cpp:106
-
 void
 POA_Test::AMH_Roundtrip::_dispatch (
     TAO_ServerRequest &req,
@@ -267,43 +230,37 @@ POA_Test::AMH_Roundtrip::_dispatch (
 {
   this->asynchronous_upcall_dispatch (req,context,this);
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/amh_ss.cpp:64
-
 Test::Roundtrip*
 POA_Test::AMH_Roundtrip::_this ()
 {
   TAO_Stub_Auto_Ptr stub (this->_create_stub ());
-  ::CORBA::Boolean _tao_opt_colloc = stub->servant_orb_var ()->orb_core ()->optimize_collocation_objects ();
+  bool const _tao_opt_colloc = stub->servant_orb_var ()->orb_core ()->optimize_collocation_objects ();
   ::CORBA::Object_var obj = new (std::nothrow) ::CORBA::Object (stub.get (), _tao_opt_colloc, this);
   if (obj.ptr ())
     {
       (void) stub.release ();
       return TAO::Narrow_Utils<::Test::Roundtrip>::unchecked_narrow (obj.in ());
-      
+
     }
   return {};
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_interface.cpp:1853
 
 class TAO_Test_Roundtrip_Perfect_Hash_OpTable
   : public TAO_Perfect_Hash_OpTable
 {
 private:
-  unsigned int hash (const char *str, unsigned int len) override;
-
+  std::size_t hash (char const *str, std::size_t len) override;
 public:
-  const TAO_operation_db_entry * lookup (const char *str, unsigned int len) override;
+  TAO_operation_db_entry const * lookup (char const *str, std::size_t len) override;
 };
 
-/* C++ code produced by gperf version 2.8 (ACE version) */
-/* Command-line: ace_gperf -m -M -J -c -C -D -E -T -f 0 -F 0,0 -a -o -t -p -K opname -L C++ -Z TAO_Test_Roundtrip_Perfect_Hash_OpTable -N lookup */
+/* C++ code produced by gperf version 2.8 (ACE version 8.0.8) */
+/* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F nullptr,nullptr -a -o -t -p -K opname -L C++17 -Z TAO_Test_Roundtrip_Perfect_Hash_OpTable -N lookup */
 
-unsigned int
-TAO_Test_Roundtrip_Perfect_Hash_OpTable::hash (const char *str, unsigned int len)
+std::size_t
+TAO_Test_Roundtrip_Perfect_Hash_OpTable::hash (char const *str, std::size_t len)
 {
-  static constexpr unsigned char asso_values[] =
+  static constexpr std::array<unsigned char, 128> asso_values =
     {
      16, 16, 16, 16, 16, 16, 16, 16, 16, 16,
      16, 16, 16, 16, 16, 16, 16, 16, 16, 16,
@@ -319,140 +276,116 @@ TAO_Test_Roundtrip_Perfect_Hash_OpTable::hash (const char *str, unsigned int len
       0, 16, 16, 16, 16,  0,  0, 16, 16, 16,
      16, 16, 16, 16, 16, 16, 16, 16,
     };
-  return len + asso_values[static_cast<int>(str[len - 1])] + asso_values[static_cast<int>(str[0])];
+  unsigned char const last_char = static_cast<unsigned char> (str[len - 1]);
+  unsigned char const first_char = static_cast<unsigned char> (str[0]);
+  return len + asso_values[last_char % asso_values.size ()] + asso_values[first_char % asso_values.size ()];
 }
 
-const TAO_operation_db_entry *
-TAO_Test_Roundtrip_Perfect_Hash_OpTable::lookup (const char *str, unsigned int len)
+TAO_operation_db_entry const *
+TAO_Test_Roundtrip_Perfect_Hash_OpTable::lookup (char const *str, std::size_t len)
 {
-  enum
-    {
-      TOTAL_KEYWORDS = 7,
-      MIN_WORD_LENGTH = 5,
-      MAX_WORD_LENGTH = 14,
-      MIN_HASH_VALUE = 5,
-      MAX_HASH_VALUE = 15,
-      HASH_VALUE_RANGE = 11,
-      DUPLICATES = 0,
-      WORDLIST_SIZE = 12
-    };
+  constexpr std::size_t MIN_WORD_LENGTH {5};
+  constexpr std::size_t MAX_WORD_LENGTH {14};
+  constexpr int MIN_HASH_VALUE {5};
+  constexpr int MAX_HASH_VALUE {15};
 
-  static const TAO_operation_db_entry wordlist[] =
-    {
-      {"",0,0},{"",0,0},{"",0,0},{"",0,0},{"",0,0},
+  static constexpr std::array<TAO_operation_db_entry, 16> wordlist =
+    {{
+      {"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},
       {"_is_a", std::addressof(TAO_ServantBase::_is_a_thru_poa_skel), nullptr},
-      {"",0,0},{"",0,0},
+      {"",nullptr,nullptr},{"",nullptr,nullptr},
       {"shutdown", std::addressof(POA_Test::Roundtrip::shutdown_skel), nullptr},
-      {"",0,0},
+      {"",nullptr,nullptr},
       {"_component", std::addressof(TAO_ServantBase::_component_thru_poa_skel), nullptr},
       {"test_method", std::addressof(POA_Test::Roundtrip::test_method_skel), nullptr},
-      {"",0,0},
+      {"",nullptr,nullptr},
       {"_non_existent", std::addressof(TAO_ServantBase::_non_existent_thru_poa_skel), nullptr},
       {"_repository_id", std::addressof(TAO_ServantBase::_repository_id_thru_poa_skel), nullptr},
       {"_interface", std::addressof(TAO_ServantBase::_interface_skel), nullptr},
-    };
+    }};
 
   if (len <= MAX_WORD_LENGTH && len >= MIN_WORD_LENGTH)
     {
-      unsigned int const key = hash (str, len);
+      std::size_t const key = hash (str, len);
 
       if (key <= MAX_HASH_VALUE && key >= MIN_HASH_VALUE)
         {
-          const char *s = wordlist[key].opname;
+          char const *s = wordlist[key].opname;
 
-          if (*str == *s && !ACE_OS::strncmp (str + 1, s + 1, len - 1))
-            return &wordlist[key];
+          if (*str == *s && !std::strncmp (str + 1, s + 1, len - 1))
+            return std::addressof (wordlist[key]);
         }
     }
-  return 0;
+  return nullptr;
 }
 
 static TAO_Test_Roundtrip_Perfect_Hash_OpTable tao_Test_Roundtrip_optable;
-
-
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ss.cpp:89
-
-
 
 POA_Test::Roundtrip::Roundtrip ()
 {
   this->optable_ = std::addressof (tao_Test_Roundtrip_optable);
 }
 
-
 namespace POA_Test
 {
-  
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/upcall_command_ss.cpp:79
 
-  class test_method_Roundtrip
-    : public TAO::Upcall_Command
+  class test_method_Roundtrip : public TAO::Upcall_Command
   {
   public:
-    inline test_method_Roundtrip (
-      POA_Test::Roundtrip * servant,
+    inline test_method_Roundtrip (POA_Test::Roundtrip * servant,
       TAO_Operation_Details const * operation_details,
       TAO::Argument * const args[])
       : servant_ (servant)
         , operation_details_ (operation_details)
-        , args_ (args)
-    {
-    }
+        , args_ (args) {}
 
     void execute () override
     {
-      TAO::SArg_Traits< ::CORBA::ULongLong>::ret_arg_type retval =
-        TAO::Portable_Server::get_ret_arg< ::CORBA::ULongLong> (
+      TAO::SArg_Traits<::CORBA::ULongLong>::ret_arg_type retval =
+        TAO::Portable_Server::get_ret_arg<::CORBA::ULongLong> (
           this->operation_details_,
           this->args_);
-      
-      TAO::SArg_Traits< ::CORBA::ULongLong>::in_arg_type arg_1 =
-        TAO::Portable_Server::get_in_arg< ::CORBA::ULongLong> (
+
+      TAO::SArg_Traits<::CORBA::ULongLong>::in_arg_type arg_1 =
+        TAO::Portable_Server::get_in_arg<::CORBA::ULongLong> (
           this->operation_details_,
           this->args_,
           1);
-        
+
       retval =
         this->servant_->test_method (
           arg_1);
     }
-  
+
   private:
     POA_Test::Roundtrip * const servant_;
     TAO_Operation_Details const * const operation_details_;
     TAO::Argument * const * const args_;
   };
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/operation_ss.cpp:167
-
 void POA_Test::Roundtrip::test_method_skel (
   TAO_ServerRequest & server_request,
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
 {
 #if TAO_HAS_INTERCEPTORS == 1
-  static ::CORBA::TypeCode_ptr const exceptions[] = 
+  static ::CORBA::TypeCode_ptr const exceptions[] =
     {
       Test::_tc_InvalidTimestamp,
       Test::_tc_ServerOverload
     };
-  
 #endif /* TAO_HAS_INTERCEPTORS */
 
-  TAO::SArg_Traits< ::CORBA::ULongLong>::ret_val retval;
-  TAO::SArg_Traits< ::CORBA::ULongLong>::in_arg_val _tao_send_time;
+  TAO::SArg_Traits<::CORBA::ULongLong>::ret_val retval;
+  TAO::SArg_Traits<::CORBA::ULongLong>::in_arg_val _tao_send_time;
 
   TAO::Argument * const args[] =
     {
       std::addressof(retval),
       std::addressof(_tao_send_time)
     };
-  
-  POA_Test::Roundtrip * const impl =
-    dynamic_cast<POA_Test::Roundtrip *> (servant);
+
+  POA_Test::Roundtrip * const impl = dynamic_cast<POA_Test::Roundtrip *> (servant);
 
   if (!impl)
     {
@@ -463,7 +396,7 @@ void POA_Test::Roundtrip::test_method_skel (
     impl,
     server_request.operation_details (),
     args);
-  
+
   TAO::Upcall_Wrapper upcall_wrapper;
   upcall_wrapper.upcall (server_request
                          , args
@@ -477,57 +410,45 @@ void POA_Test::Roundtrip::test_method_skel (
                          );
 }
 
-
 namespace POA_Test
 {
-  
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/upcall_command_ss.cpp:79
 
-  class shutdown_Roundtrip
-    : public TAO::Upcall_Command
+  class shutdown_Roundtrip : public TAO::Upcall_Command
   {
   public:
-    inline shutdown_Roundtrip (
-      POA_Test::Roundtrip * servant)
-      : servant_ (servant)
-    {
-    }
+    inline shutdown_Roundtrip (POA_Test::Roundtrip * servant)
+      : servant_ (servant) {}
 
     void execute () override
     {
       this->servant_->shutdown ();
     }
-  
+
   private:
     POA_Test::Roundtrip * const servant_;
   };
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/operation_ss.cpp:167
-
 void POA_Test::Roundtrip::shutdown_skel (
   TAO_ServerRequest & server_request,
   TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
   TAO_ServantBase *servant)
-{TAO::SArg_Traits< void>::ret_val retval;
+{
+  TAO::SArg_Traits<void>::ret_val retval;
 
   TAO::Argument * const args[] =
     {
       std::addressof(retval)
     };
-  
-  POA_Test::Roundtrip * const impl =
-    dynamic_cast<POA_Test::Roundtrip *> (servant);
+
+  POA_Test::Roundtrip * const impl = dynamic_cast<POA_Test::Roundtrip *> (servant);
 
   if (!impl)
     {
       throw ::CORBA::INTERNAL ();
     }
 
-  shutdown_Roundtrip command (
-    impl);
-  
+  shutdown_Roundtrip command (impl);
+
   TAO::Upcall_Wrapper upcall_wrapper;
   upcall_wrapper.upcall (server_request
                          , args
@@ -541,17 +462,7 @@ void POA_Test::Roundtrip::shutdown_skel (
                          );
 }
 
-
-
-
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ss.cpp:139
-
-
-
-
-
-::CORBA::Boolean POA_Test::Roundtrip::_is_a (const char* value)
+::CORBA::Boolean POA_Test::Roundtrip::_is_a (char const *value)
 {
   return
     (
@@ -560,16 +471,10 @@ void POA_Test::Roundtrip::shutdown_skel (
     );
 }
 
-const char* POA_Test::Roundtrip::_interface_repository_id () const
+char const *POA_Test::Roundtrip::_interface_repository_id () const
 {
   return "IDL:Test/Roundtrip:1.0";
 }
-
-
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ss.cpp:378
-
-
 
 void POA_Test::Roundtrip::_dispatch (
   TAO_ServerRequest & req,
@@ -578,17 +483,11 @@ void POA_Test::Roundtrip::_dispatch (
   this->synchronous_upcall_dispatch (req, servant_upcall, this);
 }
 
-
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ss.cpp:338
-
-
-
 Test::Roundtrip *
 POA_Test::Roundtrip::_this ()
 {
   TAO_Stub_Auto_Ptr stub (this->_create_stub ());
-  ::CORBA::Boolean const _tao_opt_colloc = stub->servant_orb_var ()->orb_core ()->optimize_collocation_objects ();
+  bool const _tao_opt_colloc = stub->servant_orb_var ()->orb_core ()->optimize_collocation_objects ();
   ::CORBA::Object_var obj = new (std::nothrow) ::CORBA::Object (stub.get (), _tao_opt_colloc, this);
   if (obj.ptr ())
     {
@@ -597,12 +496,6 @@ POA_Test::Roundtrip::_this ()
     }
   return {};
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/amh_rh_ss.cpp:67
-
-
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/amh_rh_ss.cpp:76
 
 void
 POA_Test::TAO_AMH_RoundtripResponseHandler::test_method (
@@ -616,12 +509,9 @@ POA_Test::TAO_AMH_RoundtripResponseHandler::test_method (
     {
       throw ::CORBA::MARSHAL();
     }
-  
+
   this->_tao_rh_send_reply ();
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/amh_rh_ss.cpp:76
-
 void
 POA_Test::TAO_AMH_RoundtripResponseHandler::test_method_excep (
   ::Test::AMH_RoundtripExceptionHolder * holder)
@@ -635,20 +525,13 @@ POA_Test::TAO_AMH_RoundtripResponseHandler::test_method_excep (
     this->_tao_rh_send_exception (ex);
   }
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/amh_rh_ss.cpp:76
-
 void
 POA_Test::TAO_AMH_RoundtripResponseHandler::shutdown ()
 {
   this->_tao_rh_init_reply ();
 
-  
   this->_tao_rh_send_reply ();
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/amh_rh_ss.cpp:76
-
 void
 POA_Test::TAO_AMH_RoundtripResponseHandler::shutdown_excep (
   ::Test::AMH_RoundtripExceptionHolder * holder)

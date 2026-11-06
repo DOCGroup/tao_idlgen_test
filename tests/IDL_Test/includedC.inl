@@ -22,34 +22,24 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_ci.cpp:43
-
 ACE_INLINE
 VT_Def::VT::VT ()
 {}
 
-ACE_INLINE const char*
+ACE_INLINE char const *
 VT_Def::VT::_tao_obv_static_repository_id ()
 {
   return "IDL:VT_Def/VT:1.0";
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_ci.cpp:43
-
 ACE_INLINE
 IncludedBase::IncludedBase ()
 {}
 
-ACE_INLINE const char*
+ACE_INLINE char const *
 IncludedBase::_tao_obv_static_repository_id ()
 {
   return "IDL:IncludedBase:1.0";
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ci.cpp:58
-
-
 
 ACE_INLINE
 RootModule::SUBMODULE1::ParentIF::ParentIF (
@@ -68,23 +58,16 @@ RootModule::SUBMODULE1::ParentIF::ParentIF (
   : ::CORBA::Object (ior, oc)
 {
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_ci.cpp:43
-
 ACE_INLINE
 RootModule::SUBMODULE1::AMH_ParentIFExceptionHolder::AMH_ParentIFExceptionHolder ()
   : exception (nullptr)
 {}
 
-ACE_INLINE const char*
+ACE_INLINE char const *
 RootModule::SUBMODULE1::AMH_ParentIFExceptionHolder::_tao_obv_static_repository_id ()
 {
   return "IDL:RootModule/SUBMODULE1/AMH_ParentIFExceptionHolder:1.0";
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ci.cpp:58
-
-
 
 ACE_INLINE
 RootModule::SUBMODULE1::AMI_ParentIFHandler::AMI_ParentIFHandler (
@@ -103,10 +86,6 @@ RootModule::SUBMODULE1::AMI_ParentIFHandler::AMI_ParentIFHandler (
   : ::CORBA::Object (ior, oc)
 {
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ci.cpp:58
-
-
 
 ACE_INLINE
 AAA::AAA (
@@ -125,23 +104,16 @@ AAA::AAA (
   : ::CORBA::Object (ior, oc)
 {
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_ci.cpp:43
-
 ACE_INLINE
 AMH_AAAExceptionHolder::AMH_AAAExceptionHolder ()
   : exception (nullptr)
 {}
 
-ACE_INLINE const char*
+ACE_INLINE char const *
 AMH_AAAExceptionHolder::_tao_obv_static_repository_id ()
 {
   return "IDL:AMH_AAAExceptionHolder:1.0";
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ci.cpp:58
-
-
 
 ACE_INLINE
 AMI_AAAHandler::AMI_AAAHandler (

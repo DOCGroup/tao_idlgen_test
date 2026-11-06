@@ -24,13 +24,8 @@
 
 #include <memory>
 #include <new>
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_array/array_ci.cpp:142
-
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
 
 ACE_INLINE
 void
@@ -43,7 +38,7 @@ TAO::Array_Traits<TwoDArray_forany>::free (
 ACE_INLINE
 TwoDArray_slice *
 TAO::Array_Traits<TwoDArray_forany>::dup (
-    const TwoDArray_slice * _tao_slice)
+    TwoDArray_slice const * _tao_slice)
 {
   return TwoDArray_dup (_tao_slice);
 }
@@ -52,7 +47,7 @@ ACE_INLINE
 void
 TAO::Array_Traits<TwoDArray_forany>::copy (
     TwoDArray_slice * _tao_to,
-    const TwoDArray_slice * _tao_from)
+    TwoDArray_slice const * _tao_from)
 {
   TwoDArray_copy (_tao_to, _tao_from);
 }
@@ -79,16 +74,9 @@ TAO::Array_Traits<TwoDArray_forany>::alloc ()
   return TwoDArray_alloc ();
 }
 
-
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_array/array_ci.cpp:142
-
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
 
 ACE_INLINE
 void
@@ -101,7 +89,7 @@ TAO::Array_Traits<ThreeDArray_forany>::free (
 ACE_INLINE
 ThreeDArray_slice *
 TAO::Array_Traits<ThreeDArray_forany>::dup (
-    const ThreeDArray_slice * _tao_slice)
+    ThreeDArray_slice const * _tao_slice)
 {
   return ThreeDArray_dup (_tao_slice);
 }
@@ -110,7 +98,7 @@ ACE_INLINE
 void
 TAO::Array_Traits<ThreeDArray_forany>::copy (
     ThreeDArray_slice * _tao_to,
-    const ThreeDArray_slice * _tao_from)
+    ThreeDArray_slice const * _tao_from)
 {
   ThreeDArray_copy (_tao_to, _tao_from);
 }
@@ -140,16 +128,9 @@ TAO::Array_Traits<ThreeDArray_forany>::alloc ()
   return ThreeDArray_alloc ();
 }
 
-
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_array/array_ci.cpp:142
-
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
 
 ACE_INLINE
 void
@@ -162,7 +143,7 @@ TAO::Array_Traits<FourDArray_forany>::free (
 ACE_INLINE
 FourDArray_slice *
 TAO::Array_Traits<FourDArray_forany>::dup (
-    const FourDArray_slice * _tao_slice)
+    FourDArray_slice const * _tao_slice)
 {
   return FourDArray_dup (_tao_slice);
 }
@@ -171,7 +152,7 @@ ACE_INLINE
 void
 TAO::Array_Traits<FourDArray_forany>::copy (
     FourDArray_slice * _tao_to,
-    const FourDArray_slice * _tao_from)
+    FourDArray_slice const * _tao_from)
 {
   FourDArray_copy (_tao_to, _tao_from);
 }
@@ -204,16 +185,9 @@ TAO::Array_Traits<FourDArray_forany>::alloc ()
   return FourDArray_alloc ();
 }
 
-
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_array/array_ci.cpp:142
-
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
 
 ACE_INLINE
 void
@@ -226,7 +200,7 @@ TAO::Array_Traits<inside_array_forany>::free (
 ACE_INLINE
 inside_array_slice *
 TAO::Array_Traits<inside_array_forany>::dup (
-    const inside_array_slice * _tao_slice)
+    inside_array_slice const * _tao_slice)
 {
   return inside_array_dup (_tao_slice);
 }
@@ -235,7 +209,7 @@ ACE_INLINE
 void
 TAO::Array_Traits<inside_array_forany>::copy (
     inside_array_slice * _tao_to,
-    const inside_array_slice * _tao_from)
+    inside_array_slice const * _tao_from)
 {
   inside_array_copy (_tao_to, _tao_from);
 }
@@ -259,16 +233,9 @@ TAO::Array_Traits<inside_array_forany>::alloc ()
   return inside_array_alloc ();
 }
 
-
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_array/array_ci.cpp:142
-
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
 
 ACE_INLINE
 void
@@ -281,7 +248,7 @@ TAO::Array_Traits<outside_array_forany>::free (
 ACE_INLINE
 outside_array_slice *
 TAO::Array_Traits<outside_array_forany>::dup (
-    const outside_array_slice * _tao_slice)
+    outside_array_slice const * _tao_slice)
 {
   return outside_array_dup (_tao_slice);
 }
@@ -290,7 +257,7 @@ ACE_INLINE
 void
 TAO::Array_Traits<outside_array_forany>::copy (
     outside_array_slice * _tao_to,
-    const outside_array_slice * _tao_from)
+    outside_array_slice const * _tao_from)
 {
   outside_array_copy (_tao_to, _tao_from);
 }
@@ -314,16 +281,9 @@ TAO::Array_Traits<outside_array_forany>::alloc ()
   return outside_array_alloc ();
 }
 
-
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_array/array_ci.cpp:142
-
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
 
 ACE_INLINE
 void
@@ -336,7 +296,7 @@ TAO::Array_Traits<oa1_forany>::free (
 ACE_INLINE
 oa1_slice *
 TAO::Array_Traits<oa1_forany>::dup (
-    const oa1_slice * _tao_slice)
+    oa1_slice const * _tao_slice)
 {
   return oa1_dup (_tao_slice);
 }
@@ -345,7 +305,7 @@ ACE_INLINE
 void
 TAO::Array_Traits<oa1_forany>::copy (
     oa1_slice * _tao_to,
-    const oa1_slice * _tao_from)
+    oa1_slice const * _tao_from)
 {
   oa1_copy (_tao_to, _tao_from);
 }
@@ -369,16 +329,9 @@ TAO::Array_Traits<oa1_forany>::alloc ()
   return oa1_alloc ();
 }
 
-
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_array/array_ci.cpp:142
-
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
 
 ACE_INLINE
 void
@@ -391,7 +344,7 @@ TAO::Array_Traits<oa2_forany>::free (
 ACE_INLINE
 oa2_slice *
 TAO::Array_Traits<oa2_forany>::dup (
-    const oa2_slice * _tao_slice)
+    oa2_slice const * _tao_slice)
 {
   return oa2_dup (_tao_slice);
 }
@@ -400,7 +353,7 @@ ACE_INLINE
 void
 TAO::Array_Traits<oa2_forany>::copy (
     oa2_slice * _tao_to,
-    const oa2_slice * _tao_from)
+    oa2_slice const * _tao_from)
 {
   oa2_copy (_tao_to, _tao_from);
 }
@@ -424,13 +377,7 @@ TAO::Array_Traits<oa2_forany>::alloc ()
   return oa2_alloc ();
 }
 
-
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ci.cpp:58
-
-
 
 ACE_INLINE
 array_args::array_args (
@@ -449,23 +396,16 @@ array_args::array_args (
   : ::CORBA::Object (ior, oc)
 {
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_ci.cpp:43
-
 ACE_INLINE
 AMH_array_argsExceptionHolder::AMH_array_argsExceptionHolder ()
   : exception (nullptr)
 {}
 
-ACE_INLINE const char*
+ACE_INLINE char const *
 AMH_array_argsExceptionHolder::_tao_obv_static_repository_id ()
 {
   return "IDL:AMH_array_argsExceptionHolder:1.0";
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ci.cpp:58
-
-
 
 ACE_INLINE
 AMI_array_argsHandler::AMI_array_argsHandler (
@@ -484,13 +424,8 @@ AMI_array_argsHandler::AMI_array_argsHandler (
   : ::CORBA::Object (ior, oc)
 {
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_array/array_ci.cpp:142
-
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
 
 ACE_INLINE
 void
@@ -503,7 +438,7 @@ TAO::Array_Traits<string_array::ArrayOfString_forany>::free (
 ACE_INLINE
 string_array::ArrayOfString_slice *
 TAO::Array_Traits<string_array::ArrayOfString_forany>::dup (
-    const string_array::ArrayOfString_slice * _tao_slice)
+    string_array::ArrayOfString_slice const * _tao_slice)
 {
   return string_array::ArrayOfString_dup (_tao_slice);
 }
@@ -512,7 +447,7 @@ ACE_INLINE
 void
 TAO::Array_Traits<string_array::ArrayOfString_forany>::copy (
     string_array::ArrayOfString_slice * _tao_to,
-    const string_array::ArrayOfString_slice * _tao_from)
+    string_array::ArrayOfString_slice const * _tao_from)
 {
   string_array::ArrayOfString_copy (_tao_to, _tao_from);
 }
@@ -536,16 +471,9 @@ TAO::Array_Traits<string_array::ArrayOfString_forany>::alloc ()
   return string_array::ArrayOfString_alloc ();
 }
 
-
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_array/array_ci.cpp:142
-
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
 
 ACE_INLINE
 void
@@ -558,7 +486,7 @@ TAO::Array_Traits<string_array::ArrayOfMyString_forany>::free (
 ACE_INLINE
 string_array::ArrayOfMyString_slice *
 TAO::Array_Traits<string_array::ArrayOfMyString_forany>::dup (
-    const string_array::ArrayOfMyString_slice * _tao_slice)
+    string_array::ArrayOfMyString_slice const * _tao_slice)
 {
   return string_array::ArrayOfMyString_dup (_tao_slice);
 }
@@ -567,7 +495,7 @@ ACE_INLINE
 void
 TAO::Array_Traits<string_array::ArrayOfMyString_forany>::copy (
     string_array::ArrayOfMyString_slice * _tao_to,
-    const string_array::ArrayOfMyString_slice * _tao_from)
+    string_array::ArrayOfMyString_slice const * _tao_from)
 {
   string_array::ArrayOfMyString_copy (_tao_to, _tao_from);
 }
@@ -591,16 +519,9 @@ TAO::Array_Traits<string_array::ArrayOfMyString_forany>::alloc ()
   return string_array::ArrayOfMyString_alloc ();
 }
 
-
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_array/array_ci.cpp:142
-
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
 
 ACE_INLINE
 void
@@ -613,7 +534,7 @@ TAO::Array_Traits<testdata::Arraychar_forany>::free (
 ACE_INLINE
 testdata::Arraychar_slice *
 TAO::Array_Traits<testdata::Arraychar_forany>::dup (
-    const testdata::Arraychar_slice * _tao_slice)
+    testdata::Arraychar_slice const * _tao_slice)
 {
   return testdata::Arraychar_dup (_tao_slice);
 }
@@ -622,7 +543,7 @@ ACE_INLINE
 void
 TAO::Array_Traits<testdata::Arraychar_forany>::copy (
     testdata::Arraychar_slice * _tao_to,
-    const testdata::Arraychar_slice * _tao_from)
+    testdata::Arraychar_slice const * _tao_from)
 {
   testdata::Arraychar_copy (_tao_to, _tao_from);
 }
@@ -646,7 +567,6 @@ TAO::Array_Traits<testdata::Arraychar_forany>::alloc ()
   return testdata::Arraychar_alloc ();
 }
 
-
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 ACE_INLINE
@@ -659,7 +579,7 @@ testdata::ArrayDeChar_alloc ()
 ACE_INLINE
 testdata::ArrayDeChar_slice *
 testdata::ArrayDeChar_dup (
-    const testdata::ArrayDeChar_slice *_tao_src
+    testdata::ArrayDeChar_slice const *_tao_src
   )
 {
   return testdata::Arraychar_dup (_tao_src);
@@ -669,7 +589,7 @@ ACE_INLINE
 void
 testdata::ArrayDeChar_copy (
     testdata::ArrayDeChar_slice *_tao_dest,
-    const testdata::ArrayDeChar_slice *_tao_src
+    testdata::ArrayDeChar_slice const *_tao_src
   )
 {
   testdata::Arraychar_copy (_tao_dest, _tao_src);
@@ -684,12 +604,6 @@ testdata::ArrayDeChar_free (
   testdata::Arraychar_free (_tao_src);
 }
 
-
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ci.cpp:58
-
-
-
 ACE_INLINE
 testdata::testdata (
     TAO_Stub *objref,
@@ -707,23 +621,16 @@ testdata::testdata (
   : ::CORBA::Object (ior, oc)
 {
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_ci.cpp:43
-
 ACE_INLINE
 AMH_testdataExceptionHolder::AMH_testdataExceptionHolder ()
   : exception (nullptr)
 {}
 
-ACE_INLINE const char*
+ACE_INLINE char const *
 AMH_testdataExceptionHolder::_tao_obv_static_repository_id ()
 {
   return "IDL:AMH_testdataExceptionHolder:1.0";
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ci.cpp:58
-
-
 
 ACE_INLINE
 AMI_testdataHandler::AMI_testdataHandler (
@@ -742,13 +649,8 @@ AMI_testdataHandler::AMI_testdataHandler (
   : ::CORBA::Object (ior, oc)
 {
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_array/array_ci.cpp:142
-
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
 
 ACE_INLINE
 void
@@ -761,7 +663,7 @@ TAO::Array_Traits<arraytest::myvec2_forany>::free (
 ACE_INLINE
 arraytest::myvec2_slice *
 TAO::Array_Traits<arraytest::myvec2_forany>::dup (
-    const arraytest::myvec2_slice * _tao_slice)
+    arraytest::myvec2_slice const * _tao_slice)
 {
   return arraytest::myvec2_dup (_tao_slice);
 }
@@ -770,7 +672,7 @@ ACE_INLINE
 void
 TAO::Array_Traits<arraytest::myvec2_forany>::copy (
     arraytest::myvec2_slice * _tao_to,
-    const arraytest::myvec2_slice * _tao_from)
+    arraytest::myvec2_slice const * _tao_from)
 {
   arraytest::myvec2_copy (_tao_to, _tao_from);
 }
@@ -794,16 +696,9 @@ TAO::Array_Traits<arraytest::myvec2_forany>::alloc ()
   return arraytest::myvec2_alloc ();
 }
 
-
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_array/array_ci.cpp:142
-
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
 
 ACE_INLINE
 void
@@ -816,7 +711,7 @@ TAO::Array_Traits<arraytest::myvec3_forany>::free (
 ACE_INLINE
 arraytest::myvec3_slice *
 TAO::Array_Traits<arraytest::myvec3_forany>::dup (
-    const arraytest::myvec3_slice * _tao_slice)
+    arraytest::myvec3_slice const * _tao_slice)
 {
   return arraytest::myvec3_dup (_tao_slice);
 }
@@ -825,7 +720,7 @@ ACE_INLINE
 void
 TAO::Array_Traits<arraytest::myvec3_forany>::copy (
     arraytest::myvec3_slice * _tao_to,
-    const arraytest::myvec3_slice * _tao_from)
+    arraytest::myvec3_slice const * _tao_from)
 {
   arraytest::myvec3_copy (_tao_to, _tao_from);
 }
@@ -849,13 +744,7 @@ TAO::Array_Traits<arraytest::myvec3_forany>::alloc ()
   return arraytest::myvec3_alloc ();
 }
 
-
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ci.cpp:58
-
-
 
 ACE_INLINE
 arraytest::MyTest::MyTest (
@@ -874,23 +763,16 @@ arraytest::MyTest::MyTest (
   : ::CORBA::Object (ior, oc)
 {
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_ci.cpp:43
-
 ACE_INLINE
 arraytest::AMH_MyTestExceptionHolder::AMH_MyTestExceptionHolder ()
   : exception (nullptr)
 {}
 
-ACE_INLINE const char*
+ACE_INLINE char const *
 arraytest::AMH_MyTestExceptionHolder::_tao_obv_static_repository_id ()
 {
   return "IDL:arraytest/AMH_MyTestExceptionHolder:1.0";
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ci.cpp:58
-
-
 
 ACE_INLINE
 arraytest::AMI_MyTestHandler::AMI_MyTestHandler (
@@ -909,16 +791,9 @@ arraytest::AMI_MyTestHandler::AMI_MyTestHandler (
   : ::CORBA::Object (ior, oc)
 {
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union/union_ci.cpp:35
-
 // *************************************************************
 // Inline operations for union bug_2126::FirstUnion
 // *************************************************************
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union/discriminant_ci.cpp:302
-
-
 
 ACE_INLINE
 unsigned long
@@ -949,9 +824,6 @@ bug_2126::FirstUnion::_d () const
 {
   return this->disc_;
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union_branch/public_ci.cpp:606
-
 // Accessor to set the member.
 ACE_INLINE
 void
@@ -975,9 +847,6 @@ bug_2126::FirstUnion::first_union_foo () const
     }
   return this->u_.first_union_foo_;
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union_branch/public_ci.cpp:606
-
 // Accessor to set the member.
 ACE_INLINE
 void
@@ -1001,13 +870,8 @@ bug_2126::FirstUnion::first_union_bar () const
     }
   return this->u_.first_union_bar_;
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_array/array_ci.cpp:142
-
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
 
 ACE_INLINE
 void
@@ -1020,7 +884,7 @@ TAO::Array_Traits<bug_2126::FirstUnionArray_forany>::free (
 ACE_INLINE
 bug_2126::FirstUnionArray_slice *
 TAO::Array_Traits<bug_2126::FirstUnionArray_forany>::dup (
-    const bug_2126::FirstUnionArray_slice * _tao_slice)
+    bug_2126::FirstUnionArray_slice const * _tao_slice)
 {
   return bug_2126::FirstUnionArray_dup (_tao_slice);
 }
@@ -1029,7 +893,7 @@ ACE_INLINE
 void
 TAO::Array_Traits<bug_2126::FirstUnionArray_forany>::copy (
     bug_2126::FirstUnionArray_slice * _tao_to,
-    const bug_2126::FirstUnionArray_slice * _tao_from)
+    bug_2126::FirstUnionArray_slice const * _tao_from)
 {
   bug_2126::FirstUnionArray_copy (_tao_to, _tao_from);
 }
@@ -1053,19 +917,11 @@ TAO::Array_Traits<bug_2126::FirstUnionArray_forany>::alloc ()
   return bug_2126::FirstUnionArray_alloc ();
 }
 
-
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union/union_ci.cpp:35
 
 // *************************************************************
 // Inline operations for union bug_2126::SecondUnion
 // *************************************************************
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union/discriminant_ci.cpp:302
-
-
 
 ACE_INLINE
 unsigned long
@@ -1096,13 +952,10 @@ bug_2126::SecondUnion::_d () const
 {
   return this->disc_;
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union_branch/public_ci.cpp:1121
-
 /// Accessor to set the member.
 ACE_INLINE
 void
-bug_2126::SecondUnion::second_union_struct_member (const bug_2126::MyStruct &val)
+bug_2126::SecondUnion::second_union_struct_member (bug_2126::MyStruct const &val)
 {
   // Set the discriminant value.
   this->_reset ();
@@ -1115,7 +968,7 @@ bug_2126::SecondUnion::second_union_struct_member (const bug_2126::MyStruct &val
 
 // Readonly get method.
 ACE_INLINE
-const bug_2126::MyStruct &
+bug_2126::MyStruct const &
 bug_2126::SecondUnion::second_union_struct_member () const
 {
   if (_tao_member_index (this->disc_) != 0UL)
@@ -1136,9 +989,6 @@ bug_2126::SecondUnion::second_union_struct_member ()
     }
   return *this->u_.second_union_struct_member_;
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union_branch/public_ci.cpp:606
-
 // Accessor to set the member.
 ACE_INLINE
 void
@@ -1162,13 +1012,8 @@ bug_2126::SecondUnion::wibble () const
     }
   return this->u_.wibble_;
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_array/array_ci.cpp:142
-
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
 
 ACE_INLINE
 void
@@ -1181,7 +1026,7 @@ TAO::Array_Traits<bug_2126::BdFirstUnionArray_forany>::free (
 ACE_INLINE
 bug_2126::BdFirstUnionArray_slice *
 TAO::Array_Traits<bug_2126::BdFirstUnionArray_forany>::dup (
-    const bug_2126::BdFirstUnionArray_slice * _tao_slice)
+    bug_2126::BdFirstUnionArray_slice const * _tao_slice)
 {
   return bug_2126::BdFirstUnionArray_dup (_tao_slice);
 }
@@ -1190,7 +1035,7 @@ ACE_INLINE
 void
 TAO::Array_Traits<bug_2126::BdFirstUnionArray_forany>::copy (
     bug_2126::BdFirstUnionArray_slice * _tao_to,
-    const bug_2126::BdFirstUnionArray_slice * _tao_from)
+    bug_2126::BdFirstUnionArray_slice const * _tao_from)
 {
   bug_2126::BdFirstUnionArray_copy (_tao_to, _tao_from);
 }
@@ -1214,19 +1059,11 @@ TAO::Array_Traits<bug_2126::BdFirstUnionArray_forany>::alloc ()
   return bug_2126::BdFirstUnionArray_alloc ();
 }
 
-
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union/union_ci.cpp:35
 
 // *************************************************************
 // Inline operations for union bug_2126::BdSecondUnion
 // *************************************************************
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union/discriminant_ci.cpp:302
-
-
 
 ACE_INLINE
 unsigned long
@@ -1257,13 +1094,10 @@ bug_2126::BdSecondUnion::_d () const
 {
   return this->disc_;
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union_branch/public_ci.cpp:1121
-
 /// Accessor to set the member.
 ACE_INLINE
 void
-bug_2126::BdSecondUnion::second_union_struct_member (const bug_2126::BdMyStruct &val)
+bug_2126::BdSecondUnion::second_union_struct_member (bug_2126::BdMyStruct const &val)
 {
   // Set the discriminant value.
   this->_reset ();
@@ -1276,7 +1110,7 @@ bug_2126::BdSecondUnion::second_union_struct_member (const bug_2126::BdMyStruct 
 
 // Readonly get method.
 ACE_INLINE
-const bug_2126::BdMyStruct &
+bug_2126::BdMyStruct const &
 bug_2126::BdSecondUnion::second_union_struct_member () const
 {
   if (_tao_member_index (this->disc_) != 0UL)
@@ -1297,9 +1131,6 @@ bug_2126::BdSecondUnion::second_union_struct_member ()
     }
   return *this->u_.second_union_struct_member_;
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union_branch/public_ci.cpp:606
-
 // Accessor to set the member.
 ACE_INLINE
 void
@@ -1323,13 +1154,8 @@ bug_2126::BdSecondUnion::wibble () const
     }
   return this->u_.wibble_;
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_array/array_ci.cpp:142
-
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
 
 ACE_INLINE
 void
@@ -1342,7 +1168,7 @@ TAO::Array_Traits<B41_forany>::free (
 ACE_INLINE
 B41_slice *
 TAO::Array_Traits<B41_forany>::dup (
-    const B41_slice * _tao_slice)
+    B41_slice const * _tao_slice)
 {
   return B41_dup (_tao_slice);
 }
@@ -1351,7 +1177,7 @@ ACE_INLINE
 void
 TAO::Array_Traits<B41_forany>::copy (
     B41_slice * _tao_to,
-    const B41_slice * _tao_from)
+    B41_slice const * _tao_from)
 {
   B41_copy (_tao_to, _tao_from);
 }
@@ -1378,16 +1204,9 @@ TAO::Array_Traits<B41_forany>::alloc ()
   return B41_alloc ();
 }
 
-
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_array/array_ci.cpp:142
-
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
 
 ACE_INLINE
 void
@@ -1400,7 +1219,7 @@ TAO::Array_Traits<B42_forany>::free (
 ACE_INLINE
 B42_slice *
 TAO::Array_Traits<B42_forany>::dup (
-    const B42_slice * _tao_slice)
+    B42_slice const * _tao_slice)
 {
   return B42_dup (_tao_slice);
 }
@@ -1409,7 +1228,7 @@ ACE_INLINE
 void
 TAO::Array_Traits<B42_forany>::copy (
     B42_slice * _tao_to,
-    const B42_slice * _tao_from)
+    B42_slice const * _tao_from)
 {
   B42_copy (_tao_to, _tao_from);
 }
@@ -1433,16 +1252,9 @@ TAO::Array_Traits<B42_forany>::alloc ()
   return B42_alloc ();
 }
 
-
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_array/array_ci.cpp:142
-
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
 
 ACE_INLINE
 void
@@ -1455,7 +1267,7 @@ TAO::Array_Traits<B43_forany>::free (
 ACE_INLINE
 B43_slice *
 TAO::Array_Traits<B43_forany>::dup (
-    const B43_slice * _tao_slice)
+    B43_slice const * _tao_slice)
 {
   return B43_dup (_tao_slice);
 }
@@ -1464,7 +1276,7 @@ ACE_INLINE
 void
 TAO::Array_Traits<B43_forany>::copy (
     B43_slice * _tao_to,
-    const B43_slice * _tao_from)
+    B43_slice const * _tao_from)
 {
   B43_copy (_tao_to, _tao_from);
 }
@@ -1488,18 +1300,11 @@ TAO::Array_Traits<B43_forany>::alloc ()
   return B43_alloc ();
 }
 
-
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union/union_ci.cpp:35
 
 // *************************************************************
 // Inline operations for union B85
 // *************************************************************
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union/discriminant_ci.cpp:302
-
 ACE_INLINE
 void
 B85::_default ()
@@ -1547,9 +1352,6 @@ B85::_d () const
 {
   return this->disc_;
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union_branch/public_ci.cpp:181
-
 // Accessor to set the member.
 ACE_INLINE
 void
@@ -1573,9 +1375,6 @@ B85::b_85_1 () const
     }
   return this->u_.b_85_1_;
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union_branch/public_ci.cpp:181
-
 // Accessor to set the member.
 ACE_INLINE
 void
@@ -1599,9 +1398,6 @@ B85::b_85_2 () const
     }
   return this->u_.b_85_2_;
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union_branch/public_ci.cpp:181
-
 // Accessor to set the member.
 ACE_INLINE
 void

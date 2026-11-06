@@ -22,21 +22,16 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:147
-
-#ifndef _TAO_IDL_TYPECODEC_QRFEOU_H_
-#define _TAO_IDL_TYPECODEC_QRFEOU_H_
+#ifndef _TAO_IDL_TYPECODEC_H_
+#define _TAO_IDL_TYPECODEC_H_
 
 #include /**/ "ace/pre.h"
-
 
 #include /**/ "ace/config-all.h"
 
 #if !defined (ACE_LACKS_PRAGMA_ONCE)
 # pragma once
 #endif /* ACE_LACKS_PRAGMA_ONCE */
-
 
 #include /**/ "TAO_IDL_TEST_stub_export.h"
 #include "tao/Valuetype/ValueBase.h"
@@ -92,13 +87,8 @@
 #if TAO_MAJOR_VERSION != 4 || TAO_MINOR_VERSION != 0 || TAO_MICRO_VERSION != 8
 #error This file should be regenerated with TAO_IDL
 #endif
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_root/root_ch.cpp:155
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
-
 
 namespace TAO
 {
@@ -106,52 +96,34 @@ namespace TAO
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_module/module_ch.cpp:34
-
 namespace MyModule
 {
-
-  
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_sequence/sequence_ch.cpp:98
-
-  
 
 #if !defined (_MYMODULE_TYPECODELIST_CH_)
 #define _MYMODULE_TYPECODELIST_CH_
 
   class TypeCodeList;
-  typedef ::TAO_VarSeq_Var_T<TypeCodeList> TypeCodeList_var;
-  typedef ::TAO_Seq_Out_T<TypeCodeList> TypeCodeList_out;
-  
+  using TypeCodeList_var = ::TAO_VarSeq_Var_T<TypeCodeList>;
+  using TypeCodeList_out = ::TAO_Seq_Out_T<TypeCodeList>;
 
   class TAO_IDL_TEST_STUB_Export TypeCodeList
     : public
-        ::TAO::unbounded_object_reference_sequence<
-            ::CORBA::TypeCode,
-            ::CORBA::TypeCode_var
-          >
+        ::TAO::unbounded_object_reference_sequence<::CORBA::TypeCode, ::CORBA::TypeCode_var>
   {
   public:
     TypeCodeList () = default;
-    TypeCodeList (::CORBA::ULong max);
+    explicit TypeCodeList (::CORBA::ULong max);
     TypeCodeList (
       ::CORBA::ULong max,
       ::CORBA::ULong length,
       ::CORBA::TypeCode_ptr* buffer,
       ::CORBA::Boolean release = false);
-    TypeCodeList (const TypeCodeList &) = default;
+    TypeCodeList (TypeCodeList const &) = default;
     TypeCodeList (TypeCodeList &&) = default;
-    TypeCodeList& operator= (const TypeCodeList &) = default;
+    TypeCodeList& operator= (TypeCodeList const &) = default;
     TypeCodeList& operator= (TypeCodeList &&) = default;
     virtual ~TypeCodeList () = default;
-    
-    // TAO_IDL - Generated from
-    // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_type.cpp:297
 
-    
     using _var_type = TypeCodeList_var;
     using _out_type = TypeCodeList_out;
 
@@ -160,33 +132,19 @@ namespace MyModule
 
 #endif /* end #if !defined */
 
-
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_module/module_ch.cpp:62
-
-
 } // module MyModule
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_arg_traits.cpp:64
-
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
 
 // Arg traits specializations.
 namespace TAO
 {
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_arg_traits.cpp:298
-
-  
 
 #if !defined (_MESSAGING_EXCEPTIONHOLDER__ARG_TRAITS_)
 #define _MESSAGING_EXCEPTIONHOLDER__ARG_TRAITS_
 
   template<>
-  class Arg_Traits< ::Messaging::ExceptionHolder>
+  class Arg_Traits<::Messaging::ExceptionHolder>
     : public
         Object_Arg_Traits_T<
             ::Messaging::ExceptionHolder *,
@@ -199,13 +157,9 @@ namespace TAO
   };
 
 #endif /* end #if !defined */
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_arg_traits.cpp:671
-
-  
 
   template<>
-  class Arg_Traits< ::MyModule::TypeCodeList>
+  class Arg_Traits<::MyModule::TypeCodeList>
     : public
         Var_Size_Arg_Traits_T<
             ::MyModule::TypeCodeList,
@@ -217,12 +171,6 @@ namespace TAO
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_traits.cpp:58
-
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 // Traits specializations.
@@ -231,32 +179,16 @@ namespace TAO
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_sequence/cdr_op_ch.cpp:64
-
-
-
 #if !defined _TAO_CDR_OP_MyModule_TypeCodeList_H_
 #define _TAO_CDR_OP_MyModule_TypeCodeList_H_
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
-
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (
-    TAO_OutputCDR &strm,
-    const MyModule::TypeCodeList &_tao_sequence);
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (
-    TAO_InputCDR &strm,
-    MyModule::TypeCodeList &_tao_sequence);
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &strm, MyModule::TypeCodeList const &_tao_sequence);
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &strm, MyModule::TypeCodeList &_tao_sequence);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
 #endif /* _TAO_CDR_OP_MyModule_TypeCodeList_H_ */
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:1644
-
 #if defined (__ACE_INLINE__)
 #include "typecodeC.inl"
 #endif /* defined INLINE */

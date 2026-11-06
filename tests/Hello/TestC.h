@@ -22,21 +22,16 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:147
-
-#ifndef _TAO_IDL_TESTC_U7E5HG_H_
-#define _TAO_IDL_TESTC_U7E5HG_H_
+#ifndef _TAO_IDL_TESTC_H_
+#define _TAO_IDL_TESTC_H_
 
 #include /**/ "ace/pre.h"
-
 
 #include /**/ "ace/config-all.h"
 
 #if !defined (ACE_LACKS_PRAGMA_ONCE)
 # pragma once
 #endif /* ACE_LACKS_PRAGMA_ONCE */
-
 
 #include "tao/ORB.h"
 #include "tao/SystemException.h"
@@ -58,13 +53,8 @@
 #if TAO_MAJOR_VERSION != 4 || TAO_MINOR_VERSION != 0 || TAO_MICRO_VERSION != 8
 #error This file should be regenerated with TAO_IDL
 #endif
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_root/root_ch.cpp:155
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
-
 
 namespace TAO
 {
@@ -72,16 +62,8 @@ namespace TAO
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_module/module_ch.cpp:34
-
 namespace Test
 {
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_interface.cpp:742
-
-  
 
 #if !defined (_TEST_HELLO__VAR_OUT_CH_)
 #define _TEST_HELLO__VAR_OUT_CH_
@@ -93,20 +75,11 @@ namespace Test
 
 #endif /* end #if !defined */
 
-  
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ch.cpp:39
-
-  
-
   class  Hello
     : public virtual ::CORBA::Object
   {
   public:
     friend class TAO::Narrow_Utils<Hello>;
-    // TAO_IDL - Generated from
-    // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_type.cpp:297
-
     using _ptr_type = Hello_ptr;
     using _var_type = Hello_var;
     using _out_type = Hello_out;
@@ -124,23 +97,17 @@ namespace Test
 
     virtual void shutdown ();
 
-    
-    // TAO_IDL - Generated from
-    // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ch.cpp:135
+    ::CORBA::Boolean _is_a (char const *type_id) override;
+    char const *_interface_repository_id () const override;
+    ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
 
-    
-
-    virtual ::CORBA::Boolean _is_a (const char *type_id);
-    virtual const char* _interface_repository_id () const;
-    virtual ::CORBA::Boolean marshal (TAO_OutputCDR &cdr);
-  
   protected:
     // Concrete interface only.
     Hello ();
 
     // Concrete non-local interface only.
     Hello (::IOP::IOR *ior, TAO_ORB_Core *orb_core);
-    
+
     // Non-local interface only.
     Hello (
         TAO_Stub *objref,
@@ -148,43 +115,29 @@ namespace Test
         TAO_Abstract_ServantBase *servant = nullptr,
         TAO_ORB_Core *orb_core = nullptr);
 
-    virtual ~Hello () = default;
-  
+    ~Hello () override = default;
+
   private:
     // Private and unimplemented for concrete interfaces.
-    Hello (const Hello &) = delete;
+    Hello (Hello const &) = delete;
     Hello (Hello &&) = delete;
-    Hello &operator= (const Hello &) = delete;
+    Hello &operator= (Hello const &) = delete;
     Hello &operator= (Hello &&) = delete;
   };
 
-
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_module/module_ch.cpp:62
-
-
 } // module Test
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_arg_traits.cpp:64
-
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
 
 // Arg traits specializations.
 namespace TAO
 {
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_arg_traits.cpp:142
-
-  
 
 #if !defined (_TEST_HELLO__ARG_TRAITS_)
 #define _TEST_HELLO__ARG_TRAITS_
 
   template<>
-  class  Arg_Traits< ::Test::Hello>
+  class  Arg_Traits<::Test::Hello>
     : public Object_Arg_Traits_T<
         ::Test::Hello_ptr,
         ::Test::Hello_var,
@@ -199,12 +152,6 @@ namespace TAO
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_traits.cpp:58
-
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 // Traits specializations.
@@ -215,7 +162,7 @@ namespace TAO
 #define _TEST_HELLO__TRAITS_
 
   template<>
-  struct  Objref_Traits< ::Test::Hello>
+  struct  Objref_Traits<::Test::Hello>
   {
     static ::Test::Hello_ptr duplicate (::Test::Hello_ptr p);
     static void release (::Test::Hello_ptr p);
@@ -227,24 +174,12 @@ namespace TAO
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
-
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/cdr_op_ch.cpp:40
-
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
- ::CORBA::Boolean operator<< (TAO_OutputCDR &, const Test::Hello_ptr );
+ ::CORBA::Boolean operator<< (TAO_OutputCDR &, Test::Hello_ptr const);
  ::CORBA::Boolean operator>> (TAO_InputCDR &, Test::Hello_ptr &);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:1644
 
 #if defined (__ACE_INLINE__)
 #include "TestC.inl"

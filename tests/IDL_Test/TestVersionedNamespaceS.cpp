@@ -22,15 +22,15 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:631
-
-#ifndef _TAO_IDL_TESTVERSIONEDNAMESPACES_TZ5SK1_CPP_
-#define _TAO_IDL_TESTVERSIONEDNAMESPACES_TZ5SK1_CPP_
-
+#ifndef _TAO_IDL_TESTVERSIONEDNAMESPACES_CPP_
+#define _TAO_IDL_TESTVERSIONEDNAMESPACES_CPP_
 
 #include "TestVersionedNamespaceS.h"
 #include "tao/PortableServer/Operation_Table_Perfect_Hash.h"
+#include <array>
+#include <cstddef>
+#include <cstring>
+#include <memory>
 #include "tao/PortableServer/Upcall_Command.h"
 #include "tao/PortableServer/Upcall_Wrapper.h"
 #include "tao/TAO_Server_Request.h"
@@ -46,15 +46,10 @@
 #include "tao/PortableInterceptor.h"
 #include "ace/Dynamic_Service.h"
 #include "ace/Malloc_Allocator.h"
-#include <cstring>
 
 BEGIN_USER_VERSIONED_NAMESPACE
 
-
-
 END_USER_VERSIONED_NAMESPACE
-
-
 
 #endif /* ifndef */
 

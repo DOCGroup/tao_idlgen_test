@@ -22,11 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:454
-
-#ifndef _TAO_IDL_SIMPLE_TESTS_SKO015_H_
-#define _TAO_IDL_SIMPLE_TESTS_SKO015_H_
+#ifndef _TAO_IDL_SIMPLE_TESTS_H_
+#define _TAO_IDL_SIMPLE_TESTS_H_
 
 #include /**/ "ace/pre.h"
 
@@ -48,27 +45,18 @@
 
 #include "tao/PortableServer/PortableServer.h"
 #include "tao/PortableServer/Servant_Base.h"
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_arg_traits.cpp:64
-
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
 
 // Arg traits specializations.
 namespace TAO
 {
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_arg_traits.cpp:142
-
-  
 
 #if !defined (_SIMPLE_SERVER__SARG_TRAITS_)
 #define _SIMPLE_SERVER__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits< ::Simple_Server>
+  class  SArg_Traits<::Simple_Server>
     : public Object_SArg_Traits_T<
         ::Simple_Server_ptr,
         ::Simple_Server_var,
@@ -82,16 +70,8 @@ namespace TAO
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-
-
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_sh.cpp:72
-
-
-
 class POA_Simple_Server;
-typedef POA_Simple_Server *POA_Simple_Server_ptr;
+using POA_Simple_Server_ptr = POA_Simple_Server *;
 
 class  POA_Simple_Server
   : public virtual PortableServer::ServantBase
@@ -101,34 +81,28 @@ protected:
 
 public:
   /// Useful for template programming.
-  typedef ::Simple_Server _stub_type;
-  typedef ::Simple_Server_ptr _stub_ptr_type;
-  typedef ::Simple_Server_var _stub_var_type;
+  using _stub_type = ::Simple_Server;
+  using _stub_ptr_type = ::Simple_Server_ptr;
+  using _stub_var_type = ::Simple_Server_var;
 
-  POA_Simple_Server (const POA_Simple_Server& rhs) = default;
-  virtual ~POA_Simple_Server () = default;
+  POA_Simple_Server (POA_Simple_Server const &rhs) = default;
+  ~POA_Simple_Server () override = default;
 
-  virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
+  ::CORBA::Boolean _is_a (char const *logical_type_id) override;
 
-  virtual void _dispatch (
+  void _dispatch (
       TAO_ServerRequest & req,
-      TAO::Portable_Server::Servant_Upcall *servant_upcall);
-  
-  ::Simple_Server *_this ();
-  
-  virtual const char* _interface_repository_id () const;
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/operation_sh.cpp:35
+      TAO::Portable_Server::Servant_Upcall *servant_upcall) override;
 
+  ::Simple_Server *_this ();
+
+  char const *_interface_repository_id () const override;
   virtual ::CORBA::Boolean print_status () = 0;
 
   static void print_status_skel (
       TAO_ServerRequest &server_request,
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/operation_sh.cpp:35
-
   virtual void shutdown () = 0;
 
   static void shutdown_skel (

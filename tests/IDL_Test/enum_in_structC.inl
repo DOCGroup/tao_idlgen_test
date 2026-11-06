@@ -24,13 +24,8 @@
 
 #include <memory>
 #include <new>
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_array/array_ci.cpp:142
-
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
 
 ACE_INLINE
 void
@@ -43,7 +38,7 @@ TAO::Array_Traits<decl_heavy_struct::_m_en_forany>::free (
 ACE_INLINE
 decl_heavy_struct::_m_en_slice *
 TAO::Array_Traits<decl_heavy_struct::_m_en_forany>::dup (
-    const decl_heavy_struct::_m_en_slice * _tao_slice)
+    decl_heavy_struct::_m_en_slice const * _tao_slice)
 {
   return decl_heavy_struct::_m_en_dup (_tao_slice);
 }
@@ -52,7 +47,7 @@ ACE_INLINE
 void
 TAO::Array_Traits<decl_heavy_struct::_m_en_forany>::copy (
     decl_heavy_struct::_m_en_slice * _tao_to,
-    const decl_heavy_struct::_m_en_slice * _tao_from)
+    decl_heavy_struct::_m_en_slice const * _tao_from)
 {
   decl_heavy_struct::_m_en_copy (_tao_to, _tao_from);
 }
@@ -76,16 +71,9 @@ TAO::Array_Traits<decl_heavy_struct::_m_en_forany>::alloc ()
   return decl_heavy_struct::_m_en_alloc ();
 }
 
-
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_array/array_ci.cpp:142
-
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
 
 ACE_INLINE
 void
@@ -98,7 +86,7 @@ TAO::Array_Traits<decl_heavy_struct::_m_st_forany>::free (
 ACE_INLINE
 decl_heavy_struct::_m_st_slice *
 TAO::Array_Traits<decl_heavy_struct::_m_st_forany>::dup (
-    const decl_heavy_struct::_m_st_slice * _tao_slice)
+    decl_heavy_struct::_m_st_slice const * _tao_slice)
 {
   return decl_heavy_struct::_m_st_dup (_tao_slice);
 }
@@ -107,7 +95,7 @@ ACE_INLINE
 void
 TAO::Array_Traits<decl_heavy_struct::_m_st_forany>::copy (
     decl_heavy_struct::_m_st_slice * _tao_to,
-    const decl_heavy_struct::_m_st_slice * _tao_from)
+    decl_heavy_struct::_m_st_slice const * _tao_from)
 {
   decl_heavy_struct::_m_st_copy (_tao_to, _tao_from);
 }
@@ -131,18 +119,11 @@ TAO::Array_Traits<decl_heavy_struct::_m_st_forany>::alloc ()
   return decl_heavy_struct::_m_st_alloc ();
 }
 
-
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union/union_ci.cpp:35
 
 // *************************************************************
 // Inline operations for union decl_heavy_struct::un
 // *************************************************************
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union/discriminant_ci.cpp:302
-
 ACE_INLINE
 void
 decl_heavy_struct::un::_default ()
@@ -188,9 +169,6 @@ decl_heavy_struct::un::_d () const
 {
   return this->disc_;
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union_branch/public_ci.cpp:606
-
 // Accessor to set the member.
 ACE_INLINE
 void
@@ -214,9 +192,6 @@ decl_heavy_struct::un::a () const
     }
   return this->u_.a_;
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union_branch/public_ci.cpp:606
-
 // Accessor to set the member.
 ACE_INLINE
 void
@@ -240,13 +215,8 @@ decl_heavy_struct::un::b () const
     }
   return this->u_.b_;
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_array/array_ci.cpp:142
-
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
 
 ACE_INLINE
 void
@@ -259,7 +229,7 @@ TAO::Array_Traits<decl_heavy_struct::_m_un_forany>::free (
 ACE_INLINE
 decl_heavy_struct::_m_un_slice *
 TAO::Array_Traits<decl_heavy_struct::_m_un_forany>::dup (
-    const decl_heavy_struct::_m_un_slice * _tao_slice)
+    decl_heavy_struct::_m_un_slice const * _tao_slice)
 {
   return decl_heavy_struct::_m_un_dup (_tao_slice);
 }
@@ -268,7 +238,7 @@ ACE_INLINE
 void
 TAO::Array_Traits<decl_heavy_struct::_m_un_forany>::copy (
     decl_heavy_struct::_m_un_slice * _tao_to,
-    const decl_heavy_struct::_m_un_slice * _tao_from)
+    decl_heavy_struct::_m_un_slice const * _tao_from)
 {
   decl_heavy_struct::_m_un_copy (_tao_to, _tao_from);
 }
@@ -292,7 +262,5 @@ TAO::Array_Traits<decl_heavy_struct::_m_un_forany>::alloc ()
   return decl_heavy_struct::_m_un_alloc ();
 }
 
-
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 

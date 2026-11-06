@@ -22,11 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:454
-
-#ifndef _TAO_IDL_SEQUENCE_ANONYMOUSS_S2DZYJ_H_
-#define _TAO_IDL_SEQUENCE_ANONYMOUSS_S2DZYJ_H_
+#ifndef _TAO_IDL_SEQUENCE_ANONYMOUSS_H_
+#define _TAO_IDL_SEQUENCE_ANONYMOUSS_H_
 
 #include /**/ "ace/pre.h"
 
@@ -54,27 +51,18 @@
 #include "tao/Messaging/AMH_Response_Handler.h"
 
 #include /**/ "TAO_IDL_TEST_stub_export.h"
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_arg_traits.cpp:64
-
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
 
 // Arg traits specializations.
 namespace TAO
 {
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_arg_traits.cpp:298
-
-  
 
 #if !defined (_MESSAGING_EXCEPTIONHOLDER__SARG_TRAITS_)
 #define _MESSAGING_EXCEPTIONHOLDER__SARG_TRAITS_
 
   template<>
-  class SArg_Traits< ::Messaging::ExceptionHolder>
+  class SArg_Traits<::Messaging::ExceptionHolder>
     : public
         Object_SArg_Traits_T<
             ::Messaging::ExceptionHolder *,
@@ -86,16 +74,12 @@ namespace TAO
   };
 
 #endif /* end #if !defined */
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_arg_traits.cpp:142
-
-  
 
 #if !defined (_SEQTEST__SARG_TRAITS_)
 #define _SEQTEST__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits< ::seqTest>
+  class  SArg_Traits<::seqTest>
     : public Object_SArg_Traits_T<
         ::seqTest_ptr,
         ::seqTest_var,
@@ -105,13 +89,9 @@ namespace TAO
   };
 
 #endif /* end #if !defined */
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_arg_traits.cpp:671
-
-  
 
   template<>
-  class SArg_Traits< ::seqTest::dozens>
+  class SArg_Traits<::seqTest::dozens>
     : public
         Var_Size_SArg_Traits_T<
             ::seqTest::dozens,
@@ -119,16 +99,12 @@ namespace TAO
           >
   {
   };
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_arg_traits.cpp:298
-
-  
 
 #if !defined (_AMH_SEQTESTEXCEPTIONHOLDER__SARG_TRAITS_)
 #define _AMH_SEQTESTEXCEPTIONHOLDER__SARG_TRAITS_
 
   template<>
-  class SArg_Traits< ::AMH_seqTestExceptionHolder>
+  class SArg_Traits<::AMH_seqTestExceptionHolder>
     : public
         Object_SArg_Traits_T<
             ::AMH_seqTestExceptionHolder *,
@@ -140,16 +116,12 @@ namespace TAO
   };
 
 #endif /* end #if !defined */
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_arg_traits.cpp:142
-
-  
 
 #if !defined (_AMI_SEQTESTHANDLER__SARG_TRAITS_)
 #define _AMI_SEQTESTHANDLER__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits< ::AMI_seqTestHandler>
+  class  SArg_Traits<::AMI_seqTestHandler>
     : public Object_SArg_Traits_T<
         ::AMI_seqTestHandler_ptr,
         ::AMI_seqTestHandler_var,
@@ -159,13 +131,9 @@ namespace TAO
   };
 
 #endif /* end #if !defined */
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_arg_traits.cpp:931
-
-  
 
   template<>
-  class SArg_Traits< ::twinStruct>
+  class SArg_Traits<::twinStruct>
     : public
         Var_Size_SArg_Traits_T<
             ::twinStruct,
@@ -173,13 +141,9 @@ namespace TAO
           >
   {
   };
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_arg_traits.cpp:671
-
-  
 
   template<>
-  class SArg_Traits< ::outside>
+  class SArg_Traits<::outside>
     : public
         Var_Size_SArg_Traits_T<
             ::outside,
@@ -187,13 +151,9 @@ namespace TAO
           >
   {
   };
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_arg_traits.cpp:931
-
-  
 
   template<>
-  class SArg_Traits< ::nestedSeqStruct>
+  class SArg_Traits<::nestedSeqStruct>
     : public
         Var_Size_SArg_Traits_T<
             ::nestedSeqStruct,
@@ -205,12 +165,8 @@ namespace TAO
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/amh_sh.cpp:45
-
 class POA_AMH_seqTest;
-typedef POA_AMH_seqTest *POA_AMH_seqTest_ptr;
+using POA_AMH_seqTest_ptr = POA_AMH_seqTest *;
 
 class TAO_IDL_TEST_STUB_Export POA_AMH_seqTest
   : public virtual PortableServer::ServantBase
@@ -219,42 +175,31 @@ protected:
   POA_AMH_seqTest ();
 
 public:
-  POA_AMH_seqTest (const POA_AMH_seqTest& rhs);
-  virtual ~POA_AMH_seqTest () = default;
+  POA_AMH_seqTest (POA_AMH_seqTest const &rhs);
+  ~POA_AMH_seqTest () override = default;
 
+  ::CORBA::Boolean _is_a (char const *logical_type_id) override;
 
-  virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
-
-  virtual void _dispatch (
+  void _dispatch (
       TAO_ServerRequest &req,
-      TAO::Portable_Server::Servant_Upcall *_servant_upcall);
-  
+      TAO::Portable_Server::Servant_Upcall *_servant_upcall) override;
+
   seqTest *_this ();
 
-virtual const char* _interface_repository_id () const;
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/amh_sh.cpp:126
-
+char const *_interface_repository_id () const override;
 static void send_dozen_skel (
     TAO_ServerRequest &_tao_req,
     TAO::Portable_Server::Servant_Upcall *_tao_obj,
     TAO_ServantBase *_tao_servant_upcall);
-  
+
 virtual void send_dozen (
     AMH_seqTestResponseHandler_ptr _tao_rh,
-    const ::seqTest::dozens & bouquets
-  ) = 0;
+    ::seqTest::dozens const & bouquets) = 0;
 
 };
 
-
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_sh.cpp:72
-
-
-
 class POA_seqTest;
-typedef POA_seqTest *POA_seqTest_ptr;
+using POA_seqTest_ptr = POA_seqTest *;
 
 class _TAO_seqTest_Direct_Proxy_Impl;
 
@@ -266,25 +211,22 @@ protected:
 
 public:
   /// Useful for template programming.
-  typedef ::seqTest _stub_type;
-  typedef ::seqTest_ptr _stub_ptr_type;
-  typedef ::seqTest_var _stub_var_type;
+  using _stub_type = ::seqTest;
+  using _stub_ptr_type = ::seqTest_ptr;
+  using _stub_var_type = ::seqTest_var;
 
-  POA_seqTest (const POA_seqTest& rhs) = default;
-  virtual ~POA_seqTest () = default;
+  POA_seqTest (POA_seqTest const &rhs) = default;
+  ~POA_seqTest () override = default;
 
-  virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
+  ::CORBA::Boolean _is_a (char const *logical_type_id) override;
 
-  virtual void _dispatch (
+  void _dispatch (
       TAO_ServerRequest & req,
-      TAO::Portable_Server::Servant_Upcall *servant_upcall);
-  
-  ::seqTest *_this ();
-  
-  virtual const char* _interface_repository_id () const;
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/operation_sh.cpp:35
+      TAO::Portable_Server::Servant_Upcall *servant_upcall) override;
 
+  ::seqTest *_this ();
+
+  char const *_interface_repository_id () const override;
   virtual void send_dozen (
     ::seqTest::dozens & bouquets) = 0;
 
@@ -293,10 +235,6 @@ public:
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
 };
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/direct_proxy_impl_sh.cpp:23
-
-
 
 ///////////////////////////////////////////////////////////////////////
 //                    Direct  Impl. Declaration
@@ -306,25 +244,18 @@ class TAO_IDL_TEST_STUB_Export _TAO_seqTest_Direct_Proxy_Impl
 {
 public:
   virtual ~_TAO_seqTest_Direct_Proxy_Impl ();
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/proxy_impl_xh.cpp:25
-
   static void
   send_dozen (
     TAO_Abstract_ServantBase *servant, TAO::Argument **args);
-  
+
 };
 
 //
 //                Direct  Proxy Impl. Declaration
 ///////////////////////////////////////////////////////////////////////
 
-
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/amh_rh_sh.cpp:49
-
 class POA_TAO_AMH_seqTestResponseHandler;
-typedef POA_TAO_AMH_seqTestResponseHandler *POA_TAO_AMH_seqTestResponseHandler_ptr;
+using POA_TAO_AMH_seqTestResponseHandler_ptr = POA_TAO_AMH_seqTestResponseHandler *;
 
 class TAO_IDL_TEST_STUB_Export POA_TAO_AMH_seqTestResponseHandler
   : public TAO_AMH_Response_Handler,
@@ -333,26 +264,14 @@ class TAO_IDL_TEST_STUB_Export POA_TAO_AMH_seqTestResponseHandler
 public:
   POA_TAO_AMH_seqTestResponseHandler () = default;
   virtual ~POA_TAO_AMH_seqTestResponseHandler () = default;
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/amh_rh_sh.cpp:59
-
   void send_dozen (
-    const ::seqTest::dozens & bouquets) override;
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/amh_rh_sh.cpp:59
-
+    ::seqTest::dozens const & bouquets) override;
   void send_dozen_excep (
     ::AMH_seqTestExceptionHolder * holder) override;
 };
 
-
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_sh.cpp:72
-
-
-
 class POA_AMI_seqTestHandler;
-typedef POA_AMI_seqTestHandler *POA_AMI_seqTestHandler_ptr;
+using POA_AMI_seqTestHandler_ptr = POA_AMI_seqTestHandler *;
 
 class _TAO_AMI_seqTestHandler_Direct_Proxy_Impl;
 
@@ -364,35 +283,29 @@ protected:
 
 public:
   /// Useful for template programming.
-  typedef ::AMI_seqTestHandler _stub_type;
-  typedef ::AMI_seqTestHandler_ptr _stub_ptr_type;
-  typedef ::AMI_seqTestHandler_var _stub_var_type;
+  using _stub_type = ::AMI_seqTestHandler;
+  using _stub_ptr_type = ::AMI_seqTestHandler_ptr;
+  using _stub_var_type = ::AMI_seqTestHandler_var;
 
-  POA_AMI_seqTestHandler (const POA_AMI_seqTestHandler& rhs) = default;
-  virtual ~POA_AMI_seqTestHandler () = default;
+  POA_AMI_seqTestHandler (POA_AMI_seqTestHandler const &rhs) = default;
+  ~POA_AMI_seqTestHandler () override = default;
 
-  virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
+  ::CORBA::Boolean _is_a (char const *logical_type_id) override;
 
-  virtual void _dispatch (
+  void _dispatch (
       TAO_ServerRequest & req,
-      TAO::Portable_Server::Servant_Upcall *servant_upcall);
-  
-  ::AMI_seqTestHandler *_this ();
-  
-  virtual const char* _interface_repository_id () const;
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/operation_sh.cpp:35
+      TAO::Portable_Server::Servant_Upcall *servant_upcall) override;
 
+  ::AMI_seqTestHandler *_this ();
+
+  char const *_interface_repository_id () const override;
   virtual void send_dozen (
-    const ::seqTest::dozens & bouquets) = 0;
+    ::seqTest::dozens const & bouquets) = 0;
 
   static void send_dozen_skel (
       TAO_ServerRequest &server_request,
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/operation_sh.cpp:35
-
   virtual void send_dozen_excep (
     ::Messaging::ExceptionHolder * excep_holder) = 0;
 
@@ -401,10 +314,6 @@ public:
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
 };
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/direct_proxy_impl_sh.cpp:23
-
-
 
 ///////////////////////////////////////////////////////////////////////
 //                    Direct  Impl. Declaration
@@ -415,30 +324,21 @@ class TAO_IDL_TEST_STUB_Export _TAO_AMI_seqTestHandler_Direct_Proxy_Impl
 {
 public:
   virtual ~_TAO_AMI_seqTestHandler_Direct_Proxy_Impl ();
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/proxy_impl_xh.cpp:25
-
   static void
   send_dozen (
     TAO_Abstract_ServantBase *servant, TAO::Argument **args);
-  
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/proxy_impl_xh.cpp:25
 
   static void
   send_dozen_excep (
     TAO_Abstract_ServantBase *servant, TAO::Argument **args);
-  
+
 };
 
 //
 //                Direct  Proxy Impl. Declaration
 ///////////////////////////////////////////////////////////////////////
 
-
-
 #include "sequence_anonymousS_T.h"
-
 
 #include /**/ "ace/post.h"
 

@@ -22,12 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:631
-
-#ifndef _TAO_IDL_ARRAY_ONLYS_8SOFE0_CPP_
-#define _TAO_IDL_ARRAY_ONLYS_8SOFE0_CPP_
-
+#ifndef _TAO_IDL_ARRAY_ONLYS_CPP_
+#define _TAO_IDL_ARRAY_ONLYS_CPP_
 
 #include "array_onlyS.h"
 

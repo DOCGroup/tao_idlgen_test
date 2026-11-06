@@ -24,15 +24,9 @@
 
 #include <memory>
 #include <new>
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union/union_ci.cpp:35
-
 // *************************************************************
 // Inline operations for union Data
 // *************************************************************
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union/discriminant_ci.cpp:195
-
 ACE_INLINE
 void
 Data::_default ()
@@ -40,8 +34,6 @@ Data::_default ()
   this->_reset ();
   this->disc_ = dtEmpty;
 }
-
-
 
 ACE_INLINE
 unsigned long
@@ -80,9 +72,6 @@ Data::_d () const
 {
   return this->disc_;
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union_branch/public_ci.cpp:606
-
 // Accessor to set the member.
 ACE_INLINE
 void
@@ -106,9 +95,6 @@ Data::longData () const
     }
   return this->u_.longData_;
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union_branch/public_ci.cpp:606
-
 // Accessor to set the member.
 ACE_INLINE
 void
@@ -132,16 +118,9 @@ Data::shortData () const
     }
   return this->u_.shortData_;
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union/union_ci.cpp:35
-
 // *************************************************************
 // Inline operations for union Necessary::WhichResult
 // *************************************************************
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union/discriminant_ci.cpp:195
-
-
 
 ACE_INLINE
 unsigned long
@@ -178,9 +157,6 @@ Necessary::WhichResult::_d () const
 {
   return this->disc_;
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union_branch/public_ci.cpp:606
-
 // Accessor to set the member.
 ACE_INLINE
 void
@@ -204,9 +180,6 @@ Necessary::WhichResult::m_Result () const
     }
   return this->u_.m_Result_;
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union_branch/public_ci.cpp:606
-
 // Accessor to set the member.
 ACE_INLINE
 void
@@ -230,16 +203,9 @@ Necessary::WhichResult::m_Unused () const
     }
   return this->u_.m_Unused_;
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union/union_ci.cpp:35
-
 // *************************************************************
 // Inline operations for union foo
 // *************************************************************
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union/discriminant_ci.cpp:302
-
-
 
 ACE_INLINE
 unsigned long
@@ -280,9 +246,6 @@ foo::_d () const
 {
   return this->disc_;
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union_branch/public_ci.cpp:917
-
 /// Accessor to set the member.
 ACE_INLINE
 void
@@ -297,7 +260,7 @@ foo::foo_str_member (char *val)
 // Accessor to set the member.
 ACE_INLINE
 void
-foo::foo_str_member (const char *val)
+foo::foo_str_member (char const *val)
 {
   // Set the discriminant value.
   this->_reset ();
@@ -309,7 +272,7 @@ foo::foo_str_member (const char *val)
 /// Accessor to set the member.
 ACE_INLINE
 void
-foo::foo_str_member (const ::CORBA::String_var &val)
+foo::foo_str_member (::CORBA::String_var const &val)
 {
   // Set the discriminant value.
   this->_reset ();
@@ -320,7 +283,7 @@ foo::foo_str_member (const ::CORBA::String_var &val)
 }
 
 ACE_INLINE
-const char *
+char const *
 foo::foo_str_member () const // get method
 {
   if (_tao_member_index (this->disc_) != 0UL)
@@ -329,9 +292,6 @@ foo::foo_str_member () const // get method
     }
   return this->u_.foo_str_member_;
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union_branch/public_ci.cpp:606
-
 // Accessor to set the member.
 ACE_INLINE
 void
@@ -355,9 +315,6 @@ foo::foo_iface_member () const
     }
   return this->u_.foo_iface_member_;
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union_branch/public_ci.cpp:606
-
 // Accessor to set the member.
 ACE_INLINE
 void
@@ -381,15 +338,9 @@ foo::foo_iface_member2 () const
     }
   return this->u_.foo_iface_member2_;
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union/union_ci.cpp:35
-
 // *************************************************************
 // Inline operations for union UnionDiscTest::BooleanUnion
 // *************************************************************
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union/discriminant_ci.cpp:302
-
 ACE_INLINE
 void
 UnionDiscTest::BooleanUnion::_default ()
@@ -427,9 +378,6 @@ UnionDiscTest::BooleanUnion::_d () const
 {
   return this->disc_;
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union_branch/public_ci.cpp:917
-
 /// Accessor to set the member.
 ACE_INLINE
 void
@@ -444,7 +392,7 @@ UnionDiscTest::BooleanUnion::value (char *val)
 // Accessor to set the member.
 ACE_INLINE
 void
-UnionDiscTest::BooleanUnion::value (const char *val)
+UnionDiscTest::BooleanUnion::value (char const *val)
 {
   // Set the discriminant value.
   this->_reset ();
@@ -456,7 +404,7 @@ UnionDiscTest::BooleanUnion::value (const char *val)
 /// Accessor to set the member.
 ACE_INLINE
 void
-UnionDiscTest::BooleanUnion::value (const ::CORBA::String_var &val)
+UnionDiscTest::BooleanUnion::value (::CORBA::String_var const &val)
 {
   // Set the discriminant value.
   this->_reset ();
@@ -467,7 +415,7 @@ UnionDiscTest::BooleanUnion::value (const ::CORBA::String_var &val)
 }
 
 ACE_INLINE
-const char *
+char const *
 UnionDiscTest::BooleanUnion::value () const // get method
 {
   if (_tao_member_index (this->disc_) != 0UL)
@@ -476,15 +424,9 @@ UnionDiscTest::BooleanUnion::value () const // get method
     }
   return this->u_.value_;
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union/union_ci.cpp:35
-
 // *************************************************************
 // Inline operations for union UnionDiscTest::CharUnion
 // *************************************************************
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union/discriminant_ci.cpp:302
-
 ACE_INLINE
 void
 UnionDiscTest::CharUnion::_default ()
@@ -528,9 +470,6 @@ UnionDiscTest::CharUnion::_d () const
 {
   return this->disc_;
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union_branch/public_ci.cpp:917
-
 /// Accessor to set the member.
 ACE_INLINE
 void
@@ -545,7 +484,7 @@ UnionDiscTest::CharUnion::value (char *val)
 // Accessor to set the member.
 ACE_INLINE
 void
-UnionDiscTest::CharUnion::value (const char *val)
+UnionDiscTest::CharUnion::value (char const *val)
 {
   // Set the discriminant value.
   this->_reset ();
@@ -557,7 +496,7 @@ UnionDiscTest::CharUnion::value (const char *val)
 /// Accessor to set the member.
 ACE_INLINE
 void
-UnionDiscTest::CharUnion::value (const ::CORBA::String_var &val)
+UnionDiscTest::CharUnion::value (::CORBA::String_var const &val)
 {
   // Set the discriminant value.
   this->_reset ();
@@ -568,7 +507,7 @@ UnionDiscTest::CharUnion::value (const ::CORBA::String_var &val)
 }
 
 ACE_INLINE
-const char *
+char const *
 UnionDiscTest::CharUnion::value () const // get method
 {
   if (_tao_member_index (this->disc_) != 0UL)
@@ -577,15 +516,9 @@ UnionDiscTest::CharUnion::value () const // get method
     }
   return this->u_.value_;
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union/union_ci.cpp:35
-
 // *************************************************************
 // Inline operations for union AllBoolUnions::OneBranchT
 // *************************************************************
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union/discriminant_ci.cpp:302
-
 ACE_INLINE
 void
 AllBoolUnions::OneBranchT::_default ()
@@ -623,9 +556,6 @@ AllBoolUnions::OneBranchT::_d () const
 {
   return this->disc_;
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union_branch/public_ci.cpp:606
-
 // Accessor to set the member.
 ACE_INLINE
 void
@@ -649,15 +579,9 @@ AllBoolUnions::OneBranchT::val () const
     }
   return this->u_.val_;
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union/union_ci.cpp:35
-
 // *************************************************************
 // Inline operations for union AllBoolUnions::OneBranchF
 // *************************************************************
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union/discriminant_ci.cpp:302
-
 ACE_INLINE
 void
 AllBoolUnions::OneBranchF::_default ()
@@ -695,9 +619,6 @@ AllBoolUnions::OneBranchF::_d () const
 {
   return this->disc_;
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union_branch/public_ci.cpp:606
-
 // Accessor to set the member.
 ACE_INLINE
 void
@@ -721,16 +642,9 @@ AllBoolUnions::OneBranchF::val () const
     }
   return this->u_.val_;
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union/union_ci.cpp:35
-
 // *************************************************************
 // Inline operations for union AllBoolUnions::OneBranchD
 // *************************************************************
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union/discriminant_ci.cpp:302
-
-
 
 ACE_INLINE
 unsigned long
@@ -754,9 +668,6 @@ AllBoolUnions::OneBranchD::_d () const
 {
   return this->disc_;
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union_branch/public_ci.cpp:606
-
 // Accessor to set the member.
 ACE_INLINE
 void
@@ -780,16 +691,9 @@ AllBoolUnions::OneBranchD::val () const
     }
   return this->u_.val_;
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union/union_ci.cpp:35
-
 // *************************************************************
 // Inline operations for union AllBoolUnions::OneBranchTF
 // *************************************************************
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union/discriminant_ci.cpp:302
-
-
 
 ACE_INLINE
 unsigned long
@@ -813,9 +717,6 @@ AllBoolUnions::OneBranchTF::_d () const
 {
   return this->disc_;
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union_branch/public_ci.cpp:606
-
 // Accessor to set the member.
 ACE_INLINE
 void
@@ -839,16 +740,9 @@ AllBoolUnions::OneBranchTF::val () const
     }
   return this->u_.val_;
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union/union_ci.cpp:35
-
 // *************************************************************
 // Inline operations for union AllBoolUnions::OneBranchFT
 // *************************************************************
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union/discriminant_ci.cpp:302
-
-
 
 ACE_INLINE
 unsigned long
@@ -872,9 +766,6 @@ AllBoolUnions::OneBranchFT::_d () const
 {
   return this->disc_;
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union_branch/public_ci.cpp:606
-
 // Accessor to set the member.
 ACE_INLINE
 void
@@ -898,16 +789,9 @@ AllBoolUnions::OneBranchFT::val () const
     }
   return this->u_.val_;
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union/union_ci.cpp:35
-
 // *************************************************************
 // Inline operations for union AllBoolUnions::OneBranchTD
 // *************************************************************
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union/discriminant_ci.cpp:302
-
-
 
 ACE_INLINE
 unsigned long
@@ -931,9 +815,6 @@ AllBoolUnions::OneBranchTD::_d () const
 {
   return this->disc_;
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union_branch/public_ci.cpp:606
-
 // Accessor to set the member.
 ACE_INLINE
 void
@@ -957,16 +838,9 @@ AllBoolUnions::OneBranchTD::val () const
     }
   return this->u_.val_;
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union/union_ci.cpp:35
-
 // *************************************************************
 // Inline operations for union AllBoolUnions::OneBranchDT
 // *************************************************************
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union/discriminant_ci.cpp:302
-
-
 
 ACE_INLINE
 unsigned long
@@ -990,9 +864,6 @@ AllBoolUnions::OneBranchDT::_d () const
 {
   return this->disc_;
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union_branch/public_ci.cpp:606
-
 // Accessor to set the member.
 ACE_INLINE
 void
@@ -1016,16 +887,9 @@ AllBoolUnions::OneBranchDT::val () const
     }
   return this->u_.val_;
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union/union_ci.cpp:35
-
 // *************************************************************
 // Inline operations for union AllBoolUnions::OneBranchFD
 // *************************************************************
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union/discriminant_ci.cpp:302
-
-
 
 ACE_INLINE
 unsigned long
@@ -1049,9 +913,6 @@ AllBoolUnions::OneBranchFD::_d () const
 {
   return this->disc_;
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union_branch/public_ci.cpp:606
-
 // Accessor to set the member.
 ACE_INLINE
 void
@@ -1075,16 +936,9 @@ AllBoolUnions::OneBranchFD::val () const
     }
   return this->u_.val_;
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union/union_ci.cpp:35
-
 // *************************************************************
 // Inline operations for union AllBoolUnions::OneBranchDF
 // *************************************************************
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union/discriminant_ci.cpp:302
-
-
 
 ACE_INLINE
 unsigned long
@@ -1108,9 +962,6 @@ AllBoolUnions::OneBranchDF::_d () const
 {
   return this->disc_;
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union_branch/public_ci.cpp:606
-
 // Accessor to set the member.
 ACE_INLINE
 void
@@ -1134,16 +985,9 @@ AllBoolUnions::OneBranchDF::val () const
     }
   return this->u_.val_;
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union/union_ci.cpp:35
-
 // *************************************************************
 // Inline operations for union AllBoolUnions::TwoBranchesTF
 // *************************************************************
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union/discriminant_ci.cpp:302
-
-
 
 ACE_INLINE
 unsigned long
@@ -1174,9 +1018,6 @@ AllBoolUnions::TwoBranchesTF::_d () const
 {
   return this->disc_;
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union_branch/public_ci.cpp:606
-
 // Accessor to set the member.
 ACE_INLINE
 void
@@ -1200,9 +1041,6 @@ AllBoolUnions::TwoBranchesTF::val1 () const
     }
   return this->u_.val1_;
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union_branch/public_ci.cpp:606
-
 // Accessor to set the member.
 ACE_INLINE
 void
@@ -1226,16 +1064,9 @@ AllBoolUnions::TwoBranchesTF::val2 () const
     }
   return this->u_.val2_;
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union/union_ci.cpp:35
-
 // *************************************************************
 // Inline operations for union AllBoolUnions::TwoBranchesFT
 // *************************************************************
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union/discriminant_ci.cpp:302
-
-
 
 ACE_INLINE
 unsigned long
@@ -1266,9 +1097,6 @@ AllBoolUnions::TwoBranchesFT::_d () const
 {
   return this->disc_;
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union_branch/public_ci.cpp:606
-
 // Accessor to set the member.
 ACE_INLINE
 void
@@ -1292,9 +1120,6 @@ AllBoolUnions::TwoBranchesFT::val1 () const
     }
   return this->u_.val1_;
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union_branch/public_ci.cpp:606
-
 // Accessor to set the member.
 ACE_INLINE
 void
@@ -1318,16 +1143,9 @@ AllBoolUnions::TwoBranchesFT::val2 () const
     }
   return this->u_.val2_;
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union/union_ci.cpp:35
-
 // *************************************************************
 // Inline operations for union AllBoolUnions::TwoBranchesTD
 // *************************************************************
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union/discriminant_ci.cpp:302
-
-
 
 ACE_INLINE
 unsigned long
@@ -1358,9 +1176,6 @@ AllBoolUnions::TwoBranchesTD::_d () const
 {
   return this->disc_;
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union_branch/public_ci.cpp:606
-
 // Accessor to set the member.
 ACE_INLINE
 void
@@ -1384,9 +1199,6 @@ AllBoolUnions::TwoBranchesTD::val1 () const
     }
   return this->u_.val1_;
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union_branch/public_ci.cpp:606
-
 // Accessor to set the member.
 ACE_INLINE
 void
@@ -1410,16 +1222,9 @@ AllBoolUnions::TwoBranchesTD::val2 () const
     }
   return this->u_.val2_;
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union/union_ci.cpp:35
-
 // *************************************************************
 // Inline operations for union AllBoolUnions::TwoBranchesDT
 // *************************************************************
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union/discriminant_ci.cpp:302
-
-
 
 ACE_INLINE
 unsigned long
@@ -1450,9 +1255,6 @@ AllBoolUnions::TwoBranchesDT::_d () const
 {
   return this->disc_;
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union_branch/public_ci.cpp:606
-
 // Accessor to set the member.
 ACE_INLINE
 void
@@ -1476,9 +1278,6 @@ AllBoolUnions::TwoBranchesDT::val1 () const
     }
   return this->u_.val1_;
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union_branch/public_ci.cpp:606
-
 // Accessor to set the member.
 ACE_INLINE
 void
@@ -1502,16 +1301,9 @@ AllBoolUnions::TwoBranchesDT::val2 () const
     }
   return this->u_.val2_;
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union/union_ci.cpp:35
-
 // *************************************************************
 // Inline operations for union AllBoolUnions::TwoBranchesFD
 // *************************************************************
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union/discriminant_ci.cpp:302
-
-
 
 ACE_INLINE
 unsigned long
@@ -1542,9 +1334,6 @@ AllBoolUnions::TwoBranchesFD::_d () const
 {
   return this->disc_;
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union_branch/public_ci.cpp:606
-
 // Accessor to set the member.
 ACE_INLINE
 void
@@ -1568,9 +1357,6 @@ AllBoolUnions::TwoBranchesFD::val1 () const
     }
   return this->u_.val1_;
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union_branch/public_ci.cpp:606
-
 // Accessor to set the member.
 ACE_INLINE
 void
@@ -1594,16 +1380,9 @@ AllBoolUnions::TwoBranchesFD::val2 () const
     }
   return this->u_.val2_;
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union/union_ci.cpp:35
-
 // *************************************************************
 // Inline operations for union AllBoolUnions::TwoBranchesDF
 // *************************************************************
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union/discriminant_ci.cpp:302
-
-
 
 ACE_INLINE
 unsigned long
@@ -1634,9 +1413,6 @@ AllBoolUnions::TwoBranchesDF::_d () const
 {
   return this->disc_;
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union_branch/public_ci.cpp:606
-
 // Accessor to set the member.
 ACE_INLINE
 void
@@ -1660,9 +1436,6 @@ AllBoolUnions::TwoBranchesDF::val1 () const
     }
   return this->u_.val1_;
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union_branch/public_ci.cpp:606
-
 // Accessor to set the member.
 ACE_INLINE
 void
@@ -1686,15 +1459,9 @@ AllBoolUnions::TwoBranchesDF::val2 () const
     }
   return this->u_.val2_;
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union/union_ci.cpp:35
-
 // *************************************************************
 // Inline operations for union inner1
 // *************************************************************
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union/discriminant_ci.cpp:195
-
 ACE_INLINE
 void
 inner1::_default ()
@@ -1702,8 +1469,6 @@ inner1::_default ()
   this->_reset ();
   this->disc_ = static_cast <disc1> (-1);
 }
-
-
 
 ACE_INLINE
 unsigned long
@@ -1742,9 +1507,6 @@ inner1::_d () const
 {
   return this->disc_;
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union_branch/public_ci.cpp:606
-
 // Accessor to set the member.
 ACE_INLINE
 void
@@ -1768,9 +1530,6 @@ inner1::s () const
     }
   return this->u_.s_;
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union_branch/public_ci.cpp:606
-
 // Accessor to set the member.
 ACE_INLINE
 void
@@ -1794,15 +1553,9 @@ inner1::l () const
     }
   return this->u_.l_;
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union/union_ci.cpp:35
-
 // *************************************************************
 // Inline operations for union inner2
 // *************************************************************
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union/discriminant_ci.cpp:195
-
 ACE_INLINE
 void
 inner2::_default ()
@@ -1810,8 +1563,6 @@ inner2::_default ()
   this->_reset ();
   this->disc_ = static_cast <disc2> (-1);
 }
-
-
 
 ACE_INLINE
 unsigned long
@@ -1850,9 +1601,6 @@ inner2::_d () const
 {
   return this->disc_;
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union_branch/public_ci.cpp:606
-
 // Accessor to set the member.
 ACE_INLINE
 void
@@ -1876,9 +1624,6 @@ inner2::c () const
     }
   return this->u_.c_;
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union_branch/public_ci.cpp:606
-
 // Accessor to set the member.
 ACE_INLINE
 void
@@ -1902,15 +1647,9 @@ inner2::lng () const
     }
   return this->u_.lng_;
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union/union_ci.cpp:35
-
 // *************************************************************
 // Inline operations for union outer
 // *************************************************************
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union/discriminant_ci.cpp:195
-
 ACE_INLINE
 void
 outer::_default ()
@@ -1918,8 +1657,6 @@ outer::_default ()
   this->_reset ();
   this->disc_ = static_cast <disc_outer> (-1);
 }
-
-
 
 ACE_INLINE
 unsigned long
@@ -1958,13 +1695,10 @@ outer::_d () const
 {
   return this->disc_;
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union_branch/public_ci.cpp:1294
-
 // Accessor to set the member.
 ACE_INLINE
 void
-outer::first (const inner1 &val)
+outer::first (inner1 const &val)
 {
   // Set the discriminant value.
   this->_reset ();
@@ -1977,7 +1711,7 @@ outer::first (const inner1 &val)
 
 // Readonly get method.
 ACE_INLINE
-const inner1 &
+inner1 const &
 outer::first () const
 {
   if (_tao_member_index (this->disc_) != 0UL)
@@ -1998,13 +1732,10 @@ outer::first ()
     }
   return *this->u_.first_;
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union_branch/public_ci.cpp:1294
-
 // Accessor to set the member.
 ACE_INLINE
 void
-outer::second (const inner2 &val)
+outer::second (inner2 const &val)
 {
   // Set the discriminant value.
   this->_reset ();
@@ -2017,7 +1748,7 @@ outer::second (const inner2 &val)
 
 // Readonly get method.
 ACE_INLINE
-const inner2 &
+inner2 const &
 outer::second () const
 {
   if (_tao_member_index (this->disc_) != 1UL)
@@ -2038,15 +1769,9 @@ outer::second ()
     }
   return *this->u_.second_;
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union/union_ci.cpp:35
-
 // *************************************************************
 // Inline operations for union UnionTest3::ValType
 // *************************************************************
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union/discriminant_ci.cpp:195
-
 ACE_INLINE
 void
 UnionTest3::ValType::_default ()
@@ -2054,8 +1779,6 @@ UnionTest3::ValType::_default ()
   this->_reset ();
   this->disc_ = static_cast <UnionTest3::ValChoice> (-1);
 }
-
-
 
 ACE_INLINE
 unsigned long
@@ -2094,9 +1817,6 @@ UnionTest3::ValType::_d () const
 {
   return this->disc_;
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union_branch/public_ci.cpp:606
-
 // Accessor to set the member.
 ACE_INLINE
 void
@@ -2120,9 +1840,6 @@ UnionTest3::ValType::integerValue () const
     }
   return this->u_.integerValue_;
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union_branch/public_ci.cpp:606
-
 // Accessor to set the member.
 ACE_INLINE
 void
@@ -2146,15 +1863,9 @@ UnionTest3::ValType::realValue () const
     }
   return this->u_.realValue_;
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union/union_ci.cpp:35
-
 // *************************************************************
 // Inline operations for union UnionTest3::IndType
 // *************************************************************
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union/discriminant_ci.cpp:195
-
 ACE_INLINE
 void
 UnionTest3::IndType::_default ()
@@ -2162,8 +1873,6 @@ UnionTest3::IndType::_default ()
   this->_reset ();
   this->disc_ = static_cast <UnionTest3::IndChoice> (-1);
 }
-
-
 
 ACE_INLINE
 unsigned long
@@ -2202,13 +1911,10 @@ UnionTest3::IndType::_d () const
 {
   return this->disc_;
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union_branch/public_ci.cpp:1121
-
 /// Accessor to set the member.
 ACE_INLINE
 void
-UnionTest3::IndType::up (const UnionTest3::UpType &val)
+UnionTest3::IndType::up (UnionTest3::UpType const &val)
 {
   // Set the discriminant value.
   this->_reset ();
@@ -2221,7 +1927,7 @@ UnionTest3::IndType::up (const UnionTest3::UpType &val)
 
 // Readonly get method.
 ACE_INLINE
-const UnionTest3::UpType &
+UnionTest3::UpType const &
 UnionTest3::IndType::up () const
 {
   if (_tao_member_index (this->disc_) != 0UL)
@@ -2242,13 +1948,10 @@ UnionTest3::IndType::up ()
     }
   return *this->u_.up_;
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union_branch/public_ci.cpp:1121
-
 /// Accessor to set the member.
 ACE_INLINE
 void
-UnionTest3::IndType::down (const UnionTest3::DownType &val)
+UnionTest3::IndType::down (UnionTest3::DownType const &val)
 {
   // Set the discriminant value.
   this->_reset ();
@@ -2261,7 +1964,7 @@ UnionTest3::IndType::down (const UnionTest3::DownType &val)
 
 // Readonly get method.
 ACE_INLINE
-const UnionTest3::DownType &
+UnionTest3::DownType const &
 UnionTest3::IndType::down () const
 {
   if (_tao_member_index (this->disc_) != 1UL)
@@ -2282,15 +1985,9 @@ UnionTest3::IndType::down ()
     }
   return *this->u_.down_;
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union/union_ci.cpp:35
-
 // *************************************************************
 // Inline operations for union X
 // *************************************************************
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union/discriminant_ci.cpp:195
-
 ACE_INLINE
 void
 X::_default ()
@@ -2298,8 +1995,6 @@ X::_default ()
   this->_reset ();
   this->disc_ = static_cast <XType> (-1);
 }
-
-
 
 ACE_INLINE
 unsigned long
@@ -2336,15 +2031,9 @@ X::_d () const
 {
   return this->disc_;
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union/union_ci.cpp:35
-
 // *************************************************************
 // Inline operations for union X::Y::Z
 // *************************************************************
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union/discriminant_ci.cpp:195
-
 ACE_INLINE
 void
 X::Y::Z::_default ()
@@ -2352,8 +2041,6 @@ X::Y::Z::_default ()
   this->_reset ();
   this->disc_ = static_cast <ZType> (-1);
 }
-
-
 
 ACE_INLINE
 unsigned long
@@ -2390,9 +2077,6 @@ X::Y::Z::_d () const
 {
   return this->disc_;
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union_branch/public_ci.cpp:606
-
 // Accessor to set the member.
 ACE_INLINE
 void
@@ -2416,13 +2100,10 @@ X::Y::Z::a () const
     }
   return this->u_.a_;
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union_branch/public_ci.cpp:1121
-
 /// Accessor to set the member.
 ACE_INLINE
 void
-X::a (const X::Y &val)
+X::a (X::Y const &val)
 {
   // Set the discriminant value.
   this->_reset ();
@@ -2435,7 +2116,7 @@ X::a (const X::Y &val)
 
 // Readonly get method.
 ACE_INLINE
-const X::Y &
+X::Y const &
 X::a () const
 {
   if (_tao_member_index (this->disc_) != 0UL)
@@ -2456,16 +2137,9 @@ X::a ()
     }
   return *this->u_.a_;
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union/union_ci.cpp:35
-
 // *************************************************************
 // Inline operations for union FieldValue
 // *************************************************************
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union/discriminant_ci.cpp:195
-
-
 
 ACE_INLINE
 unsigned long
@@ -2503,9 +2177,6 @@ FieldValue::_d () const
 {
   return this->disc_;
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union_branch/public_ci.cpp:917
-
 /// Accessor to set the member.
 ACE_INLINE
 void
@@ -2520,7 +2191,7 @@ FieldValue::strValue (char *val)
 // Accessor to set the member.
 ACE_INLINE
 void
-FieldValue::strValue (const char *val)
+FieldValue::strValue (char const *val)
 {
   // Set the discriminant value.
   this->_reset ();
@@ -2532,7 +2203,7 @@ FieldValue::strValue (const char *val)
 /// Accessor to set the member.
 ACE_INLINE
 void
-FieldValue::strValue (const ::CORBA::String_var &val)
+FieldValue::strValue (::CORBA::String_var const &val)
 {
   // Set the discriminant value.
   this->_reset ();
@@ -2543,7 +2214,7 @@ FieldValue::strValue (const ::CORBA::String_var &val)
 }
 
 ACE_INLINE
-const char *
+char const *
 FieldValue::strValue () const // get method
 {
   if (_tao_member_index (this->disc_) != 0UL)
@@ -2552,9 +2223,6 @@ FieldValue::strValue () const // get method
     }
   return this->u_.strValue_;
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union_branch/public_ci.cpp:917
-
 /// Accessor to set the member.
 ACE_INLINE
 void
@@ -2569,7 +2237,7 @@ FieldValue::defstr (char *val)
 // Accessor to set the member.
 ACE_INLINE
 void
-FieldValue::defstr (const char *val)
+FieldValue::defstr (char const *val)
 {
   // Set the discriminant value.
   this->_reset ();
@@ -2581,7 +2249,7 @@ FieldValue::defstr (const char *val)
 /// Accessor to set the member.
 ACE_INLINE
 void
-FieldValue::defstr (const ::CORBA::String_var &val)
+FieldValue::defstr (::CORBA::String_var const &val)
 {
   // Set the discriminant value.
   this->_reset ();
@@ -2592,7 +2260,7 @@ FieldValue::defstr (const ::CORBA::String_var &val)
 }
 
 ACE_INLINE
-const char *
+char const *
 FieldValue::defstr () const // get method
 {
   if (_tao_member_index (this->disc_) != 1UL)
@@ -2601,15 +2269,9 @@ FieldValue::defstr () const // get method
     }
   return this->u_.defstr_;
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union/union_ci.cpp:35
-
 // *************************************************************
 // Inline operations for union TestUnion
 // *************************************************************
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union/discriminant_ci.cpp:302
-
 ACE_INLINE
 void
 TestUnion::_default ()
@@ -2655,9 +2317,6 @@ TestUnion::_d () const
 {
   return this->disc_;
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union_branch/public_ci.cpp:254
-
 /// Accessor to set the member.
 ACE_INLINE
 void
@@ -2681,9 +2340,6 @@ TestUnion::oneEnum () const
     }
   return this->u_.oneEnum_;
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union_branch/public_ci.cpp:254
-
 /// Accessor to set the member.
 ACE_INLINE
 void
@@ -2707,13 +2363,8 @@ TestUnion::twoEnum () const
     }
   return this->u_.twoEnum_;
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_array/array_ci.cpp:142
-
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
 
 ACE_INLINE
 void
@@ -2726,7 +2377,7 @@ TAO::Array_Traits<U41_forany>::free (
 ACE_INLINE
 U41_slice *
 TAO::Array_Traits<U41_forany>::dup (
-    const U41_slice * _tao_slice)
+    U41_slice const * _tao_slice)
 {
   return U41_dup (_tao_slice);
 }
@@ -2735,7 +2386,7 @@ ACE_INLINE
 void
 TAO::Array_Traits<U41_forany>::copy (
     U41_slice * _tao_to,
-    const U41_slice * _tao_from)
+    U41_slice const * _tao_from)
 {
   U41_copy (_tao_to, _tao_from);
 }
@@ -2762,16 +2413,9 @@ TAO::Array_Traits<U41_forany>::alloc ()
   return U41_alloc ();
 }
 
-
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_array/array_ci.cpp:142
-
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
 
 ACE_INLINE
 void
@@ -2784,7 +2428,7 @@ TAO::Array_Traits<U42_forany>::free (
 ACE_INLINE
 U42_slice *
 TAO::Array_Traits<U42_forany>::dup (
-    const U42_slice * _tao_slice)
+    U42_slice const * _tao_slice)
 {
   return U42_dup (_tao_slice);
 }
@@ -2793,7 +2437,7 @@ ACE_INLINE
 void
 TAO::Array_Traits<U42_forany>::copy (
     U42_slice * _tao_to,
-    const U42_slice * _tao_from)
+    U42_slice const * _tao_from)
 {
   U42_copy (_tao_to, _tao_from);
 }
@@ -2817,18 +2461,11 @@ TAO::Array_Traits<U42_forany>::alloc ()
   return U42_alloc ();
 }
 
-
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union/union_ci.cpp:35
 
 // *************************************************************
 // Inline operations for union U85
 // *************************************************************
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union/discriminant_ci.cpp:302
-
 ACE_INLINE
 void
 U85::_default ()
@@ -2874,9 +2511,6 @@ U85::_d () const
 {
   return this->disc_;
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union_branch/public_ci.cpp:181
-
 // Accessor to set the member.
 ACE_INLINE
 void
@@ -2900,9 +2534,6 @@ U85::b_85_1 () const
     }
   return this->u_.b_85_1_;
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union_branch/public_ci.cpp:181
-
 // Accessor to set the member.
 ACE_INLINE
 void
@@ -2926,13 +2557,8 @@ U85::b_85_2 () const
     }
   return this->u_.b_85_2_;
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_array/array_ci.cpp:142
-
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
 
 ACE_INLINE
 void
@@ -2945,7 +2571,7 @@ TAO::Array_Traits<UString_forany>::free (
 ACE_INLINE
 UString_slice *
 TAO::Array_Traits<UString_forany>::dup (
-    const UString_slice * _tao_slice)
+    UString_slice const * _tao_slice)
 {
   return UString_dup (_tao_slice);
 }
@@ -2954,7 +2580,7 @@ ACE_INLINE
 void
 TAO::Array_Traits<UString_forany>::copy (
     UString_slice * _tao_to,
-    const UString_slice * _tao_from)
+    UString_slice const * _tao_from)
 {
   UString_copy (_tao_to, _tao_from);
 }
@@ -2978,18 +2604,11 @@ TAO::Array_Traits<UString_forany>::alloc ()
   return UString_alloc ();
 }
 
-
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union/union_ci.cpp:35
 
 // *************************************************************
 // Inline operations for union U86
 // *************************************************************
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union/discriminant_ci.cpp:302
-
 ACE_INLINE
 void
 U86::_default ()
@@ -3035,9 +2654,6 @@ U86::_d () const
 {
   return this->disc_;
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union_branch/public_ci.cpp:917
-
 /// Accessor to set the member.
 ACE_INLINE
 void
@@ -3052,7 +2668,7 @@ U86::b_86_1 (char *val)
 // Accessor to set the member.
 ACE_INLINE
 void
-U86::b_86_1 (const char *val)
+U86::b_86_1 (char const *val)
 {
   // Set the discriminant value.
   this->_reset ();
@@ -3064,7 +2680,7 @@ U86::b_86_1 (const char *val)
 /// Accessor to set the member.
 ACE_INLINE
 void
-U86::b_86_1 (const ::CORBA::String_var &val)
+U86::b_86_1 (::CORBA::String_var const &val)
 {
   // Set the discriminant value.
   this->_reset ();
@@ -3075,7 +2691,7 @@ U86::b_86_1 (const ::CORBA::String_var &val)
 }
 
 ACE_INLINE
-const char *
+char const *
 U86::b_86_1 () const // get method
 {
   if (_tao_member_index (this->disc_) != 0UL)
@@ -3084,9 +2700,6 @@ U86::b_86_1 () const // get method
     }
   return this->u_.b_86_1_;
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union_branch/public_ci.cpp:606
-
 // Accessor to set the member.
 ACE_INLINE
 void
@@ -3110,15 +2723,9 @@ U86::b_86_2 () const
     }
   return this->u_.b_86_2_;
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union/union_ci.cpp:35
-
 // *************************************************************
 // Inline operations for union U88
 // *************************************************************
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union/discriminant_ci.cpp:302
-
 ACE_INLINE
 void
 U88::_default ()
@@ -3164,9 +2771,6 @@ U88::_d () const
 {
   return this->disc_;
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union_branch/public_ci.cpp:181
-
 // Accessor to set the member.
 ACE_INLINE
 void
@@ -3190,9 +2794,6 @@ U88::b_86_1 () const
     }
   return this->u_.b_86_1_;
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union_branch/public_ci.cpp:606
-
 // Accessor to set the member.
 ACE_INLINE
 void
@@ -3216,13 +2817,8 @@ U88::b_86_2 () const
     }
   return this->u_.b_86_2_;
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_array/array_ci.cpp:142
-
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
 
 ACE_INLINE
 void
@@ -3235,7 +2831,7 @@ TAO::Array_Traits<UBarArray_forany>::free (
 ACE_INLINE
 UBarArray_slice *
 TAO::Array_Traits<UBarArray_forany>::dup (
-    const UBarArray_slice * _tao_slice)
+    UBarArray_slice const * _tao_slice)
 {
   return UBarArray_dup (_tao_slice);
 }
@@ -3244,7 +2840,7 @@ ACE_INLINE
 void
 TAO::Array_Traits<UBarArray_forany>::copy (
     UBarArray_slice * _tao_to,
-    const UBarArray_slice * _tao_from)
+    UBarArray_slice const * _tao_from)
 {
   UBarArray_copy (_tao_to, _tao_from);
 }
@@ -3268,18 +2864,11 @@ TAO::Array_Traits<UBarArray_forany>::alloc ()
   return UBarArray_alloc ();
 }
 
-
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union/union_ci.cpp:35
 
 // *************************************************************
 // Inline operations for union U87
 // *************************************************************
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union/discriminant_ci.cpp:302
-
 ACE_INLINE
 void
 U87::_default ()
@@ -3325,13 +2914,10 @@ U87::_d () const
 {
   return this->disc_;
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union_branch/public_ci.cpp:1121
-
 /// Accessor to set the member.
 ACE_INLINE
 void
-U87::b_87_1 (const UBar &val)
+U87::b_87_1 (UBar const &val)
 {
   // Set the discriminant value.
   this->_reset ();
@@ -3341,7 +2927,7 @@ U87::b_87_1 (const UBar &val)
 
 // Readonly get method.
 ACE_INLINE
-const UBar &
+UBar const &
 U87::b_87_1 () const
 {
   if (_tao_member_index (this->disc_) != 0UL)
@@ -3362,9 +2948,6 @@ U87::b_87_1 ()
     }
   return this->u_.b_87_1_;
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union_branch/public_ci.cpp:606
-
 // Accessor to set the member.
 ACE_INLINE
 void
@@ -3388,15 +2971,9 @@ U87::b_87_2 () const
     }
   return this->u_.b_87_2_;
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union/union_ci.cpp:35
-
 // *************************************************************
 // Inline operations for union U89
 // *************************************************************
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union/discriminant_ci.cpp:302
-
 ACE_INLINE
 void
 U89::_default ()
@@ -3442,9 +3019,6 @@ U89::_d () const
 {
   return this->disc_;
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union_branch/public_ci.cpp:181
-
 // Accessor to set the member.
 ACE_INLINE
 void
@@ -3468,9 +3042,6 @@ U89::b_87_1 () const
     }
   return this->u_.b_87_1_;
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union_branch/public_ci.cpp:606
-
 // Accessor to set the member.
 ACE_INLINE
 void
@@ -3494,13 +3065,8 @@ U89::b_87_2 () const
     }
   return this->u_.b_87_2_;
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_array/array_ci.cpp:142
-
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
 
 ACE_INLINE
 void
@@ -3513,7 +3079,7 @@ TAO::Array_Traits<U90Array_forany>::free (
 ACE_INLINE
 U90Array_slice *
 TAO::Array_Traits<U90Array_forany>::dup (
-    const U90Array_slice * _tao_slice)
+    U90Array_slice const * _tao_slice)
 {
   return U90Array_dup (_tao_slice);
 }
@@ -3522,7 +3088,7 @@ ACE_INLINE
 void
 TAO::Array_Traits<U90Array_forany>::copy (
     U90Array_slice * _tao_to,
-    const U90Array_slice * _tao_from)
+    U90Array_slice const * _tao_from)
 {
   U90Array_copy (_tao_to, _tao_from);
 }
@@ -3546,18 +3112,11 @@ TAO::Array_Traits<U90Array_forany>::alloc ()
   return U90Array_alloc ();
 }
 
-
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union/union_ci.cpp:35
 
 // *************************************************************
 // Inline operations for union U91
 // *************************************************************
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union/discriminant_ci.cpp:302
-
 ACE_INLINE
 void
 U91::_default ()
@@ -3603,9 +3162,6 @@ U91::_d () const
 {
   return this->disc_;
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union_branch/public_ci.cpp:181
-
 // Accessor to set the member.
 ACE_INLINE
 void
@@ -3629,9 +3185,6 @@ U91::b_91_1 () const
     }
   return this->u_.b_91_1_;
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union_branch/public_ci.cpp:606
-
 // Accessor to set the member.
 ACE_INLINE
 void
@@ -3655,16 +3208,9 @@ U91::b_92_2 () const
     }
   return this->u_.b_92_2_;
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union/union_ci.cpp:35
-
 // *************************************************************
 // Inline operations for union U92
 // *************************************************************
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union/discriminant_ci.cpp:302
-
-
 
 ACE_INLINE
 unsigned long
@@ -3703,13 +3249,10 @@ U92::_d () const
 {
   return this->disc_;
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union_branch/public_ci.cpp:1121
-
 /// Accessor to set the member.
 ACE_INLINE
 void
-U92::b_92_1 (const UBar &val)
+U92::b_92_1 (UBar const &val)
 {
   // Set the discriminant value.
   this->_reset ();
@@ -3719,7 +3262,7 @@ U92::b_92_1 (const UBar &val)
 
 // Readonly get method.
 ACE_INLINE
-const UBar &
+UBar const &
 U92::b_92_1 () const
 {
   if (_tao_member_index (this->disc_) != 0UL)
@@ -3740,9 +3283,6 @@ U92::b_92_1 ()
     }
   return this->u_.b_92_1_;
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union_branch/public_ci.cpp:606
-
 // Accessor to set the member.
 ACE_INLINE
 void
@@ -3766,13 +3306,10 @@ U92::b_92_2 () const
     }
   return this->u_.b_92_2_;
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union_branch/public_ci.cpp:1121
-
 /// Accessor to set the member.
 ACE_INLINE
 void
-U92::b_92_3 (const UBar &val)
+U92::b_92_3 (UBar const &val)
 {
   // Set the discriminant value.
   this->_reset ();
@@ -3782,7 +3319,7 @@ U92::b_92_3 (const UBar &val)
 
 // Readonly get method.
 ACE_INLINE
-const UBar &
+UBar const &
 U92::b_92_3 () const
 {
   if (_tao_member_index (this->disc_) != 2UL)
@@ -3803,16 +3340,9 @@ U92::b_92_3 ()
     }
   return this->u_.b_92_3_;
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union/union_ci.cpp:35
-
 // *************************************************************
 // Inline operations for union U93
 // *************************************************************
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union/discriminant_ci.cpp:302
-
-
 
 ACE_INLINE
 unsigned long
@@ -3851,9 +3381,6 @@ U93::_d () const
 {
   return this->disc_;
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union_branch/public_ci.cpp:181
-
 // Accessor to set the member.
 ACE_INLINE
 void
@@ -3877,9 +3404,6 @@ U93::b_93_1 () const
     }
   return this->u_.b_93_1_;
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union_branch/public_ci.cpp:606
-
 // Accessor to set the member.
 ACE_INLINE
 void
@@ -3903,9 +3427,6 @@ U93::b_93_2 () const
     }
   return this->u_.b_93_2_;
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union_branch/public_ci.cpp:181
-
 // Accessor to set the member.
 ACE_INLINE
 void
@@ -3929,16 +3450,9 @@ U93::b_93_3 () const
     }
   return this->u_.b_93_3_;
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union/union_ci.cpp:35
-
 // *************************************************************
 // Inline operations for union U94
 // *************************************************************
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union/discriminant_ci.cpp:302
-
-
 
 ACE_INLINE
 unsigned long
@@ -3977,9 +3491,6 @@ U94::_d () const
 {
   return this->disc_;
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union_branch/public_ci.cpp:181
-
 // Accessor to set the member.
 ACE_INLINE
 void
@@ -4003,9 +3514,6 @@ U94::b_94_1 () const
     }
   return this->u_.b_94_1_;
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union_branch/public_ci.cpp:606
-
 // Accessor to set the member.
 ACE_INLINE
 void
@@ -4029,9 +3537,6 @@ U94::b_94_2 () const
     }
   return this->u_.b_94_2_;
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union_branch/public_ci.cpp:181
-
 // Accessor to set the member.
 ACE_INLINE
 void
@@ -4055,13 +3560,8 @@ U94::b_94_3 () const
     }
   return this->u_.b_94_3_;
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_array/array_ci.cpp:142
-
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
 
 ACE_INLINE
 void
@@ -4074,7 +3574,7 @@ TAO::Array_Traits<DefaultInitializedLongArray_forany>::free (
 ACE_INLINE
 DefaultInitializedLongArray_slice *
 TAO::Array_Traits<DefaultInitializedLongArray_forany>::dup (
-    const DefaultInitializedLongArray_slice * _tao_slice)
+    DefaultInitializedLongArray_slice const * _tao_slice)
 {
   return DefaultInitializedLongArray_dup (_tao_slice);
 }
@@ -4083,7 +3583,7 @@ ACE_INLINE
 void
 TAO::Array_Traits<DefaultInitializedLongArray_forany>::copy (
     DefaultInitializedLongArray_slice * _tao_to,
-    const DefaultInitializedLongArray_slice * _tao_from)
+    DefaultInitializedLongArray_slice const * _tao_from)
 {
   DefaultInitializedLongArray_copy (_tao_to, _tao_from);
 }
@@ -4107,19 +3607,11 @@ TAO::Array_Traits<DefaultInitializedLongArray_forany>::alloc ()
   return DefaultInitializedLongArray_alloc ();
 }
 
-
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union/union_ci.cpp:35
 
 // *************************************************************
 // Inline operations for union DefaultInitializedStructUnion
 // *************************************************************
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union/discriminant_ci.cpp:302
-
-
 
 ACE_INLINE
 unsigned long
@@ -4143,13 +3635,10 @@ DefaultInitializedStructUnion::_d () const
 {
   return this->disc_;
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union_branch/public_ci.cpp:1121
-
 /// Accessor to set the member.
 ACE_INLINE
 void
-DefaultInitializedStructUnion::value (const UBar &val)
+DefaultInitializedStructUnion::value (UBar const &val)
 {
   // Set the discriminant value.
   this->_reset ();
@@ -4159,7 +3648,7 @@ DefaultInitializedStructUnion::value (const UBar &val)
 
 // Readonly get method.
 ACE_INLINE
-const UBar &
+UBar const &
 DefaultInitializedStructUnion::value () const
 {
   if (_tao_member_index (this->disc_) != 0UL)
@@ -4180,16 +3669,9 @@ DefaultInitializedStructUnion::value ()
     }
   return this->u_.value_;
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union/union_ci.cpp:35
-
 // *************************************************************
 // Inline operations for union DefaultInitializedBooleanUnion
 // *************************************************************
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union/discriminant_ci.cpp:302
-
-
 
 ACE_INLINE
 unsigned long
@@ -4213,9 +3695,6 @@ DefaultInitializedBooleanUnion::_d () const
 {
   return this->disc_;
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union_branch/public_ci.cpp:606
-
 // Accessor to set the member.
 ACE_INLINE
 void
@@ -4239,16 +3718,9 @@ DefaultInitializedBooleanUnion::value () const
     }
   return this->u_.value_;
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union/union_ci.cpp:35
-
 // *************************************************************
 // Inline operations for union DefaultInitializedLongUnion
 // *************************************************************
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union/discriminant_ci.cpp:302
-
-
 
 ACE_INLINE
 unsigned long
@@ -4272,9 +3744,6 @@ DefaultInitializedLongUnion::_d () const
 {
   return this->disc_;
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union_branch/public_ci.cpp:606
-
 // Accessor to set the member.
 ACE_INLINE
 void
@@ -4298,16 +3767,9 @@ DefaultInitializedLongUnion::value () const
     }
   return this->u_.value_;
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union/union_ci.cpp:35
-
 // *************************************************************
 // Inline operations for union DefaultInitializedDoubleUnion
 // *************************************************************
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union/discriminant_ci.cpp:302
-
-
 
 ACE_INLINE
 unsigned long
@@ -4331,9 +3793,6 @@ DefaultInitializedDoubleUnion::_d () const
 {
   return this->disc_;
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union_branch/public_ci.cpp:606
-
 // Accessor to set the member.
 ACE_INLINE
 void
@@ -4357,16 +3816,9 @@ DefaultInitializedDoubleUnion::value () const
     }
   return this->u_.value_;
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union/union_ci.cpp:35
-
 // *************************************************************
 // Inline operations for union DefaultInitializedEnumUnion
 // *************************************************************
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union/discriminant_ci.cpp:302
-
-
 
 ACE_INLINE
 unsigned long
@@ -4390,9 +3842,6 @@ DefaultInitializedEnumUnion::_d () const
 {
   return this->disc_;
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union_branch/public_ci.cpp:254
-
 /// Accessor to set the member.
 ACE_INLINE
 void
@@ -4416,16 +3865,9 @@ DefaultInitializedEnumUnion::value () const
     }
   return this->u_.value_;
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union/union_ci.cpp:35
-
 // *************************************************************
 // Inline operations for union DefaultInitializedArrayUnion
 // *************************************************************
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union/discriminant_ci.cpp:302
-
-
 
 ACE_INLINE
 unsigned long
@@ -4449,9 +3891,6 @@ DefaultInitializedArrayUnion::_d () const
 {
   return this->disc_;
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union_branch/public_ci.cpp:181
-
 // Accessor to set the member.
 ACE_INLINE
 void
@@ -4475,16 +3914,9 @@ DefaultInitializedArrayUnion::value () const
     }
   return this->u_.value_;
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union/union_ci.cpp:35
-
 // *************************************************************
 // Inline operations for union DefaultInitializedStringUnion
 // *************************************************************
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union/discriminant_ci.cpp:302
-
-
 
 ACE_INLINE
 unsigned long
@@ -4508,9 +3940,6 @@ DefaultInitializedStringUnion::_d () const
 {
   return this->disc_;
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union_branch/public_ci.cpp:917
-
 /// Accessor to set the member.
 ACE_INLINE
 void
@@ -4525,7 +3954,7 @@ DefaultInitializedStringUnion::value (char *val)
 // Accessor to set the member.
 ACE_INLINE
 void
-DefaultInitializedStringUnion::value (const char *val)
+DefaultInitializedStringUnion::value (char const *val)
 {
   // Set the discriminant value.
   this->_reset ();
@@ -4537,7 +3966,7 @@ DefaultInitializedStringUnion::value (const char *val)
 /// Accessor to set the member.
 ACE_INLINE
 void
-DefaultInitializedStringUnion::value (const ::CORBA::String_var &val)
+DefaultInitializedStringUnion::value (::CORBA::String_var const &val)
 {
   // Set the discriminant value.
   this->_reset ();
@@ -4548,7 +3977,7 @@ DefaultInitializedStringUnion::value (const ::CORBA::String_var &val)
 }
 
 ACE_INLINE
-const char *
+char const *
 DefaultInitializedStringUnion::value () const // get method
 {
   if (_tao_member_index (this->disc_) != 0UL)
@@ -4557,16 +3986,9 @@ DefaultInitializedStringUnion::value () const // get method
     }
   return this->u_.value_;
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union/union_ci.cpp:35
-
 // *************************************************************
 // Inline operations for union ResetWithNoopBranches
 // *************************************************************
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union/discriminant_ci.cpp:195
-
-
 
 ACE_INLINE
 unsigned long
@@ -4605,9 +4027,6 @@ ResetWithNoopBranches::_d () const
 {
   return this->disc_;
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union_branch/public_ci.cpp:917
-
 /// Accessor to set the member.
 ACE_INLINE
 void
@@ -4622,7 +4041,7 @@ ResetWithNoopBranches::string_value (char *val)
 // Accessor to set the member.
 ACE_INLINE
 void
-ResetWithNoopBranches::string_value (const char *val)
+ResetWithNoopBranches::string_value (char const *val)
 {
   // Set the discriminant value.
   this->_reset ();
@@ -4634,7 +4053,7 @@ ResetWithNoopBranches::string_value (const char *val)
 /// Accessor to set the member.
 ACE_INLINE
 void
-ResetWithNoopBranches::string_value (const ::CORBA::String_var &val)
+ResetWithNoopBranches::string_value (::CORBA::String_var const &val)
 {
   // Set the discriminant value.
   this->_reset ();
@@ -4645,7 +4064,7 @@ ResetWithNoopBranches::string_value (const ::CORBA::String_var &val)
 }
 
 ACE_INLINE
-const char *
+char const *
 ResetWithNoopBranches::string_value () const // get method
 {
   if (_tao_member_index (this->disc_) != 0UL)
@@ -4654,9 +4073,6 @@ ResetWithNoopBranches::string_value () const // get method
     }
   return this->u_.string_value_;
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union_branch/public_ci.cpp:606
-
 // Accessor to set the member.
 ACE_INLINE
 void
@@ -4680,13 +4096,10 @@ ResetWithNoopBranches::long_value () const
     }
   return this->u_.long_value_;
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union_branch/public_ci.cpp:1121
-
 /// Accessor to set the member.
 ACE_INLINE
 void
-ResetWithNoopBranches::struct_value (const UBar &val)
+ResetWithNoopBranches::struct_value (UBar const &val)
 {
   // Set the discriminant value.
   this->_reset ();
@@ -4696,7 +4109,7 @@ ResetWithNoopBranches::struct_value (const UBar &val)
 
 // Readonly get method.
 ACE_INLINE
-const UBar &
+UBar const &
 ResetWithNoopBranches::struct_value () const
 {
   if (_tao_member_index (this->disc_) != 2UL)

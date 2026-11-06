@@ -22,11 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:454
-
-#ifndef _TAO_IDL_UNIONS_G1P1PS_H_
-#define _TAO_IDL_UNIONS_G1P1PS_H_
+#ifndef _TAO_IDL_UNIONS_H_
+#define _TAO_IDL_UNIONS_H_
 
 #include /**/ "ace/pre.h"
 
@@ -44,29 +41,19 @@
 # pragma once
 #endif /* ACE_LACKS_PRAGMA_ONCE */
 
-
 #include /**/ "TAO_IDL_TEST_stub_export.h"
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_arg_traits.cpp:64
-
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
 
 // Arg traits specializations.
 namespace TAO
 {
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_arg_traits.cpp:298
-
-  
 
 #if !defined (_MESSAGING_EXCEPTIONHOLDER__SARG_TRAITS_)
 #define _MESSAGING_EXCEPTIONHOLDER__SARG_TRAITS_
 
   template<>
-  class SArg_Traits< ::Messaging::ExceptionHolder>
+  class SArg_Traits<::Messaging::ExceptionHolder>
     : public
         Object_SArg_Traits_T<
             ::Messaging::ExceptionHolder *,
@@ -78,13 +65,9 @@ namespace TAO
   };
 
 #endif /* end #if !defined */
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_arg_traits.cpp:889
-
-  
 
   template<>
-  class SArg_Traits< ::DataType>
+  class SArg_Traits<::DataType>
     : public
         Basic_SArg_Traits_T<
             ::DataType,
@@ -92,13 +75,9 @@ namespace TAO
           >
   {
   };
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_arg_traits.cpp:1041
-
-  
 
   template<>
-  class SArg_Traits< ::Data>
+  class SArg_Traits<::Data>
     : public
         Fixed_Size_SArg_Traits_T<
             ::Data,
@@ -106,13 +85,9 @@ namespace TAO
           >
   {
   };
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_arg_traits.cpp:889
-
-  
 
   template<>
-  class SArg_Traits< ::Necessary::Kind>
+  class SArg_Traits<::Necessary::Kind>
     : public
         Basic_SArg_Traits_T<
             ::Necessary::Kind,
@@ -120,13 +95,9 @@ namespace TAO
           >
   {
   };
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_arg_traits.cpp:1041
-
-  
 
   template<>
-  class SArg_Traits< ::Necessary::WhichResult>
+  class SArg_Traits<::Necessary::WhichResult>
     : public
         Fixed_Size_SArg_Traits_T<
             ::Necessary::WhichResult,
@@ -134,13 +105,9 @@ namespace TAO
           >
   {
   };
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_arg_traits.cpp:1041
-
-  
 
   template<>
-  class SArg_Traits< ::foo>
+  class SArg_Traits<::foo>
     : public
         Var_Size_SArg_Traits_T<
             ::foo,
@@ -148,13 +115,9 @@ namespace TAO
           >
   {
   };
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_arg_traits.cpp:1041
-
-  
 
   template<>
-  class SArg_Traits< ::UnionDiscTest::BooleanUnion>
+  class SArg_Traits<::UnionDiscTest::BooleanUnion>
     : public
         Var_Size_SArg_Traits_T<
             ::UnionDiscTest::BooleanUnion,
@@ -162,13 +125,9 @@ namespace TAO
           >
   {
   };
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_arg_traits.cpp:1041
-
-  
 
   template<>
-  class SArg_Traits< ::UnionDiscTest::CharUnion>
+  class SArg_Traits<::UnionDiscTest::CharUnion>
     : public
         Var_Size_SArg_Traits_T<
             ::UnionDiscTest::CharUnion,
@@ -176,13 +135,9 @@ namespace TAO
           >
   {
   };
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_arg_traits.cpp:1041
-
-  
 
   template<>
-  class SArg_Traits< ::AllBoolUnions::OneBranchT>
+  class SArg_Traits<::AllBoolUnions::OneBranchT>
     : public
         Fixed_Size_SArg_Traits_T<
             ::AllBoolUnions::OneBranchT,
@@ -190,13 +145,9 @@ namespace TAO
           >
   {
   };
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_arg_traits.cpp:1041
-
-  
 
   template<>
-  class SArg_Traits< ::AllBoolUnions::OneBranchF>
+  class SArg_Traits<::AllBoolUnions::OneBranchF>
     : public
         Fixed_Size_SArg_Traits_T<
             ::AllBoolUnions::OneBranchF,
@@ -204,13 +155,9 @@ namespace TAO
           >
   {
   };
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_arg_traits.cpp:1041
-
-  
 
   template<>
-  class SArg_Traits< ::AllBoolUnions::OneBranchD>
+  class SArg_Traits<::AllBoolUnions::OneBranchD>
     : public
         Fixed_Size_SArg_Traits_T<
             ::AllBoolUnions::OneBranchD,
@@ -218,13 +165,9 @@ namespace TAO
           >
   {
   };
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_arg_traits.cpp:1041
-
-  
 
   template<>
-  class SArg_Traits< ::AllBoolUnions::OneBranchTF>
+  class SArg_Traits<::AllBoolUnions::OneBranchTF>
     : public
         Fixed_Size_SArg_Traits_T<
             ::AllBoolUnions::OneBranchTF,
@@ -232,13 +175,9 @@ namespace TAO
           >
   {
   };
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_arg_traits.cpp:1041
-
-  
 
   template<>
-  class SArg_Traits< ::AllBoolUnions::OneBranchFT>
+  class SArg_Traits<::AllBoolUnions::OneBranchFT>
     : public
         Fixed_Size_SArg_Traits_T<
             ::AllBoolUnions::OneBranchFT,
@@ -246,13 +185,9 @@ namespace TAO
           >
   {
   };
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_arg_traits.cpp:1041
-
-  
 
   template<>
-  class SArg_Traits< ::AllBoolUnions::OneBranchTD>
+  class SArg_Traits<::AllBoolUnions::OneBranchTD>
     : public
         Fixed_Size_SArg_Traits_T<
             ::AllBoolUnions::OneBranchTD,
@@ -260,13 +195,9 @@ namespace TAO
           >
   {
   };
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_arg_traits.cpp:1041
-
-  
 
   template<>
-  class SArg_Traits< ::AllBoolUnions::OneBranchDT>
+  class SArg_Traits<::AllBoolUnions::OneBranchDT>
     : public
         Fixed_Size_SArg_Traits_T<
             ::AllBoolUnions::OneBranchDT,
@@ -274,13 +205,9 @@ namespace TAO
           >
   {
   };
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_arg_traits.cpp:1041
-
-  
 
   template<>
-  class SArg_Traits< ::AllBoolUnions::OneBranchFD>
+  class SArg_Traits<::AllBoolUnions::OneBranchFD>
     : public
         Fixed_Size_SArg_Traits_T<
             ::AllBoolUnions::OneBranchFD,
@@ -288,13 +215,9 @@ namespace TAO
           >
   {
   };
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_arg_traits.cpp:1041
-
-  
 
   template<>
-  class SArg_Traits< ::AllBoolUnions::OneBranchDF>
+  class SArg_Traits<::AllBoolUnions::OneBranchDF>
     : public
         Fixed_Size_SArg_Traits_T<
             ::AllBoolUnions::OneBranchDF,
@@ -302,13 +225,9 @@ namespace TAO
           >
   {
   };
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_arg_traits.cpp:1041
-
-  
 
   template<>
-  class SArg_Traits< ::AllBoolUnions::TwoBranchesTF>
+  class SArg_Traits<::AllBoolUnions::TwoBranchesTF>
     : public
         Fixed_Size_SArg_Traits_T<
             ::AllBoolUnions::TwoBranchesTF,
@@ -316,13 +235,9 @@ namespace TAO
           >
   {
   };
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_arg_traits.cpp:1041
-
-  
 
   template<>
-  class SArg_Traits< ::AllBoolUnions::TwoBranchesFT>
+  class SArg_Traits<::AllBoolUnions::TwoBranchesFT>
     : public
         Fixed_Size_SArg_Traits_T<
             ::AllBoolUnions::TwoBranchesFT,
@@ -330,13 +245,9 @@ namespace TAO
           >
   {
   };
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_arg_traits.cpp:1041
-
-  
 
   template<>
-  class SArg_Traits< ::AllBoolUnions::TwoBranchesTD>
+  class SArg_Traits<::AllBoolUnions::TwoBranchesTD>
     : public
         Fixed_Size_SArg_Traits_T<
             ::AllBoolUnions::TwoBranchesTD,
@@ -344,13 +255,9 @@ namespace TAO
           >
   {
   };
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_arg_traits.cpp:1041
-
-  
 
   template<>
-  class SArg_Traits< ::AllBoolUnions::TwoBranchesDT>
+  class SArg_Traits<::AllBoolUnions::TwoBranchesDT>
     : public
         Fixed_Size_SArg_Traits_T<
             ::AllBoolUnions::TwoBranchesDT,
@@ -358,13 +265,9 @@ namespace TAO
           >
   {
   };
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_arg_traits.cpp:1041
-
-  
 
   template<>
-  class SArg_Traits< ::AllBoolUnions::TwoBranchesFD>
+  class SArg_Traits<::AllBoolUnions::TwoBranchesFD>
     : public
         Fixed_Size_SArg_Traits_T<
             ::AllBoolUnions::TwoBranchesFD,
@@ -372,13 +275,9 @@ namespace TAO
           >
   {
   };
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_arg_traits.cpp:1041
-
-  
 
   template<>
-  class SArg_Traits< ::AllBoolUnions::TwoBranchesDF>
+  class SArg_Traits<::AllBoolUnions::TwoBranchesDF>
     : public
         Fixed_Size_SArg_Traits_T<
             ::AllBoolUnions::TwoBranchesDF,
@@ -386,13 +285,9 @@ namespace TAO
           >
   {
   };
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_arg_traits.cpp:889
-
-  
 
   template<>
-  class SArg_Traits< ::disc1>
+  class SArg_Traits<::disc1>
     : public
         Basic_SArg_Traits_T<
             ::disc1,
@@ -400,13 +295,9 @@ namespace TAO
           >
   {
   };
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_arg_traits.cpp:889
-
-  
 
   template<>
-  class SArg_Traits< ::disc2>
+  class SArg_Traits<::disc2>
     : public
         Basic_SArg_Traits_T<
             ::disc2,
@@ -414,13 +305,9 @@ namespace TAO
           >
   {
   };
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_arg_traits.cpp:889
-
-  
 
   template<>
-  class SArg_Traits< ::disc_outer>
+  class SArg_Traits<::disc_outer>
     : public
         Basic_SArg_Traits_T<
             ::disc_outer,
@@ -428,13 +315,9 @@ namespace TAO
           >
   {
   };
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_arg_traits.cpp:1041
-
-  
 
   template<>
-  class SArg_Traits< ::inner1>
+  class SArg_Traits<::inner1>
     : public
         Fixed_Size_SArg_Traits_T<
             ::inner1,
@@ -442,13 +325,9 @@ namespace TAO
           >
   {
   };
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_arg_traits.cpp:1041
-
-  
 
   template<>
-  class SArg_Traits< ::inner2>
+  class SArg_Traits<::inner2>
     : public
         Fixed_Size_SArg_Traits_T<
             ::inner2,
@@ -456,13 +335,9 @@ namespace TAO
           >
   {
   };
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_arg_traits.cpp:1041
-
-  
 
   template<>
-  class SArg_Traits< ::outer>
+  class SArg_Traits<::outer>
     : public
         Fixed_Size_SArg_Traits_T<
             ::outer,
@@ -470,13 +345,9 @@ namespace TAO
           >
   {
   };
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_arg_traits.cpp:889
-
-  
 
   template<>
-  class SArg_Traits< ::UnionTest3::ValChoice>
+  class SArg_Traits<::UnionTest3::ValChoice>
     : public
         Basic_SArg_Traits_T<
             ::UnionTest3::ValChoice,
@@ -484,13 +355,9 @@ namespace TAO
           >
   {
   };
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_arg_traits.cpp:1041
-
-  
 
   template<>
-  class SArg_Traits< ::UnionTest3::ValType>
+  class SArg_Traits<::UnionTest3::ValType>
     : public
         Fixed_Size_SArg_Traits_T<
             ::UnionTest3::ValType,
@@ -498,13 +365,9 @@ namespace TAO
           >
   {
   };
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_arg_traits.cpp:931
-
-  
 
   template<>
-  class SArg_Traits< ::UnionTest3::UpType>
+  class SArg_Traits<::UnionTest3::UpType>
     : public
         Fixed_Size_SArg_Traits_T<
             ::UnionTest3::UpType,
@@ -512,13 +375,9 @@ namespace TAO
           >
   {
   };
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_arg_traits.cpp:931
-
-  
 
   template<>
-  class SArg_Traits< ::UnionTest3::DownType>
+  class SArg_Traits<::UnionTest3::DownType>
     : public
         Fixed_Size_SArg_Traits_T<
             ::UnionTest3::DownType,
@@ -526,13 +385,9 @@ namespace TAO
           >
   {
   };
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_arg_traits.cpp:889
-
-  
 
   template<>
-  class SArg_Traits< ::UnionTest3::IndChoice>
+  class SArg_Traits<::UnionTest3::IndChoice>
     : public
         Basic_SArg_Traits_T<
             ::UnionTest3::IndChoice,
@@ -540,13 +395,9 @@ namespace TAO
           >
   {
   };
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_arg_traits.cpp:1041
-
-  
 
   template<>
-  class SArg_Traits< ::UnionTest3::IndType>
+  class SArg_Traits<::UnionTest3::IndType>
     : public
         Fixed_Size_SArg_Traits_T<
             ::UnionTest3::IndType,
@@ -554,13 +405,9 @@ namespace TAO
           >
   {
   };
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_arg_traits.cpp:889
-
-  
 
   template<>
-  class SArg_Traits< ::XType>
+  class SArg_Traits<::XType>
     : public
         Basic_SArg_Traits_T<
             ::XType,
@@ -568,13 +415,9 @@ namespace TAO
           >
   {
   };
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_arg_traits.cpp:889
-
-  
 
   template<>
-  class SArg_Traits< ::ZType>
+  class SArg_Traits<::ZType>
     : public
         Basic_SArg_Traits_T<
             ::ZType,
@@ -582,13 +425,9 @@ namespace TAO
           >
   {
   };
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_arg_traits.cpp:1041
-
-  
 
   template<>
-  class SArg_Traits< ::X>
+  class SArg_Traits<::X>
     : public
         Fixed_Size_SArg_Traits_T<
             ::X,
@@ -596,13 +435,9 @@ namespace TAO
           >
   {
   };
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_arg_traits.cpp:931
-
-  
 
   template<>
-  class SArg_Traits< ::X::Y>
+  class SArg_Traits<::X::Y>
     : public
         Fixed_Size_SArg_Traits_T<
             ::X::Y,
@@ -610,13 +445,9 @@ namespace TAO
           >
   {
   };
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_arg_traits.cpp:1041
-
-  
 
   template<>
-  class SArg_Traits< ::X::Y::Z>
+  class SArg_Traits<::X::Y::Z>
     : public
         Fixed_Size_SArg_Traits_T<
             ::X::Y::Z,
@@ -624,13 +455,9 @@ namespace TAO
           >
   {
   };
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_arg_traits.cpp:889
-
-  
 
   template<>
-  class SArg_Traits< ::FieldType>
+  class SArg_Traits<::FieldType>
     : public
         Basic_SArg_Traits_T<
             ::FieldType,
@@ -638,13 +465,9 @@ namespace TAO
           >
   {
   };
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_arg_traits.cpp:1041
-
-  
 
   template<>
-  class SArg_Traits< ::FieldValue>
+  class SArg_Traits<::FieldValue>
     : public
         Var_Size_SArg_Traits_T<
             ::FieldValue,
@@ -652,13 +475,9 @@ namespace TAO
           >
   {
   };
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_arg_traits.cpp:931
-
-  
 
   template<>
-  class SArg_Traits< ::Field>
+  class SArg_Traits<::Field>
     : public
         Var_Size_SArg_Traits_T<
             ::Field,
@@ -666,13 +485,9 @@ namespace TAO
           >
   {
   };
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_arg_traits.cpp:889
-
-  
 
   template<>
-  class SArg_Traits< ::TestOneEnum>
+  class SArg_Traits<::TestOneEnum>
     : public
         Basic_SArg_Traits_T<
             ::TestOneEnum,
@@ -680,13 +495,9 @@ namespace TAO
           >
   {
   };
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_arg_traits.cpp:889
-
-  
 
   template<>
-  class SArg_Traits< ::TestTwoEnum>
+  class SArg_Traits<::TestTwoEnum>
     : public
         Basic_SArg_Traits_T<
             ::TestTwoEnum,
@@ -694,13 +505,9 @@ namespace TAO
           >
   {
   };
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_arg_traits.cpp:1041
-
-  
 
   template<>
-  class SArg_Traits< ::TestUnion>
+  class SArg_Traits<::TestUnion>
     : public
         Fixed_Size_SArg_Traits_T<
             ::TestUnion,
@@ -710,7 +517,7 @@ namespace TAO
   };
 
   template<>
-  class SArg_Traits< ::U41_tag>
+  class SArg_Traits<::U41_tag>
     : public
         Fixed_Array_SArg_Traits_T<
             ::U41_var,
@@ -721,7 +528,7 @@ namespace TAO
   };
 
   template<>
-  class SArg_Traits< ::U42_tag>
+  class SArg_Traits<::U42_tag>
     : public
         Fixed_Array_SArg_Traits_T<
             ::U42_var,
@@ -730,13 +537,9 @@ namespace TAO
           >
   {
   };
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_arg_traits.cpp:1041
-
-  
 
   template<>
-  class SArg_Traits< ::U85>
+  class SArg_Traits<::U85>
     : public
         Fixed_Size_SArg_Traits_T<
             ::U85,
@@ -746,7 +549,7 @@ namespace TAO
   };
 
   template<>
-  class SArg_Traits< ::UString_tag>
+  class SArg_Traits<::UString_tag>
     : public
         Var_Array_SArg_Traits_T<
             ::UString_out,
@@ -755,13 +558,9 @@ namespace TAO
           >
   {
   };
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_arg_traits.cpp:1041
-
-  
 
   template<>
-  class SArg_Traits< ::U86>
+  class SArg_Traits<::U86>
     : public
         Var_Size_SArg_Traits_T<
             ::U86,
@@ -769,13 +568,9 @@ namespace TAO
           >
   {
   };
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_arg_traits.cpp:1041
-
-  
 
   template<>
-  class SArg_Traits< ::U88>
+  class SArg_Traits<::U88>
     : public
         Var_Size_SArg_Traits_T<
             ::U88,
@@ -783,13 +578,9 @@ namespace TAO
           >
   {
   };
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_arg_traits.cpp:931
-
-  
 
   template<>
-  class SArg_Traits< ::UBar>
+  class SArg_Traits<::UBar>
     : public
         Fixed_Size_SArg_Traits_T<
             ::UBar,
@@ -799,7 +590,7 @@ namespace TAO
   };
 
   template<>
-  class SArg_Traits< ::UBarArray_tag>
+  class SArg_Traits<::UBarArray_tag>
     : public
         Fixed_Array_SArg_Traits_T<
             ::UBarArray_var,
@@ -808,13 +599,9 @@ namespace TAO
           >
   {
   };
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_arg_traits.cpp:1041
-
-  
 
   template<>
-  class SArg_Traits< ::U87>
+  class SArg_Traits<::U87>
     : public
         Fixed_Size_SArg_Traits_T<
             ::U87,
@@ -822,13 +609,9 @@ namespace TAO
           >
   {
   };
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_arg_traits.cpp:1041
-
-  
 
   template<>
-  class SArg_Traits< ::U89>
+  class SArg_Traits<::U89>
     : public
         Fixed_Size_SArg_Traits_T<
             ::U89,
@@ -836,13 +619,9 @@ namespace TAO
           >
   {
   };
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_arg_traits.cpp:889
-
-  
 
   template<>
-  class SArg_Traits< ::U90>
+  class SArg_Traits<::U90>
     : public
         Basic_SArg_Traits_T<
             ::U90,
@@ -852,7 +631,7 @@ namespace TAO
   };
 
   template<>
-  class SArg_Traits< ::U90Array_tag>
+  class SArg_Traits<::U90Array_tag>
     : public
         Fixed_Array_SArg_Traits_T<
             ::U90Array_var,
@@ -861,13 +640,9 @@ namespace TAO
           >
   {
   };
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_arg_traits.cpp:1041
-
-  
 
   template<>
-  class SArg_Traits< ::U91>
+  class SArg_Traits<::U91>
     : public
         Fixed_Size_SArg_Traits_T<
             ::U91,
@@ -875,13 +650,9 @@ namespace TAO
           >
   {
   };
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_arg_traits.cpp:1041
-
-  
 
   template<>
-  class SArg_Traits< ::U92>
+  class SArg_Traits<::U92>
     : public
         Fixed_Size_SArg_Traits_T<
             ::U92,
@@ -889,13 +660,9 @@ namespace TAO
           >
   {
   };
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_arg_traits.cpp:1041
-
-  
 
   template<>
-  class SArg_Traits< ::U93>
+  class SArg_Traits<::U93>
     : public
         Fixed_Size_SArg_Traits_T<
             ::U93,
@@ -903,13 +670,9 @@ namespace TAO
           >
   {
   };
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_arg_traits.cpp:1041
-
-  
 
   template<>
-  class SArg_Traits< ::U94>
+  class SArg_Traits<::U94>
     : public
         Fixed_Size_SArg_Traits_T<
             ::U94,
@@ -919,7 +682,7 @@ namespace TAO
   };
 
   template<>
-  class SArg_Traits< ::DefaultInitializedLongArray_tag>
+  class SArg_Traits<::DefaultInitializedLongArray_tag>
     : public
         Fixed_Array_SArg_Traits_T<
             ::DefaultInitializedLongArray_var,
@@ -928,13 +691,9 @@ namespace TAO
           >
   {
   };
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_arg_traits.cpp:1041
-
-  
 
   template<>
-  class SArg_Traits< ::DefaultInitializedStructUnion>
+  class SArg_Traits<::DefaultInitializedStructUnion>
     : public
         Fixed_Size_SArg_Traits_T<
             ::DefaultInitializedStructUnion,
@@ -942,13 +701,9 @@ namespace TAO
           >
   {
   };
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_arg_traits.cpp:1041
-
-  
 
   template<>
-  class SArg_Traits< ::DefaultInitializedBooleanUnion>
+  class SArg_Traits<::DefaultInitializedBooleanUnion>
     : public
         Fixed_Size_SArg_Traits_T<
             ::DefaultInitializedBooleanUnion,
@@ -956,13 +711,9 @@ namespace TAO
           >
   {
   };
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_arg_traits.cpp:1041
-
-  
 
   template<>
-  class SArg_Traits< ::DefaultInitializedLongUnion>
+  class SArg_Traits<::DefaultInitializedLongUnion>
     : public
         Fixed_Size_SArg_Traits_T<
             ::DefaultInitializedLongUnion,
@@ -970,13 +721,9 @@ namespace TAO
           >
   {
   };
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_arg_traits.cpp:1041
-
-  
 
   template<>
-  class SArg_Traits< ::DefaultInitializedDoubleUnion>
+  class SArg_Traits<::DefaultInitializedDoubleUnion>
     : public
         Fixed_Size_SArg_Traits_T<
             ::DefaultInitializedDoubleUnion,
@@ -984,13 +731,9 @@ namespace TAO
           >
   {
   };
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_arg_traits.cpp:1041
-
-  
 
   template<>
-  class SArg_Traits< ::DefaultInitializedEnumUnion>
+  class SArg_Traits<::DefaultInitializedEnumUnion>
     : public
         Fixed_Size_SArg_Traits_T<
             ::DefaultInitializedEnumUnion,
@@ -998,13 +741,9 @@ namespace TAO
           >
   {
   };
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_arg_traits.cpp:1041
-
-  
 
   template<>
-  class SArg_Traits< ::DefaultInitializedArrayUnion>
+  class SArg_Traits<::DefaultInitializedArrayUnion>
     : public
         Fixed_Size_SArg_Traits_T<
             ::DefaultInitializedArrayUnion,
@@ -1012,13 +751,9 @@ namespace TAO
           >
   {
   };
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_arg_traits.cpp:1041
-
-  
 
   template<>
-  class SArg_Traits< ::DefaultInitializedStringUnion>
+  class SArg_Traits<::DefaultInitializedStringUnion>
     : public
         Var_Size_SArg_Traits_T<
             ::DefaultInitializedStringUnion,
@@ -1026,13 +761,9 @@ namespace TAO
           >
   {
   };
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_arg_traits.cpp:889
-
-  
 
   template<>
-  class SArg_Traits< ::ResetDiscriminator>
+  class SArg_Traits<::ResetDiscriminator>
     : public
         Basic_SArg_Traits_T<
             ::ResetDiscriminator,
@@ -1040,13 +771,9 @@ namespace TAO
           >
   {
   };
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_arg_traits.cpp:1041
-
-  
 
   template<>
-  class SArg_Traits< ::ResetWithNoopBranches>
+  class SArg_Traits<::ResetWithNoopBranches>
     : public
         Var_Size_SArg_Traits_T<
             ::ResetWithNoopBranches,
@@ -1058,58 +785,24 @@ namespace TAO
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_module/module_sh.cpp:34
-
 namespace POA_Necessary
 {
-  
-
-
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_module/module_sh.cpp:65
 
 } // module Necessary
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_module/module_sh.cpp:34
-
 namespace POA_UnionDiscTest
 {
-  
-
-
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_module/module_sh.cpp:65
 
 } // module UnionDiscTest
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_module/module_sh.cpp:34
-
 namespace POA_AllBoolUnions
 {
-  
-
-
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_module/module_sh.cpp:65
 
 } // module AllBoolUnions
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_module/module_sh.cpp:34
-
 namespace POA_UnionTest3
 {
-  
-
-
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_module/module_sh.cpp:65
 
 } // module UnionTest3
 
 #include "unionS_T.h"
-
 
 #include /**/ "ace/post.h"
 

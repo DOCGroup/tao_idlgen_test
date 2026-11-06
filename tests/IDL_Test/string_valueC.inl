@@ -22,14 +22,11 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_ci.cpp:43
-
 ACE_INLINE
 include_test::StringTest::StringTest ()
 {}
 
-ACE_INLINE const char*
+ACE_INLINE char const *
 include_test::StringTest::_tao_obv_static_repository_id ()
 {
   return "IDL:include_test/StringTest:1.0";

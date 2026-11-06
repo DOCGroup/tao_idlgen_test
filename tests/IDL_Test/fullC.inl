@@ -24,10 +24,6 @@
 
 #include <memory>
 #include <new>
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ci.cpp:58
-
-
 
 ACE_INLINE
 scope_test::i_scope_test::i_scope_test (
@@ -46,23 +42,16 @@ scope_test::i_scope_test::i_scope_test (
   : ::CORBA::Object (ior, oc)
 {
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_ci.cpp:43
-
 ACE_INLINE
 scope_test::AMH_i_scope_testExceptionHolder::AMH_i_scope_testExceptionHolder ()
   : exception (nullptr)
 {}
 
-ACE_INLINE const char*
+ACE_INLINE char const *
 scope_test::AMH_i_scope_testExceptionHolder::_tao_obv_static_repository_id ()
 {
   return "IDL:scope_test/AMH_i_scope_testExceptionHolder:1.0";
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ci.cpp:58
-
-
 
 ACE_INLINE
 scope_test::AMI_i_scope_testHandler::AMI_i_scope_testHandler (
@@ -81,15 +70,9 @@ scope_test::AMI_i_scope_testHandler::AMI_i_scope_testHandler (
   : ::CORBA::Object (ior, oc)
 {
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union/union_ci.cpp:35
-
 // *************************************************************
 // Inline operations for union mod2::fwd::un
 // *************************************************************
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union/discriminant_ci.cpp:302
-
 ACE_INLINE
 void
 mod2::fwd::un::_default ()
@@ -133,9 +116,6 @@ mod2::fwd::un::_d () const
 {
   return this->disc_;
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union_branch/public_ci.cpp:326
-
 /// Accessor to set the member.
 ACE_INLINE
 void
@@ -144,7 +124,7 @@ mod2::fwd::un::full_mem (mod2::full_ptr val)
   // Set the discriminant value.
   this->_reset ();
   this->disc_ = 0;
-  typedef mod2::full_var OBJECT_FIELD;
+  using OBJECT_FIELD = mod2::full_var;
   ACE_NEW (
       this->u_.full_mem_,
       OBJECT_FIELD (
@@ -164,10 +144,6 @@ mod2::fwd::un::full_mem () const
     }
   return this->u_.full_mem_->in ();
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ci.cpp:58
-
-
 
 ACE_INLINE
 mod2::fwd::fwd (
@@ -186,23 +162,16 @@ mod2::fwd::fwd (
   : ::CORBA::Object (ior, oc)
 {
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_ci.cpp:43
-
 ACE_INLINE
 mod2::AMH_fwdExceptionHolder::AMH_fwdExceptionHolder ()
   : exception (nullptr)
 {}
 
-ACE_INLINE const char*
+ACE_INLINE char const *
 mod2::AMH_fwdExceptionHolder::_tao_obv_static_repository_id ()
 {
   return "IDL:mod2/AMH_fwdExceptionHolder:1.0";
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ci.cpp:58
-
-
 
 ACE_INLINE
 mod2::AMI_fwdHandler::AMI_fwdHandler (

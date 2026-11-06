@@ -22,11 +22,6 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ci.cpp:58
-
-
-
 ACE_INLINE
 ClassConstants::Iface::Iface (
     TAO_Stub *objref,
@@ -44,23 +39,16 @@ ClassConstants::Iface::Iface (
   : ::CORBA::Object (ior, oc)
 {
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_ci.cpp:43
-
 ACE_INLINE
 ClassConstants::AMH_IfaceExceptionHolder::AMH_IfaceExceptionHolder ()
   : exception (nullptr)
 {}
 
-ACE_INLINE const char*
+ACE_INLINE char const *
 ClassConstants::AMH_IfaceExceptionHolder::_tao_obv_static_repository_id ()
 {
   return "IDL:ClassConstants/AMH_IfaceExceptionHolder:1.0";
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ci.cpp:58
-
-
 
 ACE_INLINE
 ClassConstants::AMI_IfaceHandler::AMI_IfaceHandler (
@@ -79,14 +67,11 @@ ClassConstants::AMI_IfaceHandler::AMI_IfaceHandler (
   : ::CORBA::Object (ior, oc)
 {
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_ci.cpp:43
-
 ACE_INLINE
 ClassConstants::Vt::Vt ()
 {}
 
-ACE_INLINE const char*
+ACE_INLINE char const *
 ClassConstants::Vt::_tao_obv_static_repository_id ()
 {
   return "IDL:ClassConstants/Vt:1.0";

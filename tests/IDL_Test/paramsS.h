@@ -22,11 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:454
-
-#ifndef _TAO_IDL_PARAMSS_RRHYTG_H_
-#define _TAO_IDL_PARAMSS_RRHYTG_H_
+#ifndef _TAO_IDL_PARAMSS_H_
+#define _TAO_IDL_PARAMSS_H_
 
 #include /**/ "ace/pre.h"
 
@@ -52,27 +49,18 @@
 #include "tao/Messaging/AMH_Response_Handler.h"
 
 #include /**/ "TAO_IDL_TEST_stub_export.h"
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_arg_traits.cpp:64
-
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
 
 // Arg traits specializations.
 namespace TAO
 {
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_arg_traits.cpp:298
-
-  
 
 #if !defined (_MESSAGING_EXCEPTIONHOLDER__SARG_TRAITS_)
 #define _MESSAGING_EXCEPTIONHOLDER__SARG_TRAITS_
 
   template<>
-  class SArg_Traits< ::Messaging::ExceptionHolder>
+  class SArg_Traits<::Messaging::ExceptionHolder>
     : public
         Object_SArg_Traits_T<
             ::Messaging::ExceptionHolder *,
@@ -84,13 +72,9 @@ namespace TAO
   };
 
 #endif /* end #if !defined */
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_arg_traits.cpp:931
-
-  
 
   template<>
-  class SArg_Traits< ::foo::theDate>
+  class SArg_Traits<::foo::theDate>
     : public
         Fixed_Size_SArg_Traits_T<
             ::foo::theDate,
@@ -98,13 +82,9 @@ namespace TAO
           >
   {
   };
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_arg_traits.cpp:931
-
-  
 
   template<>
-  class SArg_Traits< ::foo::bar::theDate>
+  class SArg_Traits<::foo::bar::theDate>
     : public
         Fixed_Size_SArg_Traits_T<
             ::foo::bar::theDate,
@@ -112,16 +92,12 @@ namespace TAO
           >
   {
   };
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_arg_traits.cpp:142
-
-  
 
 #if !defined (_FOO_BAR_FOOBAR__SARG_TRAITS_)
 #define _FOO_BAR_FOOBAR__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits< ::foo::bar::fooBar>
+  class  SArg_Traits<::foo::bar::fooBar>
     : public Object_SArg_Traits_T<
         ::foo::bar::fooBar_ptr,
         ::foo::bar::fooBar_var,
@@ -131,16 +107,12 @@ namespace TAO
   };
 
 #endif /* end #if !defined */
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_arg_traits.cpp:298
-
-  
 
 #if !defined (_FOO_BAR_AMH_FOOBAREXCEPTIONHOLDER__SARG_TRAITS_)
 #define _FOO_BAR_AMH_FOOBAREXCEPTIONHOLDER__SARG_TRAITS_
 
   template<>
-  class SArg_Traits< ::foo::bar::AMH_fooBarExceptionHolder>
+  class SArg_Traits<::foo::bar::AMH_fooBarExceptionHolder>
     : public
         Object_SArg_Traits_T<
             ::foo::bar::AMH_fooBarExceptionHolder *,
@@ -152,16 +124,12 @@ namespace TAO
   };
 
 #endif /* end #if !defined */
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_arg_traits.cpp:142
-
-  
 
 #if !defined (_FOO_BAR_AMI_FOOBARHANDLER__SARG_TRAITS_)
 #define _FOO_BAR_AMI_FOOBARHANDLER__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits< ::foo::bar::AMI_fooBarHandler>
+  class  SArg_Traits<::foo::bar::AMI_fooBarHandler>
     : public Object_SArg_Traits_T<
         ::foo::bar::AMI_fooBarHandler_ptr,
         ::foo::bar::AMI_fooBarHandler_var,
@@ -175,69 +143,48 @@ namespace TAO
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_module/module_sh.cpp:34
-
 namespace POA_foo
 {
-  
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_module/module_sh.cpp:34
 
   namespace bar
   {
-    
-    // TAO_IDL - Generated from
-    // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/amh_sh.cpp:45
 
     class AMH_fooBar;
-    typedef AMH_fooBar *AMH_fooBar_ptr;
+    using AMH_fooBar_ptr = AMH_fooBar *;
 
     class TAO_IDL_TEST_STUB_Export AMH_fooBar
       : public virtual PortableServer::ServantBase
     {
     protected:
       AMH_fooBar ();
-    
+
     public:
-      AMH_fooBar (const AMH_fooBar& rhs);
-      virtual ~AMH_fooBar () = default;
+      AMH_fooBar (AMH_fooBar const &rhs);
+      ~AMH_fooBar () override = default;
 
+      ::CORBA::Boolean _is_a (char const *logical_type_id) override;
 
-      virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
-
-      virtual void _dispatch (
+      void _dispatch (
           TAO_ServerRequest &req,
-          TAO::Portable_Server::Servant_Upcall *_servant_upcall);
-      
+          TAO::Portable_Server::Servant_Upcall *_servant_upcall) override;
+
       foo::bar::fooBar *_this ();
 
-    virtual const char* _interface_repository_id () const;
-    // TAO_IDL - Generated from
-    // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/amh_sh.cpp:126
-
+    char const *_interface_repository_id () const override;
     static void getDate_skel (
         TAO_ServerRequest &_tao_req,
         TAO::Portable_Server::Servant_Upcall *_tao_obj,
         TAO_ServantBase *_tao_servant_upcall);
-      
+
     virtual void getDate (
         foo::bar::AMH_fooBarResponseHandler_ptr _tao_rh,
-        const ::foo::theDate & a,
-        const ::foo::theDate & b
-      ) = 0;
-    
+        ::foo::theDate const & a,
+        ::foo::theDate const & b) = 0;
+
   };
 
-  
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_sh.cpp:72
-
-  
-
   class fooBar;
-  typedef fooBar *fooBar_ptr;
+  using fooBar_ptr = fooBar *;
 
   class _TAO_fooBar_Direct_Proxy_Impl;
 
@@ -246,30 +193,27 @@ namespace POA_foo
   {
   protected:
     fooBar ();
-  
+
   public:
     /// Useful for template programming.
-    typedef ::foo::bar::fooBar _stub_type;
-    typedef ::foo::bar::fooBar_ptr _stub_ptr_type;
-    typedef ::foo::bar::fooBar_var _stub_var_type;
+    using _stub_type = ::foo::bar::fooBar;
+    using _stub_ptr_type = ::foo::bar::fooBar_ptr;
+    using _stub_var_type = ::foo::bar::fooBar_var;
 
-    fooBar (const fooBar& rhs) = default;
-    virtual ~fooBar () = default;
+    fooBar (fooBar const &rhs) = default;
+    ~fooBar () override = default;
 
-    virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
+    ::CORBA::Boolean _is_a (char const *logical_type_id) override;
 
-    virtual void _dispatch (
+    void _dispatch (
         TAO_ServerRequest & req,
-        TAO::Portable_Server::Servant_Upcall *servant_upcall);
-    
-    ::foo::bar::fooBar *_this ();
-    
-    virtual const char* _interface_repository_id () const;
-    // TAO_IDL - Generated from
-    // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/operation_sh.cpp:35
+        TAO::Portable_Server::Servant_Upcall *servant_upcall) override;
 
+    ::foo::bar::fooBar *_this ();
+
+    char const *_interface_repository_id () const override;
     virtual ::foo::theDate getDate (
-      const ::foo::theDate & a,
+      ::foo::theDate const & a,
       ::foo::theDate & b,
       ::foo::theDate_out c) = 0;
 
@@ -278,10 +222,6 @@ namespace POA_foo
         TAO::Portable_Server::Servant_Upcall *servant_upcall,
         TAO_ServantBase *servant);
   };
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/direct_proxy_impl_sh.cpp:23
-
-  
 
   ///////////////////////////////////////////////////////////////////////
   //                    Direct  Impl. Declaration
@@ -291,25 +231,18 @@ namespace POA_foo
   {
   public:
     virtual ~_TAO_fooBar_Direct_Proxy_Impl ();
-    // TAO_IDL - Generated from
-    // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/proxy_impl_xh.cpp:25
-
     static void
     getDate (
       TAO_Abstract_ServantBase *servant, TAO::Argument **args);
-    
+
   };
 
   //
   //                Direct  Proxy Impl. Declaration
   ///////////////////////////////////////////////////////////////////////
 
-  
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/amh_rh_sh.cpp:49
-
   class TAO_AMH_fooBarResponseHandler;
-  typedef TAO_AMH_fooBarResponseHandler *TAO_AMH_fooBarResponseHandler_ptr;
+  using TAO_AMH_fooBarResponseHandler_ptr = TAO_AMH_fooBarResponseHandler *;
 
   class TAO_IDL_TEST_STUB_Export TAO_AMH_fooBarResponseHandler
     : public TAO_AMH_Response_Handler,
@@ -318,28 +251,16 @@ namespace POA_foo
   public:
     TAO_AMH_fooBarResponseHandler () = default;
     virtual ~TAO_AMH_fooBarResponseHandler () = default;
-    // TAO_IDL - Generated from
-    // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/amh_rh_sh.cpp:59
-
     void getDate (
-      const ::foo::theDate & return_value,
-      const ::foo::theDate & b,
-      const ::foo::theDate & c) override;
-    // TAO_IDL - Generated from
-    // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/amh_rh_sh.cpp:59
-
+      ::foo::theDate const & return_value,
+      ::foo::theDate const & b,
+      ::foo::theDate const & c) override;
     void getDate_excep (
       ::foo::bar::AMH_fooBarExceptionHolder * holder) override;
   };
 
-  
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_sh.cpp:72
-
-  
-
   class AMI_fooBarHandler;
-  typedef AMI_fooBarHandler *AMI_fooBarHandler_ptr;
+  using AMI_fooBarHandler_ptr = AMI_fooBarHandler *;
 
   class _TAO_AMI_fooBarHandler_Direct_Proxy_Impl;
 
@@ -348,40 +269,34 @@ namespace POA_foo
   {
   protected:
     AMI_fooBarHandler ();
-  
+
   public:
     /// Useful for template programming.
-    typedef ::foo::bar::AMI_fooBarHandler _stub_type;
-    typedef ::foo::bar::AMI_fooBarHandler_ptr _stub_ptr_type;
-    typedef ::foo::bar::AMI_fooBarHandler_var _stub_var_type;
+    using _stub_type = ::foo::bar::AMI_fooBarHandler;
+    using _stub_ptr_type = ::foo::bar::AMI_fooBarHandler_ptr;
+    using _stub_var_type = ::foo::bar::AMI_fooBarHandler_var;
 
-    AMI_fooBarHandler (const AMI_fooBarHandler& rhs) = default;
-    virtual ~AMI_fooBarHandler () = default;
+    AMI_fooBarHandler (AMI_fooBarHandler const &rhs) = default;
+    ~AMI_fooBarHandler () override = default;
 
-    virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
+    ::CORBA::Boolean _is_a (char const *logical_type_id) override;
 
-    virtual void _dispatch (
+    void _dispatch (
         TAO_ServerRequest & req,
-        TAO::Portable_Server::Servant_Upcall *servant_upcall);
-    
-    ::foo::bar::AMI_fooBarHandler *_this ();
-    
-    virtual const char* _interface_repository_id () const;
-    // TAO_IDL - Generated from
-    // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/operation_sh.cpp:35
+        TAO::Portable_Server::Servant_Upcall *servant_upcall) override;
 
+    ::foo::bar::AMI_fooBarHandler *_this ();
+
+    char const *_interface_repository_id () const override;
     virtual void getDate (
-      const ::foo::theDate & ami_return_val,
-      const ::foo::theDate & b,
-      const ::foo::theDate & c) = 0;
+      ::foo::theDate const & ami_return_val,
+      ::foo::theDate const & b,
+      ::foo::theDate const & c) = 0;
 
     static void getDate_skel (
         TAO_ServerRequest &server_request,
         TAO::Portable_Server::Servant_Upcall *servant_upcall,
         TAO_ServantBase *servant);
-    // TAO_IDL - Generated from
-    // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/operation_sh.cpp:35
-
     virtual void getDate_excep (
       ::Messaging::ExceptionHolder * excep_holder) = 0;
 
@@ -390,10 +305,6 @@ namespace POA_foo
         TAO::Portable_Server::Servant_Upcall *servant_upcall,
         TAO_ServantBase *servant);
   };
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/direct_proxy_impl_sh.cpp:23
-
-  
 
   ///////////////////////////////////////////////////////////////////////
   //                    Direct  Impl. Declaration
@@ -404,42 +315,25 @@ namespace POA_foo
   {
   public:
     virtual ~_TAO_AMI_fooBarHandler_Direct_Proxy_Impl ();
-    // TAO_IDL - Generated from
-    // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/proxy_impl_xh.cpp:25
-
     static void
     getDate (
       TAO_Abstract_ServantBase *servant, TAO::Argument **args);
-    
-    // TAO_IDL - Generated from
-    // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/proxy_impl_xh.cpp:25
 
     static void
     getDate_excep (
       TAO_Abstract_ServantBase *servant, TAO::Argument **args);
-    
+
   };
 
   //
   //                Direct  Proxy Impl. Declaration
   ///////////////////////////////////////////////////////////////////////
 
-  
-
-
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_module/module_sh.cpp:65
-
 } // module foo::bar
-
-
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_module/module_sh.cpp:65
 
 } // module foo
 
 #include "paramsS_T.h"
-
 
 #include /**/ "ace/post.h"
 

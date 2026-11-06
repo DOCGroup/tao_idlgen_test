@@ -22,11 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:370
-
-
 #include "typecodeC.h"
+#include <cstring>
 #include <memory>
 #include "tao/CDR.h"
 #include "tao/Exception_Data.h"
@@ -35,38 +32,22 @@
 #include "tao/Messaging/ExceptionHolder_i.h"
 #include "tao/Valuetype/ValueFactory.h"
 #include "tao/Object_T.h"
-#include <cstring>
 
 #if !defined (__ACE_INLINE__)
 #include "typecodeC.inl"
 #endif /* !defined INLINE */
 
-
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_sequence/sequence_cs.cpp:104
-
-
-
 #if !defined (_MYMODULE_TYPECODELIST_CS_)
 #define _MYMODULE_TYPECODELIST_CS_
 
-MyModule::TypeCodeList::TypeCodeList (
-    ::CORBA::ULong max)
-  : ::TAO::unbounded_object_reference_sequence<
-        ::CORBA::TypeCode,
-        ::CORBA::TypeCode_var
-      > (max)
-{}
+MyModule::TypeCodeList::TypeCodeList (::CORBA::ULong max)
+  : ::TAO::unbounded_object_reference_sequence<::CORBA::TypeCode, ::CORBA::TypeCode_var> (max) {}
 
-MyModule::TypeCodeList::TypeCodeList (
-    ::CORBA::ULong max,
-    ::CORBA::ULong length,
-    ::CORBA::TypeCode_ptr * buffer,
-    ::CORBA::Boolean release)
-  : ::TAO::unbounded_object_reference_sequence<
-        ::CORBA::TypeCode,
-        ::CORBA::TypeCode_var
-      >
+MyModule::TypeCodeList::TypeCodeList (::CORBA::ULong max,
+  ::CORBA::ULong length,
+  ::CORBA::TypeCode_ptr * buffer,
+  ::CORBA::Boolean release)
+  : ::TAO::unbounded_object_reference_sequence<::CORBA::TypeCode, ::CORBA::TypeCode_var>
     (max, length, buffer, release)
 {}
 
@@ -78,9 +59,6 @@ void MyModule::TypeCodeList::_tao_any_destructor (
 }
 
 #endif /* end #if !defined */
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_sequence/cdr_op_cs.cpp:92
-
 #if !defined _TAO_CDR_OP_MyModule_TypeCodeList_CPP_
 #define _TAO_CDR_OP_MyModule_TypeCodeList_CPP_
 
@@ -88,7 +66,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean operator<< (
     TAO_OutputCDR &strm,
-    const MyModule::TypeCodeList &_tao_sequence)
+    MyModule::TypeCodeList const &_tao_sequence)
 {
   return TAO::marshal_sequence(strm, _tao_sequence);
 }
@@ -99,7 +77,6 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 {
   return TAO::demarshal_sequence(strm, _tao_sequence);
 }
-
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 

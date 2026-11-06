@@ -24,15 +24,9 @@
 
 #include <memory>
 #include <new>
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union/union_ci.cpp:35
-
 // *************************************************************
 // Inline operations for union Selecter
 // *************************************************************
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union/discriminant_ci.cpp:195
-
 ACE_INLINE
 void
 Selecter::_default ()
@@ -40,8 +34,6 @@ Selecter::_default ()
   this->_reset ();
   this->disc_ = static_cast <ObjectType> (-1);
 }
-
-
 
 ACE_INLINE
 unsigned long
@@ -80,18 +72,15 @@ Selecter::_d () const
 {
   return this->disc_;
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union_branch/public_ci.cpp:606
-
 // Accessor to set the member.
 ACE_INLINE
 void
-Selecter::this_object (const ::CORBA::Object_ptr val)
+Selecter::this_object (::CORBA::Object_ptr const val)
 {
   // Set the discriminant value.
   this->_reset ();
   this->disc_ = ::OT_THIS;
-  typedef ::CORBA::Object_var OBJECT_FIELD;
+  using OBJECT_FIELD = ::CORBA::Object_var;
   ACE_NEW (
       this->u_.this_object_,
       OBJECT_FIELD (::CORBA::Object::_duplicate (val))
@@ -109,18 +98,15 @@ Selecter::this_object () const
     }
   return this->u_.this_object_->in ();
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_union_branch/public_ci.cpp:606
-
 // Accessor to set the member.
 ACE_INLINE
 void
-Selecter::that_object (const ::CORBA::Object_ptr val)
+Selecter::that_object (::CORBA::Object_ptr const val)
 {
   // Set the discriminant value.
   this->_reset ();
   this->disc_ = ::OT_THAT;
-  typedef ::CORBA::Object_var OBJECT_FIELD;
+  using OBJECT_FIELD = ::CORBA::Object_var;
   ACE_NEW (
       this->u_.that_object_,
       OBJECT_FIELD (::CORBA::Object::_duplicate (val))
@@ -138,10 +124,6 @@ Selecter::that_object () const
     }
   return this->u_.that_object_->in ();
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ci.cpp:58
-
-
 
 ACE_INLINE
 generic::generic (
@@ -160,23 +142,16 @@ generic::generic (
   : ::CORBA::Object (ior, oc)
 {
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_ci.cpp:43
-
 ACE_INLINE
 AMH_genericExceptionHolder::AMH_genericExceptionHolder ()
   : exception (nullptr)
 {}
 
-ACE_INLINE const char*
+ACE_INLINE char const *
 AMH_genericExceptionHolder::_tao_obv_static_repository_id ()
 {
   return "IDL:AMH_genericExceptionHolder:1.0";
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ci.cpp:58
-
-
 
 ACE_INLINE
 AMI_genericHandler::AMI_genericHandler (

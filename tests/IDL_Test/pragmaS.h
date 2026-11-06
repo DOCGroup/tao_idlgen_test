@@ -22,11 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:454
-
-#ifndef _TAO_IDL_PRAGMAS_LNQ01E_H_
-#define _TAO_IDL_PRAGMAS_LNQ01E_H_
+#ifndef _TAO_IDL_PRAGMAS_H_
+#define _TAO_IDL_PRAGMAS_H_
 
 #include /**/ "ace/pre.h"
 
@@ -51,27 +48,18 @@
 #include "tao/Messaging/AMH_Response_Handler.h"
 
 #include /**/ "TAO_IDL_TEST_stub_export.h"
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_arg_traits.cpp:64
-
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
 
 // Arg traits specializations.
 namespace TAO
 {
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_arg_traits.cpp:298
-
-  
 
 #if !defined (_MESSAGING_EXCEPTIONHOLDER__SARG_TRAITS_)
 #define _MESSAGING_EXCEPTIONHOLDER__SARG_TRAITS_
 
   template<>
-  class SArg_Traits< ::Messaging::ExceptionHolder>
+  class SArg_Traits<::Messaging::ExceptionHolder>
     : public
         Object_SArg_Traits_T<
             ::Messaging::ExceptionHolder *,
@@ -83,16 +71,12 @@ namespace TAO
   };
 
 #endif /* end #if !defined */
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_arg_traits.cpp:142
-
-  
 
 #if !defined (_HELLO__SARG_TRAITS_)
 #define _HELLO__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits< ::hello>
+  class  SArg_Traits<::hello>
     : public Object_SArg_Traits_T<
         ::hello_ptr,
         ::hello_var,
@@ -102,16 +86,12 @@ namespace TAO
   };
 
 #endif /* end #if !defined */
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_arg_traits.cpp:298
-
-  
 
 #if !defined (_AMH_HELLOEXCEPTIONHOLDER__SARG_TRAITS_)
 #define _AMH_HELLOEXCEPTIONHOLDER__SARG_TRAITS_
 
   template<>
-  class SArg_Traits< ::AMH_helloExceptionHolder>
+  class SArg_Traits<::AMH_helloExceptionHolder>
     : public
         Object_SArg_Traits_T<
             ::AMH_helloExceptionHolder *,
@@ -123,16 +103,12 @@ namespace TAO
   };
 
 #endif /* end #if !defined */
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_arg_traits.cpp:142
-
-  
 
 #if !defined (_AMI_HELLOHANDLER__SARG_TRAITS_)
 #define _AMI_HELLOHANDLER__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits< ::AMI_helloHandler>
+  class  SArg_Traits<::AMI_helloHandler>
     : public Object_SArg_Traits_T<
         ::AMI_helloHandler_ptr,
         ::AMI_helloHandler_var,
@@ -142,13 +118,9 @@ namespace TAO
   };
 
 #endif /* end #if !defined */
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_arg_traits.cpp:889
-
-  
 
   template<>
-  class SArg_Traits< ::ClusterFu>
+  class SArg_Traits<::ClusterFu>
     : public
         Basic_SArg_Traits_T<
             ::ClusterFu,
@@ -156,16 +128,12 @@ namespace TAO
           >
   {
   };
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_arg_traits.cpp:142
-
-  
 
 #if !defined (_ALOHA__SARG_TRAITS_)
 #define _ALOHA__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits< ::aloha>
+  class  SArg_Traits<::aloha>
     : public Object_SArg_Traits_T<
         ::aloha_ptr,
         ::aloha_var,
@@ -175,16 +143,12 @@ namespace TAO
   };
 
 #endif /* end #if !defined */
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_arg_traits.cpp:142
-
-  
 
 #if !defined (_GOODBYE__SARG_TRAITS_)
 #define _GOODBYE__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits< ::goodbye>
+  class  SArg_Traits<::goodbye>
     : public Object_SArg_Traits_T<
         ::goodbye_ptr,
         ::goodbye_var,
@@ -194,16 +158,12 @@ namespace TAO
   };
 
 #endif /* end #if !defined */
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_arg_traits.cpp:298
-
-  
 
 #if !defined (_AMH_GOODBYEEXCEPTIONHOLDER__SARG_TRAITS_)
 #define _AMH_GOODBYEEXCEPTIONHOLDER__SARG_TRAITS_
 
   template<>
-  class SArg_Traits< ::AMH_goodbyeExceptionHolder>
+  class SArg_Traits<::AMH_goodbyeExceptionHolder>
     : public
         Object_SArg_Traits_T<
             ::AMH_goodbyeExceptionHolder *,
@@ -215,16 +175,12 @@ namespace TAO
   };
 
 #endif /* end #if !defined */
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_arg_traits.cpp:142
-
-  
 
 #if !defined (_AMI_GOODBYEHANDLER__SARG_TRAITS_)
 #define _AMI_GOODBYEHANDLER__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits< ::AMI_goodbyeHandler>
+  class  SArg_Traits<::AMI_goodbyeHandler>
     : public Object_SArg_Traits_T<
         ::AMI_goodbyeHandler_ptr,
         ::AMI_goodbyeHandler_var,
@@ -234,16 +190,12 @@ namespace TAO
   };
 
 #endif /* end #if !defined */
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_arg_traits.cpp:142
-
-  
 
 #if !defined (_SALUTATION_SAYONARA__SARG_TRAITS_)
 #define _SALUTATION_SAYONARA__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits< ::salutation::sayonara>
+  class  SArg_Traits<::salutation::sayonara>
     : public Object_SArg_Traits_T<
         ::salutation::sayonara_ptr,
         ::salutation::sayonara_var,
@@ -253,16 +205,12 @@ namespace TAO
   };
 
 #endif /* end #if !defined */
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_arg_traits.cpp:298
-
-  
 
 #if !defined (_SALUTATION_AMH_SAYONARAEXCEPTIONHOLDER__SARG_TRAITS_)
 #define _SALUTATION_AMH_SAYONARAEXCEPTIONHOLDER__SARG_TRAITS_
 
   template<>
-  class SArg_Traits< ::salutation::AMH_sayonaraExceptionHolder>
+  class SArg_Traits<::salutation::AMH_sayonaraExceptionHolder>
     : public
         Object_SArg_Traits_T<
             ::salutation::AMH_sayonaraExceptionHolder *,
@@ -274,16 +222,12 @@ namespace TAO
   };
 
 #endif /* end #if !defined */
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_arg_traits.cpp:142
-
-  
 
 #if !defined (_SALUTATION_AMI_SAYONARAHANDLER__SARG_TRAITS_)
 #define _SALUTATION_AMI_SAYONARAHANDLER__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits< ::salutation::AMI_sayonaraHandler>
+  class  SArg_Traits<::salutation::AMI_sayonaraHandler>
     : public Object_SArg_Traits_T<
         ::salutation::AMI_sayonaraHandler_ptr,
         ::salutation::AMI_sayonaraHandler_var,
@@ -293,16 +237,12 @@ namespace TAO
   };
 
 #endif /* end #if !defined */
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_arg_traits.cpp:142
-
-  
 
 #if !defined (_CIAO__SARG_TRAITS_)
 #define _CIAO__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits< ::ciao>
+  class  SArg_Traits<::ciao>
     : public Object_SArg_Traits_T<
         ::ciao_ptr,
         ::ciao_var,
@@ -312,16 +252,12 @@ namespace TAO
   };
 
 #endif /* end #if !defined */
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_arg_traits.cpp:298
-
-  
 
 #if !defined (_AMH_CIAOEXCEPTIONHOLDER__SARG_TRAITS_)
 #define _AMH_CIAOEXCEPTIONHOLDER__SARG_TRAITS_
 
   template<>
-  class SArg_Traits< ::AMH_ciaoExceptionHolder>
+  class SArg_Traits<::AMH_ciaoExceptionHolder>
     : public
         Object_SArg_Traits_T<
             ::AMH_ciaoExceptionHolder *,
@@ -333,16 +269,12 @@ namespace TAO
   };
 
 #endif /* end #if !defined */
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_arg_traits.cpp:142
-
-  
 
 #if !defined (_AMI_CIAOHANDLER__SARG_TRAITS_)
 #define _AMI_CIAOHANDLER__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits< ::AMI_ciaoHandler>
+  class  SArg_Traits<::AMI_ciaoHandler>
     : public Object_SArg_Traits_T<
         ::AMI_ciaoHandler_ptr,
         ::AMI_ciaoHandler_var,
@@ -352,16 +284,12 @@ namespace TAO
   };
 
 #endif /* end #if !defined */
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_arg_traits.cpp:298
-
-  
 
 #if !defined (_AMH_ALOHAEXCEPTIONHOLDER__SARG_TRAITS_)
 #define _AMH_ALOHAEXCEPTIONHOLDER__SARG_TRAITS_
 
   template<>
-  class SArg_Traits< ::AMH_alohaExceptionHolder>
+  class SArg_Traits<::AMH_alohaExceptionHolder>
     : public
         Object_SArg_Traits_T<
             ::AMH_alohaExceptionHolder *,
@@ -373,16 +301,12 @@ namespace TAO
   };
 
 #endif /* end #if !defined */
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_arg_traits.cpp:142
-
-  
 
 #if !defined (_AMI_ALOHAHANDLER__SARG_TRAITS_)
 #define _AMI_ALOHAHANDLER__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits< ::AMI_alohaHandler>
+  class  SArg_Traits<::AMI_alohaHandler>
     : public Object_SArg_Traits_T<
         ::AMI_alohaHandler_ptr,
         ::AMI_alohaHandler_var,
@@ -392,16 +316,22 @@ namespace TAO
   };
 
 #endif /* end #if !defined */
+
+  template<>
+  class SArg_Traits<::DCPS_Test::Sample>
+    : public
+        Fixed_Size_SArg_Traits_T<
+            ::DCPS_Test::Sample,
+            TAO::Any_Insert_Policy_Stream
+          >
+  {
+  };
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/amh_sh.cpp:45
-
 class POA_AMH_hello;
-typedef POA_AMH_hello *POA_AMH_hello_ptr;
+using POA_AMH_hello_ptr = POA_AMH_hello *;
 
 class TAO_IDL_TEST_STUB_Export POA_AMH_hello
   : public virtual PortableServer::ServantBase
@@ -410,29 +340,22 @@ protected:
   POA_AMH_hello ();
 
 public:
-  POA_AMH_hello (const POA_AMH_hello& rhs);
-  virtual ~POA_AMH_hello () = default;
+  POA_AMH_hello (POA_AMH_hello const &rhs);
+  ~POA_AMH_hello () override = default;
 
+  ::CORBA::Boolean _is_a (char const *logical_type_id) override;
 
-  virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
-
-  virtual void _dispatch (
+  void _dispatch (
       TAO_ServerRequest &req,
-      TAO::Portable_Server::Servant_Upcall *_servant_upcall);
-  
+      TAO::Portable_Server::Servant_Upcall *_servant_upcall) override;
+
   hello *_this ();
 
-virtual const char* _interface_repository_id () const;
+char const *_interface_repository_id () const override;
 };
 
-
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_sh.cpp:72
-
-
-
 class POA_hello;
-typedef POA_hello *POA_hello_ptr;
+using POA_hello_ptr = POA_hello *;
 
 class _TAO_hello_Direct_Proxy_Impl;
 
@@ -444,27 +367,23 @@ protected:
 
 public:
   /// Useful for template programming.
-  typedef ::hello _stub_type;
-  typedef ::hello_ptr _stub_ptr_type;
-  typedef ::hello_var _stub_var_type;
+  using _stub_type = ::hello;
+  using _stub_ptr_type = ::hello_ptr;
+  using _stub_var_type = ::hello_var;
 
-  POA_hello (const POA_hello& rhs) = default;
-  virtual ~POA_hello () = default;
+  POA_hello (POA_hello const &rhs) = default;
+  ~POA_hello () override = default;
 
-  virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
+  ::CORBA::Boolean _is_a (char const *logical_type_id) override;
 
-  virtual void _dispatch (
+  void _dispatch (
       TAO_ServerRequest & req,
-      TAO::Portable_Server::Servant_Upcall *servant_upcall);
-  
+      TAO::Portable_Server::Servant_Upcall *servant_upcall) override;
+
   ::hello *_this ();
-  
-  virtual const char* _interface_repository_id () const;
+
+  char const *_interface_repository_id () const override;
 };
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/direct_proxy_impl_sh.cpp:23
-
-
 
 ///////////////////////////////////////////////////////////////////////
 //                    Direct  Impl. Declaration
@@ -480,12 +399,8 @@ public:
 //                Direct  Proxy Impl. Declaration
 ///////////////////////////////////////////////////////////////////////
 
-
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/amh_rh_sh.cpp:49
-
 class POA_TAO_AMH_helloResponseHandler;
-typedef POA_TAO_AMH_helloResponseHandler *POA_TAO_AMH_helloResponseHandler_ptr;
+using POA_TAO_AMH_helloResponseHandler_ptr = POA_TAO_AMH_helloResponseHandler *;
 
 class TAO_IDL_TEST_STUB_Export POA_TAO_AMH_helloResponseHandler
   : public TAO_AMH_Response_Handler,
@@ -496,14 +411,8 @@ public:
   virtual ~POA_TAO_AMH_helloResponseHandler () = default;
 };
 
-
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_sh.cpp:72
-
-
-
 class POA_AMI_helloHandler;
-typedef POA_AMI_helloHandler *POA_AMI_helloHandler_ptr;
+using POA_AMI_helloHandler_ptr = POA_AMI_helloHandler *;
 
 class _TAO_AMI_helloHandler_Direct_Proxy_Impl;
 
@@ -515,27 +424,23 @@ protected:
 
 public:
   /// Useful for template programming.
-  typedef ::AMI_helloHandler _stub_type;
-  typedef ::AMI_helloHandler_ptr _stub_ptr_type;
-  typedef ::AMI_helloHandler_var _stub_var_type;
+  using _stub_type = ::AMI_helloHandler;
+  using _stub_ptr_type = ::AMI_helloHandler_ptr;
+  using _stub_var_type = ::AMI_helloHandler_var;
 
-  POA_AMI_helloHandler (const POA_AMI_helloHandler& rhs) = default;
-  virtual ~POA_AMI_helloHandler () = default;
+  POA_AMI_helloHandler (POA_AMI_helloHandler const &rhs) = default;
+  ~POA_AMI_helloHandler () override = default;
 
-  virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
+  ::CORBA::Boolean _is_a (char const *logical_type_id) override;
 
-  virtual void _dispatch (
+  void _dispatch (
       TAO_ServerRequest & req,
-      TAO::Portable_Server::Servant_Upcall *servant_upcall);
-  
+      TAO::Portable_Server::Servant_Upcall *servant_upcall) override;
+
   ::AMI_helloHandler *_this ();
-  
-  virtual const char* _interface_repository_id () const;
+
+  char const *_interface_repository_id () const override;
 };
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/direct_proxy_impl_sh.cpp:23
-
-
 
 ///////////////////////////////////////////////////////////////////////
 //                    Direct  Impl. Declaration
@@ -552,12 +457,8 @@ public:
 //                Direct  Proxy Impl. Declaration
 ///////////////////////////////////////////////////////////////////////
 
-
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/amh_sh.cpp:45
-
 class POA_AMH_goodbye;
-typedef POA_AMH_goodbye *POA_AMH_goodbye_ptr;
+using POA_AMH_goodbye_ptr = POA_AMH_goodbye *;
 
 class TAO_IDL_TEST_STUB_Export POA_AMH_goodbye
   : public virtual PortableServer::ServantBase
@@ -566,29 +467,22 @@ protected:
   POA_AMH_goodbye ();
 
 public:
-  POA_AMH_goodbye (const POA_AMH_goodbye& rhs);
-  virtual ~POA_AMH_goodbye () = default;
+  POA_AMH_goodbye (POA_AMH_goodbye const &rhs);
+  ~POA_AMH_goodbye () override = default;
 
+  ::CORBA::Boolean _is_a (char const *logical_type_id) override;
 
-  virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
-
-  virtual void _dispatch (
+  void _dispatch (
       TAO_ServerRequest &req,
-      TAO::Portable_Server::Servant_Upcall *_servant_upcall);
-  
+      TAO::Portable_Server::Servant_Upcall *_servant_upcall) override;
+
   goodbye *_this ();
 
-virtual const char* _interface_repository_id () const;
+char const *_interface_repository_id () const override;
 };
 
-
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_sh.cpp:72
-
-
-
 class POA_goodbye;
-typedef POA_goodbye *POA_goodbye_ptr;
+using POA_goodbye_ptr = POA_goodbye *;
 
 class _TAO_goodbye_Direct_Proxy_Impl;
 
@@ -600,27 +494,23 @@ protected:
 
 public:
   /// Useful for template programming.
-  typedef ::goodbye _stub_type;
-  typedef ::goodbye_ptr _stub_ptr_type;
-  typedef ::goodbye_var _stub_var_type;
+  using _stub_type = ::goodbye;
+  using _stub_ptr_type = ::goodbye_ptr;
+  using _stub_var_type = ::goodbye_var;
 
-  POA_goodbye (const POA_goodbye& rhs) = default;
-  virtual ~POA_goodbye () = default;
+  POA_goodbye (POA_goodbye const &rhs) = default;
+  ~POA_goodbye () override = default;
 
-  virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
+  ::CORBA::Boolean _is_a (char const *logical_type_id) override;
 
-  virtual void _dispatch (
+  void _dispatch (
       TAO_ServerRequest & req,
-      TAO::Portable_Server::Servant_Upcall *servant_upcall);
-  
+      TAO::Portable_Server::Servant_Upcall *servant_upcall) override;
+
   ::goodbye *_this ();
-  
-  virtual const char* _interface_repository_id () const;
+
+  char const *_interface_repository_id () const override;
 };
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/direct_proxy_impl_sh.cpp:23
-
-
 
 ///////////////////////////////////////////////////////////////////////
 //                    Direct  Impl. Declaration
@@ -636,12 +526,8 @@ public:
 //                Direct  Proxy Impl. Declaration
 ///////////////////////////////////////////////////////////////////////
 
-
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/amh_rh_sh.cpp:49
-
 class POA_TAO_AMH_goodbyeResponseHandler;
-typedef POA_TAO_AMH_goodbyeResponseHandler *POA_TAO_AMH_goodbyeResponseHandler_ptr;
+using POA_TAO_AMH_goodbyeResponseHandler_ptr = POA_TAO_AMH_goodbyeResponseHandler *;
 
 class TAO_IDL_TEST_STUB_Export POA_TAO_AMH_goodbyeResponseHandler
   : public TAO_AMH_Response_Handler,
@@ -652,14 +538,8 @@ public:
   virtual ~POA_TAO_AMH_goodbyeResponseHandler () = default;
 };
 
-
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_sh.cpp:72
-
-
-
 class POA_AMI_goodbyeHandler;
-typedef POA_AMI_goodbyeHandler *POA_AMI_goodbyeHandler_ptr;
+using POA_AMI_goodbyeHandler_ptr = POA_AMI_goodbyeHandler *;
 
 class _TAO_AMI_goodbyeHandler_Direct_Proxy_Impl;
 
@@ -671,27 +551,23 @@ protected:
 
 public:
   /// Useful for template programming.
-  typedef ::AMI_goodbyeHandler _stub_type;
-  typedef ::AMI_goodbyeHandler_ptr _stub_ptr_type;
-  typedef ::AMI_goodbyeHandler_var _stub_var_type;
+  using _stub_type = ::AMI_goodbyeHandler;
+  using _stub_ptr_type = ::AMI_goodbyeHandler_ptr;
+  using _stub_var_type = ::AMI_goodbyeHandler_var;
 
-  POA_AMI_goodbyeHandler (const POA_AMI_goodbyeHandler& rhs) = default;
-  virtual ~POA_AMI_goodbyeHandler () = default;
+  POA_AMI_goodbyeHandler (POA_AMI_goodbyeHandler const &rhs) = default;
+  ~POA_AMI_goodbyeHandler () override = default;
 
-  virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
+  ::CORBA::Boolean _is_a (char const *logical_type_id) override;
 
-  virtual void _dispatch (
+  void _dispatch (
       TAO_ServerRequest & req,
-      TAO::Portable_Server::Servant_Upcall *servant_upcall);
-  
+      TAO::Portable_Server::Servant_Upcall *servant_upcall) override;
+
   ::AMI_goodbyeHandler *_this ();
-  
-  virtual const char* _interface_repository_id () const;
+
+  char const *_interface_repository_id () const override;
 };
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/direct_proxy_impl_sh.cpp:23
-
-
 
 ///////////////////////////////////////////////////////////////////////
 //                    Direct  Impl. Declaration
@@ -708,61 +584,39 @@ public:
 //                Direct  Proxy Impl. Declaration
 ///////////////////////////////////////////////////////////////////////
 
-
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_module/module_sh.cpp:34
-
 namespace POA_A
 {
-  
-
-
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_module/module_sh.cpp:65
 
 } // module A
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_module/module_sh.cpp:34
-
 namespace POA_salutation
 {
-  
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/amh_sh.cpp:45
 
   class AMH_sayonara;
-  typedef AMH_sayonara *AMH_sayonara_ptr;
+  using AMH_sayonara_ptr = AMH_sayonara *;
 
   class TAO_IDL_TEST_STUB_Export AMH_sayonara
     : public virtual PortableServer::ServantBase
   {
   protected:
     AMH_sayonara ();
-  
+
   public:
-    AMH_sayonara (const AMH_sayonara& rhs);
-    virtual ~AMH_sayonara () = default;
+    AMH_sayonara (AMH_sayonara const &rhs);
+    ~AMH_sayonara () override = default;
 
+    ::CORBA::Boolean _is_a (char const *logical_type_id) override;
 
-    virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
-
-    virtual void _dispatch (
+    void _dispatch (
         TAO_ServerRequest &req,
-        TAO::Portable_Server::Servant_Upcall *_servant_upcall);
-    
+        TAO::Portable_Server::Servant_Upcall *_servant_upcall) override;
+
     salutation::sayonara *_this ();
 
-  virtual const char* _interface_repository_id () const;
+  char const *_interface_repository_id () const override;
 };
 
-
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_sh.cpp:72
-
-
-
 class sayonara;
-typedef sayonara *sayonara_ptr;
+using sayonara_ptr = sayonara *;
 
 class _TAO_sayonara_Direct_Proxy_Impl;
 
@@ -774,27 +628,23 @@ protected:
 
 public:
   /// Useful for template programming.
-  typedef ::salutation::sayonara _stub_type;
-  typedef ::salutation::sayonara_ptr _stub_ptr_type;
-  typedef ::salutation::sayonara_var _stub_var_type;
+  using _stub_type = ::salutation::sayonara;
+  using _stub_ptr_type = ::salutation::sayonara_ptr;
+  using _stub_var_type = ::salutation::sayonara_var;
 
-  sayonara (const sayonara& rhs) = default;
-  virtual ~sayonara () = default;
+  sayonara (sayonara const &rhs) = default;
+  ~sayonara () override = default;
 
-  virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
+  ::CORBA::Boolean _is_a (char const *logical_type_id) override;
 
-  virtual void _dispatch (
+  void _dispatch (
       TAO_ServerRequest & req,
-      TAO::Portable_Server::Servant_Upcall *servant_upcall);
-  
+      TAO::Portable_Server::Servant_Upcall *servant_upcall) override;
+
   ::salutation::sayonara *_this ();
-  
-  virtual const char* _interface_repository_id () const;
+
+  char const *_interface_repository_id () const override;
 };
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/direct_proxy_impl_sh.cpp:23
-
-
 
 ///////////////////////////////////////////////////////////////////////
 //                    Direct  Impl. Declaration
@@ -810,12 +660,8 @@ public:
 //                Direct  Proxy Impl. Declaration
 ///////////////////////////////////////////////////////////////////////
 
-
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/amh_rh_sh.cpp:49
-
 class TAO_AMH_sayonaraResponseHandler;
-typedef TAO_AMH_sayonaraResponseHandler *TAO_AMH_sayonaraResponseHandler_ptr;
+using TAO_AMH_sayonaraResponseHandler_ptr = TAO_AMH_sayonaraResponseHandler *;
 
 class TAO_IDL_TEST_STUB_Export TAO_AMH_sayonaraResponseHandler
   : public TAO_AMH_Response_Handler,
@@ -826,14 +672,8 @@ public:
   virtual ~TAO_AMH_sayonaraResponseHandler () = default;
 };
 
-
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_sh.cpp:72
-
-
-
 class AMI_sayonaraHandler;
-typedef AMI_sayonaraHandler *AMI_sayonaraHandler_ptr;
+using AMI_sayonaraHandler_ptr = AMI_sayonaraHandler *;
 
 class _TAO_AMI_sayonaraHandler_Direct_Proxy_Impl;
 
@@ -845,27 +685,23 @@ protected:
 
 public:
   /// Useful for template programming.
-  typedef ::salutation::AMI_sayonaraHandler _stub_type;
-  typedef ::salutation::AMI_sayonaraHandler_ptr _stub_ptr_type;
-  typedef ::salutation::AMI_sayonaraHandler_var _stub_var_type;
+  using _stub_type = ::salutation::AMI_sayonaraHandler;
+  using _stub_ptr_type = ::salutation::AMI_sayonaraHandler_ptr;
+  using _stub_var_type = ::salutation::AMI_sayonaraHandler_var;
 
-  AMI_sayonaraHandler (const AMI_sayonaraHandler& rhs) = default;
-  virtual ~AMI_sayonaraHandler () = default;
+  AMI_sayonaraHandler (AMI_sayonaraHandler const &rhs) = default;
+  ~AMI_sayonaraHandler () override = default;
 
-  virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
+  ::CORBA::Boolean _is_a (char const *logical_type_id) override;
 
-  virtual void _dispatch (
+  void _dispatch (
       TAO_ServerRequest & req,
-      TAO::Portable_Server::Servant_Upcall *servant_upcall);
-  
+      TAO::Portable_Server::Servant_Upcall *servant_upcall) override;
+
   ::salutation::AMI_sayonaraHandler *_this ();
-  
-  virtual const char* _interface_repository_id () const;
+
+  char const *_interface_repository_id () const override;
 };
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/direct_proxy_impl_sh.cpp:23
-
-
 
 ///////////////////////////////////////////////////////////////////////
 //                    Direct  Impl. Declaration
@@ -882,18 +718,9 @@ public:
 //                Direct  Proxy Impl. Declaration
 ///////////////////////////////////////////////////////////////////////
 
-
-
-
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_module/module_sh.cpp:65
-
 } // module salutation
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/amh_sh.cpp:45
-
 class POA_AMH_ciao;
-typedef POA_AMH_ciao *POA_AMH_ciao_ptr;
+using POA_AMH_ciao_ptr = POA_AMH_ciao *;
 
 class TAO_IDL_TEST_STUB_Export POA_AMH_ciao
   : public virtual PortableServer::ServantBase
@@ -902,29 +729,22 @@ protected:
   POA_AMH_ciao ();
 
 public:
-  POA_AMH_ciao (const POA_AMH_ciao& rhs);
-  virtual ~POA_AMH_ciao () = default;
+  POA_AMH_ciao (POA_AMH_ciao const &rhs);
+  ~POA_AMH_ciao () override = default;
 
+  ::CORBA::Boolean _is_a (char const *logical_type_id) override;
 
-  virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
-
-  virtual void _dispatch (
+  void _dispatch (
       TAO_ServerRequest &req,
-      TAO::Portable_Server::Servant_Upcall *_servant_upcall);
-  
+      TAO::Portable_Server::Servant_Upcall *_servant_upcall) override;
+
   ciao *_this ();
 
-virtual const char* _interface_repository_id () const;
+char const *_interface_repository_id () const override;
 };
 
-
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_sh.cpp:72
-
-
-
 class POA_ciao;
-typedef POA_ciao *POA_ciao_ptr;
+using POA_ciao_ptr = POA_ciao *;
 
 class _TAO_ciao_Direct_Proxy_Impl;
 
@@ -936,27 +756,23 @@ protected:
 
 public:
   /// Useful for template programming.
-  typedef ::ciao _stub_type;
-  typedef ::ciao_ptr _stub_ptr_type;
-  typedef ::ciao_var _stub_var_type;
+  using _stub_type = ::ciao;
+  using _stub_ptr_type = ::ciao_ptr;
+  using _stub_var_type = ::ciao_var;
 
-  POA_ciao (const POA_ciao& rhs) = default;
-  virtual ~POA_ciao () = default;
+  POA_ciao (POA_ciao const &rhs) = default;
+  ~POA_ciao () override = default;
 
-  virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
+  ::CORBA::Boolean _is_a (char const *logical_type_id) override;
 
-  virtual void _dispatch (
+  void _dispatch (
       TAO_ServerRequest & req,
-      TAO::Portable_Server::Servant_Upcall *servant_upcall);
-  
+      TAO::Portable_Server::Servant_Upcall *servant_upcall) override;
+
   ::ciao *_this ();
-  
-  virtual const char* _interface_repository_id () const;
+
+  char const *_interface_repository_id () const override;
 };
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/direct_proxy_impl_sh.cpp:23
-
-
 
 ///////////////////////////////////////////////////////////////////////
 //                    Direct  Impl. Declaration
@@ -972,12 +788,8 @@ public:
 //                Direct  Proxy Impl. Declaration
 ///////////////////////////////////////////////////////////////////////
 
-
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/amh_rh_sh.cpp:49
-
 class POA_TAO_AMH_ciaoResponseHandler;
-typedef POA_TAO_AMH_ciaoResponseHandler *POA_TAO_AMH_ciaoResponseHandler_ptr;
+using POA_TAO_AMH_ciaoResponseHandler_ptr = POA_TAO_AMH_ciaoResponseHandler *;
 
 class TAO_IDL_TEST_STUB_Export POA_TAO_AMH_ciaoResponseHandler
   : public TAO_AMH_Response_Handler,
@@ -988,14 +800,8 @@ public:
   virtual ~POA_TAO_AMH_ciaoResponseHandler () = default;
 };
 
-
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_sh.cpp:72
-
-
-
 class POA_AMI_ciaoHandler;
-typedef POA_AMI_ciaoHandler *POA_AMI_ciaoHandler_ptr;
+using POA_AMI_ciaoHandler_ptr = POA_AMI_ciaoHandler *;
 
 class _TAO_AMI_ciaoHandler_Direct_Proxy_Impl;
 
@@ -1007,27 +813,23 @@ protected:
 
 public:
   /// Useful for template programming.
-  typedef ::AMI_ciaoHandler _stub_type;
-  typedef ::AMI_ciaoHandler_ptr _stub_ptr_type;
-  typedef ::AMI_ciaoHandler_var _stub_var_type;
+  using _stub_type = ::AMI_ciaoHandler;
+  using _stub_ptr_type = ::AMI_ciaoHandler_ptr;
+  using _stub_var_type = ::AMI_ciaoHandler_var;
 
-  POA_AMI_ciaoHandler (const POA_AMI_ciaoHandler& rhs) = default;
-  virtual ~POA_AMI_ciaoHandler () = default;
+  POA_AMI_ciaoHandler (POA_AMI_ciaoHandler const &rhs) = default;
+  ~POA_AMI_ciaoHandler () override = default;
 
-  virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
+  ::CORBA::Boolean _is_a (char const *logical_type_id) override;
 
-  virtual void _dispatch (
+  void _dispatch (
       TAO_ServerRequest & req,
-      TAO::Portable_Server::Servant_Upcall *servant_upcall);
-  
+      TAO::Portable_Server::Servant_Upcall *servant_upcall) override;
+
   ::AMI_ciaoHandler *_this ();
-  
-  virtual const char* _interface_repository_id () const;
+
+  char const *_interface_repository_id () const override;
 };
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/direct_proxy_impl_sh.cpp:23
-
-
 
 ///////////////////////////////////////////////////////////////////////
 //                    Direct  Impl. Declaration
@@ -1044,12 +846,8 @@ public:
 //                Direct  Proxy Impl. Declaration
 ///////////////////////////////////////////////////////////////////////
 
-
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/amh_sh.cpp:45
-
 class POA_AMH_aloha;
-typedef POA_AMH_aloha *POA_AMH_aloha_ptr;
+using POA_AMH_aloha_ptr = POA_AMH_aloha *;
 
 class TAO_IDL_TEST_STUB_Export POA_AMH_aloha
   : public virtual PortableServer::ServantBase
@@ -1058,29 +856,22 @@ protected:
   POA_AMH_aloha ();
 
 public:
-  POA_AMH_aloha (const POA_AMH_aloha& rhs);
-  virtual ~POA_AMH_aloha () = default;
+  POA_AMH_aloha (POA_AMH_aloha const &rhs);
+  ~POA_AMH_aloha () override = default;
 
+  ::CORBA::Boolean _is_a (char const *logical_type_id) override;
 
-  virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
-
-  virtual void _dispatch (
+  void _dispatch (
       TAO_ServerRequest &req,
-      TAO::Portable_Server::Servant_Upcall *_servant_upcall);
-  
+      TAO::Portable_Server::Servant_Upcall *_servant_upcall) override;
+
   aloha *_this ();
 
-virtual const char* _interface_repository_id () const;
+char const *_interface_repository_id () const override;
 };
 
-
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_sh.cpp:72
-
-
-
 class POA_aloha;
-typedef POA_aloha *POA_aloha_ptr;
+using POA_aloha_ptr = POA_aloha *;
 
 class _TAO_aloha_Direct_Proxy_Impl;
 
@@ -1092,27 +883,23 @@ protected:
 
 public:
   /// Useful for template programming.
-  typedef ::aloha _stub_type;
-  typedef ::aloha_ptr _stub_ptr_type;
-  typedef ::aloha_var _stub_var_type;
+  using _stub_type = ::aloha;
+  using _stub_ptr_type = ::aloha_ptr;
+  using _stub_var_type = ::aloha_var;
 
-  POA_aloha (const POA_aloha& rhs) = default;
-  virtual ~POA_aloha () = default;
+  POA_aloha (POA_aloha const &rhs) = default;
+  ~POA_aloha () override = default;
 
-  virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
+  ::CORBA::Boolean _is_a (char const *logical_type_id) override;
 
-  virtual void _dispatch (
+  void _dispatch (
       TAO_ServerRequest & req,
-      TAO::Portable_Server::Servant_Upcall *servant_upcall);
-  
+      TAO::Portable_Server::Servant_Upcall *servant_upcall) override;
+
   ::aloha *_this ();
-  
-  virtual const char* _interface_repository_id () const;
+
+  char const *_interface_repository_id () const override;
 };
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/direct_proxy_impl_sh.cpp:23
-
-
 
 ///////////////////////////////////////////////////////////////////////
 //                    Direct  Impl. Declaration
@@ -1128,12 +915,8 @@ public:
 //                Direct  Proxy Impl. Declaration
 ///////////////////////////////////////////////////////////////////////
 
-
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/amh_rh_sh.cpp:49
-
 class POA_TAO_AMH_alohaResponseHandler;
-typedef POA_TAO_AMH_alohaResponseHandler *POA_TAO_AMH_alohaResponseHandler_ptr;
+using POA_TAO_AMH_alohaResponseHandler_ptr = POA_TAO_AMH_alohaResponseHandler *;
 
 class TAO_IDL_TEST_STUB_Export POA_TAO_AMH_alohaResponseHandler
   : public TAO_AMH_Response_Handler,
@@ -1144,14 +927,8 @@ public:
   virtual ~POA_TAO_AMH_alohaResponseHandler () = default;
 };
 
-
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_sh.cpp:72
-
-
-
 class POA_AMI_alohaHandler;
-typedef POA_AMI_alohaHandler *POA_AMI_alohaHandler_ptr;
+using POA_AMI_alohaHandler_ptr = POA_AMI_alohaHandler *;
 
 class _TAO_AMI_alohaHandler_Direct_Proxy_Impl;
 
@@ -1163,27 +940,23 @@ protected:
 
 public:
   /// Useful for template programming.
-  typedef ::AMI_alohaHandler _stub_type;
-  typedef ::AMI_alohaHandler_ptr _stub_ptr_type;
-  typedef ::AMI_alohaHandler_var _stub_var_type;
+  using _stub_type = ::AMI_alohaHandler;
+  using _stub_ptr_type = ::AMI_alohaHandler_ptr;
+  using _stub_var_type = ::AMI_alohaHandler_var;
 
-  POA_AMI_alohaHandler (const POA_AMI_alohaHandler& rhs) = default;
-  virtual ~POA_AMI_alohaHandler () = default;
+  POA_AMI_alohaHandler (POA_AMI_alohaHandler const &rhs) = default;
+  ~POA_AMI_alohaHandler () override = default;
 
-  virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
+  ::CORBA::Boolean _is_a (char const *logical_type_id) override;
 
-  virtual void _dispatch (
+  void _dispatch (
       TAO_ServerRequest & req,
-      TAO::Portable_Server::Servant_Upcall *servant_upcall);
-  
+      TAO::Portable_Server::Servant_Upcall *servant_upcall) override;
+
   ::AMI_alohaHandler *_this ();
-  
-  virtual const char* _interface_repository_id () const;
+
+  char const *_interface_repository_id () const override;
 };
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/direct_proxy_impl_sh.cpp:23
-
-
 
 ///////////////////////////////////////////////////////////////////////
 //                    Direct  Impl. Declaration
@@ -1200,10 +973,12 @@ public:
 //                Direct  Proxy Impl. Declaration
 ///////////////////////////////////////////////////////////////////////
 
+namespace POA_DCPS_Test
+{
 
+} // module DCPS_Test
 
 #include "pragmaS_T.h"
-
 
 #include /**/ "ace/post.h"
 

@@ -22,12 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:631
-
-#ifndef _TAO_IDL_ENUM_IN_STRUCTS_G7UBQ1_CPP_
-#define _TAO_IDL_ENUM_IN_STRUCTS_G7UBQ1_CPP_
-
+#ifndef _TAO_IDL_ENUM_IN_STRUCTS_CPP_
+#define _TAO_IDL_ENUM_IN_STRUCTS_CPP_
 
 #include "enum_in_structS.h"
 

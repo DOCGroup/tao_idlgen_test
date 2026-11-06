@@ -22,11 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:454
-
-#ifndef _TAO_IDL_BUG_2577_REGRESSIONS_YJL7CA_H_
-#define _TAO_IDL_BUG_2577_REGRESSIONS_YJL7CA_H_
+#ifndef _TAO_IDL_BUG_2577_REGRESSIONS_H_
+#define _TAO_IDL_BUG_2577_REGRESSIONS_H_
 
 #include /**/ "ace/pre.h"
 
@@ -52,27 +49,18 @@
 #include "tao/Messaging/AMH_Response_Handler.h"
 
 #include /**/ "TAO_IDL_TEST_stub_export.h"
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_arg_traits.cpp:64
-
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
 
 // Arg traits specializations.
 namespace TAO
 {
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_arg_traits.cpp:298
-
-  
 
 #if !defined (_MESSAGING_EXCEPTIONHOLDER__SARG_TRAITS_)
 #define _MESSAGING_EXCEPTIONHOLDER__SARG_TRAITS_
 
   template<>
-  class SArg_Traits< ::Messaging::ExceptionHolder>
+  class SArg_Traits<::Messaging::ExceptionHolder>
     : public
         Object_SArg_Traits_T<
             ::Messaging::ExceptionHolder *,
@@ -84,13 +72,9 @@ namespace TAO
   };
 
 #endif /* end #if !defined */
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_arg_traits.cpp:931
-
-  
 
   template<>
-  class SArg_Traits< ::DateTime_T>
+  class SArg_Traits<::DateTime_T>
     : public
         Fixed_Size_SArg_Traits_T<
             ::DateTime_T,
@@ -98,16 +82,12 @@ namespace TAO
           >
   {
   };
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_arg_traits.cpp:298
-
-  
 
 #if !defined (_DATA_T__SARG_TRAITS_)
 #define _DATA_T__SARG_TRAITS_
 
   template<>
-  class SArg_Traits< ::Data_T>
+  class SArg_Traits<::Data_T>
     : public
         Object_SArg_Traits_T<
             ::Data_T *,
@@ -119,16 +99,12 @@ namespace TAO
   };
 
 #endif /* end #if !defined */
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_arg_traits.cpp:142
-
-  
 
 #if !defined (_USER_T__SARG_TRAITS_)
 #define _USER_T__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits< ::User_T>
+  class  SArg_Traits<::User_T>
     : public Object_SArg_Traits_T<
         ::User_T_ptr,
         ::User_T_var,
@@ -138,16 +114,12 @@ namespace TAO
   };
 
 #endif /* end #if !defined */
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_arg_traits.cpp:298
-
-  
 
 #if !defined (_AMH_USER_TEXCEPTIONHOLDER__SARG_TRAITS_)
 #define _AMH_USER_TEXCEPTIONHOLDER__SARG_TRAITS_
 
   template<>
-  class SArg_Traits< ::AMH_User_TExceptionHolder>
+  class SArg_Traits<::AMH_User_TExceptionHolder>
     : public
         Object_SArg_Traits_T<
             ::AMH_User_TExceptionHolder *,
@@ -159,16 +131,12 @@ namespace TAO
   };
 
 #endif /* end #if !defined */
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_arg_traits.cpp:142
-
-  
 
 #if !defined (_AMI_USER_THANDLER__SARG_TRAITS_)
 #define _AMI_USER_THANDLER__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits< ::AMI_User_THandler>
+  class  SArg_Traits<::AMI_User_THandler>
     : public Object_SArg_Traits_T<
         ::AMI_User_THandler_ptr,
         ::AMI_User_THandler_var,
@@ -182,12 +150,8 @@ namespace TAO
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/amh_sh.cpp:45
-
 class POA_AMH_User_T;
-typedef POA_AMH_User_T *POA_AMH_User_T_ptr;
+using POA_AMH_User_T_ptr = POA_AMH_User_T *;
 
 class TAO_IDL_TEST_STUB_Export POA_AMH_User_T
   : public virtual PortableServer::ServantBase
@@ -196,41 +160,30 @@ protected:
   POA_AMH_User_T ();
 
 public:
-  POA_AMH_User_T (const POA_AMH_User_T& rhs);
-  virtual ~POA_AMH_User_T () = default;
+  POA_AMH_User_T (POA_AMH_User_T const &rhs);
+  ~POA_AMH_User_T () override = default;
 
+  ::CORBA::Boolean _is_a (char const *logical_type_id) override;
 
-  virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
-
-  virtual void _dispatch (
+  void _dispatch (
       TAO_ServerRequest &req,
-      TAO::Portable_Server::Servant_Upcall *_servant_upcall);
-  
+      TAO::Portable_Server::Servant_Upcall *_servant_upcall) override;
+
   User_T *_this ();
 
-virtual const char* _interface_repository_id () const;
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/amh_sh.cpp:126
-
+char const *_interface_repository_id () const override;
 static void getLoginTime_skel (
     TAO_ServerRequest &_tao_req,
     TAO::Portable_Server::Servant_Upcall *_tao_obj,
     TAO_ServantBase *_tao_servant_upcall);
-  
+
 virtual void getLoginTime (
-    AMH_User_TResponseHandler_ptr _tao_rh
-  ) = 0;
+    AMH_User_TResponseHandler_ptr _tao_rh) = 0;
 
 };
 
-
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_sh.cpp:72
-
-
-
 class POA_User_T;
-typedef POA_User_T *POA_User_T_ptr;
+using POA_User_T_ptr = POA_User_T *;
 
 class _TAO_User_T_Direct_Proxy_Impl;
 
@@ -242,25 +195,22 @@ protected:
 
 public:
   /// Useful for template programming.
-  typedef ::User_T _stub_type;
-  typedef ::User_T_ptr _stub_ptr_type;
-  typedef ::User_T_var _stub_var_type;
+  using _stub_type = ::User_T;
+  using _stub_ptr_type = ::User_T_ptr;
+  using _stub_var_type = ::User_T_var;
 
-  POA_User_T (const POA_User_T& rhs) = default;
-  virtual ~POA_User_T () = default;
+  POA_User_T (POA_User_T const &rhs) = default;
+  ~POA_User_T () override = default;
 
-  virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
+  ::CORBA::Boolean _is_a (char const *logical_type_id) override;
 
-  virtual void _dispatch (
+  void _dispatch (
       TAO_ServerRequest & req,
-      TAO::Portable_Server::Servant_Upcall *servant_upcall);
-  
-  ::User_T *_this ();
-  
-  virtual const char* _interface_repository_id () const;
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/operation_sh.cpp:35
+      TAO::Portable_Server::Servant_Upcall *servant_upcall) override;
 
+  ::User_T *_this ();
+
+  char const *_interface_repository_id () const override;
   virtual ::DateTime_T getLoginTime () = 0;
 
   static void getLoginTime_skel (
@@ -268,10 +218,6 @@ public:
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
 };
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/direct_proxy_impl_sh.cpp:23
-
-
 
 ///////////////////////////////////////////////////////////////////////
 //                    Direct  Impl. Declaration
@@ -281,25 +227,18 @@ class TAO_IDL_TEST_STUB_Export _TAO_User_T_Direct_Proxy_Impl
 {
 public:
   virtual ~_TAO_User_T_Direct_Proxy_Impl ();
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/proxy_impl_xh.cpp:25
-
   static void
   getLoginTime (
     TAO_Abstract_ServantBase *servant, TAO::Argument **args);
-  
+
 };
 
 //
 //                Direct  Proxy Impl. Declaration
 ///////////////////////////////////////////////////////////////////////
 
-
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/amh_rh_sh.cpp:49
-
 class POA_TAO_AMH_User_TResponseHandler;
-typedef POA_TAO_AMH_User_TResponseHandler *POA_TAO_AMH_User_TResponseHandler_ptr;
+using POA_TAO_AMH_User_TResponseHandler_ptr = POA_TAO_AMH_User_TResponseHandler *;
 
 class TAO_IDL_TEST_STUB_Export POA_TAO_AMH_User_TResponseHandler
   : public TAO_AMH_Response_Handler,
@@ -308,26 +247,14 @@ class TAO_IDL_TEST_STUB_Export POA_TAO_AMH_User_TResponseHandler
 public:
   POA_TAO_AMH_User_TResponseHandler () = default;
   virtual ~POA_TAO_AMH_User_TResponseHandler () = default;
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/amh_rh_sh.cpp:59
-
   void getLoginTime (
-    const ::DateTime_T & return_value) override;
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/amh_rh_sh.cpp:59
-
+    ::DateTime_T const & return_value) override;
   void getLoginTime_excep (
     ::AMH_User_TExceptionHolder * holder) override;
 };
 
-
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_sh.cpp:72
-
-
-
 class POA_AMI_User_THandler;
-typedef POA_AMI_User_THandler *POA_AMI_User_THandler_ptr;
+using POA_AMI_User_THandler_ptr = POA_AMI_User_THandler *;
 
 class _TAO_AMI_User_THandler_Direct_Proxy_Impl;
 
@@ -339,35 +266,29 @@ protected:
 
 public:
   /// Useful for template programming.
-  typedef ::AMI_User_THandler _stub_type;
-  typedef ::AMI_User_THandler_ptr _stub_ptr_type;
-  typedef ::AMI_User_THandler_var _stub_var_type;
+  using _stub_type = ::AMI_User_THandler;
+  using _stub_ptr_type = ::AMI_User_THandler_ptr;
+  using _stub_var_type = ::AMI_User_THandler_var;
 
-  POA_AMI_User_THandler (const POA_AMI_User_THandler& rhs) = default;
-  virtual ~POA_AMI_User_THandler () = default;
+  POA_AMI_User_THandler (POA_AMI_User_THandler const &rhs) = default;
+  ~POA_AMI_User_THandler () override = default;
 
-  virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
+  ::CORBA::Boolean _is_a (char const *logical_type_id) override;
 
-  virtual void _dispatch (
+  void _dispatch (
       TAO_ServerRequest & req,
-      TAO::Portable_Server::Servant_Upcall *servant_upcall);
-  
-  ::AMI_User_THandler *_this ();
-  
-  virtual const char* _interface_repository_id () const;
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/operation_sh.cpp:35
+      TAO::Portable_Server::Servant_Upcall *servant_upcall) override;
 
+  ::AMI_User_THandler *_this ();
+
+  char const *_interface_repository_id () const override;
   virtual void getLoginTime (
-    const ::DateTime_T & ami_return_val) = 0;
+    ::DateTime_T const & ami_return_val) = 0;
 
   static void getLoginTime_skel (
       TAO_ServerRequest &server_request,
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/operation_sh.cpp:35
-
   virtual void getLoginTime_excep (
     ::Messaging::ExceptionHolder * excep_holder) = 0;
 
@@ -376,10 +297,6 @@ public:
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
 };
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/direct_proxy_impl_sh.cpp:23
-
-
 
 ///////////////////////////////////////////////////////////////////////
 //                    Direct  Impl. Declaration
@@ -390,30 +307,21 @@ class TAO_IDL_TEST_STUB_Export _TAO_AMI_User_THandler_Direct_Proxy_Impl
 {
 public:
   virtual ~_TAO_AMI_User_THandler_Direct_Proxy_Impl ();
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/proxy_impl_xh.cpp:25
-
   static void
   getLoginTime (
     TAO_Abstract_ServantBase *servant, TAO::Argument **args);
-  
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/proxy_impl_xh.cpp:25
 
   static void
   getLoginTime_excep (
     TAO_Abstract_ServantBase *servant, TAO::Argument **args);
-  
+
 };
 
 //
 //                Direct  Proxy Impl. Declaration
 ///////////////////////////////////////////////////////////////////////
 
-
-
 #include "Bug_2577_RegressionS_T.h"
-
 
 #include /**/ "ace/post.h"
 

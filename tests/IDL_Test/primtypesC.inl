@@ -22,11 +22,6 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ci.cpp:58
-
-
-
 ACE_INLINE
 OldPrimTypes::ex1::ex1 (
     TAO_Stub *objref,
@@ -44,23 +39,16 @@ OldPrimTypes::ex1::ex1 (
   : ::CORBA::Object (ior, oc)
 {
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_ci.cpp:43
-
 ACE_INLINE
 OldPrimTypes::AMH_ex1ExceptionHolder::AMH_ex1ExceptionHolder ()
   : exception (nullptr)
 {}
 
-ACE_INLINE const char*
+ACE_INLINE char const *
 OldPrimTypes::AMH_ex1ExceptionHolder::_tao_obv_static_repository_id ()
 {
   return "IDL:OldPrimTypes/AMH_ex1ExceptionHolder:1.0";
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ci.cpp:58
-
-
 
 ACE_INLINE
 OldPrimTypes::AMI_ex1Handler::AMI_ex1Handler (
@@ -79,10 +67,6 @@ OldPrimTypes::AMI_ex1Handler::AMI_ex1Handler (
   : ::CORBA::Object (ior, oc)
 {
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ci.cpp:58
-
-
 
 ACE_INLINE
 OldPrimTypes::ex2::ex2 (
@@ -101,23 +85,16 @@ OldPrimTypes::ex2::ex2 (
   : ::CORBA::Object (ior, oc)
 {
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_ci.cpp:43
-
 ACE_INLINE
 OldPrimTypes::AMH_ex2ExceptionHolder::AMH_ex2ExceptionHolder ()
   : exception (nullptr)
 {}
 
-ACE_INLINE const char*
+ACE_INLINE char const *
 OldPrimTypes::AMH_ex2ExceptionHolder::_tao_obv_static_repository_id ()
 {
   return "IDL:OldPrimTypes/AMH_ex2ExceptionHolder:1.0";
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ci.cpp:58
-
-
 
 ACE_INLINE
 OldPrimTypes::AMI_ex2Handler::AMI_ex2Handler (

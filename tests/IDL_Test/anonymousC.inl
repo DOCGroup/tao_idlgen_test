@@ -22,13 +22,7 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_array/array_ci.cpp:142
-
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
 
 ACE_INLINE
 void
@@ -41,7 +35,7 @@ TAO::Array_Traits<Half_Anon::char_seq_array_forany>::free (
 ACE_INLINE
 Half_Anon::char_seq_array_slice *
 TAO::Array_Traits<Half_Anon::char_seq_array_forany>::dup (
-    const Half_Anon::char_seq_array_slice * _tao_slice)
+    Half_Anon::char_seq_array_slice const * _tao_slice)
 {
   return Half_Anon::char_seq_array_dup (_tao_slice);
 }
@@ -50,7 +44,7 @@ ACE_INLINE
 void
 TAO::Array_Traits<Half_Anon::char_seq_array_forany>::copy (
     Half_Anon::char_seq_array_slice * _tao_to,
-    const Half_Anon::char_seq_array_slice * _tao_from)
+    Half_Anon::char_seq_array_slice const * _tao_from)
 {
   Half_Anon::char_seq_array_copy (_tao_to, _tao_from);
 }
@@ -74,16 +68,9 @@ TAO::Array_Traits<Half_Anon::char_seq_array_forany>::alloc ()
   return Half_Anon::char_seq_array_alloc ();
 }
 
-
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_array/array_ci.cpp:142
-
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
 
 ACE_INLINE
 void
@@ -96,7 +83,7 @@ TAO::Array_Traits<Half_Anon::bd_ulong_seq_array_forany>::free (
 ACE_INLINE
 Half_Anon::bd_ulong_seq_array_slice *
 TAO::Array_Traits<Half_Anon::bd_ulong_seq_array_forany>::dup (
-    const Half_Anon::bd_ulong_seq_array_slice * _tao_slice)
+    Half_Anon::bd_ulong_seq_array_slice const * _tao_slice)
 {
   return Half_Anon::bd_ulong_seq_array_dup (_tao_slice);
 }
@@ -105,7 +92,7 @@ ACE_INLINE
 void
 TAO::Array_Traits<Half_Anon::bd_ulong_seq_array_forany>::copy (
     Half_Anon::bd_ulong_seq_array_slice * _tao_to,
-    const Half_Anon::bd_ulong_seq_array_slice * _tao_from)
+    Half_Anon::bd_ulong_seq_array_slice const * _tao_from)
 {
   Half_Anon::bd_ulong_seq_array_copy (_tao_to, _tao_from);
 }
@@ -129,16 +116,9 @@ TAO::Array_Traits<Half_Anon::bd_ulong_seq_array_forany>::alloc ()
   return Half_Anon::bd_ulong_seq_array_alloc ();
 }
 
-
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_array/array_ci.cpp:142
-
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
 
 ACE_INLINE
 void
@@ -151,7 +131,7 @@ TAO::Array_Traits<Half_Anon::ushort_seq_array_forany>::free (
 ACE_INLINE
 Half_Anon::ushort_seq_array_slice *
 TAO::Array_Traits<Half_Anon::ushort_seq_array_forany>::dup (
-    const Half_Anon::ushort_seq_array_slice * _tao_slice)
+    Half_Anon::ushort_seq_array_slice const * _tao_slice)
 {
   return Half_Anon::ushort_seq_array_dup (_tao_slice);
 }
@@ -160,7 +140,7 @@ ACE_INLINE
 void
 TAO::Array_Traits<Half_Anon::ushort_seq_array_forany>::copy (
     Half_Anon::ushort_seq_array_slice * _tao_to,
-    const Half_Anon::ushort_seq_array_slice * _tao_from)
+    Half_Anon::ushort_seq_array_slice const * _tao_from)
 {
   Half_Anon::ushort_seq_array_copy (_tao_to, _tao_from);
 }
@@ -184,16 +164,9 @@ TAO::Array_Traits<Half_Anon::ushort_seq_array_forany>::alloc ()
   return Half_Anon::ushort_seq_array_alloc ();
 }
 
-
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_array/array_ci.cpp:142
-
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
 
 ACE_INLINE
 void
@@ -206,7 +179,7 @@ TAO::Array_Traits<Half_Anon::bd_ushort_seq_array_forany>::free (
 ACE_INLINE
 Half_Anon::bd_ushort_seq_array_slice *
 TAO::Array_Traits<Half_Anon::bd_ushort_seq_array_forany>::dup (
-    const Half_Anon::bd_ushort_seq_array_slice * _tao_slice)
+    Half_Anon::bd_ushort_seq_array_slice const * _tao_slice)
 {
   return Half_Anon::bd_ushort_seq_array_dup (_tao_slice);
 }
@@ -215,7 +188,7 @@ ACE_INLINE
 void
 TAO::Array_Traits<Half_Anon::bd_ushort_seq_array_forany>::copy (
     Half_Anon::bd_ushort_seq_array_slice * _tao_to,
-    const Half_Anon::bd_ushort_seq_array_slice * _tao_from)
+    Half_Anon::bd_ushort_seq_array_slice const * _tao_from)
 {
   Half_Anon::bd_ushort_seq_array_copy (_tao_to, _tao_from);
 }
@@ -239,13 +212,7 @@ TAO::Array_Traits<Half_Anon::bd_ushort_seq_array_forany>::alloc ()
   return Half_Anon::bd_ushort_seq_array_alloc ();
 }
 
-
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ci.cpp:58
-
-
 
 ACE_INLINE
 All_Anon::anon_bd_string_test::anon_bd_string_test (
@@ -264,23 +231,16 @@ All_Anon::anon_bd_string_test::anon_bd_string_test (
   : ::CORBA::Object (ior, oc)
 {
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_valuetype/valuetype_ci.cpp:43
-
 ACE_INLINE
 All_Anon::AMH_anon_bd_string_testExceptionHolder::AMH_anon_bd_string_testExceptionHolder ()
   : exception (nullptr)
 {}
 
-ACE_INLINE const char*
+ACE_INLINE char const *
 All_Anon::AMH_anon_bd_string_testExceptionHolder::_tao_obv_static_repository_id ()
 {
   return "IDL:All_Anon/AMH_anon_bd_string_testExceptionHolder:1.0";
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ci.cpp:58
-
-
 
 ACE_INLINE
 All_Anon::AMI_anon_bd_string_testHandler::AMI_anon_bd_string_testHandler (
@@ -299,13 +259,8 @@ All_Anon::AMI_anon_bd_string_testHandler::AMI_anon_bd_string_testHandler (
   : ::CORBA::Object (ior, oc)
 {
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_array/array_ci.cpp:142
-
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
 
 ACE_INLINE
 void
@@ -318,7 +273,7 @@ TAO::Array_Traits<All_Anon::Nested_Anon::_float_seq_array_forany>::free (
 ACE_INLINE
 All_Anon::Nested_Anon::_float_seq_array_slice *
 TAO::Array_Traits<All_Anon::Nested_Anon::_float_seq_array_forany>::dup (
-    const All_Anon::Nested_Anon::_float_seq_array_slice * _tao_slice)
+    All_Anon::Nested_Anon::_float_seq_array_slice const * _tao_slice)
 {
   return All_Anon::Nested_Anon::_float_seq_array_dup (_tao_slice);
 }
@@ -327,7 +282,7 @@ ACE_INLINE
 void
 TAO::Array_Traits<All_Anon::Nested_Anon::_float_seq_array_forany>::copy (
     All_Anon::Nested_Anon::_float_seq_array_slice * _tao_to,
-    const All_Anon::Nested_Anon::_float_seq_array_slice * _tao_from)
+    All_Anon::Nested_Anon::_float_seq_array_slice const * _tao_from)
 {
   All_Anon::Nested_Anon::_float_seq_array_copy (_tao_to, _tao_from);
 }
@@ -351,16 +306,9 @@ TAO::Array_Traits<All_Anon::Nested_Anon::_float_seq_array_forany>::alloc ()
   return All_Anon::Nested_Anon::_float_seq_array_alloc ();
 }
 
-
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_array/array_ci.cpp:142
-
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
 
 ACE_INLINE
 void
@@ -373,7 +321,7 @@ TAO::Array_Traits<All_Anon::Nested_Anon::_another_fsa_forany>::free (
 ACE_INLINE
 All_Anon::Nested_Anon::_another_fsa_slice *
 TAO::Array_Traits<All_Anon::Nested_Anon::_another_fsa_forany>::dup (
-    const All_Anon::Nested_Anon::_another_fsa_slice * _tao_slice)
+    All_Anon::Nested_Anon::_another_fsa_slice const * _tao_slice)
 {
   return All_Anon::Nested_Anon::_another_fsa_dup (_tao_slice);
 }
@@ -382,7 +330,7 @@ ACE_INLINE
 void
 TAO::Array_Traits<All_Anon::Nested_Anon::_another_fsa_forany>::copy (
     All_Anon::Nested_Anon::_another_fsa_slice * _tao_to,
-    const All_Anon::Nested_Anon::_another_fsa_slice * _tao_from)
+    All_Anon::Nested_Anon::_another_fsa_slice const * _tao_from)
 {
   All_Anon::Nested_Anon::_another_fsa_copy (_tao_to, _tao_from);
 }
@@ -406,16 +354,9 @@ TAO::Array_Traits<All_Anon::Nested_Anon::_another_fsa_forany>::alloc ()
   return All_Anon::Nested_Anon::_another_fsa_alloc ();
 }
 
-
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_array/array_ci.cpp:142
-
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
 
 ACE_INLINE
 void
@@ -428,7 +369,7 @@ TAO::Array_Traits<All_Anon::Nested_Anon::_long_array_1_forany>::free (
 ACE_INLINE
 All_Anon::Nested_Anon::_long_array_1_slice *
 TAO::Array_Traits<All_Anon::Nested_Anon::_long_array_1_forany>::dup (
-    const All_Anon::Nested_Anon::_long_array_1_slice * _tao_slice)
+    All_Anon::Nested_Anon::_long_array_1_slice const * _tao_slice)
 {
   return All_Anon::Nested_Anon::_long_array_1_dup (_tao_slice);
 }
@@ -437,7 +378,7 @@ ACE_INLINE
 void
 TAO::Array_Traits<All_Anon::Nested_Anon::_long_array_1_forany>::copy (
     All_Anon::Nested_Anon::_long_array_1_slice * _tao_to,
-    const All_Anon::Nested_Anon::_long_array_1_slice * _tao_from)
+    All_Anon::Nested_Anon::_long_array_1_slice const * _tao_from)
 {
   All_Anon::Nested_Anon::_long_array_1_copy (_tao_to, _tao_from);
 }
@@ -461,16 +402,9 @@ TAO::Array_Traits<All_Anon::Nested_Anon::_long_array_1_forany>::alloc ()
   return All_Anon::Nested_Anon::_long_array_1_alloc ();
 }
 
-
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_array/array_ci.cpp:142
-
-
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
 
 ACE_INLINE
 void
@@ -483,7 +417,7 @@ TAO::Array_Traits<All_Anon::Nested_Anon::_long_array_2_forany>::free (
 ACE_INLINE
 All_Anon::Nested_Anon::_long_array_2_slice *
 TAO::Array_Traits<All_Anon::Nested_Anon::_long_array_2_forany>::dup (
-    const All_Anon::Nested_Anon::_long_array_2_slice * _tao_slice)
+    All_Anon::Nested_Anon::_long_array_2_slice const * _tao_slice)
 {
   return All_Anon::Nested_Anon::_long_array_2_dup (_tao_slice);
 }
@@ -492,7 +426,7 @@ ACE_INLINE
 void
 TAO::Array_Traits<All_Anon::Nested_Anon::_long_array_2_forany>::copy (
     All_Anon::Nested_Anon::_long_array_2_slice * _tao_to,
-    const All_Anon::Nested_Anon::_long_array_2_slice * _tao_from)
+    All_Anon::Nested_Anon::_long_array_2_slice const * _tao_from)
 {
   All_Anon::Nested_Anon::_long_array_2_copy (_tao_to, _tao_from);
 }
@@ -516,7 +450,5 @@ TAO::Array_Traits<All_Anon::Nested_Anon::_long_array_2_forany>::alloc ()
   return All_Anon::Nested_Anon::_long_array_2_alloc ();
 }
 
-
 TAO_END_VERSIONED_NAMESPACE_DECL
-
 

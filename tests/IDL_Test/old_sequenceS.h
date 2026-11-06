@@ -22,11 +22,8 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:454
-
-#ifndef _TAO_IDL_OLD_SEQUENCES_QX2T9F_H_
-#define _TAO_IDL_OLD_SEQUENCES_QX2T9F_H_
+#ifndef _TAO_IDL_OLD_SEQUENCES_H_
+#define _TAO_IDL_OLD_SEQUENCES_H_
 
 #include /**/ "ace/pre.h"
 
@@ -55,27 +52,18 @@
 #include "tao/Messaging/AMH_Response_Handler.h"
 
 #include /**/ "TAO_IDL_TEST_stub_export.h"
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_arg_traits.cpp:64
-
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
 
 // Arg traits specializations.
 namespace TAO
 {
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_arg_traits.cpp:298
-
-  
 
 #if !defined (_MESSAGING_EXCEPTIONHOLDER__SARG_TRAITS_)
 #define _MESSAGING_EXCEPTIONHOLDER__SARG_TRAITS_
 
   template<>
-  class SArg_Traits< ::Messaging::ExceptionHolder>
+  class SArg_Traits<::Messaging::ExceptionHolder>
     : public
         Object_SArg_Traits_T<
             ::Messaging::ExceptionHolder *,
@@ -87,13 +75,9 @@ namespace TAO
   };
 
 #endif /* end #if !defined */
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_arg_traits.cpp:671
-
-  
 
   template<>
-  class SArg_Traits< ::c20>
+  class SArg_Traits<::c20>
     : public
         Var_Size_SArg_Traits_T<
             ::c20,
@@ -101,13 +85,9 @@ namespace TAO
           >
   {
   };
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_arg_traits.cpp:671
-
-  
 
   template<>
-  class SArg_Traits< ::cc23>
+  class SArg_Traits<::cc23>
     : public
         Var_Size_SArg_Traits_T<
             ::cc23,
@@ -115,13 +95,9 @@ namespace TAO
           >
   {
   };
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_arg_traits.cpp:671
-
-  
 
   template<>
-  class SArg_Traits< ::c24>
+  class SArg_Traits<::c24>
     : public
         Var_Size_SArg_Traits_T<
             ::c24,
@@ -129,13 +105,9 @@ namespace TAO
           >
   {
   };
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_arg_traits.cpp:671
-
-  
 
   template<>
-  class SArg_Traits< ::c30>
+  class SArg_Traits<::c30>
     : public
         Var_Size_SArg_Traits_T<
             ::c30,
@@ -143,13 +115,9 @@ namespace TAO
           >
   {
   };
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_arg_traits.cpp:671
-
-  
 
   template<>
-  class SArg_Traits< ::cstring>
+  class SArg_Traits<::cstring>
     : public
         Var_Size_SArg_Traits_T<
             ::cstring,
@@ -157,13 +125,9 @@ namespace TAO
           >
   {
   };
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_arg_traits.cpp:931
-
-  
 
   template<>
-  class SArg_Traits< ::TProgram>
+  class SArg_Traits<::TProgram>
     : public
         Var_Size_SArg_Traits_T<
             ::TProgram,
@@ -171,13 +135,9 @@ namespace TAO
           >
   {
   };
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_arg_traits.cpp:931
-
-  
 
   template<>
-  class SArg_Traits< ::sfoo>
+  class SArg_Traits<::sfoo>
     : public
         Fixed_Size_SArg_Traits_T<
             ::sfoo,
@@ -187,7 +147,7 @@ namespace TAO
   };
 
   template<>
-  class SArg_Traits< ::sfoo_ar_tag>
+  class SArg_Traits<::sfoo_ar_tag>
     : public
         Fixed_Array_SArg_Traits_T<
             ::sfoo_ar_var,
@@ -196,13 +156,9 @@ namespace TAO
           >
   {
   };
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_arg_traits.cpp:671
-
-  
 
   template<>
-  class SArg_Traits< ::f_unbounded>
+  class SArg_Traits<::f_unbounded>
     : public
         Var_Size_SArg_Traits_T<
             ::f_unbounded,
@@ -210,13 +166,9 @@ namespace TAO
           >
   {
   };
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_arg_traits.cpp:671
-
-  
 
   template<>
-  class SArg_Traits< ::f_ar_unbounded>
+  class SArg_Traits<::f_ar_unbounded>
     : public
         Var_Size_SArg_Traits_T<
             ::f_ar_unbounded,
@@ -224,16 +176,12 @@ namespace TAO
           >
   {
   };
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_arg_traits.cpp:142
-
-  
 
 #if !defined (_TESTSEQ__SARG_TRAITS_)
 #define _TESTSEQ__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits< ::TestSeq>
+  class  SArg_Traits<::TestSeq>
     : public Object_SArg_Traits_T<
         ::TestSeq_ptr,
         ::TestSeq_var,
@@ -243,13 +191,9 @@ namespace TAO
   };
 
 #endif /* end #if !defined */
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_arg_traits.cpp:671
-
-  
 
   template<>
-  class SArg_Traits< ::TestSeq::also_vec10>
+  class SArg_Traits<::TestSeq::also_vec10>
     : public
         Var_Size_SArg_Traits_T<
             ::TestSeq::also_vec10,
@@ -257,16 +201,12 @@ namespace TAO
           >
   {
   };
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_arg_traits.cpp:298
-
-  
 
 #if !defined (_AMH_TESTSEQEXCEPTIONHOLDER__SARG_TRAITS_)
 #define _AMH_TESTSEQEXCEPTIONHOLDER__SARG_TRAITS_
 
   template<>
-  class SArg_Traits< ::AMH_TestSeqExceptionHolder>
+  class SArg_Traits<::AMH_TestSeqExceptionHolder>
     : public
         Object_SArg_Traits_T<
             ::AMH_TestSeqExceptionHolder *,
@@ -278,16 +218,12 @@ namespace TAO
   };
 
 #endif /* end #if !defined */
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_arg_traits.cpp:142
-
-  
 
 #if !defined (_AMI_TESTSEQHANDLER__SARG_TRAITS_)
 #define _AMI_TESTSEQHANDLER__SARG_TRAITS_
 
   template<>
-  class  SArg_Traits< ::AMI_TestSeqHandler>
+  class  SArg_Traits<::AMI_TestSeqHandler>
     : public Object_SArg_Traits_T<
         ::AMI_TestSeqHandler_ptr,
         ::AMI_TestSeqHandler_var,
@@ -301,12 +237,8 @@ namespace TAO
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/amh_sh.cpp:45
-
 class POA_AMH_TestSeq;
-typedef POA_AMH_TestSeq *POA_AMH_TestSeq_ptr;
+using POA_AMH_TestSeq_ptr = POA_AMH_TestSeq *;
 
 class TAO_IDL_TEST_STUB_Export POA_AMH_TestSeq
   : public virtual PortableServer::ServantBase
@@ -315,54 +247,39 @@ protected:
   POA_AMH_TestSeq ();
 
 public:
-  POA_AMH_TestSeq (const POA_AMH_TestSeq& rhs);
-  virtual ~POA_AMH_TestSeq () = default;
+  POA_AMH_TestSeq (POA_AMH_TestSeq const &rhs);
+  ~POA_AMH_TestSeq () override = default;
 
+  ::CORBA::Boolean _is_a (char const *logical_type_id) override;
 
-  virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
-
-  virtual void _dispatch (
+  void _dispatch (
       TAO_ServerRequest &req,
-      TAO::Portable_Server::Servant_Upcall *_servant_upcall);
-  
+      TAO::Portable_Server::Servant_Upcall *_servant_upcall) override;
+
   TestSeq *_this ();
 
-virtual const char* _interface_repository_id () const;
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/amh_sh.cpp:126
-
+char const *_interface_repository_id () const override;
 static void _get_fattr_skel (
     TAO_ServerRequest &_tao_req,
     TAO::Portable_Server::Servant_Upcall *_tao_obj,
     TAO_ServantBase *_tao_servant_upcall);
-  
-virtual void fattr (
-    AMH_TestSeqResponseHandler_ptr _tao_rh
-  ) = 0;
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/amh_sh.cpp:126
+virtual void fattr (
+    AMH_TestSeqResponseHandler_ptr _tao_rh) = 0;
 
 static void _set_fattr_skel (
     TAO_ServerRequest &_tao_req,
     TAO::Portable_Server::Servant_Upcall *_tao_obj,
     TAO_ServantBase *_tao_servant_upcall);
-  
+
 virtual void fattr (
     AMH_TestSeqResponseHandler_ptr _tao_rh,
-    const ::f_unbounded & fattr
-  ) = 0;
+    ::f_unbounded const & fattr) = 0;
 
 };
 
-
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_sh.cpp:72
-
-
-
 class POA_TestSeq;
-typedef POA_TestSeq *POA_TestSeq_ptr;
+using POA_TestSeq_ptr = POA_TestSeq *;
 
 class _TAO_TestSeq_Direct_Proxy_Impl;
 
@@ -374,46 +291,36 @@ protected:
 
 public:
   /// Useful for template programming.
-  typedef ::TestSeq _stub_type;
-  typedef ::TestSeq_ptr _stub_ptr_type;
-  typedef ::TestSeq_var _stub_var_type;
+  using _stub_type = ::TestSeq;
+  using _stub_ptr_type = ::TestSeq_ptr;
+  using _stub_var_type = ::TestSeq_var;
 
-  POA_TestSeq (const POA_TestSeq& rhs) = default;
-  virtual ~POA_TestSeq () = default;
+  POA_TestSeq (POA_TestSeq const &rhs) = default;
+  ~POA_TestSeq () override = default;
 
-  virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
+  ::CORBA::Boolean _is_a (char const *logical_type_id) override;
 
-  virtual void _dispatch (
+  void _dispatch (
       TAO_ServerRequest & req,
-      TAO::Portable_Server::Servant_Upcall *servant_upcall);
-  
-  ::TestSeq *_this ();
-  
-  virtual const char* _interface_repository_id () const;
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/operation_sh.cpp:35
+      TAO::Portable_Server::Servant_Upcall *servant_upcall) override;
 
+  ::TestSeq *_this ();
+
+  char const *_interface_repository_id () const override;
   virtual ::f_unbounded * fattr () = 0;
 
   static void _get_fattr_skel (
       TAO_ServerRequest &server_request,
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/operation_sh.cpp:35
-
   virtual void fattr (
-    const ::f_unbounded & fattr) = 0;
+    ::f_unbounded const & fattr) = 0;
 
   static void _set_fattr_skel (
       TAO_ServerRequest &server_request,
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
 };
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/direct_proxy_impl_sh.cpp:23
-
-
 
 ///////////////////////////////////////////////////////////////////////
 //                    Direct  Impl. Declaration
@@ -423,32 +330,22 @@ class TAO_IDL_TEST_STUB_Export _TAO_TestSeq_Direct_Proxy_Impl
 {
 public:
   virtual ~_TAO_TestSeq_Direct_Proxy_Impl ();
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/proxy_impl_xh.cpp:25
-
   static void
   _get_fattr (
     TAO_Abstract_ServantBase *servant, TAO::Argument **args);
-  
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/proxy_impl_xh.cpp:25
 
   static void
   _set_fattr (
     TAO_Abstract_ServantBase *servant, TAO::Argument **args);
-  
+
 };
 
 //
 //                Direct  Proxy Impl. Declaration
 ///////////////////////////////////////////////////////////////////////
 
-
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/amh_rh_sh.cpp:49
-
 class POA_TAO_AMH_TestSeqResponseHandler;
-typedef POA_TAO_AMH_TestSeqResponseHandler *POA_TAO_AMH_TestSeqResponseHandler_ptr;
+using POA_TAO_AMH_TestSeqResponseHandler_ptr = POA_TAO_AMH_TestSeqResponseHandler *;
 
 class TAO_IDL_TEST_STUB_Export POA_TAO_AMH_TestSeqResponseHandler
   : public TAO_AMH_Response_Handler,
@@ -457,35 +354,17 @@ class TAO_IDL_TEST_STUB_Export POA_TAO_AMH_TestSeqResponseHandler
 public:
   POA_TAO_AMH_TestSeqResponseHandler () = default;
   virtual ~POA_TAO_AMH_TestSeqResponseHandler () = default;
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/amh_rh_sh.cpp:59
-
   void get_fattr (
-    const ::f_unbounded & return_value) override;
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/amh_rh_sh.cpp:59
-
+    ::f_unbounded const & return_value) override;
   void get_fattr_excep (
     ::AMH_TestSeqExceptionHolder * holder) override;
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/amh_rh_sh.cpp:59
-
   void set_fattr () override;
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/amh_rh_sh.cpp:59
-
   void set_fattr_excep (
     ::AMH_TestSeqExceptionHolder * holder) override;
 };
 
-
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_sh.cpp:72
-
-
-
 class POA_AMI_TestSeqHandler;
-typedef POA_AMI_TestSeqHandler *POA_AMI_TestSeqHandler_ptr;
+using POA_AMI_TestSeqHandler_ptr = POA_AMI_TestSeqHandler *;
 
 class _TAO_AMI_TestSeqHandler_Direct_Proxy_Impl;
 
@@ -497,35 +376,29 @@ protected:
 
 public:
   /// Useful for template programming.
-  typedef ::AMI_TestSeqHandler _stub_type;
-  typedef ::AMI_TestSeqHandler_ptr _stub_ptr_type;
-  typedef ::AMI_TestSeqHandler_var _stub_var_type;
+  using _stub_type = ::AMI_TestSeqHandler;
+  using _stub_ptr_type = ::AMI_TestSeqHandler_ptr;
+  using _stub_var_type = ::AMI_TestSeqHandler_var;
 
-  POA_AMI_TestSeqHandler (const POA_AMI_TestSeqHandler& rhs) = default;
-  virtual ~POA_AMI_TestSeqHandler () = default;
+  POA_AMI_TestSeqHandler (POA_AMI_TestSeqHandler const &rhs) = default;
+  ~POA_AMI_TestSeqHandler () override = default;
 
-  virtual ::CORBA::Boolean _is_a (const char* logical_type_id);
+  ::CORBA::Boolean _is_a (char const *logical_type_id) override;
 
-  virtual void _dispatch (
+  void _dispatch (
       TAO_ServerRequest & req,
-      TAO::Portable_Server::Servant_Upcall *servant_upcall);
-  
-  ::AMI_TestSeqHandler *_this ();
-  
-  virtual const char* _interface_repository_id () const;
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/operation_sh.cpp:35
+      TAO::Portable_Server::Servant_Upcall *servant_upcall) override;
 
+  ::AMI_TestSeqHandler *_this ();
+
+  char const *_interface_repository_id () const override;
   virtual void get_fattr (
-    const ::f_unbounded & ami_return_val) = 0;
+    ::f_unbounded const & ami_return_val) = 0;
 
   static void get_fattr_skel (
       TAO_ServerRequest &server_request,
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/operation_sh.cpp:35
-
   virtual void get_fattr_excep (
     ::Messaging::ExceptionHolder * excep_holder) = 0;
 
@@ -533,18 +406,12 @@ public:
       TAO_ServerRequest &server_request,
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/operation_sh.cpp:35
-
   virtual void set_fattr () = 0;
 
   static void set_fattr_skel (
       TAO_ServerRequest &server_request,
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/operation_sh.cpp:35
-
   virtual void set_fattr_excep (
     ::Messaging::ExceptionHolder * excep_holder) = 0;
 
@@ -553,10 +420,6 @@ public:
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
 };
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/direct_proxy_impl_sh.cpp:23
-
-
 
 ///////////////////////////////////////////////////////////////////////
 //                    Direct  Impl. Declaration
@@ -567,44 +430,29 @@ class TAO_IDL_TEST_STUB_Export _TAO_AMI_TestSeqHandler_Direct_Proxy_Impl
 {
 public:
   virtual ~_TAO_AMI_TestSeqHandler_Direct_Proxy_Impl ();
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/proxy_impl_xh.cpp:25
-
   static void
   get_fattr (
     TAO_Abstract_ServantBase *servant, TAO::Argument **args);
-  
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/proxy_impl_xh.cpp:25
 
   static void
   get_fattr_excep (
     TAO_Abstract_ServantBase *servant, TAO::Argument **args);
-  
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/proxy_impl_xh.cpp:25
 
   static void
   set_fattr (
     TAO_Abstract_ServantBase *servant, TAO::Argument **args);
-  
-  // TAO_IDL - Generated from
-  // /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_operation/proxy_impl_xh.cpp:25
 
   static void
   set_fattr_excep (
     TAO_Abstract_ServantBase *servant, TAO::Argument **args);
-  
+
 };
 
 //
 //                Direct  Proxy Impl. Declaration
 ///////////////////////////////////////////////////////////////////////
 
-
-
 #include "old_sequenceS_T.h"
-
 
 #include /**/ "ace/post.h"
 

@@ -22,10 +22,6 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_codegen.cpp:370
-
-
 #include "array_onlyC.h"
 #include <memory>
 #include "tao/CDR.h"
@@ -36,19 +32,16 @@
 #if !defined (__ACE_INLINE__)
 #include "array_onlyC.inl"
 #endif /* !defined INLINE */
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_array/array_cs.cpp:89
-
 TEST_TYPE_slice *
-TEST_TYPE_dup (const TEST_TYPE_slice *_tao_src_array)
+TEST_TYPE_dup (TEST_TYPE_slice const *_tao_src_array)
 {
   TEST_TYPE_slice *_tao_dup_array = TEST_TYPE_alloc ();
-  
+
   if (_tao_dup_array)
     {
       TEST_TYPE_copy (_tao_dup_array, _tao_src_array);
     }
-  
+
   return _tao_dup_array;
 }
 
@@ -69,7 +62,7 @@ TEST_TYPE_free (TEST_TYPE_slice *_tao_slice)
 void
 TEST_TYPE_copy (
     TEST_TYPE_slice * _tao_to,
-    const TEST_TYPE_slice *_tao_from)
+    TEST_TYPE_slice const *_tao_from)
 {
   // Copy each individual element.
   for (::CORBA::ULong i0 = 0; i0 < 10; ++i0)
@@ -77,15 +70,12 @@ TEST_TYPE_copy (
       _tao_to[i0] = _tao_from[i0];
     }
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_array/cdr_op_cs.cpp:162
-
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean operator<< (
     TAO_OutputCDR &strm,
-    const TEST_TYPE_forany &_tao_array)
+    TEST_TYPE_forany const &_tao_array)
 {
   return strm.write_char_array (
       reinterpret_cast <const ACE_CDR::Char *> (_tao_array.in ()),
@@ -102,6 +92,4 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-
 

@@ -22,11 +22,6 @@
  *     https://www.dre.vanderbilt.edu/~schmidt/TAO.html
  **/
 
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ci.cpp:58
-
-
-
 ACE_INLINE
 A::AMI_Test::AMI_Test (
     TAO_Stub *objref,
@@ -44,10 +39,6 @@ A::AMI_Test::AMI_Test (
   : ::CORBA::Object (ior, oc)
 {
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ci.cpp:58
-
-
 
 ACE_INLINE
 A::AMI_AMI_TestHandler::AMI_AMI_TestHandler (
@@ -66,10 +57,6 @@ A::AMI_AMI_TestHandler::AMI_AMI_TestHandler (
   : ::CORBA::Object (ior, oc)
 {
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ci.cpp:58
-
-
 
 ACE_INLINE
 A::Test_Child::Test_Child (
@@ -88,10 +75,6 @@ A::Test_Child::Test_Child (
   : ::CORBA::Object (ior, oc)
 {
 }
-// TAO_IDL - Generated from
-// /home/johnny/ACE/trunk/TAO/TAO_IDL/be/be_visitor_interface/interface_ci.cpp:58
-
-
 
 ACE_INLINE
 A::AMI_Test_ChildHandler::AMI_Test_ChildHandler (
