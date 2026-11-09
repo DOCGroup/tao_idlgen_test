@@ -169,35 +169,35 @@ namespace POA_A
       char const * in_str) = 0;
 
     static void foo_skel (
-        TAO_ServerRequest &server_request,
-        TAO::Portable_Server::Servant_Upcall *servant_upcall,
-        TAO_ServantBase *servant);
+      TAO_ServerRequest &server_request,
+      TAO::Portable_Server::Servant_Upcall *servant_upcall,
+      TAO_ServantBase *servant);
     virtual ::CORBA::Long yadda () = 0;
 
     static void _get_yadda_skel (
-        TAO_ServerRequest &server_request,
-        TAO::Portable_Server::Servant_Upcall *servant_upcall,
-        TAO_ServantBase *servant);
+      TAO_ServerRequest &server_request,
+      TAO::Portable_Server::Servant_Upcall *servant_upcall,
+      TAO_ServantBase *servant);
     virtual void yadda (
       ::CORBA::Long yadda) = 0;
 
     static void _set_yadda_skel (
-        TAO_ServerRequest &server_request,
-        TAO::Portable_Server::Servant_Upcall *servant_upcall,
-        TAO_ServantBase *servant);
+      TAO_ServerRequest &server_request,
+      TAO::Portable_Server::Servant_Upcall *servant_upcall,
+      TAO_ServantBase *servant);
     virtual void shutdown () = 0;
 
     static void shutdown_skel (
-        TAO_ServerRequest &server_request,
-        TAO::Portable_Server::Servant_Upcall *servant_upcall,
-        TAO_ServantBase *servant);
+      TAO_ServerRequest &server_request,
+      TAO::Portable_Server::Servant_Upcall *servant_upcall,
+      TAO_ServantBase *servant);
     virtual void inout_arg_test (
       char *& str) = 0;
 
     static void inout_arg_test_skel (
-        TAO_ServerRequest &server_request,
-        TAO::Portable_Server::Servant_Upcall *servant_upcall,
-        TAO_ServantBase *servant);
+      TAO_ServerRequest &server_request,
+      TAO::Portable_Server::Servant_Upcall *servant_upcall,
+      TAO_ServantBase *servant);
   };
 
   class AMI_AMI_TestHandler;
@@ -232,57 +232,57 @@ namespace POA_A
       ::CORBA::Long out_l) = 0;
 
     static void foo_skel (
-        TAO_ServerRequest &server_request,
-        TAO::Portable_Server::Servant_Upcall *servant_upcall,
-        TAO_ServantBase *servant);
+      TAO_ServerRequest &server_request,
+      TAO::Portable_Server::Servant_Upcall *servant_upcall,
+      TAO_ServantBase *servant);
     virtual void foo_excep (
       ::Messaging::ExceptionHolder * excep_holder) = 0;
 
     static void foo_excep_skel (
-        TAO_ServerRequest &server_request,
-        TAO::Portable_Server::Servant_Upcall *servant_upcall,
-        TAO_ServantBase *servant);
+      TAO_ServerRequest &server_request,
+      TAO::Portable_Server::Servant_Upcall *servant_upcall,
+      TAO_ServantBase *servant);
     virtual void get_yadda (
       ::CORBA::Long ami_return_val) = 0;
 
     static void get_yadda_skel (
-        TAO_ServerRequest &server_request,
-        TAO::Portable_Server::Servant_Upcall *servant_upcall,
-        TAO_ServantBase *servant);
+      TAO_ServerRequest &server_request,
+      TAO::Portable_Server::Servant_Upcall *servant_upcall,
+      TAO_ServantBase *servant);
     virtual void get_yadda_excep (
       ::Messaging::ExceptionHolder * excep_holder) = 0;
 
     static void get_yadda_excep_skel (
-        TAO_ServerRequest &server_request,
-        TAO::Portable_Server::Servant_Upcall *servant_upcall,
-        TAO_ServantBase *servant);
+      TAO_ServerRequest &server_request,
+      TAO::Portable_Server::Servant_Upcall *servant_upcall,
+      TAO_ServantBase *servant);
     virtual void set_yadda () = 0;
 
     static void set_yadda_skel (
-        TAO_ServerRequest &server_request,
-        TAO::Portable_Server::Servant_Upcall *servant_upcall,
-        TAO_ServantBase *servant);
+      TAO_ServerRequest &server_request,
+      TAO::Portable_Server::Servant_Upcall *servant_upcall,
+      TAO_ServantBase *servant);
     virtual void set_yadda_excep (
       ::Messaging::ExceptionHolder * excep_holder) = 0;
 
     static void set_yadda_excep_skel (
-        TAO_ServerRequest &server_request,
-        TAO::Portable_Server::Servant_Upcall *servant_upcall,
-        TAO_ServantBase *servant);
+      TAO_ServerRequest &server_request,
+      TAO::Portable_Server::Servant_Upcall *servant_upcall,
+      TAO_ServantBase *servant);
     virtual void inout_arg_test (
       char const * str) = 0;
 
     static void inout_arg_test_skel (
-        TAO_ServerRequest &server_request,
-        TAO::Portable_Server::Servant_Upcall *servant_upcall,
-        TAO_ServantBase *servant);
+      TAO_ServerRequest &server_request,
+      TAO::Portable_Server::Servant_Upcall *servant_upcall,
+      TAO_ServantBase *servant);
     virtual void inout_arg_test_excep (
       ::Messaging::ExceptionHolder * excep_holder) = 0;
 
     static void inout_arg_test_excep_skel (
-        TAO_ServerRequest &server_request,
-        TAO::Portable_Server::Servant_Upcall *servant_upcall,
-        TAO_ServantBase *servant);
+      TAO_ServerRequest &server_request,
+      TAO::Portable_Server::Servant_Upcall *servant_upcall,
+      TAO_ServantBase *servant);
   };
 
   class Test_Child;
@@ -315,9 +315,9 @@ namespace POA_A
     virtual void child_op () = 0;
 
     static void child_op_skel (
-        TAO_ServerRequest &server_request,
-        TAO::Portable_Server::Servant_Upcall *servant_upcall,
-        TAO_ServantBase *servant);
+      TAO_ServerRequest &server_request,
+      TAO::Portable_Server::Servant_Upcall *servant_upcall,
+      TAO_ServantBase *servant);
   };
 
   class AMI_Test_ChildHandler;
@@ -350,16 +350,16 @@ namespace POA_A
     virtual void child_op () = 0;
 
     static void child_op_skel (
-        TAO_ServerRequest &server_request,
-        TAO::Portable_Server::Servant_Upcall *servant_upcall,
-        TAO_ServantBase *servant);
+      TAO_ServerRequest &server_request,
+      TAO::Portable_Server::Servant_Upcall *servant_upcall,
+      TAO_ServantBase *servant);
     virtual void child_op_excep (
       ::Messaging::ExceptionHolder * excep_holder) = 0;
 
     static void child_op_excep_skel (
-        TAO_ServerRequest &server_request,
-        TAO::Portable_Server::Servant_Upcall *servant_upcall,
-        TAO_ServantBase *servant);
+      TAO_ServerRequest &server_request,
+      TAO::Portable_Server::Servant_Upcall *servant_upcall,
+      TAO_ServantBase *servant);
   };
 
 } // module A
@@ -367,4 +367,3 @@ namespace POA_A
 #include /**/ "ace/post.h"
 
 #endif /* ifndef */
-

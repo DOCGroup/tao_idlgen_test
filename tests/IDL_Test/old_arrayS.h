@@ -353,75 +353,52 @@ public:
     ::OldArray::A_out a3) = 0;
 
   static void op_skel (
-      TAO_ServerRequest &server_request,
-      TAO::Portable_Server::Servant_Upcall *servant_upcall,
-      TAO_ServantBase *servant);
+    TAO_ServerRequest &server_request,
+    TAO::Portable_Server::Servant_Upcall *servant_upcall,
+    TAO_ServantBase *servant);
   virtual ::OldArray::str22_slice * op2 (
     ::OldArray::str22 const a1,
     ::OldArray::str22 a2,
     ::OldArray::str22_out a3) = 0;
 
   static void op2_skel (
-      TAO_ServerRequest &server_request,
-      TAO::Portable_Server::Servant_Upcall *servant_upcall,
-      TAO_ServantBase *servant);
+    TAO_ServerRequest &server_request,
+    TAO::Portable_Server::Servant_Upcall *servant_upcall,
+    TAO_ServantBase *servant);
   virtual ::OldArray::A_matrix_slice * op4 (
     ::OldArray::A const & a1,
     ::OldArray::A & a2,
     ::OldArray::A_out a3) = 0;
 
   static void op4_skel (
-      TAO_ServerRequest &server_request,
-      TAO::Portable_Server::Servant_Upcall *servant_upcall,
-      TAO_ServantBase *servant);
+    TAO_ServerRequest &server_request,
+    TAO::Portable_Server::Servant_Upcall *servant_upcall,
+    TAO_ServantBase *servant);
   virtual ::OldArray::str22_slice * attribute_array () = 0;
 
   static void _get_attribute_array_skel (
-      TAO_ServerRequest &server_request,
-      TAO::Portable_Server::Servant_Upcall *servant_upcall,
-      TAO_ServantBase *servant);
+    TAO_ServerRequest &server_request,
+    TAO::Portable_Server::Servant_Upcall *servant_upcall,
+    TAO_ServantBase *servant);
   virtual void attribute_array (
     ::OldArray::str22 const attribute_array) = 0;
 
   static void _set_attribute_array_skel (
-      TAO_ServerRequest &server_request,
-      TAO::Portable_Server::Servant_Upcall *servant_upcall,
-      TAO_ServantBase *servant);
+    TAO_ServerRequest &server_request,
+    TAO::Portable_Server::Servant_Upcall *servant_upcall,
+    TAO_ServantBase *servant);
 };
-
-///////////////////////////////////////////////////////////////////////
-//                    Direct  Impl. Declaration
-//
 
 class TAO_IDL_TEST_STUB_Export _TAO_A_i_Direct_Proxy_Impl
 {
 public:
   virtual ~_TAO_A_i_Direct_Proxy_Impl ();
-  static void
-  op (
-    TAO_Abstract_ServantBase *servant, TAO::Argument **args);
-
-  static void
-  op2 (
-    TAO_Abstract_ServantBase *servant, TAO::Argument **args);
-
-  static void
-  op4 (
-    TAO_Abstract_ServantBase *servant, TAO::Argument **args);
-
-  static void
-  _get_attribute_array (
-    TAO_Abstract_ServantBase *servant, TAO::Argument **args);
-
-  static void
-  _set_attribute_array (
-    TAO_Abstract_ServantBase *servant, TAO::Argument **args);
-
+  static void op (TAO_Abstract_ServantBase *servant, TAO::Argument **args);
+  static void op2 (TAO_Abstract_ServantBase *servant, TAO::Argument **args);
+  static void op4 (TAO_Abstract_ServantBase *servant, TAO::Argument **args);
+  static void _get_attribute_array (TAO_Abstract_ServantBase *servant, TAO::Argument **args);
+  static void _set_attribute_array (TAO_Abstract_ServantBase *servant, TAO::Argument **args);
 };
-
-//
-//                Direct  Proxy Impl. Declaration
-///////////////////////////////////////////////////////////////////////
 
 class TAO_AMH_A_iResponseHandler;
 using TAO_AMH_A_iResponseHandler_ptr = TAO_AMH_A_iResponseHandler *;
@@ -495,131 +472,93 @@ public:
     ::OldArray::A const & a3) = 0;
 
   static void op_skel (
-      TAO_ServerRequest &server_request,
-      TAO::Portable_Server::Servant_Upcall *servant_upcall,
-      TAO_ServantBase *servant);
+    TAO_ServerRequest &server_request,
+    TAO::Portable_Server::Servant_Upcall *servant_upcall,
+    TAO_ServantBase *servant);
   virtual void op_excep (
     ::Messaging::ExceptionHolder * excep_holder) = 0;
 
   static void op_excep_skel (
-      TAO_ServerRequest &server_request,
-      TAO::Portable_Server::Servant_Upcall *servant_upcall,
-      TAO_ServantBase *servant);
+    TAO_ServerRequest &server_request,
+    TAO::Portable_Server::Servant_Upcall *servant_upcall,
+    TAO_ServantBase *servant);
   virtual void op2 (
     ::OldArray::str22 const ami_return_val,
     ::OldArray::str22 const a2,
     ::OldArray::str22 const a3) = 0;
 
   static void op2_skel (
-      TAO_ServerRequest &server_request,
-      TAO::Portable_Server::Servant_Upcall *servant_upcall,
-      TAO_ServantBase *servant);
+    TAO_ServerRequest &server_request,
+    TAO::Portable_Server::Servant_Upcall *servant_upcall,
+    TAO_ServantBase *servant);
   virtual void op2_excep (
     ::Messaging::ExceptionHolder * excep_holder) = 0;
 
   static void op2_excep_skel (
-      TAO_ServerRequest &server_request,
-      TAO::Portable_Server::Servant_Upcall *servant_upcall,
-      TAO_ServantBase *servant);
+    TAO_ServerRequest &server_request,
+    TAO::Portable_Server::Servant_Upcall *servant_upcall,
+    TAO_ServantBase *servant);
   virtual void op4 (
     ::OldArray::A_matrix const ami_return_val,
     ::OldArray::A const & a2,
     ::OldArray::A const & a3) = 0;
 
   static void op4_skel (
-      TAO_ServerRequest &server_request,
-      TAO::Portable_Server::Servant_Upcall *servant_upcall,
-      TAO_ServantBase *servant);
+    TAO_ServerRequest &server_request,
+    TAO::Portable_Server::Servant_Upcall *servant_upcall,
+    TAO_ServantBase *servant);
   virtual void op4_excep (
     ::Messaging::ExceptionHolder * excep_holder) = 0;
 
   static void op4_excep_skel (
-      TAO_ServerRequest &server_request,
-      TAO::Portable_Server::Servant_Upcall *servant_upcall,
-      TAO_ServantBase *servant);
+    TAO_ServerRequest &server_request,
+    TAO::Portable_Server::Servant_Upcall *servant_upcall,
+    TAO_ServantBase *servant);
   virtual void get_attribute_array (
     ::OldArray::str22 const ami_return_val) = 0;
 
   static void get_attribute_array_skel (
-      TAO_ServerRequest &server_request,
-      TAO::Portable_Server::Servant_Upcall *servant_upcall,
-      TAO_ServantBase *servant);
+    TAO_ServerRequest &server_request,
+    TAO::Portable_Server::Servant_Upcall *servant_upcall,
+    TAO_ServantBase *servant);
   virtual void get_attribute_array_excep (
     ::Messaging::ExceptionHolder * excep_holder) = 0;
 
   static void get_attribute_array_excep_skel (
-      TAO_ServerRequest &server_request,
-      TAO::Portable_Server::Servant_Upcall *servant_upcall,
-      TAO_ServantBase *servant);
+    TAO_ServerRequest &server_request,
+    TAO::Portable_Server::Servant_Upcall *servant_upcall,
+    TAO_ServantBase *servant);
   virtual void set_attribute_array () = 0;
 
   static void set_attribute_array_skel (
-      TAO_ServerRequest &server_request,
-      TAO::Portable_Server::Servant_Upcall *servant_upcall,
-      TAO_ServantBase *servant);
+    TAO_ServerRequest &server_request,
+    TAO::Portable_Server::Servant_Upcall *servant_upcall,
+    TAO_ServantBase *servant);
   virtual void set_attribute_array_excep (
     ::Messaging::ExceptionHolder * excep_holder) = 0;
 
   static void set_attribute_array_excep_skel (
-      TAO_ServerRequest &server_request,
-      TAO::Portable_Server::Servant_Upcall *servant_upcall,
-      TAO_ServantBase *servant);
+    TAO_ServerRequest &server_request,
+    TAO::Portable_Server::Servant_Upcall *servant_upcall,
+    TAO_ServantBase *servant);
 };
-
-///////////////////////////////////////////////////////////////////////
-//                    Direct  Impl. Declaration
-//
 
 class TAO_IDL_TEST_STUB_Export _TAO_AMI_A_iHandler_Direct_Proxy_Impl
   : public virtual ::POA_Messaging::_TAO_ReplyHandler_Direct_Proxy_Impl
 {
 public:
   virtual ~_TAO_AMI_A_iHandler_Direct_Proxy_Impl ();
-  static void
-  op (
-    TAO_Abstract_ServantBase *servant, TAO::Argument **args);
-
-  static void
-  op_excep (
-    TAO_Abstract_ServantBase *servant, TAO::Argument **args);
-
-  static void
-  op2 (
-    TAO_Abstract_ServantBase *servant, TAO::Argument **args);
-
-  static void
-  op2_excep (
-    TAO_Abstract_ServantBase *servant, TAO::Argument **args);
-
-  static void
-  op4 (
-    TAO_Abstract_ServantBase *servant, TAO::Argument **args);
-
-  static void
-  op4_excep (
-    TAO_Abstract_ServantBase *servant, TAO::Argument **args);
-
-  static void
-  get_attribute_array (
-    TAO_Abstract_ServantBase *servant, TAO::Argument **args);
-
-  static void
-  get_attribute_array_excep (
-    TAO_Abstract_ServantBase *servant, TAO::Argument **args);
-
-  static void
-  set_attribute_array (
-    TAO_Abstract_ServantBase *servant, TAO::Argument **args);
-
-  static void
-  set_attribute_array_excep (
-    TAO_Abstract_ServantBase *servant, TAO::Argument **args);
-
+  static void op (TAO_Abstract_ServantBase *servant, TAO::Argument **args);
+  static void op_excep (TAO_Abstract_ServantBase *servant, TAO::Argument **args);
+  static void op2 (TAO_Abstract_ServantBase *servant, TAO::Argument **args);
+  static void op2_excep (TAO_Abstract_ServantBase *servant, TAO::Argument **args);
+  static void op4 (TAO_Abstract_ServantBase *servant, TAO::Argument **args);
+  static void op4_excep (TAO_Abstract_ServantBase *servant, TAO::Argument **args);
+  static void get_attribute_array (TAO_Abstract_ServantBase *servant, TAO::Argument **args);
+  static void get_attribute_array_excep (TAO_Abstract_ServantBase *servant, TAO::Argument **args);
+  static void set_attribute_array (TAO_Abstract_ServantBase *servant, TAO::Argument **);
+  static void set_attribute_array_excep (TAO_Abstract_ServantBase *servant, TAO::Argument **args);
 };
-
-//
-//                Direct  Proxy Impl. Declaration
-///////////////////////////////////////////////////////////////////////
 
 } // module OldArray
 
@@ -628,4 +567,3 @@ public:
 #include /**/ "ace/post.h"
 
 #endif /* ifndef */
-

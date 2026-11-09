@@ -212,4 +212,3 @@ CallMe::YourCar::c_2 () const
     }
   return this->u_.c_2_;
 }
-

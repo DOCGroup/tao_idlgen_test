@@ -310,39 +310,25 @@ public:
   virtual ::f_unbounded * fattr () = 0;
 
   static void _get_fattr_skel (
-      TAO_ServerRequest &server_request,
-      TAO::Portable_Server::Servant_Upcall *servant_upcall,
-      TAO_ServantBase *servant);
+    TAO_ServerRequest &server_request,
+    TAO::Portable_Server::Servant_Upcall *servant_upcall,
+    TAO_ServantBase *servant);
   virtual void fattr (
     ::f_unbounded const & fattr) = 0;
 
   static void _set_fattr_skel (
-      TAO_ServerRequest &server_request,
-      TAO::Portable_Server::Servant_Upcall *servant_upcall,
-      TAO_ServantBase *servant);
+    TAO_ServerRequest &server_request,
+    TAO::Portable_Server::Servant_Upcall *servant_upcall,
+    TAO_ServantBase *servant);
 };
-
-///////////////////////////////////////////////////////////////////////
-//                    Direct  Impl. Declaration
-//
 
 class TAO_IDL_TEST_STUB_Export _TAO_TestSeq_Direct_Proxy_Impl
 {
 public:
   virtual ~_TAO_TestSeq_Direct_Proxy_Impl ();
-  static void
-  _get_fattr (
-    TAO_Abstract_ServantBase *servant, TAO::Argument **args);
-
-  static void
-  _set_fattr (
-    TAO_Abstract_ServantBase *servant, TAO::Argument **args);
-
+  static void _get_fattr (TAO_Abstract_ServantBase *servant, TAO::Argument **args);
+  static void _set_fattr (TAO_Abstract_ServantBase *servant, TAO::Argument **args);
 };
-
-//
-//                Direct  Proxy Impl. Declaration
-///////////////////////////////////////////////////////////////////////
 
 class POA_TAO_AMH_TestSeqResponseHandler;
 using POA_TAO_AMH_TestSeqResponseHandler_ptr = POA_TAO_AMH_TestSeqResponseHandler *;
@@ -396,65 +382,44 @@ public:
     ::f_unbounded const & ami_return_val) = 0;
 
   static void get_fattr_skel (
-      TAO_ServerRequest &server_request,
-      TAO::Portable_Server::Servant_Upcall *servant_upcall,
-      TAO_ServantBase *servant);
+    TAO_ServerRequest &server_request,
+    TAO::Portable_Server::Servant_Upcall *servant_upcall,
+    TAO_ServantBase *servant);
   virtual void get_fattr_excep (
     ::Messaging::ExceptionHolder * excep_holder) = 0;
 
   static void get_fattr_excep_skel (
-      TAO_ServerRequest &server_request,
-      TAO::Portable_Server::Servant_Upcall *servant_upcall,
-      TAO_ServantBase *servant);
+    TAO_ServerRequest &server_request,
+    TAO::Portable_Server::Servant_Upcall *servant_upcall,
+    TAO_ServantBase *servant);
   virtual void set_fattr () = 0;
 
   static void set_fattr_skel (
-      TAO_ServerRequest &server_request,
-      TAO::Portable_Server::Servant_Upcall *servant_upcall,
-      TAO_ServantBase *servant);
+    TAO_ServerRequest &server_request,
+    TAO::Portable_Server::Servant_Upcall *servant_upcall,
+    TAO_ServantBase *servant);
   virtual void set_fattr_excep (
     ::Messaging::ExceptionHolder * excep_holder) = 0;
 
   static void set_fattr_excep_skel (
-      TAO_ServerRequest &server_request,
-      TAO::Portable_Server::Servant_Upcall *servant_upcall,
-      TAO_ServantBase *servant);
+    TAO_ServerRequest &server_request,
+    TAO::Portable_Server::Servant_Upcall *servant_upcall,
+    TAO_ServantBase *servant);
 };
-
-///////////////////////////////////////////////////////////////////////
-//                    Direct  Impl. Declaration
-//
 
 class TAO_IDL_TEST_STUB_Export _TAO_AMI_TestSeqHandler_Direct_Proxy_Impl
   : public virtual ::POA_Messaging::_TAO_ReplyHandler_Direct_Proxy_Impl
 {
 public:
   virtual ~_TAO_AMI_TestSeqHandler_Direct_Proxy_Impl ();
-  static void
-  get_fattr (
-    TAO_Abstract_ServantBase *servant, TAO::Argument **args);
-
-  static void
-  get_fattr_excep (
-    TAO_Abstract_ServantBase *servant, TAO::Argument **args);
-
-  static void
-  set_fattr (
-    TAO_Abstract_ServantBase *servant, TAO::Argument **args);
-
-  static void
-  set_fattr_excep (
-    TAO_Abstract_ServantBase *servant, TAO::Argument **args);
-
+  static void get_fattr (TAO_Abstract_ServantBase *servant, TAO::Argument **args);
+  static void get_fattr_excep (TAO_Abstract_ServantBase *servant, TAO::Argument **args);
+  static void set_fattr (TAO_Abstract_ServantBase *servant, TAO::Argument **);
+  static void set_fattr_excep (TAO_Abstract_ServantBase *servant, TAO::Argument **args);
 };
-
-//
-//                Direct  Proxy Impl. Declaration
-///////////////////////////////////////////////////////////////////////
 
 #include "old_sequenceS_T.h"
 
 #include /**/ "ace/post.h"
 
 #endif /* ifndef */
-

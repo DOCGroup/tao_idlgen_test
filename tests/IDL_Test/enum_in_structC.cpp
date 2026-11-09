@@ -500,24 +500,18 @@ static TAO::TypeCode::Enum<char const *,
 
 ErrorException::ErrorException (
     ErrorException::ReasonCode _tao_reason)
-  : ::CORBA::UserException (
-        "IDL:ErrorException:1.0",
-        "ErrorException")
+  : ::CORBA::UserException ("IDL:ErrorException:1.0", "ErrorException")
 {
   this->reason = _tao_reason;
 }
 
 ErrorException::ErrorException ()
-  : ::CORBA::UserException (
-        "IDL:ErrorException:1.0",
-        "ErrorException")
+  : ::CORBA::UserException ("IDL:ErrorException:1.0", "ErrorException")
 {
 }
 
 ErrorException::ErrorException (const ::ErrorException &_tao_excp)
-  : ::CORBA::UserException (
-        _tao_excp._rep_id (),
-        _tao_excp._name ())
+  : ::CORBA::UserException (_tao_excp._rep_id (), _tao_excp._name ())
 {
   this->reason = _tao_excp.reason;
 }
@@ -834,8 +828,8 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean operator>> (TAO_InputCDR &strm, UnNamed & _tao_enumerator)
 {
-  ::CORBA::ULong _tao_temp = 0;
-  ::CORBA::Boolean const _tao_success = strm >> _tao_temp;
+  ::CORBA::ULong _tao_temp {};
+  const ::CORBA::Boolean _tao_success = strm >> _tao_temp;
 
   if (_tao_success)
     {
@@ -856,8 +850,8 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean operator>> (TAO_InputCDR &strm, HoldsEnum::Named & _tao_enumerator)
 {
-  ::CORBA::ULong _tao_temp = 0;
-  ::CORBA::Boolean const _tao_success = strm >> _tao_temp;
+  ::CORBA::ULong _tao_temp {};
+  const ::CORBA::Boolean _tao_success = strm >> _tao_temp;
 
   if (_tao_success)
     {
@@ -902,8 +896,8 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean operator>> (TAO_InputCDR &strm, decl_heavy_struct::str_en & _tao_enumerator)
 {
-  ::CORBA::ULong _tao_temp = 0;
-  ::CORBA::Boolean const _tao_success = strm >> _tao_temp;
+  ::CORBA::ULong _tao_temp {};
+  const ::CORBA::Boolean _tao_success = strm >> _tao_temp;
 
   if (_tao_success)
     {
@@ -1014,7 +1008,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
       return false;
     }
 
-  ::CORBA::Boolean result = true;
+  ::CORBA::Boolean result {true};
 
   switch (_tao_union._d ())
   {
@@ -1039,13 +1033,13 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
     TAO_InputCDR &strm,
     decl_heavy_struct::un &_tao_union)
 {
-  CORBA::Long _tao_discriminant;
+  CORBA::Long _tao_discriminant {};
   if (!(strm >> _tao_discriminant))
     {
       return false;
     }
 
-  ::CORBA::Boolean result = true;
+  ::CORBA::Boolean result {true};
 
   switch (_tao_discriminant)
   {
@@ -1169,8 +1163,8 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean operator>> (TAO_InputCDR &strm, ErrorException::ReasonCode & _tao_enumerator)
 {
-  ::CORBA::ULong _tao_temp = 0;
-  ::CORBA::Boolean const _tao_success = strm >> _tao_temp;
+  ::CORBA::ULong _tao_temp {};
+  const ::CORBA::Boolean _tao_success = strm >> _tao_temp;
 
   if (_tao_success)
     {
@@ -1213,4 +1207,3 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-

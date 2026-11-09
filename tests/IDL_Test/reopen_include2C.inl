@@ -24,18 +24,13 @@
 
 ACE_INLINE
 A::B::X2::X2 (
-    TAO_Stub *objref,
-    ::CORBA::Boolean _tao_collocated,
-    TAO_Abstract_ServantBase *servant,
-    TAO_ORB_Core *oc)
+  TAO_Stub *objref, ::CORBA::Boolean _tao_collocated, TAO_Abstract_ServantBase *servant, TAO_ORB_Core *oc)
   : ::CORBA::Object (objref, _tao_collocated, servant, oc)
 {
 }
 
 ACE_INLINE
-A::B::X2::X2 (
-    ::IOP::IOR *ior,
-    TAO_ORB_Core *oc)
+A::B::X2::X2 (::IOP::IOR *ior, TAO_ORB_Core *oc)
   : ::CORBA::Object (ior, oc)
 {
 }
@@ -52,19 +47,13 @@ A::B::AMH_X2ExceptionHolder::_tao_obv_static_repository_id ()
 
 ACE_INLINE
 A::B::AMI_X2Handler::AMI_X2Handler (
-    TAO_Stub *objref,
-    ::CORBA::Boolean _tao_collocated,
-    TAO_Abstract_ServantBase *servant,
-    TAO_ORB_Core *oc)
+  TAO_Stub *objref, ::CORBA::Boolean _tao_collocated, TAO_Abstract_ServantBase *servant, TAO_ORB_Core *oc)
   : ::CORBA::Object (objref, _tao_collocated, servant, oc)
 {
 }
 
 ACE_INLINE
-A::B::AMI_X2Handler::AMI_X2Handler (
-    ::IOP::IOR *ior,
-    TAO_ORB_Core *oc)
+A::B::AMI_X2Handler::AMI_X2Handler (::IOP::IOR *ior, TAO_ORB_Core *oc)
   : ::CORBA::Object (ior, oc)
 {
 }
-

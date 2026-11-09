@@ -24,18 +24,13 @@
 
 ACE_INLINE
 mod2::full::full (
-    TAO_Stub *objref,
-    ::CORBA::Boolean _tao_collocated,
-    TAO_Abstract_ServantBase *servant,
-    TAO_ORB_Core *oc)
+  TAO_Stub *objref, ::CORBA::Boolean _tao_collocated, TAO_Abstract_ServantBase *servant, TAO_ORB_Core *oc)
   : ::CORBA::Object (objref, _tao_collocated, servant, oc)
 {
 }
 
 ACE_INLINE
-mod2::full::full (
-    ::IOP::IOR *ior,
-    TAO_ORB_Core *oc)
+mod2::full::full (::IOP::IOR *ior, TAO_ORB_Core *oc)
   : ::CORBA::Object (ior, oc)
 {
 }
@@ -52,36 +47,26 @@ mod2::AMH_fullExceptionHolder::_tao_obv_static_repository_id ()
 
 ACE_INLINE
 mod2::AMI_fullHandler::AMI_fullHandler (
-    TAO_Stub *objref,
-    ::CORBA::Boolean _tao_collocated,
-    TAO_Abstract_ServantBase *servant,
-    TAO_ORB_Core *oc)
+  TAO_Stub *objref, ::CORBA::Boolean _tao_collocated, TAO_Abstract_ServantBase *servant, TAO_ORB_Core *oc)
   : ::CORBA::Object (objref, _tao_collocated, servant, oc)
 {
 }
 
 ACE_INLINE
-mod2::AMI_fullHandler::AMI_fullHandler (
-    ::IOP::IOR *ior,
-    TAO_ORB_Core *oc)
+mod2::AMI_fullHandler::AMI_fullHandler (::IOP::IOR *ior, TAO_ORB_Core *oc)
   : ::CORBA::Object (ior, oc)
 {
 }
 
 ACE_INLINE
 fwd_mixed_intf::concrete_parent::concrete_parent (
-    TAO_Stub *objref,
-    ::CORBA::Boolean _tao_collocated,
-    TAO_Abstract_ServantBase *servant,
-    TAO_ORB_Core *oc)
+  TAO_Stub *objref, ::CORBA::Boolean _tao_collocated, TAO_Abstract_ServantBase *servant, TAO_ORB_Core *oc)
   : ::CORBA::Object (objref, _tao_collocated, servant, oc)
 {
 }
 
 ACE_INLINE
-fwd_mixed_intf::concrete_parent::concrete_parent (
-    ::IOP::IOR *ior,
-    TAO_ORB_Core *oc)
+fwd_mixed_intf::concrete_parent::concrete_parent (::IOP::IOR *ior, TAO_ORB_Core *oc)
   : ::CORBA::Object (ior, oc)
 {
 }
@@ -98,18 +83,13 @@ fwd_mixed_intf::AMH_concrete_parentExceptionHolder::_tao_obv_static_repository_i
 
 ACE_INLINE
 fwd_mixed_intf::AMI_concrete_parentHandler::AMI_concrete_parentHandler (
-    TAO_Stub *objref,
-    ::CORBA::Boolean _tao_collocated,
-    TAO_Abstract_ServantBase *servant,
-    TAO_ORB_Core *oc)
+  TAO_Stub *objref, ::CORBA::Boolean _tao_collocated, TAO_Abstract_ServantBase *servant, TAO_ORB_Core *oc)
   : ::CORBA::Object (objref, _tao_collocated, servant, oc)
 {
 }
 
 ACE_INLINE
-fwd_mixed_intf::AMI_concrete_parentHandler::AMI_concrete_parentHandler (
-    ::IOP::IOR *ior,
-    TAO_ORB_Core *oc)
+fwd_mixed_intf::AMI_concrete_parentHandler::AMI_concrete_parentHandler (::IOP::IOR *ior, TAO_ORB_Core *oc)
   : ::CORBA::Object (ior, oc)
 {
 }
@@ -125,10 +105,7 @@ fwd_mixed_intf::abstract_parent::abstract_parent (abstract_parent const &rhs)
 
 ACE_INLINE
 fwd_mixed_intf::abstract_parent::abstract_parent (
-    TAO_Stub *objref,
-    ::CORBA::Boolean _tao_collocated,
-    TAO_Abstract_ServantBase *servant,
-    TAO_ORB_Core *)
+  TAO_Stub *objref, ::CORBA::Boolean _tao_collocated, TAO_Abstract_ServantBase *servant, TAO_ORB_Core *)
   : ::CORBA::AbstractBase (
         objref,
         _tao_collocated,
@@ -139,10 +116,7 @@ fwd_mixed_intf::abstract_parent::abstract_parent (
 
 ACE_INLINE
 fwd_mixed_intf::mixed_abs_first::mixed_abs_first (
-    TAO_Stub *objref,
-    ::CORBA::Boolean _tao_collocated,
-    TAO_Abstract_ServantBase *servant,
-    TAO_ORB_Core *oc)
+  TAO_Stub *objref, ::CORBA::Boolean _tao_collocated, TAO_Abstract_ServantBase *servant, TAO_ORB_Core *oc)
   : ::CORBA::AbstractBase (
         objref,
         _tao_collocated,
@@ -158,37 +132,27 @@ fwd_mixed_intf::mixed_abs_first::mixed_abs_first (
 }
 
 ACE_INLINE
-fwd_mixed_intf::mixed_abs_first::mixed_abs_first (
-    ::IOP::IOR *ior,
-    TAO_ORB_Core *oc)
+fwd_mixed_intf::mixed_abs_first::mixed_abs_first (::IOP::IOR *ior, TAO_ORB_Core *oc)
   : ::CORBA::Object (ior, oc)
 {
 }
 
 ACE_INLINE
 fwd_mixed_intf::AMI_mixed_abs_firstHandler::AMI_mixed_abs_firstHandler (
-    TAO_Stub *objref,
-    ::CORBA::Boolean _tao_collocated,
-    TAO_Abstract_ServantBase *servant,
-    TAO_ORB_Core *oc)
+  TAO_Stub *objref, ::CORBA::Boolean _tao_collocated, TAO_Abstract_ServantBase *servant, TAO_ORB_Core *oc)
   : ::CORBA::Object (objref, _tao_collocated, servant, oc)
 {
 }
 
 ACE_INLINE
-fwd_mixed_intf::AMI_mixed_abs_firstHandler::AMI_mixed_abs_firstHandler (
-    ::IOP::IOR *ior,
-    TAO_ORB_Core *oc)
+fwd_mixed_intf::AMI_mixed_abs_firstHandler::AMI_mixed_abs_firstHandler (::IOP::IOR *ior, TAO_ORB_Core *oc)
   : ::CORBA::Object (ior, oc)
 {
 }
 
 ACE_INLINE
 fwd_mixed_intf::mixed_conc_first::mixed_conc_first (
-    TAO_Stub *objref,
-    ::CORBA::Boolean _tao_collocated,
-    TAO_Abstract_ServantBase *servant,
-    TAO_ORB_Core *oc)
+  TAO_Stub *objref, ::CORBA::Boolean _tao_collocated, TAO_Abstract_ServantBase *servant, TAO_ORB_Core *oc)
   : ::CORBA::Object (
         objref,
         _tao_collocated,
@@ -208,27 +172,20 @@ fwd_mixed_intf::mixed_conc_first::mixed_conc_first (
 }
 
 ACE_INLINE
-fwd_mixed_intf::mixed_conc_first::mixed_conc_first (
-    ::IOP::IOR *ior,
-    TAO_ORB_Core *oc)
+fwd_mixed_intf::mixed_conc_first::mixed_conc_first (::IOP::IOR *ior, TAO_ORB_Core *oc)
   : ::CORBA::Object (ior, oc)
 {
 }
 
 ACE_INLINE
 fwd_mixed_intf::AMI_mixed_conc_firstHandler::AMI_mixed_conc_firstHandler (
-    TAO_Stub *objref,
-    ::CORBA::Boolean _tao_collocated,
-    TAO_Abstract_ServantBase *servant,
-    TAO_ORB_Core *oc)
+  TAO_Stub *objref, ::CORBA::Boolean _tao_collocated, TAO_Abstract_ServantBase *servant, TAO_ORB_Core *oc)
   : ::CORBA::Object (objref, _tao_collocated, servant, oc)
 {
 }
 
 ACE_INLINE
-fwd_mixed_intf::AMI_mixed_conc_firstHandler::AMI_mixed_conc_firstHandler (
-    ::IOP::IOR *ior,
-    TAO_ORB_Core *oc)
+fwd_mixed_intf::AMI_mixed_conc_firstHandler::AMI_mixed_conc_firstHandler (::IOP::IOR *ior, TAO_ORB_Core *oc)
   : ::CORBA::Object (ior, oc)
 {
 }
@@ -250,4 +207,3 @@ obv_fwd::ForwardedType::_tao_obv_static_repository_id ()
 {
   return "IDL:obv_fwd/ForwardedType:1.0";
 }
-

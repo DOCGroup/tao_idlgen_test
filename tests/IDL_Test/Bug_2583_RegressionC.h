@@ -88,9 +88,7 @@ namespace Test
 
     // The static operations.
     static DynAny_ptr _duplicate (DynAny_ptr obj);
-
     static void _tao_release (DynAny_ptr obj);
-
     static DynAny_ptr _narrow (::CORBA::Object_ptr obj);
     static DynAny_ptr _unchecked_narrow (::CORBA::Object_ptr obj);
     static DynAny_ptr _nil ();
@@ -108,7 +106,6 @@ namespace Test
     ~DynAny () override = default;
 
   private:
-    // Private and unimplemented for concrete interfaces.
     DynAny (DynAny const &) = delete;
     DynAny (DynAny &&) = delete;
     DynAny &operator= (DynAny const &) = delete;
@@ -272,4 +269,3 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 #include /**/ "ace/post.h"
 
 #endif /* ifndef */
-

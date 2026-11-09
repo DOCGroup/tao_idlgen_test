@@ -466,28 +466,17 @@ public:
     ::mod2::fwd_out outarg) = 0;
 
   static void op_skel (
-      TAO_ServerRequest &server_request,
-      TAO::Portable_Server::Servant_Upcall *servant_upcall,
-      TAO_ServantBase *servant);
+    TAO_ServerRequest &server_request,
+    TAO::Portable_Server::Servant_Upcall *servant_upcall,
+    TAO_ServantBase *servant);
 };
-
-///////////////////////////////////////////////////////////////////////
-//                    Direct  Impl. Declaration
-//
 
 class TAO_IDL_TEST_STUB_Export _TAO_full_Direct_Proxy_Impl
 {
 public:
   virtual ~_TAO_full_Direct_Proxy_Impl ();
-  static void
-  op (
-    TAO_Abstract_ServantBase *servant, TAO::Argument **args);
-
+  static void op (TAO_Abstract_ServantBase *servant, TAO::Argument **args);
 };
-
-//
-//                Direct  Proxy Impl. Declaration
-///////////////////////////////////////////////////////////////////////
 
 class TAO_AMH_fullResponseHandler;
 using TAO_AMH_fullResponseHandler_ptr = TAO_AMH_fullResponseHandler *;
@@ -542,40 +531,26 @@ public:
     ::mod2::fwd_ptr outarg) = 0;
 
   static void op_skel (
-      TAO_ServerRequest &server_request,
-      TAO::Portable_Server::Servant_Upcall *servant_upcall,
-      TAO_ServantBase *servant);
+    TAO_ServerRequest &server_request,
+    TAO::Portable_Server::Servant_Upcall *servant_upcall,
+    TAO_ServantBase *servant);
   virtual void op_excep (
     ::Messaging::ExceptionHolder * excep_holder) = 0;
 
   static void op_excep_skel (
-      TAO_ServerRequest &server_request,
-      TAO::Portable_Server::Servant_Upcall *servant_upcall,
-      TAO_ServantBase *servant);
+    TAO_ServerRequest &server_request,
+    TAO::Portable_Server::Servant_Upcall *servant_upcall,
+    TAO_ServantBase *servant);
 };
-
-///////////////////////////////////////////////////////////////////////
-//                    Direct  Impl. Declaration
-//
 
 class TAO_IDL_TEST_STUB_Export _TAO_AMI_fullHandler_Direct_Proxy_Impl
   : public virtual ::POA_Messaging::_TAO_ReplyHandler_Direct_Proxy_Impl
 {
 public:
   virtual ~_TAO_AMI_fullHandler_Direct_Proxy_Impl ();
-  static void
-  op (
-    TAO_Abstract_ServantBase *servant, TAO::Argument **args);
-
-  static void
-  op_excep (
-    TAO_Abstract_ServantBase *servant, TAO::Argument **args);
-
+  static void op (TAO_Abstract_ServantBase *servant, TAO::Argument **args);
+  static void op_excep (TAO_Abstract_ServantBase *servant, TAO::Argument **args);
 };
-
-//
-//                Direct  Proxy Impl. Declaration
-///////////////////////////////////////////////////////////////////////
 
 } // module mod2
 namespace POA_fwd_mixed_intf
@@ -636,19 +611,11 @@ public:
   char const *_interface_repository_id () const override;
 };
 
-///////////////////////////////////////////////////////////////////////
-//                    Direct  Impl. Declaration
-//
-
 class TAO_IDL_TEST_STUB_Export _TAO_concrete_parent_Direct_Proxy_Impl
 {
 public:
   virtual ~_TAO_concrete_parent_Direct_Proxy_Impl ();
 };
-
-//
-//                Direct  Proxy Impl. Declaration
-///////////////////////////////////////////////////////////////////////
 
 class TAO_AMH_concrete_parentResponseHandler;
 using TAO_AMH_concrete_parentResponseHandler_ptr = TAO_AMH_concrete_parentResponseHandler *;
@@ -693,20 +660,12 @@ public:
   char const *_interface_repository_id () const override;
 };
 
-///////////////////////////////////////////////////////////////////////
-//                    Direct  Impl. Declaration
-//
-
 class TAO_IDL_TEST_STUB_Export _TAO_AMI_concrete_parentHandler_Direct_Proxy_Impl
   : public virtual ::POA_Messaging::_TAO_ReplyHandler_Direct_Proxy_Impl
 {
 public:
   virtual ~_TAO_AMI_concrete_parentHandler_Direct_Proxy_Impl ();
 };
-
-//
-//                Direct  Proxy Impl. Declaration
-///////////////////////////////////////////////////////////////////////
 
 class mixed_abs_first;
 using mixed_abs_first_ptr = mixed_abs_first *;
@@ -739,20 +698,12 @@ public:
   char const *_interface_repository_id () const override;
 };
 
-///////////////////////////////////////////////////////////////////////
-//                    Direct  Impl. Declaration
-//
-
 class TAO_IDL_TEST_STUB_Export _TAO_mixed_abs_first_Direct_Proxy_Impl
   : public virtual ::POA_fwd_mixed_intf::_TAO_concrete_parent_Direct_Proxy_Impl
 {
 public:
   virtual ~_TAO_mixed_abs_first_Direct_Proxy_Impl ();
 };
-
-//
-//                Direct  Proxy Impl. Declaration
-///////////////////////////////////////////////////////////////////////
 
 class AMI_mixed_abs_firstHandler;
 using AMI_mixed_abs_firstHandler_ptr = AMI_mixed_abs_firstHandler *;
@@ -785,20 +736,12 @@ public:
   char const *_interface_repository_id () const override;
 };
 
-///////////////////////////////////////////////////////////////////////
-//                    Direct  Impl. Declaration
-//
-
 class TAO_IDL_TEST_STUB_Export _TAO_AMI_mixed_abs_firstHandler_Direct_Proxy_Impl
   : public virtual ::POA_fwd_mixed_intf::_TAO_AMI_concrete_parentHandler_Direct_Proxy_Impl
 {
 public:
   virtual ~_TAO_AMI_mixed_abs_firstHandler_Direct_Proxy_Impl ();
 };
-
-//
-//                Direct  Proxy Impl. Declaration
-///////////////////////////////////////////////////////////////////////
 
 class mixed_conc_first;
 using mixed_conc_first_ptr = mixed_conc_first *;
@@ -831,20 +774,12 @@ public:
   char const *_interface_repository_id () const override;
 };
 
-///////////////////////////////////////////////////////////////////////
-//                    Direct  Impl. Declaration
-//
-
 class TAO_IDL_TEST_STUB_Export _TAO_mixed_conc_first_Direct_Proxy_Impl
   : public virtual ::POA_fwd_mixed_intf::_TAO_concrete_parent_Direct_Proxy_Impl
 {
 public:
   virtual ~_TAO_mixed_conc_first_Direct_Proxy_Impl ();
 };
-
-//
-//                Direct  Proxy Impl. Declaration
-///////////////////////////////////////////////////////////////////////
 
 class AMI_mixed_conc_firstHandler;
 using AMI_mixed_conc_firstHandler_ptr = AMI_mixed_conc_firstHandler *;
@@ -877,20 +812,12 @@ public:
   char const *_interface_repository_id () const override;
 };
 
-///////////////////////////////////////////////////////////////////////
-//                    Direct  Impl. Declaration
-//
-
 class TAO_IDL_TEST_STUB_Export _TAO_AMI_mixed_conc_firstHandler_Direct_Proxy_Impl
   : public virtual ::POA_fwd_mixed_intf::_TAO_AMI_concrete_parentHandler_Direct_Proxy_Impl
 {
 public:
   virtual ~_TAO_AMI_mixed_conc_firstHandler_Direct_Proxy_Impl ();
 };
-
-//
-//                Direct  Proxy Impl. Declaration
-///////////////////////////////////////////////////////////////////////
 
 } // module fwd_mixed_intf
 namespace POA_obv_fwd
@@ -911,4 +838,3 @@ namespace POA_obv_fwd
 #include /**/ "ace/post.h"
 
 #endif /* ifndef */
-

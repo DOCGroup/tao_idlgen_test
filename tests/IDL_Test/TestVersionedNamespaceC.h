@@ -105,9 +105,7 @@ namespace M1
 
     // The static operations.
     static LI_ptr _duplicate (LI_ptr obj);
-
     static void _tao_release (LI_ptr obj);
-
     static LI_ptr _narrow (::CORBA::Object_ptr obj);
     static LI_ptr _unchecked_narrow (::CORBA::Object_ptr obj);
     static LI_ptr _nil ();
@@ -126,7 +124,6 @@ namespace M1
     ~LI () override = default;
 
   private:
-    // Private and unimplemented for concrete interfaces.
     LI (LI const &) = delete;
     LI (LI &&) = delete;
     LI &operator= (LI const &) = delete;
@@ -347,4 +344,3 @@ END_USER_VERSIONED_NAMESPACE
 #include /**/ "ace/post.h"
 
 #endif /* ifndef */
-

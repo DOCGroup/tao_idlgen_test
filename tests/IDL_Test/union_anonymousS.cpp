@@ -28,4 +28,3 @@
 #include "union_anonymousS.h"
 
 #endif /* ifndef */
-

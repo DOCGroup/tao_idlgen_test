@@ -28,4 +28,3 @@
 #include "structS.h"
 
 #endif /* ifndef */
-

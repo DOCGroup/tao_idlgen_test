@@ -120,18 +120,13 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 ACE_INLINE
 tdef::tdef (
-    TAO_Stub *objref,
-    ::CORBA::Boolean _tao_collocated,
-    TAO_Abstract_ServantBase *servant,
-    TAO_ORB_Core *oc)
+  TAO_Stub *objref, ::CORBA::Boolean _tao_collocated, TAO_Abstract_ServantBase *servant, TAO_ORB_Core *oc)
   : ::CORBA::Object (objref, _tao_collocated, servant, oc)
 {
 }
 
 ACE_INLINE
-tdef::tdef (
-    ::IOP::IOR *ior,
-    TAO_ORB_Core *oc)
+tdef::tdef (::IOP::IOR *ior, TAO_ORB_Core *oc)
   : ::CORBA::Object (ior, oc)
 {
 }
@@ -148,18 +143,13 @@ AMH_tdefExceptionHolder::_tao_obv_static_repository_id ()
 
 ACE_INLINE
 AMI_tdefHandler::AMI_tdefHandler (
-    TAO_Stub *objref,
-    ::CORBA::Boolean _tao_collocated,
-    TAO_Abstract_ServantBase *servant,
-    TAO_ORB_Core *oc)
+  TAO_Stub *objref, ::CORBA::Boolean _tao_collocated, TAO_Abstract_ServantBase *servant, TAO_ORB_Core *oc)
   : ::CORBA::Object (objref, _tao_collocated, servant, oc)
 {
 }
 
 ACE_INLINE
-AMI_tdefHandler::AMI_tdefHandler (
-    ::IOP::IOR *ior,
-    TAO_ORB_Core *oc)
+AMI_tdefHandler::AMI_tdefHandler (::IOP::IOR *ior, TAO_ORB_Core *oc)
   : ::CORBA::Object (ior, oc)
 {
 }
@@ -355,4 +345,3 @@ TAO::Array_Traits<ABCModule::bbbBubBubBubBaby::_rmtDetails_forany>::alloc ()
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-

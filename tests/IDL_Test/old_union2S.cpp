@@ -28,4 +28,3 @@
 #include "old_union2S.h"
 
 #endif /* ifndef */
-

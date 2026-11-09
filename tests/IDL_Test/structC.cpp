@@ -821,25 +821,19 @@ void Test::DefaultInitialized::_tao_any_destructor (void *_tao_void_pointer)
 Test::DefaultInitializedException::DefaultInitializedException (
     ::CORBA::Boolean _tao_boolean_value,
     ::CORBA::Long _tao_long_value)
-  : ::CORBA::UserException (
-        "IDL:Test/DefaultInitializedException:1.0",
-        "DefaultInitializedException")
+  : ::CORBA::UserException ("IDL:Test/DefaultInitializedException:1.0", "DefaultInitializedException")
 {
   this->boolean_value = _tao_boolean_value;
   this->long_value = _tao_long_value;
 }
 
 Test::DefaultInitializedException::DefaultInitializedException ()
-  : ::CORBA::UserException (
-        "IDL:Test/DefaultInitializedException:1.0",
-        "DefaultInitializedException")
+  : ::CORBA::UserException ("IDL:Test/DefaultInitializedException:1.0", "DefaultInitializedException")
 {
 }
 
 Test::DefaultInitializedException::DefaultInitializedException (const ::Test::DefaultInitializedException &_tao_excp)
-  : ::CORBA::UserException (
-        _tao_excp._rep_id (),
-        _tao_excp._name ())
+  : ::CORBA::UserException (_tao_excp._rep_id (), _tao_excp._name ())
 {
   this->boolean_value = _tao_excp.boolean_value;
   this->long_value = _tao_excp.long_value;
@@ -1798,8 +1792,8 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean operator>> (TAO_InputCDR &strm, Test::S90 & _tao_enumerator)
 {
-  ::CORBA::ULong _tao_temp = 0;
-  ::CORBA::Boolean const _tao_success = strm >> _tao_temp;
+  ::CORBA::ULong _tao_temp {};
+  const ::CORBA::Boolean _tao_success = strm >> _tao_temp;
 
   if (_tao_success)
     {
@@ -2040,4 +2034,3 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-

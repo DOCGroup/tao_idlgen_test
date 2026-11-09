@@ -72,7 +72,7 @@ TAO::Objref_Traits<Test::DynAny>::nil ()
 }
 
 ::CORBA::Boolean
-TAO::Objref_Traits<Test::DynAny>::marshal (Test::DynAny_ptr const p,TAO_OutputCDR & cdr)
+TAO::Objref_Traits<Test::DynAny>::marshal (Test::DynAny_ptr const p, TAO_OutputCDR &cdr)
 {
   return ::CORBA::Object::marshal (p, cdr);
 }
@@ -93,14 +93,14 @@ Test::DynAny_ptr
 Test::DynAny::_narrow (::CORBA::Object_ptr _tao_objref)
 {
   return DynAny::_duplicate (
-      dynamic_cast<DynAny_ptr> (_tao_objref));
+    dynamic_cast<DynAny_ptr> (_tao_objref));
 }
 
 Test::DynAny_ptr
 Test::DynAny::_unchecked_narrow (::CORBA::Object_ptr _tao_objref)
 {
   return DynAny::_duplicate (
-      dynamic_cast<DynAny_ptr> (_tao_objref));
+    dynamic_cast<DynAny_ptr> (_tao_objref));
 }
 
 Test::DynAny_ptr
@@ -129,8 +129,8 @@ Test::DynAny::_tao_release (DynAny_ptr obj)
 Test::DynAny::_is_a (char const *value)
 {
   if (std::strcmp (value, "IDL:Test/DynAny:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/LocalObject:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0)
+    std::strcmp (value, "IDL:omg.org/CORBA/LocalObject:1.0") == 0 ||
+    std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0)
     {
       return true; // success using local knowledge
     }
@@ -463,4 +463,3 @@ void operator<<= (
 }
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
-

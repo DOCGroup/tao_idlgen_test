@@ -96,4 +96,3 @@ namespace POA_MixedFloatValues
 #include /**/ "ace/post.h"
 
 #endif /* ifndef */
-

@@ -263,4 +263,3 @@ TAO::Array_Traits<decl_heavy_struct::_m_un_forany>::alloc ()
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-

@@ -28,4 +28,3 @@
 #include "sequenceS.h"
 
 #endif /* ifndef */
-

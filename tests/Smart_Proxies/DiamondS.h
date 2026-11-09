@@ -151,28 +151,17 @@ namespace POA_Diamond
     virtual char * shape () = 0;
 
     static void shape_skel (
-        TAO_ServerRequest &server_request,
-        TAO::Portable_Server::Servant_Upcall *servant_upcall,
-        TAO_ServantBase *servant);
+      TAO_ServerRequest &server_request,
+      TAO::Portable_Server::Servant_Upcall *servant_upcall,
+      TAO_ServantBase *servant);
   };
-
-  ///////////////////////////////////////////////////////////////////////
-  //                    Direct  Impl. Declaration
-  //
 
   class Diamond_Export _TAO_Top_Direct_Proxy_Impl
   {
   public:
     virtual ~_TAO_Top_Direct_Proxy_Impl ();
-    static void
-    shape (
-      TAO_Abstract_ServantBase *servant, TAO::Argument **args);
-
+    static void shape (TAO_Abstract_ServantBase *servant, TAO::Argument **args);
   };
-
-  //
-  //                Direct  Proxy Impl. Declaration
-  ///////////////////////////////////////////////////////////////////////
 
   class Left;
   using Left_ptr = Left *;
@@ -206,29 +195,28 @@ namespace POA_Diamond
     virtual char * color () = 0;
 
     static void color_skel (
-        TAO_ServerRequest &server_request,
-        TAO::Portable_Server::Servant_Upcall *servant_upcall,
-        TAO_ServantBase *servant);
-  };
+      TAO_ServerRequest &server_request,
+      TAO::Portable_Server::Servant_Upcall *servant_upcall,
+      TAO_ServantBase *servant);
+    virtual ::CORBA::Long combine (
+      ::CORBA::Long first,
+      ::CORBA::Long & second,
+      ::CORBA::Long_out third) = 0;
 
-  ///////////////////////////////////////////////////////////////////////
-  //                    Direct  Impl. Declaration
-  //
+    static void combine_skel (
+      TAO_ServerRequest &server_request,
+      TAO::Portable_Server::Servant_Upcall *servant_upcall,
+      TAO_ServantBase *servant);
+  };
 
   class Diamond_Export _TAO_Left_Direct_Proxy_Impl
     : public virtual ::POA_Diamond::_TAO_Top_Direct_Proxy_Impl
   {
   public:
     virtual ~_TAO_Left_Direct_Proxy_Impl ();
-    static void
-    color (
-      TAO_Abstract_ServantBase *servant, TAO::Argument **args);
-
+    static void color (TAO_Abstract_ServantBase *servant, TAO::Argument **args);
+    static void combine (TAO_Abstract_ServantBase *servant, TAO::Argument **args);
   };
-
-  //
-  //                Direct  Proxy Impl. Declaration
-  ///////////////////////////////////////////////////////////////////////
 
   class Right;
   using Right_ptr = Right *;
@@ -262,29 +250,18 @@ namespace POA_Diamond
     virtual ::CORBA::Long width () = 0;
 
     static void width_skel (
-        TAO_ServerRequest &server_request,
-        TAO::Portable_Server::Servant_Upcall *servant_upcall,
-        TAO_ServantBase *servant);
+      TAO_ServerRequest &server_request,
+      TAO::Portable_Server::Servant_Upcall *servant_upcall,
+      TAO_ServantBase *servant);
   };
-
-  ///////////////////////////////////////////////////////////////////////
-  //                    Direct  Impl. Declaration
-  //
 
   class Diamond_Export _TAO_Right_Direct_Proxy_Impl
     : public virtual ::POA_Diamond::_TAO_Top_Direct_Proxy_Impl
   {
   public:
     virtual ~_TAO_Right_Direct_Proxy_Impl ();
-    static void
-    width (
-      TAO_Abstract_ServantBase *servant, TAO::Argument **args);
-
+    static void width (TAO_Abstract_ServantBase *servant, TAO::Argument **args);
   };
-
-  //
-  //                Direct  Proxy Impl. Declaration
-  ///////////////////////////////////////////////////////////////////////
 
   class Buttom;
   using Buttom_ptr = Buttom *;
@@ -319,14 +296,10 @@ namespace POA_Diamond
     virtual char * name () = 0;
 
     static void name_skel (
-        TAO_ServerRequest &server_request,
-        TAO::Portable_Server::Servant_Upcall *servant_upcall,
-        TAO_ServantBase *servant);
+      TAO_ServerRequest &server_request,
+      TAO::Portable_Server::Servant_Upcall *servant_upcall,
+      TAO_ServantBase *servant);
   };
-
-  ///////////////////////////////////////////////////////////////////////
-  //                    Direct  Impl. Declaration
-  //
 
   class Diamond_Export _TAO_Buttom_Direct_Proxy_Impl
     : public virtual ::POA_Diamond::_TAO_Left_Direct_Proxy_Impl,
@@ -334,19 +307,11 @@ namespace POA_Diamond
   {
   public:
     virtual ~_TAO_Buttom_Direct_Proxy_Impl ();
-    static void
-    name (
-      TAO_Abstract_ServantBase *servant, TAO::Argument **args);
-
+    static void name (TAO_Abstract_ServantBase *servant, TAO::Argument **args);
   };
-
-  //
-  //                Direct  Proxy Impl. Declaration
-  ///////////////////////////////////////////////////////////////////////
 
 } // module Diamond
 
 #include /**/ "ace/post.h"
 
 #endif /* ifndef */
-

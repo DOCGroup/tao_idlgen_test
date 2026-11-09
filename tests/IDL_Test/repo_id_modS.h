@@ -98,4 +98,3 @@ namespace POA_gleep
 #include /**/ "ace/post.h"
 
 #endif /* ifndef */
-

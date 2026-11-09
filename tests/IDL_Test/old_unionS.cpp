@@ -63,8 +63,8 @@ public:
   TAO_operation_db_entry const * lookup (char const *str, std::size_t len) override;
 };
 
-/* C++ code produced by gperf version 2.8 (ACE version 8.0.8) */
-/* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F nullptr,nullptr -a -o -t -p -K opname -L C++17 -Z TAO_OldUnion_AMH_a_Perfect_Hash_OpTable -N lookup */
+/* C++ code produced by ACE gperf version 8.0.8 */
+/* Command-line: ace_gperf -m -M -J -Q -R -c -C -D -E -T -f 0 -F nullptr,nullptr -o -t -p -K opname -Z TAO_OldUnion_AMH_a_Perfect_Hash_OpTable -N lookup */
 
 std::size_t
 TAO_OldUnion_AMH_a_Perfect_Hash_OpTable::hash (char const *str, std::size_t len)
@@ -180,11 +180,9 @@ POA_OldUnion::AMH_a::opA_skel (
 
 ::CORBA::Boolean POA_OldUnion::AMH_a::_is_a (char const *value)
 {
-  return
-    (
-      std::strcmp (value, "IDL:OldUnion/a:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0
-    );
+  return (
+    std::strcmp (value, "IDL:OldUnion/a:1.0") == 0 ||
+    std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0);
 }
 
 char const *POA_OldUnion::AMH_a::_interface_repository_id () const
@@ -222,8 +220,8 @@ public:
   TAO_operation_db_entry const * lookup (char const *str, std::size_t len) override;
 };
 
-/* C++ code produced by gperf version 2.8 (ACE version 8.0.8) */
-/* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F nullptr,nullptr -a -o -t -p -K opname -L C++17 -Z TAO_OldUnion_a_Perfect_Hash_OpTable -N lookup */
+/* C++ code produced by ACE gperf version 8.0.8 */
+/* Command-line: ace_gperf -m -M -J -Q -R -c -C -D -E -T -f 0 -F nullptr,nullptr -o -t -p -K opname -Z TAO_OldUnion_a_Perfect_Hash_OpTable -N lookup */
 
 std::size_t
 TAO_OldUnion_a_Perfect_Hash_OpTable::hash (char const *str, std::size_t len)
@@ -288,36 +286,24 @@ TAO_OldUnion_a_Perfect_Hash_OpTable::lookup (char const *str, std::size_t len)
 
 static TAO_OldUnion_a_Perfect_Hash_OpTable tao_OldUnion_a_optable;
 
-///////////////////////////////////////////////////////////////////////
-//                 Direct Proxy  Implementation
-//
-
-POA_OldUnion::_TAO_a_Direct_Proxy_Impl::~_TAO_a_Direct_Proxy_Impl ()
-{
-}
+POA_OldUnion::_TAO_a_Direct_Proxy_Impl::~_TAO_a_Direct_Proxy_Impl () = default;
 
 void
-POA_OldUnion::_TAO_a_Direct_Proxy_Impl::opA (
-    TAO_Abstract_ServantBase  *servant,
-    TAO::Argument ** args)
-
+POA_OldUnion::_TAO_a_Direct_Proxy_Impl::opA (TAO_Abstract_ServantBase *servant, TAO::Argument **args)
 {
-  POA_OldUnion::a_ptr _tao_ptr =
-    dynamic_cast<POA_OldUnion::a_ptr> (servant);
+  POA_OldUnion::a_ptr _tao_ptr = dynamic_cast<POA_OldUnion::a_ptr> (servant);
   if (!_tao_ptr)
     {
       throw ::CORBA::INTERNAL ();
     }
+  using _tao_retval_type = TAO::Arg_Traits<::OldUnion::Foo2>::ret_val;
+  _tao_retval_type * const _tao_retval = static_cast<_tao_retval_type *> (args[0]);
+  using _tao_arg_1_type = TAO::Arg_Traits<::OldUnion::a::astruct>::in_arg_val;
+  _tao_arg_1_type * const _tao_arg_1 = static_cast<_tao_arg_1_type *> (args[1]);
 
-  ((TAO::Arg_Traits<::OldUnion::Foo2>::ret_val *) args[0])->arg () =
-    _tao_ptr->opA (
-          ((TAO::Arg_Traits<::OldUnion::a::astruct>::in_arg_val *) args[1])->arg ()
-        );
+  _tao_retval->arg () = _tao_ptr->opA (
+    _tao_arg_1->arg ());
 }
-
-//
-//           End Direct Proxy Implementation
-///////////////////////////////////////////////////////////////////////
 
 POA_OldUnion::a::a ()
 {
@@ -339,11 +325,9 @@ namespace POA_OldUnion
 
     void execute () override
     {
-      TAO::SArg_Traits<::OldUnion::Foo2>::ret_arg_type retval =
-        TAO::Portable_Server::get_ret_arg<::OldUnion::Foo2> (
-          this->operation_details_,
-          this->args_);
-
+      TAO::SArg_Traits<::OldUnion::Foo2>::ret_arg_type retval = TAO::Portable_Server::get_ret_arg<::OldUnion::Foo2> (
+        this->operation_details_,
+        this->args_);
       TAO::SArg_Traits<::OldUnion::a::astruct>::in_arg_type arg_1 =
         TAO::Portable_Server::get_in_arg<::OldUnion::a::astruct> (
           this->operation_details_,
@@ -402,11 +386,9 @@ void POA_OldUnion::a::opA_skel (
 
 ::CORBA::Boolean POA_OldUnion::a::_is_a (char const *value)
 {
-  return
-    (
-      std::strcmp (value, "IDL:OldUnion/a:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0
-    );
+  return (
+    std::strcmp (value, "IDL:OldUnion/a:1.0") == 0 ||
+    std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0);
 }
 
 char const *POA_OldUnion::a::_interface_repository_id () const
@@ -473,8 +455,8 @@ public:
   TAO_operation_db_entry const * lookup (char const *str, std::size_t len) override;
 };
 
-/* C++ code produced by gperf version 2.8 (ACE version 8.0.8) */
-/* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F nullptr,nullptr -a -o -t -p -K opname -L C++17 -Z TAO_OldUnion_AMI_aHandler_Perfect_Hash_OpTable -N lookup */
+/* C++ code produced by ACE gperf version 8.0.8 */
+/* Command-line: ace_gperf -m -M -J -Q -R -c -C -D -E -T -f 0 -F nullptr,nullptr -o -t -p -K opname -Z TAO_OldUnion_AMI_aHandler_Perfect_Hash_OpTable -N lookup */
 
 std::size_t
 TAO_OldUnion_AMI_aHandler_Perfect_Hash_OpTable::hash (char const *str, std::size_t len)
@@ -540,53 +522,37 @@ TAO_OldUnion_AMI_aHandler_Perfect_Hash_OpTable::lookup (char const *str, std::si
 
 static TAO_OldUnion_AMI_aHandler_Perfect_Hash_OpTable tao_OldUnion_AMI_aHandler_optable;
 
-///////////////////////////////////////////////////////////////////////
-//                 Direct Proxy  Implementation
-//
-
-POA_OldUnion::_TAO_AMI_aHandler_Direct_Proxy_Impl::~_TAO_AMI_aHandler_Direct_Proxy_Impl ()
-{
-}
+POA_OldUnion::_TAO_AMI_aHandler_Direct_Proxy_Impl::~_TAO_AMI_aHandler_Direct_Proxy_Impl () = default;
 
 void
-POA_OldUnion::_TAO_AMI_aHandler_Direct_Proxy_Impl::opA (
-    TAO_Abstract_ServantBase  *servant,
-    TAO::Argument ** args)
-
+POA_OldUnion::_TAO_AMI_aHandler_Direct_Proxy_Impl::opA (TAO_Abstract_ServantBase *servant, TAO::Argument **args)
 {
-  POA_OldUnion::AMI_aHandler_ptr _tao_ptr =
-    dynamic_cast<POA_OldUnion::AMI_aHandler_ptr> (servant);
+  POA_OldUnion::AMI_aHandler_ptr _tao_ptr = dynamic_cast<POA_OldUnion::AMI_aHandler_ptr> (servant);
   if (!_tao_ptr)
     {
       throw ::CORBA::INTERNAL ();
     }
+  using _tao_arg_1_type = TAO::Arg_Traits<::OldUnion::Foo2>::in_arg_val;
+  _tao_arg_1_type * const _tao_arg_1 = static_cast<_tao_arg_1_type *> (args[1]);
 
   _tao_ptr->opA (
-        ((TAO::Arg_Traits<::OldUnion::Foo2>::in_arg_val *) args[1])->arg ()
-      );
+    _tao_arg_1->arg ());
 }
 
 void
-POA_OldUnion::_TAO_AMI_aHandler_Direct_Proxy_Impl::opA_excep (
-    TAO_Abstract_ServantBase  *servant,
-    TAO::Argument ** args)
-
+POA_OldUnion::_TAO_AMI_aHandler_Direct_Proxy_Impl::opA_excep (TAO_Abstract_ServantBase *servant, TAO::Argument **args)
 {
-  POA_OldUnion::AMI_aHandler_ptr _tao_ptr =
-    dynamic_cast<POA_OldUnion::AMI_aHandler_ptr> (servant);
+  POA_OldUnion::AMI_aHandler_ptr _tao_ptr = dynamic_cast<POA_OldUnion::AMI_aHandler_ptr> (servant);
   if (!_tao_ptr)
     {
       throw ::CORBA::INTERNAL ();
     }
+  using _tao_arg_1_type = TAO::Arg_Traits<::Messaging::ExceptionHolder>::in_arg_val;
+  _tao_arg_1_type * const _tao_arg_1 = static_cast<_tao_arg_1_type *> (args[1]);
 
   _tao_ptr->opA_excep (
-        ((TAO::Arg_Traits<::Messaging::ExceptionHolder>::in_arg_val *) args[1])->arg ()
-      );
+    _tao_arg_1->arg ());
 }
-
-//
-//           End Direct Proxy Implementation
-///////////////////////////////////////////////////////////////////////
 
 POA_OldUnion::AMI_aHandler::AMI_aHandler ()
 {
@@ -735,12 +701,10 @@ void POA_OldUnion::AMI_aHandler::opA_excep_skel (
 
 ::CORBA::Boolean POA_OldUnion::AMI_aHandler::_is_a (char const *value)
 {
-  return
-    (
-      std::strcmp (value, "IDL:omg.org/Messaging/ReplyHandler:1.0") == 0 ||
-      std::strcmp (value, "IDL:OldUnion/AMI_aHandler:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0
-    );
+  return (
+    std::strcmp (value, "IDL:omg.org/Messaging/ReplyHandler:1.0") == 0 ||
+    std::strcmp (value, "IDL:OldUnion/AMI_aHandler:1.0") == 0 ||
+    std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0);
 }
 
 char const *POA_OldUnion::AMI_aHandler::_interface_repository_id () const
@@ -770,4 +734,3 @@ POA_OldUnion::AMI_aHandler::_this ()
 }
 
 #endif /* ifndef */
-

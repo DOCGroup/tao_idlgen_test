@@ -216,18 +216,13 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 ACE_INLINE
 All_Anon::anon_bd_string_test::anon_bd_string_test (
-    TAO_Stub *objref,
-    ::CORBA::Boolean _tao_collocated,
-    TAO_Abstract_ServantBase *servant,
-    TAO_ORB_Core *oc)
+  TAO_Stub *objref, ::CORBA::Boolean _tao_collocated, TAO_Abstract_ServantBase *servant, TAO_ORB_Core *oc)
   : ::CORBA::Object (objref, _tao_collocated, servant, oc)
 {
 }
 
 ACE_INLINE
-All_Anon::anon_bd_string_test::anon_bd_string_test (
-    ::IOP::IOR *ior,
-    TAO_ORB_Core *oc)
+All_Anon::anon_bd_string_test::anon_bd_string_test (::IOP::IOR *ior, TAO_ORB_Core *oc)
   : ::CORBA::Object (ior, oc)
 {
 }
@@ -244,18 +239,13 @@ All_Anon::AMH_anon_bd_string_testExceptionHolder::_tao_obv_static_repository_id 
 
 ACE_INLINE
 All_Anon::AMI_anon_bd_string_testHandler::AMI_anon_bd_string_testHandler (
-    TAO_Stub *objref,
-    ::CORBA::Boolean _tao_collocated,
-    TAO_Abstract_ServantBase *servant,
-    TAO_ORB_Core *oc)
+  TAO_Stub *objref, ::CORBA::Boolean _tao_collocated, TAO_Abstract_ServantBase *servant, TAO_ORB_Core *oc)
   : ::CORBA::Object (objref, _tao_collocated, servant, oc)
 {
 }
 
 ACE_INLINE
-All_Anon::AMI_anon_bd_string_testHandler::AMI_anon_bd_string_testHandler (
-    ::IOP::IOR *ior,
-    TAO_ORB_Core *oc)
+All_Anon::AMI_anon_bd_string_testHandler::AMI_anon_bd_string_testHandler (::IOP::IOR *ior, TAO_ORB_Core *oc)
   : ::CORBA::Object (ior, oc)
 {
 }
@@ -451,4 +441,3 @@ TAO::Array_Traits<All_Anon::Nested_Anon::_long_array_2_forany>::alloc ()
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-

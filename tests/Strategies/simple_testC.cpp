@@ -57,7 +57,7 @@ TAO::Objref_Traits<Simple_Server>::nil ()
 }
 
 ::CORBA::Boolean
-TAO::Objref_Traits<Simple_Server>::marshal (Simple_Server_ptr const p,TAO_OutputCDR & cdr)
+TAO::Objref_Traits<Simple_Server>::marshal (Simple_Server_ptr const p, TAO_OutputCDR &cdr)
 {
   return ::CORBA::Object::marshal (p, cdr);
 }
@@ -76,7 +76,7 @@ Simple_Server::print_status ()
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
-      std::addressof(_tao_retval)
+      std::addressof (_tao_retval)
     };
 
   TAO::Invocation_Adapter _invocation_call (
@@ -86,8 +86,7 @@ Simple_Server::print_status ()
       "print_status",
       12,
       TAO::TAO_CO_NONE | TAO::TAO_CO_THRU_POA_STRATEGY,
-      TAO::TAO_TWOWAY_INVOCATION
-      ,
+      TAO::TAO_TWOWAY_INVOCATION,
       TAO::TAO_SYNCHRONOUS_INVOCATION,
       false
     );
@@ -108,7 +107,7 @@ Simple_Server::shutdown ()
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
-      std::addressof(_tao_retval)
+      std::addressof (_tao_retval)
     };
 
   TAO::Invocation_Adapter _invocation_call (
@@ -167,7 +166,7 @@ Simple_Server::_tao_release (Simple_Server_ptr obj)
 Simple_Server::_is_a (char const *value)
 {
   if (std::strcmp (value, "IDL:Simple_Server:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0)
+    std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0)
     {
       return true; // success using local knowledge
     }
@@ -216,4 +215,3 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-

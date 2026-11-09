@@ -218,39 +218,25 @@ public:
   virtual ::FixedPoint::Amount rate () = 0;
 
   static void _get_rate_skel (
-      TAO_ServerRequest &server_request,
-      TAO::Portable_Server::Servant_Upcall *servant_upcall,
-      TAO_ServantBase *servant);
+    TAO_ServerRequest &server_request,
+    TAO::Portable_Server::Servant_Upcall *servant_upcall,
+    TAO_ServantBase *servant);
   virtual void rate (
     ::FixedPoint::Amount const & rate) = 0;
 
   static void _set_rate_skel (
-      TAO_ServerRequest &server_request,
-      TAO::Portable_Server::Servant_Upcall *servant_upcall,
-      TAO_ServantBase *servant);
+    TAO_ServerRequest &server_request,
+    TAO::Portable_Server::Servant_Upcall *servant_upcall,
+    TAO_ServantBase *servant);
 };
-
-///////////////////////////////////////////////////////////////////////
-//                    Direct  Impl. Declaration
-//
 
 class TAO_IDL_TEST_STUB_Export _TAO_FixedOperations_Direct_Proxy_Impl
 {
 public:
   virtual ~_TAO_FixedOperations_Direct_Proxy_Impl ();
-  static void
-  _get_rate (
-    TAO_Abstract_ServantBase *servant, TAO::Argument **args);
-
-  static void
-  _set_rate (
-    TAO_Abstract_ServantBase *servant, TAO::Argument **args);
-
+  static void _get_rate (TAO_Abstract_ServantBase *servant, TAO::Argument **args);
+  static void _set_rate (TAO_Abstract_ServantBase *servant, TAO::Argument **args);
 };
-
-//
-//                Direct  Proxy Impl. Declaration
-///////////////////////////////////////////////////////////////////////
 
 class TAO_AMH_FixedOperationsResponseHandler;
 using TAO_AMH_FixedOperationsResponseHandler_ptr = TAO_AMH_FixedOperationsResponseHandler *;
@@ -304,61 +290,41 @@ public:
     ::FixedPoint::Amount const & ami_return_val) = 0;
 
   static void get_rate_skel (
-      TAO_ServerRequest &server_request,
-      TAO::Portable_Server::Servant_Upcall *servant_upcall,
-      TAO_ServantBase *servant);
+    TAO_ServerRequest &server_request,
+    TAO::Portable_Server::Servant_Upcall *servant_upcall,
+    TAO_ServantBase *servant);
   virtual void get_rate_excep (
     ::Messaging::ExceptionHolder * excep_holder) = 0;
 
   static void get_rate_excep_skel (
-      TAO_ServerRequest &server_request,
-      TAO::Portable_Server::Servant_Upcall *servant_upcall,
-      TAO_ServantBase *servant);
+    TAO_ServerRequest &server_request,
+    TAO::Portable_Server::Servant_Upcall *servant_upcall,
+    TAO_ServantBase *servant);
   virtual void set_rate () = 0;
 
   static void set_rate_skel (
-      TAO_ServerRequest &server_request,
-      TAO::Portable_Server::Servant_Upcall *servant_upcall,
-      TAO_ServantBase *servant);
+    TAO_ServerRequest &server_request,
+    TAO::Portable_Server::Servant_Upcall *servant_upcall,
+    TAO_ServantBase *servant);
   virtual void set_rate_excep (
     ::Messaging::ExceptionHolder * excep_holder) = 0;
 
   static void set_rate_excep_skel (
-      TAO_ServerRequest &server_request,
-      TAO::Portable_Server::Servant_Upcall *servant_upcall,
-      TAO_ServantBase *servant);
+    TAO_ServerRequest &server_request,
+    TAO::Portable_Server::Servant_Upcall *servant_upcall,
+    TAO_ServantBase *servant);
 };
-
-///////////////////////////////////////////////////////////////////////
-//                    Direct  Impl. Declaration
-//
 
 class TAO_IDL_TEST_STUB_Export _TAO_AMI_FixedOperationsHandler_Direct_Proxy_Impl
   : public virtual ::POA_Messaging::_TAO_ReplyHandler_Direct_Proxy_Impl
 {
 public:
   virtual ~_TAO_AMI_FixedOperationsHandler_Direct_Proxy_Impl ();
-  static void
-  get_rate (
-    TAO_Abstract_ServantBase *servant, TAO::Argument **args);
-
-  static void
-  get_rate_excep (
-    TAO_Abstract_ServantBase *servant, TAO::Argument **args);
-
-  static void
-  set_rate (
-    TAO_Abstract_ServantBase *servant, TAO::Argument **args);
-
-  static void
-  set_rate_excep (
-    TAO_Abstract_ServantBase *servant, TAO::Argument **args);
-
+  static void get_rate (TAO_Abstract_ServantBase *servant, TAO::Argument **args);
+  static void get_rate_excep (TAO_Abstract_ServantBase *servant, TAO::Argument **args);
+  static void set_rate (TAO_Abstract_ServantBase *servant, TAO::Argument **);
+  static void set_rate_excep (TAO_Abstract_ServantBase *servant, TAO::Argument **args);
 };
-
-//
-//                Direct  Proxy Impl. Declaration
-///////////////////////////////////////////////////////////////////////
 
 } // module FixedPoint
 
@@ -367,4 +333,3 @@ public:
 #include /**/ "ace/post.h"
 
 #endif /* ifndef */
-

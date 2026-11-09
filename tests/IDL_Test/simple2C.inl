@@ -24,18 +24,13 @@
 
 ACE_INLINE
 simple3::simple3 (
-    TAO_Stub *objref,
-    ::CORBA::Boolean _tao_collocated,
-    TAO_Abstract_ServantBase *servant,
-    TAO_ORB_Core *oc)
+  TAO_Stub *objref, ::CORBA::Boolean _tao_collocated, TAO_Abstract_ServantBase *servant, TAO_ORB_Core *oc)
   : ::CORBA::Object (objref, _tao_collocated, servant, oc)
 {
 }
 
 ACE_INLINE
-simple3::simple3 (
-    ::IOP::IOR *ior,
-    TAO_ORB_Core *oc)
+simple3::simple3 (::IOP::IOR *ior, TAO_ORB_Core *oc)
   : ::CORBA::Object (ior, oc)
 {
 }
@@ -52,19 +47,13 @@ AMH_simple3ExceptionHolder::_tao_obv_static_repository_id ()
 
 ACE_INLINE
 AMI_simple3Handler::AMI_simple3Handler (
-    TAO_Stub *objref,
-    ::CORBA::Boolean _tao_collocated,
-    TAO_Abstract_ServantBase *servant,
-    TAO_ORB_Core *oc)
+  TAO_Stub *objref, ::CORBA::Boolean _tao_collocated, TAO_Abstract_ServantBase *servant, TAO_ORB_Core *oc)
   : ::CORBA::Object (objref, _tao_collocated, servant, oc)
 {
 }
 
 ACE_INLINE
-AMI_simple3Handler::AMI_simple3Handler (
-    ::IOP::IOR *ior,
-    TAO_ORB_Core *oc)
+AMI_simple3Handler::AMI_simple3Handler (::IOP::IOR *ior, TAO_ORB_Core *oc)
   : ::CORBA::Object (ior, oc)
 {
 }
-

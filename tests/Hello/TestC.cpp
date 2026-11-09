@@ -57,7 +57,7 @@ TAO::Objref_Traits<Test::Hello>::nil ()
 }
 
 ::CORBA::Boolean
-TAO::Objref_Traits<Test::Hello>::marshal (Test::Hello_ptr const p,TAO_OutputCDR & cdr)
+TAO::Objref_Traits<Test::Hello>::marshal (Test::Hello_ptr const p, TAO_OutputCDR &cdr)
 {
   return ::CORBA::Object::marshal (p, cdr);
 }
@@ -76,7 +76,7 @@ Test::Hello::get_string ()
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
-      std::addressof(_tao_retval)
+      std::addressof (_tao_retval)
     };
 
   TAO::Invocation_Adapter _invocation_call (
@@ -86,8 +86,7 @@ Test::Hello::get_string ()
       "get_string",
       10,
       TAO::TAO_CO_NONE,
-      TAO::TAO_TWOWAY_INVOCATION
-      ,
+      TAO::TAO_TWOWAY_INVOCATION,
       TAO::TAO_SYNCHRONOUS_INVOCATION,
       false
     );
@@ -108,7 +107,7 @@ Test::Hello::shutdown ()
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
-      std::addressof(_tao_retval)
+      std::addressof (_tao_retval)
     };
 
   TAO::Invocation_Adapter _invocation_call (
@@ -167,7 +166,7 @@ Test::Hello::_tao_release (Hello_ptr obj)
 Test::Hello::_is_a (char const *value)
 {
   if (std::strcmp (value, "IDL:Test/Hello:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0)
+    std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0)
     {
       return true; // success using local knowledge
     }
@@ -216,4 +215,3 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-

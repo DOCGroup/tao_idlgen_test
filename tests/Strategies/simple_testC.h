@@ -83,9 +83,7 @@ public:
 
   // The static operations.
   static Simple_Server_ptr _duplicate (Simple_Server_ptr obj);
-
   static void _tao_release (Simple_Server_ptr obj);
-
   static Simple_Server_ptr _narrow (::CORBA::Object_ptr obj);
   static Simple_Server_ptr _unchecked_narrow (::CORBA::Object_ptr obj);
   static Simple_Server_ptr _nil ();
@@ -107,15 +105,14 @@ protected:
 
   // Non-local interface only.
   Simple_Server (
-      TAO_Stub *objref,
-      ::CORBA::Boolean _tao_collocated = false,
-      TAO_Abstract_ServantBase *servant = nullptr,
-      TAO_ORB_Core *orb_core = nullptr);
+    TAO_Stub *objref,
+    ::CORBA::Boolean _tao_collocated = false,
+    TAO_Abstract_ServantBase *servant = nullptr,
+    TAO_ORB_Core *orb_core = nullptr);
 
   ~Simple_Server () override = default;
 
 private:
-  // Private and unimplemented for concrete interfaces.
   Simple_Server (Simple_Server const &) = delete;
   Simple_Server (Simple_Server &&) = delete;
   Simple_Server &operator= (Simple_Server const &) = delete;
@@ -171,8 +168,8 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
- ::CORBA::Boolean operator<< (TAO_OutputCDR &, Simple_Server_ptr const);
- ::CORBA::Boolean operator>> (TAO_InputCDR &, Simple_Server_ptr &);
+::CORBA::Boolean operator<< (TAO_OutputCDR &, Simple_Server_ptr const);
+::CORBA::Boolean operator>> (TAO_InputCDR &, Simple_Server_ptr &);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
@@ -183,4 +180,3 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 #include /**/ "ace/post.h"
 
 #endif /* ifndef */
-

@@ -215,38 +215,24 @@ public:
   virtual ::EncodingID2_T getEncodingID () = 0;
 
   static void getEncodingID_skel (
-      TAO_ServerRequest &server_request,
-      TAO::Portable_Server::Servant_Upcall *servant_upcall,
-      TAO_ServantBase *servant);
+    TAO_ServerRequest &server_request,
+    TAO::Portable_Server::Servant_Upcall *servant_upcall,
+    TAO_ServantBase *servant);
   virtual ::Encoding_T getEncoding () = 0;
 
   static void getEncoding_skel (
-      TAO_ServerRequest &server_request,
-      TAO::Portable_Server::Servant_Upcall *servant_upcall,
-      TAO_ServantBase *servant);
+    TAO_ServerRequest &server_request,
+    TAO::Portable_Server::Servant_Upcall *servant_upcall,
+    TAO_ServantBase *servant);
 };
-
-///////////////////////////////////////////////////////////////////////
-//                    Direct  Impl. Declaration
-//
 
 class TAO_IDL_TEST_STUB_Export _TAO_FieldDevice_T_Direct_Proxy_Impl
 {
 public:
   virtual ~_TAO_FieldDevice_T_Direct_Proxy_Impl ();
-  static void
-  getEncodingID (
-    TAO_Abstract_ServantBase *servant, TAO::Argument **args);
-
-  static void
-  getEncoding (
-    TAO_Abstract_ServantBase *servant, TAO::Argument **args);
-
+  static void getEncodingID (TAO_Abstract_ServantBase *servant, TAO::Argument **args);
+  static void getEncoding (TAO_Abstract_ServantBase *servant, TAO::Argument **args);
 };
-
-//
-//                Direct  Proxy Impl. Declaration
-///////////////////////////////////////////////////////////////////////
 
 class POA_TAO_AMH_FieldDevice_TResponseHandler;
 using POA_TAO_AMH_FieldDevice_TResponseHandler_ptr = POA_TAO_AMH_FieldDevice_TResponseHandler *;
@@ -301,66 +287,45 @@ public:
     ::EncodingID2_T ami_return_val) = 0;
 
   static void getEncodingID_skel (
-      TAO_ServerRequest &server_request,
-      TAO::Portable_Server::Servant_Upcall *servant_upcall,
-      TAO_ServantBase *servant);
+    TAO_ServerRequest &server_request,
+    TAO::Portable_Server::Servant_Upcall *servant_upcall,
+    TAO_ServantBase *servant);
   virtual void getEncodingID_excep (
     ::Messaging::ExceptionHolder * excep_holder) = 0;
 
   static void getEncodingID_excep_skel (
-      TAO_ServerRequest &server_request,
-      TAO::Portable_Server::Servant_Upcall *servant_upcall,
-      TAO_ServantBase *servant);
+    TAO_ServerRequest &server_request,
+    TAO::Portable_Server::Servant_Upcall *servant_upcall,
+    TAO_ServantBase *servant);
   virtual void getEncoding (
     ::Encoding_T const & ami_return_val) = 0;
 
   static void getEncoding_skel (
-      TAO_ServerRequest &server_request,
-      TAO::Portable_Server::Servant_Upcall *servant_upcall,
-      TAO_ServantBase *servant);
+    TAO_ServerRequest &server_request,
+    TAO::Portable_Server::Servant_Upcall *servant_upcall,
+    TAO_ServantBase *servant);
   virtual void getEncoding_excep (
     ::Messaging::ExceptionHolder * excep_holder) = 0;
 
   static void getEncoding_excep_skel (
-      TAO_ServerRequest &server_request,
-      TAO::Portable_Server::Servant_Upcall *servant_upcall,
-      TAO_ServantBase *servant);
+    TAO_ServerRequest &server_request,
+    TAO::Portable_Server::Servant_Upcall *servant_upcall,
+    TAO_ServantBase *servant);
 };
-
-///////////////////////////////////////////////////////////////////////
-//                    Direct  Impl. Declaration
-//
 
 class TAO_IDL_TEST_STUB_Export _TAO_AMI_FieldDevice_THandler_Direct_Proxy_Impl
   : public virtual ::POA_Messaging::_TAO_ReplyHandler_Direct_Proxy_Impl
 {
 public:
   virtual ~_TAO_AMI_FieldDevice_THandler_Direct_Proxy_Impl ();
-  static void
-  getEncodingID (
-    TAO_Abstract_ServantBase *servant, TAO::Argument **args);
-
-  static void
-  getEncodingID_excep (
-    TAO_Abstract_ServantBase *servant, TAO::Argument **args);
-
-  static void
-  getEncoding (
-    TAO_Abstract_ServantBase *servant, TAO::Argument **args);
-
-  static void
-  getEncoding_excep (
-    TAO_Abstract_ServantBase *servant, TAO::Argument **args);
-
+  static void getEncodingID (TAO_Abstract_ServantBase *servant, TAO::Argument **args);
+  static void getEncodingID_excep (TAO_Abstract_ServantBase *servant, TAO::Argument **args);
+  static void getEncoding (TAO_Abstract_ServantBase *servant, TAO::Argument **args);
+  static void getEncoding_excep (TAO_Abstract_ServantBase *servant, TAO::Argument **args);
 };
-
-//
-//                Direct  Proxy Impl. Declaration
-///////////////////////////////////////////////////////////////////////
 
 #include "Bug_2582_RegressionS_T.h"
 
 #include /**/ "ace/post.h"
 
 #endif /* ifndef */
-

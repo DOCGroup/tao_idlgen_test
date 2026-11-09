@@ -28,4 +28,3 @@
 #include "anyunionS.h"
 
 #endif /* ifndef */
-

@@ -57,7 +57,7 @@ TAO::Objref_Traits<Diamond::Top>::nil ()
 }
 
 ::CORBA::Boolean
-TAO::Objref_Traits<Diamond::Top>::marshal (Diamond::Top_ptr const p,TAO_OutputCDR & cdr)
+TAO::Objref_Traits<Diamond::Top>::marshal (Diamond::Top_ptr const p, TAO_OutputCDR &cdr)
 {
   return ::CORBA::Object::marshal (p, cdr);
 }
@@ -76,7 +76,7 @@ Diamond::Top::shape ()
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
-      std::addressof(_tao_retval)
+      std::addressof (_tao_retval)
     };
 
   TAO::Invocation_Adapter _invocation_call (
@@ -86,8 +86,7 @@ Diamond::Top::shape ()
       "shape",
       5,
       TAO::TAO_CO_NONE | TAO::TAO_CO_DIRECT_STRATEGY | TAO::TAO_CO_THRU_POA_STRATEGY,
-      TAO::TAO_TWOWAY_INVOCATION
-      ,
+      TAO::TAO_TWOWAY_INVOCATION,
       TAO::TAO_SYNCHRONOUS_INVOCATION,
       false
     );
@@ -103,17 +102,14 @@ Diamond::Top::Top ()
 Diamond::Top_ptr
 Diamond::Top::_narrow (::CORBA::Object_ptr _tao_objref)
 {
-  Diamond::Top *proxy = TAO::Narrow_Utils<Top>::narrow (
-      _tao_objref,
-      "IDL:Diamond/Top:1.0");
+  Diamond::Top *proxy = TAO::Narrow_Utils<Top>::narrow (_tao_objref, "IDL:Diamond/Top:1.0");
   return TAO_Diamond_Top_PROXY_FACTORY_ADAPTER::instance ()->create_proxy (proxy);
 }
 
 Diamond::Top_ptr
 Diamond::Top::_unchecked_narrow (::CORBA::Object_ptr _tao_objref)
 {
-  Diamond::Top *proxy = TAO::Narrow_Utils<Top>::unchecked_narrow (
-      _tao_objref);
+  Diamond::Top *proxy = TAO::Narrow_Utils<Top>::unchecked_narrow (_tao_objref);
   return TAO_Diamond_Top_PROXY_FACTORY_ADAPTER::instance ()->create_proxy (proxy);
 }
 
@@ -143,7 +139,7 @@ Diamond::Top::_tao_release (Top_ptr obj)
 Diamond::Top::_is_a (char const *value)
 {
   if (std::strcmp (value, "IDL:Diamond/Top:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0)
+    std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0)
     {
       return true; // success using local knowledge
     }
@@ -169,22 +165,13 @@ Diamond::TAO_Diamond_Top_Default_Proxy_Factory::TAO_Diamond_Top_Default_Proxy_Fa
   TAO_Diamond_Top_PROXY_FACTORY_ADAPTER::instance ()->register_proxy_factory (this, permanent);
 }
 
-Diamond::TAO_Diamond_Top_Default_Proxy_Factory::~TAO_Diamond_Top_Default_Proxy_Factory ()
-{
-}
-
 Diamond::Top_ptr
 Diamond::TAO_Diamond_Top_Default_Proxy_Factory::create_proxy (::Diamond::Top_ptr proxy)
 {
   return proxy;
 }
 
-Diamond::TAO_Diamond_Top_Proxy_Factory_Adapter::TAO_Diamond_Top_Proxy_Factory_Adapter ()
-  : proxy_factory_ (nullptr),
-    one_shot_factory_ (false),
-    disable_factory_ (false)
-{
-}
+Diamond::TAO_Diamond_Top_Default_Proxy_Factory::~TAO_Diamond_Top_Default_Proxy_Factory () = default;
 
 Diamond::TAO_Diamond_Top_Proxy_Factory_Adapter::~TAO_Diamond_Top_Proxy_Factory_Adapter ()
 {
@@ -196,13 +183,7 @@ void
 Diamond::TAO_Diamond_Top_Proxy_Factory_Adapter::register_proxy_factory (
   TAO_Diamond_Top_Default_Proxy_Factory *df, bool one_shot_factory)
 {
-  ACE_MT (
-      ACE_GUARD (
-          TAO_SYNCH_RECURSIVE_MUTEX,
-          ace_mon,
-          this->lock_
-        )
-    );
+  ACE_MT (ACE_GUARD (TAO_SYNCH_RECURSIVE_MUTEX, ace_mon, this->lock_));
 
   // Remove any existing <proxy_factory_> and replace with the new one.
   this->unregister_proxy_factory ();
@@ -213,20 +194,13 @@ Diamond::TAO_Diamond_Top_Proxy_Factory_Adapter::register_proxy_factory (
 void
 Diamond::TAO_Diamond_Top_Proxy_Factory_Adapter::unregister_proxy_factory ()
 {
-  ACE_MT (
-      ACE_GUARD (
-          TAO_SYNCH_RECURSIVE_MUTEX,
-          ace_mon,
-          this->lock_
-        )
-    );
+  ACE_MT (ACE_GUARD (TAO_SYNCH_RECURSIVE_MUTEX, ace_mon, this->lock_));
 
   if (this->one_shot_factory_)
     {
       this->disable_factory_ = true;
     }
-
-  if (this->one_shot_factory_ == false && this->proxy_factory_ != nullptr)
+  else
     {
       delete this->proxy_factory_;
       this->proxy_factory_ = nullptr;
@@ -234,12 +208,9 @@ Diamond::TAO_Diamond_Top_Proxy_Factory_Adapter::unregister_proxy_factory ()
 }
 
 Diamond::Top_ptr
-Diamond::TAO_Diamond_Top_Proxy_Factory_Adapter::create_proxy (
-    ::Diamond::Top_ptr proxy
-  )
+Diamond::TAO_Diamond_Top_Proxy_Factory_Adapter::create_proxy (::Diamond::Top_ptr proxy)
 {
-  ACE_MT (ACE_GUARD_RETURN (TAO_SYNCH_RECURSIVE_MUTEX, ace_mon,
-    this->lock_, nullptr));
+  ACE_MT (ACE_GUARD_RETURN (TAO_SYNCH_RECURSIVE_MUTEX, ace_mon, this->lock_, nullptr));
 
   // To take care of those <unchecked_narrow> methods where we
   // want to override the smart proxy factory if there exists one.
@@ -251,20 +222,13 @@ Diamond::TAO_Diamond_Top_Proxy_Factory_Adapter::create_proxy (
 
   // Verify that an <proxy_factory_> is available else make one.
   if (!this->proxy_factory_)
-    ACE_NEW_RETURN (this->proxy_factory_,
-        TAO_Diamond_Top_Default_Proxy_Factory (0),
-         nullptr);
-
+    {
+      ACE_NEW_RETURN (this->proxy_factory_, TAO_Diamond_Top_Default_Proxy_Factory (false), nullptr);
+    }
   return this->proxy_factory_->create_proxy (proxy);
 }
 
-Diamond::TAO_Diamond_Top_Smart_Proxy_Base::TAO_Diamond_Top_Smart_Proxy_Base ()
-{
-}
-
-Diamond::TAO_Diamond_Top_Smart_Proxy_Base::~TAO_Diamond_Top_Smart_Proxy_Base ()
-{
-}
+Diamond::TAO_Diamond_Top_Smart_Proxy_Base::~TAO_Diamond_Top_Smart_Proxy_Base () = default;
 
 TAO_Stub *
 Diamond::TAO_Diamond_Top_Smart_Proxy_Base::_stubobj () const
@@ -278,22 +242,20 @@ Diamond::TAO_Diamond_Top_Smart_Proxy_Base::_stubobj ()
   return this->base_proxy_->_stubobj ();
 }
 
-char * Diamond::TAO_Diamond_Top_Smart_Proxy_Base::shape  (){
-  return this->get_proxy ()->shape (
-
-    );
-
+char *
+Diamond::TAO_Diamond_Top_Smart_Proxy_Base::shape ()
+{
+  return this->get_proxy ()->shape ();
 }
 
 Diamond::Top_ptr
 Diamond::TAO_Diamond_Top_Smart_Proxy_Base::get_proxy ()
-
 {
   // Obtain the real proxy stored in <base_proxy_>
   if (CORBA::is_nil (this->proxy_.in ()))
     {
-       // Verify whether factory is one-shot, if so disable
-       // factory temporarily or not else remove.
+      // Verify whether factory is one-shot, if so disable
+      // factory temporarily or not else remove.
       TAO_Diamond_Top_PROXY_FACTORY_ADAPTER::instance ()->unregister_proxy_factory ();
       this->proxy_ = ::Diamond::Top::_narrow (this->base_proxy_.in ());
     }
@@ -323,7 +285,7 @@ TAO::Objref_Traits<Diamond::Left>::nil ()
 }
 
 ::CORBA::Boolean
-TAO::Objref_Traits<Diamond::Left>::marshal (Diamond::Left_ptr const p,TAO_OutputCDR & cdr)
+TAO::Objref_Traits<Diamond::Left>::marshal (Diamond::Left_ptr const p, TAO_OutputCDR &cdr)
 {
   return ::CORBA::Object::marshal (p, cdr);
 }
@@ -342,7 +304,7 @@ Diamond::Left::color ()
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
-      std::addressof(_tao_retval)
+      std::addressof (_tao_retval)
     };
 
   TAO::Invocation_Adapter _invocation_call (
@@ -352,10 +314,46 @@ Diamond::Left::color ()
       "color",
       5,
       TAO::TAO_CO_NONE | TAO::TAO_CO_DIRECT_STRATEGY | TAO::TAO_CO_THRU_POA_STRATEGY,
-      TAO::TAO_TWOWAY_INVOCATION
-      ,
+      TAO::TAO_TWOWAY_INVOCATION,
       TAO::TAO_SYNCHRONOUS_INVOCATION,
       false
+    );
+
+  _invocation_call.invoke (nullptr, 0);
+
+  return _tao_retval.retn ();
+}
+::CORBA::Long
+Diamond::Left::combine (
+  ::CORBA::Long first,
+  ::CORBA::Long & second,
+  ::CORBA::Long_out third)
+{
+  if (!this->is_evaluated ())
+    {
+      ::CORBA::Object::tao_object_initialize (this);
+    }
+
+  TAO::Arg_Traits<::CORBA::Long>::ret_val _tao_retval;
+  TAO::Arg_Traits<::CORBA::Long>::in_arg_val _tao_first (first);
+  TAO::Arg_Traits<::CORBA::Long>::inout_arg_val _tao_second (second);
+  TAO::Arg_Traits<::CORBA::Long>::out_arg_val _tao_third (third);
+
+  TAO::Argument *_the_tao_operation_signature [] =
+    {
+      std::addressof (_tao_retval),
+      std::addressof (_tao_first),
+      std::addressof (_tao_second),
+      std::addressof (_tao_third)
+    };
+
+  TAO::Invocation_Adapter _invocation_call (
+      this,
+      _the_tao_operation_signature,
+      4,
+      "combine",
+      7,
+      TAO::TAO_CO_NONE | TAO::TAO_CO_DIRECT_STRATEGY | TAO::TAO_CO_THRU_POA_STRATEGY
     );
 
   _invocation_call.invoke (nullptr, 0);
@@ -369,17 +367,14 @@ Diamond::Left::Left ()
 Diamond::Left_ptr
 Diamond::Left::_narrow (::CORBA::Object_ptr _tao_objref)
 {
-  Diamond::Left *proxy = TAO::Narrow_Utils<Left>::narrow (
-      _tao_objref,
-      "IDL:Diamond/Left:1.0");
+  Diamond::Left *proxy = TAO::Narrow_Utils<Left>::narrow (_tao_objref, "IDL:Diamond/Left:1.0");
   return TAO_Diamond_Left_PROXY_FACTORY_ADAPTER::instance ()->create_proxy (proxy);
 }
 
 Diamond::Left_ptr
 Diamond::Left::_unchecked_narrow (::CORBA::Object_ptr _tao_objref)
 {
-  Diamond::Left *proxy = TAO::Narrow_Utils<Left>::unchecked_narrow (
-      _tao_objref);
+  Diamond::Left *proxy = TAO::Narrow_Utils<Left>::unchecked_narrow (_tao_objref);
   return TAO_Diamond_Left_PROXY_FACTORY_ADAPTER::instance ()->create_proxy (proxy);
 }
 
@@ -409,8 +404,8 @@ Diamond::Left::_tao_release (Left_ptr obj)
 Diamond::Left::_is_a (char const *value)
 {
   if (std::strcmp (value, "IDL:Diamond/Top:1.0") == 0 ||
-      std::strcmp (value, "IDL:Diamond/Left:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0)
+    std::strcmp (value, "IDL:Diamond/Left:1.0") == 0 ||
+    std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0)
     {
       return true; // success using local knowledge
     }
@@ -436,22 +431,13 @@ Diamond::TAO_Diamond_Left_Default_Proxy_Factory::TAO_Diamond_Left_Default_Proxy_
   TAO_Diamond_Left_PROXY_FACTORY_ADAPTER::instance ()->register_proxy_factory (this, permanent);
 }
 
-Diamond::TAO_Diamond_Left_Default_Proxy_Factory::~TAO_Diamond_Left_Default_Proxy_Factory ()
-{
-}
-
 Diamond::Left_ptr
 Diamond::TAO_Diamond_Left_Default_Proxy_Factory::create_proxy (::Diamond::Left_ptr proxy)
 {
   return proxy;
 }
 
-Diamond::TAO_Diamond_Left_Proxy_Factory_Adapter::TAO_Diamond_Left_Proxy_Factory_Adapter ()
-  : proxy_factory_ (nullptr),
-    one_shot_factory_ (false),
-    disable_factory_ (false)
-{
-}
+Diamond::TAO_Diamond_Left_Default_Proxy_Factory::~TAO_Diamond_Left_Default_Proxy_Factory () = default;
 
 Diamond::TAO_Diamond_Left_Proxy_Factory_Adapter::~TAO_Diamond_Left_Proxy_Factory_Adapter ()
 {
@@ -463,13 +449,7 @@ void
 Diamond::TAO_Diamond_Left_Proxy_Factory_Adapter::register_proxy_factory (
   TAO_Diamond_Left_Default_Proxy_Factory *df, bool one_shot_factory)
 {
-  ACE_MT (
-      ACE_GUARD (
-          TAO_SYNCH_RECURSIVE_MUTEX,
-          ace_mon,
-          this->lock_
-        )
-    );
+  ACE_MT (ACE_GUARD (TAO_SYNCH_RECURSIVE_MUTEX, ace_mon, this->lock_));
 
   // Remove any existing <proxy_factory_> and replace with the new one.
   this->unregister_proxy_factory ();
@@ -480,20 +460,13 @@ Diamond::TAO_Diamond_Left_Proxy_Factory_Adapter::register_proxy_factory (
 void
 Diamond::TAO_Diamond_Left_Proxy_Factory_Adapter::unregister_proxy_factory ()
 {
-  ACE_MT (
-      ACE_GUARD (
-          TAO_SYNCH_RECURSIVE_MUTEX,
-          ace_mon,
-          this->lock_
-        )
-    );
+  ACE_MT (ACE_GUARD (TAO_SYNCH_RECURSIVE_MUTEX, ace_mon, this->lock_));
 
   if (this->one_shot_factory_)
     {
       this->disable_factory_ = true;
     }
-
-  if (this->one_shot_factory_ == false && this->proxy_factory_ != nullptr)
+  else
     {
       delete this->proxy_factory_;
       this->proxy_factory_ = nullptr;
@@ -501,12 +474,9 @@ Diamond::TAO_Diamond_Left_Proxy_Factory_Adapter::unregister_proxy_factory ()
 }
 
 Diamond::Left_ptr
-Diamond::TAO_Diamond_Left_Proxy_Factory_Adapter::create_proxy (
-    ::Diamond::Left_ptr proxy
-  )
+Diamond::TAO_Diamond_Left_Proxy_Factory_Adapter::create_proxy (::Diamond::Left_ptr proxy)
 {
-  ACE_MT (ACE_GUARD_RETURN (TAO_SYNCH_RECURSIVE_MUTEX, ace_mon,
-    this->lock_, nullptr));
+  ACE_MT (ACE_GUARD_RETURN (TAO_SYNCH_RECURSIVE_MUTEX, ace_mon, this->lock_, nullptr));
 
   // To take care of those <unchecked_narrow> methods where we
   // want to override the smart proxy factory if there exists one.
@@ -518,20 +488,13 @@ Diamond::TAO_Diamond_Left_Proxy_Factory_Adapter::create_proxy (
 
   // Verify that an <proxy_factory_> is available else make one.
   if (!this->proxy_factory_)
-    ACE_NEW_RETURN (this->proxy_factory_,
-        TAO_Diamond_Left_Default_Proxy_Factory (0),
-         nullptr);
-
+    {
+      ACE_NEW_RETURN (this->proxy_factory_, TAO_Diamond_Left_Default_Proxy_Factory (false), nullptr);
+    }
   return this->proxy_factory_->create_proxy (proxy);
 }
 
-Diamond::TAO_Diamond_Left_Smart_Proxy_Base::TAO_Diamond_Left_Smart_Proxy_Base ()
-{
-}
-
-Diamond::TAO_Diamond_Left_Smart_Proxy_Base::~TAO_Diamond_Left_Smart_Proxy_Base ()
-{
-}
+Diamond::TAO_Diamond_Left_Smart_Proxy_Base::~TAO_Diamond_Left_Smart_Proxy_Base () = default;
 
 TAO_Stub *
 Diamond::TAO_Diamond_Left_Smart_Proxy_Base::_stubobj () const
@@ -545,22 +508,32 @@ Diamond::TAO_Diamond_Left_Smart_Proxy_Base::_stubobj ()
   return this->base_proxy_->_stubobj ();
 }
 
-char * Diamond::TAO_Diamond_Left_Smart_Proxy_Base::color  (){
-  return this->get_proxy ()->color (
+char *
+Diamond::TAO_Diamond_Left_Smart_Proxy_Base::color ()
+{
+  return this->get_proxy ()->color ();
+}
 
-    );
-
+::CORBA::Long
+Diamond::TAO_Diamond_Left_Smart_Proxy_Base::combine (
+  ::CORBA::Long first,
+  ::CORBA::Long & second,
+  ::CORBA::Long_out third)
+{
+  return this->get_proxy ()->combine (
+    first,
+    second,
+    third);
 }
 
 Diamond::Left_ptr
 Diamond::TAO_Diamond_Left_Smart_Proxy_Base::get_proxy ()
-
 {
   // Obtain the real proxy stored in <base_proxy_>
   if (CORBA::is_nil (this->proxy_.in ()))
     {
-       // Verify whether factory is one-shot, if so disable
-       // factory temporarily or not else remove.
+      // Verify whether factory is one-shot, if so disable
+      // factory temporarily or not else remove.
       TAO_Diamond_Left_PROXY_FACTORY_ADAPTER::instance ()->unregister_proxy_factory ();
       this->proxy_ = ::Diamond::Left::_narrow (this->base_proxy_.in ());
     }
@@ -590,7 +563,7 @@ TAO::Objref_Traits<Diamond::Right>::nil ()
 }
 
 ::CORBA::Boolean
-TAO::Objref_Traits<Diamond::Right>::marshal (Diamond::Right_ptr const p,TAO_OutputCDR & cdr)
+TAO::Objref_Traits<Diamond::Right>::marshal (Diamond::Right_ptr const p, TAO_OutputCDR &cdr)
 {
   return ::CORBA::Object::marshal (p, cdr);
 }
@@ -609,7 +582,7 @@ Diamond::Right::width ()
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
-      std::addressof(_tao_retval)
+      std::addressof (_tao_retval)
     };
 
   TAO::Invocation_Adapter _invocation_call (
@@ -619,8 +592,7 @@ Diamond::Right::width ()
       "width",
       5,
       TAO::TAO_CO_NONE | TAO::TAO_CO_DIRECT_STRATEGY | TAO::TAO_CO_THRU_POA_STRATEGY,
-      TAO::TAO_TWOWAY_INVOCATION
-      ,
+      TAO::TAO_TWOWAY_INVOCATION,
       TAO::TAO_SYNCHRONOUS_INVOCATION,
       false
     );
@@ -636,17 +608,14 @@ Diamond::Right::Right ()
 Diamond::Right_ptr
 Diamond::Right::_narrow (::CORBA::Object_ptr _tao_objref)
 {
-  Diamond::Right *proxy = TAO::Narrow_Utils<Right>::narrow (
-      _tao_objref,
-      "IDL:Diamond/Right:1.0");
+  Diamond::Right *proxy = TAO::Narrow_Utils<Right>::narrow (_tao_objref, "IDL:Diamond/Right:1.0");
   return TAO_Diamond_Right_PROXY_FACTORY_ADAPTER::instance ()->create_proxy (proxy);
 }
 
 Diamond::Right_ptr
 Diamond::Right::_unchecked_narrow (::CORBA::Object_ptr _tao_objref)
 {
-  Diamond::Right *proxy = TAO::Narrow_Utils<Right>::unchecked_narrow (
-      _tao_objref);
+  Diamond::Right *proxy = TAO::Narrow_Utils<Right>::unchecked_narrow (_tao_objref);
   return TAO_Diamond_Right_PROXY_FACTORY_ADAPTER::instance ()->create_proxy (proxy);
 }
 
@@ -676,8 +645,8 @@ Diamond::Right::_tao_release (Right_ptr obj)
 Diamond::Right::_is_a (char const *value)
 {
   if (std::strcmp (value, "IDL:Diamond/Top:1.0") == 0 ||
-      std::strcmp (value, "IDL:Diamond/Right:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0)
+    std::strcmp (value, "IDL:Diamond/Right:1.0") == 0 ||
+    std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0)
     {
       return true; // success using local knowledge
     }
@@ -703,22 +672,13 @@ Diamond::TAO_Diamond_Right_Default_Proxy_Factory::TAO_Diamond_Right_Default_Prox
   TAO_Diamond_Right_PROXY_FACTORY_ADAPTER::instance ()->register_proxy_factory (this, permanent);
 }
 
-Diamond::TAO_Diamond_Right_Default_Proxy_Factory::~TAO_Diamond_Right_Default_Proxy_Factory ()
-{
-}
-
 Diamond::Right_ptr
 Diamond::TAO_Diamond_Right_Default_Proxy_Factory::create_proxy (::Diamond::Right_ptr proxy)
 {
   return proxy;
 }
 
-Diamond::TAO_Diamond_Right_Proxy_Factory_Adapter::TAO_Diamond_Right_Proxy_Factory_Adapter ()
-  : proxy_factory_ (nullptr),
-    one_shot_factory_ (false),
-    disable_factory_ (false)
-{
-}
+Diamond::TAO_Diamond_Right_Default_Proxy_Factory::~TAO_Diamond_Right_Default_Proxy_Factory () = default;
 
 Diamond::TAO_Diamond_Right_Proxy_Factory_Adapter::~TAO_Diamond_Right_Proxy_Factory_Adapter ()
 {
@@ -730,13 +690,7 @@ void
 Diamond::TAO_Diamond_Right_Proxy_Factory_Adapter::register_proxy_factory (
   TAO_Diamond_Right_Default_Proxy_Factory *df, bool one_shot_factory)
 {
-  ACE_MT (
-      ACE_GUARD (
-          TAO_SYNCH_RECURSIVE_MUTEX,
-          ace_mon,
-          this->lock_
-        )
-    );
+  ACE_MT (ACE_GUARD (TAO_SYNCH_RECURSIVE_MUTEX, ace_mon, this->lock_));
 
   // Remove any existing <proxy_factory_> and replace with the new one.
   this->unregister_proxy_factory ();
@@ -747,20 +701,13 @@ Diamond::TAO_Diamond_Right_Proxy_Factory_Adapter::register_proxy_factory (
 void
 Diamond::TAO_Diamond_Right_Proxy_Factory_Adapter::unregister_proxy_factory ()
 {
-  ACE_MT (
-      ACE_GUARD (
-          TAO_SYNCH_RECURSIVE_MUTEX,
-          ace_mon,
-          this->lock_
-        )
-    );
+  ACE_MT (ACE_GUARD (TAO_SYNCH_RECURSIVE_MUTEX, ace_mon, this->lock_));
 
   if (this->one_shot_factory_)
     {
       this->disable_factory_ = true;
     }
-
-  if (this->one_shot_factory_ == false && this->proxy_factory_ != nullptr)
+  else
     {
       delete this->proxy_factory_;
       this->proxy_factory_ = nullptr;
@@ -768,12 +715,9 @@ Diamond::TAO_Diamond_Right_Proxy_Factory_Adapter::unregister_proxy_factory ()
 }
 
 Diamond::Right_ptr
-Diamond::TAO_Diamond_Right_Proxy_Factory_Adapter::create_proxy (
-    ::Diamond::Right_ptr proxy
-  )
+Diamond::TAO_Diamond_Right_Proxy_Factory_Adapter::create_proxy (::Diamond::Right_ptr proxy)
 {
-  ACE_MT (ACE_GUARD_RETURN (TAO_SYNCH_RECURSIVE_MUTEX, ace_mon,
-    this->lock_, nullptr));
+  ACE_MT (ACE_GUARD_RETURN (TAO_SYNCH_RECURSIVE_MUTEX, ace_mon, this->lock_, nullptr));
 
   // To take care of those <unchecked_narrow> methods where we
   // want to override the smart proxy factory if there exists one.
@@ -785,20 +729,13 @@ Diamond::TAO_Diamond_Right_Proxy_Factory_Adapter::create_proxy (
 
   // Verify that an <proxy_factory_> is available else make one.
   if (!this->proxy_factory_)
-    ACE_NEW_RETURN (this->proxy_factory_,
-        TAO_Diamond_Right_Default_Proxy_Factory (0),
-         nullptr);
-
+    {
+      ACE_NEW_RETURN (this->proxy_factory_, TAO_Diamond_Right_Default_Proxy_Factory (false), nullptr);
+    }
   return this->proxy_factory_->create_proxy (proxy);
 }
 
-Diamond::TAO_Diamond_Right_Smart_Proxy_Base::TAO_Diamond_Right_Smart_Proxy_Base ()
-{
-}
-
-Diamond::TAO_Diamond_Right_Smart_Proxy_Base::~TAO_Diamond_Right_Smart_Proxy_Base ()
-{
-}
+Diamond::TAO_Diamond_Right_Smart_Proxy_Base::~TAO_Diamond_Right_Smart_Proxy_Base () = default;
 
 TAO_Stub *
 Diamond::TAO_Diamond_Right_Smart_Proxy_Base::_stubobj () const
@@ -812,22 +749,20 @@ Diamond::TAO_Diamond_Right_Smart_Proxy_Base::_stubobj ()
   return this->base_proxy_->_stubobj ();
 }
 
-::CORBA::Long Diamond::TAO_Diamond_Right_Smart_Proxy_Base::width  (){
-  return this->get_proxy ()->width (
-
-    );
-
+::CORBA::Long
+Diamond::TAO_Diamond_Right_Smart_Proxy_Base::width ()
+{
+  return this->get_proxy ()->width ();
 }
 
 Diamond::Right_ptr
 Diamond::TAO_Diamond_Right_Smart_Proxy_Base::get_proxy ()
-
 {
   // Obtain the real proxy stored in <base_proxy_>
   if (CORBA::is_nil (this->proxy_.in ()))
     {
-       // Verify whether factory is one-shot, if so disable
-       // factory temporarily or not else remove.
+      // Verify whether factory is one-shot, if so disable
+      // factory temporarily or not else remove.
       TAO_Diamond_Right_PROXY_FACTORY_ADAPTER::instance ()->unregister_proxy_factory ();
       this->proxy_ = ::Diamond::Right::_narrow (this->base_proxy_.in ());
     }
@@ -857,7 +792,7 @@ TAO::Objref_Traits<Diamond::Buttom>::nil ()
 }
 
 ::CORBA::Boolean
-TAO::Objref_Traits<Diamond::Buttom>::marshal (Diamond::Buttom_ptr const p,TAO_OutputCDR & cdr)
+TAO::Objref_Traits<Diamond::Buttom>::marshal (Diamond::Buttom_ptr const p, TAO_OutputCDR &cdr)
 {
   return ::CORBA::Object::marshal (p, cdr);
 }
@@ -876,7 +811,7 @@ Diamond::Buttom::name ()
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
-      std::addressof(_tao_retval)
+      std::addressof (_tao_retval)
     };
 
   TAO::Invocation_Adapter _invocation_call (
@@ -886,8 +821,7 @@ Diamond::Buttom::name ()
       "name",
       4,
       TAO::TAO_CO_NONE | TAO::TAO_CO_DIRECT_STRATEGY | TAO::TAO_CO_THRU_POA_STRATEGY,
-      TAO::TAO_TWOWAY_INVOCATION
-      ,
+      TAO::TAO_TWOWAY_INVOCATION,
       TAO::TAO_SYNCHRONOUS_INVOCATION,
       false
     );
@@ -903,17 +837,14 @@ Diamond::Buttom::Buttom ()
 Diamond::Buttom_ptr
 Diamond::Buttom::_narrow (::CORBA::Object_ptr _tao_objref)
 {
-  Diamond::Buttom *proxy = TAO::Narrow_Utils<Buttom>::narrow (
-      _tao_objref,
-      "IDL:Diamond/Buttom:1.0");
+  Diamond::Buttom *proxy = TAO::Narrow_Utils<Buttom>::narrow (_tao_objref, "IDL:Diamond/Buttom:1.0");
   return TAO_Diamond_Buttom_PROXY_FACTORY_ADAPTER::instance ()->create_proxy (proxy);
 }
 
 Diamond::Buttom_ptr
 Diamond::Buttom::_unchecked_narrow (::CORBA::Object_ptr _tao_objref)
 {
-  Diamond::Buttom *proxy = TAO::Narrow_Utils<Buttom>::unchecked_narrow (
-      _tao_objref);
+  Diamond::Buttom *proxy = TAO::Narrow_Utils<Buttom>::unchecked_narrow (_tao_objref);
   return TAO_Diamond_Buttom_PROXY_FACTORY_ADAPTER::instance ()->create_proxy (proxy);
 }
 
@@ -943,10 +874,10 @@ Diamond::Buttom::_tao_release (Buttom_ptr obj)
 Diamond::Buttom::_is_a (char const *value)
 {
   if (std::strcmp (value, "IDL:Diamond/Top:1.0") == 0 ||
-      std::strcmp (value, "IDL:Diamond/Left:1.0") == 0 ||
-      std::strcmp (value, "IDL:Diamond/Right:1.0") == 0 ||
-      std::strcmp (value, "IDL:Diamond/Buttom:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0)
+    std::strcmp (value, "IDL:Diamond/Left:1.0") == 0 ||
+    std::strcmp (value, "IDL:Diamond/Right:1.0") == 0 ||
+    std::strcmp (value, "IDL:Diamond/Buttom:1.0") == 0 ||
+    std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0)
     {
       return true; // success using local knowledge
     }
@@ -972,22 +903,13 @@ Diamond::TAO_Diamond_Buttom_Default_Proxy_Factory::TAO_Diamond_Buttom_Default_Pr
   TAO_Diamond_Buttom_PROXY_FACTORY_ADAPTER::instance ()->register_proxy_factory (this, permanent);
 }
 
-Diamond::TAO_Diamond_Buttom_Default_Proxy_Factory::~TAO_Diamond_Buttom_Default_Proxy_Factory ()
-{
-}
-
 Diamond::Buttom_ptr
 Diamond::TAO_Diamond_Buttom_Default_Proxy_Factory::create_proxy (::Diamond::Buttom_ptr proxy)
 {
   return proxy;
 }
 
-Diamond::TAO_Diamond_Buttom_Proxy_Factory_Adapter::TAO_Diamond_Buttom_Proxy_Factory_Adapter ()
-  : proxy_factory_ (nullptr),
-    one_shot_factory_ (false),
-    disable_factory_ (false)
-{
-}
+Diamond::TAO_Diamond_Buttom_Default_Proxy_Factory::~TAO_Diamond_Buttom_Default_Proxy_Factory () = default;
 
 Diamond::TAO_Diamond_Buttom_Proxy_Factory_Adapter::~TAO_Diamond_Buttom_Proxy_Factory_Adapter ()
 {
@@ -999,13 +921,7 @@ void
 Diamond::TAO_Diamond_Buttom_Proxy_Factory_Adapter::register_proxy_factory (
   TAO_Diamond_Buttom_Default_Proxy_Factory *df, bool one_shot_factory)
 {
-  ACE_MT (
-      ACE_GUARD (
-          TAO_SYNCH_RECURSIVE_MUTEX,
-          ace_mon,
-          this->lock_
-        )
-    );
+  ACE_MT (ACE_GUARD (TAO_SYNCH_RECURSIVE_MUTEX, ace_mon, this->lock_));
 
   // Remove any existing <proxy_factory_> and replace with the new one.
   this->unregister_proxy_factory ();
@@ -1016,20 +932,13 @@ Diamond::TAO_Diamond_Buttom_Proxy_Factory_Adapter::register_proxy_factory (
 void
 Diamond::TAO_Diamond_Buttom_Proxy_Factory_Adapter::unregister_proxy_factory ()
 {
-  ACE_MT (
-      ACE_GUARD (
-          TAO_SYNCH_RECURSIVE_MUTEX,
-          ace_mon,
-          this->lock_
-        )
-    );
+  ACE_MT (ACE_GUARD (TAO_SYNCH_RECURSIVE_MUTEX, ace_mon, this->lock_));
 
   if (this->one_shot_factory_)
     {
       this->disable_factory_ = true;
     }
-
-  if (this->one_shot_factory_ == false && this->proxy_factory_ != nullptr)
+  else
     {
       delete this->proxy_factory_;
       this->proxy_factory_ = nullptr;
@@ -1037,12 +946,9 @@ Diamond::TAO_Diamond_Buttom_Proxy_Factory_Adapter::unregister_proxy_factory ()
 }
 
 Diamond::Buttom_ptr
-Diamond::TAO_Diamond_Buttom_Proxy_Factory_Adapter::create_proxy (
-    ::Diamond::Buttom_ptr proxy
-  )
+Diamond::TAO_Diamond_Buttom_Proxy_Factory_Adapter::create_proxy (::Diamond::Buttom_ptr proxy)
 {
-  ACE_MT (ACE_GUARD_RETURN (TAO_SYNCH_RECURSIVE_MUTEX, ace_mon,
-    this->lock_, nullptr));
+  ACE_MT (ACE_GUARD_RETURN (TAO_SYNCH_RECURSIVE_MUTEX, ace_mon, this->lock_, nullptr));
 
   // To take care of those <unchecked_narrow> methods where we
   // want to override the smart proxy factory if there exists one.
@@ -1054,20 +960,13 @@ Diamond::TAO_Diamond_Buttom_Proxy_Factory_Adapter::create_proxy (
 
   // Verify that an <proxy_factory_> is available else make one.
   if (!this->proxy_factory_)
-    ACE_NEW_RETURN (this->proxy_factory_,
-        TAO_Diamond_Buttom_Default_Proxy_Factory (0),
-         nullptr);
-
+    {
+      ACE_NEW_RETURN (this->proxy_factory_, TAO_Diamond_Buttom_Default_Proxy_Factory (false), nullptr);
+    }
   return this->proxy_factory_->create_proxy (proxy);
 }
 
-Diamond::TAO_Diamond_Buttom_Smart_Proxy_Base::TAO_Diamond_Buttom_Smart_Proxy_Base ()
-{
-}
-
-Diamond::TAO_Diamond_Buttom_Smart_Proxy_Base::~TAO_Diamond_Buttom_Smart_Proxy_Base ()
-{
-}
+Diamond::TAO_Diamond_Buttom_Smart_Proxy_Base::~TAO_Diamond_Buttom_Smart_Proxy_Base () = default;
 
 TAO_Stub *
 Diamond::TAO_Diamond_Buttom_Smart_Proxy_Base::_stubobj () const
@@ -1081,22 +980,20 @@ Diamond::TAO_Diamond_Buttom_Smart_Proxy_Base::_stubobj ()
   return this->base_proxy_->_stubobj ();
 }
 
-char * Diamond::TAO_Diamond_Buttom_Smart_Proxy_Base::name  (){
-  return this->get_proxy ()->name (
-
-    );
-
+char *
+Diamond::TAO_Diamond_Buttom_Smart_Proxy_Base::name ()
+{
+  return this->get_proxy ()->name ();
 }
 
 Diamond::Buttom_ptr
 Diamond::TAO_Diamond_Buttom_Smart_Proxy_Base::get_proxy ()
-
 {
   // Obtain the real proxy stored in <base_proxy_>
   if (CORBA::is_nil (this->proxy_.in ()))
     {
-       // Verify whether factory is one-shot, if so disable
-       // factory temporarily or not else remove.
+      // Verify whether factory is one-shot, if so disable
+      // factory temporarily or not else remove.
       TAO_Diamond_Buttom_PROXY_FACTORY_ADAPTER::instance ()->unregister_proxy_factory ();
       this->proxy_ = ::Diamond::Buttom::_narrow (this->base_proxy_.in ());
     }
@@ -1218,4 +1115,3 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-

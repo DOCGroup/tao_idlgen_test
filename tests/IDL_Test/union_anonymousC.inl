@@ -665,4 +665,3 @@ decl_heavy_union::m_anon_long_array () const
     }
   return this->u_.m_anon_long_array_;
 }
-

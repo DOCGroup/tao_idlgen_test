@@ -109,4 +109,3 @@ namespace POA_Plesk
 #include /**/ "ace/post.h"
 
 #endif /* ifndef */
-

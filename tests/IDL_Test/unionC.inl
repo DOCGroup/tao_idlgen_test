@@ -4130,4 +4130,3 @@ ResetWithNoopBranches::struct_value ()
     }
   return this->u_.struct_value_;
 }
-

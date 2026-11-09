@@ -124,9 +124,7 @@ public:
 
   // The static operations.
   static FieldDevice_T_ptr _duplicate (FieldDevice_T_ptr obj);
-
   static void _tao_release (FieldDevice_T_ptr obj);
-
   static FieldDevice_T_ptr _narrow (::CORBA::Object_ptr obj);
   static FieldDevice_T_ptr _unchecked_narrow (::CORBA::Object_ptr obj);
   static FieldDevice_T_ptr _nil ();
@@ -156,15 +154,14 @@ protected:
 
   // Non-local interface only.
   FieldDevice_T (
-      TAO_Stub *objref,
-      ::CORBA::Boolean _tao_collocated = false,
-      TAO_Abstract_ServantBase *servant = nullptr,
-      TAO_ORB_Core *orb_core = nullptr);
+    TAO_Stub *objref,
+    ::CORBA::Boolean _tao_collocated = false,
+    TAO_Abstract_ServantBase *servant = nullptr,
+    TAO_ORB_Core *orb_core = nullptr);
 
   ~FieldDevice_T () override = default;
 
 private:
-  // Private and unimplemented for concrete interfaces.
   FieldDevice_T (FieldDevice_T const &) = delete;
   FieldDevice_T (FieldDevice_T &&) = delete;
   FieldDevice_T &operator= (FieldDevice_T const &) = delete;
@@ -279,9 +276,7 @@ public:
 
   // The static operations.
   static AMH_FieldDevice_TResponseHandler_ptr _duplicate (AMH_FieldDevice_TResponseHandler_ptr obj);
-
   static void _tao_release (AMH_FieldDevice_TResponseHandler_ptr obj);
-
   static AMH_FieldDevice_TResponseHandler_ptr _narrow (::CORBA::Object_ptr obj);
   static AMH_FieldDevice_TResponseHandler_ptr _unchecked_narrow (::CORBA::Object_ptr obj);
   static AMH_FieldDevice_TResponseHandler_ptr _nil ();
@@ -311,7 +306,6 @@ protected:
   ~AMH_FieldDevice_TResponseHandler () override = default;
 
 private:
-  // Private and unimplemented for concrete interfaces.
   AMH_FieldDevice_TResponseHandler (AMH_FieldDevice_TResponseHandler const &) = delete;
   AMH_FieldDevice_TResponseHandler (AMH_FieldDevice_TResponseHandler &&) = delete;
   AMH_FieldDevice_TResponseHandler &operator= (AMH_FieldDevice_TResponseHandler const &) = delete;
@@ -331,7 +325,6 @@ using AMI_FieldDevice_THandler_out = TAO_Objref_Out_T<AMI_FieldDevice_THandler>;
 
 class TAO_IDL_TEST_STUB_Export AMI_FieldDevice_THandler
   : public virtual ::Messaging::ReplyHandler
-
 {
 public:
   friend class TAO::Narrow_Utils<AMI_FieldDevice_THandler>;
@@ -343,9 +336,7 @@ public:
 
   // The static operations.
   static AMI_FieldDevice_THandler_ptr _duplicate (AMI_FieldDevice_THandler_ptr obj);
-
   static void _tao_release (AMI_FieldDevice_THandler_ptr obj);
-
   static AMI_FieldDevice_THandler_ptr _narrow (::CORBA::Object_ptr obj);
   static AMI_FieldDevice_THandler_ptr _unchecked_narrow (::CORBA::Object_ptr obj);
   static AMI_FieldDevice_THandler_ptr _nil ();
@@ -389,15 +380,14 @@ protected:
 
   // Non-local interface only.
   AMI_FieldDevice_THandler (
-      TAO_Stub *objref,
-      ::CORBA::Boolean _tao_collocated = false,
-      TAO_Abstract_ServantBase *servant = nullptr,
-      TAO_ORB_Core *orb_core = nullptr);
+    TAO_Stub *objref,
+    ::CORBA::Boolean _tao_collocated = false,
+    TAO_Abstract_ServantBase *servant = nullptr,
+    TAO_ORB_Core *orb_core = nullptr);
 
   ~AMI_FieldDevice_THandler () override = default;
 
 private:
-  // Private and unimplemented for concrete interfaces.
   AMI_FieldDevice_THandler (AMI_FieldDevice_THandler const &) = delete;
   AMI_FieldDevice_THandler (AMI_FieldDevice_THandler &&) = delete;
   AMI_FieldDevice_THandler &operator= (AMI_FieldDevice_THandler const &) = delete;
@@ -691,4 +681,3 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 #include /**/ "ace/post.h"
 
 #endif /* ifndef */
-

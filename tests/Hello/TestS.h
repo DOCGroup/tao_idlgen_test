@@ -99,15 +99,15 @@ namespace POA_Test
     virtual char * get_string () = 0;
 
     static void get_string_skel (
-        TAO_ServerRequest &server_request,
-        TAO::Portable_Server::Servant_Upcall *servant_upcall,
-        TAO_ServantBase *servant);
+      TAO_ServerRequest &server_request,
+      TAO::Portable_Server::Servant_Upcall *servant_upcall,
+      TAO_ServantBase *servant);
     virtual void shutdown () = 0;
 
     static void shutdown_skel (
-        TAO_ServerRequest &server_request,
-        TAO::Portable_Server::Servant_Upcall *servant_upcall,
-        TAO_ServantBase *servant);
+      TAO_ServerRequest &server_request,
+      TAO::Portable_Server::Servant_Upcall *servant_upcall,
+      TAO_ServantBase *servant);
   };
 
 } // module Test
@@ -115,4 +115,3 @@ namespace POA_Test
 #include /**/ "ace/post.h"
 
 #endif /* ifndef */
-

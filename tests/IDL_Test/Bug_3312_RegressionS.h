@@ -116,4 +116,3 @@ namespace POA_CallMe
 #include /**/ "ace/post.h"
 
 #endif /* ifndef */
-

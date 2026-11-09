@@ -34,18 +34,13 @@ Data_T::_tao_obv_static_repository_id ()
 
 ACE_INLINE
 User_T::User_T (
-    TAO_Stub *objref,
-    ::CORBA::Boolean _tao_collocated,
-    TAO_Abstract_ServantBase *servant,
-    TAO_ORB_Core *oc)
+  TAO_Stub *objref, ::CORBA::Boolean _tao_collocated, TAO_Abstract_ServantBase *servant, TAO_ORB_Core *oc)
   : ::CORBA::Object (objref, _tao_collocated, servant, oc)
 {
 }
 
 ACE_INLINE
-User_T::User_T (
-    ::IOP::IOR *ior,
-    TAO_ORB_Core *oc)
+User_T::User_T (::IOP::IOR *ior, TAO_ORB_Core *oc)
   : ::CORBA::Object (ior, oc)
 {
 }
@@ -62,19 +57,13 @@ AMH_User_TExceptionHolder::_tao_obv_static_repository_id ()
 
 ACE_INLINE
 AMI_User_THandler::AMI_User_THandler (
-    TAO_Stub *objref,
-    ::CORBA::Boolean _tao_collocated,
-    TAO_Abstract_ServantBase *servant,
-    TAO_ORB_Core *oc)
+  TAO_Stub *objref, ::CORBA::Boolean _tao_collocated, TAO_Abstract_ServantBase *servant, TAO_ORB_Core *oc)
   : ::CORBA::Object (objref, _tao_collocated, servant, oc)
 {
 }
 
 ACE_INLINE
-AMI_User_THandler::AMI_User_THandler (
-    ::IOP::IOR *ior,
-    TAO_ORB_Core *oc)
+AMI_User_THandler::AMI_User_THandler (::IOP::IOR *ior, TAO_ORB_Core *oc)
   : ::CORBA::Object (ior, oc)
 {
 }
-

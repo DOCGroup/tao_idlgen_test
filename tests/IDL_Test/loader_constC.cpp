@@ -46,4 +46,3 @@
 #if !defined (__ACE_INLINE__)
 #include "loader_constC.inl"
 #endif /* !defined INLINE */
-

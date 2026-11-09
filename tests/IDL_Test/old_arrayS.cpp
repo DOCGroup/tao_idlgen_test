@@ -63,8 +63,8 @@ public:
   TAO_operation_db_entry const * lookup (char const *str, std::size_t len) override;
 };
 
-/* C++ code produced by gperf version 2.8 (ACE version 8.0.8) */
-/* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F nullptr,nullptr -a -o -t -p -K opname -L C++17 -Z TAO_OldArray_AMH_A_i_Perfect_Hash_OpTable -N lookup */
+/* C++ code produced by ACE gperf version 8.0.8 */
+/* Command-line: ace_gperf -m -M -J -Q -R -c -C -D -E -T -f 0 -F nullptr,nullptr -o -t -p -K opname -Z TAO_OldArray_AMH_A_i_Perfect_Hash_OpTable -N lookup */
 
 std::size_t
 TAO_OldArray_AMH_A_i_Perfect_Hash_OpTable::hash (char const *str, std::size_t len)
@@ -389,11 +389,9 @@ POA_OldArray::AMH_A_i::_set_attribute_array_skel (
 
 ::CORBA::Boolean POA_OldArray::AMH_A_i::_is_a (char const *value)
 {
-  return
-    (
-      std::strcmp (value, "IDL:OldArray/A_i:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0
-    );
+  return (
+    std::strcmp (value, "IDL:OldArray/A_i:1.0") == 0 ||
+    std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0);
 }
 
 char const *POA_OldArray::AMH_A_i::_interface_repository_id () const
@@ -431,8 +429,8 @@ public:
   TAO_operation_db_entry const * lookup (char const *str, std::size_t len) override;
 };
 
-/* C++ code produced by gperf version 2.8 (ACE version 8.0.8) */
-/* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F nullptr,nullptr -a -o -t -p -K opname -L C++17 -Z TAO_OldArray_A_i_Perfect_Hash_OpTable -N lookup */
+/* C++ code produced by ACE gperf version 8.0.8 */
+/* Command-line: ace_gperf -m -M -J -Q -R -c -C -D -E -T -f 0 -F nullptr,nullptr -o -t -p -K opname -Z TAO_OldArray_A_i_Perfect_Hash_OpTable -N lookup */
 
 std::size_t
 TAO_OldArray_A_i_Perfect_Hash_OpTable::hash (char const *str, std::size_t len)
@@ -523,116 +521,104 @@ TAO_OldArray_A_i_Perfect_Hash_OpTable::lookup (char const *str, std::size_t len)
 
 static TAO_OldArray_A_i_Perfect_Hash_OpTable tao_OldArray_A_i_optable;
 
-///////////////////////////////////////////////////////////////////////
-//                 Direct Proxy  Implementation
-//
-
-POA_OldArray::_TAO_A_i_Direct_Proxy_Impl::~_TAO_A_i_Direct_Proxy_Impl ()
-{
-}
+POA_OldArray::_TAO_A_i_Direct_Proxy_Impl::~_TAO_A_i_Direct_Proxy_Impl () = default;
 
 void
-POA_OldArray::_TAO_A_i_Direct_Proxy_Impl::op (
-    TAO_Abstract_ServantBase  *servant,
-    TAO::Argument ** args)
-
+POA_OldArray::_TAO_A_i_Direct_Proxy_Impl::op (TAO_Abstract_ServantBase *servant, TAO::Argument **args)
 {
-  POA_OldArray::A_i_ptr _tao_ptr =
-    dynamic_cast<POA_OldArray::A_i_ptr> (servant);
+  POA_OldArray::A_i_ptr _tao_ptr = dynamic_cast<POA_OldArray::A_i_ptr> (servant);
   if (!_tao_ptr)
     {
       throw ::CORBA::INTERNAL ();
     }
+  using _tao_retval_type = TAO::Arg_Traits<::OldArray::A>::ret_val;
+  _tao_retval_type * const _tao_retval = static_cast<_tao_retval_type *> (args[0]);
+  using _tao_arg_1_type = TAO::Arg_Traits<::OldArray::A>::in_arg_val;
+  _tao_arg_1_type * const _tao_arg_1 = static_cast<_tao_arg_1_type *> (args[1]);
+  using _tao_arg_2_type = TAO::Arg_Traits<::OldArray::A>::inout_arg_val;
+  _tao_arg_2_type * const _tao_arg_2 = static_cast<_tao_arg_2_type *> (args[2]);
+  using _tao_arg_3_type = TAO::Arg_Traits<::OldArray::A>::out_arg_val;
+  _tao_arg_3_type * const _tao_arg_3 = static_cast<_tao_arg_3_type *> (args[3]);
 
-  ((TAO::Arg_Traits<::OldArray::A>::ret_val *) args[0])->arg () =
-    _tao_ptr->op (
-          ((TAO::Arg_Traits<::OldArray::A>::in_arg_val *) args[1])->arg (),
-          ((TAO::Arg_Traits<::OldArray::A>::inout_arg_val *) args[2])->arg (),
-          ((TAO::Arg_Traits<::OldArray::A>::out_arg_val *) args[3])->arg ()
-        );
+  _tao_retval->arg () = _tao_ptr->op (
+    _tao_arg_1->arg (),
+    _tao_arg_2->arg (),
+    _tao_arg_3->arg ());
 }
 
 void
-POA_OldArray::_TAO_A_i_Direct_Proxy_Impl::op2 (
-    TAO_Abstract_ServantBase  *servant,
-    TAO::Argument ** args)
-
+POA_OldArray::_TAO_A_i_Direct_Proxy_Impl::op2 (TAO_Abstract_ServantBase *servant, TAO::Argument **args)
 {
-  POA_OldArray::A_i_ptr _tao_ptr =
-    dynamic_cast<POA_OldArray::A_i_ptr> (servant);
+  POA_OldArray::A_i_ptr _tao_ptr = dynamic_cast<POA_OldArray::A_i_ptr> (servant);
   if (!_tao_ptr)
     {
       throw ::CORBA::INTERNAL ();
     }
+  using _tao_retval_type = TAO::Arg_Traits<::OldArray::str22_tag>::ret_val;
+  _tao_retval_type * const _tao_retval = static_cast<_tao_retval_type *> (args[0]);
+  using _tao_arg_1_type = TAO::Arg_Traits<::OldArray::str22_tag>::in_arg_val;
+  _tao_arg_1_type * const _tao_arg_1 = static_cast<_tao_arg_1_type *> (args[1]);
+  using _tao_arg_2_type = TAO::Arg_Traits<::OldArray::str22_tag>::inout_arg_val;
+  _tao_arg_2_type * const _tao_arg_2 = static_cast<_tao_arg_2_type *> (args[2]);
+  using _tao_arg_3_type = TAO::Arg_Traits<::OldArray::str22_tag>::out_arg_val;
+  _tao_arg_3_type * const _tao_arg_3 = static_cast<_tao_arg_3_type *> (args[3]);
 
-  ((TAO::Arg_Traits<::OldArray::str22_tag>::ret_val *) args[0])->arg () =
-    _tao_ptr->op2 (
-          ((TAO::Arg_Traits<::OldArray::str22_tag>::in_arg_val *) args[1])->arg (),
-          ((TAO::Arg_Traits<::OldArray::str22_tag>::inout_arg_val *) args[2])->arg (),
-          ((TAO::Arg_Traits<::OldArray::str22_tag>::out_arg_val *) args[3])->arg ()
-        );
+  _tao_retval->arg () = _tao_ptr->op2 (
+    _tao_arg_1->arg (),
+    _tao_arg_2->arg (),
+    _tao_arg_3->arg ());
 }
 
 void
-POA_OldArray::_TAO_A_i_Direct_Proxy_Impl::op4 (
-    TAO_Abstract_ServantBase  *servant,
-    TAO::Argument ** args)
-
+POA_OldArray::_TAO_A_i_Direct_Proxy_Impl::op4 (TAO_Abstract_ServantBase *servant, TAO::Argument **args)
 {
-  POA_OldArray::A_i_ptr _tao_ptr =
-    dynamic_cast<POA_OldArray::A_i_ptr> (servant);
+  POA_OldArray::A_i_ptr _tao_ptr = dynamic_cast<POA_OldArray::A_i_ptr> (servant);
   if (!_tao_ptr)
     {
       throw ::CORBA::INTERNAL ();
     }
+  using _tao_retval_type = TAO::Arg_Traits<::OldArray::A_matrix_tag>::ret_val;
+  _tao_retval_type * const _tao_retval = static_cast<_tao_retval_type *> (args[0]);
+  using _tao_arg_1_type = TAO::Arg_Traits<::OldArray::A>::in_arg_val;
+  _tao_arg_1_type * const _tao_arg_1 = static_cast<_tao_arg_1_type *> (args[1]);
+  using _tao_arg_2_type = TAO::Arg_Traits<::OldArray::A>::inout_arg_val;
+  _tao_arg_2_type * const _tao_arg_2 = static_cast<_tao_arg_2_type *> (args[2]);
+  using _tao_arg_3_type = TAO::Arg_Traits<::OldArray::A>::out_arg_val;
+  _tao_arg_3_type * const _tao_arg_3 = static_cast<_tao_arg_3_type *> (args[3]);
 
-  ((TAO::Arg_Traits<::OldArray::A_matrix_tag>::ret_val *) args[0])->arg () =
-    _tao_ptr->op4 (
-          ((TAO::Arg_Traits<::OldArray::A>::in_arg_val *) args[1])->arg (),
-          ((TAO::Arg_Traits<::OldArray::A>::inout_arg_val *) args[2])->arg (),
-          ((TAO::Arg_Traits<::OldArray::A>::out_arg_val *) args[3])->arg ()
-        );
+  _tao_retval->arg () = _tao_ptr->op4 (
+    _tao_arg_1->arg (),
+    _tao_arg_2->arg (),
+    _tao_arg_3->arg ());
 }
 
 void
-POA_OldArray::_TAO_A_i_Direct_Proxy_Impl::_get_attribute_array (
-    TAO_Abstract_ServantBase  *servant,
-    TAO::Argument ** args)
-
+POA_OldArray::_TAO_A_i_Direct_Proxy_Impl::_get_attribute_array (TAO_Abstract_ServantBase *servant, TAO::Argument **args)
 {
-  POA_OldArray::A_i_ptr _tao_ptr =
-    dynamic_cast<POA_OldArray::A_i_ptr> (servant);
+  POA_OldArray::A_i_ptr _tao_ptr = dynamic_cast<POA_OldArray::A_i_ptr> (servant);
   if (!_tao_ptr)
     {
       throw ::CORBA::INTERNAL ();
     }
-
-  ((TAO::Arg_Traits<::OldArray::str22_tag>::ret_val *) args[0])->arg () =
-    _tao_ptr->attribute_array (
-        );
+  using _tao_retval_type = TAO::Arg_Traits<::OldArray::str22_tag>::ret_val;
+  _tao_retval_type * const _tao_retval = static_cast<_tao_retval_type *> (args[0]);
+  _tao_retval->arg () = _tao_ptr->attribute_array ();
 }
 
 void
-POA_OldArray::_TAO_A_i_Direct_Proxy_Impl::_set_attribute_array (
-    TAO_Abstract_ServantBase  *servant,
-    TAO::Argument ** args)
-
+POA_OldArray::_TAO_A_i_Direct_Proxy_Impl::_set_attribute_array (TAO_Abstract_ServantBase *servant, TAO::Argument **args)
 {
-  POA_OldArray::A_i_ptr _tao_ptr =
-    dynamic_cast<POA_OldArray::A_i_ptr> (servant);
+  POA_OldArray::A_i_ptr _tao_ptr = dynamic_cast<POA_OldArray::A_i_ptr> (servant);
   if (!_tao_ptr)
     {
       throw ::CORBA::INTERNAL ();
     }
+  using _tao_arg_1_type = TAO::Arg_Traits<::OldArray::str22_tag>::in_arg_val;
+  _tao_arg_1_type * const _tao_arg_1 = static_cast<_tao_arg_1_type *> (args[1]);
 
   _tao_ptr->attribute_array (
-        ((TAO::Arg_Traits<::OldArray::str22_tag>::in_arg_val *) args[1])->arg ()
-      );
+    _tao_arg_1->arg ());
 }
-
-//
-//           End Direct Proxy Implementation
-///////////////////////////////////////////////////////////////////////
 
 POA_OldArray::A_i::A_i ()
 {
@@ -654,11 +640,9 @@ namespace POA_OldArray
 
     void execute () override
     {
-      TAO::SArg_Traits<::OldArray::A>::ret_arg_type retval =
-        TAO::Portable_Server::get_ret_arg<::OldArray::A> (
-          this->operation_details_,
-          this->args_);
-
+      TAO::SArg_Traits<::OldArray::A>::ret_arg_type retval = TAO::Portable_Server::get_ret_arg<::OldArray::A> (
+        this->operation_details_,
+        this->args_);
       TAO::SArg_Traits<::OldArray::A>::in_arg_type arg_1 =
         TAO::Portable_Server::get_in_arg<::OldArray::A> (
           this->operation_details_,
@@ -748,11 +732,9 @@ namespace POA_OldArray
 
     void execute () override
     {
-      TAO::SArg_Traits<::OldArray::str22_tag>::ret_arg_type retval =
-        TAO::Portable_Server::get_ret_arg<::OldArray::str22_tag> (
-          this->operation_details_,
-          this->args_);
-
+      TAO::SArg_Traits<::OldArray::str22_tag>::ret_arg_type retval = TAO::Portable_Server::get_ret_arg<::OldArray::str22_tag> (
+        this->operation_details_,
+        this->args_);
       TAO::SArg_Traits<::OldArray::str22_tag>::in_arg_type arg_1 =
         TAO::Portable_Server::get_in_arg<::OldArray::str22_tag> (
           this->operation_details_,
@@ -842,11 +824,9 @@ namespace POA_OldArray
 
     void execute () override
     {
-      TAO::SArg_Traits<::OldArray::A_matrix_tag>::ret_arg_type retval =
-        TAO::Portable_Server::get_ret_arg<::OldArray::A_matrix_tag> (
-          this->operation_details_,
-          this->args_);
-
+      TAO::SArg_Traits<::OldArray::A_matrix_tag>::ret_arg_type retval = TAO::Portable_Server::get_ret_arg<::OldArray::A_matrix_tag> (
+        this->operation_details_,
+        this->args_);
       TAO::SArg_Traits<::OldArray::A>::in_arg_type arg_1 =
         TAO::Portable_Server::get_in_arg<::OldArray::A> (
           this->operation_details_,
@@ -936,13 +916,10 @@ namespace POA_OldArray
 
     void execute () override
     {
-      TAO::SArg_Traits<::OldArray::str22_tag>::ret_arg_type retval =
-        TAO::Portable_Server::get_ret_arg<::OldArray::str22_tag> (
-          this->operation_details_,
-          this->args_);
-
-      retval =
-        this->servant_->attribute_array ();
+      TAO::SArg_Traits<::OldArray::str22_tag>::ret_arg_type retval = TAO::Portable_Server::get_ret_arg<::OldArray::str22_tag> (
+        this->operation_details_,
+        this->args_);
+      retval = this->servant_->attribute_array ();
     }
 
   private:
@@ -1060,11 +1037,9 @@ void POA_OldArray::A_i::_set_attribute_array_skel (
 
 ::CORBA::Boolean POA_OldArray::A_i::_is_a (char const *value)
 {
-  return
-    (
-      std::strcmp (value, "IDL:OldArray/A_i:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0
-    );
+  return (
+    std::strcmp (value, "IDL:OldArray/A_i:1.0") == 0 ||
+    std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0);
 }
 
 char const *POA_OldArray::A_i::_interface_repository_id () const
@@ -1247,8 +1222,8 @@ public:
   TAO_operation_db_entry const * lookup (char const *str, std::size_t len) override;
 };
 
-/* C++ code produced by gperf version 2.8 (ACE version 8.0.8) */
-/* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F nullptr,nullptr -a -o -t -p -K opname -L C++17 -Z TAO_OldArray_AMI_A_iHandler_Perfect_Hash_OpTable -N lookup */
+/* C++ code produced by ACE gperf version 8.0.8 */
+/* Command-line: ace_gperf -m -M -J -Q -R -c -C -D -E -T -f 0 -F nullptr,nullptr -o -t -p -K opname -Z TAO_OldArray_AMI_A_iHandler_Perfect_Hash_OpTable -N lookup */
 
 std::size_t
 TAO_OldArray_AMI_A_iHandler_Perfect_Hash_OpTable::hash (char const *str, std::size_t len)
@@ -1345,202 +1320,179 @@ TAO_OldArray_AMI_A_iHandler_Perfect_Hash_OpTable::lookup (char const *str, std::
 
 static TAO_OldArray_AMI_A_iHandler_Perfect_Hash_OpTable tao_OldArray_AMI_A_iHandler_optable;
 
-///////////////////////////////////////////////////////////////////////
-//                 Direct Proxy  Implementation
-//
-
-POA_OldArray::_TAO_AMI_A_iHandler_Direct_Proxy_Impl::~_TAO_AMI_A_iHandler_Direct_Proxy_Impl ()
-{
-}
+POA_OldArray::_TAO_AMI_A_iHandler_Direct_Proxy_Impl::~_TAO_AMI_A_iHandler_Direct_Proxy_Impl () = default;
 
 void
-POA_OldArray::_TAO_AMI_A_iHandler_Direct_Proxy_Impl::op (
-    TAO_Abstract_ServantBase  *servant,
-    TAO::Argument ** args)
-
+POA_OldArray::_TAO_AMI_A_iHandler_Direct_Proxy_Impl::op (TAO_Abstract_ServantBase *servant, TAO::Argument **args)
 {
-  POA_OldArray::AMI_A_iHandler_ptr _tao_ptr =
-    dynamic_cast<POA_OldArray::AMI_A_iHandler_ptr> (servant);
+  POA_OldArray::AMI_A_iHandler_ptr _tao_ptr = dynamic_cast<POA_OldArray::AMI_A_iHandler_ptr> (servant);
   if (!_tao_ptr)
     {
       throw ::CORBA::INTERNAL ();
     }
+  using _tao_arg_1_type = TAO::Arg_Traits<::OldArray::A>::in_arg_val;
+  _tao_arg_1_type * const _tao_arg_1 = static_cast<_tao_arg_1_type *> (args[1]);
+  using _tao_arg_2_type = TAO::Arg_Traits<::OldArray::A>::in_arg_val;
+  _tao_arg_2_type * const _tao_arg_2 = static_cast<_tao_arg_2_type *> (args[2]);
+  using _tao_arg_3_type = TAO::Arg_Traits<::OldArray::A>::in_arg_val;
+  _tao_arg_3_type * const _tao_arg_3 = static_cast<_tao_arg_3_type *> (args[3]);
 
   _tao_ptr->op (
-        ((TAO::Arg_Traits<::OldArray::A>::in_arg_val *) args[1])->arg (),
-        ((TAO::Arg_Traits<::OldArray::A>::in_arg_val *) args[2])->arg (),
-        ((TAO::Arg_Traits<::OldArray::A>::in_arg_val *) args[3])->arg ()
-      );
+    _tao_arg_1->arg (),
+    _tao_arg_2->arg (),
+    _tao_arg_3->arg ());
 }
 
 void
-POA_OldArray::_TAO_AMI_A_iHandler_Direct_Proxy_Impl::op_excep (
-    TAO_Abstract_ServantBase  *servant,
-    TAO::Argument ** args)
-
+POA_OldArray::_TAO_AMI_A_iHandler_Direct_Proxy_Impl::op_excep (TAO_Abstract_ServantBase *servant, TAO::Argument **args)
 {
-  POA_OldArray::AMI_A_iHandler_ptr _tao_ptr =
-    dynamic_cast<POA_OldArray::AMI_A_iHandler_ptr> (servant);
+  POA_OldArray::AMI_A_iHandler_ptr _tao_ptr = dynamic_cast<POA_OldArray::AMI_A_iHandler_ptr> (servant);
   if (!_tao_ptr)
     {
       throw ::CORBA::INTERNAL ();
     }
+  using _tao_arg_1_type = TAO::Arg_Traits<::Messaging::ExceptionHolder>::in_arg_val;
+  _tao_arg_1_type * const _tao_arg_1 = static_cast<_tao_arg_1_type *> (args[1]);
 
   _tao_ptr->op_excep (
-        ((TAO::Arg_Traits<::Messaging::ExceptionHolder>::in_arg_val *) args[1])->arg ()
-      );
+    _tao_arg_1->arg ());
 }
 
 void
-POA_OldArray::_TAO_AMI_A_iHandler_Direct_Proxy_Impl::op2 (
-    TAO_Abstract_ServantBase  *servant,
-    TAO::Argument ** args)
-
+POA_OldArray::_TAO_AMI_A_iHandler_Direct_Proxy_Impl::op2 (TAO_Abstract_ServantBase *servant, TAO::Argument **args)
 {
-  POA_OldArray::AMI_A_iHandler_ptr _tao_ptr =
-    dynamic_cast<POA_OldArray::AMI_A_iHandler_ptr> (servant);
+  POA_OldArray::AMI_A_iHandler_ptr _tao_ptr = dynamic_cast<POA_OldArray::AMI_A_iHandler_ptr> (servant);
   if (!_tao_ptr)
     {
       throw ::CORBA::INTERNAL ();
     }
+  using _tao_arg_1_type = TAO::Arg_Traits<::OldArray::str22_tag>::in_arg_val;
+  _tao_arg_1_type * const _tao_arg_1 = static_cast<_tao_arg_1_type *> (args[1]);
+  using _tao_arg_2_type = TAO::Arg_Traits<::OldArray::str22_tag>::in_arg_val;
+  _tao_arg_2_type * const _tao_arg_2 = static_cast<_tao_arg_2_type *> (args[2]);
+  using _tao_arg_3_type = TAO::Arg_Traits<::OldArray::str22_tag>::in_arg_val;
+  _tao_arg_3_type * const _tao_arg_3 = static_cast<_tao_arg_3_type *> (args[3]);
 
   _tao_ptr->op2 (
-        ((TAO::Arg_Traits<::OldArray::str22_tag>::in_arg_val *) args[1])->arg (),
-        ((TAO::Arg_Traits<::OldArray::str22_tag>::in_arg_val *) args[2])->arg (),
-        ((TAO::Arg_Traits<::OldArray::str22_tag>::in_arg_val *) args[3])->arg ()
-      );
+    _tao_arg_1->arg (),
+    _tao_arg_2->arg (),
+    _tao_arg_3->arg ());
 }
 
 void
-POA_OldArray::_TAO_AMI_A_iHandler_Direct_Proxy_Impl::op2_excep (
-    TAO_Abstract_ServantBase  *servant,
-    TAO::Argument ** args)
-
+POA_OldArray::_TAO_AMI_A_iHandler_Direct_Proxy_Impl::op2_excep (TAO_Abstract_ServantBase *servant, TAO::Argument **args)
 {
-  POA_OldArray::AMI_A_iHandler_ptr _tao_ptr =
-    dynamic_cast<POA_OldArray::AMI_A_iHandler_ptr> (servant);
+  POA_OldArray::AMI_A_iHandler_ptr _tao_ptr = dynamic_cast<POA_OldArray::AMI_A_iHandler_ptr> (servant);
   if (!_tao_ptr)
     {
       throw ::CORBA::INTERNAL ();
     }
+  using _tao_arg_1_type = TAO::Arg_Traits<::Messaging::ExceptionHolder>::in_arg_val;
+  _tao_arg_1_type * const _tao_arg_1 = static_cast<_tao_arg_1_type *> (args[1]);
 
   _tao_ptr->op2_excep (
-        ((TAO::Arg_Traits<::Messaging::ExceptionHolder>::in_arg_val *) args[1])->arg ()
-      );
+    _tao_arg_1->arg ());
 }
 
 void
-POA_OldArray::_TAO_AMI_A_iHandler_Direct_Proxy_Impl::op4 (
-    TAO_Abstract_ServantBase  *servant,
-    TAO::Argument ** args)
-
+POA_OldArray::_TAO_AMI_A_iHandler_Direct_Proxy_Impl::op4 (TAO_Abstract_ServantBase *servant, TAO::Argument **args)
 {
-  POA_OldArray::AMI_A_iHandler_ptr _tao_ptr =
-    dynamic_cast<POA_OldArray::AMI_A_iHandler_ptr> (servant);
+  POA_OldArray::AMI_A_iHandler_ptr _tao_ptr = dynamic_cast<POA_OldArray::AMI_A_iHandler_ptr> (servant);
   if (!_tao_ptr)
     {
       throw ::CORBA::INTERNAL ();
     }
+  using _tao_arg_1_type = TAO::Arg_Traits<::OldArray::A_matrix_tag>::in_arg_val;
+  _tao_arg_1_type * const _tao_arg_1 = static_cast<_tao_arg_1_type *> (args[1]);
+  using _tao_arg_2_type = TAO::Arg_Traits<::OldArray::A>::in_arg_val;
+  _tao_arg_2_type * const _tao_arg_2 = static_cast<_tao_arg_2_type *> (args[2]);
+  using _tao_arg_3_type = TAO::Arg_Traits<::OldArray::A>::in_arg_val;
+  _tao_arg_3_type * const _tao_arg_3 = static_cast<_tao_arg_3_type *> (args[3]);
 
   _tao_ptr->op4 (
-        ((TAO::Arg_Traits<::OldArray::A_matrix_tag>::in_arg_val *) args[1])->arg (),
-        ((TAO::Arg_Traits<::OldArray::A>::in_arg_val *) args[2])->arg (),
-        ((TAO::Arg_Traits<::OldArray::A>::in_arg_val *) args[3])->arg ()
-      );
+    _tao_arg_1->arg (),
+    _tao_arg_2->arg (),
+    _tao_arg_3->arg ());
 }
 
 void
-POA_OldArray::_TAO_AMI_A_iHandler_Direct_Proxy_Impl::op4_excep (
-    TAO_Abstract_ServantBase  *servant,
-    TAO::Argument ** args)
-
+POA_OldArray::_TAO_AMI_A_iHandler_Direct_Proxy_Impl::op4_excep (TAO_Abstract_ServantBase *servant, TAO::Argument **args)
 {
-  POA_OldArray::AMI_A_iHandler_ptr _tao_ptr =
-    dynamic_cast<POA_OldArray::AMI_A_iHandler_ptr> (servant);
+  POA_OldArray::AMI_A_iHandler_ptr _tao_ptr = dynamic_cast<POA_OldArray::AMI_A_iHandler_ptr> (servant);
   if (!_tao_ptr)
     {
       throw ::CORBA::INTERNAL ();
     }
+  using _tao_arg_1_type = TAO::Arg_Traits<::Messaging::ExceptionHolder>::in_arg_val;
+  _tao_arg_1_type * const _tao_arg_1 = static_cast<_tao_arg_1_type *> (args[1]);
 
   _tao_ptr->op4_excep (
-        ((TAO::Arg_Traits<::Messaging::ExceptionHolder>::in_arg_val *) args[1])->arg ()
-      );
+    _tao_arg_1->arg ());
 }
 
 void
 POA_OldArray::_TAO_AMI_A_iHandler_Direct_Proxy_Impl::get_attribute_array (
-    TAO_Abstract_ServantBase  *servant,
-    TAO::Argument ** args)
-
+  TAO_Abstract_ServantBase *servant,
+  TAO::Argument **args)
 {
-  POA_OldArray::AMI_A_iHandler_ptr _tao_ptr =
-    dynamic_cast<POA_OldArray::AMI_A_iHandler_ptr> (servant);
+  POA_OldArray::AMI_A_iHandler_ptr _tao_ptr = dynamic_cast<POA_OldArray::AMI_A_iHandler_ptr> (servant);
   if (!_tao_ptr)
     {
       throw ::CORBA::INTERNAL ();
     }
+  using _tao_arg_1_type = TAO::Arg_Traits<::OldArray::str22_tag>::in_arg_val;
+  _tao_arg_1_type * const _tao_arg_1 = static_cast<_tao_arg_1_type *> (args[1]);
 
   _tao_ptr->get_attribute_array (
-        ((TAO::Arg_Traits<::OldArray::str22_tag>::in_arg_val *) args[1])->arg ()
-      );
+    _tao_arg_1->arg ());
 }
 
 void
 POA_OldArray::_TAO_AMI_A_iHandler_Direct_Proxy_Impl::get_attribute_array_excep (
-    TAO_Abstract_ServantBase  *servant,
-    TAO::Argument ** args)
-
+  TAO_Abstract_ServantBase *servant,
+  TAO::Argument **args)
 {
-  POA_OldArray::AMI_A_iHandler_ptr _tao_ptr =
-    dynamic_cast<POA_OldArray::AMI_A_iHandler_ptr> (servant);
+  POA_OldArray::AMI_A_iHandler_ptr _tao_ptr = dynamic_cast<POA_OldArray::AMI_A_iHandler_ptr> (servant);
   if (!_tao_ptr)
     {
       throw ::CORBA::INTERNAL ();
     }
+  using _tao_arg_1_type = TAO::Arg_Traits<::Messaging::ExceptionHolder>::in_arg_val;
+  _tao_arg_1_type * const _tao_arg_1 = static_cast<_tao_arg_1_type *> (args[1]);
 
   _tao_ptr->get_attribute_array_excep (
-        ((TAO::Arg_Traits<::Messaging::ExceptionHolder>::in_arg_val *) args[1])->arg ()
-      );
+    _tao_arg_1->arg ());
 }
 
 void
 POA_OldArray::_TAO_AMI_A_iHandler_Direct_Proxy_Impl::set_attribute_array (
-    TAO_Abstract_ServantBase  *servant,
-    TAO::Argument **)
-
+  TAO_Abstract_ServantBase *servant,
+  TAO::Argument **)
 {
-  POA_OldArray::AMI_A_iHandler_ptr _tao_ptr =
-    dynamic_cast<POA_OldArray::AMI_A_iHandler_ptr> (servant);
+  POA_OldArray::AMI_A_iHandler_ptr _tao_ptr = dynamic_cast<POA_OldArray::AMI_A_iHandler_ptr> (servant);
   if (!_tao_ptr)
     {
       throw ::CORBA::INTERNAL ();
     }
-
-  _tao_ptr->set_attribute_array (
-      );
+  _tao_ptr->set_attribute_array ();
 }
 
 void
 POA_OldArray::_TAO_AMI_A_iHandler_Direct_Proxy_Impl::set_attribute_array_excep (
-    TAO_Abstract_ServantBase  *servant,
-    TAO::Argument ** args)
-
+  TAO_Abstract_ServantBase *servant,
+  TAO::Argument **args)
 {
-  POA_OldArray::AMI_A_iHandler_ptr _tao_ptr =
-    dynamic_cast<POA_OldArray::AMI_A_iHandler_ptr> (servant);
+  POA_OldArray::AMI_A_iHandler_ptr _tao_ptr = dynamic_cast<POA_OldArray::AMI_A_iHandler_ptr> (servant);
   if (!_tao_ptr)
     {
       throw ::CORBA::INTERNAL ();
     }
+  using _tao_arg_1_type = TAO::Arg_Traits<::Messaging::ExceptionHolder>::in_arg_val;
+  _tao_arg_1_type * const _tao_arg_1 = static_cast<_tao_arg_1_type *> (args[1]);
 
   _tao_ptr->set_attribute_array_excep (
-        ((TAO::Arg_Traits<::Messaging::ExceptionHolder>::in_arg_val *) args[1])->arg ()
-      );
+    _tao_arg_1->arg ());
 }
-
-//
-//           End Direct Proxy Implementation
-///////////////////////////////////////////////////////////////////////
 
 POA_OldArray::AMI_A_iHandler::AMI_A_iHandler ()
 {
@@ -2285,12 +2237,10 @@ void POA_OldArray::AMI_A_iHandler::set_attribute_array_excep_skel (
 
 ::CORBA::Boolean POA_OldArray::AMI_A_iHandler::_is_a (char const *value)
 {
-  return
-    (
-      std::strcmp (value, "IDL:omg.org/Messaging/ReplyHandler:1.0") == 0 ||
-      std::strcmp (value, "IDL:OldArray/AMI_A_iHandler:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0
-    );
+  return (
+    std::strcmp (value, "IDL:omg.org/Messaging/ReplyHandler:1.0") == 0 ||
+    std::strcmp (value, "IDL:OldArray/AMI_A_iHandler:1.0") == 0 ||
+    std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0);
 }
 
 char const *POA_OldArray::AMI_A_iHandler::_interface_repository_id () const
@@ -2320,4 +2270,3 @@ POA_OldArray::AMI_A_iHandler::_this ()
 }
 
 #endif /* ifndef */
-

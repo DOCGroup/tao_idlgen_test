@@ -283,4 +283,3 @@ namespace POA_ModSelection
 #include /**/ "ace/post.h"
 
 #endif /* ifndef */
-

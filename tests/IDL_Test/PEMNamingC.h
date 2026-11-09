@@ -233,9 +233,7 @@ namespace Plesk
 
       // The static operations.
       static ObjectResolver_ptr _duplicate (ObjectResolver_ptr obj);
-
       static void _tao_release (ObjectResolver_ptr obj);
-
       static ObjectResolver_ptr _narrow (::CORBA::Object_ptr obj);
       static ObjectResolver_ptr _unchecked_narrow (::CORBA::Object_ptr obj);
       static ObjectResolver_ptr _nil ();
@@ -275,15 +273,14 @@ namespace Plesk
 
       // Non-local interface only.
       ObjectResolver (
-          TAO_Stub *objref,
-          ::CORBA::Boolean _tao_collocated = false,
-          TAO_Abstract_ServantBase *servant = nullptr,
-          TAO_ORB_Core *orb_core = nullptr);
+        TAO_Stub *objref,
+        ::CORBA::Boolean _tao_collocated = false,
+        TAO_Abstract_ServantBase *servant = nullptr,
+        TAO_ORB_Core *orb_core = nullptr);
 
       ~ObjectResolver () override = default;
 
     private:
-      // Private and unimplemented for concrete interfaces.
       ObjectResolver (ObjectResolver const &) = delete;
       ObjectResolver (ObjectResolver &&) = delete;
       ObjectResolver &operator= (ObjectResolver const &) = delete;
@@ -398,9 +395,7 @@ public:
 
   // The static operations.
   static AMH_ObjectResolverResponseHandler_ptr _duplicate (AMH_ObjectResolverResponseHandler_ptr obj);
-
   static void _tao_release (AMH_ObjectResolverResponseHandler_ptr obj);
-
   static AMH_ObjectResolverResponseHandler_ptr _narrow (::CORBA::Object_ptr obj);
   static AMH_ObjectResolverResponseHandler_ptr _unchecked_narrow (::CORBA::Object_ptr obj);
   static AMH_ObjectResolverResponseHandler_ptr _nil ();
@@ -432,7 +427,6 @@ protected:
   ~AMH_ObjectResolverResponseHandler () override = default;
 
 private:
-  // Private and unimplemented for concrete interfaces.
   AMH_ObjectResolverResponseHandler (AMH_ObjectResolverResponseHandler const &) = delete;
   AMH_ObjectResolverResponseHandler (AMH_ObjectResolverResponseHandler &&) = delete;
   AMH_ObjectResolverResponseHandler &operator= (AMH_ObjectResolverResponseHandler const &) = delete;
@@ -452,7 +446,6 @@ using AMI_ObjectResolverHandler_out = TAO_Objref_Out_T<AMI_ObjectResolverHandler
 
 class TAO_IDL_TEST_STUB_Export AMI_ObjectResolverHandler
   : public virtual ::Messaging::ReplyHandler
-
 {
 public:
   friend class TAO::Narrow_Utils<AMI_ObjectResolverHandler>;
@@ -464,9 +457,7 @@ public:
 
   // The static operations.
   static AMI_ObjectResolverHandler_ptr _duplicate (AMI_ObjectResolverHandler_ptr obj);
-
   static void _tao_release (AMI_ObjectResolverHandler_ptr obj);
-
   static AMI_ObjectResolverHandler_ptr _narrow (::CORBA::Object_ptr obj);
   static AMI_ObjectResolverHandler_ptr _unchecked_narrow (::CORBA::Object_ptr obj);
   static AMI_ObjectResolverHandler_ptr _nil ();
@@ -512,15 +503,14 @@ protected:
 
   // Non-local interface only.
   AMI_ObjectResolverHandler (
-      TAO_Stub *objref,
-      ::CORBA::Boolean _tao_collocated = false,
-      TAO_Abstract_ServantBase *servant = nullptr,
-      TAO_ORB_Core *orb_core = nullptr);
+    TAO_Stub *objref,
+    ::CORBA::Boolean _tao_collocated = false,
+    TAO_Abstract_ServantBase *servant = nullptr,
+    TAO_ORB_Core *orb_core = nullptr);
 
   ~AMI_ObjectResolverHandler () override = default;
 
 private:
-  // Private and unimplemented for concrete interfaces.
   AMI_ObjectResolverHandler (AMI_ObjectResolverHandler const &) = delete;
   AMI_ObjectResolverHandler (AMI_ObjectResolverHandler &&) = delete;
   AMI_ObjectResolverHandler &operator= (AMI_ObjectResolverHandler const &) = delete;
@@ -879,4 +869,3 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 #include /**/ "ace/post.h"
 
 #endif /* ifndef */
-

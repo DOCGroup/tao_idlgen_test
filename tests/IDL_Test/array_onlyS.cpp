@@ -28,4 +28,3 @@
 #include "array_onlyS.h"
 
 #endif /* ifndef */
-

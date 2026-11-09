@@ -94,7 +94,6 @@ using simple3_out = TAO_Objref_Out_T<simple3>;
 
 class TAO_IDL_TEST_STUB_Export simple3
   : public virtual ::simple2
-
 {
 public:
   friend class TAO::Narrow_Utils<simple3>;
@@ -106,9 +105,7 @@ public:
 
   // The static operations.
   static simple3_ptr _duplicate (simple3_ptr obj);
-
   static void _tao_release (simple3_ptr obj);
-
   static simple3_ptr _narrow (::CORBA::Object_ptr obj);
   static simple3_ptr _unchecked_narrow (::CORBA::Object_ptr obj);
   static simple3_ptr _nil ();
@@ -206,8 +203,7 @@ public:
     void _tao_encode (TAO_OutputCDR &cdr) const override;
     void _tao_decode (TAO_InputCDR &cdr) override;
 
-    BadNum (
-        vec10 const & _tao_c);
+    BadNum (vec10 const & _tao_c);
 
     ::CORBA::TypeCode_ptr _tao_type () const override;
   };
@@ -238,8 +234,7 @@ public:
     void _tao_encode (TAO_OutputCDR &cdr) const override;
     void _tao_decode (TAO_InputCDR &cdr) override;
 
-    UserError (
-        ::CORBA::Any const & _tao_reason);
+    UserError (::CORBA::Any const & _tao_reason);
 
     ::CORBA::TypeCode_ptr _tao_type () const override;
   };
@@ -280,15 +275,14 @@ protected:
 
   // Non-local interface only.
   simple3 (
-      TAO_Stub *objref,
-      ::CORBA::Boolean _tao_collocated = false,
-      TAO_Abstract_ServantBase *servant = nullptr,
-      TAO_ORB_Core *orb_core = nullptr);
+    TAO_Stub *objref,
+    ::CORBA::Boolean _tao_collocated = false,
+    TAO_Abstract_ServantBase *servant = nullptr,
+    TAO_ORB_Core *orb_core = nullptr);
 
   ~simple3 () override = default;
 
 private:
-  // Private and unimplemented for concrete interfaces.
   simple3 (simple3 const &) = delete;
   simple3 (simple3 &&) = delete;
   simple3 &operator= (simple3 const &) = delete;
@@ -403,9 +397,7 @@ public:
 
   // The static operations.
   static AMH_simple3ResponseHandler_ptr _duplicate (AMH_simple3ResponseHandler_ptr obj);
-
   static void _tao_release (AMH_simple3ResponseHandler_ptr obj);
-
   static AMH_simple3ResponseHandler_ptr _narrow (::CORBA::Object_ptr obj);
   static AMH_simple3ResponseHandler_ptr _unchecked_narrow (::CORBA::Object_ptr obj);
   static AMH_simple3ResponseHandler_ptr _nil ();
@@ -440,7 +432,6 @@ protected:
   ~AMH_simple3ResponseHandler () override = default;
 
 private:
-  // Private and unimplemented for concrete interfaces.
   AMH_simple3ResponseHandler (AMH_simple3ResponseHandler const &) = delete;
   AMH_simple3ResponseHandler (AMH_simple3ResponseHandler &&) = delete;
   AMH_simple3ResponseHandler &operator= (AMH_simple3ResponseHandler const &) = delete;
@@ -460,7 +451,6 @@ using AMI_simple3Handler_out = TAO_Objref_Out_T<AMI_simple3Handler>;
 
 class TAO_IDL_TEST_STUB_Export AMI_simple3Handler
   : public virtual ::AMI_simple2Handler
-
 {
 public:
   friend class TAO::Narrow_Utils<AMI_simple3Handler>;
@@ -472,9 +462,7 @@ public:
 
   // The static operations.
   static AMI_simple3Handler_ptr _duplicate (AMI_simple3Handler_ptr obj);
-
   static void _tao_release (AMI_simple3Handler_ptr obj);
-
   static AMI_simple3Handler_ptr _narrow (::CORBA::Object_ptr obj);
   static AMI_simple3Handler_ptr _unchecked_narrow (::CORBA::Object_ptr obj);
   static AMI_simple3Handler_ptr _nil ();
@@ -523,15 +511,14 @@ protected:
 
   // Non-local interface only.
   AMI_simple3Handler (
-      TAO_Stub *objref,
-      ::CORBA::Boolean _tao_collocated = false,
-      TAO_Abstract_ServantBase *servant = nullptr,
-      TAO_ORB_Core *orb_core = nullptr);
+    TAO_Stub *objref,
+    ::CORBA::Boolean _tao_collocated = false,
+    TAO_Abstract_ServantBase *servant = nullptr,
+    TAO_ORB_Core *orb_core = nullptr);
 
   ~AMI_simple3Handler () override = default;
 
 private:
-  // Private and unimplemented for concrete interfaces.
   AMI_simple3Handler (AMI_simple3Handler const &) = delete;
   AMI_simple3Handler (AMI_simple3Handler &&) = delete;
   AMI_simple3Handler &operator= (AMI_simple3Handler const &) = delete;
@@ -838,4 +825,3 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 #include /**/ "ace/post.h"
 
 #endif /* ifndef */
-

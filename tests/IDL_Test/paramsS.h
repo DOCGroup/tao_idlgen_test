@@ -218,28 +218,17 @@ namespace POA_foo
       ::foo::theDate_out c) = 0;
 
     static void getDate_skel (
-        TAO_ServerRequest &server_request,
-        TAO::Portable_Server::Servant_Upcall *servant_upcall,
-        TAO_ServantBase *servant);
+      TAO_ServerRequest &server_request,
+      TAO::Portable_Server::Servant_Upcall *servant_upcall,
+      TAO_ServantBase *servant);
   };
-
-  ///////////////////////////////////////////////////////////////////////
-  //                    Direct  Impl. Declaration
-  //
 
   class TAO_IDL_TEST_STUB_Export _TAO_fooBar_Direct_Proxy_Impl
   {
   public:
     virtual ~_TAO_fooBar_Direct_Proxy_Impl ();
-    static void
-    getDate (
-      TAO_Abstract_ServantBase *servant, TAO::Argument **args);
-
+    static void getDate (TAO_Abstract_ServantBase *servant, TAO::Argument **args);
   };
-
-  //
-  //                Direct  Proxy Impl. Declaration
-  ///////////////////////////////////////////////////////////////////////
 
   class TAO_AMH_fooBarResponseHandler;
   using TAO_AMH_fooBarResponseHandler_ptr = TAO_AMH_fooBarResponseHandler *;
@@ -294,40 +283,26 @@ namespace POA_foo
       ::foo::theDate const & c) = 0;
 
     static void getDate_skel (
-        TAO_ServerRequest &server_request,
-        TAO::Portable_Server::Servant_Upcall *servant_upcall,
-        TAO_ServantBase *servant);
+      TAO_ServerRequest &server_request,
+      TAO::Portable_Server::Servant_Upcall *servant_upcall,
+      TAO_ServantBase *servant);
     virtual void getDate_excep (
       ::Messaging::ExceptionHolder * excep_holder) = 0;
 
     static void getDate_excep_skel (
-        TAO_ServerRequest &server_request,
-        TAO::Portable_Server::Servant_Upcall *servant_upcall,
-        TAO_ServantBase *servant);
+      TAO_ServerRequest &server_request,
+      TAO::Portable_Server::Servant_Upcall *servant_upcall,
+      TAO_ServantBase *servant);
   };
-
-  ///////////////////////////////////////////////////////////////////////
-  //                    Direct  Impl. Declaration
-  //
 
   class TAO_IDL_TEST_STUB_Export _TAO_AMI_fooBarHandler_Direct_Proxy_Impl
     : public virtual ::POA_Messaging::_TAO_ReplyHandler_Direct_Proxy_Impl
   {
   public:
     virtual ~_TAO_AMI_fooBarHandler_Direct_Proxy_Impl ();
-    static void
-    getDate (
-      TAO_Abstract_ServantBase *servant, TAO::Argument **args);
-
-    static void
-    getDate_excep (
-      TAO_Abstract_ServantBase *servant, TAO::Argument **args);
-
+    static void getDate (TAO_Abstract_ServantBase *servant, TAO::Argument **args);
+    static void getDate_excep (TAO_Abstract_ServantBase *servant, TAO::Argument **args);
   };
-
-  //
-  //                Direct  Proxy Impl. Declaration
-  ///////////////////////////////////////////////////////////////////////
 
 } // module foo::bar
 
@@ -338,4 +313,3 @@ namespace POA_foo
 #include /**/ "ace/post.h"
 
 #endif /* ifndef */
-

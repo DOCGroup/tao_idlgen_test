@@ -135,9 +135,7 @@ namespace foo
 
       // The static operations.
       static fooBar_ptr _duplicate (fooBar_ptr obj);
-
       static void _tao_release (fooBar_ptr obj);
-
       static fooBar_ptr _narrow (::CORBA::Object_ptr obj);
       static fooBar_ptr _unchecked_narrow (::CORBA::Object_ptr obj);
       static fooBar_ptr _nil ();
@@ -167,15 +165,14 @@ namespace foo
 
       // Non-local interface only.
       fooBar (
-          TAO_Stub *objref,
-          ::CORBA::Boolean _tao_collocated = false,
-          TAO_Abstract_ServantBase *servant = nullptr,
-          TAO_ORB_Core *orb_core = nullptr);
+        TAO_Stub *objref,
+        ::CORBA::Boolean _tao_collocated = false,
+        TAO_Abstract_ServantBase *servant = nullptr,
+        TAO_ORB_Core *orb_core = nullptr);
 
       ~fooBar () override = default;
 
     private:
-      // Private and unimplemented for concrete interfaces.
       fooBar (fooBar const &) = delete;
       fooBar (fooBar &&) = delete;
       fooBar &operator= (fooBar const &) = delete;
@@ -280,9 +277,7 @@ public:
 
   // The static operations.
   static AMH_fooBarResponseHandler_ptr _duplicate (AMH_fooBarResponseHandler_ptr obj);
-
   static void _tao_release (AMH_fooBarResponseHandler_ptr obj);
-
   static AMH_fooBarResponseHandler_ptr _narrow (::CORBA::Object_ptr obj);
   static AMH_fooBarResponseHandler_ptr _unchecked_narrow (::CORBA::Object_ptr obj);
   static AMH_fooBarResponseHandler_ptr _nil ();
@@ -308,7 +303,6 @@ protected:
   ~AMH_fooBarResponseHandler () override = default;
 
 private:
-  // Private and unimplemented for concrete interfaces.
   AMH_fooBarResponseHandler (AMH_fooBarResponseHandler const &) = delete;
   AMH_fooBarResponseHandler (AMH_fooBarResponseHandler &&) = delete;
   AMH_fooBarResponseHandler &operator= (AMH_fooBarResponseHandler const &) = delete;
@@ -328,7 +322,6 @@ using AMI_fooBarHandler_out = TAO_Objref_Out_T<AMI_fooBarHandler>;
 
 class TAO_IDL_TEST_STUB_Export AMI_fooBarHandler
   : public virtual ::Messaging::ReplyHandler
-
 {
 public:
   friend class TAO::Narrow_Utils<AMI_fooBarHandler>;
@@ -340,9 +333,7 @@ public:
 
   // The static operations.
   static AMI_fooBarHandler_ptr _duplicate (AMI_fooBarHandler_ptr obj);
-
   static void _tao_release (AMI_fooBarHandler_ptr obj);
-
   static AMI_fooBarHandler_ptr _narrow (::CORBA::Object_ptr obj);
   static AMI_fooBarHandler_ptr _unchecked_narrow (::CORBA::Object_ptr obj);
   static AMI_fooBarHandler_ptr _nil ();
@@ -376,15 +367,14 @@ protected:
 
   // Non-local interface only.
   AMI_fooBarHandler (
-      TAO_Stub *objref,
-      ::CORBA::Boolean _tao_collocated = false,
-      TAO_Abstract_ServantBase *servant = nullptr,
-      TAO_ORB_Core *orb_core = nullptr);
+    TAO_Stub *objref,
+    ::CORBA::Boolean _tao_collocated = false,
+    TAO_Abstract_ServantBase *servant = nullptr,
+    TAO_ORB_Core *orb_core = nullptr);
 
   ~AMI_fooBarHandler () override = default;
 
 private:
-  // Private and unimplemented for concrete interfaces.
   AMI_fooBarHandler (AMI_fooBarHandler const &) = delete;
   AMI_fooBarHandler (AMI_fooBarHandler &&) = delete;
   AMI_fooBarHandler &operator= (AMI_fooBarHandler const &) = delete;
@@ -690,4 +680,3 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 #include /**/ "ace/post.h"
 
 #endif /* ifndef */
-

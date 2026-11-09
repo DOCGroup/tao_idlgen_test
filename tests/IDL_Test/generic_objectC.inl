@@ -127,18 +127,13 @@ Selecter::that_object () const
 
 ACE_INLINE
 generic::generic (
-    TAO_Stub *objref,
-    ::CORBA::Boolean _tao_collocated,
-    TAO_Abstract_ServantBase *servant,
-    TAO_ORB_Core *oc)
+  TAO_Stub *objref, ::CORBA::Boolean _tao_collocated, TAO_Abstract_ServantBase *servant, TAO_ORB_Core *oc)
   : ::CORBA::Object (objref, _tao_collocated, servant, oc)
 {
 }
 
 ACE_INLINE
-generic::generic (
-    ::IOP::IOR *ior,
-    TAO_ORB_Core *oc)
+generic::generic (::IOP::IOR *ior, TAO_ORB_Core *oc)
   : ::CORBA::Object (ior, oc)
 {
 }
@@ -155,19 +150,13 @@ AMH_genericExceptionHolder::_tao_obv_static_repository_id ()
 
 ACE_INLINE
 AMI_genericHandler::AMI_genericHandler (
-    TAO_Stub *objref,
-    ::CORBA::Boolean _tao_collocated,
-    TAO_Abstract_ServantBase *servant,
-    TAO_ORB_Core *oc)
+  TAO_Stub *objref, ::CORBA::Boolean _tao_collocated, TAO_Abstract_ServantBase *servant, TAO_ORB_Core *oc)
   : ::CORBA::Object (objref, _tao_collocated, servant, oc)
 {
 }
 
 ACE_INLINE
-AMI_genericHandler::AMI_genericHandler (
-    ::IOP::IOR *ior,
-    TAO_ORB_Core *oc)
+AMI_genericHandler::AMI_genericHandler (::IOP::IOR *ior, TAO_ORB_Core *oc)
   : ::CORBA::Object (ior, oc)
 {
 }
-
