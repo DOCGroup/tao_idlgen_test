@@ -96,9 +96,7 @@ namespace OldInherit
 
     // The static operations.
     static one_ptr _duplicate (one_ptr obj);
-
     static void _tao_release (one_ptr obj);
-
     static one_ptr _narrow (::CORBA::Object_ptr obj);
     static one_ptr _unchecked_narrow (::CORBA::Object_ptr obj);
     static one_ptr _nil ();
@@ -123,15 +121,14 @@ namespace OldInherit
 
     // Non-local interface only.
     one (
-        TAO_Stub *objref,
-        ::CORBA::Boolean _tao_collocated = false,
-        TAO_Abstract_ServantBase *servant = nullptr,
-        TAO_ORB_Core *orb_core = nullptr);
+      TAO_Stub *objref,
+      ::CORBA::Boolean _tao_collocated = false,
+      TAO_Abstract_ServantBase *servant = nullptr,
+      TAO_ORB_Core *orb_core = nullptr);
 
     ~one () override = default;
 
   private:
-    // Private and unimplemented for concrete interfaces.
     one (one const &) = delete;
     one (one &&) = delete;
     one &operator= (one const &) = delete;
@@ -234,9 +231,7 @@ public:
 
   // The static operations.
   static AMH_oneResponseHandler_ptr _duplicate (AMH_oneResponseHandler_ptr obj);
-
   static void _tao_release (AMH_oneResponseHandler_ptr obj);
-
   static AMH_oneResponseHandler_ptr _narrow (::CORBA::Object_ptr obj);
   static AMH_oneResponseHandler_ptr _unchecked_narrow (::CORBA::Object_ptr obj);
   static AMH_oneResponseHandler_ptr _nil ();
@@ -259,7 +254,6 @@ protected:
   ~AMH_oneResponseHandler () override = default;
 
 private:
-  // Private and unimplemented for concrete interfaces.
   AMH_oneResponseHandler (AMH_oneResponseHandler const &) = delete;
   AMH_oneResponseHandler (AMH_oneResponseHandler &&) = delete;
   AMH_oneResponseHandler &operator= (AMH_oneResponseHandler const &) = delete;
@@ -278,7 +272,6 @@ using AMI_oneHandler_out = TAO_Objref_Out_T<AMI_oneHandler>;
 
 class TAO_IDL_TEST_STUB_Export AMI_oneHandler
   : public virtual ::Messaging::ReplyHandler
-
 {
 public:
   friend class TAO::Narrow_Utils<AMI_oneHandler>;
@@ -290,9 +283,7 @@ public:
 
   // The static operations.
   static AMI_oneHandler_ptr _duplicate (AMI_oneHandler_ptr obj);
-
   static void _tao_release (AMI_oneHandler_ptr obj);
-
   static AMI_oneHandler_ptr _narrow (::CORBA::Object_ptr obj);
   static AMI_oneHandler_ptr _unchecked_narrow (::CORBA::Object_ptr obj);
   static AMI_oneHandler_ptr _nil ();
@@ -323,15 +314,14 @@ protected:
 
   // Non-local interface only.
   AMI_oneHandler (
-      TAO_Stub *objref,
-      ::CORBA::Boolean _tao_collocated = false,
-      TAO_Abstract_ServantBase *servant = nullptr,
-      TAO_ORB_Core *orb_core = nullptr);
+    TAO_Stub *objref,
+    ::CORBA::Boolean _tao_collocated = false,
+    TAO_Abstract_ServantBase *servant = nullptr,
+    TAO_ORB_Core *orb_core = nullptr);
 
   ~AMI_oneHandler () override = default;
 
 private:
-  // Private and unimplemented for concrete interfaces.
   AMI_oneHandler (AMI_oneHandler const &) = delete;
   AMI_oneHandler (AMI_oneHandler &&) = delete;
   AMI_oneHandler &operator= (AMI_oneHandler const &) = delete;
@@ -353,7 +343,6 @@ using two_out = TAO_Objref_Out_T<two>;
 
 class TAO_IDL_TEST_STUB_Export two
   : public virtual ::OldInherit::one
-
 {
 public:
   friend class TAO::Narrow_Utils<two>;
@@ -365,9 +354,7 @@ public:
 
   // The static operations.
   static two_ptr _duplicate (two_ptr obj);
-
   static void _tao_release (two_ptr obj);
-
   static two_ptr _narrow (::CORBA::Object_ptr obj);
   static two_ptr _unchecked_narrow (::CORBA::Object_ptr obj);
   static two_ptr _nil ();
@@ -392,15 +379,14 @@ protected:
 
   // Non-local interface only.
   two (
-      TAO_Stub *objref,
-      ::CORBA::Boolean _tao_collocated = false,
-      TAO_Abstract_ServantBase *servant = nullptr,
-      TAO_ORB_Core *orb_core = nullptr);
+    TAO_Stub *objref,
+    ::CORBA::Boolean _tao_collocated = false,
+    TAO_Abstract_ServantBase *servant = nullptr,
+    TAO_ORB_Core *orb_core = nullptr);
 
   ~two () override = default;
 
 private:
-  // Private and unimplemented for concrete interfaces.
   two (two const &) = delete;
   two (two &&) = delete;
   two &operator= (two const &) = delete;
@@ -503,9 +489,7 @@ public:
 
   // The static operations.
   static AMH_twoResponseHandler_ptr _duplicate (AMH_twoResponseHandler_ptr obj);
-
   static void _tao_release (AMH_twoResponseHandler_ptr obj);
-
   static AMH_twoResponseHandler_ptr _narrow (::CORBA::Object_ptr obj);
   static AMH_twoResponseHandler_ptr _unchecked_narrow (::CORBA::Object_ptr obj);
   static AMH_twoResponseHandler_ptr _nil ();
@@ -528,7 +512,6 @@ protected:
   ~AMH_twoResponseHandler () override = default;
 
 private:
-  // Private and unimplemented for concrete interfaces.
   AMH_twoResponseHandler (AMH_twoResponseHandler const &) = delete;
   AMH_twoResponseHandler (AMH_twoResponseHandler &&) = delete;
   AMH_twoResponseHandler &operator= (AMH_twoResponseHandler const &) = delete;
@@ -547,7 +530,6 @@ using AMI_twoHandler_out = TAO_Objref_Out_T<AMI_twoHandler>;
 
 class TAO_IDL_TEST_STUB_Export AMI_twoHandler
   : public virtual ::OldInherit::AMI_oneHandler
-
 {
 public:
   friend class TAO::Narrow_Utils<AMI_twoHandler>;
@@ -559,9 +541,7 @@ public:
 
   // The static operations.
   static AMI_twoHandler_ptr _duplicate (AMI_twoHandler_ptr obj);
-
   static void _tao_release (AMI_twoHandler_ptr obj);
-
   static AMI_twoHandler_ptr _narrow (::CORBA::Object_ptr obj);
   static AMI_twoHandler_ptr _unchecked_narrow (::CORBA::Object_ptr obj);
   static AMI_twoHandler_ptr _nil ();
@@ -592,15 +572,14 @@ protected:
 
   // Non-local interface only.
   AMI_twoHandler (
-      TAO_Stub *objref,
-      ::CORBA::Boolean _tao_collocated = false,
-      TAO_Abstract_ServantBase *servant = nullptr,
-      TAO_ORB_Core *orb_core = nullptr);
+    TAO_Stub *objref,
+    ::CORBA::Boolean _tao_collocated = false,
+    TAO_Abstract_ServantBase *servant = nullptr,
+    TAO_ORB_Core *orb_core = nullptr);
 
   ~AMI_twoHandler () override = default;
 
 private:
-  // Private and unimplemented for concrete interfaces.
   AMI_twoHandler (AMI_twoHandler const &) = delete;
   AMI_twoHandler (AMI_twoHandler &&) = delete;
   AMI_twoHandler &operator= (AMI_twoHandler const &) = delete;
@@ -622,7 +601,6 @@ using three_out = TAO_Objref_Out_T<three>;
 
 class TAO_IDL_TEST_STUB_Export three
   : public virtual ::OldInherit::one
-
 {
 public:
   friend class TAO::Narrow_Utils<three>;
@@ -634,9 +612,7 @@ public:
 
   // The static operations.
   static three_ptr _duplicate (three_ptr obj);
-
   static void _tao_release (three_ptr obj);
-
   static three_ptr _narrow (::CORBA::Object_ptr obj);
   static three_ptr _unchecked_narrow (::CORBA::Object_ptr obj);
   static three_ptr _nil ();
@@ -661,15 +637,14 @@ protected:
 
   // Non-local interface only.
   three (
-      TAO_Stub *objref,
-      ::CORBA::Boolean _tao_collocated = false,
-      TAO_Abstract_ServantBase *servant = nullptr,
-      TAO_ORB_Core *orb_core = nullptr);
+    TAO_Stub *objref,
+    ::CORBA::Boolean _tao_collocated = false,
+    TAO_Abstract_ServantBase *servant = nullptr,
+    TAO_ORB_Core *orb_core = nullptr);
 
   ~three () override = default;
 
 private:
-  // Private and unimplemented for concrete interfaces.
   three (three const &) = delete;
   three (three &&) = delete;
   three &operator= (three const &) = delete;
@@ -772,9 +747,7 @@ public:
 
   // The static operations.
   static AMH_threeResponseHandler_ptr _duplicate (AMH_threeResponseHandler_ptr obj);
-
   static void _tao_release (AMH_threeResponseHandler_ptr obj);
-
   static AMH_threeResponseHandler_ptr _narrow (::CORBA::Object_ptr obj);
   static AMH_threeResponseHandler_ptr _unchecked_narrow (::CORBA::Object_ptr obj);
   static AMH_threeResponseHandler_ptr _nil ();
@@ -797,7 +770,6 @@ protected:
   ~AMH_threeResponseHandler () override = default;
 
 private:
-  // Private and unimplemented for concrete interfaces.
   AMH_threeResponseHandler (AMH_threeResponseHandler const &) = delete;
   AMH_threeResponseHandler (AMH_threeResponseHandler &&) = delete;
   AMH_threeResponseHandler &operator= (AMH_threeResponseHandler const &) = delete;
@@ -816,7 +788,6 @@ using AMI_threeHandler_out = TAO_Objref_Out_T<AMI_threeHandler>;
 
 class TAO_IDL_TEST_STUB_Export AMI_threeHandler
   : public virtual ::OldInherit::AMI_oneHandler
-
 {
 public:
   friend class TAO::Narrow_Utils<AMI_threeHandler>;
@@ -828,9 +799,7 @@ public:
 
   // The static operations.
   static AMI_threeHandler_ptr _duplicate (AMI_threeHandler_ptr obj);
-
   static void _tao_release (AMI_threeHandler_ptr obj);
-
   static AMI_threeHandler_ptr _narrow (::CORBA::Object_ptr obj);
   static AMI_threeHandler_ptr _unchecked_narrow (::CORBA::Object_ptr obj);
   static AMI_threeHandler_ptr _nil ();
@@ -861,15 +830,14 @@ protected:
 
   // Non-local interface only.
   AMI_threeHandler (
-      TAO_Stub *objref,
-      ::CORBA::Boolean _tao_collocated = false,
-      TAO_Abstract_ServantBase *servant = nullptr,
-      TAO_ORB_Core *orb_core = nullptr);
+    TAO_Stub *objref,
+    ::CORBA::Boolean _tao_collocated = false,
+    TAO_Abstract_ServantBase *servant = nullptr,
+    TAO_ORB_Core *orb_core = nullptr);
 
   ~AMI_threeHandler () override = default;
 
 private:
-  // Private and unimplemented for concrete interfaces.
   AMI_threeHandler (AMI_threeHandler const &) = delete;
   AMI_threeHandler (AMI_threeHandler &&) = delete;
   AMI_threeHandler &operator= (AMI_threeHandler const &) = delete;
@@ -892,7 +860,6 @@ using four_out = TAO_Objref_Out_T<four>;
 class TAO_IDL_TEST_STUB_Export four
   : public virtual ::OldInherit::two,
     public virtual ::OldInherit::three
-
 {
 public:
   friend class TAO::Narrow_Utils<four>;
@@ -904,9 +871,7 @@ public:
 
   // The static operations.
   static four_ptr _duplicate (four_ptr obj);
-
   static void _tao_release (four_ptr obj);
-
   static four_ptr _narrow (::CORBA::Object_ptr obj);
   static four_ptr _unchecked_narrow (::CORBA::Object_ptr obj);
   static four_ptr _nil ();
@@ -931,15 +896,14 @@ protected:
 
   // Non-local interface only.
   four (
-      TAO_Stub *objref,
-      ::CORBA::Boolean _tao_collocated = false,
-      TAO_Abstract_ServantBase *servant = nullptr,
-      TAO_ORB_Core *orb_core = nullptr);
+    TAO_Stub *objref,
+    ::CORBA::Boolean _tao_collocated = false,
+    TAO_Abstract_ServantBase *servant = nullptr,
+    TAO_ORB_Core *orb_core = nullptr);
 
   ~four () override = default;
 
 private:
-  // Private and unimplemented for concrete interfaces.
   four (four const &) = delete;
   four (four &&) = delete;
   four &operator= (four const &) = delete;
@@ -1042,9 +1006,7 @@ public:
 
   // The static operations.
   static AMH_fourResponseHandler_ptr _duplicate (AMH_fourResponseHandler_ptr obj);
-
   static void _tao_release (AMH_fourResponseHandler_ptr obj);
-
   static AMH_fourResponseHandler_ptr _narrow (::CORBA::Object_ptr obj);
   static AMH_fourResponseHandler_ptr _unchecked_narrow (::CORBA::Object_ptr obj);
   static AMH_fourResponseHandler_ptr _nil ();
@@ -1067,7 +1029,6 @@ protected:
   ~AMH_fourResponseHandler () override = default;
 
 private:
-  // Private and unimplemented for concrete interfaces.
   AMH_fourResponseHandler (AMH_fourResponseHandler const &) = delete;
   AMH_fourResponseHandler (AMH_fourResponseHandler &&) = delete;
   AMH_fourResponseHandler &operator= (AMH_fourResponseHandler const &) = delete;
@@ -1087,7 +1048,6 @@ using AMI_fourHandler_out = TAO_Objref_Out_T<AMI_fourHandler>;
 class TAO_IDL_TEST_STUB_Export AMI_fourHandler
   : public virtual ::OldInherit::AMI_twoHandler,
     public virtual ::OldInherit::AMI_threeHandler
-
 {
 public:
   friend class TAO::Narrow_Utils<AMI_fourHandler>;
@@ -1099,9 +1059,7 @@ public:
 
   // The static operations.
   static AMI_fourHandler_ptr _duplicate (AMI_fourHandler_ptr obj);
-
   static void _tao_release (AMI_fourHandler_ptr obj);
-
   static AMI_fourHandler_ptr _narrow (::CORBA::Object_ptr obj);
   static AMI_fourHandler_ptr _unchecked_narrow (::CORBA::Object_ptr obj);
   static AMI_fourHandler_ptr _nil ();
@@ -1132,15 +1090,14 @@ protected:
 
   // Non-local interface only.
   AMI_fourHandler (
-      TAO_Stub *objref,
-      ::CORBA::Boolean _tao_collocated = false,
-      TAO_Abstract_ServantBase *servant = nullptr,
-      TAO_ORB_Core *orb_core = nullptr);
+    TAO_Stub *objref,
+    ::CORBA::Boolean _tao_collocated = false,
+    TAO_Abstract_ServantBase *servant = nullptr,
+    TAO_ORB_Core *orb_core = nullptr);
 
   ~AMI_fourHandler () override = default;
 
 private:
-  // Private and unimplemented for concrete interfaces.
   AMI_fourHandler (AMI_fourHandler const &) = delete;
   AMI_fourHandler (AMI_fourHandler &&) = delete;
   AMI_fourHandler &operator= (AMI_fourHandler const &) = delete;
@@ -1164,7 +1121,6 @@ class TAO_IDL_TEST_STUB_Export five
   : public virtual ::OldInherit::four,
     public virtual ::OldInherit::three,
     public virtual ::OldInherit::two
-
 {
 public:
   friend class TAO::Narrow_Utils<five>;
@@ -1176,9 +1132,7 @@ public:
 
   // The static operations.
   static five_ptr _duplicate (five_ptr obj);
-
   static void _tao_release (five_ptr obj);
-
   static five_ptr _narrow (::CORBA::Object_ptr obj);
   static five_ptr _unchecked_narrow (::CORBA::Object_ptr obj);
   static five_ptr _nil ();
@@ -1203,15 +1157,14 @@ protected:
 
   // Non-local interface only.
   five (
-      TAO_Stub *objref,
-      ::CORBA::Boolean _tao_collocated = false,
-      TAO_Abstract_ServantBase *servant = nullptr,
-      TAO_ORB_Core *orb_core = nullptr);
+    TAO_Stub *objref,
+    ::CORBA::Boolean _tao_collocated = false,
+    TAO_Abstract_ServantBase *servant = nullptr,
+    TAO_ORB_Core *orb_core = nullptr);
 
   ~five () override = default;
 
 private:
-  // Private and unimplemented for concrete interfaces.
   five (five const &) = delete;
   five (five &&) = delete;
   five &operator= (five const &) = delete;
@@ -1314,9 +1267,7 @@ public:
 
   // The static operations.
   static AMH_fiveResponseHandler_ptr _duplicate (AMH_fiveResponseHandler_ptr obj);
-
   static void _tao_release (AMH_fiveResponseHandler_ptr obj);
-
   static AMH_fiveResponseHandler_ptr _narrow (::CORBA::Object_ptr obj);
   static AMH_fiveResponseHandler_ptr _unchecked_narrow (::CORBA::Object_ptr obj);
   static AMH_fiveResponseHandler_ptr _nil ();
@@ -1339,7 +1290,6 @@ protected:
   ~AMH_fiveResponseHandler () override = default;
 
 private:
-  // Private and unimplemented for concrete interfaces.
   AMH_fiveResponseHandler (AMH_fiveResponseHandler const &) = delete;
   AMH_fiveResponseHandler (AMH_fiveResponseHandler &&) = delete;
   AMH_fiveResponseHandler &operator= (AMH_fiveResponseHandler const &) = delete;
@@ -1360,7 +1310,6 @@ class TAO_IDL_TEST_STUB_Export AMI_fiveHandler
   : public virtual ::OldInherit::AMI_fourHandler,
     public virtual ::OldInherit::AMI_threeHandler,
     public virtual ::OldInherit::AMI_twoHandler
-
 {
 public:
   friend class TAO::Narrow_Utils<AMI_fiveHandler>;
@@ -1372,9 +1321,7 @@ public:
 
   // The static operations.
   static AMI_fiveHandler_ptr _duplicate (AMI_fiveHandler_ptr obj);
-
   static void _tao_release (AMI_fiveHandler_ptr obj);
-
   static AMI_fiveHandler_ptr _narrow (::CORBA::Object_ptr obj);
   static AMI_fiveHandler_ptr _unchecked_narrow (::CORBA::Object_ptr obj);
   static AMI_fiveHandler_ptr _nil ();
@@ -1405,15 +1352,14 @@ protected:
 
   // Non-local interface only.
   AMI_fiveHandler (
-      TAO_Stub *objref,
-      ::CORBA::Boolean _tao_collocated = false,
-      TAO_Abstract_ServantBase *servant = nullptr,
-      TAO_ORB_Core *orb_core = nullptr);
+    TAO_Stub *objref,
+    ::CORBA::Boolean _tao_collocated = false,
+    TAO_Abstract_ServantBase *servant = nullptr,
+    TAO_ORB_Core *orb_core = nullptr);
 
   ~AMI_fiveHandler () override = default;
 
 private:
-  // Private and unimplemented for concrete interfaces.
   AMI_fiveHandler (AMI_fiveHandler const &) = delete;
   AMI_fiveHandler (AMI_fiveHandler &&) = delete;
   AMI_fiveHandler &operator= (AMI_fiveHandler const &) = delete;
@@ -2253,4 +2199,3 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 #include /**/ "ace/post.h"
 
 #endif /* ifndef */
-

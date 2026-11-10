@@ -238,39 +238,25 @@ public:
     char const * _cxx_namespace) = 0;
 
   static void foo_skel (
-      TAO_ServerRequest &server_request,
-      TAO::Portable_Server::Servant_Upcall *servant_upcall,
-      TAO_ServantBase *servant);
+    TAO_ServerRequest &server_request,
+    TAO::Portable_Server::Servant_Upcall *servant_upcall,
+    TAO_ServantBase *servant);
   virtual void bar (
     ::Objects const & foo) = 0;
 
   static void bar_skel (
-      TAO_ServerRequest &server_request,
-      TAO::Portable_Server::Servant_Upcall *servant_upcall,
-      TAO_ServantBase *servant);
+    TAO_ServerRequest &server_request,
+    TAO::Portable_Server::Servant_Upcall *servant_upcall,
+    TAO_ServantBase *servant);
 };
-
-///////////////////////////////////////////////////////////////////////
-//                    Direct  Impl. Declaration
-//
 
 class TAO_IDL_TEST_STUB_Export _TAO_Testing_Direct_Proxy_Impl
 {
 public:
   virtual ~_TAO_Testing_Direct_Proxy_Impl ();
-  static void
-  foo (
-    TAO_Abstract_ServantBase *servant, TAO::Argument **args);
-
-  static void
-  bar (
-    TAO_Abstract_ServantBase *servant, TAO::Argument **args);
-
+  static void foo (TAO_Abstract_ServantBase *servant, TAO::Argument **args);
+  static void bar (TAO_Abstract_ServantBase *servant, TAO::Argument **args);
 };
-
-//
-//                Direct  Proxy Impl. Declaration
-///////////////////////////////////////////////////////////////////////
 
 class POA_TAO_AMH_TestingResponseHandler;
 using POA_TAO_AMH_TestingResponseHandler_ptr = POA_TAO_AMH_TestingResponseHandler *;
@@ -322,65 +308,44 @@ public:
   virtual void foo () = 0;
 
   static void foo_skel (
-      TAO_ServerRequest &server_request,
-      TAO::Portable_Server::Servant_Upcall *servant_upcall,
-      TAO_ServantBase *servant);
+    TAO_ServerRequest &server_request,
+    TAO::Portable_Server::Servant_Upcall *servant_upcall,
+    TAO_ServantBase *servant);
   virtual void foo_excep (
     ::Messaging::ExceptionHolder * excep_holder) = 0;
 
   static void foo_excep_skel (
-      TAO_ServerRequest &server_request,
-      TAO::Portable_Server::Servant_Upcall *servant_upcall,
-      TAO_ServantBase *servant);
+    TAO_ServerRequest &server_request,
+    TAO::Portable_Server::Servant_Upcall *servant_upcall,
+    TAO_ServantBase *servant);
   virtual void bar () = 0;
 
   static void bar_skel (
-      TAO_ServerRequest &server_request,
-      TAO::Portable_Server::Servant_Upcall *servant_upcall,
-      TAO_ServantBase *servant);
+    TAO_ServerRequest &server_request,
+    TAO::Portable_Server::Servant_Upcall *servant_upcall,
+    TAO_ServantBase *servant);
   virtual void bar_excep (
     ::Messaging::ExceptionHolder * excep_holder) = 0;
 
   static void bar_excep_skel (
-      TAO_ServerRequest &server_request,
-      TAO::Portable_Server::Servant_Upcall *servant_upcall,
-      TAO_ServantBase *servant);
+    TAO_ServerRequest &server_request,
+    TAO::Portable_Server::Servant_Upcall *servant_upcall,
+    TAO_ServantBase *servant);
 };
-
-///////////////////////////////////////////////////////////////////////
-//                    Direct  Impl. Declaration
-//
 
 class TAO_IDL_TEST_STUB_Export _TAO_AMI_TestingHandler_Direct_Proxy_Impl
   : public virtual ::POA_Messaging::_TAO_ReplyHandler_Direct_Proxy_Impl
 {
 public:
   virtual ~_TAO_AMI_TestingHandler_Direct_Proxy_Impl ();
-  static void
-  foo (
-    TAO_Abstract_ServantBase *servant, TAO::Argument **args);
-
-  static void
-  foo_excep (
-    TAO_Abstract_ServantBase *servant, TAO::Argument **args);
-
-  static void
-  bar (
-    TAO_Abstract_ServantBase *servant, TAO::Argument **args);
-
-  static void
-  bar_excep (
-    TAO_Abstract_ServantBase *servant, TAO::Argument **args);
-
+  static void foo (TAO_Abstract_ServantBase *servant, TAO::Argument **);
+  static void foo_excep (TAO_Abstract_ServantBase *servant, TAO::Argument **args);
+  static void bar (TAO_Abstract_ServantBase *servant, TAO::Argument **);
+  static void bar_excep (TAO_Abstract_ServantBase *servant, TAO::Argument **args);
 };
-
-//
-//                Direct  Proxy Impl. Declaration
-///////////////////////////////////////////////////////////////////////
 
 #include "keywordsS_T.h"
 
 #include /**/ "ace/post.h"
 
 #endif /* ifndef */
-

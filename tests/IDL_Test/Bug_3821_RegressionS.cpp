@@ -28,4 +28,3 @@
 #include "Bug_3821_RegressionS.h"
 
 #endif /* ifndef */
-

@@ -260,8 +260,8 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean operator>> (TAO_InputCDR &strm, AnyUnionEnum & _tao_enumerator)
 {
-  ::CORBA::ULong _tao_temp = 0;
-  ::CORBA::Boolean const _tao_success = strm >> _tao_temp;
+  ::CORBA::ULong _tao_temp {};
+  const ::CORBA::Boolean _tao_success = strm >> _tao_temp;
 
   if (_tao_success)
     {
@@ -284,7 +284,7 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
       return false;
     }
 
-  ::CORBA::Boolean result = true;
+  ::CORBA::Boolean result {true};
 
   switch (_tao_union._d ())
   {
@@ -304,13 +304,13 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
     TAO_InputCDR &strm,
     MyAnyUnion &_tao_union)
 {
-  AnyUnionEnum _tao_discriminant;
+  AnyUnionEnum _tao_discriminant {};
   if (!(strm >> _tao_discriminant))
     {
       return false;
     }
 
-  ::CORBA::Boolean result = true;
+  ::CORBA::Boolean result {true};
 
   switch (_tao_discriminant)
   {
@@ -336,4 +336,3 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-

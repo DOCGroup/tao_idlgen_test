@@ -48,16 +48,12 @@
 #include "TestC.inl"
 #endif /* !defined INLINE */
 Test::InvalidTimestamp::InvalidTimestamp ()
-  : ::CORBA::UserException (
-        "IDL:Test/InvalidTimestamp:1.0",
-        "InvalidTimestamp")
+  : ::CORBA::UserException ("IDL:Test/InvalidTimestamp:1.0", "InvalidTimestamp")
 {
 }
 
 Test::InvalidTimestamp::InvalidTimestamp (const ::Test::InvalidTimestamp &_tao_excp)
-  : ::CORBA::UserException (
-        _tao_excp._rep_id (),
-        _tao_excp._name ())
+  : ::CORBA::UserException (_tao_excp._rep_id (), _tao_excp._name ())
 {
 }
 
@@ -151,16 +147,12 @@ namespace Test
   ::CORBA::TypeCode_ptr const _tc_InvalidTimestamp = std::addressof(_tao_tc_Test_InvalidTimestamp);
 }
 Test::ServerOverload::ServerOverload ()
-  : ::CORBA::UserException (
-        "IDL:Test/ServerOverload:1.0",
-        "ServerOverload")
+  : ::CORBA::UserException ("IDL:Test/ServerOverload:1.0", "ServerOverload")
 {
 }
 
 Test::ServerOverload::ServerOverload (const ::Test::ServerOverload &_tao_excp)
-  : ::CORBA::UserException (
-        _tao_excp._rep_id (),
-        _tao_excp._name ())
+  : ::CORBA::UserException (_tao_excp._rep_id (), _tao_excp._name ())
 {
 }
 
@@ -425,7 +417,7 @@ TAO::Objref_Traits<Test::Roundtrip>::nil ()
 }
 
 ::CORBA::Boolean
-TAO::Objref_Traits<Test::Roundtrip>::marshal (Test::Roundtrip_ptr const p,TAO_OutputCDR & cdr)
+TAO::Objref_Traits<Test::Roundtrip>::marshal (Test::Roundtrip_ptr const p, TAO_OutputCDR &cdr)
 {
   return ::CORBA::Object::marshal (p, cdr);
 }
@@ -446,8 +438,8 @@ Test::Roundtrip::test_method (
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
-      std::addressof(_tao_retval),
-      std::addressof(_tao_send_time)
+      std::addressof (_tao_retval),
+      std::addressof (_tao_send_time)
     };
 
   static TAO::Exception_Data
@@ -477,7 +469,6 @@ Test::Roundtrip::test_method (
       "test_method",
       11,
       TAO::TAO_CO_NONE | TAO::TAO_CO_THRU_POA_STRATEGY
-
     );
 
   _invocation_call.invoke (
@@ -499,7 +490,7 @@ Test::Roundtrip::shutdown ()
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
-      std::addressof(_tao_retval)
+      std::addressof (_tao_retval)
     };
 
   TAO::Invocation_Adapter _invocation_call (
@@ -565,7 +556,7 @@ Test::Roundtrip::_tao_release (Roundtrip_ptr obj)
 Test::Roundtrip::_is_a (char const *value)
 {
   if (std::strcmp (value, "IDL:Test/Roundtrip:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0)
+    std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0)
     {
       return true; // success using local knowledge
     }
@@ -789,7 +780,7 @@ TAO::Objref_Traits<Test::AMH_RoundtripResponseHandler>::nil ()
 }
 
 ::CORBA::Boolean
-TAO::Objref_Traits<Test::AMH_RoundtripResponseHandler>::marshal (Test::AMH_RoundtripResponseHandler_ptr const p,TAO_OutputCDR & cdr)
+TAO::Objref_Traits<Test::AMH_RoundtripResponseHandler>::marshal (Test::AMH_RoundtripResponseHandler_ptr const p, TAO_OutputCDR &cdr)
 {
   return ::CORBA::Object::marshal (p, cdr);
 }
@@ -810,14 +801,14 @@ Test::AMH_RoundtripResponseHandler_ptr
 Test::AMH_RoundtripResponseHandler::_narrow (::CORBA::Object_ptr _tao_objref)
 {
   return AMH_RoundtripResponseHandler::_duplicate (
-      dynamic_cast<AMH_RoundtripResponseHandler_ptr> (_tao_objref));
+    dynamic_cast<AMH_RoundtripResponseHandler_ptr> (_tao_objref));
 }
 
 Test::AMH_RoundtripResponseHandler_ptr
 Test::AMH_RoundtripResponseHandler::_unchecked_narrow (::CORBA::Object_ptr _tao_objref)
 {
   return AMH_RoundtripResponseHandler::_duplicate (
-      dynamic_cast<AMH_RoundtripResponseHandler_ptr> (_tao_objref));
+    dynamic_cast<AMH_RoundtripResponseHandler_ptr> (_tao_objref));
 }
 
 Test::AMH_RoundtripResponseHandler_ptr
@@ -846,8 +837,8 @@ Test::AMH_RoundtripResponseHandler::_tao_release (AMH_RoundtripResponseHandler_p
 Test::AMH_RoundtripResponseHandler::_is_a (char const *value)
 {
   if (std::strcmp (value, "IDL:Test/AMH_RoundtripResponseHandler:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/LocalObject:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0)
+    std::strcmp (value, "IDL:omg.org/CORBA/LocalObject:1.0") == 0 ||
+    std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0)
     {
       return true; // success using local knowledge
     }
@@ -1506,4 +1497,3 @@ OBV_Test::AMH_RoundtripExceptionHolder::truncation_hook ()
 {
   this->require_truncation_ = true;
 }
-

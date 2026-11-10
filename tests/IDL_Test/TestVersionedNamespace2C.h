@@ -124,9 +124,7 @@ namespace M1
 
     // The static operations.
     static LI_ptr _duplicate (LI_ptr obj);
-
     static void _tao_release (LI_ptr obj);
-
     static LI_ptr _narrow (::CORBA::Object_ptr obj);
     static LI_ptr _unchecked_narrow (::CORBA::Object_ptr obj);
     static LI_ptr _nil ();
@@ -147,15 +145,14 @@ namespace M1
 
     // Non-local interface only.
     LI (
-        TAO_Stub *objref,
-        ::CORBA::Boolean _tao_collocated = false,
-        TAO_Abstract_ServantBase *servant = nullptr,
-        TAO_ORB_Core *orb_core = nullptr);
+      TAO_Stub *objref,
+      ::CORBA::Boolean _tao_collocated = false,
+      TAO_Abstract_ServantBase *servant = nullptr,
+      TAO_ORB_Core *orb_core = nullptr);
 
     ~LI () override = default;
 
   private:
-    // Private and unimplemented for concrete interfaces.
     LI (LI const &) = delete;
     LI (LI &&) = delete;
     LI &operator= (LI const &) = delete;
@@ -252,9 +249,7 @@ public:
 
   // The static operations.
   static AMH_LIResponseHandler_ptr _duplicate (AMH_LIResponseHandler_ptr obj);
-
   static void _tao_release (AMH_LIResponseHandler_ptr obj);
-
   static AMH_LIResponseHandler_ptr _narrow (::CORBA::Object_ptr obj);
   static AMH_LIResponseHandler_ptr _unchecked_narrow (::CORBA::Object_ptr obj);
   static AMH_LIResponseHandler_ptr _nil ();
@@ -275,7 +270,6 @@ protected:
   ~AMH_LIResponseHandler () override = default;
 
 private:
-  // Private and unimplemented for concrete interfaces.
   AMH_LIResponseHandler (AMH_LIResponseHandler const &) = delete;
   AMH_LIResponseHandler (AMH_LIResponseHandler &&) = delete;
   AMH_LIResponseHandler &operator= (AMH_LIResponseHandler const &) = delete;
@@ -306,9 +300,7 @@ public:
 
   // The static operations.
   static L2_ptr _duplicate (L2_ptr obj);
-
   static void _tao_release (L2_ptr obj);
-
   static L2_ptr _narrow (::CORBA::Object_ptr obj);
   static L2_ptr _unchecked_narrow (::CORBA::Object_ptr obj);
   static L2_ptr _nil ();
@@ -329,15 +321,14 @@ protected:
 
   // Non-local interface only.
   L2 (
-      TAO_Stub *objref,
-      ::CORBA::Boolean _tao_collocated = false,
-      TAO_Abstract_ServantBase *servant = nullptr,
-      TAO_ORB_Core *orb_core = nullptr);
+    TAO_Stub *objref,
+    ::CORBA::Boolean _tao_collocated = false,
+    TAO_Abstract_ServantBase *servant = nullptr,
+    TAO_ORB_Core *orb_core = nullptr);
 
   ~L2 () override = default;
 
 private:
-  // Private and unimplemented for concrete interfaces.
   L2 (L2 const &) = delete;
   L2 (L2 &&) = delete;
   L2 &operator= (L2 const &) = delete;
@@ -434,9 +425,7 @@ public:
 
   // The static operations.
   static AMH_L2ResponseHandler_ptr _duplicate (AMH_L2ResponseHandler_ptr obj);
-
   static void _tao_release (AMH_L2ResponseHandler_ptr obj);
-
   static AMH_L2ResponseHandler_ptr _narrow (::CORBA::Object_ptr obj);
   static AMH_L2ResponseHandler_ptr _unchecked_narrow (::CORBA::Object_ptr obj);
   static AMH_L2ResponseHandler_ptr _nil ();
@@ -457,7 +446,6 @@ protected:
   ~AMH_L2ResponseHandler () override = default;
 
 private:
-  // Private and unimplemented for concrete interfaces.
   AMH_L2ResponseHandler (AMH_L2ResponseHandler const &) = delete;
   AMH_L2ResponseHandler (AMH_L2ResponseHandler &&) = delete;
   AMH_L2ResponseHandler &operator= (AMH_L2ResponseHandler const &) = delete;
@@ -714,9 +702,7 @@ namespace M2
 
       // The static operations.
       static L3_ptr _duplicate (L3_ptr obj);
-
       static void _tao_release (L3_ptr obj);
-
       static L3_ptr _narrow (::CORBA::Object_ptr obj);
       static L3_ptr _unchecked_narrow (::CORBA::Object_ptr obj);
       static L3_ptr _nil ();
@@ -737,15 +723,14 @@ namespace M2
 
       // Non-local interface only.
       L3 (
-          TAO_Stub *objref,
-          ::CORBA::Boolean _tao_collocated = false,
-          TAO_Abstract_ServantBase *servant = nullptr,
-          TAO_ORB_Core *orb_core = nullptr);
+        TAO_Stub *objref,
+        ::CORBA::Boolean _tao_collocated = false,
+        TAO_Abstract_ServantBase *servant = nullptr,
+        TAO_ORB_Core *orb_core = nullptr);
 
       ~L3 () override = default;
 
     private:
-      // Private and unimplemented for concrete interfaces.
       L3 (L3 const &) = delete;
       L3 (L3 &&) = delete;
       L3 &operator= (L3 const &) = delete;
@@ -842,9 +827,7 @@ namespace M2
 
     // The static operations.
     static AMH_L3ResponseHandler_ptr _duplicate (AMH_L3ResponseHandler_ptr obj);
-
     static void _tao_release (AMH_L3ResponseHandler_ptr obj);
-
     static AMH_L3ResponseHandler_ptr _narrow (::CORBA::Object_ptr obj);
     static AMH_L3ResponseHandler_ptr _unchecked_narrow (::CORBA::Object_ptr obj);
     static AMH_L3ResponseHandler_ptr _nil ();
@@ -865,7 +848,6 @@ namespace M2
     ~AMH_L3ResponseHandler () override = default;
 
   private:
-    // Private and unimplemented for concrete interfaces.
     AMH_L3ResponseHandler (AMH_L3ResponseHandler const &) = delete;
     AMH_L3ResponseHandler (AMH_L3ResponseHandler &&) = delete;
     AMH_L3ResponseHandler &operator= (AMH_L3ResponseHandler const &) = delete;
@@ -934,9 +916,7 @@ namespace M2
 
     // The static operations.
     static L4_ptr _duplicate (L4_ptr obj);
-
     static void _tao_release (L4_ptr obj);
-
     static L4_ptr _narrow (::CORBA::Object_ptr obj);
     static L4_ptr _unchecked_narrow (::CORBA::Object_ptr obj);
     static L4_ptr _nil ();
@@ -957,15 +937,14 @@ namespace M2
 
     // Non-local interface only.
     L4 (
-        TAO_Stub *objref,
-        ::CORBA::Boolean _tao_collocated = false,
-        TAO_Abstract_ServantBase *servant = nullptr,
-        TAO_ORB_Core *orb_core = nullptr);
+      TAO_Stub *objref,
+      ::CORBA::Boolean _tao_collocated = false,
+      TAO_Abstract_ServantBase *servant = nullptr,
+      TAO_ORB_Core *orb_core = nullptr);
 
     ~L4 () override = default;
 
   private:
-    // Private and unimplemented for concrete interfaces.
     L4 (L4 const &) = delete;
     L4 (L4 &&) = delete;
     L4 &operator= (L4 const &) = delete;
@@ -1062,9 +1041,7 @@ public:
 
   // The static operations.
   static AMH_L4ResponseHandler_ptr _duplicate (AMH_L4ResponseHandler_ptr obj);
-
   static void _tao_release (AMH_L4ResponseHandler_ptr obj);
-
   static AMH_L4ResponseHandler_ptr _narrow (::CORBA::Object_ptr obj);
   static AMH_L4ResponseHandler_ptr _unchecked_narrow (::CORBA::Object_ptr obj);
   static AMH_L4ResponseHandler_ptr _nil ();
@@ -1085,7 +1062,6 @@ protected:
   ~AMH_L4ResponseHandler () override = default;
 
 private:
-  // Private and unimplemented for concrete interfaces.
   AMH_L4ResponseHandler (AMH_L4ResponseHandler const &) = delete;
   AMH_L4ResponseHandler (AMH_L4ResponseHandler &&) = delete;
   AMH_L4ResponseHandler &operator= (AMH_L4ResponseHandler const &) = delete;
@@ -2305,8 +2281,8 @@ END_USER_VERSIONED_NAMESPACE
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
- ::CORBA::Boolean operator<< (TAO_OutputCDR &, M1::LI_ptr const);
- ::CORBA::Boolean operator>> (TAO_InputCDR &, M1::LI_ptr &);
+::CORBA::Boolean operator<< (TAO_OutputCDR &, M1::LI_ptr const);
+::CORBA::Boolean operator>> (TAO_InputCDR &, M1::LI_ptr &);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
@@ -2340,8 +2316,8 @@ END_USER_VERSIONED_NAMESPACE
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
- ::CORBA::Boolean operator<< (TAO_OutputCDR &, M1::L2_ptr const);
- ::CORBA::Boolean operator>> (TAO_InputCDR &, M1::L2_ptr &);
+::CORBA::Boolean operator<< (TAO_OutputCDR &, M1::L2_ptr const);
+::CORBA::Boolean operator>> (TAO_InputCDR &, M1::L2_ptr &);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
@@ -2443,8 +2419,8 @@ END_USER_VERSIONED_NAMESPACE
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
- ::CORBA::Boolean operator<< (TAO_OutputCDR &, M2::M3::L3_ptr const);
- ::CORBA::Boolean operator>> (TAO_InputCDR &, M2::M3::L3_ptr &);
+::CORBA::Boolean operator<< (TAO_OutputCDR &, M2::M3::L3_ptr const);
+::CORBA::Boolean operator>> (TAO_InputCDR &, M2::M3::L3_ptr &);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
@@ -2489,8 +2465,8 @@ END_USER_VERSIONED_NAMESPACE
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
- ::CORBA::Boolean operator<< (TAO_OutputCDR &, M2::M3::L4_ptr const);
- ::CORBA::Boolean operator>> (TAO_InputCDR &, M2::M3::L4_ptr &);
+::CORBA::Boolean operator<< (TAO_OutputCDR &, M2::M3::L4_ptr const);
+::CORBA::Boolean operator>> (TAO_InputCDR &, M2::M3::L4_ptr &);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
@@ -2577,4 +2553,3 @@ END_USER_VERSIONED_NAMESPACE
 #include /**/ "ace/post.h"
 
 #endif /* ifndef */
-

@@ -69,4 +69,3 @@ TAO::Array_Traits<TEST_TYPE_forany>::alloc ()
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-

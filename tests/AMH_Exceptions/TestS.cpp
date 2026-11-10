@@ -60,8 +60,8 @@ public:
   TAO_operation_db_entry const * lookup (char const *str, std::size_t len) override;
 };
 
-/* C++ code produced by gperf version 2.8 (ACE version 8.0.8) */
-/* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F nullptr,nullptr -a -o -t -p -K opname -L C++17 -Z TAO_Test_AMH_Roundtrip_Perfect_Hash_OpTable -N lookup */
+/* C++ code produced by ACE gperf version 8.0.8 */
+/* Command-line: ace_gperf -m -M -J -Q -R -c -C -D -E -T -f 0 -F nullptr,nullptr -o -t -p -K opname -Z TAO_Test_AMH_Roundtrip_Perfect_Hash_OpTable -N lookup */
 
 std::size_t
 TAO_Test_AMH_Roundtrip_Perfect_Hash_OpTable::hash (char const *str, std::size_t len)
@@ -212,11 +212,9 @@ POA_Test::AMH_Roundtrip::shutdown_skel (
 
 ::CORBA::Boolean POA_Test::AMH_Roundtrip::_is_a (char const *value)
 {
-  return
-    (
-      std::strcmp (value, "IDL:Test/Roundtrip:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0
-    );
+  return (
+    std::strcmp (value, "IDL:Test/Roundtrip:1.0") == 0 ||
+    std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0);
 }
 
 char const *POA_Test::AMH_Roundtrip::_interface_repository_id () const
@@ -254,8 +252,8 @@ public:
   TAO_operation_db_entry const * lookup (char const *str, std::size_t len) override;
 };
 
-/* C++ code produced by gperf version 2.8 (ACE version 8.0.8) */
-/* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F nullptr,nullptr -a -o -t -p -K opname -L C++17 -Z TAO_Test_Roundtrip_Perfect_Hash_OpTable -N lookup */
+/* C++ code produced by ACE gperf version 8.0.8 */
+/* Command-line: ace_gperf -m -M -J -Q -R -c -C -D -E -T -f 0 -F nullptr,nullptr -o -t -p -K opname -Z TAO_Test_Roundtrip_Perfect_Hash_OpTable -N lookup */
 
 std::size_t
 TAO_Test_Roundtrip_Perfect_Hash_OpTable::hash (char const *str, std::size_t len)
@@ -341,11 +339,9 @@ namespace POA_Test
 
     void execute () override
     {
-      TAO::SArg_Traits<::CORBA::ULongLong>::ret_arg_type retval =
-        TAO::Portable_Server::get_ret_arg<::CORBA::ULongLong> (
-          this->operation_details_,
-          this->args_);
-
+      TAO::SArg_Traits<::CORBA::ULongLong>::ret_arg_type retval = TAO::Portable_Server::get_ret_arg<::CORBA::ULongLong> (
+        this->operation_details_,
+        this->args_);
       TAO::SArg_Traits<::CORBA::ULongLong>::in_arg_type arg_1 =
         TAO::Portable_Server::get_in_arg<::CORBA::ULongLong> (
           this->operation_details_,
@@ -464,11 +460,9 @@ void POA_Test::Roundtrip::shutdown_skel (
 
 ::CORBA::Boolean POA_Test::Roundtrip::_is_a (char const *value)
 {
-  return
-    (
-      std::strcmp (value, "IDL:Test/Roundtrip:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0
-    );
+  return (
+    std::strcmp (value, "IDL:Test/Roundtrip:1.0") == 0 ||
+    std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0);
 }
 
 char const *POA_Test::Roundtrip::_interface_repository_id () const
@@ -547,4 +541,3 @@ POA_Test::TAO_AMH_RoundtripResponseHandler::shutdown_excep (
 }
 
 #endif /* ifndef */
-

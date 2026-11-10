@@ -145,4 +145,3 @@ namespace POA_orange
 #include /**/ "ace/post.h"
 
 #endif /* ifndef */
-

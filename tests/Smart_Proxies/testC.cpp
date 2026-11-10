@@ -29,6 +29,7 @@
 #include "tao/Exception_Data.h"
 #include "tao/Invocation_Adapter.h"
 #include "tao/Object_T.h"
+#include "tao/SystemException.h"
 
 #if !defined (__ACE_INLINE__)
 #include "testC.inl"
@@ -57,15 +58,90 @@ TAO::Objref_Traits<Test>::nil ()
 }
 
 ::CORBA::Boolean
-TAO::Objref_Traits<Test>::marshal (Test_ptr const p,TAO_OutputCDR & cdr)
+TAO::Objref_Traits<Test>::marshal (Test_ptr const p, TAO_OutputCDR &cdr)
 {
   return ::CORBA::Object::marshal (p, cdr);
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
+Test::Oops::Oops (
+    char const * _tao_reason)
+  : ::CORBA::UserException ("IDL:Test/Oops:1.0", "Oops")
+{
+  this->reason = ::CORBA::string_dup (_tao_reason);
+}
+
+Test::Oops::Oops ()
+  : ::CORBA::UserException ("IDL:Test/Oops:1.0", "Oops")
+{
+}
+
+Test::Oops::Oops (const ::Test::Oops &_tao_excp)
+  : ::CORBA::UserException (_tao_excp._rep_id (), _tao_excp._name ())
+{
+  this->reason = ::CORBA::string_dup (_tao_excp.reason.in ());
+}
+
+Test::Oops&
+Test::Oops::operator= (const ::Test::Oops &_tao_excp)
+{
+  this->::CORBA::UserException::operator= (_tao_excp);
+  this->reason = ::CORBA::string_dup (_tao_excp.reason.in ());
+  return *this;
+}
+
+Test::Oops *
+Test::Oops::_downcast (::CORBA::Exception *_tao_excp)
+{
+  return dynamic_cast<Oops *> (_tao_excp);
+}
+
+Test::Oops const *
+Test::Oops::_downcast (::CORBA::Exception const *_tao_excp)
+{
+  return dynamic_cast<Oops const *> (_tao_excp);
+}
+
+::CORBA::Exception *Test::Oops::_alloc ()
+{
+  ::CORBA::Exception *retval {};
+  ACE_NEW_RETURN (retval, ::Test::Oops, nullptr);
+  return retval;
+}
+
+::CORBA::Exception *
+Test::Oops::_tao_duplicate () const
+{
+  ::CORBA::Exception *result {};
+  ACE_NEW_RETURN (result, ::Test::Oops (*this), nullptr);
+  return result;
+}
+
+void Test::Oops::_raise () const
+{
+  throw *this;
+}
+
+void Test::Oops::_tao_encode (TAO_OutputCDR &cdr) const
+{
+  if (!(cdr << *this))
+    {
+      throw ::CORBA::MARSHAL ();
+    }
+}
+
+void Test::Oops::_tao_decode (TAO_InputCDR &cdr)
+{
+  if (!(cdr >> *this))
+    {
+      throw ::CORBA::MARSHAL ();
+    }
+}
+
 ::CORBA::Short
-Test::box_prices ()
+Test::method (
+  ::CORBA::Short boo)
 {
   if (!this->is_evaluated ())
     {
@@ -73,58 +149,39 @@ Test::box_prices ()
     }
 
   TAO::Arg_Traits<::CORBA::Short>::ret_val _tao_retval;
+  TAO::Arg_Traits<::CORBA::Short>::in_arg_val _tao_boo (boo);
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
-      std::addressof(_tao_retval)
+      std::addressof (_tao_retval),
+      std::addressof (_tao_boo)
     };
 
-  TAO::Invocation_Adapter _invocation_call (
-      this,
-      _the_tao_operation_signature,
-      1,
-      "box_prices",
-      10,
-      TAO::TAO_CO_NONE | TAO::TAO_CO_THRU_POA_STRATEGY,
-      TAO::TAO_TWOWAY_INVOCATION
-      ,
-      TAO::TAO_SYNCHRONOUS_INVOCATION,
-      false
-    );
-
-  _invocation_call.invoke (nullptr, 0);
-
-  return _tao_retval.retn ();
-}
-::CORBA::Long
-Test::tickets (
-  ::CORBA::Short number)
-{
-  if (!this->is_evaluated ())
+  static TAO::Exception_Data
+  _tao_Test_method_exceptiondata [] =
     {
-      ::CORBA::Object::tao_object_initialize (this);
-    }
-
-  TAO::Arg_Traits<::CORBA::Long>::ret_val _tao_retval;
-  TAO::Arg_Traits<::CORBA::Short>::in_arg_val _tao_number (number);
-
-  TAO::Argument *_the_tao_operation_signature [] =
-    {
-      std::addressof(_tao_retval),
-      std::addressof(_tao_number)
+      {
+        "IDL:Test/Oops:1.0",
+        Test::Oops::_alloc
+#if TAO_HAS_INTERCEPTORS == 1
+        , nullptr
+#endif /* TAO_HAS_INTERCEPTORS */
+      }
     };
 
   TAO::Invocation_Adapter _invocation_call (
       this,
       _the_tao_operation_signature,
       2,
-      "tickets",
-      7,
+      "method",
+      6,
       TAO::TAO_CO_NONE | TAO::TAO_CO_THRU_POA_STRATEGY
-
     );
 
-  _invocation_call.invoke (nullptr, 0);
+  _invocation_call.invoke (
+      _tao_Test_method_exceptiondata,
+      1
+    );
 
   return _tao_retval.retn ();
 }
@@ -140,7 +197,7 @@ Test::shutdown ()
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
-      std::addressof(_tao_retval)
+      std::addressof (_tao_retval)
     };
 
   TAO::Invocation_Adapter _invocation_call (
@@ -164,17 +221,14 @@ Test::Test ()
 Test_ptr
 Test::_narrow (::CORBA::Object_ptr _tao_objref)
 {
-  Test *proxy = TAO::Narrow_Utils<Test>::narrow (
-      _tao_objref,
-      "IDL:Test:1.0");
+  Test *proxy = TAO::Narrow_Utils<Test>::narrow (_tao_objref, "IDL:Test:1.0");
   return TAO_Test_PROXY_FACTORY_ADAPTER::instance ()->create_proxy (proxy);
 }
 
 Test_ptr
 Test::_unchecked_narrow (::CORBA::Object_ptr _tao_objref)
 {
-  Test *proxy = TAO::Narrow_Utils<Test>::unchecked_narrow (
-      _tao_objref);
+  Test *proxy = TAO::Narrow_Utils<Test>::unchecked_narrow (_tao_objref);
   return TAO_Test_PROXY_FACTORY_ADAPTER::instance ()->create_proxy (proxy);
 }
 
@@ -204,7 +258,7 @@ Test::_tao_release (Test_ptr obj)
 Test::_is_a (char const *value)
 {
   if (std::strcmp (value, "IDL:Test:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0)
+    std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0)
     {
       return true; // success using local knowledge
     }
@@ -230,22 +284,13 @@ TAO_Test_Default_Proxy_Factory::TAO_Test_Default_Proxy_Factory (bool permanent)
   TAO_Test_PROXY_FACTORY_ADAPTER::instance ()->register_proxy_factory (this, permanent);
 }
 
-TAO_Test_Default_Proxy_Factory::~TAO_Test_Default_Proxy_Factory ()
-{
-}
-
 Test_ptr
 TAO_Test_Default_Proxy_Factory::create_proxy (::Test_ptr proxy)
 {
   return proxy;
 }
 
-TAO_Test_Proxy_Factory_Adapter::TAO_Test_Proxy_Factory_Adapter ()
-  : proxy_factory_ (nullptr),
-    one_shot_factory_ (false),
-    disable_factory_ (false)
-{
-}
+TAO_Test_Default_Proxy_Factory::~TAO_Test_Default_Proxy_Factory () = default;
 
 TAO_Test_Proxy_Factory_Adapter::~TAO_Test_Proxy_Factory_Adapter ()
 {
@@ -257,13 +302,7 @@ void
 TAO_Test_Proxy_Factory_Adapter::register_proxy_factory (
   TAO_Test_Default_Proxy_Factory *df, bool one_shot_factory)
 {
-  ACE_MT (
-      ACE_GUARD (
-          TAO_SYNCH_RECURSIVE_MUTEX,
-          ace_mon,
-          this->lock_
-        )
-    );
+  ACE_MT (ACE_GUARD (TAO_SYNCH_RECURSIVE_MUTEX, ace_mon, this->lock_));
 
   // Remove any existing <proxy_factory_> and replace with the new one.
   this->unregister_proxy_factory ();
@@ -274,20 +313,13 @@ TAO_Test_Proxy_Factory_Adapter::register_proxy_factory (
 void
 TAO_Test_Proxy_Factory_Adapter::unregister_proxy_factory ()
 {
-  ACE_MT (
-      ACE_GUARD (
-          TAO_SYNCH_RECURSIVE_MUTEX,
-          ace_mon,
-          this->lock_
-        )
-    );
+  ACE_MT (ACE_GUARD (TAO_SYNCH_RECURSIVE_MUTEX, ace_mon, this->lock_));
 
   if (this->one_shot_factory_)
     {
       this->disable_factory_ = true;
     }
-
-  if (this->one_shot_factory_ == false && this->proxy_factory_ != nullptr)
+  else
     {
       delete this->proxy_factory_;
       this->proxy_factory_ = nullptr;
@@ -295,12 +327,9 @@ TAO_Test_Proxy_Factory_Adapter::unregister_proxy_factory ()
 }
 
 Test_ptr
-TAO_Test_Proxy_Factory_Adapter::create_proxy (
-    ::Test_ptr proxy
-  )
+TAO_Test_Proxy_Factory_Adapter::create_proxy (::Test_ptr proxy)
 {
-  ACE_MT (ACE_GUARD_RETURN (TAO_SYNCH_RECURSIVE_MUTEX, ace_mon,
-    this->lock_, nullptr));
+  ACE_MT (ACE_GUARD_RETURN (TAO_SYNCH_RECURSIVE_MUTEX, ace_mon, this->lock_, nullptr));
 
   // To take care of those <unchecked_narrow> methods where we
   // want to override the smart proxy factory if there exists one.
@@ -312,20 +341,13 @@ TAO_Test_Proxy_Factory_Adapter::create_proxy (
 
   // Verify that an <proxy_factory_> is available else make one.
   if (!this->proxy_factory_)
-    ACE_NEW_RETURN (this->proxy_factory_,
-        TAO_Test_Default_Proxy_Factory (0),
-         nullptr);
-
+    {
+      ACE_NEW_RETURN (this->proxy_factory_, TAO_Test_Default_Proxy_Factory (false), nullptr);
+    }
   return this->proxy_factory_->create_proxy (proxy);
 }
 
-TAO_Test_Smart_Proxy_Base::TAO_Test_Smart_Proxy_Base ()
-{
-}
-
-TAO_Test_Smart_Proxy_Base::~TAO_Test_Smart_Proxy_Base ()
-{
-}
+TAO_Test_Smart_Proxy_Base::~TAO_Test_Smart_Proxy_Base () = default;
 
 TAO_Stub *
 TAO_Test_Smart_Proxy_Base::_stubobj () const
@@ -339,43 +361,65 @@ TAO_Test_Smart_Proxy_Base::_stubobj ()
   return this->base_proxy_->_stubobj ();
 }
 
-::CORBA::Short TAO_Test_Smart_Proxy_Base::box_prices  (){
-  return this->get_proxy ()->box_prices (
-
-    );
-
+::CORBA::Short
+TAO_Test_Smart_Proxy_Base::method (
+  ::CORBA::Short boo)
+{
+  return this->get_proxy ()->method (
+    boo);
 }
 
-::CORBA::Long TAO_Test_Smart_Proxy_Base::tickets  (
-  ::CORBA::Short number){
-  return this->get_proxy ()->tickets (
-
-      number
-    );
-
-}
-
-void TAO_Test_Smart_Proxy_Base::shutdown  (){
-  this->get_proxy ()->shutdown (
-
-    );
-
+void
+TAO_Test_Smart_Proxy_Base::shutdown ()
+{
+  this->get_proxy ()->shutdown ();
 }
 
 Test_ptr
 TAO_Test_Smart_Proxy_Base::get_proxy ()
-
 {
   // Obtain the real proxy stored in <base_proxy_>
   if (CORBA::is_nil (this->proxy_.in ()))
     {
-       // Verify whether factory is one-shot, if so disable
-       // factory temporarily or not else remove.
+      // Verify whether factory is one-shot, if so disable
+      // factory temporarily or not else remove.
       TAO_Test_PROXY_FACTORY_ADAPTER::instance ()->unregister_proxy_factory ();
       this->proxy_ = ::Test::_narrow (this->base_proxy_.in ());
     }
   return this->proxy_.in ();
 }
+
+TAO_BEGIN_VERSIONED_NAMESPACE_DECL
+
+::CORBA::Boolean operator<< (
+    TAO_OutputCDR &strm,
+    Test::Oops const &_tao_aggregate)
+{
+  // First marshal the repository ID.
+  if (strm << _tao_aggregate._rep_id ())
+    {
+      // Now marshal the members (if any).
+      return (
+        (strm << _tao_aggregate.reason.in ())
+       );
+    }
+  else
+    {
+      return false;
+    }
+}
+
+::CORBA::Boolean operator>> (
+    TAO_InputCDR &strm,
+    Test::Oops &_tao_aggregate)
+{
+  // Demarshal the members.
+  return (
+    (strm >> _tao_aggregate.reason.out ())
+  );
+}
+
+TAO_END_VERSIONED_NAMESPACE_DECL
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
@@ -405,4 +449,3 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-

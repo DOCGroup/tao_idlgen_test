@@ -209,9 +209,7 @@ public:
 
   // The static operations.
   static seqLocal_ptr _duplicate (seqLocal_ptr obj);
-
   static void _tao_release (seqLocal_ptr obj);
-
   static seqLocal_ptr _narrow (::CORBA::Object_ptr obj);
   static seqLocal_ptr _unchecked_narrow (::CORBA::Object_ptr obj);
   static seqLocal_ptr _nil ();
@@ -229,7 +227,6 @@ protected:
   ~seqLocal () override = default;
 
 private:
-  // Private and unimplemented for concrete interfaces.
   seqLocal (seqLocal const &) = delete;
   seqLocal (seqLocal &&) = delete;
   seqLocal &operator= (seqLocal const &) = delete;
@@ -1014,4 +1011,3 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 #include /**/ "ace/post.h"
 
 #endif /* ifndef */
-

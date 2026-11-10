@@ -170,8 +170,7 @@ namespace mod2
     void _tao_encode (TAO_OutputCDR &cdr) const override;
     void _tao_decode (TAO_InputCDR &cdr) override;
 
-    exp (
-        mod2::fwd_ptr const _tao_fwd_mem);
+    exp (mod2::fwd_ptr const _tao_fwd_mem);
 
     ::CORBA::TypeCode_ptr _tao_type () const override;
   };
@@ -209,9 +208,7 @@ namespace mod2
 
     // The static operations.
     static full_ptr _duplicate (full_ptr obj);
-
     static void _tao_release (full_ptr obj);
-
     static full_ptr _narrow (::CORBA::Object_ptr obj);
     static full_ptr _unchecked_narrow (::CORBA::Object_ptr obj);
     static full_ptr _nil ();
@@ -241,15 +238,14 @@ namespace mod2
 
     // Non-local interface only.
     full (
-        TAO_Stub *objref,
-        ::CORBA::Boolean _tao_collocated = false,
-        TAO_Abstract_ServantBase *servant = nullptr,
-        TAO_ORB_Core *orb_core = nullptr);
+      TAO_Stub *objref,
+      ::CORBA::Boolean _tao_collocated = false,
+      TAO_Abstract_ServantBase *servant = nullptr,
+      TAO_ORB_Core *orb_core = nullptr);
 
     ~full () override = default;
 
   private:
-    // Private and unimplemented for concrete interfaces.
     full (full const &) = delete;
     full (full &&) = delete;
     full &operator= (full const &) = delete;
@@ -354,9 +350,7 @@ public:
 
   // The static operations.
   static AMH_fullResponseHandler_ptr _duplicate (AMH_fullResponseHandler_ptr obj);
-
   static void _tao_release (AMH_fullResponseHandler_ptr obj);
-
   static AMH_fullResponseHandler_ptr _narrow (::CORBA::Object_ptr obj);
   static AMH_fullResponseHandler_ptr _unchecked_narrow (::CORBA::Object_ptr obj);
   static AMH_fullResponseHandler_ptr _nil ();
@@ -382,7 +376,6 @@ protected:
   ~AMH_fullResponseHandler () override = default;
 
 private:
-  // Private and unimplemented for concrete interfaces.
   AMH_fullResponseHandler (AMH_fullResponseHandler const &) = delete;
   AMH_fullResponseHandler (AMH_fullResponseHandler &&) = delete;
   AMH_fullResponseHandler &operator= (AMH_fullResponseHandler const &) = delete;
@@ -402,7 +395,6 @@ using AMI_fullHandler_out = TAO_Objref_Out_T<AMI_fullHandler>;
 
 class TAO_IDL_TEST_STUB_Export AMI_fullHandler
   : public virtual ::Messaging::ReplyHandler
-
 {
 public:
   friend class TAO::Narrow_Utils<AMI_fullHandler>;
@@ -414,9 +406,7 @@ public:
 
   // The static operations.
   static AMI_fullHandler_ptr _duplicate (AMI_fullHandler_ptr obj);
-
   static void _tao_release (AMI_fullHandler_ptr obj);
-
   static AMI_fullHandler_ptr _narrow (::CORBA::Object_ptr obj);
   static AMI_fullHandler_ptr _unchecked_narrow (::CORBA::Object_ptr obj);
   static AMI_fullHandler_ptr _nil ();
@@ -450,15 +440,14 @@ protected:
 
   // Non-local interface only.
   AMI_fullHandler (
-      TAO_Stub *objref,
-      ::CORBA::Boolean _tao_collocated = false,
-      TAO_Abstract_ServantBase *servant = nullptr,
-      TAO_ORB_Core *orb_core = nullptr);
+    TAO_Stub *objref,
+    ::CORBA::Boolean _tao_collocated = false,
+    TAO_Abstract_ServantBase *servant = nullptr,
+    TAO_ORB_Core *orb_core = nullptr);
 
   ~AMI_fullHandler () override = default;
 
 private:
-  // Private and unimplemented for concrete interfaces.
   AMI_fullHandler (AMI_fullHandler const &) = delete;
   AMI_fullHandler (AMI_fullHandler &&) = delete;
   AMI_fullHandler &operator= (AMI_fullHandler const &) = delete;
@@ -558,9 +547,7 @@ namespace fwd_mixed_intf
 
     // The static operations.
     static concrete_parent_ptr _duplicate (concrete_parent_ptr obj);
-
     static void _tao_release (concrete_parent_ptr obj);
-
     static concrete_parent_ptr _narrow (::CORBA::Object_ptr obj);
     static concrete_parent_ptr _unchecked_narrow (::CORBA::Object_ptr obj);
     static concrete_parent_ptr _nil ();
@@ -580,15 +567,14 @@ namespace fwd_mixed_intf
 
     // Non-local interface only.
     concrete_parent (
-        TAO_Stub *objref,
-        ::CORBA::Boolean _tao_collocated = false,
-        TAO_Abstract_ServantBase *servant = nullptr,
-        TAO_ORB_Core *orb_core = nullptr);
+      TAO_Stub *objref,
+      ::CORBA::Boolean _tao_collocated = false,
+      TAO_Abstract_ServantBase *servant = nullptr,
+      TAO_ORB_Core *orb_core = nullptr);
 
     ~concrete_parent () override = default;
 
   private:
-    // Private and unimplemented for concrete interfaces.
     concrete_parent (concrete_parent const &) = delete;
     concrete_parent (concrete_parent &&) = delete;
     concrete_parent &operator= (concrete_parent const &) = delete;
@@ -700,9 +686,7 @@ namespace fwd_mixed_intf
 
     // The static operations.
     static AMH_concrete_parentResponseHandler_ptr _duplicate (AMH_concrete_parentResponseHandler_ptr obj);
-
     static void _tao_release (AMH_concrete_parentResponseHandler_ptr obj);
-
     static AMH_concrete_parentResponseHandler_ptr _narrow (::CORBA::Object_ptr obj);
     static AMH_concrete_parentResponseHandler_ptr _unchecked_narrow (::CORBA::Object_ptr obj);
     static AMH_concrete_parentResponseHandler_ptr _nil ();
@@ -720,7 +704,6 @@ namespace fwd_mixed_intf
     ~AMH_concrete_parentResponseHandler () override = default;
 
   private:
-    // Private and unimplemented for concrete interfaces.
     AMH_concrete_parentResponseHandler (AMH_concrete_parentResponseHandler const &) = delete;
     AMH_concrete_parentResponseHandler (AMH_concrete_parentResponseHandler &&) = delete;
     AMH_concrete_parentResponseHandler &operator= (AMH_concrete_parentResponseHandler const &) = delete;
@@ -740,7 +723,6 @@ namespace fwd_mixed_intf
 
   class TAO_IDL_TEST_STUB_Export AMI_concrete_parentHandler
     : public virtual ::Messaging::ReplyHandler
-
   {
   public:
     friend class TAO::Narrow_Utils<AMI_concrete_parentHandler>;
@@ -752,9 +734,7 @@ namespace fwd_mixed_intf
 
     // The static operations.
     static AMI_concrete_parentHandler_ptr _duplicate (AMI_concrete_parentHandler_ptr obj);
-
     static void _tao_release (AMI_concrete_parentHandler_ptr obj);
-
     static AMI_concrete_parentHandler_ptr _narrow (::CORBA::Object_ptr obj);
     static AMI_concrete_parentHandler_ptr _unchecked_narrow (::CORBA::Object_ptr obj);
     static AMI_concrete_parentHandler_ptr _nil ();
@@ -774,15 +754,14 @@ namespace fwd_mixed_intf
 
     // Non-local interface only.
     AMI_concrete_parentHandler (
-        TAO_Stub *objref,
-        ::CORBA::Boolean _tao_collocated = false,
-        TAO_Abstract_ServantBase *servant = nullptr,
-        TAO_ORB_Core *orb_core = nullptr);
+      TAO_Stub *objref,
+      ::CORBA::Boolean _tao_collocated = false,
+      TAO_Abstract_ServantBase *servant = nullptr,
+      TAO_ORB_Core *orb_core = nullptr);
 
     ~AMI_concrete_parentHandler () override = default;
 
   private:
-    // Private and unimplemented for concrete interfaces.
     AMI_concrete_parentHandler (AMI_concrete_parentHandler const &) = delete;
     AMI_concrete_parentHandler (AMI_concrete_parentHandler &&) = delete;
     AMI_concrete_parentHandler &operator= (AMI_concrete_parentHandler const &) = delete;
@@ -805,7 +784,6 @@ namespace fwd_mixed_intf
 
   class TAO_IDL_TEST_STUB_Export abstract_parent
     : public virtual ::CORBA::AbstractBase
-
   {
   public:
     friend class TAO::AbstractBase_Narrow_Utils<abstract_parent>;
@@ -817,9 +795,7 @@ namespace fwd_mixed_intf
 
     // The static operations.
     static abstract_parent_ptr _duplicate (abstract_parent_ptr obj);
-
     static void _tao_release (abstract_parent_ptr obj);
-
     static abstract_parent_ptr _narrow (::CORBA::AbstractBase_ptr obj);
     static abstract_parent_ptr _unchecked_narrow (::CORBA::AbstractBase_ptr obj);
     static abstract_parent_ptr _nil ();
@@ -839,10 +815,10 @@ namespace fwd_mixed_intf
 
     // Non-local interface only.
     abstract_parent (
-        TAO_Stub *objref,
-        ::CORBA::Boolean _tao_collocated = false,
-        TAO_Abstract_ServantBase *servant = nullptr,
-        TAO_ORB_Core *orb_core = nullptr);
+      TAO_Stub *objref,
+      ::CORBA::Boolean _tao_collocated = false,
+      TAO_Abstract_ServantBase *servant = nullptr,
+      TAO_ORB_Core *orb_core = nullptr);
 
     ~abstract_parent () override = default;
 
@@ -868,7 +844,6 @@ namespace fwd_mixed_intf
   class TAO_IDL_TEST_STUB_Export mixed_abs_first
     : public virtual ::fwd_mixed_intf::abstract_parent,
       public virtual ::fwd_mixed_intf::concrete_parent
-
   {
   public:
     friend class TAO::Narrow_Utils<mixed_abs_first>;
@@ -880,9 +855,7 @@ namespace fwd_mixed_intf
 
     // The static operations.
     static mixed_abs_first_ptr _duplicate (mixed_abs_first_ptr obj);
-
     static void _tao_release (mixed_abs_first_ptr obj);
-
     static mixed_abs_first_ptr _narrow (::CORBA::Object_ptr obj);
     static mixed_abs_first_ptr _unchecked_narrow (::CORBA::Object_ptr obj);
     static mixed_abs_first_ptr _nil ();
@@ -904,15 +877,14 @@ namespace fwd_mixed_intf
 
     // Non-local interface only.
     mixed_abs_first (
-        TAO_Stub *objref,
-        ::CORBA::Boolean _tao_collocated = false,
-        TAO_Abstract_ServantBase *servant = nullptr,
-        TAO_ORB_Core *orb_core = nullptr);
+      TAO_Stub *objref,
+      ::CORBA::Boolean _tao_collocated = false,
+      TAO_Abstract_ServantBase *servant = nullptr,
+      TAO_ORB_Core *orb_core = nullptr);
 
     ~mixed_abs_first () override = default;
 
   private:
-    // Private and unimplemented for concrete interfaces.
     mixed_abs_first (mixed_abs_first const &) = delete;
     mixed_abs_first (mixed_abs_first &&) = delete;
     mixed_abs_first &operator= (mixed_abs_first const &) = delete;
@@ -932,7 +904,6 @@ namespace fwd_mixed_intf
 
   class TAO_IDL_TEST_STUB_Export AMI_mixed_abs_firstHandler
     : public virtual ::fwd_mixed_intf::AMI_concrete_parentHandler
-
   {
   public:
     friend class TAO::Narrow_Utils<AMI_mixed_abs_firstHandler>;
@@ -944,9 +915,7 @@ namespace fwd_mixed_intf
 
     // The static operations.
     static AMI_mixed_abs_firstHandler_ptr _duplicate (AMI_mixed_abs_firstHandler_ptr obj);
-
     static void _tao_release (AMI_mixed_abs_firstHandler_ptr obj);
-
     static AMI_mixed_abs_firstHandler_ptr _narrow (::CORBA::Object_ptr obj);
     static AMI_mixed_abs_firstHandler_ptr _unchecked_narrow (::CORBA::Object_ptr obj);
     static AMI_mixed_abs_firstHandler_ptr _nil ();
@@ -966,15 +935,14 @@ namespace fwd_mixed_intf
 
     // Non-local interface only.
     AMI_mixed_abs_firstHandler (
-        TAO_Stub *objref,
-        ::CORBA::Boolean _tao_collocated = false,
-        TAO_Abstract_ServantBase *servant = nullptr,
-        TAO_ORB_Core *orb_core = nullptr);
+      TAO_Stub *objref,
+      ::CORBA::Boolean _tao_collocated = false,
+      TAO_Abstract_ServantBase *servant = nullptr,
+      TAO_ORB_Core *orb_core = nullptr);
 
     ~AMI_mixed_abs_firstHandler () override = default;
 
   private:
-    // Private and unimplemented for concrete interfaces.
     AMI_mixed_abs_firstHandler (AMI_mixed_abs_firstHandler const &) = delete;
     AMI_mixed_abs_firstHandler (AMI_mixed_abs_firstHandler &&) = delete;
     AMI_mixed_abs_firstHandler &operator= (AMI_mixed_abs_firstHandler const &) = delete;
@@ -998,7 +966,6 @@ namespace fwd_mixed_intf
   class TAO_IDL_TEST_STUB_Export mixed_conc_first
     : public virtual ::fwd_mixed_intf::concrete_parent,
       public virtual ::fwd_mixed_intf::abstract_parent
-
   {
   public:
     friend class TAO::Narrow_Utils<mixed_conc_first>;
@@ -1010,9 +977,7 @@ namespace fwd_mixed_intf
 
     // The static operations.
     static mixed_conc_first_ptr _duplicate (mixed_conc_first_ptr obj);
-
     static void _tao_release (mixed_conc_first_ptr obj);
-
     static mixed_conc_first_ptr _narrow (::CORBA::Object_ptr obj);
     static mixed_conc_first_ptr _unchecked_narrow (::CORBA::Object_ptr obj);
     static mixed_conc_first_ptr _nil ();
@@ -1034,15 +999,14 @@ namespace fwd_mixed_intf
 
     // Non-local interface only.
     mixed_conc_first (
-        TAO_Stub *objref,
-        ::CORBA::Boolean _tao_collocated = false,
-        TAO_Abstract_ServantBase *servant = nullptr,
-        TAO_ORB_Core *orb_core = nullptr);
+      TAO_Stub *objref,
+      ::CORBA::Boolean _tao_collocated = false,
+      TAO_Abstract_ServantBase *servant = nullptr,
+      TAO_ORB_Core *orb_core = nullptr);
 
     ~mixed_conc_first () override = default;
 
   private:
-    // Private and unimplemented for concrete interfaces.
     mixed_conc_first (mixed_conc_first const &) = delete;
     mixed_conc_first (mixed_conc_first &&) = delete;
     mixed_conc_first &operator= (mixed_conc_first const &) = delete;
@@ -1062,7 +1026,6 @@ namespace fwd_mixed_intf
 
   class TAO_IDL_TEST_STUB_Export AMI_mixed_conc_firstHandler
     : public virtual ::fwd_mixed_intf::AMI_concrete_parentHandler
-
   {
   public:
     friend class TAO::Narrow_Utils<AMI_mixed_conc_firstHandler>;
@@ -1074,9 +1037,7 @@ namespace fwd_mixed_intf
 
     // The static operations.
     static AMI_mixed_conc_firstHandler_ptr _duplicate (AMI_mixed_conc_firstHandler_ptr obj);
-
     static void _tao_release (AMI_mixed_conc_firstHandler_ptr obj);
-
     static AMI_mixed_conc_firstHandler_ptr _narrow (::CORBA::Object_ptr obj);
     static AMI_mixed_conc_firstHandler_ptr _unchecked_narrow (::CORBA::Object_ptr obj);
     static AMI_mixed_conc_firstHandler_ptr _nil ();
@@ -1096,15 +1057,14 @@ namespace fwd_mixed_intf
 
     // Non-local interface only.
     AMI_mixed_conc_firstHandler (
-        TAO_Stub *objref,
-        ::CORBA::Boolean _tao_collocated = false,
-        TAO_Abstract_ServantBase *servant = nullptr,
-        TAO_ORB_Core *orb_core = nullptr);
+      TAO_Stub *objref,
+      ::CORBA::Boolean _tao_collocated = false,
+      TAO_Abstract_ServantBase *servant = nullptr,
+      TAO_ORB_Core *orb_core = nullptr);
 
     ~AMI_mixed_conc_firstHandler () override = default;
 
   private:
-    // Private and unimplemented for concrete interfaces.
     AMI_mixed_conc_firstHandler (AMI_mixed_conc_firstHandler const &) = delete;
     AMI_mixed_conc_firstHandler (AMI_mixed_conc_firstHandler &&) = delete;
     AMI_mixed_conc_firstHandler &operator= (AMI_mixed_conc_firstHandler const &) = delete;
@@ -2498,4 +2458,3 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 #include /**/ "ace/post.h"
 
 #endif /* ifndef */
-

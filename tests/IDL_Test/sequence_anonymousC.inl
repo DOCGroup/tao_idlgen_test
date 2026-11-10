@@ -24,18 +24,13 @@
 
 ACE_INLINE
 seqTest::seqTest (
-    TAO_Stub *objref,
-    ::CORBA::Boolean _tao_collocated,
-    TAO_Abstract_ServantBase *servant,
-    TAO_ORB_Core *oc)
+  TAO_Stub *objref, ::CORBA::Boolean _tao_collocated, TAO_Abstract_ServantBase *servant, TAO_ORB_Core *oc)
   : ::CORBA::Object (objref, _tao_collocated, servant, oc)
 {
 }
 
 ACE_INLINE
-seqTest::seqTest (
-    ::IOP::IOR *ior,
-    TAO_ORB_Core *oc)
+seqTest::seqTest (::IOP::IOR *ior, TAO_ORB_Core *oc)
   : ::CORBA::Object (ior, oc)
 {
 }
@@ -52,19 +47,13 @@ AMH_seqTestExceptionHolder::_tao_obv_static_repository_id ()
 
 ACE_INLINE
 AMI_seqTestHandler::AMI_seqTestHandler (
-    TAO_Stub *objref,
-    ::CORBA::Boolean _tao_collocated,
-    TAO_Abstract_ServantBase *servant,
-    TAO_ORB_Core *oc)
+  TAO_Stub *objref, ::CORBA::Boolean _tao_collocated, TAO_Abstract_ServantBase *servant, TAO_ORB_Core *oc)
   : ::CORBA::Object (objref, _tao_collocated, servant, oc)
 {
 }
 
 ACE_INLINE
-AMI_seqTestHandler::AMI_seqTestHandler (
-    ::IOP::IOR *ior,
-    TAO_ORB_Core *oc)
+AMI_seqTestHandler::AMI_seqTestHandler (::IOP::IOR *ior, TAO_ORB_Core *oc)
   : ::CORBA::Object (ior, oc)
 {
 }
-

@@ -75,24 +75,18 @@ namespace OldConstants
 
 OldConstants::E::E (
     ::CORBA::Short _tao_cause)
-  : ::CORBA::UserException (
-        "IDL:OldConstants/E:1.0",
-        "E")
+  : ::CORBA::UserException ("IDL:OldConstants/E:1.0", "E")
 {
   this->cause = _tao_cause;
 }
 
 OldConstants::E::E ()
-  : ::CORBA::UserException (
-        "IDL:OldConstants/E:1.0",
-        "E")
+  : ::CORBA::UserException ("IDL:OldConstants/E:1.0", "E")
 {
 }
 
 OldConstants::E::E (const ::OldConstants::E &_tao_excp)
-  : ::CORBA::UserException (
-        _tao_excp._rep_id (),
-        _tao_excp._name ())
+  : ::CORBA::UserException (_tao_excp._rep_id (), _tao_excp._name ())
 {
   this->cause = _tao_excp.cause;
 }
@@ -218,24 +212,18 @@ namespace OldConstants
 
 OldConstants::M::E::E (
     ::CORBA::Short _tao_cause)
-  : ::CORBA::UserException (
-        "IDL:OldConstants/M/E:1.0",
-        "E")
+  : ::CORBA::UserException ("IDL:OldConstants/M/E:1.0", "E")
 {
   this->cause = _tao_cause;
 }
 
 OldConstants::M::E::E ()
-  : ::CORBA::UserException (
-        "IDL:OldConstants/M/E:1.0",
-        "E")
+  : ::CORBA::UserException ("IDL:OldConstants/M/E:1.0", "E")
 {
 }
 
 OldConstants::M::E::E (const ::OldConstants::M::E &_tao_excp)
-  : ::CORBA::UserException (
-        _tao_excp._rep_id (),
-        _tao_excp._name ())
+  : ::CORBA::UserException (_tao_excp._rep_id (), _tao_excp._name ())
 {
   this->cause = _tao_excp.cause;
 }
@@ -361,7 +349,7 @@ TAO::Objref_Traits<OldConstants::M::A>::nil ()
 }
 
 ::CORBA::Boolean
-TAO::Objref_Traits<OldConstants::M::A>::marshal (OldConstants::M::A_ptr const p,TAO_OutputCDR & cdr)
+TAO::Objref_Traits<OldConstants::M::A>::marshal (OldConstants::M::A_ptr const p, TAO_OutputCDR &cdr)
 {
   return ::CORBA::Object::marshal (p, cdr);
 }
@@ -390,24 +378,18 @@ static TAO::TypeCode::Enum<char const *,
 
 OldConstants::M::A::E::E (
     ::CORBA::Short _tao_cause)
-  : ::CORBA::UserException (
-        "IDL:OldConstants/M/A/E:1.0",
-        "E")
+  : ::CORBA::UserException ("IDL:OldConstants/M/A/E:1.0", "E")
 {
   this->cause = _tao_cause;
 }
 
 OldConstants::M::A::E::E ()
-  : ::CORBA::UserException (
-        "IDL:OldConstants/M/A/E:1.0",
-        "E")
+  : ::CORBA::UserException ("IDL:OldConstants/M/A/E:1.0", "E")
 {
 }
 
 OldConstants::M::A::E::E (const ::OldConstants::M::A::E &_tao_excp)
-  : ::CORBA::UserException (
-        _tao_excp._rep_id (),
-        _tao_excp._name ())
+  : ::CORBA::UserException (_tao_excp._rep_id (), _tao_excp._name ())
 {
   this->cause = _tao_excp.cause;
 }
@@ -520,10 +502,10 @@ OldConstants::M::A::foo (
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
-      std::addressof(_tao_retval),
-      std::addressof(_tao_x),
-      std::addressof(_tao_y),
-      std::addressof(_tao_z)
+      std::addressof (_tao_retval),
+      std::addressof (_tao_x),
+      std::addressof (_tao_y),
+      std::addressof (_tao_z)
     };
 
   TAO::Invocation_Adapter _invocation_call (
@@ -533,7 +515,6 @@ OldConstants::M::A::foo (
       "foo",
       3,
       TAO::TAO_CO_NONE | TAO::TAO_CO_DIRECT_STRATEGY | TAO::TAO_CO_THRU_POA_STRATEGY
-
     );
 
   _invocation_call.invoke (nullptr, 0);
@@ -558,9 +539,9 @@ OldConstants::M::A::sendc_foo (
 
   TAO::Argument *_the_tao_operation_signature[] =
     {
-      std::addressof(_tao_retval),
-      std::addressof(_tao_x),
-      std::addressof(_tao_z)
+      std::addressof (_tao_retval),
+      std::addressof (_tao_x),
+      std::addressof (_tao_z)
     };
 
   TAO::Asynch_Invocation_Adapter _invocation_call (
@@ -626,7 +607,7 @@ OldConstants::M::A::_tao_release (A_ptr obj)
 OldConstants::M::A::_is_a (char const *value)
 {
   if (std::strcmp (value, "IDL:OldConstants/M/A:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0)
+    std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0)
     {
       return true; // success using local knowledge
     }
@@ -868,7 +849,7 @@ TAO::Objref_Traits<OldConstants::M::AMH_AResponseHandler>::nil ()
 }
 
 ::CORBA::Boolean
-TAO::Objref_Traits<OldConstants::M::AMH_AResponseHandler>::marshal (OldConstants::M::AMH_AResponseHandler_ptr const p,TAO_OutputCDR & cdr)
+TAO::Objref_Traits<OldConstants::M::AMH_AResponseHandler>::marshal (OldConstants::M::AMH_AResponseHandler_ptr const p, TAO_OutputCDR &cdr)
 {
   return ::CORBA::Object::marshal (p, cdr);
 }
@@ -889,14 +870,14 @@ OldConstants::M::AMH_AResponseHandler_ptr
 OldConstants::M::AMH_AResponseHandler::_narrow (::CORBA::Object_ptr _tao_objref)
 {
   return AMH_AResponseHandler::_duplicate (
-      dynamic_cast<AMH_AResponseHandler_ptr> (_tao_objref));
+    dynamic_cast<AMH_AResponseHandler_ptr> (_tao_objref));
 }
 
 OldConstants::M::AMH_AResponseHandler_ptr
 OldConstants::M::AMH_AResponseHandler::_unchecked_narrow (::CORBA::Object_ptr _tao_objref)
 {
   return AMH_AResponseHandler::_duplicate (
-      dynamic_cast<AMH_AResponseHandler_ptr> (_tao_objref));
+    dynamic_cast<AMH_AResponseHandler_ptr> (_tao_objref));
 }
 
 OldConstants::M::AMH_AResponseHandler_ptr
@@ -925,8 +906,8 @@ OldConstants::M::AMH_AResponseHandler::_tao_release (AMH_AResponseHandler_ptr ob
 OldConstants::M::AMH_AResponseHandler::_is_a (char const *value)
 {
   if (std::strcmp (value, "IDL:OldConstants/M/AMH_AResponseHandler:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/LocalObject:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0)
+    std::strcmp (value, "IDL:omg.org/CORBA/LocalObject:1.0") == 0 ||
+    std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0)
     {
       return true; // success using local knowledge
     }
@@ -995,7 +976,7 @@ TAO::Objref_Traits<OldConstants::M::AMI_AHandler>::nil ()
 }
 
 ::CORBA::Boolean
-TAO::Objref_Traits<OldConstants::M::AMI_AHandler>::marshal (OldConstants::M::AMI_AHandler_ptr const p,TAO_OutputCDR & cdr)
+TAO::Objref_Traits<OldConstants::M::AMI_AHandler>::marshal (OldConstants::M::AMI_AHandler_ptr const p, TAO_OutputCDR &cdr)
 {
   return ::CORBA::Object::marshal (p, cdr);
 }
@@ -1020,10 +1001,10 @@ OldConstants::M::AMI_AHandler::foo (
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
-      std::addressof(_tao_retval),
-      std::addressof(_tao_ami_return_val),
-      std::addressof(_tao_y),
-      std::addressof(_tao_z)
+      std::addressof (_tao_retval),
+      std::addressof (_tao_ami_return_val),
+      std::addressof (_tao_y),
+      std::addressof (_tao_z)
     };
 
   TAO::Invocation_Adapter _invocation_call (
@@ -1033,7 +1014,6 @@ OldConstants::M::AMI_AHandler::foo (
       "foo",
       3,
       TAO::TAO_CO_NONE | TAO::TAO_CO_DIRECT_STRATEGY | TAO::TAO_CO_THRU_POA_STRATEGY
-
     );
 
   _invocation_call.invoke (nullptr, 0);
@@ -1123,8 +1103,8 @@ OldConstants::M::AMI_AHandler::foo_excep (
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
-      std::addressof(_tao_retval),
-      std::addressof(_tao_excep_holder)
+      std::addressof (_tao_retval),
+      std::addressof (_tao_excep_holder)
     };
 
   TAO::Invocation_Adapter _invocation_call (
@@ -1134,7 +1114,6 @@ OldConstants::M::AMI_AHandler::foo_excep (
       "foo_excep",
       9,
       TAO::TAO_CO_NONE | TAO::TAO_CO_DIRECT_STRATEGY | TAO::TAO_CO_THRU_POA_STRATEGY
-
     );
 
   _invocation_call.invoke (nullptr, 0);
@@ -1188,8 +1167,8 @@ OldConstants::M::AMI_AHandler::_tao_release (AMI_AHandler_ptr obj)
 OldConstants::M::AMI_AHandler::_is_a (char const *value)
 {
   if (std::strcmp (value, "IDL:omg.org/Messaging/ReplyHandler:1.0") == 0 ||
-      std::strcmp (value, "IDL:OldConstants/M/AMI_AHandler:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0)
+    std::strcmp (value, "IDL:OldConstants/M/AMI_AHandler:1.0") == 0 ||
+    std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0)
     {
       return true; // success using local knowledge
     }
@@ -1816,8 +1795,8 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean operator>> (TAO_InputCDR &strm, OldConstants::N & _tao_enumerator)
 {
-  ::CORBA::ULong _tao_temp = 0;
-  ::CORBA::Boolean const _tao_success = strm >> _tao_temp;
+  ::CORBA::ULong _tao_temp {};
+  const ::CORBA::Boolean _tao_success = strm >> _tao_temp;
 
   if (_tao_success)
     {
@@ -1870,8 +1849,8 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean operator>> (TAO_InputCDR &strm, OldConstants::M::N & _tao_enumerator)
 {
-  ::CORBA::ULong _tao_temp = 0;
-  ::CORBA::Boolean const _tao_success = strm >> _tao_temp;
+  ::CORBA::ULong _tao_temp {};
+  const ::CORBA::Boolean _tao_success = strm >> _tao_temp;
 
   if (_tao_success)
     {
@@ -1924,8 +1903,8 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean operator>> (TAO_InputCDR &strm, OldConstants::M::A::N & _tao_enumerator)
 {
-  ::CORBA::ULong _tao_temp = 0;
-  ::CORBA::Boolean const _tao_success = strm >> _tao_temp;
+  ::CORBA::ULong _tao_temp {};
+  const ::CORBA::Boolean _tao_success = strm >> _tao_temp;
 
   if (_tao_success)
     {
@@ -2089,4 +2068,3 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-

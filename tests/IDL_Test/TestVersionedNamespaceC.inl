@@ -35,4 +35,3 @@ M1::V::_tao_obv_static_repository_id ()
 }
 
 END_USER_VERSIONED_NAMESPACE
-

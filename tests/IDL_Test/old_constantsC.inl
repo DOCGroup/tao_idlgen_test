@@ -24,18 +24,13 @@
 
 ACE_INLINE
 OldConstants::M::A::A (
-    TAO_Stub *objref,
-    ::CORBA::Boolean _tao_collocated,
-    TAO_Abstract_ServantBase *servant,
-    TAO_ORB_Core *oc)
+  TAO_Stub *objref, ::CORBA::Boolean _tao_collocated, TAO_Abstract_ServantBase *servant, TAO_ORB_Core *oc)
   : ::CORBA::Object (objref, _tao_collocated, servant, oc)
 {
 }
 
 ACE_INLINE
-OldConstants::M::A::A (
-    ::IOP::IOR *ior,
-    TAO_ORB_Core *oc)
+OldConstants::M::A::A (::IOP::IOR *ior, TAO_ORB_Core *oc)
   : ::CORBA::Object (ior, oc)
 {
 }
@@ -52,19 +47,13 @@ OldConstants::M::AMH_AExceptionHolder::_tao_obv_static_repository_id ()
 
 ACE_INLINE
 OldConstants::M::AMI_AHandler::AMI_AHandler (
-    TAO_Stub *objref,
-    ::CORBA::Boolean _tao_collocated,
-    TAO_Abstract_ServantBase *servant,
-    TAO_ORB_Core *oc)
+  TAO_Stub *objref, ::CORBA::Boolean _tao_collocated, TAO_Abstract_ServantBase *servant, TAO_ORB_Core *oc)
   : ::CORBA::Object (objref, _tao_collocated, servant, oc)
 {
 }
 
 ACE_INLINE
-OldConstants::M::AMI_AHandler::AMI_AHandler (
-    ::IOP::IOR *ior,
-    TAO_ORB_Core *oc)
+OldConstants::M::AMI_AHandler::AMI_AHandler (::IOP::IOR *ior, TAO_ORB_Core *oc)
   : ::CORBA::Object (ior, oc)
 {
 }
-

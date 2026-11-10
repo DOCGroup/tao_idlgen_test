@@ -63,8 +63,8 @@ public:
   TAO_operation_db_entry const * lookup (char const *str, std::size_t len) override;
 };
 
-/* C++ code produced by gperf version 2.8 (ACE version 8.0.8) */
-/* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F nullptr,nullptr -a -o -t -p -K opname -L C++17 -Z TAO_AMH_tdef_Perfect_Hash_OpTable -N lookup */
+/* C++ code produced by ACE gperf version 8.0.8 */
+/* Command-line: ace_gperf -m -M -J -Q -R -c -C -D -E -T -f 0 -F nullptr,nullptr -o -t -p -K opname -Z TAO_AMH_tdef_Perfect_Hash_OpTable -N lookup */
 
 std::size_t
 TAO_AMH_tdef_Perfect_Hash_OpTable::hash (char const *str, std::size_t len)
@@ -134,11 +134,9 @@ POA_AMH_tdef::POA_AMH_tdef ()
 
 ::CORBA::Boolean POA_AMH_tdef::_is_a (char const *value)
 {
-  return
-    (
-      std::strcmp (value, "IDL:tdef:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0
-    );
+  return (
+    std::strcmp (value, "IDL:tdef:1.0") == 0 ||
+    std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0);
 }
 
 char const *POA_AMH_tdef::_interface_repository_id () const
@@ -176,8 +174,8 @@ public:
   TAO_operation_db_entry const * lookup (char const *str, std::size_t len) override;
 };
 
-/* C++ code produced by gperf version 2.8 (ACE version 8.0.8) */
-/* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F nullptr,nullptr -a -o -t -p -K opname -L C++17 -Z TAO_tdef_Perfect_Hash_OpTable -N lookup */
+/* C++ code produced by ACE gperf version 8.0.8 */
+/* Command-line: ace_gperf -m -M -J -Q -R -c -C -D -E -T -f 0 -F nullptr,nullptr -o -t -p -K opname -Z TAO_tdef_Perfect_Hash_OpTable -N lookup */
 
 std::size_t
 TAO_tdef_Perfect_Hash_OpTable::hash (char const *str, std::size_t len)
@@ -240,17 +238,7 @@ TAO_tdef_Perfect_Hash_OpTable::lookup (char const *str, std::size_t len)
 
 static TAO_tdef_Perfect_Hash_OpTable tao_tdef_optable;
 
-///////////////////////////////////////////////////////////////////////
-//                 Direct Proxy  Implementation
-//
-
-_TAO_tdef_Direct_Proxy_Impl::~_TAO_tdef_Direct_Proxy_Impl ()
-{
-}
-
-//
-//           End Direct Proxy Implementation
-///////////////////////////////////////////////////////////////////////
+_TAO_tdef_Direct_Proxy_Impl::~_TAO_tdef_Direct_Proxy_Impl () = default;
 
 POA_tdef::POA_tdef ()
 {
@@ -259,11 +247,9 @@ POA_tdef::POA_tdef ()
 
 ::CORBA::Boolean POA_tdef::_is_a (char const *value)
 {
-  return
-    (
-      std::strcmp (value, "IDL:tdef:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0
-    );
+  return (
+    std::strcmp (value, "IDL:tdef:1.0") == 0 ||
+    std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0);
 }
 
 char const *POA_tdef::_interface_repository_id () const
@@ -301,8 +287,8 @@ public:
   TAO_operation_db_entry const * lookup (char const *str, std::size_t len) override;
 };
 
-/* C++ code produced by gperf version 2.8 (ACE version 8.0.8) */
-/* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F nullptr,nullptr -a -o -t -p -K opname -L C++17 -Z TAO_AMI_tdefHandler_Perfect_Hash_OpTable -N lookup */
+/* C++ code produced by ACE gperf version 8.0.8 */
+/* Command-line: ace_gperf -m -M -J -Q -R -c -C -D -E -T -f 0 -F nullptr,nullptr -o -t -p -K opname -Z TAO_AMI_tdefHandler_Perfect_Hash_OpTable -N lookup */
 
 std::size_t
 TAO_AMI_tdefHandler_Perfect_Hash_OpTable::hash (char const *str, std::size_t len)
@@ -365,17 +351,7 @@ TAO_AMI_tdefHandler_Perfect_Hash_OpTable::lookup (char const *str, std::size_t l
 
 static TAO_AMI_tdefHandler_Perfect_Hash_OpTable tao_AMI_tdefHandler_optable;
 
-///////////////////////////////////////////////////////////////////////
-//                 Direct Proxy  Implementation
-//
-
-_TAO_AMI_tdefHandler_Direct_Proxy_Impl::~_TAO_AMI_tdefHandler_Direct_Proxy_Impl ()
-{
-}
-
-//
-//           End Direct Proxy Implementation
-///////////////////////////////////////////////////////////////////////
+_TAO_AMI_tdefHandler_Direct_Proxy_Impl::~_TAO_AMI_tdefHandler_Direct_Proxy_Impl () = default;
 
 POA_AMI_tdefHandler::POA_AMI_tdefHandler ()
   : TAO_ServantBase ()
@@ -385,12 +361,10 @@ POA_AMI_tdefHandler::POA_AMI_tdefHandler ()
 
 ::CORBA::Boolean POA_AMI_tdefHandler::_is_a (char const *value)
 {
-  return
-    (
-      std::strcmp (value, "IDL:omg.org/Messaging/ReplyHandler:1.0") == 0 ||
-      std::strcmp (value, "IDL:AMI_tdefHandler:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0
-    );
+  return (
+    std::strcmp (value, "IDL:omg.org/Messaging/ReplyHandler:1.0") == 0 ||
+    std::strcmp (value, "IDL:AMI_tdefHandler:1.0") == 0 ||
+    std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0);
 }
 
 char const *POA_AMI_tdefHandler::_interface_repository_id () const
@@ -420,4 +394,3 @@ POA_AMI_tdefHandler::_this ()
 }
 
 #endif /* ifndef */
-

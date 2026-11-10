@@ -28,4 +28,3 @@
 #include "enum_in_structS.h"
 
 #endif /* ifndef */
-

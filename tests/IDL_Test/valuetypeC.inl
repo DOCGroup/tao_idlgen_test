@@ -255,4 +255,3 @@ ModSelection::SelectionDefns::CriterionExpr::RightCriterionExpr::theRightCriteri
     }
   return this->u_.theRightCriterionInfos_;
 }
-

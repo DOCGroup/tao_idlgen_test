@@ -321,28 +321,17 @@ public:
     ::bar2_out b) = 0;
 
   static void op_skel (
-      TAO_ServerRequest &server_request,
-      TAO::Portable_Server::Servant_Upcall *servant_upcall,
-      TAO_ServantBase *servant);
+    TAO_ServerRequest &server_request,
+    TAO::Portable_Server::Servant_Upcall *servant_upcall,
+    TAO_ServantBase *servant);
 };
-
-///////////////////////////////////////////////////////////////////////
-//                    Direct  Impl. Declaration
-//
 
 class TAO_IDL_TEST_STUB_Export _TAO_foo1_Direct_Proxy_Impl
 {
 public:
   virtual ~_TAO_foo1_Direct_Proxy_Impl ();
-  static void
-  op (
-    TAO_Abstract_ServantBase *servant, TAO::Argument **args);
-
+  static void op (TAO_Abstract_ServantBase *servant, TAO::Argument **args);
 };
-
-//
-//                Direct  Proxy Impl. Declaration
-///////////////////////////////////////////////////////////////////////
 
 class POA_TAO_AMH_foo1ResponseHandler;
 using POA_TAO_AMH_foo1ResponseHandler_ptr = POA_TAO_AMH_foo1ResponseHandler *;
@@ -395,40 +384,26 @@ public:
     ::bar2 const & b) = 0;
 
   static void op_skel (
-      TAO_ServerRequest &server_request,
-      TAO::Portable_Server::Servant_Upcall *servant_upcall,
-      TAO_ServantBase *servant);
+    TAO_ServerRequest &server_request,
+    TAO::Portable_Server::Servant_Upcall *servant_upcall,
+    TAO_ServantBase *servant);
   virtual void op_excep (
     ::Messaging::ExceptionHolder * excep_holder) = 0;
 
   static void op_excep_skel (
-      TAO_ServerRequest &server_request,
-      TAO::Portable_Server::Servant_Upcall *servant_upcall,
-      TAO_ServantBase *servant);
+    TAO_ServerRequest &server_request,
+    TAO::Portable_Server::Servant_Upcall *servant_upcall,
+    TAO_ServantBase *servant);
 };
-
-///////////////////////////////////////////////////////////////////////
-//                    Direct  Impl. Declaration
-//
 
 class TAO_IDL_TEST_STUB_Export _TAO_AMI_foo1Handler_Direct_Proxy_Impl
   : public virtual ::POA_Messaging::_TAO_ReplyHandler_Direct_Proxy_Impl
 {
 public:
   virtual ~_TAO_AMI_foo1Handler_Direct_Proxy_Impl ();
-  static void
-  op (
-    TAO_Abstract_ServantBase *servant, TAO::Argument **args);
-
-  static void
-  op_excep (
-    TAO_Abstract_ServantBase *servant, TAO::Argument **args);
-
+  static void op (TAO_Abstract_ServantBase *servant, TAO::Argument **args);
+  static void op_excep (TAO_Abstract_ServantBase *servant, TAO::Argument **args);
 };
-
-//
-//                Direct  Proxy Impl. Declaration
-///////////////////////////////////////////////////////////////////////
 
 class POA_AMH_foo2;
 using POA_AMH_foo2_ptr = POA_AMH_foo2 *;
@@ -506,41 +481,27 @@ public:
     ::bar2 const & a) = 0;
 
   static void op2_skel (
-      TAO_ServerRequest &server_request,
-      TAO::Portable_Server::Servant_Upcall *servant_upcall,
-      TAO_ServantBase *servant);
+    TAO_ServerRequest &server_request,
+    TAO::Portable_Server::Servant_Upcall *servant_upcall,
+    TAO_ServantBase *servant);
   virtual ::CORBA::Long op3 (
     ::CORBA::Long a,
     ::CORBA::Char_out b) = 0;
 
   static void op3_skel (
-      TAO_ServerRequest &server_request,
-      TAO::Portable_Server::Servant_Upcall *servant_upcall,
-      TAO_ServantBase *servant);
+    TAO_ServerRequest &server_request,
+    TAO::Portable_Server::Servant_Upcall *servant_upcall,
+    TAO_ServantBase *servant);
 };
-
-///////////////////////////////////////////////////////////////////////
-//                    Direct  Impl. Declaration
-//
 
 class TAO_IDL_TEST_STUB_Export _TAO_foo2_Direct_Proxy_Impl
   : public virtual ::_TAO_foo1_Direct_Proxy_Impl
 {
 public:
   virtual ~_TAO_foo2_Direct_Proxy_Impl ();
-  static void
-  op2 (
-    TAO_Abstract_ServantBase *servant, TAO::Argument **args);
-
-  static void
-  op3 (
-    TAO_Abstract_ServantBase *servant, TAO::Argument **args);
-
+  static void op2 (TAO_Abstract_ServantBase *servant, TAO::Argument **args);
+  static void op3 (TAO_Abstract_ServantBase *servant, TAO::Argument **args);
 };
-
-//
-//                Direct  Proxy Impl. Declaration
-///////////////////////////////////////////////////////////////////////
 
 class POA_TAO_AMH_foo2ResponseHandler;
 using POA_TAO_AMH_foo2ResponseHandler_ptr = POA_TAO_AMH_foo2ResponseHandler *;
@@ -596,67 +557,46 @@ public:
     ::bar1 const & ami_return_val) = 0;
 
   static void op2_skel (
-      TAO_ServerRequest &server_request,
-      TAO::Portable_Server::Servant_Upcall *servant_upcall,
-      TAO_ServantBase *servant);
+    TAO_ServerRequest &server_request,
+    TAO::Portable_Server::Servant_Upcall *servant_upcall,
+    TAO_ServantBase *servant);
   virtual void op2_excep (
     ::Messaging::ExceptionHolder * excep_holder) = 0;
 
   static void op2_excep_skel (
-      TAO_ServerRequest &server_request,
-      TAO::Portable_Server::Servant_Upcall *servant_upcall,
-      TAO_ServantBase *servant);
+    TAO_ServerRequest &server_request,
+    TAO::Portable_Server::Servant_Upcall *servant_upcall,
+    TAO_ServantBase *servant);
   virtual void op3 (
     ::CORBA::Long ami_return_val,
     ::CORBA::Char b) = 0;
 
   static void op3_skel (
-      TAO_ServerRequest &server_request,
-      TAO::Portable_Server::Servant_Upcall *servant_upcall,
-      TAO_ServantBase *servant);
+    TAO_ServerRequest &server_request,
+    TAO::Portable_Server::Servant_Upcall *servant_upcall,
+    TAO_ServantBase *servant);
   virtual void op3_excep (
     ::Messaging::ExceptionHolder * excep_holder) = 0;
 
   static void op3_excep_skel (
-      TAO_ServerRequest &server_request,
-      TAO::Portable_Server::Servant_Upcall *servant_upcall,
-      TAO_ServantBase *servant);
+    TAO_ServerRequest &server_request,
+    TAO::Portable_Server::Servant_Upcall *servant_upcall,
+    TAO_ServantBase *servant);
 };
-
-///////////////////////////////////////////////////////////////////////
-//                    Direct  Impl. Declaration
-//
 
 class TAO_IDL_TEST_STUB_Export _TAO_AMI_foo2Handler_Direct_Proxy_Impl
   : public virtual ::_TAO_AMI_foo1Handler_Direct_Proxy_Impl
 {
 public:
   virtual ~_TAO_AMI_foo2Handler_Direct_Proxy_Impl ();
-  static void
-  op2 (
-    TAO_Abstract_ServantBase *servant, TAO::Argument **args);
-
-  static void
-  op2_excep (
-    TAO_Abstract_ServantBase *servant, TAO::Argument **args);
-
-  static void
-  op3 (
-    TAO_Abstract_ServantBase *servant, TAO::Argument **args);
-
-  static void
-  op3_excep (
-    TAO_Abstract_ServantBase *servant, TAO::Argument **args);
-
+  static void op2 (TAO_Abstract_ServantBase *servant, TAO::Argument **args);
+  static void op2_excep (TAO_Abstract_ServantBase *servant, TAO::Argument **args);
+  static void op3 (TAO_Abstract_ServantBase *servant, TAO::Argument **args);
+  static void op3_excep (TAO_Abstract_ServantBase *servant, TAO::Argument **args);
 };
-
-//
-//                Direct  Proxy Impl. Declaration
-///////////////////////////////////////////////////////////////////////
 
 #include "old_structS_T.h"
 
 #include /**/ "ace/post.h"
 
 #endif /* ifndef */
-

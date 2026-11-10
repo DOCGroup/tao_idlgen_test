@@ -120,4 +120,3 @@ namespace POA_MyModule
 #include /**/ "ace/post.h"
 
 #endif /* ifndef */
-

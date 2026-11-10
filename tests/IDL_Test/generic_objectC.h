@@ -148,9 +148,7 @@ public:
 
   // The static operations.
   static generic_ptr _duplicate (generic_ptr obj);
-
   static void _tao_release (generic_ptr obj);
-
   static generic_ptr _narrow (::CORBA::Object_ptr obj);
   static generic_ptr _unchecked_narrow (::CORBA::Object_ptr obj);
   static generic_ptr _nil ();
@@ -180,15 +178,14 @@ protected:
 
   // Non-local interface only.
   generic (
-      TAO_Stub *objref,
-      ::CORBA::Boolean _tao_collocated = false,
-      TAO_Abstract_ServantBase *servant = nullptr,
-      TAO_ORB_Core *orb_core = nullptr);
+    TAO_Stub *objref,
+    ::CORBA::Boolean _tao_collocated = false,
+    TAO_Abstract_ServantBase *servant = nullptr,
+    TAO_ORB_Core *orb_core = nullptr);
 
   ~generic () override = default;
 
 private:
-  // Private and unimplemented for concrete interfaces.
   generic (generic const &) = delete;
   generic (generic &&) = delete;
   generic &operator= (generic const &) = delete;
@@ -291,9 +288,7 @@ public:
 
   // The static operations.
   static AMH_genericResponseHandler_ptr _duplicate (AMH_genericResponseHandler_ptr obj);
-
   static void _tao_release (AMH_genericResponseHandler_ptr obj);
-
   static AMH_genericResponseHandler_ptr _narrow (::CORBA::Object_ptr obj);
   static AMH_genericResponseHandler_ptr _unchecked_narrow (::CORBA::Object_ptr obj);
   static AMH_genericResponseHandler_ptr _nil ();
@@ -319,7 +314,6 @@ protected:
   ~AMH_genericResponseHandler () override = default;
 
 private:
-  // Private and unimplemented for concrete interfaces.
   AMH_genericResponseHandler (AMH_genericResponseHandler const &) = delete;
   AMH_genericResponseHandler (AMH_genericResponseHandler &&) = delete;
   AMH_genericResponseHandler &operator= (AMH_genericResponseHandler const &) = delete;
@@ -338,7 +332,6 @@ using AMI_genericHandler_out = TAO_Objref_Out_T<AMI_genericHandler>;
 
 class TAO_IDL_TEST_STUB_Export AMI_genericHandler
   : public virtual ::Messaging::ReplyHandler
-
 {
 public:
   friend class TAO::Narrow_Utils<AMI_genericHandler>;
@@ -350,9 +343,7 @@ public:
 
   // The static operations.
   static AMI_genericHandler_ptr _duplicate (AMI_genericHandler_ptr obj);
-
   static void _tao_release (AMI_genericHandler_ptr obj);
-
   static AMI_genericHandler_ptr _narrow (::CORBA::Object_ptr obj);
   static AMI_genericHandler_ptr _unchecked_narrow (::CORBA::Object_ptr obj);
   static AMI_genericHandler_ptr _nil ();
@@ -386,15 +377,14 @@ protected:
 
   // Non-local interface only.
   AMI_genericHandler (
-      TAO_Stub *objref,
-      ::CORBA::Boolean _tao_collocated = false,
-      TAO_Abstract_ServantBase *servant = nullptr,
-      TAO_ORB_Core *orb_core = nullptr);
+    TAO_Stub *objref,
+    ::CORBA::Boolean _tao_collocated = false,
+    TAO_Abstract_ServantBase *servant = nullptr,
+    TAO_ORB_Core *orb_core = nullptr);
 
   ~AMI_genericHandler () override = default;
 
 private:
-  // Private and unimplemented for concrete interfaces.
   AMI_genericHandler (AMI_genericHandler const &) = delete;
   AMI_genericHandler (AMI_genericHandler &&) = delete;
   AMI_genericHandler &operator= (AMI_genericHandler const &) = delete;
@@ -634,4 +624,3 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 #include /**/ "ace/post.h"
 
 #endif /* ifndef */
-

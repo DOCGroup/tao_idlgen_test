@@ -127,4 +127,3 @@ namespace POA_OldUnion2
 #include /**/ "ace/post.h"
 
 #endif /* ifndef */
-

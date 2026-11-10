@@ -34,18 +34,13 @@ T_Data_T::_tao_obv_static_repository_id ()
 
 ACE_INLINE
 Test::Test (
-    TAO_Stub *objref,
-    ::CORBA::Boolean _tao_collocated,
-    TAO_Abstract_ServantBase *servant,
-    TAO_ORB_Core *oc)
+  TAO_Stub *objref, ::CORBA::Boolean _tao_collocated, TAO_Abstract_ServantBase *servant, TAO_ORB_Core *oc)
   : ::CORBA::Object (objref, _tao_collocated, servant, oc)
 {
 }
 
 ACE_INLINE
-Test::Test (
-    ::IOP::IOR *ior,
-    TAO_ORB_Core *oc)
+Test::Test (::IOP::IOR *ior, TAO_ORB_Core *oc)
   : ::CORBA::Object (ior, oc)
 {
 }
@@ -62,19 +57,13 @@ AMH_TestExceptionHolder::_tao_obv_static_repository_id ()
 
 ACE_INLINE
 AMI_TestHandler::AMI_TestHandler (
-    TAO_Stub *objref,
-    ::CORBA::Boolean _tao_collocated,
-    TAO_Abstract_ServantBase *servant,
-    TAO_ORB_Core *oc)
+  TAO_Stub *objref, ::CORBA::Boolean _tao_collocated, TAO_Abstract_ServantBase *servant, TAO_ORB_Core *oc)
   : ::CORBA::Object (objref, _tao_collocated, servant, oc)
 {
 }
 
 ACE_INLINE
-AMI_TestHandler::AMI_TestHandler (
-    ::IOP::IOR *ior,
-    TAO_ORB_Core *oc)
+AMI_TestHandler::AMI_TestHandler (::IOP::IOR *ior, TAO_ORB_Core *oc)
   : ::CORBA::Object (ior, oc)
 {
 }
-

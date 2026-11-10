@@ -107,4 +107,3 @@ MyAnyUnion::my_any ()
     }
   return *this->u_.my_any_;
 }
-

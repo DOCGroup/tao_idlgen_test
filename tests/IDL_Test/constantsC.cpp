@@ -57,7 +57,7 @@ TAO::Objref_Traits<ClassConstants::Iface>::nil ()
 }
 
 ::CORBA::Boolean
-TAO::Objref_Traits<ClassConstants::Iface>::marshal (ClassConstants::Iface_ptr const p,TAO_OutputCDR & cdr)
+TAO::Objref_Traits<ClassConstants::Iface>::marshal (ClassConstants::Iface_ptr const p, TAO_OutputCDR &cdr)
 {
   return ::CORBA::Object::marshal (p, cdr);
 }
@@ -122,7 +122,7 @@ ClassConstants::Iface::_tao_release (Iface_ptr obj)
 ClassConstants::Iface::_is_a (char const *value)
 {
   if (std::strcmp (value, "IDL:ClassConstants/Iface:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0)
+    std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0)
     {
       return true; // success using local knowledge
     }
@@ -308,7 +308,7 @@ ClassConstants::AMH_IfaceExceptionHolder_init::tao_repository_id ()
 ::CORBA::ValueBase *
 ClassConstants::AMH_IfaceExceptionHolder_init::create_for_unmarshal ()
 {
-  ::CORBA::ValueBase *ret_val = nullptr;
+  ::CORBA::ValueBase *ret_val {};
   ACE_NEW_THROW_EX (
       ret_val,
       OBV_ClassConstants::AMH_IfaceExceptionHolder,
@@ -339,7 +339,7 @@ TAO::Objref_Traits<ClassConstants::AMH_IfaceResponseHandler>::nil ()
 }
 
 ::CORBA::Boolean
-TAO::Objref_Traits<ClassConstants::AMH_IfaceResponseHandler>::marshal (ClassConstants::AMH_IfaceResponseHandler_ptr const p,TAO_OutputCDR & cdr)
+TAO::Objref_Traits<ClassConstants::AMH_IfaceResponseHandler>::marshal (ClassConstants::AMH_IfaceResponseHandler_ptr const p, TAO_OutputCDR &cdr)
 {
   return ::CORBA::Object::marshal (p, cdr);
 }
@@ -360,14 +360,14 @@ ClassConstants::AMH_IfaceResponseHandler_ptr
 ClassConstants::AMH_IfaceResponseHandler::_narrow (::CORBA::Object_ptr _tao_objref)
 {
   return AMH_IfaceResponseHandler::_duplicate (
-      dynamic_cast<AMH_IfaceResponseHandler_ptr> (_tao_objref));
+    dynamic_cast<AMH_IfaceResponseHandler_ptr> (_tao_objref));
 }
 
 ClassConstants::AMH_IfaceResponseHandler_ptr
 ClassConstants::AMH_IfaceResponseHandler::_unchecked_narrow (::CORBA::Object_ptr _tao_objref)
 {
   return AMH_IfaceResponseHandler::_duplicate (
-      dynamic_cast<AMH_IfaceResponseHandler_ptr> (_tao_objref));
+    dynamic_cast<AMH_IfaceResponseHandler_ptr> (_tao_objref));
 }
 
 ClassConstants::AMH_IfaceResponseHandler_ptr
@@ -396,8 +396,8 @@ ClassConstants::AMH_IfaceResponseHandler::_tao_release (AMH_IfaceResponseHandler
 ClassConstants::AMH_IfaceResponseHandler::_is_a (char const *value)
 {
   if (std::strcmp (value, "IDL:ClassConstants/AMH_IfaceResponseHandler:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/LocalObject:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0)
+    std::strcmp (value, "IDL:omg.org/CORBA/LocalObject:1.0") == 0 ||
+    std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0)
     {
       return true; // success using local knowledge
     }
@@ -451,7 +451,7 @@ TAO::Objref_Traits<ClassConstants::AMI_IfaceHandler>::nil ()
 }
 
 ::CORBA::Boolean
-TAO::Objref_Traits<ClassConstants::AMI_IfaceHandler>::marshal (ClassConstants::AMI_IfaceHandler_ptr const p,TAO_OutputCDR & cdr)
+TAO::Objref_Traits<ClassConstants::AMI_IfaceHandler>::marshal (ClassConstants::AMI_IfaceHandler_ptr const p, TAO_OutputCDR &cdr)
 {
   return ::CORBA::Object::marshal (p, cdr);
 }
@@ -506,8 +506,8 @@ ClassConstants::AMI_IfaceHandler::_tao_release (AMI_IfaceHandler_ptr obj)
 ClassConstants::AMI_IfaceHandler::_is_a (char const *value)
 {
   if (std::strcmp (value, "IDL:omg.org/Messaging/ReplyHandler:1.0") == 0 ||
-      std::strcmp (value, "IDL:ClassConstants/AMI_IfaceHandler:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0)
+    std::strcmp (value, "IDL:ClassConstants/AMI_IfaceHandler:1.0") == 0 ||
+    std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0)
     {
       return true; // success using local knowledge
     }
@@ -680,7 +680,7 @@ ClassConstants::Vt_init::tao_repository_id ()
 ::CORBA::ValueBase *
 ClassConstants::Vt_init::create_for_unmarshal ()
 {
-  ::CORBA::ValueBase *ret_val = nullptr;
+  ::CORBA::ValueBase *ret_val {};
   ACE_NEW_THROW_EX (
       ret_val,
       OBV_ClassConstants::Vt,
@@ -747,8 +747,8 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean operator>> (TAO_InputCDR &strm, m_a::enum_a & _tao_enumerator)
 {
-  ::CORBA::ULong _tao_temp = 0;
-  ::CORBA::Boolean const _tao_success = strm >> _tao_temp;
+  ::CORBA::ULong _tao_temp {};
+  const ::CORBA::Boolean _tao_success = strm >> _tao_temp;
 
   if (_tao_success)
     {
@@ -943,4 +943,3 @@ OBV_ClassConstants::Vt::truncation_hook ()
 {
   this->require_truncation_ = true;
 }
-

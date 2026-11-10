@@ -107,24 +107,18 @@ static TAO::TypeCode::Alias<char const *,
 
 simple_error::simple_error (
     ::CORBA::Long _tao_reason)
-  : ::CORBA::UserException (
-        "IDL:simple_error:1.0",
-        "simple_error")
+  : ::CORBA::UserException ("IDL:simple_error:1.0", "simple_error")
 {
   this->reason = _tao_reason;
 }
 
 simple_error::simple_error ()
-  : ::CORBA::UserException (
-        "IDL:simple_error:1.0",
-        "simple_error")
+  : ::CORBA::UserException ("IDL:simple_error:1.0", "simple_error")
 {
 }
 
 simple_error::simple_error (const ::simple_error &_tao_excp)
-  : ::CORBA::UserException (
-        _tao_excp._rep_id (),
-        _tao_excp._name ())
+  : ::CORBA::UserException (_tao_excp._rep_id (), _tao_excp._name ())
 {
   this->reason = _tao_excp.reason;
 }
@@ -243,7 +237,7 @@ TAO::Objref_Traits<simple>::nil ()
 }
 
 ::CORBA::Boolean
-TAO::Objref_Traits<simple>::marshal (simple_ptr const p,TAO_OutputCDR & cdr)
+TAO::Objref_Traits<simple>::marshal (simple_ptr const p, TAO_OutputCDR &cdr)
 {
   return ::CORBA::Object::marshal (p, cdr);
 }
@@ -268,10 +262,10 @@ simple::op (
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
-      std::addressof(_tao_retval),
-      std::addressof(_tao_a),
-      std::addressof(_tao_b),
-      std::addressof(_tao_c)
+      std::addressof (_tao_retval),
+      std::addressof (_tao_a),
+      std::addressof (_tao_b),
+      std::addressof (_tao_c)
     };
 
   static TAO::Exception_Data
@@ -293,7 +287,6 @@ simple::op (
       "op",
       2,
       TAO::TAO_CO_NONE | TAO::TAO_CO_DIRECT_STRATEGY | TAO::TAO_CO_THRU_POA_STRATEGY
-
     );
 
   _invocation_call.invoke (
@@ -321,9 +314,9 @@ simple::sendc_op (
 
   TAO::Argument *_the_tao_operation_signature[] =
     {
-      std::addressof(_tao_retval),
-      std::addressof(_tao_a),
-      std::addressof(_tao_c)
+      std::addressof (_tao_retval),
+      std::addressof (_tao_a),
+      std::addressof (_tao_c)
     };
 
   TAO::Asynch_Invocation_Adapter _invocation_call (
@@ -389,7 +382,7 @@ simple::_tao_release (simple_ptr obj)
 simple::_is_a (char const *value)
 {
   if (std::strcmp (value, "IDL:simple:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0)
+    std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0)
     {
       return true; // success using local knowledge
     }
@@ -617,7 +610,7 @@ TAO::Objref_Traits<AMH_simpleResponseHandler>::nil ()
 }
 
 ::CORBA::Boolean
-TAO::Objref_Traits<AMH_simpleResponseHandler>::marshal (AMH_simpleResponseHandler_ptr const p,TAO_OutputCDR & cdr)
+TAO::Objref_Traits<AMH_simpleResponseHandler>::marshal (AMH_simpleResponseHandler_ptr const p, TAO_OutputCDR &cdr)
 {
   return ::CORBA::Object::marshal (p, cdr);
 }
@@ -638,14 +631,14 @@ AMH_simpleResponseHandler_ptr
 AMH_simpleResponseHandler::_narrow (::CORBA::Object_ptr _tao_objref)
 {
   return AMH_simpleResponseHandler::_duplicate (
-      dynamic_cast<AMH_simpleResponseHandler_ptr> (_tao_objref));
+    dynamic_cast<AMH_simpleResponseHandler_ptr> (_tao_objref));
 }
 
 AMH_simpleResponseHandler_ptr
 AMH_simpleResponseHandler::_unchecked_narrow (::CORBA::Object_ptr _tao_objref)
 {
   return AMH_simpleResponseHandler::_duplicate (
-      dynamic_cast<AMH_simpleResponseHandler_ptr> (_tao_objref));
+    dynamic_cast<AMH_simpleResponseHandler_ptr> (_tao_objref));
 }
 
 AMH_simpleResponseHandler_ptr
@@ -674,8 +667,8 @@ AMH_simpleResponseHandler::_tao_release (AMH_simpleResponseHandler_ptr obj)
 AMH_simpleResponseHandler::_is_a (char const *value)
 {
   if (std::strcmp (value, "IDL:AMH_simpleResponseHandler:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/LocalObject:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0)
+    std::strcmp (value, "IDL:omg.org/CORBA/LocalObject:1.0") == 0 ||
+    std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0)
     {
       return true; // success using local knowledge
     }
@@ -737,7 +730,7 @@ TAO::Objref_Traits<AMI_simpleHandler>::nil ()
 }
 
 ::CORBA::Boolean
-TAO::Objref_Traits<AMI_simpleHandler>::marshal (AMI_simpleHandler_ptr const p,TAO_OutputCDR & cdr)
+TAO::Objref_Traits<AMI_simpleHandler>::marshal (AMI_simpleHandler_ptr const p, TAO_OutputCDR &cdr)
 {
   return ::CORBA::Object::marshal (p, cdr);
 }
@@ -762,10 +755,10 @@ AMI_simpleHandler::op (
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
-      std::addressof(_tao_retval),
-      std::addressof(_tao_ami_return_val),
-      std::addressof(_tao_b),
-      std::addressof(_tao_c)
+      std::addressof (_tao_retval),
+      std::addressof (_tao_ami_return_val),
+      std::addressof (_tao_b),
+      std::addressof (_tao_c)
     };
 
   static TAO::Exception_Data
@@ -787,7 +780,6 @@ AMI_simpleHandler::op (
       "op",
       2,
       TAO::TAO_CO_NONE | TAO::TAO_CO_DIRECT_STRATEGY | TAO::TAO_CO_THRU_POA_STRATEGY
-
     );
 
   _invocation_call.invoke (
@@ -892,8 +884,8 @@ AMI_simpleHandler::op_excep (
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
-      std::addressof(_tao_retval),
-      std::addressof(_tao_excep_holder)
+      std::addressof (_tao_retval),
+      std::addressof (_tao_excep_holder)
     };
 
   static TAO::Exception_Data
@@ -915,7 +907,6 @@ AMI_simpleHandler::op_excep (
       "op_excep",
       8,
       TAO::TAO_CO_NONE | TAO::TAO_CO_DIRECT_STRATEGY | TAO::TAO_CO_THRU_POA_STRATEGY
-
     );
 
   _invocation_call.invoke (
@@ -972,8 +963,8 @@ AMI_simpleHandler::_tao_release (AMI_simpleHandler_ptr obj)
 AMI_simpleHandler::_is_a (char const *value)
 {
   if (std::strcmp (value, "IDL:omg.org/Messaging/ReplyHandler:1.0") == 0 ||
-      std::strcmp (value, "IDL:AMI_simpleHandler:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0)
+    std::strcmp (value, "IDL:AMI_simpleHandler:1.0") == 0 ||
+    std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0)
     {
       return true; // success using local knowledge
     }
@@ -1035,7 +1026,7 @@ TAO::Objref_Traits<simple2>::nil ()
 }
 
 ::CORBA::Boolean
-TAO::Objref_Traits<simple2>::marshal (simple2_ptr const p,TAO_OutputCDR & cdr)
+TAO::Objref_Traits<simple2>::marshal (simple2_ptr const p, TAO_OutputCDR &cdr)
 {
   return ::CORBA::Object::marshal (p, cdr);
 }
@@ -1044,24 +1035,18 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 simple2::simple2_error::simple2_error (
     ::CORBA::Long _tao_reason2)
-  : ::CORBA::UserException (
-        "IDL:simple2/simple2_error:1.0",
-        "simple2_error")
+  : ::CORBA::UserException ("IDL:simple2/simple2_error:1.0", "simple2_error")
 {
   this->reason2 = _tao_reason2;
 }
 
 simple2::simple2_error::simple2_error ()
-  : ::CORBA::UserException (
-        "IDL:simple2/simple2_error:1.0",
-        "simple2_error")
+  : ::CORBA::UserException ("IDL:simple2/simple2_error:1.0", "simple2_error")
 {
 }
 
 simple2::simple2_error::simple2_error (const ::simple2::simple2_error &_tao_excp)
-  : ::CORBA::UserException (
-        _tao_excp._rep_id (),
-        _tao_excp._name ())
+  : ::CORBA::UserException (_tao_excp._rep_id (), _tao_excp._name ())
 {
   this->reason2 = _tao_excp.reason2;
 }
@@ -1174,10 +1159,10 @@ simple2::op2 (
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
-      std::addressof(_tao_retval),
-      std::addressof(_tao_a),
-      std::addressof(_tao_b),
-      std::addressof(_tao_c)
+      std::addressof (_tao_retval),
+      std::addressof (_tao_a),
+      std::addressof (_tao_b),
+      std::addressof (_tao_c)
     };
 
   static TAO::Exception_Data
@@ -1199,7 +1184,6 @@ simple2::op2 (
       "op2",
       3,
       TAO::TAO_CO_NONE | TAO::TAO_CO_DIRECT_STRATEGY | TAO::TAO_CO_THRU_POA_STRATEGY
-
     );
 
   _invocation_call.invoke (
@@ -1227,9 +1211,9 @@ simple2::sendc_op2 (
 
   TAO::Argument *_the_tao_operation_signature[] =
     {
-      std::addressof(_tao_retval),
-      std::addressof(_tao_a),
-      std::addressof(_tao_b)
+      std::addressof (_tao_retval),
+      std::addressof (_tao_a),
+      std::addressof (_tao_b)
     };
 
   TAO::Asynch_Invocation_Adapter _invocation_call (
@@ -1295,8 +1279,8 @@ simple2::_tao_release (simple2_ptr obj)
 simple2::_is_a (char const *value)
 {
   if (std::strcmp (value, "IDL:simple:1.0") == 0 ||
-      std::strcmp (value, "IDL:simple2:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0)
+    std::strcmp (value, "IDL:simple2:1.0") == 0 ||
+    std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0)
     {
       return true; // success using local knowledge
     }
@@ -1524,7 +1508,7 @@ TAO::Objref_Traits<AMH_simple2ResponseHandler>::nil ()
 }
 
 ::CORBA::Boolean
-TAO::Objref_Traits<AMH_simple2ResponseHandler>::marshal (AMH_simple2ResponseHandler_ptr const p,TAO_OutputCDR & cdr)
+TAO::Objref_Traits<AMH_simple2ResponseHandler>::marshal (AMH_simple2ResponseHandler_ptr const p, TAO_OutputCDR &cdr)
 {
   return ::CORBA::Object::marshal (p, cdr);
 }
@@ -1545,14 +1529,14 @@ AMH_simple2ResponseHandler_ptr
 AMH_simple2ResponseHandler::_narrow (::CORBA::Object_ptr _tao_objref)
 {
   return AMH_simple2ResponseHandler::_duplicate (
-      dynamic_cast<AMH_simple2ResponseHandler_ptr> (_tao_objref));
+    dynamic_cast<AMH_simple2ResponseHandler_ptr> (_tao_objref));
 }
 
 AMH_simple2ResponseHandler_ptr
 AMH_simple2ResponseHandler::_unchecked_narrow (::CORBA::Object_ptr _tao_objref)
 {
   return AMH_simple2ResponseHandler::_duplicate (
-      dynamic_cast<AMH_simple2ResponseHandler_ptr> (_tao_objref));
+    dynamic_cast<AMH_simple2ResponseHandler_ptr> (_tao_objref));
 }
 
 AMH_simple2ResponseHandler_ptr
@@ -1581,8 +1565,8 @@ AMH_simple2ResponseHandler::_tao_release (AMH_simple2ResponseHandler_ptr obj)
 AMH_simple2ResponseHandler::_is_a (char const *value)
 {
   if (std::strcmp (value, "IDL:AMH_simple2ResponseHandler:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/LocalObject:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0)
+    std::strcmp (value, "IDL:omg.org/CORBA/LocalObject:1.0") == 0 ||
+    std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0)
     {
       return true; // success using local knowledge
     }
@@ -1644,7 +1628,7 @@ TAO::Objref_Traits<AMI_simple2Handler>::nil ()
 }
 
 ::CORBA::Boolean
-TAO::Objref_Traits<AMI_simple2Handler>::marshal (AMI_simple2Handler_ptr const p,TAO_OutputCDR & cdr)
+TAO::Objref_Traits<AMI_simple2Handler>::marshal (AMI_simple2Handler_ptr const p, TAO_OutputCDR &cdr)
 {
   return ::CORBA::Object::marshal (p, cdr);
 }
@@ -1667,9 +1651,9 @@ AMI_simple2Handler::op2 (
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
-      std::addressof(_tao_retval),
-      std::addressof(_tao_ami_return_val),
-      std::addressof(_tao_c)
+      std::addressof (_tao_retval),
+      std::addressof (_tao_ami_return_val),
+      std::addressof (_tao_c)
     };
 
   static TAO::Exception_Data
@@ -1691,7 +1675,6 @@ AMI_simple2Handler::op2 (
       "op2",
       3,
       TAO::TAO_CO_NONE | TAO::TAO_CO_DIRECT_STRATEGY | TAO::TAO_CO_THRU_POA_STRATEGY
-
     );
 
   _invocation_call.invoke (
@@ -1792,8 +1775,8 @@ AMI_simple2Handler::op2_excep (
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
-      std::addressof(_tao_retval),
-      std::addressof(_tao_excep_holder)
+      std::addressof (_tao_retval),
+      std::addressof (_tao_excep_holder)
     };
 
   static TAO::Exception_Data
@@ -1815,7 +1798,6 @@ AMI_simple2Handler::op2_excep (
       "op2_excep",
       9,
       TAO::TAO_CO_NONE | TAO::TAO_CO_DIRECT_STRATEGY | TAO::TAO_CO_THRU_POA_STRATEGY
-
     );
 
   _invocation_call.invoke (
@@ -1872,9 +1854,9 @@ AMI_simple2Handler::_tao_release (AMI_simple2Handler_ptr obj)
 AMI_simple2Handler::_is_a (char const *value)
 {
   if (std::strcmp (value, "IDL:omg.org/Messaging/ReplyHandler:1.0") == 0 ||
-      std::strcmp (value, "IDL:AMI_simpleHandler:1.0") == 0 ||
-      std::strcmp (value, "IDL:AMI_simple2Handler:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0)
+    std::strcmp (value, "IDL:AMI_simpleHandler:1.0") == 0 ||
+    std::strcmp (value, "IDL:AMI_simple2Handler:1.0") == 0 ||
+    std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0)
     {
       return true; // success using local knowledge
     }
@@ -2966,4 +2948,3 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-

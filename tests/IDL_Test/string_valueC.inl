@@ -31,4 +31,3 @@ include_test::StringTest::_tao_obv_static_repository_id ()
 {
   return "IDL:include_test/StringTest:1.0";
 }
-

@@ -807,4 +807,3 @@ namespace POA_UnionTest3
 #include /**/ "ace/post.h"
 
 #endif /* ifndef */
-

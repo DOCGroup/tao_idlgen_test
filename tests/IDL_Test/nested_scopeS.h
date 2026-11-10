@@ -613,19 +613,11 @@ namespace POA_i_skip
     char const *_interface_repository_id () const override;
   };
 
-  ///////////////////////////////////////////////////////////////////////
-  //                    Direct  Impl. Declaration
-  //
-
   class TAO_IDL_TEST_STUB_Export _TAO_i_skip_Direct_Proxy_Impl
   {
   public:
     virtual ~_TAO_i_skip_Direct_Proxy_Impl ();
   };
-
-  //
-  //                Direct  Proxy Impl. Declaration
-  ///////////////////////////////////////////////////////////////////////
 
   class TAO_AMH_i_skipResponseHandler;
   using TAO_AMH_i_skipResponseHandler_ptr = TAO_AMH_i_skipResponseHandler *;
@@ -670,20 +662,12 @@ namespace POA_i_skip
     char const *_interface_repository_id () const override;
   };
 
-  ///////////////////////////////////////////////////////////////////////
-  //                    Direct  Impl. Declaration
-  //
-
   class TAO_IDL_TEST_STUB_Export _TAO_AMI_i_skipHandler_Direct_Proxy_Impl
     : public virtual ::POA_Messaging::_TAO_ReplyHandler_Direct_Proxy_Impl
   {
   public:
     virtual ~_TAO_AMI_i_skipHandler_Direct_Proxy_Impl ();
   };
-
-  //
-  //                Direct  Proxy Impl. Declaration
-  ///////////////////////////////////////////////////////////////////////
 
 } // module i_skip::i_hump
 
@@ -797,19 +781,11 @@ public:
   char const *_interface_repository_id () const override;
 };
 
-///////////////////////////////////////////////////////////////////////
-//                    Direct  Impl. Declaration
-//
-
 class TAO_IDL_TEST_STUB_Export _TAO_bloo_Direct_Proxy_Impl
 {
 public:
   virtual ~_TAO_bloo_Direct_Proxy_Impl ();
 };
-
-//
-//                Direct  Proxy Impl. Declaration
-///////////////////////////////////////////////////////////////////////
 
 class POA_TAO_AMH_blooResponseHandler;
 using POA_TAO_AMH_blooResponseHandler_ptr = POA_TAO_AMH_blooResponseHandler *;
@@ -854,20 +830,12 @@ public:
   char const *_interface_repository_id () const override;
 };
 
-///////////////////////////////////////////////////////////////////////
-//                    Direct  Impl. Declaration
-//
-
 class TAO_IDL_TEST_STUB_Export _TAO_AMI_blooHandler_Direct_Proxy_Impl
   : public virtual ::POA_Messaging::_TAO_ReplyHandler_Direct_Proxy_Impl
 {
 public:
   virtual ~_TAO_AMI_blooHandler_Direct_Proxy_Impl ();
 };
-
-//
-//                Direct  Proxy Impl. Declaration
-///////////////////////////////////////////////////////////////////////
 
 namespace POA_obj_u_skip
 {
@@ -948,19 +916,11 @@ namespace POA_bug_1985_a
     char const *_interface_repository_id () const override;
   };
 
-  ///////////////////////////////////////////////////////////////////////
-  //                    Direct  Impl. Declaration
-  //
-
   class TAO_IDL_TEST_STUB_Export _TAO_something_Direct_Proxy_Impl
   {
   public:
     virtual ~_TAO_something_Direct_Proxy_Impl ();
   };
-
-  //
-  //                Direct  Proxy Impl. Declaration
-  ///////////////////////////////////////////////////////////////////////
 
   class TAO_AMH_somethingResponseHandler;
   using TAO_AMH_somethingResponseHandler_ptr = TAO_AMH_somethingResponseHandler *;
@@ -1005,20 +965,12 @@ namespace POA_bug_1985_a
     char const *_interface_repository_id () const override;
   };
 
-  ///////////////////////////////////////////////////////////////////////
-  //                    Direct  Impl. Declaration
-  //
-
   class TAO_IDL_TEST_STUB_Export _TAO_AMI_somethingHandler_Direct_Proxy_Impl
     : public virtual ::POA_Messaging::_TAO_ReplyHandler_Direct_Proxy_Impl
   {
   public:
     virtual ~_TAO_AMI_somethingHandler_Direct_Proxy_Impl ();
   };
-
-  //
-  //                Direct  Proxy Impl. Declaration
-  ///////////////////////////////////////////////////////////////////////
 
 } // module bug_1985_a::b
 
@@ -1085,20 +1037,12 @@ namespace POA_bug_1985_c
     char const *_interface_repository_id () const override;
   };
 
-  ///////////////////////////////////////////////////////////////////////
-  //                    Direct  Impl. Declaration
-  //
-
   class TAO_IDL_TEST_STUB_Export _TAO_something_Direct_Proxy_Impl
     : public virtual ::POA_bug_1985_a::b::_TAO_something_Direct_Proxy_Impl
   {
   public:
     virtual ~_TAO_something_Direct_Proxy_Impl ();
   };
-
-  //
-  //                Direct  Proxy Impl. Declaration
-  ///////////////////////////////////////////////////////////////////////
 
   class TAO_AMH_somethingResponseHandler;
   using TAO_AMH_somethingResponseHandler_ptr = TAO_AMH_somethingResponseHandler *;
@@ -1143,20 +1087,12 @@ namespace POA_bug_1985_c
     char const *_interface_repository_id () const override;
   };
 
-  ///////////////////////////////////////////////////////////////////////
-  //                    Direct  Impl. Declaration
-  //
-
   class TAO_IDL_TEST_STUB_Export _TAO_AMI_somethingHandler_Direct_Proxy_Impl
     : public virtual ::POA_bug_1985_a::b::_TAO_AMI_somethingHandler_Direct_Proxy_Impl
   {
   public:
     virtual ~_TAO_AMI_somethingHandler_Direct_Proxy_Impl ();
   };
-
-  //
-  //                Direct  Proxy Impl. Declaration
-  ///////////////////////////////////////////////////////////////////////
 
 } // module bug_1985_c::d
 
@@ -1219,19 +1155,11 @@ public:
   char const *_interface_repository_id () const override;
 };
 
-///////////////////////////////////////////////////////////////////////
-//                    Direct  Impl. Declaration
-//
-
 class TAO_IDL_TEST_STUB_Export _TAO_UAV_Negotiator_Direct_Proxy_Impl
 {
 public:
   virtual ~_TAO_UAV_Negotiator_Direct_Proxy_Impl ();
 };
-
-//
-//                Direct  Proxy Impl. Declaration
-///////////////////////////////////////////////////////////////////////
 
 class TAO_AMH_UAV_NegotiatorResponseHandler;
 using TAO_AMH_UAV_NegotiatorResponseHandler_ptr = TAO_AMH_UAV_NegotiatorResponseHandler *;
@@ -1276,20 +1204,12 @@ public:
   char const *_interface_repository_id () const override;
 };
 
-///////////////////////////////////////////////////////////////////////
-//                    Direct  Impl. Declaration
-//
-
 class TAO_IDL_TEST_STUB_Export _TAO_AMI_UAV_NegotiatorHandler_Direct_Proxy_Impl
   : public virtual ::POA_Messaging::_TAO_ReplyHandler_Direct_Proxy_Impl
 {
 public:
   virtual ~_TAO_AMI_UAV_NegotiatorHandler_Direct_Proxy_Impl ();
 };
-
-//
-//                Direct  Proxy Impl. Declaration
-///////////////////////////////////////////////////////////////////////
 
 class AMH_UAV_Negotiator_Factory;
 using AMH_UAV_Negotiator_Factory_ptr = AMH_UAV_Negotiator_Factory *;
@@ -1358,29 +1278,18 @@ public:
     char const * bitrate_sc) = 0;
 
   static void make_negotiator_skel (
-      TAO_ServerRequest &server_request,
-      TAO::Portable_Server::Servant_Upcall *servant_upcall,
-      TAO_ServantBase *servant);
+    TAO_ServerRequest &server_request,
+    TAO::Portable_Server::Servant_Upcall *servant_upcall,
+    TAO_ServantBase *servant);
 };
-
-///////////////////////////////////////////////////////////////////////
-//                    Direct  Impl. Declaration
-//
 
 class TAO_IDL_TEST_STUB_Export _TAO_UAV_Negotiator_Factory_Direct_Proxy_Impl
   : public virtual ::POA_Negotiator::_TAO_UAV_Negotiator_Direct_Proxy_Impl
 {
 public:
   virtual ~_TAO_UAV_Negotiator_Factory_Direct_Proxy_Impl ();
-  static void
-  make_negotiator (
-    TAO_Abstract_ServantBase *servant, TAO::Argument **args);
-
+  static void make_negotiator (TAO_Abstract_ServantBase *servant, TAO::Argument **args);
 };
-
-//
-//                Direct  Proxy Impl. Declaration
-///////////////////////////////////////////////////////////////////////
 
 class TAO_AMH_UAV_Negotiator_FactoryResponseHandler;
 using TAO_AMH_UAV_Negotiator_FactoryResponseHandler_ptr = TAO_AMH_UAV_Negotiator_FactoryResponseHandler *;
@@ -1431,40 +1340,26 @@ public:
     ::Negotiator::UAV_Negotiator_ptr ami_return_val) = 0;
 
   static void make_negotiator_skel (
-      TAO_ServerRequest &server_request,
-      TAO::Portable_Server::Servant_Upcall *servant_upcall,
-      TAO_ServantBase *servant);
+    TAO_ServerRequest &server_request,
+    TAO::Portable_Server::Servant_Upcall *servant_upcall,
+    TAO_ServantBase *servant);
   virtual void make_negotiator_excep (
     ::Messaging::ExceptionHolder * excep_holder) = 0;
 
   static void make_negotiator_excep_skel (
-      TAO_ServerRequest &server_request,
-      TAO::Portable_Server::Servant_Upcall *servant_upcall,
-      TAO_ServantBase *servant);
+    TAO_ServerRequest &server_request,
+    TAO::Portable_Server::Servant_Upcall *servant_upcall,
+    TAO_ServantBase *servant);
 };
-
-///////////////////////////////////////////////////////////////////////
-//                    Direct  Impl. Declaration
-//
 
 class TAO_IDL_TEST_STUB_Export _TAO_AMI_UAV_Negotiator_FactoryHandler_Direct_Proxy_Impl
   : public virtual ::POA_Negotiator::_TAO_AMI_UAV_NegotiatorHandler_Direct_Proxy_Impl
 {
 public:
   virtual ~_TAO_AMI_UAV_Negotiator_FactoryHandler_Direct_Proxy_Impl ();
-  static void
-  make_negotiator (
-    TAO_Abstract_ServantBase *servant, TAO::Argument **args);
-
-  static void
-  make_negotiator_excep (
-    TAO_Abstract_ServantBase *servant, TAO::Argument **args);
-
+  static void make_negotiator (TAO_Abstract_ServantBase *servant, TAO::Argument **args);
+  static void make_negotiator_excep (TAO_Abstract_ServantBase *servant, TAO::Argument **args);
 };
-
-//
-//                Direct  Proxy Impl. Declaration
-///////////////////////////////////////////////////////////////////////
 
 } // module Negotiator
 namespace POA_bug_2125
@@ -1548,28 +1443,17 @@ namespace POA_Wow
       ::bug_2125::Bar::Stuff fbs) = 0;
 
     static void op2_skel (
-        TAO_ServerRequest &server_request,
-        TAO::Portable_Server::Servant_Upcall *servant_upcall,
-        TAO_ServantBase *servant);
+      TAO_ServerRequest &server_request,
+      TAO::Portable_Server::Servant_Upcall *servant_upcall,
+      TAO_ServantBase *servant);
   };
-
-  ///////////////////////////////////////////////////////////////////////
-  //                    Direct  Impl. Declaration
-  //
 
   class TAO_IDL_TEST_STUB_Export _TAO_MyInterface_Direct_Proxy_Impl
   {
   public:
     virtual ~_TAO_MyInterface_Direct_Proxy_Impl ();
-    static void
-    op2 (
-      TAO_Abstract_ServantBase *servant, TAO::Argument **args);
-
+    static void op2 (TAO_Abstract_ServantBase *servant, TAO::Argument **args);
   };
-
-  //
-  //                Direct  Proxy Impl. Declaration
-  ///////////////////////////////////////////////////////////////////////
 
   class TAO_AMH_MyInterfaceResponseHandler;
   using TAO_AMH_MyInterfaceResponseHandler_ptr = TAO_AMH_MyInterfaceResponseHandler *;
@@ -1618,40 +1502,26 @@ namespace POA_Wow
     virtual void op2 () = 0;
 
     static void op2_skel (
-        TAO_ServerRequest &server_request,
-        TAO::Portable_Server::Servant_Upcall *servant_upcall,
-        TAO_ServantBase *servant);
+      TAO_ServerRequest &server_request,
+      TAO::Portable_Server::Servant_Upcall *servant_upcall,
+      TAO_ServantBase *servant);
     virtual void op2_excep (
       ::Messaging::ExceptionHolder * excep_holder) = 0;
 
     static void op2_excep_skel (
-        TAO_ServerRequest &server_request,
-        TAO::Portable_Server::Servant_Upcall *servant_upcall,
-        TAO_ServantBase *servant);
+      TAO_ServerRequest &server_request,
+      TAO::Portable_Server::Servant_Upcall *servant_upcall,
+      TAO_ServantBase *servant);
   };
-
-  ///////////////////////////////////////////////////////////////////////
-  //                    Direct  Impl. Declaration
-  //
 
   class TAO_IDL_TEST_STUB_Export _TAO_AMI_MyInterfaceHandler_Direct_Proxy_Impl
     : public virtual ::POA_Messaging::_TAO_ReplyHandler_Direct_Proxy_Impl
   {
   public:
     virtual ~_TAO_AMI_MyInterfaceHandler_Direct_Proxy_Impl ();
-    static void
-    op2 (
-      TAO_Abstract_ServantBase *servant, TAO::Argument **args);
-
-    static void
-    op2_excep (
-      TAO_Abstract_ServantBase *servant, TAO::Argument **args);
-
+    static void op2 (TAO_Abstract_ServantBase *servant, TAO::Argument **);
+    static void op2_excep (TAO_Abstract_ServantBase *servant, TAO::Argument **args);
   };
-
-  //
-  //                Direct  Proxy Impl. Declaration
-  ///////////////////////////////////////////////////////////////////////
 
 } // module Wow::bug_2125
 
@@ -1676,4 +1546,3 @@ namespace POA_Company
 #include /**/ "ace/post.h"
 
 #endif /* ifndef */
-

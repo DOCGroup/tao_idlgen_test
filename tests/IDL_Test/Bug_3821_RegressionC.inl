@@ -1847,4 +1847,3 @@ test::UnionWithImplicitDefault_LongDiscriminant::e_case3 () const
     }
   return this->u_.e_case3_;
 }
-

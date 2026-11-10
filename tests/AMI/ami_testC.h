@@ -134,9 +134,7 @@ namespace A
 
     // The static operations.
     static AMI_Test_ptr _duplicate (AMI_Test_ptr obj);
-
     static void _tao_release (AMI_Test_ptr obj);
-
     static AMI_Test_ptr _narrow (::CORBA::Object_ptr obj);
     static AMI_Test_ptr _unchecked_narrow (::CORBA::Object_ptr obj);
     static AMI_Test_ptr _nil ();
@@ -185,15 +183,14 @@ namespace A
 
     // Non-local interface only.
     AMI_Test (
-        TAO_Stub *objref,
-        ::CORBA::Boolean _tao_collocated = false,
-        TAO_Abstract_ServantBase *servant = nullptr,
-        TAO_ORB_Core *orb_core = nullptr);
+      TAO_Stub *objref,
+      ::CORBA::Boolean _tao_collocated = false,
+      TAO_Abstract_ServantBase *servant = nullptr,
+      TAO_ORB_Core *orb_core = nullptr);
 
     ~AMI_Test () override = default;
 
   private:
-    // Private and unimplemented for concrete interfaces.
     AMI_Test (AMI_Test const &) = delete;
     AMI_Test (AMI_Test &&) = delete;
     AMI_Test &operator= (AMI_Test const &) = delete;
@@ -213,7 +210,6 @@ namespace A
 
   class  AMI_AMI_TestHandler
     : public virtual ::Messaging::ReplyHandler
-
   {
   public:
     friend class TAO::Narrow_Utils<AMI_AMI_TestHandler>;
@@ -225,9 +221,7 @@ namespace A
 
     // The static operations.
     static AMI_AMI_TestHandler_ptr _duplicate (AMI_AMI_TestHandler_ptr obj);
-
     static void _tao_release (AMI_AMI_TestHandler_ptr obj);
-
     static AMI_AMI_TestHandler_ptr _narrow (::CORBA::Object_ptr obj);
     static AMI_AMI_TestHandler_ptr _unchecked_narrow (::CORBA::Object_ptr obj);
     static AMI_AMI_TestHandler_ptr _nil ();
@@ -293,15 +287,14 @@ namespace A
 
     // Non-local interface only.
     AMI_AMI_TestHandler (
-        TAO_Stub *objref,
-        ::CORBA::Boolean _tao_collocated = false,
-        TAO_Abstract_ServantBase *servant = nullptr,
-        TAO_ORB_Core *orb_core = nullptr);
+      TAO_Stub *objref,
+      ::CORBA::Boolean _tao_collocated = false,
+      TAO_Abstract_ServantBase *servant = nullptr,
+      TAO_ORB_Core *orb_core = nullptr);
 
     ~AMI_AMI_TestHandler () override = default;
 
   private:
-    // Private and unimplemented for concrete interfaces.
     AMI_AMI_TestHandler (AMI_AMI_TestHandler const &) = delete;
     AMI_AMI_TestHandler (AMI_AMI_TestHandler &&) = delete;
     AMI_AMI_TestHandler &operator= (AMI_AMI_TestHandler const &) = delete;
@@ -324,7 +317,6 @@ namespace A
 
   class  Test_Child
     : public virtual ::A::AMI_Test
-
   {
   public:
     friend class TAO::Narrow_Utils<Test_Child>;
@@ -336,9 +328,7 @@ namespace A
 
     // The static operations.
     static Test_Child_ptr _duplicate (Test_Child_ptr obj);
-
     static void _tao_release (Test_Child_ptr obj);
-
     static Test_Child_ptr _narrow (::CORBA::Object_ptr obj);
     static Test_Child_ptr _unchecked_narrow (::CORBA::Object_ptr obj);
     static Test_Child_ptr _nil ();
@@ -361,15 +351,14 @@ namespace A
 
     // Non-local interface only.
     Test_Child (
-        TAO_Stub *objref,
-        ::CORBA::Boolean _tao_collocated = false,
-        TAO_Abstract_ServantBase *servant = nullptr,
-        TAO_ORB_Core *orb_core = nullptr);
+      TAO_Stub *objref,
+      ::CORBA::Boolean _tao_collocated = false,
+      TAO_Abstract_ServantBase *servant = nullptr,
+      TAO_ORB_Core *orb_core = nullptr);
 
     ~Test_Child () override = default;
 
   private:
-    // Private and unimplemented for concrete interfaces.
     Test_Child (Test_Child const &) = delete;
     Test_Child (Test_Child &&) = delete;
     Test_Child &operator= (Test_Child const &) = delete;
@@ -389,7 +378,6 @@ namespace A
 
   class  AMI_Test_ChildHandler
     : public virtual ::A::AMI_AMI_TestHandler
-
   {
   public:
     friend class TAO::Narrow_Utils<AMI_Test_ChildHandler>;
@@ -401,9 +389,7 @@ namespace A
 
     // The static operations.
     static AMI_Test_ChildHandler_ptr _duplicate (AMI_Test_ChildHandler_ptr obj);
-
     static void _tao_release (AMI_Test_ChildHandler_ptr obj);
-
     static AMI_Test_ChildHandler_ptr _narrow (::CORBA::Object_ptr obj);
     static AMI_Test_ChildHandler_ptr _unchecked_narrow (::CORBA::Object_ptr obj);
     static AMI_Test_ChildHandler_ptr _nil ();
@@ -432,15 +418,14 @@ namespace A
 
     // Non-local interface only.
     AMI_Test_ChildHandler (
-        TAO_Stub *objref,
-        ::CORBA::Boolean _tao_collocated = false,
-        TAO_Abstract_ServantBase *servant = nullptr,
-        TAO_ORB_Core *orb_core = nullptr);
+      TAO_Stub *objref,
+      ::CORBA::Boolean _tao_collocated = false,
+      TAO_Abstract_ServantBase *servant = nullptr,
+      TAO_ORB_Core *orb_core = nullptr);
 
     ~AMI_Test_ChildHandler () override = default;
 
   private:
-    // Private and unimplemented for concrete interfaces.
     AMI_Test_ChildHandler (AMI_Test_ChildHandler const &) = delete;
     AMI_Test_ChildHandler (AMI_Test_ChildHandler &&) = delete;
     AMI_Test_ChildHandler &operator= (AMI_Test_ChildHandler const &) = delete;
@@ -663,29 +648,29 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
- ::CORBA::Boolean operator<< (TAO_OutputCDR &, A::AMI_Test_ptr const);
- ::CORBA::Boolean operator>> (TAO_InputCDR &, A::AMI_Test_ptr &);
+::CORBA::Boolean operator<< (TAO_OutputCDR &, A::AMI_Test_ptr const);
+::CORBA::Boolean operator>> (TAO_InputCDR &, A::AMI_Test_ptr &);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
- ::CORBA::Boolean operator<< (TAO_OutputCDR &, A::AMI_AMI_TestHandler_ptr const);
- ::CORBA::Boolean operator>> (TAO_InputCDR &, A::AMI_AMI_TestHandler_ptr &);
+::CORBA::Boolean operator<< (TAO_OutputCDR &, A::AMI_AMI_TestHandler_ptr const);
+::CORBA::Boolean operator>> (TAO_InputCDR &, A::AMI_AMI_TestHandler_ptr &);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
- ::CORBA::Boolean operator<< (TAO_OutputCDR &, A::Test_Child_ptr const);
- ::CORBA::Boolean operator>> (TAO_InputCDR &, A::Test_Child_ptr &);
+::CORBA::Boolean operator<< (TAO_OutputCDR &, A::Test_Child_ptr const);
+::CORBA::Boolean operator>> (TAO_InputCDR &, A::Test_Child_ptr &);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
- ::CORBA::Boolean operator<< (TAO_OutputCDR &, A::AMI_Test_ChildHandler_ptr const);
- ::CORBA::Boolean operator>> (TAO_InputCDR &, A::AMI_Test_ChildHandler_ptr &);
+::CORBA::Boolean operator<< (TAO_OutputCDR &, A::AMI_Test_ChildHandler_ptr const);
+::CORBA::Boolean operator>> (TAO_InputCDR &, A::AMI_Test_ChildHandler_ptr &);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
@@ -696,4 +681,3 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 #include /**/ "ace/post.h"
 
 #endif /* ifndef */
-

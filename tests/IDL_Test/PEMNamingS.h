@@ -231,41 +231,27 @@ namespace POA_Plesk
       ::Plesk::TObjectID & sc_id) = 0;
 
     static void resolve_skel (
-        TAO_ServerRequest &server_request,
-        TAO::Portable_Server::Servant_Upcall *servant_upcall,
-        TAO_ServantBase *servant);
+      TAO_ServerRequest &server_request,
+      TAO::Portable_Server::Servant_Upcall *servant_upcall,
+      TAO_ServantBase *servant);
     virtual ::CORBA::Object_ptr resolve_sc (
       char const * service_type,
       char const * version,
       ::Plesk::TObjectID & sc_id) = 0;
 
     static void resolve_sc_skel (
-        TAO_ServerRequest &server_request,
-        TAO::Portable_Server::Servant_Upcall *servant_upcall,
-        TAO_ServantBase *servant);
+      TAO_ServerRequest &server_request,
+      TAO::Portable_Server::Servant_Upcall *servant_upcall,
+      TAO_ServantBase *servant);
   };
-
-  ///////////////////////////////////////////////////////////////////////
-  //                    Direct  Impl. Declaration
-  //
 
   class TAO_IDL_TEST_STUB_Export _TAO_ObjectResolver_Direct_Proxy_Impl
   {
   public:
     virtual ~_TAO_ObjectResolver_Direct_Proxy_Impl ();
-    static void
-    resolve (
-      TAO_Abstract_ServantBase *servant, TAO::Argument **args);
-
-    static void
-    resolve_sc (
-      TAO_Abstract_ServantBase *servant, TAO::Argument **args);
-
+    static void resolve (TAO_Abstract_ServantBase *servant, TAO::Argument **args);
+    static void resolve_sc (TAO_Abstract_ServantBase *servant, TAO::Argument **args);
   };
-
-  //
-  //                Direct  Proxy Impl. Declaration
-  ///////////////////////////////////////////////////////////////////////
 
   class TAO_AMH_ObjectResolverResponseHandler;
   using TAO_AMH_ObjectResolverResponseHandler_ptr = TAO_AMH_ObjectResolverResponseHandler *;
@@ -323,63 +309,43 @@ namespace POA_Plesk
       ::Plesk::TObjectID sc_id) = 0;
 
     static void resolve_skel (
-        TAO_ServerRequest &server_request,
-        TAO::Portable_Server::Servant_Upcall *servant_upcall,
-        TAO_ServantBase *servant);
+      TAO_ServerRequest &server_request,
+      TAO::Portable_Server::Servant_Upcall *servant_upcall,
+      TAO_ServantBase *servant);
     virtual void resolve_excep (
       ::Messaging::ExceptionHolder * excep_holder) = 0;
 
     static void resolve_excep_skel (
-        TAO_ServerRequest &server_request,
-        TAO::Portable_Server::Servant_Upcall *servant_upcall,
-        TAO_ServantBase *servant);
+      TAO_ServerRequest &server_request,
+      TAO::Portable_Server::Servant_Upcall *servant_upcall,
+      TAO_ServantBase *servant);
     virtual void resolve_sc (
       ::CORBA::Object_ptr ami_return_val,
       ::Plesk::TObjectID sc_id) = 0;
 
     static void resolve_sc_skel (
-        TAO_ServerRequest &server_request,
-        TAO::Portable_Server::Servant_Upcall *servant_upcall,
-        TAO_ServantBase *servant);
+      TAO_ServerRequest &server_request,
+      TAO::Portable_Server::Servant_Upcall *servant_upcall,
+      TAO_ServantBase *servant);
     virtual void resolve_sc_excep (
       ::Messaging::ExceptionHolder * excep_holder) = 0;
 
     static void resolve_sc_excep_skel (
-        TAO_ServerRequest &server_request,
-        TAO::Portable_Server::Servant_Upcall *servant_upcall,
-        TAO_ServantBase *servant);
+      TAO_ServerRequest &server_request,
+      TAO::Portable_Server::Servant_Upcall *servant_upcall,
+      TAO_ServantBase *servant);
   };
-
-  ///////////////////////////////////////////////////////////////////////
-  //                    Direct  Impl. Declaration
-  //
 
   class TAO_IDL_TEST_STUB_Export _TAO_AMI_ObjectResolverHandler_Direct_Proxy_Impl
     : public virtual ::POA_Messaging::_TAO_ReplyHandler_Direct_Proxy_Impl
   {
   public:
     virtual ~_TAO_AMI_ObjectResolverHandler_Direct_Proxy_Impl ();
-    static void
-    resolve (
-      TAO_Abstract_ServantBase *servant, TAO::Argument **args);
-
-    static void
-    resolve_excep (
-      TAO_Abstract_ServantBase *servant, TAO::Argument **args);
-
-    static void
-    resolve_sc (
-      TAO_Abstract_ServantBase *servant, TAO::Argument **args);
-
-    static void
-    resolve_sc_excep (
-      TAO_Abstract_ServantBase *servant, TAO::Argument **args);
-
+    static void resolve (TAO_Abstract_ServantBase *servant, TAO::Argument **args);
+    static void resolve_excep (TAO_Abstract_ServantBase *servant, TAO::Argument **args);
+    static void resolve_sc (TAO_Abstract_ServantBase *servant, TAO::Argument **args);
+    static void resolve_sc_excep (TAO_Abstract_ServantBase *servant, TAO::Argument **args);
   };
-
-  //
-  //                Direct  Proxy Impl. Declaration
-  ///////////////////////////////////////////////////////////////////////
 
 } // module Plesk::Naming
 
@@ -390,4 +356,3 @@ namespace POA_Plesk
 #include /**/ "ace/post.h"
 
 #endif /* ifndef */
-

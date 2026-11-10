@@ -1291,4 +1291,3 @@ operator>>= (
 
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
-

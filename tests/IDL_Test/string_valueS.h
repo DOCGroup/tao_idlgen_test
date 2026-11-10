@@ -94,4 +94,3 @@ namespace POA_include_test
 #include /**/ "ace/post.h"
 
 #endif /* ifndef */
-

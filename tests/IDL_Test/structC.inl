@@ -213,4 +213,3 @@ TAO::Array_Traits<Test::S4Array_forany>::alloc ()
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-

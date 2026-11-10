@@ -235,4 +235,3 @@ OldUnion2::Bar::Foo::y () const
     }
   return this->u_.y_;
 }
-

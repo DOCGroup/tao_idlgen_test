@@ -121,9 +121,7 @@ namespace FixedPoint
 
     // The static operations.
     static FixedOperations_ptr _duplicate (FixedOperations_ptr obj);
-
     static void _tao_release (FixedOperations_ptr obj);
-
     static FixedOperations_ptr _narrow (::CORBA::Object_ptr obj);
     static FixedOperations_ptr _unchecked_narrow (::CORBA::Object_ptr obj);
     static FixedOperations_ptr _nil ();
@@ -155,15 +153,14 @@ namespace FixedPoint
 
     // Non-local interface only.
     FixedOperations (
-        TAO_Stub *objref,
-        ::CORBA::Boolean _tao_collocated = false,
-        TAO_Abstract_ServantBase *servant = nullptr,
-        TAO_ORB_Core *orb_core = nullptr);
+      TAO_Stub *objref,
+      ::CORBA::Boolean _tao_collocated = false,
+      TAO_Abstract_ServantBase *servant = nullptr,
+      TAO_ORB_Core *orb_core = nullptr);
 
     ~FixedOperations () override = default;
 
   private:
-    // Private and unimplemented for concrete interfaces.
     FixedOperations (FixedOperations const &) = delete;
     FixedOperations (FixedOperations &&) = delete;
     FixedOperations &operator= (FixedOperations const &) = delete;
@@ -276,9 +273,7 @@ public:
 
   // The static operations.
   static AMH_FixedOperationsResponseHandler_ptr _duplicate (AMH_FixedOperationsResponseHandler_ptr obj);
-
   static void _tao_release (AMH_FixedOperationsResponseHandler_ptr obj);
-
   static AMH_FixedOperationsResponseHandler_ptr _narrow (::CORBA::Object_ptr obj);
   static AMH_FixedOperationsResponseHandler_ptr _unchecked_narrow (::CORBA::Object_ptr obj);
   static AMH_FixedOperationsResponseHandler_ptr _nil ();
@@ -307,7 +302,6 @@ protected:
   ~AMH_FixedOperationsResponseHandler () override = default;
 
 private:
-  // Private and unimplemented for concrete interfaces.
   AMH_FixedOperationsResponseHandler (AMH_FixedOperationsResponseHandler const &) = delete;
   AMH_FixedOperationsResponseHandler (AMH_FixedOperationsResponseHandler &&) = delete;
   AMH_FixedOperationsResponseHandler &operator= (AMH_FixedOperationsResponseHandler const &) = delete;
@@ -326,7 +320,6 @@ using AMI_FixedOperationsHandler_out = TAO_Objref_Out_T<AMI_FixedOperationsHandl
 
 class TAO_IDL_TEST_STUB_Export AMI_FixedOperationsHandler
   : public virtual ::Messaging::ReplyHandler
-
 {
 public:
   friend class TAO::Narrow_Utils<AMI_FixedOperationsHandler>;
@@ -338,9 +331,7 @@ public:
 
   // The static operations.
   static AMI_FixedOperationsHandler_ptr _duplicate (AMI_FixedOperationsHandler_ptr obj);
-
   static void _tao_release (AMI_FixedOperationsHandler_ptr obj);
-
   static AMI_FixedOperationsHandler_ptr _narrow (::CORBA::Object_ptr obj);
   static AMI_FixedOperationsHandler_ptr _unchecked_narrow (::CORBA::Object_ptr obj);
   static AMI_FixedOperationsHandler_ptr _nil ();
@@ -383,15 +374,14 @@ protected:
 
   // Non-local interface only.
   AMI_FixedOperationsHandler (
-      TAO_Stub *objref,
-      ::CORBA::Boolean _tao_collocated = false,
-      TAO_Abstract_ServantBase *servant = nullptr,
-      TAO_ORB_Core *orb_core = nullptr);
+    TAO_Stub *objref,
+    ::CORBA::Boolean _tao_collocated = false,
+    TAO_Abstract_ServantBase *servant = nullptr,
+    TAO_ORB_Core *orb_core = nullptr);
 
   ~AMI_FixedOperationsHandler () override = default;
 
 private:
-  // Private and unimplemented for concrete interfaces.
   AMI_FixedOperationsHandler (AMI_FixedOperationsHandler const &) = delete;
   AMI_FixedOperationsHandler (AMI_FixedOperationsHandler &&) = delete;
   AMI_FixedOperationsHandler &operator= (AMI_FixedOperationsHandler const &) = delete;
@@ -631,4 +621,3 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 #include /**/ "ace/post.h"
 
 #endif /* ifndef */
-

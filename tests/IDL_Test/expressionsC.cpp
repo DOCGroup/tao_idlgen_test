@@ -41,4 +41,3 @@
 #if !defined (__ACE_INLINE__)
 #include "expressionsC.inl"
 #endif /* !defined INLINE */
-

@@ -41,4 +41,3 @@
 #if !defined (__ACE_INLINE__)
 #include "Bug_3819_RegressionC.inl"
 #endif /* !defined INLINE */
-

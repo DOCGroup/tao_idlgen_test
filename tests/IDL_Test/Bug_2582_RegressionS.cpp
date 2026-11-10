@@ -63,8 +63,8 @@ public:
   TAO_operation_db_entry const * lookup (char const *str, std::size_t len) override;
 };
 
-/* C++ code produced by gperf version 2.8 (ACE version 8.0.8) */
-/* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F nullptr,nullptr -a -o -t -p -K opname -L C++17 -Z TAO_AMH_FieldDevice_T_Perfect_Hash_OpTable -N lookup */
+/* C++ code produced by ACE gperf version 8.0.8 */
+/* Command-line: ace_gperf -m -M -J -Q -R -c -C -D -E -T -f 0 -F nullptr,nullptr -o -t -p -K opname -Z TAO_AMH_FieldDevice_T_Perfect_Hash_OpTable -N lookup */
 
 std::size_t
 TAO_AMH_FieldDevice_T_Perfect_Hash_OpTable::hash (char const *str, std::size_t len)
@@ -206,11 +206,9 @@ POA_AMH_FieldDevice_T::getEncoding_skel (
 
 ::CORBA::Boolean POA_AMH_FieldDevice_T::_is_a (char const *value)
 {
-  return
-    (
-      std::strcmp (value, "IDL:FieldDevice_T:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0
-    );
+  return (
+    std::strcmp (value, "IDL:FieldDevice_T:1.0") == 0 ||
+    std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0);
 }
 
 char const *POA_AMH_FieldDevice_T::_interface_repository_id () const
@@ -248,8 +246,8 @@ public:
   TAO_operation_db_entry const * lookup (char const *str, std::size_t len) override;
 };
 
-/* C++ code produced by gperf version 2.8 (ACE version 8.0.8) */
-/* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F nullptr,nullptr -a -o -t -p -K opname -L C++17 -Z TAO_FieldDevice_T_Perfect_Hash_OpTable -N lookup */
+/* C++ code produced by ACE gperf version 8.0.8 */
+/* Command-line: ace_gperf -m -M -J -Q -R -c -C -D -E -T -f 0 -F nullptr,nullptr -o -t -p -K opname -Z TAO_FieldDevice_T_Perfect_Hash_OpTable -N lookup */
 
 std::size_t
 TAO_FieldDevice_T_Perfect_Hash_OpTable::hash (char const *str, std::size_t len)
@@ -315,53 +313,33 @@ TAO_FieldDevice_T_Perfect_Hash_OpTable::lookup (char const *str, std::size_t len
 
 static TAO_FieldDevice_T_Perfect_Hash_OpTable tao_FieldDevice_T_optable;
 
-///////////////////////////////////////////////////////////////////////
-//                 Direct Proxy  Implementation
-//
-
-_TAO_FieldDevice_T_Direct_Proxy_Impl::~_TAO_FieldDevice_T_Direct_Proxy_Impl ()
-{
-}
+_TAO_FieldDevice_T_Direct_Proxy_Impl::~_TAO_FieldDevice_T_Direct_Proxy_Impl () = default;
 
 void
-_TAO_FieldDevice_T_Direct_Proxy_Impl::getEncodingID (
-    TAO_Abstract_ServantBase  *servant,
-    TAO::Argument ** args)
-
+_TAO_FieldDevice_T_Direct_Proxy_Impl::getEncodingID (TAO_Abstract_ServantBase *servant, TAO::Argument **args)
 {
-  POA_FieldDevice_T_ptr _tao_ptr =
-    dynamic_cast<POA_FieldDevice_T_ptr> (servant);
+  POA_FieldDevice_T_ptr _tao_ptr = dynamic_cast<POA_FieldDevice_T_ptr> (servant);
   if (!_tao_ptr)
     {
       throw ::CORBA::INTERNAL ();
     }
-
-  ((TAO::Arg_Traits<::EncodingID_T>::ret_val *) args[0])->arg () =
-    _tao_ptr->getEncodingID (
-        );
+  using _tao_retval_type = TAO::Arg_Traits<::EncodingID_T>::ret_val;
+  _tao_retval_type * const _tao_retval = static_cast<_tao_retval_type *> (args[0]);
+  _tao_retval->arg () = _tao_ptr->getEncodingID ();
 }
 
 void
-_TAO_FieldDevice_T_Direct_Proxy_Impl::getEncoding (
-    TAO_Abstract_ServantBase  *servant,
-    TAO::Argument ** args)
-
+_TAO_FieldDevice_T_Direct_Proxy_Impl::getEncoding (TAO_Abstract_ServantBase *servant, TAO::Argument **args)
 {
-  POA_FieldDevice_T_ptr _tao_ptr =
-    dynamic_cast<POA_FieldDevice_T_ptr> (servant);
+  POA_FieldDevice_T_ptr _tao_ptr = dynamic_cast<POA_FieldDevice_T_ptr> (servant);
   if (!_tao_ptr)
     {
       throw ::CORBA::INTERNAL ();
     }
-
-  ((TAO::Arg_Traits<::Encoding_T>::ret_val *) args[0])->arg () =
-    _tao_ptr->getEncoding (
-        );
+  using _tao_retval_type = TAO::Arg_Traits<::Encoding_T>::ret_val;
+  _tao_retval_type * const _tao_retval = static_cast<_tao_retval_type *> (args[0]);
+  _tao_retval->arg () = _tao_ptr->getEncoding ();
 }
-
-//
-//           End Direct Proxy Implementation
-///////////////////////////////////////////////////////////////////////
 
 POA_FieldDevice_T::POA_FieldDevice_T ()
 {
@@ -380,13 +358,10 @@ public:
 
   void execute () override
   {
-    TAO::SArg_Traits<::EncodingID_T>::ret_arg_type retval =
-      TAO::Portable_Server::get_ret_arg<::EncodingID_T> (
-        this->operation_details_,
-        this->args_);
-
-    retval =
-      this->servant_->getEncodingID ();
+    TAO::SArg_Traits<::EncodingID_T>::ret_arg_type retval = TAO::Portable_Server::get_ret_arg<::EncodingID_T> (
+      this->operation_details_,
+      this->args_);
+    retval = this->servant_->getEncodingID ();
   }
 
 private:
@@ -443,13 +418,10 @@ public:
 
   void execute () override
   {
-    TAO::SArg_Traits<::Encoding_T>::ret_arg_type retval =
-      TAO::Portable_Server::get_ret_arg<::Encoding_T> (
-        this->operation_details_,
-        this->args_);
-
-    retval =
-      this->servant_->getEncoding ();
+    TAO::SArg_Traits<::Encoding_T>::ret_arg_type retval = TAO::Portable_Server::get_ret_arg<::Encoding_T> (
+      this->operation_details_,
+      this->args_);
+    retval = this->servant_->getEncoding ();
   }
 
 private:
@@ -496,11 +468,9 @@ void POA_FieldDevice_T::getEncoding_skel (
 
 ::CORBA::Boolean POA_FieldDevice_T::_is_a (char const *value)
 {
-  return
-    (
-      std::strcmp (value, "IDL:FieldDevice_T:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0
-    );
+  return (
+    std::strcmp (value, "IDL:FieldDevice_T:1.0") == 0 ||
+    std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0);
 }
 
 char const *POA_FieldDevice_T::_interface_repository_id () const
@@ -595,8 +565,8 @@ public:
   TAO_operation_db_entry const * lookup (char const *str, std::size_t len) override;
 };
 
-/* C++ code produced by gperf version 2.8 (ACE version 8.0.8) */
-/* Command-line: ace_gperf -m -M -J -Q -c -C -D -E -T -f 0 -F nullptr,nullptr -a -o -t -p -K opname -L C++17 -Z TAO_AMI_FieldDevice_THandler_Perfect_Hash_OpTable -N lookup */
+/* C++ code produced by ACE gperf version 8.0.8 */
+/* Command-line: ace_gperf -m -M -J -Q -R -c -C -D -E -T -f 0 -F nullptr,nullptr -o -t -p -K opname -Z TAO_AMI_FieldDevice_THandler_Perfect_Hash_OpTable -N lookup */
 
 std::size_t
 TAO_AMI_FieldDevice_THandler_Perfect_Hash_OpTable::hash (char const *str, std::size_t len)
@@ -664,89 +634,71 @@ TAO_AMI_FieldDevice_THandler_Perfect_Hash_OpTable::lookup (char const *str, std:
 
 static TAO_AMI_FieldDevice_THandler_Perfect_Hash_OpTable tao_AMI_FieldDevice_THandler_optable;
 
-///////////////////////////////////////////////////////////////////////
-//                 Direct Proxy  Implementation
-//
-
-_TAO_AMI_FieldDevice_THandler_Direct_Proxy_Impl::~_TAO_AMI_FieldDevice_THandler_Direct_Proxy_Impl ()
-{
-}
+_TAO_AMI_FieldDevice_THandler_Direct_Proxy_Impl::~_TAO_AMI_FieldDevice_THandler_Direct_Proxy_Impl () = default;
 
 void
-_TAO_AMI_FieldDevice_THandler_Direct_Proxy_Impl::getEncodingID (
-    TAO_Abstract_ServantBase  *servant,
-    TAO::Argument ** args)
-
+_TAO_AMI_FieldDevice_THandler_Direct_Proxy_Impl::getEncodingID (TAO_Abstract_ServantBase *servant, TAO::Argument **args)
 {
-  POA_AMI_FieldDevice_THandler_ptr _tao_ptr =
-    dynamic_cast<POA_AMI_FieldDevice_THandler_ptr> (servant);
+  POA_AMI_FieldDevice_THandler_ptr _tao_ptr = dynamic_cast<POA_AMI_FieldDevice_THandler_ptr> (servant);
   if (!_tao_ptr)
     {
       throw ::CORBA::INTERNAL ();
     }
+  using _tao_arg_1_type = TAO::Arg_Traits<::EncodingID_T>::in_arg_val;
+  _tao_arg_1_type * const _tao_arg_1 = static_cast<_tao_arg_1_type *> (args[1]);
 
   _tao_ptr->getEncodingID (
-        ((TAO::Arg_Traits<::EncodingID_T>::in_arg_val *) args[1])->arg ()
-      );
+    _tao_arg_1->arg ());
 }
 
 void
 _TAO_AMI_FieldDevice_THandler_Direct_Proxy_Impl::getEncodingID_excep (
-    TAO_Abstract_ServantBase  *servant,
-    TAO::Argument ** args)
-
+  TAO_Abstract_ServantBase *servant,
+  TAO::Argument **args)
 {
-  POA_AMI_FieldDevice_THandler_ptr _tao_ptr =
-    dynamic_cast<POA_AMI_FieldDevice_THandler_ptr> (servant);
+  POA_AMI_FieldDevice_THandler_ptr _tao_ptr = dynamic_cast<POA_AMI_FieldDevice_THandler_ptr> (servant);
   if (!_tao_ptr)
     {
       throw ::CORBA::INTERNAL ();
     }
+  using _tao_arg_1_type = TAO::Arg_Traits<::Messaging::ExceptionHolder>::in_arg_val;
+  _tao_arg_1_type * const _tao_arg_1 = static_cast<_tao_arg_1_type *> (args[1]);
 
   _tao_ptr->getEncodingID_excep (
-        ((TAO::Arg_Traits<::Messaging::ExceptionHolder>::in_arg_val *) args[1])->arg ()
-      );
+    _tao_arg_1->arg ());
 }
 
 void
-_TAO_AMI_FieldDevice_THandler_Direct_Proxy_Impl::getEncoding (
-    TAO_Abstract_ServantBase  *servant,
-    TAO::Argument ** args)
-
+_TAO_AMI_FieldDevice_THandler_Direct_Proxy_Impl::getEncoding (TAO_Abstract_ServantBase *servant, TAO::Argument **args)
 {
-  POA_AMI_FieldDevice_THandler_ptr _tao_ptr =
-    dynamic_cast<POA_AMI_FieldDevice_THandler_ptr> (servant);
+  POA_AMI_FieldDevice_THandler_ptr _tao_ptr = dynamic_cast<POA_AMI_FieldDevice_THandler_ptr> (servant);
   if (!_tao_ptr)
     {
       throw ::CORBA::INTERNAL ();
     }
+  using _tao_arg_1_type = TAO::Arg_Traits<::Encoding_T>::in_arg_val;
+  _tao_arg_1_type * const _tao_arg_1 = static_cast<_tao_arg_1_type *> (args[1]);
 
   _tao_ptr->getEncoding (
-        ((TAO::Arg_Traits<::Encoding_T>::in_arg_val *) args[1])->arg ()
-      );
+    _tao_arg_1->arg ());
 }
 
 void
 _TAO_AMI_FieldDevice_THandler_Direct_Proxy_Impl::getEncoding_excep (
-    TAO_Abstract_ServantBase  *servant,
-    TAO::Argument ** args)
-
+  TAO_Abstract_ServantBase *servant,
+  TAO::Argument **args)
 {
-  POA_AMI_FieldDevice_THandler_ptr _tao_ptr =
-    dynamic_cast<POA_AMI_FieldDevice_THandler_ptr> (servant);
+  POA_AMI_FieldDevice_THandler_ptr _tao_ptr = dynamic_cast<POA_AMI_FieldDevice_THandler_ptr> (servant);
   if (!_tao_ptr)
     {
       throw ::CORBA::INTERNAL ();
     }
+  using _tao_arg_1_type = TAO::Arg_Traits<::Messaging::ExceptionHolder>::in_arg_val;
+  _tao_arg_1_type * const _tao_arg_1 = static_cast<_tao_arg_1_type *> (args[1]);
 
   _tao_ptr->getEncoding_excep (
-        ((TAO::Arg_Traits<::Messaging::ExceptionHolder>::in_arg_val *) args[1])->arg ()
-      );
+    _tao_arg_1->arg ());
 }
-
-//
-//           End Direct Proxy Implementation
-///////////////////////////////////////////////////////////////////////
 
 POA_AMI_FieldDevice_THandler::POA_AMI_FieldDevice_THandler ()
 {
@@ -1019,12 +971,10 @@ void POA_AMI_FieldDevice_THandler::getEncoding_excep_skel (
 
 ::CORBA::Boolean POA_AMI_FieldDevice_THandler::_is_a (char const *value)
 {
-  return
-    (
-      std::strcmp (value, "IDL:omg.org/Messaging/ReplyHandler:1.0") == 0 ||
-      std::strcmp (value, "IDL:AMI_FieldDevice_THandler:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0
-    );
+  return (
+    std::strcmp (value, "IDL:omg.org/Messaging/ReplyHandler:1.0") == 0 ||
+    std::strcmp (value, "IDL:AMI_FieldDevice_THandler:1.0") == 0 ||
+    std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0);
 }
 
 char const *POA_AMI_FieldDevice_THandler::_interface_repository_id () const
@@ -1054,4 +1004,3 @@ POA_AMI_FieldDevice_THandler::_this ()
 }
 
 #endif /* ifndef */
-

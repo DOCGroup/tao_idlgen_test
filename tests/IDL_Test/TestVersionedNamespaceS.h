@@ -92,4 +92,3 @@ END_USER_VERSIONED_NAMESPACE
 #include /**/ "ace/post.h"
 
 #endif /* ifndef */
-

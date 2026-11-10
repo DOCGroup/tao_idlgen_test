@@ -117,4 +117,3 @@ TAO::Array_Traits<teststruct::embeddedstruct::_a_forany>::alloc ()
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-

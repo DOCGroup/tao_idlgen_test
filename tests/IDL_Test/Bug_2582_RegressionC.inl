@@ -24,18 +24,13 @@
 
 ACE_INLINE
 FieldDevice_T::FieldDevice_T (
-    TAO_Stub *objref,
-    ::CORBA::Boolean _tao_collocated,
-    TAO_Abstract_ServantBase *servant,
-    TAO_ORB_Core *oc)
+  TAO_Stub *objref, ::CORBA::Boolean _tao_collocated, TAO_Abstract_ServantBase *servant, TAO_ORB_Core *oc)
   : ::CORBA::Object (objref, _tao_collocated, servant, oc)
 {
 }
 
 ACE_INLINE
-FieldDevice_T::FieldDevice_T (
-    ::IOP::IOR *ior,
-    TAO_ORB_Core *oc)
+FieldDevice_T::FieldDevice_T (::IOP::IOR *ior, TAO_ORB_Core *oc)
   : ::CORBA::Object (ior, oc)
 {
 }
@@ -52,19 +47,13 @@ AMH_FieldDevice_TExceptionHolder::_tao_obv_static_repository_id ()
 
 ACE_INLINE
 AMI_FieldDevice_THandler::AMI_FieldDevice_THandler (
-    TAO_Stub *objref,
-    ::CORBA::Boolean _tao_collocated,
-    TAO_Abstract_ServantBase *servant,
-    TAO_ORB_Core *oc)
+  TAO_Stub *objref, ::CORBA::Boolean _tao_collocated, TAO_Abstract_ServantBase *servant, TAO_ORB_Core *oc)
   : ::CORBA::Object (objref, _tao_collocated, servant, oc)
 {
 }
 
 ACE_INLINE
-AMI_FieldDevice_THandler::AMI_FieldDevice_THandler (
-    ::IOP::IOR *ior,
-    TAO_ORB_Core *oc)
+AMI_FieldDevice_THandler::AMI_FieldDevice_THandler (::IOP::IOR *ior, TAO_ORB_Core *oc)
   : ::CORBA::Object (ior, oc)
 {
 }
-

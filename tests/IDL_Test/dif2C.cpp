@@ -59,7 +59,7 @@ TAO::Objref_Traits<OldDif2::ex1>::nil ()
 }
 
 ::CORBA::Boolean
-TAO::Objref_Traits<OldDif2::ex1>::marshal (OldDif2::ex1_ptr const p,TAO_OutputCDR & cdr)
+TAO::Objref_Traits<OldDif2::ex1>::marshal (OldDif2::ex1_ptr const p, TAO_OutputCDR &cdr)
 {
   return ::CORBA::Object::marshal (p, cdr);
 }
@@ -78,7 +78,7 @@ OldDif2::ex1::op0 ()
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
-      std::addressof(_tao_retval)
+      std::addressof (_tao_retval)
     };
 
   TAO::Invocation_Adapter _invocation_call (
@@ -88,8 +88,7 @@ OldDif2::ex1::op0 ()
       "op0",
       3,
       TAO::TAO_CO_NONE | TAO::TAO_CO_DIRECT_STRATEGY | TAO::TAO_CO_THRU_POA_STRATEGY,
-      TAO::TAO_TWOWAY_INVOCATION
-      ,
+      TAO::TAO_TWOWAY_INVOCATION,
       TAO::TAO_SYNCHRONOUS_INVOCATION,
       false
     );
@@ -114,10 +113,10 @@ OldDif2::ex1::op1 (
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
-      std::addressof(_tao_retval),
-      std::addressof(_tao_f),
-      std::addressof(_tao_d),
-      std::addressof(_tao_l)
+      std::addressof (_tao_retval),
+      std::addressof (_tao_f),
+      std::addressof (_tao_d),
+      std::addressof (_tao_l)
     };
 
   TAO::Invocation_Adapter _invocation_call (
@@ -127,7 +126,6 @@ OldDif2::ex1::op1 (
       "op1",
       3,
       TAO::TAO_CO_NONE | TAO::TAO_CO_DIRECT_STRATEGY | TAO::TAO_CO_THRU_POA_STRATEGY
-
     );
 
   _invocation_call.invoke (nullptr, 0);
@@ -152,10 +150,10 @@ OldDif2::ex1::op2 (
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
-      std::addressof(_tao_retval),
-      std::addressof(_tao_d),
-      std::addressof(_tao_l),
-      std::addressof(_tao_s)
+      std::addressof (_tao_retval),
+      std::addressof (_tao_d),
+      std::addressof (_tao_l),
+      std::addressof (_tao_s)
     };
 
   TAO::Invocation_Adapter _invocation_call (
@@ -165,7 +163,6 @@ OldDif2::ex1::op2 (
       "op2",
       3,
       TAO::TAO_CO_NONE | TAO::TAO_CO_DIRECT_STRATEGY | TAO::TAO_CO_THRU_POA_STRATEGY
-
     );
 
   _invocation_call.invoke (nullptr, 0);
@@ -190,10 +187,10 @@ OldDif2::ex1::op3 (
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
-      std::addressof(_tao_retval),
-      std::addressof(_tao_l),
-      std::addressof(_tao_s),
-      std::addressof(_tao_ul)
+      std::addressof (_tao_retval),
+      std::addressof (_tao_l),
+      std::addressof (_tao_s),
+      std::addressof (_tao_ul)
     };
 
   TAO::Invocation_Adapter _invocation_call (
@@ -203,7 +200,6 @@ OldDif2::ex1::op3 (
       "op3",
       3,
       TAO::TAO_CO_NONE | TAO::TAO_CO_DIRECT_STRATEGY | TAO::TAO_CO_THRU_POA_STRATEGY
-
     );
 
   _invocation_call.invoke (nullptr, 0);
@@ -228,10 +224,10 @@ OldDif2::ex1::op4 (
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
-      std::addressof(_tao_retval),
-      std::addressof(_tao_s),
-      std::addressof(_tao_ul),
-      std::addressof(_tao_us)
+      std::addressof (_tao_retval),
+      std::addressof (_tao_s),
+      std::addressof (_tao_ul),
+      std::addressof (_tao_us)
     };
 
   TAO::Invocation_Adapter _invocation_call (
@@ -241,7 +237,6 @@ OldDif2::ex1::op4 (
       "op4",
       3,
       TAO::TAO_CO_NONE | TAO::TAO_CO_DIRECT_STRATEGY | TAO::TAO_CO_THRU_POA_STRATEGY
-
     );
 
   _invocation_call.invoke (nullptr, 0);
@@ -268,11 +263,11 @@ OldDif2::ex1::op5 (
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
-      std::addressof(_tao_retval),
-      std::addressof(_tao_ul),
-      std::addressof(_tao_us),
-      std::addressof(_tao_c),
-      std::addressof(_tao_b)
+      std::addressof (_tao_retval),
+      std::addressof (_tao_ul),
+      std::addressof (_tao_us),
+      std::addressof (_tao_c),
+      std::addressof (_tao_b)
     };
 
   TAO::Invocation_Adapter _invocation_call (
@@ -282,7 +277,6 @@ OldDif2::ex1::op5 (
       "op5",
       3,
       TAO::TAO_CO_NONE | TAO::TAO_CO_DIRECT_STRATEGY | TAO::TAO_CO_THRU_POA_STRATEGY
-
     );
 
   _invocation_call.invoke (nullptr, 0);
@@ -305,9 +299,9 @@ OldDif2::ex1::op6 (
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
-      std::addressof(_tao_retval),
-      std::addressof(_tao_us),
-      std::addressof(_tao_c)
+      std::addressof (_tao_retval),
+      std::addressof (_tao_us),
+      std::addressof (_tao_c)
     };
 
   TAO::Invocation_Adapter _invocation_call (
@@ -317,7 +311,6 @@ OldDif2::ex1::op6 (
       "op6",
       3,
       TAO::TAO_CO_NONE | TAO::TAO_CO_DIRECT_STRATEGY | TAO::TAO_CO_THRU_POA_STRATEGY
-
     );
 
   _invocation_call.invoke (nullptr, 0);
@@ -368,9 +361,9 @@ OldDif2::ex1::sendc_op1 (
 
   TAO::Argument *_the_tao_operation_signature[] =
     {
-      std::addressof(_tao_retval),
-      std::addressof(_tao_f),
-      std::addressof(_tao_l)
+      std::addressof (_tao_retval),
+      std::addressof (_tao_f),
+      std::addressof (_tao_l)
     };
 
   TAO::Asynch_Invocation_Adapter _invocation_call (
@@ -405,9 +398,9 @@ OldDif2::ex1::sendc_op2 (
 
   TAO::Argument *_the_tao_operation_signature[] =
     {
-      std::addressof(_tao_retval),
-      std::addressof(_tao_d),
-      std::addressof(_tao_s)
+      std::addressof (_tao_retval),
+      std::addressof (_tao_d),
+      std::addressof (_tao_s)
     };
 
   TAO::Asynch_Invocation_Adapter _invocation_call (
@@ -442,9 +435,9 @@ OldDif2::ex1::sendc_op3 (
 
   TAO::Argument *_the_tao_operation_signature[] =
     {
-      std::addressof(_tao_retval),
-      std::addressof(_tao_l),
-      std::addressof(_tao_ul)
+      std::addressof (_tao_retval),
+      std::addressof (_tao_l),
+      std::addressof (_tao_ul)
     };
 
   TAO::Asynch_Invocation_Adapter _invocation_call (
@@ -479,9 +472,9 @@ OldDif2::ex1::sendc_op4 (
 
   TAO::Argument *_the_tao_operation_signature[] =
     {
-      std::addressof(_tao_retval),
-      std::addressof(_tao_s),
-      std::addressof(_tao_us)
+      std::addressof (_tao_retval),
+      std::addressof (_tao_s),
+      std::addressof (_tao_us)
     };
 
   TAO::Asynch_Invocation_Adapter _invocation_call (
@@ -518,10 +511,10 @@ OldDif2::ex1::sendc_op5 (
 
   TAO::Argument *_the_tao_operation_signature[] =
     {
-      std::addressof(_tao_retval),
-      std::addressof(_tao_ul),
-      std::addressof(_tao_us),
-      std::addressof(_tao_b)
+      std::addressof (_tao_retval),
+      std::addressof (_tao_ul),
+      std::addressof (_tao_us),
+      std::addressof (_tao_b)
     };
 
   TAO::Asynch_Invocation_Adapter _invocation_call (
@@ -554,8 +547,8 @@ OldDif2::ex1::sendc_op6 (
 
   TAO::Argument *_the_tao_operation_signature[] =
     {
-      std::addressof(_tao_retval),
-      std::addressof(_tao_c)
+      std::addressof (_tao_retval),
+      std::addressof (_tao_c)
     };
 
   TAO::Asynch_Invocation_Adapter _invocation_call (
@@ -621,7 +614,7 @@ OldDif2::ex1::_tao_release (ex1_ptr obj)
 OldDif2::ex1::_is_a (char const *value)
 {
   if (std::strcmp (value, "IDL:OldDif2/ex1:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0)
+    std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0)
     {
       return true; // success using local knowledge
     }
@@ -904,7 +897,7 @@ TAO::Objref_Traits<OldDif2::AMH_ex1ResponseHandler>::nil ()
 }
 
 ::CORBA::Boolean
-TAO::Objref_Traits<OldDif2::AMH_ex1ResponseHandler>::marshal (OldDif2::AMH_ex1ResponseHandler_ptr const p,TAO_OutputCDR & cdr)
+TAO::Objref_Traits<OldDif2::AMH_ex1ResponseHandler>::marshal (OldDif2::AMH_ex1ResponseHandler_ptr const p, TAO_OutputCDR &cdr)
 {
   return ::CORBA::Object::marshal (p, cdr);
 }
@@ -925,14 +918,14 @@ OldDif2::AMH_ex1ResponseHandler_ptr
 OldDif2::AMH_ex1ResponseHandler::_narrow (::CORBA::Object_ptr _tao_objref)
 {
   return AMH_ex1ResponseHandler::_duplicate (
-      dynamic_cast<AMH_ex1ResponseHandler_ptr> (_tao_objref));
+    dynamic_cast<AMH_ex1ResponseHandler_ptr> (_tao_objref));
 }
 
 OldDif2::AMH_ex1ResponseHandler_ptr
 OldDif2::AMH_ex1ResponseHandler::_unchecked_narrow (::CORBA::Object_ptr _tao_objref)
 {
   return AMH_ex1ResponseHandler::_duplicate (
-      dynamic_cast<AMH_ex1ResponseHandler_ptr> (_tao_objref));
+    dynamic_cast<AMH_ex1ResponseHandler_ptr> (_tao_objref));
 }
 
 OldDif2::AMH_ex1ResponseHandler_ptr
@@ -961,8 +954,8 @@ OldDif2::AMH_ex1ResponseHandler::_tao_release (AMH_ex1ResponseHandler_ptr obj)
 OldDif2::AMH_ex1ResponseHandler::_is_a (char const *value)
 {
   if (std::strcmp (value, "IDL:OldDif2/AMH_ex1ResponseHandler:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/LocalObject:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0)
+    std::strcmp (value, "IDL:omg.org/CORBA/LocalObject:1.0") == 0 ||
+    std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0)
     {
       return true; // success using local knowledge
     }
@@ -1016,7 +1009,7 @@ TAO::Objref_Traits<OldDif2::AMI_ex1Handler>::nil ()
 }
 
 ::CORBA::Boolean
-TAO::Objref_Traits<OldDif2::AMI_ex1Handler>::marshal (OldDif2::AMI_ex1Handler_ptr const p,TAO_OutputCDR & cdr)
+TAO::Objref_Traits<OldDif2::AMI_ex1Handler>::marshal (OldDif2::AMI_ex1Handler_ptr const p, TAO_OutputCDR &cdr)
 {
   return ::CORBA::Object::marshal (p, cdr);
 }
@@ -1035,7 +1028,7 @@ OldDif2::AMI_ex1Handler::op0 ()
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
-      std::addressof(_tao_retval)
+      std::addressof (_tao_retval)
     };
 
   TAO::Invocation_Adapter _invocation_call (
@@ -1045,8 +1038,7 @@ OldDif2::AMI_ex1Handler::op0 ()
       "op0",
       3,
       TAO::TAO_CO_NONE | TAO::TAO_CO_DIRECT_STRATEGY | TAO::TAO_CO_THRU_POA_STRATEGY,
-      TAO::TAO_TWOWAY_INVOCATION
-      ,
+      TAO::TAO_TWOWAY_INVOCATION,
       TAO::TAO_SYNCHRONOUS_INVOCATION,
       false
     );
@@ -1122,8 +1114,8 @@ OldDif2::AMI_ex1Handler::op0_excep (
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
-      std::addressof(_tao_retval),
-      std::addressof(_tao_excep_holder)
+      std::addressof (_tao_retval),
+      std::addressof (_tao_excep_holder)
     };
 
   TAO::Invocation_Adapter _invocation_call (
@@ -1133,7 +1125,6 @@ OldDif2::AMI_ex1Handler::op0_excep (
       "op0_excep",
       9,
       TAO::TAO_CO_NONE | TAO::TAO_CO_DIRECT_STRATEGY | TAO::TAO_CO_THRU_POA_STRATEGY
-
     );
 
   _invocation_call.invoke (nullptr, 0);
@@ -1156,10 +1147,10 @@ OldDif2::AMI_ex1Handler::op1 (
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
-      std::addressof(_tao_retval),
-      std::addressof(_tao_ami_return_val),
-      std::addressof(_tao_d),
-      std::addressof(_tao_l)
+      std::addressof (_tao_retval),
+      std::addressof (_tao_ami_return_val),
+      std::addressof (_tao_d),
+      std::addressof (_tao_l)
     };
 
   TAO::Invocation_Adapter _invocation_call (
@@ -1169,7 +1160,6 @@ OldDif2::AMI_ex1Handler::op1 (
       "op1",
       3,
       TAO::TAO_CO_NONE | TAO::TAO_CO_DIRECT_STRATEGY | TAO::TAO_CO_THRU_POA_STRATEGY
-
     );
 
   _invocation_call.invoke (nullptr, 0);
@@ -1259,8 +1249,8 @@ OldDif2::AMI_ex1Handler::op1_excep (
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
-      std::addressof(_tao_retval),
-      std::addressof(_tao_excep_holder)
+      std::addressof (_tao_retval),
+      std::addressof (_tao_excep_holder)
     };
 
   TAO::Invocation_Adapter _invocation_call (
@@ -1270,7 +1260,6 @@ OldDif2::AMI_ex1Handler::op1_excep (
       "op1_excep",
       9,
       TAO::TAO_CO_NONE | TAO::TAO_CO_DIRECT_STRATEGY | TAO::TAO_CO_THRU_POA_STRATEGY
-
     );
 
   _invocation_call.invoke (nullptr, 0);
@@ -1293,10 +1282,10 @@ OldDif2::AMI_ex1Handler::op2 (
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
-      std::addressof(_tao_retval),
-      std::addressof(_tao_ami_return_val),
-      std::addressof(_tao_l),
-      std::addressof(_tao_s)
+      std::addressof (_tao_retval),
+      std::addressof (_tao_ami_return_val),
+      std::addressof (_tao_l),
+      std::addressof (_tao_s)
     };
 
   TAO::Invocation_Adapter _invocation_call (
@@ -1306,7 +1295,6 @@ OldDif2::AMI_ex1Handler::op2 (
       "op2",
       3,
       TAO::TAO_CO_NONE | TAO::TAO_CO_DIRECT_STRATEGY | TAO::TAO_CO_THRU_POA_STRATEGY
-
     );
 
   _invocation_call.invoke (nullptr, 0);
@@ -1396,8 +1384,8 @@ OldDif2::AMI_ex1Handler::op2_excep (
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
-      std::addressof(_tao_retval),
-      std::addressof(_tao_excep_holder)
+      std::addressof (_tao_retval),
+      std::addressof (_tao_excep_holder)
     };
 
   TAO::Invocation_Adapter _invocation_call (
@@ -1407,7 +1395,6 @@ OldDif2::AMI_ex1Handler::op2_excep (
       "op2_excep",
       9,
       TAO::TAO_CO_NONE | TAO::TAO_CO_DIRECT_STRATEGY | TAO::TAO_CO_THRU_POA_STRATEGY
-
     );
 
   _invocation_call.invoke (nullptr, 0);
@@ -1430,10 +1417,10 @@ OldDif2::AMI_ex1Handler::op3 (
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
-      std::addressof(_tao_retval),
-      std::addressof(_tao_ami_return_val),
-      std::addressof(_tao_s),
-      std::addressof(_tao_ul)
+      std::addressof (_tao_retval),
+      std::addressof (_tao_ami_return_val),
+      std::addressof (_tao_s),
+      std::addressof (_tao_ul)
     };
 
   TAO::Invocation_Adapter _invocation_call (
@@ -1443,7 +1430,6 @@ OldDif2::AMI_ex1Handler::op3 (
       "op3",
       3,
       TAO::TAO_CO_NONE | TAO::TAO_CO_DIRECT_STRATEGY | TAO::TAO_CO_THRU_POA_STRATEGY
-
     );
 
   _invocation_call.invoke (nullptr, 0);
@@ -1533,8 +1519,8 @@ OldDif2::AMI_ex1Handler::op3_excep (
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
-      std::addressof(_tao_retval),
-      std::addressof(_tao_excep_holder)
+      std::addressof (_tao_retval),
+      std::addressof (_tao_excep_holder)
     };
 
   TAO::Invocation_Adapter _invocation_call (
@@ -1544,7 +1530,6 @@ OldDif2::AMI_ex1Handler::op3_excep (
       "op3_excep",
       9,
       TAO::TAO_CO_NONE | TAO::TAO_CO_DIRECT_STRATEGY | TAO::TAO_CO_THRU_POA_STRATEGY
-
     );
 
   _invocation_call.invoke (nullptr, 0);
@@ -1567,10 +1552,10 @@ OldDif2::AMI_ex1Handler::op4 (
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
-      std::addressof(_tao_retval),
-      std::addressof(_tao_ami_return_val),
-      std::addressof(_tao_ul),
-      std::addressof(_tao_us)
+      std::addressof (_tao_retval),
+      std::addressof (_tao_ami_return_val),
+      std::addressof (_tao_ul),
+      std::addressof (_tao_us)
     };
 
   TAO::Invocation_Adapter _invocation_call (
@@ -1580,7 +1565,6 @@ OldDif2::AMI_ex1Handler::op4 (
       "op4",
       3,
       TAO::TAO_CO_NONE | TAO::TAO_CO_DIRECT_STRATEGY | TAO::TAO_CO_THRU_POA_STRATEGY
-
     );
 
   _invocation_call.invoke (nullptr, 0);
@@ -1670,8 +1654,8 @@ OldDif2::AMI_ex1Handler::op4_excep (
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
-      std::addressof(_tao_retval),
-      std::addressof(_tao_excep_holder)
+      std::addressof (_tao_retval),
+      std::addressof (_tao_excep_holder)
     };
 
   TAO::Invocation_Adapter _invocation_call (
@@ -1681,7 +1665,6 @@ OldDif2::AMI_ex1Handler::op4_excep (
       "op4_excep",
       9,
       TAO::TAO_CO_NONE | TAO::TAO_CO_DIRECT_STRATEGY | TAO::TAO_CO_THRU_POA_STRATEGY
-
     );
 
   _invocation_call.invoke (nullptr, 0);
@@ -1704,10 +1687,10 @@ OldDif2::AMI_ex1Handler::op5 (
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
-      std::addressof(_tao_retval),
-      std::addressof(_tao_ami_return_val),
-      std::addressof(_tao_ul),
-      std::addressof(_tao_c)
+      std::addressof (_tao_retval),
+      std::addressof (_tao_ami_return_val),
+      std::addressof (_tao_ul),
+      std::addressof (_tao_c)
     };
 
   TAO::Invocation_Adapter _invocation_call (
@@ -1717,7 +1700,6 @@ OldDif2::AMI_ex1Handler::op5 (
       "op5",
       3,
       TAO::TAO_CO_NONE | TAO::TAO_CO_DIRECT_STRATEGY | TAO::TAO_CO_THRU_POA_STRATEGY
-
     );
 
   _invocation_call.invoke (nullptr, 0);
@@ -1807,8 +1789,8 @@ OldDif2::AMI_ex1Handler::op5_excep (
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
-      std::addressof(_tao_retval),
-      std::addressof(_tao_excep_holder)
+      std::addressof (_tao_retval),
+      std::addressof (_tao_excep_holder)
     };
 
   TAO::Invocation_Adapter _invocation_call (
@@ -1818,7 +1800,6 @@ OldDif2::AMI_ex1Handler::op5_excep (
       "op5_excep",
       9,
       TAO::TAO_CO_NONE | TAO::TAO_CO_DIRECT_STRATEGY | TAO::TAO_CO_THRU_POA_STRATEGY
-
     );
 
   _invocation_call.invoke (nullptr, 0);
@@ -1841,10 +1822,10 @@ OldDif2::AMI_ex1Handler::op6 (
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
-      std::addressof(_tao_retval),
-      std::addressof(_tao_ami_return_val),
-      std::addressof(_tao_us),
-      std::addressof(_tao_c)
+      std::addressof (_tao_retval),
+      std::addressof (_tao_ami_return_val),
+      std::addressof (_tao_us),
+      std::addressof (_tao_c)
     };
 
   TAO::Invocation_Adapter _invocation_call (
@@ -1854,7 +1835,6 @@ OldDif2::AMI_ex1Handler::op6 (
       "op6",
       3,
       TAO::TAO_CO_NONE | TAO::TAO_CO_DIRECT_STRATEGY | TAO::TAO_CO_THRU_POA_STRATEGY
-
     );
 
   _invocation_call.invoke (nullptr, 0);
@@ -1944,8 +1924,8 @@ OldDif2::AMI_ex1Handler::op6_excep (
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
-      std::addressof(_tao_retval),
-      std::addressof(_tao_excep_holder)
+      std::addressof (_tao_retval),
+      std::addressof (_tao_excep_holder)
     };
 
   TAO::Invocation_Adapter _invocation_call (
@@ -1955,7 +1935,6 @@ OldDif2::AMI_ex1Handler::op6_excep (
       "op6_excep",
       9,
       TAO::TAO_CO_NONE | TAO::TAO_CO_DIRECT_STRATEGY | TAO::TAO_CO_THRU_POA_STRATEGY
-
     );
 
   _invocation_call.invoke (nullptr, 0);
@@ -2009,8 +1988,8 @@ OldDif2::AMI_ex1Handler::_tao_release (AMI_ex1Handler_ptr obj)
 OldDif2::AMI_ex1Handler::_is_a (char const *value)
 {
   if (std::strcmp (value, "IDL:omg.org/Messaging/ReplyHandler:1.0") == 0 ||
-      std::strcmp (value, "IDL:OldDif2/AMI_ex1Handler:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0)
+    std::strcmp (value, "IDL:OldDif2/AMI_ex1Handler:1.0") == 0 ||
+    std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0)
     {
       return true; // success using local knowledge
     }
@@ -2064,7 +2043,7 @@ TAO::Objref_Traits<OldDif2::ex2>::nil ()
 }
 
 ::CORBA::Boolean
-TAO::Objref_Traits<OldDif2::ex2>::marshal (OldDif2::ex2_ptr const p,TAO_OutputCDR & cdr)
+TAO::Objref_Traits<OldDif2::ex2>::marshal (OldDif2::ex2_ptr const p, TAO_OutputCDR &cdr)
 {
   return ::CORBA::Object::marshal (p, cdr);
 }
@@ -2089,10 +2068,10 @@ OldDif2::ex2::op7 (
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
-      std::addressof(_tao_retval),
-      std::addressof(_tao_c),
-      std::addressof(_tao_b),
-      std::addressof(_tao_o)
+      std::addressof (_tao_retval),
+      std::addressof (_tao_c),
+      std::addressof (_tao_b),
+      std::addressof (_tao_o)
     };
 
   TAO::Invocation_Adapter _invocation_call (
@@ -2102,7 +2081,6 @@ OldDif2::ex2::op7 (
       "op7",
       3,
       TAO::TAO_CO_NONE | TAO::TAO_CO_DIRECT_STRATEGY | TAO::TAO_CO_THRU_POA_STRATEGY
-
     );
 
   _invocation_call.invoke (nullptr, 0);
@@ -2125,9 +2103,9 @@ OldDif2::ex2::op8 (
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
-      std::addressof(_tao_retval),
-      std::addressof(_tao_b),
-      std::addressof(_tao_o)
+      std::addressof (_tao_retval),
+      std::addressof (_tao_b),
+      std::addressof (_tao_o)
     };
 
   TAO::Invocation_Adapter _invocation_call (
@@ -2137,7 +2115,6 @@ OldDif2::ex2::op8 (
       "op8",
       3,
       TAO::TAO_CO_NONE | TAO::TAO_CO_DIRECT_STRATEGY | TAO::TAO_CO_THRU_POA_STRATEGY
-
     );
 
   _invocation_call.invoke (nullptr, 0);
@@ -2164,11 +2141,11 @@ OldDif2::ex2::op9 (
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
-      std::addressof(_tao_retval),
-      std::addressof(_tao_o),
-      std::addressof(_tao_s),
-      std::addressof(_tao_ls),
-      std::addressof(_tao_l)
+      std::addressof (_tao_retval),
+      std::addressof (_tao_o),
+      std::addressof (_tao_s),
+      std::addressof (_tao_ls),
+      std::addressof (_tao_l)
     };
 
   TAO::Invocation_Adapter _invocation_call (
@@ -2178,7 +2155,6 @@ OldDif2::ex2::op9 (
       "op9",
       3,
       TAO::TAO_CO_NONE | TAO::TAO_CO_DIRECT_STRATEGY | TAO::TAO_CO_THRU_POA_STRATEGY
-
     );
 
   _invocation_call.invoke (nullptr, 0);
@@ -2201,9 +2177,9 @@ OldDif2::ex2::op10 (
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
-      std::addressof(_tao_retval),
-      std::addressof(_tao_s),
-      std::addressof(_tao_ls)
+      std::addressof (_tao_retval),
+      std::addressof (_tao_s),
+      std::addressof (_tao_ls)
     };
 
   TAO::Invocation_Adapter _invocation_call (
@@ -2213,7 +2189,6 @@ OldDif2::ex2::op10 (
       "op10",
       4,
       TAO::TAO_CO_NONE | TAO::TAO_CO_DIRECT_STRATEGY | TAO::TAO_CO_THRU_POA_STRATEGY
-
     );
 
   _invocation_call.invoke (nullptr, 0);
@@ -2236,9 +2211,9 @@ OldDif2::ex2::op11 (
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
-      std::addressof(_tao_retval),
-      std::addressof(_tao_ls),
-      std::addressof(_tao_l)
+      std::addressof (_tao_retval),
+      std::addressof (_tao_ls),
+      std::addressof (_tao_l)
     };
 
   TAO::Invocation_Adapter _invocation_call (
@@ -2248,7 +2223,6 @@ OldDif2::ex2::op11 (
       "op11",
       4,
       TAO::TAO_CO_NONE | TAO::TAO_CO_DIRECT_STRATEGY | TAO::TAO_CO_THRU_POA_STRATEGY
-
     );
 
   _invocation_call.invoke (nullptr, 0);
@@ -2269,8 +2243,8 @@ OldDif2::ex2::op12 (
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
-      std::addressof(_tao_retval),
-      std::addressof(_tao_l)
+      std::addressof (_tao_retval),
+      std::addressof (_tao_l)
     };
 
   TAO::Invocation_Adapter _invocation_call (
@@ -2280,7 +2254,6 @@ OldDif2::ex2::op12 (
       "op12",
       4,
       TAO::TAO_CO_NONE | TAO::TAO_CO_DIRECT_STRATEGY | TAO::TAO_CO_THRU_POA_STRATEGY
-
     );
 
   _invocation_call.invoke (nullptr, 0);
@@ -2305,9 +2278,9 @@ OldDif2::ex2::sendc_op7 (
 
   TAO::Argument *_the_tao_operation_signature[] =
     {
-      std::addressof(_tao_retval),
-      std::addressof(_tao_c),
-      std::addressof(_tao_o)
+      std::addressof (_tao_retval),
+      std::addressof (_tao_c),
+      std::addressof (_tao_o)
     };
 
   TAO::Asynch_Invocation_Adapter _invocation_call (
@@ -2340,8 +2313,8 @@ OldDif2::ex2::sendc_op8 (
 
   TAO::Argument *_the_tao_operation_signature[] =
     {
-      std::addressof(_tao_retval),
-      std::addressof(_tao_o)
+      std::addressof (_tao_retval),
+      std::addressof (_tao_o)
     };
 
   TAO::Asynch_Invocation_Adapter _invocation_call (
@@ -2378,10 +2351,10 @@ OldDif2::ex2::sendc_op9 (
 
   TAO::Argument *_the_tao_operation_signature[] =
     {
-      std::addressof(_tao_retval),
-      std::addressof(_tao_o),
-      std::addressof(_tao_ls),
-      std::addressof(_tao_l)
+      std::addressof (_tao_retval),
+      std::addressof (_tao_o),
+      std::addressof (_tao_ls),
+      std::addressof (_tao_l)
     };
 
   TAO::Asynch_Invocation_Adapter _invocation_call (
@@ -2414,8 +2387,8 @@ OldDif2::ex2::sendc_op10 (
 
   TAO::Argument *_the_tao_operation_signature[] =
     {
-      std::addressof(_tao_retval),
-      std::addressof(_tao_s)
+      std::addressof (_tao_retval),
+      std::addressof (_tao_s)
     };
 
   TAO::Asynch_Invocation_Adapter _invocation_call (
@@ -2448,8 +2421,8 @@ OldDif2::ex2::sendc_op11 (
 
   TAO::Argument *_the_tao_operation_signature[] =
     {
-      std::addressof(_tao_retval),
-      std::addressof(_tao_ls)
+      std::addressof (_tao_retval),
+      std::addressof (_tao_ls)
     };
 
   TAO::Asynch_Invocation_Adapter _invocation_call (
@@ -2482,8 +2455,8 @@ OldDif2::ex2::sendc_op12 (
 
   TAO::Argument *_the_tao_operation_signature[] =
     {
-      std::addressof(_tao_retval),
-      std::addressof(_tao_l)
+      std::addressof (_tao_retval),
+      std::addressof (_tao_l)
     };
 
   TAO::Asynch_Invocation_Adapter _invocation_call (
@@ -2549,8 +2522,8 @@ OldDif2::ex2::_tao_release (ex2_ptr obj)
 OldDif2::ex2::_is_a (char const *value)
 {
   if (std::strcmp (value, "IDL:OldDif2/ex1:1.0") == 0 ||
-      std::strcmp (value, "IDL:OldDif2/ex2:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0)
+    std::strcmp (value, "IDL:OldDif2/ex2:1.0") == 0 ||
+    std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0)
     {
       return true; // success using local knowledge
     }
@@ -2819,7 +2792,7 @@ TAO::Objref_Traits<OldDif2::AMH_ex2ResponseHandler>::nil ()
 }
 
 ::CORBA::Boolean
-TAO::Objref_Traits<OldDif2::AMH_ex2ResponseHandler>::marshal (OldDif2::AMH_ex2ResponseHandler_ptr const p,TAO_OutputCDR & cdr)
+TAO::Objref_Traits<OldDif2::AMH_ex2ResponseHandler>::marshal (OldDif2::AMH_ex2ResponseHandler_ptr const p, TAO_OutputCDR &cdr)
 {
   return ::CORBA::Object::marshal (p, cdr);
 }
@@ -2840,14 +2813,14 @@ OldDif2::AMH_ex2ResponseHandler_ptr
 OldDif2::AMH_ex2ResponseHandler::_narrow (::CORBA::Object_ptr _tao_objref)
 {
   return AMH_ex2ResponseHandler::_duplicate (
-      dynamic_cast<AMH_ex2ResponseHandler_ptr> (_tao_objref));
+    dynamic_cast<AMH_ex2ResponseHandler_ptr> (_tao_objref));
 }
 
 OldDif2::AMH_ex2ResponseHandler_ptr
 OldDif2::AMH_ex2ResponseHandler::_unchecked_narrow (::CORBA::Object_ptr _tao_objref)
 {
   return AMH_ex2ResponseHandler::_duplicate (
-      dynamic_cast<AMH_ex2ResponseHandler_ptr> (_tao_objref));
+    dynamic_cast<AMH_ex2ResponseHandler_ptr> (_tao_objref));
 }
 
 OldDif2::AMH_ex2ResponseHandler_ptr
@@ -2876,8 +2849,8 @@ OldDif2::AMH_ex2ResponseHandler::_tao_release (AMH_ex2ResponseHandler_ptr obj)
 OldDif2::AMH_ex2ResponseHandler::_is_a (char const *value)
 {
   if (std::strcmp (value, "IDL:OldDif2/AMH_ex2ResponseHandler:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/LocalObject:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0)
+    std::strcmp (value, "IDL:omg.org/CORBA/LocalObject:1.0") == 0 ||
+    std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0)
     {
       return true; // success using local knowledge
     }
@@ -2931,7 +2904,7 @@ TAO::Objref_Traits<OldDif2::AMI_ex2Handler>::nil ()
 }
 
 ::CORBA::Boolean
-TAO::Objref_Traits<OldDif2::AMI_ex2Handler>::marshal (OldDif2::AMI_ex2Handler_ptr const p,TAO_OutputCDR & cdr)
+TAO::Objref_Traits<OldDif2::AMI_ex2Handler>::marshal (OldDif2::AMI_ex2Handler_ptr const p, TAO_OutputCDR &cdr)
 {
   return ::CORBA::Object::marshal (p, cdr);
 }
@@ -2956,10 +2929,10 @@ OldDif2::AMI_ex2Handler::op7 (
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
-      std::addressof(_tao_retval),
-      std::addressof(_tao_ami_return_val),
-      std::addressof(_tao_b),
-      std::addressof(_tao_o)
+      std::addressof (_tao_retval),
+      std::addressof (_tao_ami_return_val),
+      std::addressof (_tao_b),
+      std::addressof (_tao_o)
     };
 
   TAO::Invocation_Adapter _invocation_call (
@@ -2969,7 +2942,6 @@ OldDif2::AMI_ex2Handler::op7 (
       "op7",
       3,
       TAO::TAO_CO_NONE | TAO::TAO_CO_DIRECT_STRATEGY | TAO::TAO_CO_THRU_POA_STRATEGY
-
     );
 
   _invocation_call.invoke (nullptr, 0);
@@ -3059,8 +3031,8 @@ OldDif2::AMI_ex2Handler::op7_excep (
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
-      std::addressof(_tao_retval),
-      std::addressof(_tao_excep_holder)
+      std::addressof (_tao_retval),
+      std::addressof (_tao_excep_holder)
     };
 
   TAO::Invocation_Adapter _invocation_call (
@@ -3070,7 +3042,6 @@ OldDif2::AMI_ex2Handler::op7_excep (
       "op7_excep",
       9,
       TAO::TAO_CO_NONE | TAO::TAO_CO_DIRECT_STRATEGY | TAO::TAO_CO_THRU_POA_STRATEGY
-
     );
 
   _invocation_call.invoke (nullptr, 0);
@@ -3091,9 +3062,9 @@ OldDif2::AMI_ex2Handler::op8 (
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
-      std::addressof(_tao_retval),
-      std::addressof(_tao_ami_return_val),
-      std::addressof(_tao_b)
+      std::addressof (_tao_retval),
+      std::addressof (_tao_ami_return_val),
+      std::addressof (_tao_b)
     };
 
   TAO::Invocation_Adapter _invocation_call (
@@ -3103,7 +3074,6 @@ OldDif2::AMI_ex2Handler::op8 (
       "op8",
       3,
       TAO::TAO_CO_NONE | TAO::TAO_CO_DIRECT_STRATEGY | TAO::TAO_CO_THRU_POA_STRATEGY
-
     );
 
   _invocation_call.invoke (nullptr, 0);
@@ -3189,8 +3159,8 @@ OldDif2::AMI_ex2Handler::op8_excep (
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
-      std::addressof(_tao_retval),
-      std::addressof(_tao_excep_holder)
+      std::addressof (_tao_retval),
+      std::addressof (_tao_excep_holder)
     };
 
   TAO::Invocation_Adapter _invocation_call (
@@ -3200,7 +3170,6 @@ OldDif2::AMI_ex2Handler::op8_excep (
       "op8_excep",
       9,
       TAO::TAO_CO_NONE | TAO::TAO_CO_DIRECT_STRATEGY | TAO::TAO_CO_THRU_POA_STRATEGY
-
     );
 
   _invocation_call.invoke (nullptr, 0);
@@ -3225,11 +3194,11 @@ OldDif2::AMI_ex2Handler::op9 (
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
-      std::addressof(_tao_retval),
-      std::addressof(_tao_ami_return_val),
-      std::addressof(_tao_o),
-      std::addressof(_tao_s),
-      std::addressof(_tao_l)
+      std::addressof (_tao_retval),
+      std::addressof (_tao_ami_return_val),
+      std::addressof (_tao_o),
+      std::addressof (_tao_s),
+      std::addressof (_tao_l)
     };
 
   TAO::Invocation_Adapter _invocation_call (
@@ -3239,7 +3208,6 @@ OldDif2::AMI_ex2Handler::op9 (
       "op9",
       3,
       TAO::TAO_CO_NONE | TAO::TAO_CO_DIRECT_STRATEGY | TAO::TAO_CO_THRU_POA_STRATEGY
-
     );
 
   _invocation_call.invoke (nullptr, 0);
@@ -3333,8 +3301,8 @@ OldDif2::AMI_ex2Handler::op9_excep (
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
-      std::addressof(_tao_retval),
-      std::addressof(_tao_excep_holder)
+      std::addressof (_tao_retval),
+      std::addressof (_tao_excep_holder)
     };
 
   TAO::Invocation_Adapter _invocation_call (
@@ -3344,7 +3312,6 @@ OldDif2::AMI_ex2Handler::op9_excep (
       "op9_excep",
       9,
       TAO::TAO_CO_NONE | TAO::TAO_CO_DIRECT_STRATEGY | TAO::TAO_CO_THRU_POA_STRATEGY
-
     );
 
   _invocation_call.invoke (nullptr, 0);
@@ -3365,9 +3332,9 @@ OldDif2::AMI_ex2Handler::op10 (
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
-      std::addressof(_tao_retval),
-      std::addressof(_tao_ami_return_val),
-      std::addressof(_tao_ls)
+      std::addressof (_tao_retval),
+      std::addressof (_tao_ami_return_val),
+      std::addressof (_tao_ls)
     };
 
   TAO::Invocation_Adapter _invocation_call (
@@ -3377,7 +3344,6 @@ OldDif2::AMI_ex2Handler::op10 (
       "op10",
       4,
       TAO::TAO_CO_NONE | TAO::TAO_CO_DIRECT_STRATEGY | TAO::TAO_CO_THRU_POA_STRATEGY
-
     );
 
   _invocation_call.invoke (nullptr, 0);
@@ -3463,8 +3429,8 @@ OldDif2::AMI_ex2Handler::op10_excep (
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
-      std::addressof(_tao_retval),
-      std::addressof(_tao_excep_holder)
+      std::addressof (_tao_retval),
+      std::addressof (_tao_excep_holder)
     };
 
   TAO::Invocation_Adapter _invocation_call (
@@ -3474,7 +3440,6 @@ OldDif2::AMI_ex2Handler::op10_excep (
       "op10_excep",
       10,
       TAO::TAO_CO_NONE | TAO::TAO_CO_DIRECT_STRATEGY | TAO::TAO_CO_THRU_POA_STRATEGY
-
     );
 
   _invocation_call.invoke (nullptr, 0);
@@ -3497,10 +3462,10 @@ OldDif2::AMI_ex2Handler::op11 (
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
-      std::addressof(_tao_retval),
-      std::addressof(_tao_ami_return_val),
-      std::addressof(_tao_ls),
-      std::addressof(_tao_l)
+      std::addressof (_tao_retval),
+      std::addressof (_tao_ami_return_val),
+      std::addressof (_tao_ls),
+      std::addressof (_tao_l)
     };
 
   TAO::Invocation_Adapter _invocation_call (
@@ -3510,7 +3475,6 @@ OldDif2::AMI_ex2Handler::op11 (
       "op11",
       4,
       TAO::TAO_CO_NONE | TAO::TAO_CO_DIRECT_STRATEGY | TAO::TAO_CO_THRU_POA_STRATEGY
-
     );
 
   _invocation_call.invoke (nullptr, 0);
@@ -3600,8 +3564,8 @@ OldDif2::AMI_ex2Handler::op11_excep (
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
-      std::addressof(_tao_retval),
-      std::addressof(_tao_excep_holder)
+      std::addressof (_tao_retval),
+      std::addressof (_tao_excep_holder)
     };
 
   TAO::Invocation_Adapter _invocation_call (
@@ -3611,7 +3575,6 @@ OldDif2::AMI_ex2Handler::op11_excep (
       "op11_excep",
       10,
       TAO::TAO_CO_NONE | TAO::TAO_CO_DIRECT_STRATEGY | TAO::TAO_CO_THRU_POA_STRATEGY
-
     );
 
   _invocation_call.invoke (nullptr, 0);
@@ -3630,8 +3593,8 @@ OldDif2::AMI_ex2Handler::op12 (
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
-      std::addressof(_tao_retval),
-      std::addressof(_tao_ami_return_val)
+      std::addressof (_tao_retval),
+      std::addressof (_tao_ami_return_val)
     };
 
   TAO::Invocation_Adapter _invocation_call (
@@ -3641,7 +3604,6 @@ OldDif2::AMI_ex2Handler::op12 (
       "op12",
       4,
       TAO::TAO_CO_NONE | TAO::TAO_CO_DIRECT_STRATEGY | TAO::TAO_CO_THRU_POA_STRATEGY
-
     );
 
   _invocation_call.invoke (nullptr, 0);
@@ -3723,8 +3685,8 @@ OldDif2::AMI_ex2Handler::op12_excep (
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
-      std::addressof(_tao_retval),
-      std::addressof(_tao_excep_holder)
+      std::addressof (_tao_retval),
+      std::addressof (_tao_excep_holder)
     };
 
   TAO::Invocation_Adapter _invocation_call (
@@ -3734,7 +3696,6 @@ OldDif2::AMI_ex2Handler::op12_excep (
       "op12_excep",
       10,
       TAO::TAO_CO_NONE | TAO::TAO_CO_DIRECT_STRATEGY | TAO::TAO_CO_THRU_POA_STRATEGY
-
     );
 
   _invocation_call.invoke (nullptr, 0);
@@ -3788,9 +3749,9 @@ OldDif2::AMI_ex2Handler::_tao_release (AMI_ex2Handler_ptr obj)
 OldDif2::AMI_ex2Handler::_is_a (char const *value)
 {
   if (std::strcmp (value, "IDL:omg.org/Messaging/ReplyHandler:1.0") == 0 ||
-      std::strcmp (value, "IDL:OldDif2/AMI_ex1Handler:1.0") == 0 ||
-      std::strcmp (value, "IDL:OldDif2/AMI_ex2Handler:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0)
+    std::strcmp (value, "IDL:OldDif2/AMI_ex1Handler:1.0") == 0 ||
+    std::strcmp (value, "IDL:OldDif2/AMI_ex2Handler:1.0") == 0 ||
+    std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0)
     {
       return true; // success using local knowledge
     }
@@ -3844,7 +3805,7 @@ TAO::Objref_Traits<OldDif2::ex3>::nil ()
 }
 
 ::CORBA::Boolean
-TAO::Objref_Traits<OldDif2::ex3>::marshal (OldDif2::ex3_ptr const p,TAO_OutputCDR & cdr)
+TAO::Objref_Traits<OldDif2::ex3>::marshal (OldDif2::ex3_ptr const p, TAO_OutputCDR &cdr)
 {
   return ::CORBA::Object::marshal (p, cdr);
 }
@@ -3863,7 +3824,7 @@ OldDif2::ex3::float_attribute ()
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
-      std::addressof(_tao_retval)
+      std::addressof (_tao_retval)
     };
 
   TAO::Invocation_Adapter _invocation_call (
@@ -3873,8 +3834,7 @@ OldDif2::ex3::float_attribute ()
       "_get_float_attribute",
       20,
       TAO::TAO_CO_NONE | TAO::TAO_CO_DIRECT_STRATEGY | TAO::TAO_CO_THRU_POA_STRATEGY,
-      TAO::TAO_TWOWAY_INVOCATION
-      ,
+      TAO::TAO_TWOWAY_INVOCATION,
       TAO::TAO_SYNCHRONOUS_INVOCATION,
       false
     );
@@ -3895,7 +3855,7 @@ OldDif2::ex3::double_attribute ()
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
-      std::addressof(_tao_retval)
+      std::addressof (_tao_retval)
     };
 
   TAO::Invocation_Adapter _invocation_call (
@@ -3905,8 +3865,7 @@ OldDif2::ex3::double_attribute ()
       "_get_double_attribute",
       21,
       TAO::TAO_CO_NONE | TAO::TAO_CO_DIRECT_STRATEGY | TAO::TAO_CO_THRU_POA_STRATEGY,
-      TAO::TAO_TWOWAY_INVOCATION
-      ,
+      TAO::TAO_TWOWAY_INVOCATION,
       TAO::TAO_SYNCHRONOUS_INVOCATION,
       false
     );
@@ -3929,8 +3888,8 @@ OldDif2::ex3::double_attribute (
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
-      std::addressof(_tao_retval),
-      std::addressof(_tao_double_attribute)
+      std::addressof (_tao_retval),
+      std::addressof (_tao_double_attribute)
     };
 
   TAO::Invocation_Adapter _invocation_call (
@@ -3940,7 +3899,6 @@ OldDif2::ex3::double_attribute (
       "_set_double_attribute",
       21,
       TAO::TAO_CO_NONE | TAO::TAO_CO_DIRECT_STRATEGY | TAO::TAO_CO_THRU_POA_STRATEGY
-
     );
 
   _invocation_call.invoke (nullptr, 0);
@@ -3957,7 +3915,7 @@ OldDif2::ex3::long_attribute ()
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
-      std::addressof(_tao_retval)
+      std::addressof (_tao_retval)
     };
 
   TAO::Invocation_Adapter _invocation_call (
@@ -3967,8 +3925,7 @@ OldDif2::ex3::long_attribute ()
       "_get_long_attribute",
       19,
       TAO::TAO_CO_NONE | TAO::TAO_CO_DIRECT_STRATEGY | TAO::TAO_CO_THRU_POA_STRATEGY,
-      TAO::TAO_TWOWAY_INVOCATION
-      ,
+      TAO::TAO_TWOWAY_INVOCATION,
       TAO::TAO_SYNCHRONOUS_INVOCATION,
       false
     );
@@ -3989,7 +3946,7 @@ OldDif2::ex3::short_attribute ()
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
-      std::addressof(_tao_retval)
+      std::addressof (_tao_retval)
     };
 
   TAO::Invocation_Adapter _invocation_call (
@@ -3999,8 +3956,7 @@ OldDif2::ex3::short_attribute ()
       "_get_short_attribute",
       20,
       TAO::TAO_CO_NONE | TAO::TAO_CO_DIRECT_STRATEGY | TAO::TAO_CO_THRU_POA_STRATEGY,
-      TAO::TAO_TWOWAY_INVOCATION
-      ,
+      TAO::TAO_TWOWAY_INVOCATION,
       TAO::TAO_SYNCHRONOUS_INVOCATION,
       false
     );
@@ -4023,8 +3979,8 @@ OldDif2::ex3::short_attribute (
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
-      std::addressof(_tao_retval),
-      std::addressof(_tao_short_attribute)
+      std::addressof (_tao_retval),
+      std::addressof (_tao_short_attribute)
     };
 
   TAO::Invocation_Adapter _invocation_call (
@@ -4034,7 +3990,6 @@ OldDif2::ex3::short_attribute (
       "_set_short_attribute",
       20,
       TAO::TAO_CO_NONE | TAO::TAO_CO_DIRECT_STRATEGY | TAO::TAO_CO_THRU_POA_STRATEGY
-
     );
 
   _invocation_call.invoke (nullptr, 0);
@@ -4051,7 +4006,7 @@ OldDif2::ex3::unsigned_long_attribute ()
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
-      std::addressof(_tao_retval)
+      std::addressof (_tao_retval)
     };
 
   TAO::Invocation_Adapter _invocation_call (
@@ -4061,8 +4016,7 @@ OldDif2::ex3::unsigned_long_attribute ()
       "_get_unsigned_long_attribute",
       28,
       TAO::TAO_CO_NONE | TAO::TAO_CO_DIRECT_STRATEGY | TAO::TAO_CO_THRU_POA_STRATEGY,
-      TAO::TAO_TWOWAY_INVOCATION
-      ,
+      TAO::TAO_TWOWAY_INVOCATION,
       TAO::TAO_SYNCHRONOUS_INVOCATION,
       false
     );
@@ -4113,8 +4067,8 @@ OldDif2::ex3::sendc_set_double_attribute (
 
   TAO::Argument *_the_tao_operation_signature[] =
     {
-      std::addressof(_tao_retval),
-      std::addressof(_tao_double_attribute)
+      std::addressof (_tao_retval),
+      std::addressof (_tao_double_attribute)
     };
 
   TAO::Asynch_Invocation_Adapter _invocation_call (
@@ -4199,8 +4153,8 @@ OldDif2::ex3::sendc_set_short_attribute (
 
   TAO::Argument *_the_tao_operation_signature[] =
     {
-      std::addressof(_tao_retval),
-      std::addressof(_tao_short_attribute)
+      std::addressof (_tao_retval),
+      std::addressof (_tao_short_attribute)
     };
 
   TAO::Asynch_Invocation_Adapter _invocation_call (
@@ -4318,8 +4272,8 @@ OldDif2::ex3::_tao_release (ex3_ptr obj)
 OldDif2::ex3::_is_a (char const *value)
 {
   if (std::strcmp (value, "IDL:OldDif2/ex1:1.0") == 0 ||
-      std::strcmp (value, "IDL:OldDif2/ex3:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0)
+    std::strcmp (value, "IDL:OldDif2/ex3:1.0") == 0 ||
+    std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0)
     {
       return true; // success using local knowledge
     }
@@ -4602,7 +4556,7 @@ TAO::Objref_Traits<OldDif2::AMH_ex3ResponseHandler>::nil ()
 }
 
 ::CORBA::Boolean
-TAO::Objref_Traits<OldDif2::AMH_ex3ResponseHandler>::marshal (OldDif2::AMH_ex3ResponseHandler_ptr const p,TAO_OutputCDR & cdr)
+TAO::Objref_Traits<OldDif2::AMH_ex3ResponseHandler>::marshal (OldDif2::AMH_ex3ResponseHandler_ptr const p, TAO_OutputCDR &cdr)
 {
   return ::CORBA::Object::marshal (p, cdr);
 }
@@ -4623,14 +4577,14 @@ OldDif2::AMH_ex3ResponseHandler_ptr
 OldDif2::AMH_ex3ResponseHandler::_narrow (::CORBA::Object_ptr _tao_objref)
 {
   return AMH_ex3ResponseHandler::_duplicate (
-      dynamic_cast<AMH_ex3ResponseHandler_ptr> (_tao_objref));
+    dynamic_cast<AMH_ex3ResponseHandler_ptr> (_tao_objref));
 }
 
 OldDif2::AMH_ex3ResponseHandler_ptr
 OldDif2::AMH_ex3ResponseHandler::_unchecked_narrow (::CORBA::Object_ptr _tao_objref)
 {
   return AMH_ex3ResponseHandler::_duplicate (
-      dynamic_cast<AMH_ex3ResponseHandler_ptr> (_tao_objref));
+    dynamic_cast<AMH_ex3ResponseHandler_ptr> (_tao_objref));
 }
 
 OldDif2::AMH_ex3ResponseHandler_ptr
@@ -4659,8 +4613,8 @@ OldDif2::AMH_ex3ResponseHandler::_tao_release (AMH_ex3ResponseHandler_ptr obj)
 OldDif2::AMH_ex3ResponseHandler::_is_a (char const *value)
 {
   if (std::strcmp (value, "IDL:OldDif2/AMH_ex3ResponseHandler:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/LocalObject:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0)
+    std::strcmp (value, "IDL:omg.org/CORBA/LocalObject:1.0") == 0 ||
+    std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0)
     {
       return true; // success using local knowledge
     }
@@ -4714,7 +4668,7 @@ TAO::Objref_Traits<OldDif2::AMI_ex3Handler>::nil ()
 }
 
 ::CORBA::Boolean
-TAO::Objref_Traits<OldDif2::AMI_ex3Handler>::marshal (OldDif2::AMI_ex3Handler_ptr const p,TAO_OutputCDR & cdr)
+TAO::Objref_Traits<OldDif2::AMI_ex3Handler>::marshal (OldDif2::AMI_ex3Handler_ptr const p, TAO_OutputCDR &cdr)
 {
   return ::CORBA::Object::marshal (p, cdr);
 }
@@ -4735,8 +4689,8 @@ OldDif2::AMI_ex3Handler::get_float_attribute (
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
-      std::addressof(_tao_retval),
-      std::addressof(_tao_ami_return_val)
+      std::addressof (_tao_retval),
+      std::addressof (_tao_ami_return_val)
     };
 
   TAO::Invocation_Adapter _invocation_call (
@@ -4746,7 +4700,6 @@ OldDif2::AMI_ex3Handler::get_float_attribute (
       "get_float_attribute",
       19,
       TAO::TAO_CO_NONE | TAO::TAO_CO_DIRECT_STRATEGY | TAO::TAO_CO_THRU_POA_STRATEGY
-
     );
 
   _invocation_call.invoke (nullptr, 0);
@@ -4828,8 +4781,8 @@ OldDif2::AMI_ex3Handler::get_float_attribute_excep (
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
-      std::addressof(_tao_retval),
-      std::addressof(_tao_excep_holder)
+      std::addressof (_tao_retval),
+      std::addressof (_tao_excep_holder)
     };
 
   TAO::Invocation_Adapter _invocation_call (
@@ -4839,7 +4792,6 @@ OldDif2::AMI_ex3Handler::get_float_attribute_excep (
       "get_float_attribute_excep",
       25,
       TAO::TAO_CO_NONE | TAO::TAO_CO_DIRECT_STRATEGY | TAO::TAO_CO_THRU_POA_STRATEGY
-
     );
 
   _invocation_call.invoke (nullptr, 0);
@@ -4858,8 +4810,8 @@ OldDif2::AMI_ex3Handler::get_double_attribute (
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
-      std::addressof(_tao_retval),
-      std::addressof(_tao_ami_return_val)
+      std::addressof (_tao_retval),
+      std::addressof (_tao_ami_return_val)
     };
 
   TAO::Invocation_Adapter _invocation_call (
@@ -4869,7 +4821,6 @@ OldDif2::AMI_ex3Handler::get_double_attribute (
       "get_double_attribute",
       20,
       TAO::TAO_CO_NONE | TAO::TAO_CO_DIRECT_STRATEGY | TAO::TAO_CO_THRU_POA_STRATEGY
-
     );
 
   _invocation_call.invoke (nullptr, 0);
@@ -4951,8 +4902,8 @@ OldDif2::AMI_ex3Handler::get_double_attribute_excep (
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
-      std::addressof(_tao_retval),
-      std::addressof(_tao_excep_holder)
+      std::addressof (_tao_retval),
+      std::addressof (_tao_excep_holder)
     };
 
   TAO::Invocation_Adapter _invocation_call (
@@ -4962,7 +4913,6 @@ OldDif2::AMI_ex3Handler::get_double_attribute_excep (
       "get_double_attribute_excep",
       26,
       TAO::TAO_CO_NONE | TAO::TAO_CO_DIRECT_STRATEGY | TAO::TAO_CO_THRU_POA_STRATEGY
-
     );
 
   _invocation_call.invoke (nullptr, 0);
@@ -4979,7 +4929,7 @@ OldDif2::AMI_ex3Handler::set_double_attribute ()
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
-      std::addressof(_tao_retval)
+      std::addressof (_tao_retval)
     };
 
   TAO::Invocation_Adapter _invocation_call (
@@ -4989,8 +4939,7 @@ OldDif2::AMI_ex3Handler::set_double_attribute ()
       "set_double_attribute",
       20,
       TAO::TAO_CO_NONE | TAO::TAO_CO_DIRECT_STRATEGY | TAO::TAO_CO_THRU_POA_STRATEGY,
-      TAO::TAO_TWOWAY_INVOCATION
-      ,
+      TAO::TAO_TWOWAY_INVOCATION,
       TAO::TAO_SYNCHRONOUS_INVOCATION,
       false
     );
@@ -5066,8 +5015,8 @@ OldDif2::AMI_ex3Handler::set_double_attribute_excep (
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
-      std::addressof(_tao_retval),
-      std::addressof(_tao_excep_holder)
+      std::addressof (_tao_retval),
+      std::addressof (_tao_excep_holder)
     };
 
   TAO::Invocation_Adapter _invocation_call (
@@ -5077,7 +5026,6 @@ OldDif2::AMI_ex3Handler::set_double_attribute_excep (
       "set_double_attribute_excep",
       26,
       TAO::TAO_CO_NONE | TAO::TAO_CO_DIRECT_STRATEGY | TAO::TAO_CO_THRU_POA_STRATEGY
-
     );
 
   _invocation_call.invoke (nullptr, 0);
@@ -5096,8 +5044,8 @@ OldDif2::AMI_ex3Handler::get_long_attribute (
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
-      std::addressof(_tao_retval),
-      std::addressof(_tao_ami_return_val)
+      std::addressof (_tao_retval),
+      std::addressof (_tao_ami_return_val)
     };
 
   TAO::Invocation_Adapter _invocation_call (
@@ -5107,7 +5055,6 @@ OldDif2::AMI_ex3Handler::get_long_attribute (
       "get_long_attribute",
       18,
       TAO::TAO_CO_NONE | TAO::TAO_CO_DIRECT_STRATEGY | TAO::TAO_CO_THRU_POA_STRATEGY
-
     );
 
   _invocation_call.invoke (nullptr, 0);
@@ -5189,8 +5136,8 @@ OldDif2::AMI_ex3Handler::get_long_attribute_excep (
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
-      std::addressof(_tao_retval),
-      std::addressof(_tao_excep_holder)
+      std::addressof (_tao_retval),
+      std::addressof (_tao_excep_holder)
     };
 
   TAO::Invocation_Adapter _invocation_call (
@@ -5200,7 +5147,6 @@ OldDif2::AMI_ex3Handler::get_long_attribute_excep (
       "get_long_attribute_excep",
       24,
       TAO::TAO_CO_NONE | TAO::TAO_CO_DIRECT_STRATEGY | TAO::TAO_CO_THRU_POA_STRATEGY
-
     );
 
   _invocation_call.invoke (nullptr, 0);
@@ -5219,8 +5165,8 @@ OldDif2::AMI_ex3Handler::get_short_attribute (
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
-      std::addressof(_tao_retval),
-      std::addressof(_tao_ami_return_val)
+      std::addressof (_tao_retval),
+      std::addressof (_tao_ami_return_val)
     };
 
   TAO::Invocation_Adapter _invocation_call (
@@ -5230,7 +5176,6 @@ OldDif2::AMI_ex3Handler::get_short_attribute (
       "get_short_attribute",
       19,
       TAO::TAO_CO_NONE | TAO::TAO_CO_DIRECT_STRATEGY | TAO::TAO_CO_THRU_POA_STRATEGY
-
     );
 
   _invocation_call.invoke (nullptr, 0);
@@ -5312,8 +5257,8 @@ OldDif2::AMI_ex3Handler::get_short_attribute_excep (
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
-      std::addressof(_tao_retval),
-      std::addressof(_tao_excep_holder)
+      std::addressof (_tao_retval),
+      std::addressof (_tao_excep_holder)
     };
 
   TAO::Invocation_Adapter _invocation_call (
@@ -5323,7 +5268,6 @@ OldDif2::AMI_ex3Handler::get_short_attribute_excep (
       "get_short_attribute_excep",
       25,
       TAO::TAO_CO_NONE | TAO::TAO_CO_DIRECT_STRATEGY | TAO::TAO_CO_THRU_POA_STRATEGY
-
     );
 
   _invocation_call.invoke (nullptr, 0);
@@ -5340,7 +5284,7 @@ OldDif2::AMI_ex3Handler::set_short_attribute ()
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
-      std::addressof(_tao_retval)
+      std::addressof (_tao_retval)
     };
 
   TAO::Invocation_Adapter _invocation_call (
@@ -5350,8 +5294,7 @@ OldDif2::AMI_ex3Handler::set_short_attribute ()
       "set_short_attribute",
       19,
       TAO::TAO_CO_NONE | TAO::TAO_CO_DIRECT_STRATEGY | TAO::TAO_CO_THRU_POA_STRATEGY,
-      TAO::TAO_TWOWAY_INVOCATION
-      ,
+      TAO::TAO_TWOWAY_INVOCATION,
       TAO::TAO_SYNCHRONOUS_INVOCATION,
       false
     );
@@ -5427,8 +5370,8 @@ OldDif2::AMI_ex3Handler::set_short_attribute_excep (
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
-      std::addressof(_tao_retval),
-      std::addressof(_tao_excep_holder)
+      std::addressof (_tao_retval),
+      std::addressof (_tao_excep_holder)
     };
 
   TAO::Invocation_Adapter _invocation_call (
@@ -5438,7 +5381,6 @@ OldDif2::AMI_ex3Handler::set_short_attribute_excep (
       "set_short_attribute_excep",
       25,
       TAO::TAO_CO_NONE | TAO::TAO_CO_DIRECT_STRATEGY | TAO::TAO_CO_THRU_POA_STRATEGY
-
     );
 
   _invocation_call.invoke (nullptr, 0);
@@ -5457,8 +5399,8 @@ OldDif2::AMI_ex3Handler::get_unsigned_long_attribute (
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
-      std::addressof(_tao_retval),
-      std::addressof(_tao_ami_return_val)
+      std::addressof (_tao_retval),
+      std::addressof (_tao_ami_return_val)
     };
 
   TAO::Invocation_Adapter _invocation_call (
@@ -5468,7 +5410,6 @@ OldDif2::AMI_ex3Handler::get_unsigned_long_attribute (
       "get_unsigned_long_attribute",
       27,
       TAO::TAO_CO_NONE | TAO::TAO_CO_DIRECT_STRATEGY | TAO::TAO_CO_THRU_POA_STRATEGY
-
     );
 
   _invocation_call.invoke (nullptr, 0);
@@ -5550,8 +5491,8 @@ OldDif2::AMI_ex3Handler::get_unsigned_long_attribute_excep (
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
-      std::addressof(_tao_retval),
-      std::addressof(_tao_excep_holder)
+      std::addressof (_tao_retval),
+      std::addressof (_tao_excep_holder)
     };
 
   TAO::Invocation_Adapter _invocation_call (
@@ -5561,7 +5502,6 @@ OldDif2::AMI_ex3Handler::get_unsigned_long_attribute_excep (
       "get_unsigned_long_attribute_excep",
       33,
       TAO::TAO_CO_NONE | TAO::TAO_CO_DIRECT_STRATEGY | TAO::TAO_CO_THRU_POA_STRATEGY
-
     );
 
   _invocation_call.invoke (nullptr, 0);
@@ -5615,9 +5555,9 @@ OldDif2::AMI_ex3Handler::_tao_release (AMI_ex3Handler_ptr obj)
 OldDif2::AMI_ex3Handler::_is_a (char const *value)
 {
   if (std::strcmp (value, "IDL:omg.org/Messaging/ReplyHandler:1.0") == 0 ||
-      std::strcmp (value, "IDL:OldDif2/AMI_ex1Handler:1.0") == 0 ||
-      std::strcmp (value, "IDL:OldDif2/AMI_ex3Handler:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0)
+    std::strcmp (value, "IDL:OldDif2/AMI_ex1Handler:1.0") == 0 ||
+    std::strcmp (value, "IDL:OldDif2/AMI_ex3Handler:1.0") == 0 ||
+    std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0)
     {
       return true; // success using local knowledge
     }
@@ -5671,7 +5611,7 @@ TAO::Objref_Traits<OldDif2::ex4>::nil ()
 }
 
 ::CORBA::Boolean
-TAO::Objref_Traits<OldDif2::ex4>::marshal (OldDif2::ex4_ptr const p,TAO_OutputCDR & cdr)
+TAO::Objref_Traits<OldDif2::ex4>::marshal (OldDif2::ex4_ptr const p, TAO_OutputCDR &cdr)
 {
   return ::CORBA::Object::marshal (p, cdr);
 }
@@ -5690,7 +5630,7 @@ OldDif2::ex4::unsigned_short_attribute ()
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
-      std::addressof(_tao_retval)
+      std::addressof (_tao_retval)
     };
 
   TAO::Invocation_Adapter _invocation_call (
@@ -5700,8 +5640,7 @@ OldDif2::ex4::unsigned_short_attribute ()
       "_get_unsigned_short_attribute",
       29,
       TAO::TAO_CO_NONE | TAO::TAO_CO_DIRECT_STRATEGY | TAO::TAO_CO_THRU_POA_STRATEGY,
-      TAO::TAO_TWOWAY_INVOCATION
-      ,
+      TAO::TAO_TWOWAY_INVOCATION,
       TAO::TAO_SYNCHRONOUS_INVOCATION,
       false
     );
@@ -5724,8 +5663,8 @@ OldDif2::ex4::unsigned_short_attribute (
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
-      std::addressof(_tao_retval),
-      std::addressof(_tao_unsigned_short_attribute)
+      std::addressof (_tao_retval),
+      std::addressof (_tao_unsigned_short_attribute)
     };
 
   TAO::Invocation_Adapter _invocation_call (
@@ -5735,7 +5674,6 @@ OldDif2::ex4::unsigned_short_attribute (
       "_set_unsigned_short_attribute",
       29,
       TAO::TAO_CO_NONE | TAO::TAO_CO_DIRECT_STRATEGY | TAO::TAO_CO_THRU_POA_STRATEGY
-
     );
 
   _invocation_call.invoke (nullptr, 0);
@@ -5752,7 +5690,7 @@ OldDif2::ex4::char_attribute ()
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
-      std::addressof(_tao_retval)
+      std::addressof (_tao_retval)
     };
 
   TAO::Invocation_Adapter _invocation_call (
@@ -5762,8 +5700,7 @@ OldDif2::ex4::char_attribute ()
       "_get_char_attribute",
       19,
       TAO::TAO_CO_NONE | TAO::TAO_CO_DIRECT_STRATEGY | TAO::TAO_CO_THRU_POA_STRATEGY,
-      TAO::TAO_TWOWAY_INVOCATION
-      ,
+      TAO::TAO_TWOWAY_INVOCATION,
       TAO::TAO_SYNCHRONOUS_INVOCATION,
       false
     );
@@ -5784,7 +5721,7 @@ OldDif2::ex4::boolean_attribute ()
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
-      std::addressof(_tao_retval)
+      std::addressof (_tao_retval)
     };
 
   TAO::Invocation_Adapter _invocation_call (
@@ -5794,8 +5731,7 @@ OldDif2::ex4::boolean_attribute ()
       "_get_boolean_attribute",
       22,
       TAO::TAO_CO_NONE | TAO::TAO_CO_DIRECT_STRATEGY | TAO::TAO_CO_THRU_POA_STRATEGY,
-      TAO::TAO_TWOWAY_INVOCATION
-      ,
+      TAO::TAO_TWOWAY_INVOCATION,
       TAO::TAO_SYNCHRONOUS_INVOCATION,
       false
     );
@@ -5818,8 +5754,8 @@ OldDif2::ex4::boolean_attribute (
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
-      std::addressof(_tao_retval),
-      std::addressof(_tao_boolean_attribute)
+      std::addressof (_tao_retval),
+      std::addressof (_tao_boolean_attribute)
     };
 
   TAO::Invocation_Adapter _invocation_call (
@@ -5829,7 +5765,6 @@ OldDif2::ex4::boolean_attribute (
       "_set_boolean_attribute",
       22,
       TAO::TAO_CO_NONE | TAO::TAO_CO_DIRECT_STRATEGY | TAO::TAO_CO_THRU_POA_STRATEGY
-
     );
 
   _invocation_call.invoke (nullptr, 0);
@@ -5846,7 +5781,7 @@ OldDif2::ex4::octet_attribute ()
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
-      std::addressof(_tao_retval)
+      std::addressof (_tao_retval)
     };
 
   TAO::Invocation_Adapter _invocation_call (
@@ -5856,8 +5791,7 @@ OldDif2::ex4::octet_attribute ()
       "_get_octet_attribute",
       20,
       TAO::TAO_CO_NONE | TAO::TAO_CO_DIRECT_STRATEGY | TAO::TAO_CO_THRU_POA_STRATEGY,
-      TAO::TAO_TWOWAY_INVOCATION
-      ,
+      TAO::TAO_TWOWAY_INVOCATION,
       TAO::TAO_SYNCHRONOUS_INVOCATION,
       false
     );
@@ -5878,7 +5812,7 @@ OldDif2::ex4::string_attribute ()
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
-      std::addressof(_tao_retval)
+      std::addressof (_tao_retval)
     };
 
   TAO::Invocation_Adapter _invocation_call (
@@ -5888,8 +5822,7 @@ OldDif2::ex4::string_attribute ()
       "_get_string_attribute",
       21,
       TAO::TAO_CO_NONE | TAO::TAO_CO_DIRECT_STRATEGY | TAO::TAO_CO_THRU_POA_STRATEGY,
-      TAO::TAO_TWOWAY_INVOCATION
-      ,
+      TAO::TAO_TWOWAY_INVOCATION,
       TAO::TAO_SYNCHRONOUS_INVOCATION,
       false
     );
@@ -5912,8 +5845,8 @@ OldDif2::ex4::string_attribute (
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
-      std::addressof(_tao_retval),
-      std::addressof(_tao_string_attribute)
+      std::addressof (_tao_retval),
+      std::addressof (_tao_string_attribute)
     };
 
   TAO::Invocation_Adapter _invocation_call (
@@ -5923,7 +5856,6 @@ OldDif2::ex4::string_attribute (
       "_set_string_attribute",
       21,
       TAO::TAO_CO_NONE | TAO::TAO_CO_DIRECT_STRATEGY | TAO::TAO_CO_THRU_POA_STRATEGY
-
     );
 
   _invocation_call.invoke (nullptr, 0);
@@ -5940,7 +5872,7 @@ OldDif2::ex4::limited_string_attribute ()
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
-      std::addressof(_tao_retval)
+      std::addressof (_tao_retval)
     };
 
   TAO::Invocation_Adapter _invocation_call (
@@ -5950,8 +5882,7 @@ OldDif2::ex4::limited_string_attribute ()
       "_get_limited_string_attribute",
       29,
       TAO::TAO_CO_NONE | TAO::TAO_CO_DIRECT_STRATEGY | TAO::TAO_CO_THRU_POA_STRATEGY,
-      TAO::TAO_TWOWAY_INVOCATION
-      ,
+      TAO::TAO_TWOWAY_INVOCATION,
       TAO::TAO_SYNCHRONOUS_INVOCATION,
       false
     );
@@ -5972,7 +5903,7 @@ OldDif2::ex4::an_object_attribute ()
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
-      std::addressof(_tao_retval)
+      std::addressof (_tao_retval)
     };
 
   TAO::Invocation_Adapter _invocation_call (
@@ -5982,8 +5913,7 @@ OldDif2::ex4::an_object_attribute ()
       "_get_an_object_attribute",
       24,
       TAO::TAO_CO_NONE | TAO::TAO_CO_DIRECT_STRATEGY | TAO::TAO_CO_THRU_POA_STRATEGY,
-      TAO::TAO_TWOWAY_INVOCATION
-      ,
+      TAO::TAO_TWOWAY_INVOCATION,
       TAO::TAO_SYNCHRONOUS_INVOCATION,
       false
     );
@@ -6008,8 +5938,8 @@ OldDif2::ex4::sendc_set_unsigned_short_attribute (
 
   TAO::Argument *_the_tao_operation_signature[] =
     {
-      std::addressof(_tao_retval),
-      std::addressof(_tao_unsigned_short_attribute)
+      std::addressof (_tao_retval),
+      std::addressof (_tao_unsigned_short_attribute)
     };
 
   TAO::Asynch_Invocation_Adapter _invocation_call (
@@ -6094,8 +6024,8 @@ OldDif2::ex4::sendc_set_boolean_attribute (
 
   TAO::Argument *_the_tao_operation_signature[] =
     {
-      std::addressof(_tao_retval),
-      std::addressof(_tao_boolean_attribute)
+      std::addressof (_tao_retval),
+      std::addressof (_tao_boolean_attribute)
     };
 
   TAO::Asynch_Invocation_Adapter _invocation_call (
@@ -6180,8 +6110,8 @@ OldDif2::ex4::sendc_set_string_attribute (
 
   TAO::Argument *_the_tao_operation_signature[] =
     {
-      std::addressof(_tao_retval),
-      std::addressof(_tao_string_attribute)
+      std::addressof (_tao_retval),
+      std::addressof (_tao_string_attribute)
     };
 
   TAO::Asynch_Invocation_Adapter _invocation_call (
@@ -6325,10 +6255,10 @@ OldDif2::ex4::_tao_release (ex4_ptr obj)
 OldDif2::ex4::_is_a (char const *value)
 {
   if (std::strcmp (value, "IDL:OldDif2/ex1:1.0") == 0 ||
-      std::strcmp (value, "IDL:OldDif2/ex2:1.0") == 0 ||
-      std::strcmp (value, "IDL:OldDif2/ex3:1.0") == 0 ||
-      std::strcmp (value, "IDL:OldDif2/ex4:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0)
+    std::strcmp (value, "IDL:OldDif2/ex2:1.0") == 0 ||
+    std::strcmp (value, "IDL:OldDif2/ex3:1.0") == 0 ||
+    std::strcmp (value, "IDL:OldDif2/ex4:1.0") == 0 ||
+    std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0)
     {
       return true; // success using local knowledge
     }
@@ -6653,7 +6583,7 @@ TAO::Objref_Traits<OldDif2::AMH_ex4ResponseHandler>::nil ()
 }
 
 ::CORBA::Boolean
-TAO::Objref_Traits<OldDif2::AMH_ex4ResponseHandler>::marshal (OldDif2::AMH_ex4ResponseHandler_ptr const p,TAO_OutputCDR & cdr)
+TAO::Objref_Traits<OldDif2::AMH_ex4ResponseHandler>::marshal (OldDif2::AMH_ex4ResponseHandler_ptr const p, TAO_OutputCDR &cdr)
 {
   return ::CORBA::Object::marshal (p, cdr);
 }
@@ -6674,14 +6604,14 @@ OldDif2::AMH_ex4ResponseHandler_ptr
 OldDif2::AMH_ex4ResponseHandler::_narrow (::CORBA::Object_ptr _tao_objref)
 {
   return AMH_ex4ResponseHandler::_duplicate (
-      dynamic_cast<AMH_ex4ResponseHandler_ptr> (_tao_objref));
+    dynamic_cast<AMH_ex4ResponseHandler_ptr> (_tao_objref));
 }
 
 OldDif2::AMH_ex4ResponseHandler_ptr
 OldDif2::AMH_ex4ResponseHandler::_unchecked_narrow (::CORBA::Object_ptr _tao_objref)
 {
   return AMH_ex4ResponseHandler::_duplicate (
-      dynamic_cast<AMH_ex4ResponseHandler_ptr> (_tao_objref));
+    dynamic_cast<AMH_ex4ResponseHandler_ptr> (_tao_objref));
 }
 
 OldDif2::AMH_ex4ResponseHandler_ptr
@@ -6710,8 +6640,8 @@ OldDif2::AMH_ex4ResponseHandler::_tao_release (AMH_ex4ResponseHandler_ptr obj)
 OldDif2::AMH_ex4ResponseHandler::_is_a (char const *value)
 {
   if (std::strcmp (value, "IDL:OldDif2/AMH_ex4ResponseHandler:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/LocalObject:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0)
+    std::strcmp (value, "IDL:omg.org/CORBA/LocalObject:1.0") == 0 ||
+    std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0)
     {
       return true; // success using local knowledge
     }
@@ -6765,7 +6695,7 @@ TAO::Objref_Traits<OldDif2::AMI_ex4Handler>::nil ()
 }
 
 ::CORBA::Boolean
-TAO::Objref_Traits<OldDif2::AMI_ex4Handler>::marshal (OldDif2::AMI_ex4Handler_ptr const p,TAO_OutputCDR & cdr)
+TAO::Objref_Traits<OldDif2::AMI_ex4Handler>::marshal (OldDif2::AMI_ex4Handler_ptr const p, TAO_OutputCDR &cdr)
 {
   return ::CORBA::Object::marshal (p, cdr);
 }
@@ -6786,8 +6716,8 @@ OldDif2::AMI_ex4Handler::get_unsigned_short_attribute (
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
-      std::addressof(_tao_retval),
-      std::addressof(_tao_ami_return_val)
+      std::addressof (_tao_retval),
+      std::addressof (_tao_ami_return_val)
     };
 
   TAO::Invocation_Adapter _invocation_call (
@@ -6797,7 +6727,6 @@ OldDif2::AMI_ex4Handler::get_unsigned_short_attribute (
       "get_unsigned_short_attribute",
       28,
       TAO::TAO_CO_NONE | TAO::TAO_CO_DIRECT_STRATEGY | TAO::TAO_CO_THRU_POA_STRATEGY
-
     );
 
   _invocation_call.invoke (nullptr, 0);
@@ -6879,8 +6808,8 @@ OldDif2::AMI_ex4Handler::get_unsigned_short_attribute_excep (
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
-      std::addressof(_tao_retval),
-      std::addressof(_tao_excep_holder)
+      std::addressof (_tao_retval),
+      std::addressof (_tao_excep_holder)
     };
 
   TAO::Invocation_Adapter _invocation_call (
@@ -6890,7 +6819,6 @@ OldDif2::AMI_ex4Handler::get_unsigned_short_attribute_excep (
       "get_unsigned_short_attribute_excep",
       34,
       TAO::TAO_CO_NONE | TAO::TAO_CO_DIRECT_STRATEGY | TAO::TAO_CO_THRU_POA_STRATEGY
-
     );
 
   _invocation_call.invoke (nullptr, 0);
@@ -6907,7 +6835,7 @@ OldDif2::AMI_ex4Handler::set_unsigned_short_attribute ()
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
-      std::addressof(_tao_retval)
+      std::addressof (_tao_retval)
     };
 
   TAO::Invocation_Adapter _invocation_call (
@@ -6917,8 +6845,7 @@ OldDif2::AMI_ex4Handler::set_unsigned_short_attribute ()
       "set_unsigned_short_attribute",
       28,
       TAO::TAO_CO_NONE | TAO::TAO_CO_DIRECT_STRATEGY | TAO::TAO_CO_THRU_POA_STRATEGY,
-      TAO::TAO_TWOWAY_INVOCATION
-      ,
+      TAO::TAO_TWOWAY_INVOCATION,
       TAO::TAO_SYNCHRONOUS_INVOCATION,
       false
     );
@@ -6994,8 +6921,8 @@ OldDif2::AMI_ex4Handler::set_unsigned_short_attribute_excep (
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
-      std::addressof(_tao_retval),
-      std::addressof(_tao_excep_holder)
+      std::addressof (_tao_retval),
+      std::addressof (_tao_excep_holder)
     };
 
   TAO::Invocation_Adapter _invocation_call (
@@ -7005,7 +6932,6 @@ OldDif2::AMI_ex4Handler::set_unsigned_short_attribute_excep (
       "set_unsigned_short_attribute_excep",
       34,
       TAO::TAO_CO_NONE | TAO::TAO_CO_DIRECT_STRATEGY | TAO::TAO_CO_THRU_POA_STRATEGY
-
     );
 
   _invocation_call.invoke (nullptr, 0);
@@ -7024,8 +6950,8 @@ OldDif2::AMI_ex4Handler::get_char_attribute (
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
-      std::addressof(_tao_retval),
-      std::addressof(_tao_ami_return_val)
+      std::addressof (_tao_retval),
+      std::addressof (_tao_ami_return_val)
     };
 
   TAO::Invocation_Adapter _invocation_call (
@@ -7035,7 +6961,6 @@ OldDif2::AMI_ex4Handler::get_char_attribute (
       "get_char_attribute",
       18,
       TAO::TAO_CO_NONE | TAO::TAO_CO_DIRECT_STRATEGY | TAO::TAO_CO_THRU_POA_STRATEGY
-
     );
 
   _invocation_call.invoke (nullptr, 0);
@@ -7117,8 +7042,8 @@ OldDif2::AMI_ex4Handler::get_char_attribute_excep (
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
-      std::addressof(_tao_retval),
-      std::addressof(_tao_excep_holder)
+      std::addressof (_tao_retval),
+      std::addressof (_tao_excep_holder)
     };
 
   TAO::Invocation_Adapter _invocation_call (
@@ -7128,7 +7053,6 @@ OldDif2::AMI_ex4Handler::get_char_attribute_excep (
       "get_char_attribute_excep",
       24,
       TAO::TAO_CO_NONE | TAO::TAO_CO_DIRECT_STRATEGY | TAO::TAO_CO_THRU_POA_STRATEGY
-
     );
 
   _invocation_call.invoke (nullptr, 0);
@@ -7147,8 +7071,8 @@ OldDif2::AMI_ex4Handler::get_boolean_attribute (
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
-      std::addressof(_tao_retval),
-      std::addressof(_tao_ami_return_val)
+      std::addressof (_tao_retval),
+      std::addressof (_tao_ami_return_val)
     };
 
   TAO::Invocation_Adapter _invocation_call (
@@ -7158,7 +7082,6 @@ OldDif2::AMI_ex4Handler::get_boolean_attribute (
       "get_boolean_attribute",
       21,
       TAO::TAO_CO_NONE | TAO::TAO_CO_DIRECT_STRATEGY | TAO::TAO_CO_THRU_POA_STRATEGY
-
     );
 
   _invocation_call.invoke (nullptr, 0);
@@ -7240,8 +7163,8 @@ OldDif2::AMI_ex4Handler::get_boolean_attribute_excep (
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
-      std::addressof(_tao_retval),
-      std::addressof(_tao_excep_holder)
+      std::addressof (_tao_retval),
+      std::addressof (_tao_excep_holder)
     };
 
   TAO::Invocation_Adapter _invocation_call (
@@ -7251,7 +7174,6 @@ OldDif2::AMI_ex4Handler::get_boolean_attribute_excep (
       "get_boolean_attribute_excep",
       27,
       TAO::TAO_CO_NONE | TAO::TAO_CO_DIRECT_STRATEGY | TAO::TAO_CO_THRU_POA_STRATEGY
-
     );
 
   _invocation_call.invoke (nullptr, 0);
@@ -7268,7 +7190,7 @@ OldDif2::AMI_ex4Handler::set_boolean_attribute ()
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
-      std::addressof(_tao_retval)
+      std::addressof (_tao_retval)
     };
 
   TAO::Invocation_Adapter _invocation_call (
@@ -7278,8 +7200,7 @@ OldDif2::AMI_ex4Handler::set_boolean_attribute ()
       "set_boolean_attribute",
       21,
       TAO::TAO_CO_NONE | TAO::TAO_CO_DIRECT_STRATEGY | TAO::TAO_CO_THRU_POA_STRATEGY,
-      TAO::TAO_TWOWAY_INVOCATION
-      ,
+      TAO::TAO_TWOWAY_INVOCATION,
       TAO::TAO_SYNCHRONOUS_INVOCATION,
       false
     );
@@ -7355,8 +7276,8 @@ OldDif2::AMI_ex4Handler::set_boolean_attribute_excep (
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
-      std::addressof(_tao_retval),
-      std::addressof(_tao_excep_holder)
+      std::addressof (_tao_retval),
+      std::addressof (_tao_excep_holder)
     };
 
   TAO::Invocation_Adapter _invocation_call (
@@ -7366,7 +7287,6 @@ OldDif2::AMI_ex4Handler::set_boolean_attribute_excep (
       "set_boolean_attribute_excep",
       27,
       TAO::TAO_CO_NONE | TAO::TAO_CO_DIRECT_STRATEGY | TAO::TAO_CO_THRU_POA_STRATEGY
-
     );
 
   _invocation_call.invoke (nullptr, 0);
@@ -7385,8 +7305,8 @@ OldDif2::AMI_ex4Handler::get_octet_attribute (
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
-      std::addressof(_tao_retval),
-      std::addressof(_tao_ami_return_val)
+      std::addressof (_tao_retval),
+      std::addressof (_tao_ami_return_val)
     };
 
   TAO::Invocation_Adapter _invocation_call (
@@ -7396,7 +7316,6 @@ OldDif2::AMI_ex4Handler::get_octet_attribute (
       "get_octet_attribute",
       19,
       TAO::TAO_CO_NONE | TAO::TAO_CO_DIRECT_STRATEGY | TAO::TAO_CO_THRU_POA_STRATEGY
-
     );
 
   _invocation_call.invoke (nullptr, 0);
@@ -7478,8 +7397,8 @@ OldDif2::AMI_ex4Handler::get_octet_attribute_excep (
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
-      std::addressof(_tao_retval),
-      std::addressof(_tao_excep_holder)
+      std::addressof (_tao_retval),
+      std::addressof (_tao_excep_holder)
     };
 
   TAO::Invocation_Adapter _invocation_call (
@@ -7489,7 +7408,6 @@ OldDif2::AMI_ex4Handler::get_octet_attribute_excep (
       "get_octet_attribute_excep",
       25,
       TAO::TAO_CO_NONE | TAO::TAO_CO_DIRECT_STRATEGY | TAO::TAO_CO_THRU_POA_STRATEGY
-
     );
 
   _invocation_call.invoke (nullptr, 0);
@@ -7508,8 +7426,8 @@ OldDif2::AMI_ex4Handler::get_string_attribute (
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
-      std::addressof(_tao_retval),
-      std::addressof(_tao_ami_return_val)
+      std::addressof (_tao_retval),
+      std::addressof (_tao_ami_return_val)
     };
 
   TAO::Invocation_Adapter _invocation_call (
@@ -7519,7 +7437,6 @@ OldDif2::AMI_ex4Handler::get_string_attribute (
       "get_string_attribute",
       20,
       TAO::TAO_CO_NONE | TAO::TAO_CO_DIRECT_STRATEGY | TAO::TAO_CO_THRU_POA_STRATEGY
-
     );
 
   _invocation_call.invoke (nullptr, 0);
@@ -7601,8 +7518,8 @@ OldDif2::AMI_ex4Handler::get_string_attribute_excep (
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
-      std::addressof(_tao_retval),
-      std::addressof(_tao_excep_holder)
+      std::addressof (_tao_retval),
+      std::addressof (_tao_excep_holder)
     };
 
   TAO::Invocation_Adapter _invocation_call (
@@ -7612,7 +7529,6 @@ OldDif2::AMI_ex4Handler::get_string_attribute_excep (
       "get_string_attribute_excep",
       26,
       TAO::TAO_CO_NONE | TAO::TAO_CO_DIRECT_STRATEGY | TAO::TAO_CO_THRU_POA_STRATEGY
-
     );
 
   _invocation_call.invoke (nullptr, 0);
@@ -7629,7 +7545,7 @@ OldDif2::AMI_ex4Handler::set_string_attribute ()
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
-      std::addressof(_tao_retval)
+      std::addressof (_tao_retval)
     };
 
   TAO::Invocation_Adapter _invocation_call (
@@ -7639,8 +7555,7 @@ OldDif2::AMI_ex4Handler::set_string_attribute ()
       "set_string_attribute",
       20,
       TAO::TAO_CO_NONE | TAO::TAO_CO_DIRECT_STRATEGY | TAO::TAO_CO_THRU_POA_STRATEGY,
-      TAO::TAO_TWOWAY_INVOCATION
-      ,
+      TAO::TAO_TWOWAY_INVOCATION,
       TAO::TAO_SYNCHRONOUS_INVOCATION,
       false
     );
@@ -7716,8 +7631,8 @@ OldDif2::AMI_ex4Handler::set_string_attribute_excep (
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
-      std::addressof(_tao_retval),
-      std::addressof(_tao_excep_holder)
+      std::addressof (_tao_retval),
+      std::addressof (_tao_excep_holder)
     };
 
   TAO::Invocation_Adapter _invocation_call (
@@ -7727,7 +7642,6 @@ OldDif2::AMI_ex4Handler::set_string_attribute_excep (
       "set_string_attribute_excep",
       26,
       TAO::TAO_CO_NONE | TAO::TAO_CO_DIRECT_STRATEGY | TAO::TAO_CO_THRU_POA_STRATEGY
-
     );
 
   _invocation_call.invoke (nullptr, 0);
@@ -7746,8 +7660,8 @@ OldDif2::AMI_ex4Handler::get_limited_string_attribute (
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
-      std::addressof(_tao_retval),
-      std::addressof(_tao_ami_return_val)
+      std::addressof (_tao_retval),
+      std::addressof (_tao_ami_return_val)
     };
 
   TAO::Invocation_Adapter _invocation_call (
@@ -7757,7 +7671,6 @@ OldDif2::AMI_ex4Handler::get_limited_string_attribute (
       "get_limited_string_attribute",
       28,
       TAO::TAO_CO_NONE | TAO::TAO_CO_DIRECT_STRATEGY | TAO::TAO_CO_THRU_POA_STRATEGY
-
     );
 
   _invocation_call.invoke (nullptr, 0);
@@ -7839,8 +7752,8 @@ OldDif2::AMI_ex4Handler::get_limited_string_attribute_excep (
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
-      std::addressof(_tao_retval),
-      std::addressof(_tao_excep_holder)
+      std::addressof (_tao_retval),
+      std::addressof (_tao_excep_holder)
     };
 
   TAO::Invocation_Adapter _invocation_call (
@@ -7850,7 +7763,6 @@ OldDif2::AMI_ex4Handler::get_limited_string_attribute_excep (
       "get_limited_string_attribute_excep",
       34,
       TAO::TAO_CO_NONE | TAO::TAO_CO_DIRECT_STRATEGY | TAO::TAO_CO_THRU_POA_STRATEGY
-
     );
 
   _invocation_call.invoke (nullptr, 0);
@@ -7869,8 +7781,8 @@ OldDif2::AMI_ex4Handler::get_an_object_attribute (
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
-      std::addressof(_tao_retval),
-      std::addressof(_tao_ami_return_val)
+      std::addressof (_tao_retval),
+      std::addressof (_tao_ami_return_val)
     };
 
   TAO::Invocation_Adapter _invocation_call (
@@ -7880,7 +7792,6 @@ OldDif2::AMI_ex4Handler::get_an_object_attribute (
       "get_an_object_attribute",
       23,
       TAO::TAO_CO_NONE | TAO::TAO_CO_DIRECT_STRATEGY | TAO::TAO_CO_THRU_POA_STRATEGY
-
     );
 
   _invocation_call.invoke (nullptr, 0);
@@ -7962,8 +7873,8 @@ OldDif2::AMI_ex4Handler::get_an_object_attribute_excep (
 
   TAO::Argument *_the_tao_operation_signature [] =
     {
-      std::addressof(_tao_retval),
-      std::addressof(_tao_excep_holder)
+      std::addressof (_tao_retval),
+      std::addressof (_tao_excep_holder)
     };
 
   TAO::Invocation_Adapter _invocation_call (
@@ -7973,7 +7884,6 @@ OldDif2::AMI_ex4Handler::get_an_object_attribute_excep (
       "get_an_object_attribute_excep",
       29,
       TAO::TAO_CO_NONE | TAO::TAO_CO_DIRECT_STRATEGY | TAO::TAO_CO_THRU_POA_STRATEGY
-
     );
 
   _invocation_call.invoke (nullptr, 0);
@@ -8027,11 +7937,11 @@ OldDif2::AMI_ex4Handler::_tao_release (AMI_ex4Handler_ptr obj)
 OldDif2::AMI_ex4Handler::_is_a (char const *value)
 {
   if (std::strcmp (value, "IDL:omg.org/Messaging/ReplyHandler:1.0") == 0 ||
-      std::strcmp (value, "IDL:OldDif2/AMI_ex1Handler:1.0") == 0 ||
-      std::strcmp (value, "IDL:OldDif2/AMI_ex2Handler:1.0") == 0 ||
-      std::strcmp (value, "IDL:OldDif2/AMI_ex3Handler:1.0") == 0 ||
-      std::strcmp (value, "IDL:OldDif2/AMI_ex4Handler:1.0") == 0 ||
-      std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0)
+    std::strcmp (value, "IDL:OldDif2/AMI_ex1Handler:1.0") == 0 ||
+    std::strcmp (value, "IDL:OldDif2/AMI_ex2Handler:1.0") == 0 ||
+    std::strcmp (value, "IDL:OldDif2/AMI_ex3Handler:1.0") == 0 ||
+    std::strcmp (value, "IDL:OldDif2/AMI_ex4Handler:1.0") == 0 ||
+    std::strcmp (value, "IDL:omg.org/CORBA/Object:1.0") == 0)
     {
       return true; // success using local knowledge
     }
@@ -8601,4 +8511,3 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
-
