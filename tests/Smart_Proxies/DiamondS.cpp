@@ -256,19 +256,19 @@ TAO_Diamond_Left_Perfect_Hash_OpTable::hash (char const *str, std::size_t len)
 {
   static constexpr std::array<unsigned char, 128> asso_values =
     {
-     19, 19, 19, 19, 19, 19, 19, 19, 19, 19,
-     19, 19, 19, 19, 19, 19, 19, 19, 19, 19,
-     19, 19, 19, 19, 19, 19, 19, 19, 19, 19,
-     19, 19, 19, 19, 19, 19, 19, 19, 19, 19,
-     19, 19, 19, 19, 19, 19, 19, 19, 19, 19,
-     19, 19, 19, 19, 19, 19, 19, 19, 19, 19,
-     19, 19, 19, 19, 19, 19, 19, 19, 19, 19,
-     19, 19, 19, 19, 19, 19, 19, 19, 19, 19,
-     19, 19, 19, 19, 19, 19, 19, 19, 19, 19,
-     19, 19, 19, 19, 19,  0, 19,  7, 19,  0,
-      0,  0, 19, 19, 19, 19, 19, 19, 19, 19,
-     19, 19, 19, 19,  4,  0,  5, 19, 19, 19,
-     19, 19, 19, 19, 19, 19, 19, 19,
+     16, 16, 16, 16, 16, 16, 16, 16, 16, 16,
+     16, 16, 16, 16, 16, 16, 16, 16, 16, 16,
+     16, 16, 16, 16, 16, 16, 16, 16, 16, 16,
+     16, 16, 16, 16, 16, 16, 16, 16, 16, 16,
+     16, 16, 16, 16, 16, 16, 16, 16, 16, 16,
+     16, 16, 16, 16, 16, 16, 16, 16, 16, 16,
+     16, 16, 16, 16, 16, 16, 16, 16, 16, 16,
+     16, 16, 16, 16, 16, 16, 16, 16, 16, 16,
+     16, 16, 16, 16, 16, 16, 16, 16, 16, 16,
+     16, 16, 16, 16, 16,  0, 16,  2, 16,  0,
+      0,  5, 16, 16, 16, 16, 16, 16, 16, 16,
+     16, 16, 16, 16,  0,  2,  0, 16, 16, 16,
+     16, 16, 16, 16, 16, 16, 16, 16,
     };
   unsigned char const last_char = static_cast<unsigned char> (str[len - 1]);
   unsigned char const first_char = static_cast<unsigned char> (str[0]);
@@ -281,24 +281,21 @@ TAO_Diamond_Left_Perfect_Hash_OpTable::lookup (char const *str, std::size_t len)
   constexpr std::size_t MIN_WORD_LENGTH {5};
   constexpr std::size_t MAX_WORD_LENGTH {14};
   constexpr int MIN_HASH_VALUE {5};
-  constexpr int MAX_HASH_VALUE {18};
+  constexpr int MAX_HASH_VALUE {15};
 
-  static constexpr std::array<TAO_operation_db_entry, 19> wordlist =
+  static constexpr std::array<TAO_operation_db_entry, 16> wordlist =
     {{
       {"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},
-      {"shape", std::addressof(POA_Diamond::Top::shape_skel), std::addressof(POA_Diamond::_TAO_Top_Direct_Proxy_Impl::shape)},
-      {"",nullptr,nullptr},
-      {"combine", std::addressof(POA_Diamond::Left::combine_skel), std::addressof(POA_Diamond::_TAO_Left_Direct_Proxy_Impl::combine)},
-      {"",nullptr,nullptr},
       {"color", std::addressof(POA_Diamond::Left::color_skel), std::addressof(POA_Diamond::_TAO_Left_Direct_Proxy_Impl::color)},
-      {"_interface", std::addressof(TAO_ServantBase::_interface_skel), nullptr},
       {"",nullptr,nullptr},
       {"_is_a", std::addressof(TAO_ServantBase::_is_a_thru_poa_skel), nullptr},
-      {"",nullptr,nullptr},
-      {"_repository_id", std::addressof(TAO_ServantBase::_repository_id_thru_poa_skel), nullptr},
-      {"_component", std::addressof(TAO_ServantBase::_component_thru_poa_skel), nullptr},
       {"",nullptr,nullptr},{"",nullptr,nullptr},
+      {"_component", std::addressof(TAO_ServantBase::_component_thru_poa_skel), nullptr},
+      {"",nullptr,nullptr},
+      {"shape", std::addressof(POA_Diamond::Top::shape_skel), std::addressof(POA_Diamond::_TAO_Top_Direct_Proxy_Impl::shape)},
       {"_non_existent", std::addressof(TAO_ServantBase::_non_existent_thru_poa_skel), nullptr},
+      {"_repository_id", std::addressof(TAO_ServantBase::_repository_id_thru_poa_skel), nullptr},
+      {"_interface", std::addressof(TAO_ServantBase::_interface_skel), nullptr},
     }};
 
   if (len <= MAX_WORD_LENGTH && len >= MIN_WORD_LENGTH)
@@ -331,29 +328,6 @@ POA_Diamond::_TAO_Left_Direct_Proxy_Impl::color (TAO_Abstract_ServantBase *serva
   using _tao_retval_type = TAO::Arg_Traits<char *>::ret_val;
   _tao_retval_type * const _tao_retval = static_cast<_tao_retval_type *> (args[0]);
   _tao_retval->arg () = _tao_ptr->color ();
-}
-
-void
-POA_Diamond::_TAO_Left_Direct_Proxy_Impl::combine (TAO_Abstract_ServantBase *servant, TAO::Argument **args)
-{
-  POA_Diamond::Left_ptr _tao_ptr = dynamic_cast<POA_Diamond::Left_ptr> (servant);
-  if (!_tao_ptr)
-    {
-      throw ::CORBA::INTERNAL ();
-    }
-  using _tao_retval_type = TAO::Arg_Traits<::CORBA::Long>::ret_val;
-  _tao_retval_type * const _tao_retval = static_cast<_tao_retval_type *> (args[0]);
-  using _tao_arg_1_type = TAO::Arg_Traits<::CORBA::Long>::in_arg_val;
-  _tao_arg_1_type * const _tao_arg_1 = static_cast<_tao_arg_1_type *> (args[1]);
-  using _tao_arg_2_type = TAO::Arg_Traits<::CORBA::Long>::inout_arg_val;
-  _tao_arg_2_type * const _tao_arg_2 = static_cast<_tao_arg_2_type *> (args[2]);
-  using _tao_arg_3_type = TAO::Arg_Traits<::CORBA::Long>::out_arg_val;
-  _tao_arg_3_type * const _tao_arg_3 = static_cast<_tao_arg_3_type *> (args[3]);
-
-  _tao_retval->arg () = _tao_ptr->combine (
-    _tao_arg_1->arg (),
-    _tao_arg_2->arg (),
-    _tao_arg_3->arg ());
 }
 
 POA_Diamond::Left::Left ()
@@ -416,98 +390,6 @@ void POA_Diamond::Left::color_skel (
   upcall_wrapper.upcall (server_request
                          , args
                          , 1
-                         , command
-#if TAO_HAS_INTERCEPTORS == 1
-                         , servant_upcall
-                         , nullptr
-                         , 0
-#endif  /* TAO_HAS_INTERCEPTORS == 1 */
-                         );
-}
-
-namespace POA_Diamond
-{
-
-  class combine_Left : public TAO::Upcall_Command
-  {
-  public:
-    inline combine_Left (POA_Diamond::Left * servant,
-      TAO_Operation_Details const * operation_details,
-      TAO::Argument * const args[])
-      : servant_ (servant)
-        , operation_details_ (operation_details)
-        , args_ (args) {}
-
-    void execute () override
-    {
-      TAO::SArg_Traits<::CORBA::Long>::ret_arg_type retval = TAO::Portable_Server::get_ret_arg<::CORBA::Long> (
-        this->operation_details_,
-        this->args_);
-      TAO::SArg_Traits<::CORBA::Long>::in_arg_type arg_1 =
-        TAO::Portable_Server::get_in_arg<::CORBA::Long> (
-          this->operation_details_,
-          this->args_,
-          1);
-
-      TAO::SArg_Traits<::CORBA::Long>::inout_arg_type arg_2 =
-        TAO::Portable_Server::get_inout_arg<::CORBA::Long> (
-          this->operation_details_,
-          this->args_,
-          2);
-
-      TAO::SArg_Traits<::CORBA::Long>::out_arg_type arg_3 =
-        TAO::Portable_Server::get_out_arg<::CORBA::Long> (
-          this->operation_details_,
-          this->args_,
-          3);
-
-      retval =
-        this->servant_->combine (
-          arg_1
-          , arg_2
-          , arg_3);
-    }
-
-  private:
-    POA_Diamond::Left * const servant_;
-    TAO_Operation_Details const * const operation_details_;
-    TAO::Argument * const * const args_;
-  };
-}
-void POA_Diamond::Left::combine_skel (
-  TAO_ServerRequest & server_request,
-  TAO::Portable_Server::Servant_Upcall *TAO_INTERCEPTOR (servant_upcall),
-  TAO_ServantBase *servant)
-{
-  TAO::SArg_Traits<::CORBA::Long>::ret_val retval;
-  TAO::SArg_Traits<::CORBA::Long>::in_arg_val _tao_first;
-  TAO::SArg_Traits<::CORBA::Long>::inout_arg_val _tao_second;
-  TAO::SArg_Traits<::CORBA::Long>::out_arg_val _tao_third;
-
-  TAO::Argument * const args[] =
-    {
-      std::addressof(retval),
-      std::addressof(_tao_first),
-      std::addressof(_tao_second),
-      std::addressof(_tao_third)
-    };
-
-  POA_Diamond::Left * const impl = dynamic_cast<POA_Diamond::Left *> (servant);
-
-  if (!impl)
-    {
-      throw ::CORBA::INTERNAL ();
-    }
-
-  combine_Left command (
-    impl,
-    server_request.operation_details (),
-    args);
-
-  TAO::Upcall_Wrapper upcall_wrapper;
-  upcall_wrapper.upcall (server_request
-                         , args
-                         , 4
                          , command
 #if TAO_HAS_INTERCEPTORS == 1
                          , servant_upcall
@@ -771,9 +653,9 @@ TAO_Diamond_Buttom_Perfect_Hash_OpTable::hash (char const *str, std::size_t len)
      21, 21, 21, 21, 21, 21, 21, 21, 21, 21,
      21, 21, 21, 21, 21, 21, 21, 21, 21, 21,
      21, 21, 21, 21, 21, 21, 21, 21, 21, 21,
-     21, 21, 21, 21, 21,  0, 21, 15, 21,  0,
+     21, 21, 21, 21, 21,  0, 21, 15, 21,  4,
       0,  0, 21, 21, 14, 21, 21, 21, 21, 21,
-      0, 21, 21, 21,  4,  0,  5, 21, 21,  0,
+      0, 21, 21, 21,  0,  0,  5, 21, 21,  0,
      21, 21, 21, 21, 21, 21, 21, 21,
     };
   unsigned char const last_char = static_cast<unsigned char> (str[len - 1]);
@@ -794,9 +676,7 @@ TAO_Diamond_Buttom_Perfect_Hash_OpTable::lookup (char const *str, std::size_t le
       {"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},
       {"name", std::addressof(POA_Diamond::Buttom::name_skel), std::addressof(POA_Diamond::_TAO_Buttom_Direct_Proxy_Impl::name)},
       {"shape", std::addressof(POA_Diamond::Top::shape_skel), std::addressof(POA_Diamond::_TAO_Top_Direct_Proxy_Impl::shape)},
-      {"",nullptr,nullptr},
-      {"combine", std::addressof(POA_Diamond::Left::combine_skel), std::addressof(POA_Diamond::_TAO_Left_Direct_Proxy_Impl::combine)},
-      {"",nullptr,nullptr},
+      {"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},
       {"color", std::addressof(POA_Diamond::Left::color_skel), std::addressof(POA_Diamond::_TAO_Left_Direct_Proxy_Impl::color)},
       {"_interface", std::addressof(TAO_ServantBase::_interface_skel), nullptr},
       {"",nullptr,nullptr},{"",nullptr,nullptr},{"",nullptr,nullptr},
