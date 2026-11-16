@@ -1749,12 +1749,6 @@ Supports_Inherited_Operation::_tao_unmarshal (
   return true;
 }
 
-::CORBA::ValueBase *
-Supports_Inherited_Operation::_tao_to_value ()
-{
-  return this;
-}
-
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 // Traits specializations for Empty_Valuetype_Interface.
@@ -2428,12 +2422,6 @@ Factory_Initialized_Value::_tao_unmarshal (
 
   owner._retn ();
   return true;
-}
-
-::CORBA::ValueBase *
-Factory_Initialized_Value::_tao_to_value ()
-{
-  return this;
 }
 
 Factory_Initialized_Value_init::Factory_Initialized_Value_init ()
