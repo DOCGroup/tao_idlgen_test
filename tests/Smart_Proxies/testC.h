@@ -41,6 +41,7 @@
 #include "tao/Object.h"
 #include "tao/String_Manager_T.h"
 #include "tao/SmartProxies/Smart_Proxies.h"
+#include "tao/TAO_Singleton.h"
 #include "tao/Objref_VarOut_T.h"
 #include "tao/VarOut_T.h"
 #include "tao/Arg_Traits_T.h"

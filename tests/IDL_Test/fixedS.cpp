@@ -58,16 +58,16 @@ class TAO_FixedPoint_AMH_FixedOperations_Perfect_Hash_OpTable
   : public TAO_Perfect_Hash_OpTable
 {
 private:
-  std::size_t hash (char const *str, std::size_t len) override;
+  size_t hash (char const *str, size_t len) override;
 public:
-  TAO_operation_db_entry const * lookup (char const *str, std::size_t len) override;
+  TAO_operation_db_entry const * lookup (char const *str, size_t len) override;
 };
 
 /* C++ code produced by ACE gperf version 8.0.8 */
 /* Command-line: ace_gperf -m -M -J -Q -R -c -C -D -E -T -f 0 -F nullptr,nullptr -o -t -p -K opname -Z TAO_FixedPoint_AMH_FixedOperations_Perfect_Hash_OpTable -N lookup */
 
-std::size_t
-TAO_FixedPoint_AMH_FixedOperations_Perfect_Hash_OpTable::hash (char const *str, std::size_t len)
+size_t
+TAO_FixedPoint_AMH_FixedOperations_Perfect_Hash_OpTable::hash (char const *str, size_t len)
 {
   static constexpr std::array<unsigned char, 128> asso_values =
     {
@@ -91,10 +91,10 @@ TAO_FixedPoint_AMH_FixedOperations_Perfect_Hash_OpTable::hash (char const *str, 
 }
 
 TAO_operation_db_entry const *
-TAO_FixedPoint_AMH_FixedOperations_Perfect_Hash_OpTable::lookup (char const *str, std::size_t len)
+TAO_FixedPoint_AMH_FixedOperations_Perfect_Hash_OpTable::lookup (char const *str, size_t len)
 {
-  constexpr std::size_t MIN_WORD_LENGTH {5};
-  constexpr std::size_t MAX_WORD_LENGTH {14};
+  constexpr size_t MIN_WORD_LENGTH {5};
+  constexpr size_t MAX_WORD_LENGTH {14};
   constexpr int MIN_HASH_VALUE {5};
   constexpr int MAX_HASH_VALUE {18};
 
@@ -118,7 +118,7 @@ TAO_FixedPoint_AMH_FixedOperations_Perfect_Hash_OpTable::lookup (char const *str
 
   if (len <= MAX_WORD_LENGTH && len >= MIN_WORD_LENGTH)
     {
-      std::size_t const key = hash (str, len);
+      size_t const key = hash (str, len);
 
       if (key <= MAX_HASH_VALUE && key >= MIN_HASH_VALUE)
         {
@@ -135,9 +135,9 @@ TAO_FixedPoint_AMH_FixedOperations_Perfect_Hash_OpTable::lookup (char const *str
             return nullptr;
           else
             {
-              std::size_t const offset = slot > 0
-                ? key + static_cast<std::size_t> (slot) - MAX_HASH_VALUE
-                : key + MAX_HASH_VALUE - static_cast<std::size_t> (-slot);
+              size_t const offset = slot > 0
+                ? key + static_cast<size_t> (slot) - MAX_HASH_VALUE
+                : key + MAX_HASH_VALUE - static_cast<size_t> (-slot);
               TAO_operation_db_entry const * const base = std::addressof (wordlist[-lookup[offset]]);
               TAO_operation_db_entry const *ptr = base + -lookup[offset + 1];
 
@@ -274,16 +274,16 @@ class TAO_FixedPoint_FixedOperations_Perfect_Hash_OpTable
   : public TAO_Perfect_Hash_OpTable
 {
 private:
-  std::size_t hash (char const *str, std::size_t len) override;
+  size_t hash (char const *str, size_t len) override;
 public:
-  TAO_operation_db_entry const * lookup (char const *str, std::size_t len) override;
+  TAO_operation_db_entry const * lookup (char const *str, size_t len) override;
 };
 
 /* C++ code produced by ACE gperf version 8.0.8 */
 /* Command-line: ace_gperf -m -M -J -Q -R -c -C -D -E -T -f 0 -F nullptr,nullptr -o -t -p -K opname -Z TAO_FixedPoint_FixedOperations_Perfect_Hash_OpTable -N lookup */
 
-std::size_t
-TAO_FixedPoint_FixedOperations_Perfect_Hash_OpTable::hash (char const *str, std::size_t len)
+size_t
+TAO_FixedPoint_FixedOperations_Perfect_Hash_OpTable::hash (char const *str, size_t len)
 {
   static constexpr std::array<unsigned char, 128> asso_values =
     {
@@ -307,10 +307,10 @@ TAO_FixedPoint_FixedOperations_Perfect_Hash_OpTable::hash (char const *str, std:
 }
 
 TAO_operation_db_entry const *
-TAO_FixedPoint_FixedOperations_Perfect_Hash_OpTable::lookup (char const *str, std::size_t len)
+TAO_FixedPoint_FixedOperations_Perfect_Hash_OpTable::lookup (char const *str, size_t len)
 {
-  constexpr std::size_t MIN_WORD_LENGTH {5};
-  constexpr std::size_t MAX_WORD_LENGTH {14};
+  constexpr size_t MIN_WORD_LENGTH {5};
+  constexpr size_t MAX_WORD_LENGTH {14};
   constexpr int MIN_HASH_VALUE {5};
   constexpr int MAX_HASH_VALUE {18};
 
@@ -334,7 +334,7 @@ TAO_FixedPoint_FixedOperations_Perfect_Hash_OpTable::lookup (char const *str, st
 
   if (len <= MAX_WORD_LENGTH && len >= MIN_WORD_LENGTH)
     {
-      std::size_t const key = hash (str, len);
+      size_t const key = hash (str, len);
 
       if (key <= MAX_HASH_VALUE && key >= MIN_HASH_VALUE)
         {
@@ -351,9 +351,9 @@ TAO_FixedPoint_FixedOperations_Perfect_Hash_OpTable::lookup (char const *str, st
             return nullptr;
           else
             {
-              std::size_t const offset = slot > 0
-                ? key + static_cast<std::size_t> (slot) - MAX_HASH_VALUE
-                : key + MAX_HASH_VALUE - static_cast<std::size_t> (-slot);
+              size_t const offset = slot > 0
+                ? key + static_cast<size_t> (slot) - MAX_HASH_VALUE
+                : key + MAX_HASH_VALUE - static_cast<size_t> (-slot);
               TAO_operation_db_entry const * const base = std::addressof (wordlist[-lookup[offset]]);
               TAO_operation_db_entry const *ptr = base + -lookup[offset + 1];
 
@@ -627,16 +627,16 @@ class TAO_FixedPoint_AMI_FixedOperationsHandler_Perfect_Hash_OpTable
   : public TAO_Perfect_Hash_OpTable
 {
 private:
-  std::size_t hash (char const *str, std::size_t len) override;
+  size_t hash (char const *str, size_t len) override;
 public:
-  TAO_operation_db_entry const * lookup (char const *str, std::size_t len) override;
+  TAO_operation_db_entry const * lookup (char const *str, size_t len) override;
 };
 
 /* C++ code produced by ACE gperf version 8.0.8 */
 /* Command-line: ace_gperf -m -M -J -Q -R -c -C -D -E -T -f 0 -F nullptr,nullptr -o -t -p -K opname -Z TAO_FixedPoint_AMI_FixedOperationsHandler_Perfect_Hash_OpTable -N lookup */
 
-std::size_t
-TAO_FixedPoint_AMI_FixedOperationsHandler_Perfect_Hash_OpTable::hash (char const *str, std::size_t len)
+size_t
+TAO_FixedPoint_AMI_FixedOperationsHandler_Perfect_Hash_OpTable::hash (char const *str, size_t len)
 {
   static constexpr std::array<unsigned char, 128> asso_values =
     {
@@ -660,10 +660,10 @@ TAO_FixedPoint_AMI_FixedOperationsHandler_Perfect_Hash_OpTable::hash (char const
 }
 
 TAO_operation_db_entry const *
-TAO_FixedPoint_AMI_FixedOperationsHandler_Perfect_Hash_OpTable::lookup (char const *str, std::size_t len)
+TAO_FixedPoint_AMI_FixedOperationsHandler_Perfect_Hash_OpTable::lookup (char const *str, size_t len)
 {
-  constexpr std::size_t MIN_WORD_LENGTH {5};
-  constexpr std::size_t MAX_WORD_LENGTH {14};
+  constexpr size_t MIN_WORD_LENGTH {5};
+  constexpr size_t MAX_WORD_LENGTH {14};
   constexpr int MIN_HASH_VALUE {5};
   constexpr int MAX_HASH_VALUE {24};
 
@@ -688,7 +688,7 @@ TAO_FixedPoint_AMI_FixedOperationsHandler_Perfect_Hash_OpTable::lookup (char con
 
   if (len <= MAX_WORD_LENGTH && len >= MIN_WORD_LENGTH)
     {
-      std::size_t const key = hash (str, len);
+      size_t const key = hash (str, len);
 
       if (key <= MAX_HASH_VALUE && key >= MIN_HASH_VALUE)
         {
