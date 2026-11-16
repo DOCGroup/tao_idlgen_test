@@ -53,6 +53,7 @@
 #include "tao/Seq_Var_T.h"
 #include "tao/Seq_Out_T.h"
 #include "tao/VarOut_T.h"
+#include "tao/Array_VarOut_T.h"
 #include "tao/Arg_Traits_T.h"
 #include "tao/Basic_Arguments.h"
 #include "tao/Special_Basic_Arguments.h"
@@ -62,6 +63,8 @@
 #include "tao/Var_Size_Argument_T.h"
 #include "tao/Object_Argument_T.h"
 #include "tao/UB_String_Arguments.h"
+#include "tao/Fixed_Array_Argument_T.h"
+#include "tao/Var_Array_Argument_T.h"
 #include /**/ "tao/Version.h"
 #include /**/ "tao/Versioned_Namespace.h"
 
@@ -1072,6 +1075,138 @@ private:
 };
 extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_AMI_Empty_Valuetype_InterfaceHandler;
 
+#if !defined (_SUPPORTED_INTERFACE_BASE__VAR_OUT_CH_)
+#define _SUPPORTED_INTERFACE_BASE__VAR_OUT_CH_
+
+class Supported_Interface_Base;
+using Supported_Interface_Base_var = TAO_Value_Var_T<Supported_Interface_Base>;
+using Supported_Interface_Base_out = TAO_Value_Out_T<Supported_Interface_Base>;
+
+#endif /* end #if !defined */
+
+class TAO_IDL_TEST_STUB_Export Supported_Interface_Base
+  : public virtual ::CORBA::ValueBase,
+    public virtual ::Empty_Valuetype_Interface
+{
+public:
+  using _ptr_type = Supported_Interface_Base*;
+  using _var_type = Supported_Interface_Base_var;
+  using _out_type = Supported_Interface_Base_out;
+
+  static void _tao_any_destructor (void *);
+
+  static Supported_Interface_Base* _downcast (::CORBA::ValueBase *v);
+
+  /// TAO extensions or internals
+  static ::CORBA::Boolean _tao_unmarshal (
+      TAO_InputCDR &strm,
+      Supported_Interface_Base *&new_object);
+
+  char const * _tao_obv_repository_id () const override;
+
+  void _tao_obv_truncatable_repo_ids (Repository_Id_List &) const override;
+
+  static char const * _tao_obv_static_repository_id ();
+
+  ::CORBA::TypeCode_ptr _tao_type () const override;
+
+public:
+
+  void _add_ref () override = 0;
+  void _remove_ref () override = 0;
+  ::CORBA::ValueBase *_tao_to_value ();
+
+protected:
+  Supported_Interface_Base ();
+  ~Supported_Interface_Base () override;
+
+private:
+  Supported_Interface_Base (Supported_Interface_Base const &);
+  void operator= (Supported_Interface_Base const &);
+
+};
+extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_Supported_Interface_Base;
+
+#if !defined (_SUPPORTED_INTERFACE_DERIVED__VAR_OUT_CH_)
+#define _SUPPORTED_INTERFACE_DERIVED__VAR_OUT_CH_
+
+class Supported_Interface_Derived;
+using Supported_Interface_Derived_var = TAO_Value_Var_T<Supported_Interface_Derived>;
+using Supported_Interface_Derived_out = TAO_Value_Out_T<Supported_Interface_Derived>;
+
+#endif /* end #if !defined */
+
+class TAO_IDL_TEST_STUB_Export Supported_Interface_Derived
+  : public virtual Supported_Interface_Base
+{
+public:
+  using _ptr_type = Supported_Interface_Derived*;
+  using _var_type = Supported_Interface_Derived_var;
+  using _out_type = Supported_Interface_Derived_out;
+
+  static void _tao_any_destructor (void *);
+
+  static Supported_Interface_Derived* _downcast (::CORBA::ValueBase *v);
+
+  /// TAO extensions or internals
+  static ::CORBA::Boolean _tao_unmarshal (
+      TAO_InputCDR &strm,
+      Supported_Interface_Derived *&new_object);
+
+  char const * _tao_obv_repository_id () const override;
+
+  void _tao_obv_truncatable_repo_ids (Repository_Id_List &) const override;
+
+  static char const * _tao_obv_static_repository_id ();
+
+  ::CORBA::TypeCode_ptr _tao_type () const override;
+
+public:
+  virtual void value (::CORBA::Long const) = 0;
+  virtual ::CORBA::Long value () const = 0;
+
+public:
+
+protected:
+  Supported_Interface_Derived ();
+  ~Supported_Interface_Derived () override;
+
+  ::CORBA::Boolean _tao_marshal_v (TAO_OutputCDR &) const override;
+  ::CORBA::Boolean _tao_unmarshal_v (TAO_InputCDR &) override;
+  ::CORBA::Boolean _tao_match_formal_type (ptrdiff_t) const override;
+
+private:
+  Supported_Interface_Derived (Supported_Interface_Derived const &);
+  void operator= (Supported_Interface_Derived const &);
+
+protected:
+  virtual ::CORBA::Boolean
+  _tao_marshal__Supported_Interface_Derived (TAO_OutputCDR &, TAO_ChunkInfo &) const = 0;
+
+  virtual ::CORBA::Boolean
+  _tao_unmarshal__Supported_Interface_Derived (TAO_InputCDR &, TAO_ChunkInfo &) = 0;
+};
+class TAO_IDL_TEST_STUB_Export Supported_Interface_Derived_init
+  : public virtual ::CORBA::ValueFactoryBase
+{
+public:
+
+  virtual Supported_Interface_Derived* create_supported_interface_derived () = 0;
+
+  static Supported_Interface_Derived_init* _downcast (::CORBA::ValueFactoryBase *);
+
+  // TAO-specific extensions
+public:
+  virtual char const * tao_repository_id ();
+
+protected:
+  Supported_Interface_Derived_init ();
+
+protected:
+  virtual ~Supported_Interface_Derived_init ();
+};
+extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_Supported_Interface_Derived;
+
 #if !defined (_FACTORY_INITIALIZED_VALUE__VAR_OUT_CH_)
 #define _FACTORY_INITIALIZED_VALUE__VAR_OUT_CH_
 
@@ -1315,6 +1450,66 @@ protected:
 };
 extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_Copy_Derived;
 
+#if !defined (_COPY_OPERATION_DERIVED__VAR_OUT_CH_)
+#define _COPY_OPERATION_DERIVED__VAR_OUT_CH_
+
+class Copy_Operation_Derived;
+using Copy_Operation_Derived_var = TAO_Value_Var_T<Copy_Operation_Derived>;
+using Copy_Operation_Derived_out = TAO_Value_Out_T<Copy_Operation_Derived>;
+
+#endif /* end #if !defined */
+
+class TAO_IDL_TEST_STUB_Export Copy_Operation_Derived
+  : public virtual Copy_Base
+{
+public:
+  using _ptr_type = Copy_Operation_Derived*;
+  using _var_type = Copy_Operation_Derived_var;
+  using _out_type = Copy_Operation_Derived_out;
+
+  static void _tao_any_destructor (void *);
+
+  static Copy_Operation_Derived* _downcast (::CORBA::ValueBase *v);
+
+  /// TAO extensions or internals
+  static ::CORBA::Boolean _tao_unmarshal (
+      TAO_InputCDR &strm,
+      Copy_Operation_Derived *&new_object);
+
+  char const * _tao_obv_repository_id () const override;
+
+  void _tao_obv_truncatable_repo_ids (Repository_Id_List &) const override;
+
+  static char const * _tao_obv_static_repository_id ();
+
+  ::CORBA::TypeCode_ptr _tao_type () const override;
+
+public:
+
+public:
+  virtual void operation () = 0;
+
+protected:
+  Copy_Operation_Derived ();
+  ~Copy_Operation_Derived () override;
+
+  ::CORBA::Boolean _tao_marshal_v (TAO_OutputCDR &) const override;
+  ::CORBA::Boolean _tao_unmarshal_v (TAO_InputCDR &) override;
+  ::CORBA::Boolean _tao_match_formal_type (ptrdiff_t) const override;
+
+private:
+  Copy_Operation_Derived (Copy_Operation_Derived const &);
+  void operator= (Copy_Operation_Derived const &);
+
+protected:
+  virtual ::CORBA::Boolean
+  _tao_marshal__Copy_Operation_Derived (TAO_OutputCDR &, TAO_ChunkInfo &) const = 0;
+
+  virtual ::CORBA::Boolean
+  _tao_unmarshal__Copy_Operation_Derived (TAO_InputCDR &, TAO_ChunkInfo &) = 0;
+};
+extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_Copy_Operation_Derived;
+
 #if !defined (_COPY_LEAF__VAR_OUT_CH_)
 #define _COPY_LEAF__VAR_OUT_CH_
 
@@ -1448,6 +1643,10 @@ struct TAO_IDL_TEST_STUB_Export Copy_Leaf_Struct
   Copy_Leaf_Alias_var leaf {};
 };
 extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_Copy_Leaf_Struct;
+using Copy_Leaf_Struct_Alias = Copy_Leaf_Struct;
+using Copy_Leaf_Struct_Alias_var = Copy_Leaf_Struct_var;
+using Copy_Leaf_Struct_Alias_out = Copy_Leaf_Struct_out;
+extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_Copy_Leaf_Struct_Alias;
 
 #if !defined (_COPY_ALIAS_HOLDER__VAR_OUT_CH_)
 #define _COPY_ALIAS_HOLDER__VAR_OUT_CH_
@@ -1637,9 +1836,9 @@ public:
   ::CORBA::TypeCode_ptr _tao_type () const override;
 
 public:
-  virtual void value (Copy_Leaf_Struct const &) = 0;
-  virtual Copy_Leaf_Struct const &value () const = 0;
-  virtual Copy_Leaf_Struct &value () = 0;
+  virtual void value (Copy_Leaf_Struct_Alias const &) = 0;
+  virtual Copy_Leaf_Struct_Alias const &value () const = 0;
+  virtual Copy_Leaf_Struct_Alias &value () = 0;
 
 protected:
   Copy_Struct_Holder ();
@@ -1678,6 +1877,283 @@ protected:
   virtual ~Copy_Struct_Holder_init ();
 };
 extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_Copy_Struct_Holder;
+
+#if !defined (_COPY_NODE__VAR_OUT_CH_)
+#define _COPY_NODE__VAR_OUT_CH_
+
+class Copy_Node;
+using Copy_Node_var = TAO_Value_Var_T<Copy_Node>;
+using Copy_Node_out = TAO_Value_Out_T<Copy_Node>;
+
+#endif /* end #if !defined */
+
+#if !defined (_COPY_NODE_SEQUENCE_CH_)
+#define _COPY_NODE_SEQUENCE_CH_
+
+class Copy_Node_Sequence;
+using Copy_Node_Sequence_var = ::TAO_VarSeq_Var_T<Copy_Node_Sequence>;
+using Copy_Node_Sequence_out = ::TAO_Seq_Out_T<Copy_Node_Sequence>;
+
+class TAO_IDL_TEST_STUB_Export Copy_Node_Sequence
+  : public
+      ::TAO::unbounded_valuetype_sequence<
+          Copy_Node,
+          Copy_Node_var
+        >
+{
+public:
+  Copy_Node_Sequence () = default;
+  explicit Copy_Node_Sequence (::CORBA::ULong max);
+  Copy_Node_Sequence (
+    ::CORBA::ULong max,
+    ::CORBA::ULong length,
+    Copy_Node ** buffer,
+    ::CORBA::Boolean release = false);
+  Copy_Node_Sequence (Copy_Node_Sequence const &) = default;
+  Copy_Node_Sequence (Copy_Node_Sequence &&) = default;
+  Copy_Node_Sequence& operator= (Copy_Node_Sequence const &) = default;
+  Copy_Node_Sequence& operator= (Copy_Node_Sequence &&) = default;
+  virtual ~Copy_Node_Sequence () = default;
+
+  using _var_type = Copy_Node_Sequence_var;
+  using _out_type = Copy_Node_Sequence_out;
+
+  static void _tao_any_destructor (void *);
+};
+
+#endif /* end #if !defined */
+extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_Copy_Node_Sequence;
+
+class TAO_IDL_TEST_STUB_Export Copy_Node
+  : public virtual ::CORBA::ValueBase
+{
+public:
+  using _ptr_type = Copy_Node*;
+  using _var_type = Copy_Node_var;
+  using _out_type = Copy_Node_out;
+
+  static void _tao_any_destructor (void *);
+
+  static Copy_Node* _downcast (::CORBA::ValueBase *v);
+
+  /// TAO extensions or internals
+  static ::CORBA::Boolean _tao_unmarshal (
+      TAO_InputCDR &strm,
+      Copy_Node *&new_object);
+
+  char const * _tao_obv_repository_id () const override;
+
+  void _tao_obv_truncatable_repo_ids (Repository_Id_List &) const override;
+
+  static char const * _tao_obv_static_repository_id ();
+
+  ::CORBA::TypeCode_ptr _tao_type () const override;
+
+public:
+  virtual void value (::CORBA::Long const) = 0;
+  virtual ::CORBA::Long value () const = 0;
+
+public:
+  virtual void children (Copy_Node_Sequence const &) = 0;
+  virtual Copy_Node_Sequence const &children () const = 0;
+  virtual Copy_Node_Sequence &children () = 0;
+
+protected:
+  Copy_Node ();
+  ~Copy_Node () override;
+
+  ::CORBA::Boolean _tao_marshal_v (TAO_OutputCDR &) const override;
+  ::CORBA::Boolean _tao_unmarshal_v (TAO_InputCDR &) override;
+  ::CORBA::Boolean _tao_match_formal_type (ptrdiff_t) const override;
+
+private:
+  Copy_Node (Copy_Node const &);
+  void operator= (Copy_Node const &);
+
+protected:
+  virtual ::CORBA::Boolean
+  _tao_marshal__Copy_Node (TAO_OutputCDR &, TAO_ChunkInfo &) const = 0;
+
+  virtual ::CORBA::Boolean
+  _tao_unmarshal__Copy_Node (TAO_InputCDR &, TAO_ChunkInfo &) = 0;
+};
+class TAO_IDL_TEST_STUB_Export Copy_Node_init
+  : public virtual ::CORBA::ValueFactoryBase
+{
+public:
+  Copy_Node_init ();
+
+  static Copy_Node_init* _downcast (::CORBA::ValueFactoryBase *);
+
+  ::CORBA::ValueBase *create_for_unmarshal () override;
+
+  // TAO-specific extensions
+public:
+  virtual char const * tao_repository_id ();
+
+protected:
+  virtual ~Copy_Node_init ();
+};
+extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_Copy_Node;
+
+class Copy_Leaf_Union;
+using Copy_Leaf_Union_var = ::TAO_Var_Var_T<Copy_Leaf_Union>;
+using Copy_Leaf_Union_out = ::TAO_Out_T<Copy_Leaf_Union>;
+
+class TAO_IDL_TEST_STUB_Export Copy_Leaf_Union
+{
+public:
+  Copy_Leaf_Union ();
+  Copy_Leaf_Union (Copy_Leaf_Union const &);
+  ~Copy_Leaf_Union ();
+
+  Copy_Leaf_Union &operator= (Copy_Leaf_Union const &);
+
+  void _d ( ::CORBA::Boolean);
+  ::CORBA::Boolean _d () const;
+
+  using _var_type = Copy_Leaf_Union_var;
+  using _out_type = Copy_Leaf_Union_out;
+
+  static void _tao_any_destructor (void *);
+
+  void leaf (Copy_Leaf*);
+  Copy_Leaf* leaf () const;
+
+  void number ( ::CORBA::Long);
+  ::CORBA::Long number () const;
+private:
+  static unsigned long _tao_member_index (::CORBA::Boolean);
+  ::CORBA::Boolean disc_;
+
+  union _tao_union_storage
+  {
+    _tao_union_storage () {}
+
+    Copy_Leaf_var *leaf_;
+
+    ::CORBA::Long number_;
+  } u_;
+
+  /// TAO extension - frees any allocated storage.
+  void _reset ();
+};
+extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_Copy_Leaf_Union;
+
+using Copy_Leaf_Array = Copy_Leaf_var[2];
+using Copy_Leaf_Array_slice = Copy_Leaf_var;
+struct Copy_Leaf_Array_tag {};
+
+using Copy_Leaf_Array_var = TAO_VarArray_Var_T<Copy_Leaf_Array, Copy_Leaf_Array_slice, Copy_Leaf_Array_tag>;
+
+using Copy_Leaf_Array_out = TAO_Array_Out_T<Copy_Leaf_Array, Copy_Leaf_Array_var, Copy_Leaf_Array_slice, Copy_Leaf_Array_tag>;
+
+using Copy_Leaf_Array_forany = TAO_Array_Forany_T<Copy_Leaf_Array, Copy_Leaf_Array_slice, Copy_Leaf_Array_tag>;
+
+TAO_IDL_TEST_STUB_Export Copy_Leaf_Array_slice *Copy_Leaf_Array_alloc ();
+
+TAO_IDL_TEST_STUB_Export void Copy_Leaf_Array_free (Copy_Leaf_Array_slice *_tao_slice);
+
+TAO_IDL_TEST_STUB_Export Copy_Leaf_Array_slice *Copy_Leaf_Array_dup (Copy_Leaf_Array_slice const *_tao_slice);
+
+TAO_IDL_TEST_STUB_Export void Copy_Leaf_Array_copy (Copy_Leaf_Array_slice *_tao_to, Copy_Leaf_Array_slice const *_tao_from);
+extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_Copy_Leaf_Array;
+
+struct Copy_Nested_Aggregate;
+using Copy_Nested_Aggregate_var = ::TAO_Var_Var_T<Copy_Nested_Aggregate>;
+using Copy_Nested_Aggregate_out = ::TAO_Out_T<Copy_Nested_Aggregate>;
+
+struct TAO_IDL_TEST_STUB_Export Copy_Nested_Aggregate
+{
+
+  using _var_type = Copy_Nested_Aggregate_var;
+  using _out_type = Copy_Nested_Aggregate_out;
+
+  static void _tao_any_destructor (void *);
+
+  Copy_Leaf_Sequence leaves {};
+
+  Copy_Leaf_Union choice {};
+  Copy_Leaf_Array array {};
+};
+extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_Copy_Nested_Aggregate;
+
+#if !defined (_COPY_AGGREGATE_HOLDER__VAR_OUT_CH_)
+#define _COPY_AGGREGATE_HOLDER__VAR_OUT_CH_
+
+class Copy_Aggregate_Holder;
+using Copy_Aggregate_Holder_var = TAO_Value_Var_T<Copy_Aggregate_Holder>;
+using Copy_Aggregate_Holder_out = TAO_Value_Out_T<Copy_Aggregate_Holder>;
+
+#endif /* end #if !defined */
+
+class TAO_IDL_TEST_STUB_Export Copy_Aggregate_Holder
+  : public virtual ::CORBA::ValueBase
+{
+public:
+  using _ptr_type = Copy_Aggregate_Holder*;
+  using _var_type = Copy_Aggregate_Holder_var;
+  using _out_type = Copy_Aggregate_Holder_out;
+
+  static void _tao_any_destructor (void *);
+
+  static Copy_Aggregate_Holder* _downcast (::CORBA::ValueBase *v);
+
+  /// TAO extensions or internals
+  static ::CORBA::Boolean _tao_unmarshal (
+      TAO_InputCDR &strm,
+      Copy_Aggregate_Holder *&new_object);
+
+  char const * _tao_obv_repository_id () const override;
+
+  void _tao_obv_truncatable_repo_ids (Repository_Id_List &) const override;
+
+  static char const * _tao_obv_static_repository_id ();
+
+  ::CORBA::TypeCode_ptr _tao_type () const override;
+
+public:
+  virtual void aggregate (Copy_Nested_Aggregate const &) = 0;
+  virtual Copy_Nested_Aggregate const &aggregate () const = 0;
+  virtual Copy_Nested_Aggregate &aggregate () = 0;
+
+protected:
+  Copy_Aggregate_Holder ();
+  ~Copy_Aggregate_Holder () override;
+
+  ::CORBA::Boolean _tao_marshal_v (TAO_OutputCDR &) const override;
+  ::CORBA::Boolean _tao_unmarshal_v (TAO_InputCDR &) override;
+  ::CORBA::Boolean _tao_match_formal_type (ptrdiff_t) const override;
+
+private:
+  Copy_Aggregate_Holder (Copy_Aggregate_Holder const &);
+  void operator= (Copy_Aggregate_Holder const &);
+
+protected:
+  virtual ::CORBA::Boolean
+  _tao_marshal__Copy_Aggregate_Holder (TAO_OutputCDR &, TAO_ChunkInfo &) const = 0;
+
+  virtual ::CORBA::Boolean
+  _tao_unmarshal__Copy_Aggregate_Holder (TAO_InputCDR &, TAO_ChunkInfo &) = 0;
+};
+class TAO_IDL_TEST_STUB_Export Copy_Aggregate_Holder_init
+  : public virtual ::CORBA::ValueFactoryBase
+{
+public:
+  Copy_Aggregate_Holder_init ();
+
+  static Copy_Aggregate_Holder_init* _downcast (::CORBA::ValueFactoryBase *);
+
+  ::CORBA::ValueBase *create_for_unmarshal () override;
+
+  // TAO-specific extensions
+public:
+  virtual char const * tao_repository_id ();
+
+protected:
+  virtual ~Copy_Aggregate_Holder_init ();
+};
+extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_Copy_Aggregate_Holder;
 enum ValueSort2
 {
   SYMBOL_TYPE2
@@ -2540,6 +3016,42 @@ namespace TAO
 
 #endif /* end #if !defined */
 
+#if !defined (_SUPPORTED_INTERFACE_BASE__ARG_TRAITS_)
+#define _SUPPORTED_INTERFACE_BASE__ARG_TRAITS_
+
+  template<>
+  class Arg_Traits<::Supported_Interface_Base>
+    : public
+        Object_Arg_Traits_T<
+            ::Supported_Interface_Base *,
+            ::Supported_Interface_Base_var,
+            ::Supported_Interface_Base_out,
+            TAO::Value_Traits<Supported_Interface_Base>,
+            TAO::Any_Insert_Policy_Stream
+          >
+  {
+  };
+
+#endif /* end #if !defined */
+
+#if !defined (_SUPPORTED_INTERFACE_DERIVED__ARG_TRAITS_)
+#define _SUPPORTED_INTERFACE_DERIVED__ARG_TRAITS_
+
+  template<>
+  class Arg_Traits<::Supported_Interface_Derived>
+    : public
+        Object_Arg_Traits_T<
+            ::Supported_Interface_Derived *,
+            ::Supported_Interface_Derived_var,
+            ::Supported_Interface_Derived_out,
+            TAO::Value_Traits<Supported_Interface_Derived>,
+            TAO::Any_Insert_Policy_Stream
+          >
+  {
+  };
+
+#endif /* end #if !defined */
+
 #if !defined (_FACTORY_INITIALIZED_VALUE__ARG_TRAITS_)
 #define _FACTORY_INITIALIZED_VALUE__ARG_TRAITS_
 
@@ -2587,6 +3099,24 @@ namespace TAO
             ::Copy_Derived_var,
             ::Copy_Derived_out,
             TAO::Value_Traits<Copy_Derived>,
+            TAO::Any_Insert_Policy_Stream
+          >
+  {
+  };
+
+#endif /* end #if !defined */
+
+#if !defined (_COPY_OPERATION_DERIVED__ARG_TRAITS_)
+#define _COPY_OPERATION_DERIVED__ARG_TRAITS_
+
+  template<>
+  class Arg_Traits<::Copy_Operation_Derived>
+    : public
+        Object_Arg_Traits_T<
+            ::Copy_Operation_Derived *,
+            ::Copy_Operation_Derived_var,
+            ::Copy_Operation_Derived_out,
+            TAO::Value_Traits<Copy_Operation_Derived>,
             TAO::Any_Insert_Policy_Stream
           >
   {
@@ -2679,6 +3209,83 @@ namespace TAO
             ::Copy_Struct_Holder_var,
             ::Copy_Struct_Holder_out,
             TAO::Value_Traits<Copy_Struct_Holder>,
+            TAO::Any_Insert_Policy_Stream
+          >
+  {
+  };
+
+#endif /* end #if !defined */
+
+#if !defined (_COPY_NODE__ARG_TRAITS_)
+#define _COPY_NODE__ARG_TRAITS_
+
+  template<>
+  class Arg_Traits<::Copy_Node>
+    : public
+        Object_Arg_Traits_T<
+            ::Copy_Node *,
+            ::Copy_Node_var,
+            ::Copy_Node_out,
+            TAO::Value_Traits<Copy_Node>,
+            TAO::Any_Insert_Policy_Stream
+          >
+  {
+  };
+
+#endif /* end #if !defined */
+
+  template<>
+  class Arg_Traits<::Copy_Node_Sequence>
+    : public
+        Var_Size_Arg_Traits_T<
+            ::Copy_Node_Sequence,
+            TAO::Any_Insert_Policy_Stream
+          >
+  {
+  };
+
+  template<>
+  class Arg_Traits<::Copy_Leaf_Union>
+    : public
+        Var_Size_Arg_Traits_T<
+            ::Copy_Leaf_Union,
+            TAO::Any_Insert_Policy_Stream
+          >
+  {
+  };
+
+  template<>
+  class Arg_Traits<::Copy_Leaf_Array_tag>
+    : public
+        Var_Array_Arg_Traits_T<
+            ::Copy_Leaf_Array_out,
+            ::Copy_Leaf_Array_forany,
+            TAO::Any_Insert_Policy_Stream
+          >
+  {
+  };
+
+  template<>
+  class Arg_Traits<::Copy_Nested_Aggregate>
+    : public
+        Var_Size_Arg_Traits_T<
+            ::Copy_Nested_Aggregate,
+            TAO::Any_Insert_Policy_Stream
+          >
+  {
+  };
+
+#if !defined (_COPY_AGGREGATE_HOLDER__ARG_TRAITS_)
+#define _COPY_AGGREGATE_HOLDER__ARG_TRAITS_
+
+  template<>
+  class Arg_Traits<::Copy_Aggregate_Holder>
+    : public
+        Object_Arg_Traits_T<
+            ::Copy_Aggregate_Holder *,
+            ::Copy_Aggregate_Holder_var,
+            ::Copy_Aggregate_Holder_out,
+            TAO::Value_Traits<Copy_Aggregate_Holder>,
             TAO::Any_Insert_Policy_Stream
           >
   {
@@ -3034,6 +3641,45 @@ private:
 };
 
 // OBV_ class
+class TAO_IDL_TEST_STUB_Export OBV_Supported_Interface_Derived
+  : public virtual Supported_Interface_Derived,
+    public virtual ::CORBA::DefaultValueRefCountBase
+{
+
+public:
+  void value (::CORBA::Long const) override;
+  ::CORBA::Long value () const override;
+
+public:
+
+  void _add_ref () override;
+  void _remove_ref () override;
+
+public:
+  OBV_Supported_Interface_Derived () = default;
+  OBV_Supported_Interface_Derived (
+      ::CORBA::Long _tao_init_value
+    );
+  ~OBV_Supported_Interface_Derived () override;
+
+public:
+  ::CORBA::ValueBase *_copy_value () override;
+
+protected:
+  ::CORBA::Boolean _tao_marshal__Supported_Interface_Derived (TAO_OutputCDR &, TAO_ChunkInfo &) const override;
+
+  ::CORBA::Boolean _tao_unmarshal__Supported_Interface_Derived (TAO_InputCDR &, TAO_ChunkInfo &) override;
+
+  ::CORBA::Boolean _tao_marshal_state (TAO_OutputCDR &, TAO_ChunkInfo &) const;
+  ::CORBA::Boolean _tao_unmarshal_state (TAO_InputCDR &, TAO_ChunkInfo &);
+  void truncation_hook () override;
+
+private:
+  ::CORBA::Long _pd_value {};
+  CORBA::Boolean require_truncation_ {false};
+};
+
+// OBV_ class
 class TAO_IDL_TEST_STUB_Export OBV_Factory_Initialized_Value
   : public virtual Factory_Initialized_Value,
     public virtual ::CORBA::DefaultValueRefCountBase
@@ -3140,6 +3786,35 @@ protected:
 
 private:
   ::CORBA::Long _pd_derived_value {};
+  CORBA::Boolean require_truncation_ {false};
+};
+
+// OBV_ class
+class TAO_IDL_TEST_STUB_Export OBV_Copy_Operation_Derived
+  : public virtual Copy_Operation_Derived,
+    public virtual OBV_Copy_Base
+{
+
+protected:
+  OBV_Copy_Operation_Derived () = default;
+  OBV_Copy_Operation_Derived (
+      ::CORBA::Long _tao_init_base_value
+    );
+  ~OBV_Copy_Operation_Derived () override;
+
+public:
+  ::CORBA::ValueBase *_copy_value () override = 0;
+
+protected:
+  ::CORBA::Boolean _tao_marshal__Copy_Operation_Derived (TAO_OutputCDR &, TAO_ChunkInfo &) const override;
+
+  ::CORBA::Boolean _tao_unmarshal__Copy_Operation_Derived (TAO_InputCDR &, TAO_ChunkInfo &) override;
+
+  ::CORBA::Boolean _tao_marshal_state (TAO_OutputCDR &, TAO_ChunkInfo &) const;
+  ::CORBA::Boolean _tao_unmarshal_state (TAO_InputCDR &, TAO_ChunkInfo &);
+  void truncation_hook () override;
+
+private:
   CORBA::Boolean require_truncation_ {false};
 };
 
@@ -3253,14 +3928,14 @@ class TAO_IDL_TEST_STUB_Export OBV_Copy_Struct_Holder
 {
 
 public:
-  void value (Copy_Leaf_Struct const &) override;
-  Copy_Leaf_Struct const &value () const override;
-  Copy_Leaf_Struct &value () override;
+  void value (Copy_Leaf_Struct_Alias const &) override;
+  Copy_Leaf_Struct_Alias const &value () const override;
+  Copy_Leaf_Struct_Alias &value () override;
 
 public:
   OBV_Copy_Struct_Holder () = default;
   OBV_Copy_Struct_Holder (
-      ::Copy_Leaf_Struct const & _tao_init_value
+      ::Copy_Leaf_Struct_Alias const & _tao_init_value
     );
   ~OBV_Copy_Struct_Holder () override;
 
@@ -3277,7 +3952,83 @@ protected:
   void truncation_hook () override;
 
 private:
-  Copy_Leaf_Struct _pd_value {};
+  Copy_Leaf_Struct_Alias _pd_value {};
+  CORBA::Boolean require_truncation_ {false};
+};
+
+// OBV_ class
+class TAO_IDL_TEST_STUB_Export OBV_Copy_Node
+  : public virtual Copy_Node,
+    public virtual ::CORBA::DefaultValueRefCountBase
+{
+
+public:
+  void value (::CORBA::Long const) override;
+  ::CORBA::Long value () const override;
+
+public:
+  void children (Copy_Node_Sequence const &) override;
+  Copy_Node_Sequence const &children () const override;
+  Copy_Node_Sequence &children () override;
+
+public:
+  OBV_Copy_Node () = default;
+  OBV_Copy_Node (
+      ::CORBA::Long _tao_init_value,
+      ::Copy_Node_Sequence const & _tao_init_children
+    );
+  ~OBV_Copy_Node () override;
+
+public:
+  ::CORBA::ValueBase *_copy_value () override;
+
+protected:
+  ::CORBA::Boolean _tao_marshal__Copy_Node (TAO_OutputCDR &, TAO_ChunkInfo &) const override;
+
+  ::CORBA::Boolean _tao_unmarshal__Copy_Node (TAO_InputCDR &, TAO_ChunkInfo &) override;
+
+  ::CORBA::Boolean _tao_marshal_state (TAO_OutputCDR &, TAO_ChunkInfo &) const;
+  ::CORBA::Boolean _tao_unmarshal_state (TAO_InputCDR &, TAO_ChunkInfo &);
+  void truncation_hook () override;
+
+private:
+  ::CORBA::Long _pd_value {};
+  Copy_Node_Sequence _pd_children {};
+  CORBA::Boolean require_truncation_ {false};
+};
+
+// OBV_ class
+class TAO_IDL_TEST_STUB_Export OBV_Copy_Aggregate_Holder
+  : public virtual Copy_Aggregate_Holder,
+    public virtual ::CORBA::DefaultValueRefCountBase
+{
+
+public:
+  void aggregate (Copy_Nested_Aggregate const &) override;
+  Copy_Nested_Aggregate const &aggregate () const override;
+  Copy_Nested_Aggregate &aggregate () override;
+
+public:
+  OBV_Copy_Aggregate_Holder () = default;
+  OBV_Copy_Aggregate_Holder (
+      ::Copy_Nested_Aggregate const & _tao_init_aggregate
+    );
+  ~OBV_Copy_Aggregate_Holder () override;
+
+public:
+  ::CORBA::ValueBase *_copy_value () override;
+
+protected:
+  ::CORBA::Boolean _tao_marshal__Copy_Aggregate_Holder (TAO_OutputCDR &, TAO_ChunkInfo &) const override;
+
+  ::CORBA::Boolean _tao_unmarshal__Copy_Aggregate_Holder (TAO_InputCDR &, TAO_ChunkInfo &) override;
+
+  ::CORBA::Boolean _tao_marshal_state (TAO_OutputCDR &, TAO_ChunkInfo &) const;
+  ::CORBA::Boolean _tao_unmarshal_state (TAO_InputCDR &, TAO_ChunkInfo &);
+  void truncation_hook () override;
+
+private:
+  Copy_Nested_Aggregate _pd_aggregate {};
   CORBA::Boolean require_truncation_ {false};
 };
 
@@ -3625,6 +4376,32 @@ namespace TAO
 
 #endif /* end #if !defined */
 
+#if !defined (_SUPPORTED_INTERFACE_BASE__TRAITS_)
+#define _SUPPORTED_INTERFACE_BASE__TRAITS_
+
+  template<>
+  struct TAO_IDL_TEST_STUB_Export Value_Traits<Supported_Interface_Base>
+  {
+    static void add_ref (Supported_Interface_Base *);
+    static void remove_ref (Supported_Interface_Base *);
+    static void release (Supported_Interface_Base *);
+  };
+
+#endif /* end #if !defined */
+
+#if !defined (_SUPPORTED_INTERFACE_DERIVED__TRAITS_)
+#define _SUPPORTED_INTERFACE_DERIVED__TRAITS_
+
+  template<>
+  struct TAO_IDL_TEST_STUB_Export Value_Traits<Supported_Interface_Derived>
+  {
+    static void add_ref (Supported_Interface_Derived *);
+    static void remove_ref (Supported_Interface_Derived *);
+    static void release (Supported_Interface_Derived *);
+  };
+
+#endif /* end #if !defined */
+
 #if !defined (_FACTORY_INITIALIZED_VALUE__TRAITS_)
 #define _FACTORY_INITIALIZED_VALUE__TRAITS_
 
@@ -3660,6 +4437,19 @@ namespace TAO
     static void add_ref (Copy_Derived *);
     static void remove_ref (Copy_Derived *);
     static void release (Copy_Derived *);
+  };
+
+#endif /* end #if !defined */
+
+#if !defined (_COPY_OPERATION_DERIVED__TRAITS_)
+#define _COPY_OPERATION_DERIVED__TRAITS_
+
+  template<>
+  struct TAO_IDL_TEST_STUB_Export Value_Traits<Copy_Operation_Derived>
+  {
+    static void add_ref (Copy_Operation_Derived *);
+    static void remove_ref (Copy_Operation_Derived *);
+    static void release (Copy_Operation_Derived *);
   };
 
 #endif /* end #if !defined */
@@ -3712,6 +4502,48 @@ namespace TAO
     static void add_ref (Copy_Struct_Holder *);
     static void remove_ref (Copy_Struct_Holder *);
     static void release (Copy_Struct_Holder *);
+  };
+
+#endif /* end #if !defined */
+
+#if !defined (_COPY_NODE__TRAITS_)
+#define _COPY_NODE__TRAITS_
+
+  template<>
+  struct TAO_IDL_TEST_STUB_Export Value_Traits<Copy_Node>
+  {
+    static void add_ref (Copy_Node *);
+    static void remove_ref (Copy_Node *);
+    static void release (Copy_Node *);
+  };
+
+#endif /* end #if !defined */
+  template<>
+  struct TAO_IDL_TEST_STUB_Export Array_Traits<
+      Copy_Leaf_Array_forany
+    >
+  {
+    static void free (
+        Copy_Leaf_Array_slice * _tao_slice);
+    static Copy_Leaf_Array_slice * dup (
+        const Copy_Leaf_Array_slice * _tao_slice);
+    static void copy (
+        Copy_Leaf_Array_slice * _tao_to,
+        const Copy_Leaf_Array_slice * _tao_from);
+    static Copy_Leaf_Array_slice * alloc ();
+    static void zero (
+        Copy_Leaf_Array_slice * _tao_slice);
+  };
+
+#if !defined (_COPY_AGGREGATE_HOLDER__TRAITS_)
+#define _COPY_AGGREGATE_HOLDER__TRAITS_
+
+  template<>
+  struct TAO_IDL_TEST_STUB_Export Value_Traits<Copy_Aggregate_Holder>
+  {
+    static void add_ref (Copy_Aggregate_Holder *);
+    static void remove_ref (Copy_Aggregate_Holder *);
+    static void release (Copy_Aggregate_Holder *);
   };
 
 #endif /* end #if !defined */
@@ -3934,6 +4766,24 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
 
+TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, Supported_Interface_Base *); // copying
+TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, Supported_Interface_Base **); // non-copying
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, Supported_Interface_Base *&);
+}
+TAO_END_VERSIONED_NAMESPACE_DECL
+
+TAO_BEGIN_VERSIONED_NAMESPACE_DECL
+namespace CORBA {
+
+TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, Supported_Interface_Derived *); // copying
+TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, Supported_Interface_Derived **); // non-copying
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, Supported_Interface_Derived *&);
+}
+TAO_END_VERSIONED_NAMESPACE_DECL
+
+TAO_BEGIN_VERSIONED_NAMESPACE_DECL
+namespace CORBA {
+
 TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, Factory_Initialized_Value *); // copying
 TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, Factory_Initialized_Value **); // non-copying
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, Factory_Initialized_Value *&);
@@ -3955,6 +4805,15 @@ namespace CORBA {
 TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, Copy_Derived *); // copying
 TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, Copy_Derived **); // non-copying
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, Copy_Derived *&);
+}
+TAO_END_VERSIONED_NAMESPACE_DECL
+
+TAO_BEGIN_VERSIONED_NAMESPACE_DECL
+namespace CORBA {
+
+TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, Copy_Operation_Derived *); // copying
+TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, Copy_Operation_Derived **); // non-copying
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, Copy_Operation_Derived *&);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
@@ -4009,6 +4868,59 @@ namespace CORBA {
 TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, Copy_Struct_Holder *); // copying
 TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, Copy_Struct_Holder **); // non-copying
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, Copy_Struct_Holder *&);
+}
+TAO_END_VERSIONED_NAMESPACE_DECL
+
+TAO_BEGIN_VERSIONED_NAMESPACE_DECL
+namespace CORBA {
+
+TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, ::Copy_Node_Sequence const &); // copying version
+TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, ::Copy_Node_Sequence*); // noncopying version
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, ::Copy_Node_Sequence const *&);
+}
+TAO_END_VERSIONED_NAMESPACE_DECL
+
+TAO_BEGIN_VERSIONED_NAMESPACE_DECL
+namespace CORBA {
+
+TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, Copy_Node *); // copying
+TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, Copy_Node **); // non-copying
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, Copy_Node *&);
+}
+TAO_END_VERSIONED_NAMESPACE_DECL
+
+TAO_BEGIN_VERSIONED_NAMESPACE_DECL
+namespace CORBA {
+
+TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, Copy_Leaf_Union const &); // copying version
+TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, Copy_Leaf_Union*); // noncopying version
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, Copy_Leaf_Union const *&);
+}
+TAO_END_VERSIONED_NAMESPACE_DECL
+
+TAO_BEGIN_VERSIONED_NAMESPACE_DECL
+namespace CORBA {
+
+TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, Copy_Leaf_Array_forany const &);
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, Copy_Leaf_Array_forany &);
+}
+TAO_END_VERSIONED_NAMESPACE_DECL
+
+TAO_BEGIN_VERSIONED_NAMESPACE_DECL
+namespace CORBA {
+
+TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, ::Copy_Nested_Aggregate const &); // copying version
+TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, ::Copy_Nested_Aggregate*); // noncopying version
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, ::Copy_Nested_Aggregate const *&);
+}
+TAO_END_VERSIONED_NAMESPACE_DECL
+
+TAO_BEGIN_VERSIONED_NAMESPACE_DECL
+namespace CORBA {
+
+TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, Copy_Aggregate_Holder *); // copying
+TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, Copy_Aggregate_Holder **); // non-copying
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, Copy_Aggregate_Holder *&);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
@@ -4234,6 +5146,38 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 namespace CORBA
 {
+  extern TAO_IDL_TEST_STUB_Export void add_ref (Supported_Interface_Base *);
+  extern TAO_IDL_TEST_STUB_Export void remove_ref (Supported_Interface_Base *);
+}
+TAO_END_VERSIONED_NAMESPACE_DECL
+
+TAO_BEGIN_VERSIONED_NAMESPACE_DECL
+
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, Supported_Interface_Base const *);
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, Supported_Interface_Base *&);
+
+TAO_END_VERSIONED_NAMESPACE_DECL
+
+TAO_BEGIN_VERSIONED_NAMESPACE_DECL
+
+namespace CORBA
+{
+  extern TAO_IDL_TEST_STUB_Export void add_ref (Supported_Interface_Derived *);
+  extern TAO_IDL_TEST_STUB_Export void remove_ref (Supported_Interface_Derived *);
+}
+TAO_END_VERSIONED_NAMESPACE_DECL
+
+TAO_BEGIN_VERSIONED_NAMESPACE_DECL
+
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, Supported_Interface_Derived const *);
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, Supported_Interface_Derived *&);
+
+TAO_END_VERSIONED_NAMESPACE_DECL
+
+TAO_BEGIN_VERSIONED_NAMESPACE_DECL
+
+namespace CORBA
+{
   extern TAO_IDL_TEST_STUB_Export void add_ref (Factory_Initialized_Value *);
   extern TAO_IDL_TEST_STUB_Export void remove_ref (Factory_Initialized_Value *);
 }
@@ -4275,6 +5219,22 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, Copy_Derived const *);
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, Copy_Derived *&);
+
+TAO_END_VERSIONED_NAMESPACE_DECL
+
+TAO_BEGIN_VERSIONED_NAMESPACE_DECL
+
+namespace CORBA
+{
+  extern TAO_IDL_TEST_STUB_Export void add_ref (Copy_Operation_Derived *);
+  extern TAO_IDL_TEST_STUB_Export void remove_ref (Copy_Operation_Derived *);
+}
+TAO_END_VERSIONED_NAMESPACE_DECL
+
+TAO_BEGIN_VERSIONED_NAMESPACE_DECL
+
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, Copy_Operation_Derived const *);
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, Copy_Operation_Derived *&);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
@@ -4357,6 +5317,70 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, Copy_Struct_Holder const *);
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, Copy_Struct_Holder *&);
+
+TAO_END_VERSIONED_NAMESPACE_DECL
+
+#if !defined _TAO_CDR_OP_Copy_Node_Sequence_H_
+#define _TAO_CDR_OP_Copy_Node_Sequence_H_
+TAO_BEGIN_VERSIONED_NAMESPACE_DECL
+
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &strm, Copy_Node_Sequence const &_tao_sequence);
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &strm, Copy_Node_Sequence &_tao_sequence);
+
+TAO_END_VERSIONED_NAMESPACE_DECL
+
+#endif /* _TAO_CDR_OP_Copy_Node_Sequence_H_ */
+
+TAO_BEGIN_VERSIONED_NAMESPACE_DECL
+
+namespace CORBA
+{
+  extern TAO_IDL_TEST_STUB_Export void add_ref (Copy_Node *);
+  extern TAO_IDL_TEST_STUB_Export void remove_ref (Copy_Node *);
+}
+TAO_END_VERSIONED_NAMESPACE_DECL
+
+TAO_BEGIN_VERSIONED_NAMESPACE_DECL
+
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, Copy_Node const *);
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, Copy_Node *&);
+
+TAO_END_VERSIONED_NAMESPACE_DECL
+
+TAO_BEGIN_VERSIONED_NAMESPACE_DECL
+
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, Copy_Leaf_Union const &);
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, Copy_Leaf_Union &);
+
+TAO_END_VERSIONED_NAMESPACE_DECL
+
+TAO_BEGIN_VERSIONED_NAMESPACE_DECL
+
+TAO_IDL_TEST_STUB_Export CORBA::Boolean operator<< (TAO_OutputCDR &strm, ::Copy_Leaf_Array_forany const &_tao_array);
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, ::Copy_Leaf_Array_forany &_tao_array);
+
+TAO_END_VERSIONED_NAMESPACE_DECL
+
+TAO_BEGIN_VERSIONED_NAMESPACE_DECL
+
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, Copy_Nested_Aggregate const &);
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, Copy_Nested_Aggregate &);
+
+TAO_END_VERSIONED_NAMESPACE_DECL
+
+TAO_BEGIN_VERSIONED_NAMESPACE_DECL
+
+namespace CORBA
+{
+  extern TAO_IDL_TEST_STUB_Export void add_ref (Copy_Aggregate_Holder *);
+  extern TAO_IDL_TEST_STUB_Export void remove_ref (Copy_Aggregate_Holder *);
+}
+TAO_END_VERSIONED_NAMESPACE_DECL
+
+TAO_BEGIN_VERSIONED_NAMESPACE_DECL
+
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, Copy_Aggregate_Holder const *);
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, Copy_Aggregate_Holder *&);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 

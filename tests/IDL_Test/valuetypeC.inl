@@ -160,6 +160,24 @@ AMI_Empty_Valuetype_InterfaceHandler::AMI_Empty_Valuetype_InterfaceHandler (::IO
 {
 }
 ACE_INLINE
+Supported_Interface_Base::Supported_Interface_Base ()
+{}
+
+ACE_INLINE char const *
+Supported_Interface_Base::_tao_obv_static_repository_id ()
+{
+  return "IDL:Supported_Interface_Base:1.0";
+}
+ACE_INLINE
+Supported_Interface_Derived::Supported_Interface_Derived ()
+{}
+
+ACE_INLINE char const *
+Supported_Interface_Derived::_tao_obv_static_repository_id ()
+{
+  return "IDL:Supported_Interface_Derived:1.0";
+}
+ACE_INLINE
 Factory_Initialized_Value::Factory_Initialized_Value ()
 {}
 
@@ -185,6 +203,15 @@ ACE_INLINE char const *
 Copy_Derived::_tao_obv_static_repository_id ()
 {
   return "IDL:Copy_Derived:1.0";
+}
+ACE_INLINE
+Copy_Operation_Derived::Copy_Operation_Derived ()
+{}
+
+ACE_INLINE char const *
+Copy_Operation_Derived::_tao_obv_static_repository_id ()
+{
+  return "IDL:Copy_Operation_Derived:1.0";
 }
 ACE_INLINE
 Copy_Leaf::Copy_Leaf ()
@@ -221,6 +248,156 @@ ACE_INLINE char const *
 Copy_Struct_Holder::_tao_obv_static_repository_id ()
 {
   return "IDL:Copy_Struct_Holder:1.0";
+}
+ACE_INLINE
+Copy_Node::Copy_Node ()
+{}
+
+ACE_INLINE char const *
+Copy_Node::_tao_obv_static_repository_id ()
+{
+  return "IDL:Copy_Node:1.0";
+}
+// *************************************************************
+// Inline operations for union Copy_Leaf_Union
+// *************************************************************
+
+ACE_INLINE
+unsigned long
+Copy_Leaf_Union::_tao_member_index (::CORBA::Boolean value)
+{
+  return value ? 0UL : 1UL;
+}
+
+// Accessor to set the discriminant.
+ACE_INLINE
+void
+Copy_Leaf_Union::_d (::CORBA::Boolean discval)
+{
+  if (this->disc_ != discval)
+    {
+      if (_tao_member_index (this->disc_) != _tao_member_index (discval))
+        {
+          throw ::CORBA::BAD_PARAM ();
+        }
+      }
+  this->disc_ = discval;
+}
+
+// Accessor to get the discriminant.
+ACE_INLINE
+::CORBA::Boolean
+Copy_Leaf_Union::_d () const
+{
+  return this->disc_;
+}
+// Accessor to set the member.
+ACE_INLINE
+void
+Copy_Leaf_Union::leaf (Copy_Leaf *val)
+{
+  // Set the discriminant value.
+  this->_reset ();
+  this->disc_ = true;
+  ::CORBA::add_ref (val);
+  using OBJECT_FIELD = Copy_Leaf_var;
+  ACE_NEW (
+      this->u_.leaf_,
+      OBJECT_FIELD (val)
+    );
+}
+
+/// Retrieve the member.
+ACE_INLINE
+Copy_Leaf*
+Copy_Leaf_Union::leaf () const
+{
+  if (_tao_member_index (this->disc_) != 0UL)
+    {
+      throw ::CORBA::BAD_PARAM ();
+    }
+  return this->u_.leaf_->in ();
+}
+// Accessor to set the member.
+ACE_INLINE
+void
+Copy_Leaf_Union::number (CORBA::Long val)
+{
+  // Set the discriminant value.
+  this->_reset ();
+  this->disc_ = false;
+  // Set the value.
+  this->u_.number_ = val;
+}
+
+/// Retrieve the member.
+ACE_INLINE
+::CORBA::Long
+Copy_Leaf_Union::number () const
+{
+  if (_tao_member_index (this->disc_) != 1UL)
+    {
+      throw ::CORBA::BAD_PARAM ();
+    }
+  return this->u_.number_;
+}
+
+TAO_BEGIN_VERSIONED_NAMESPACE_DECL
+
+ACE_INLINE
+void
+TAO::Array_Traits<Copy_Leaf_Array_forany>::free (
+    Copy_Leaf_Array_slice * _tao_slice)
+{
+  Copy_Leaf_Array_free (_tao_slice);
+}
+
+ACE_INLINE
+Copy_Leaf_Array_slice *
+TAO::Array_Traits<Copy_Leaf_Array_forany>::dup (
+    Copy_Leaf_Array_slice const * _tao_slice)
+{
+  return Copy_Leaf_Array_dup (_tao_slice);
+}
+
+ACE_INLINE
+void
+TAO::Array_Traits<Copy_Leaf_Array_forany>::copy (
+    Copy_Leaf_Array_slice * _tao_to,
+    Copy_Leaf_Array_slice const * _tao_from)
+{
+  Copy_Leaf_Array_copy (_tao_to, _tao_from);
+}
+
+ACE_INLINE
+void
+TAO::Array_Traits<Copy_Leaf_Array_forany>::zero (
+    Copy_Leaf_Array_slice * _tao_slice)
+{
+  // Zero each individual element.
+  for (::CORBA::ULong i0 = 0; i0 < 2; ++i0)
+    {
+      _tao_slice[i0] = Copy_Leaf_var ();
+    }
+}
+
+ACE_INLINE
+Copy_Leaf_Array_slice *
+TAO::Array_Traits<Copy_Leaf_Array_forany>::alloc ()
+{
+  return Copy_Leaf_Array_alloc ();
+}
+
+TAO_END_VERSIONED_NAMESPACE_DECL
+
+ACE_INLINE
+Copy_Aggregate_Holder::Copy_Aggregate_Holder ()
+{}
+
+ACE_INLINE char const *
+Copy_Aggregate_Holder::_tao_obv_static_repository_id ()
+{
+  return "IDL:Copy_Aggregate_Holder:1.0";
 }
 // *************************************************************
 // Inline operations for union MyValueTypeUnion

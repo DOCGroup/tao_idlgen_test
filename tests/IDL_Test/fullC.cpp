@@ -2088,12 +2088,21 @@ OBV_scope_test::AMH_i_scope_testExceptionHolder::~AMH_i_scope_testExceptionHolde
 ::CORBA::ValueBase *
 OBV_scope_test::AMH_i_scope_testExceptionHolder::_copy_value ()
 {
+  ::TAO::Valuetype_Copy_Context _tao_copy_context;
+  if (::CORBA::ValueBase * const _tao_existing = ::TAO::Valuetype_Copy_Context::find (this))
+    {
+      _tao_existing->_add_ref ();
+      return _tao_existing;
+    }
   ::CORBA::ValueBase *ret_val {};
   ACE_NEW_THROW_EX (
     ret_val,
     AMH_i_scope_testExceptionHolder (),
     ::CORBA::NO_MEMORY ());
-  return ret_val;
+  ::CORBA::ValueBase_var _tao_copy (ret_val);
+  ::TAO::Valuetype_Copy_Context::remember (this, _tao_copy.in ());
+  OBV_scope_test::AMH_i_scope_testExceptionHolder * const _tao_obv_copy = dynamic_cast<OBV_scope_test::AMH_i_scope_testExceptionHolder *> (_tao_copy.in ());
+  return _tao_copy._retn ();
 }
 
 ::CORBA::Boolean

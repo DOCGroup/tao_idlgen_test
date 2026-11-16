@@ -5117,12 +5117,21 @@ OBV_i_skip::i_hump::AMH_i_skipExceptionHolder::~AMH_i_skipExceptionHolder ()
 ::CORBA::ValueBase *
 OBV_i_skip::i_hump::AMH_i_skipExceptionHolder::_copy_value ()
 {
+  ::TAO::Valuetype_Copy_Context _tao_copy_context;
+  if (::CORBA::ValueBase * const _tao_existing = ::TAO::Valuetype_Copy_Context::find (this))
+    {
+      _tao_existing->_add_ref ();
+      return _tao_existing;
+    }
   ::CORBA::ValueBase *ret_val {};
   ACE_NEW_THROW_EX (
     ret_val,
     AMH_i_skipExceptionHolder (),
     ::CORBA::NO_MEMORY ());
-  return ret_val;
+  ::CORBA::ValueBase_var _tao_copy (ret_val);
+  ::TAO::Valuetype_Copy_Context::remember (this, _tao_copy.in ());
+  OBV_i_skip::i_hump::AMH_i_skipExceptionHolder * const _tao_obv_copy = dynamic_cast<OBV_i_skip::i_hump::AMH_i_skipExceptionHolder *> (_tao_copy.in ());
+  return _tao_copy._retn ();
 }
 
 ::CORBA::Boolean
@@ -5142,12 +5151,21 @@ OBV_AMH_blooExceptionHolder::~OBV_AMH_blooExceptionHolder ()
 ::CORBA::ValueBase *
 OBV_AMH_blooExceptionHolder::_copy_value ()
 {
+  ::TAO::Valuetype_Copy_Context _tao_copy_context;
+  if (::CORBA::ValueBase * const _tao_existing = ::TAO::Valuetype_Copy_Context::find (this))
+    {
+      _tao_existing->_add_ref ();
+      return _tao_existing;
+    }
   ::CORBA::ValueBase *ret_val {};
   ACE_NEW_THROW_EX (
     ret_val,
     OBV_AMH_blooExceptionHolder (),
     ::CORBA::NO_MEMORY ());
-  return ret_val;
+  ::CORBA::ValueBase_var _tao_copy (ret_val);
+  ::TAO::Valuetype_Copy_Context::remember (this, _tao_copy.in ());
+  OBV_AMH_blooExceptionHolder * const _tao_obv_copy = dynamic_cast<OBV_AMH_blooExceptionHolder *> (_tao_copy.in ());
+  return _tao_copy._retn ();
 }
 
 ::CORBA::Boolean
@@ -5167,12 +5185,21 @@ OBV_bug_1985_a::b::AMH_somethingExceptionHolder::~AMH_somethingExceptionHolder (
 ::CORBA::ValueBase *
 OBV_bug_1985_a::b::AMH_somethingExceptionHolder::_copy_value ()
 {
+  ::TAO::Valuetype_Copy_Context _tao_copy_context;
+  if (::CORBA::ValueBase * const _tao_existing = ::TAO::Valuetype_Copy_Context::find (this))
+    {
+      _tao_existing->_add_ref ();
+      return _tao_existing;
+    }
   ::CORBA::ValueBase *ret_val {};
   ACE_NEW_THROW_EX (
     ret_val,
     AMH_somethingExceptionHolder (),
     ::CORBA::NO_MEMORY ());
-  return ret_val;
+  ::CORBA::ValueBase_var _tao_copy (ret_val);
+  ::TAO::Valuetype_Copy_Context::remember (this, _tao_copy.in ());
+  OBV_bug_1985_a::b::AMH_somethingExceptionHolder * const _tao_obv_copy = dynamic_cast<OBV_bug_1985_a::b::AMH_somethingExceptionHolder *> (_tao_copy.in ());
+  return _tao_copy._retn ();
 }
 
 ::CORBA::Boolean
@@ -5192,12 +5219,21 @@ OBV_bug_1985_c::d::AMH_somethingExceptionHolder::~AMH_somethingExceptionHolder (
 ::CORBA::ValueBase *
 OBV_bug_1985_c::d::AMH_somethingExceptionHolder::_copy_value ()
 {
+  ::TAO::Valuetype_Copy_Context _tao_copy_context;
+  if (::CORBA::ValueBase * const _tao_existing = ::TAO::Valuetype_Copy_Context::find (this))
+    {
+      _tao_existing->_add_ref ();
+      return _tao_existing;
+    }
   ::CORBA::ValueBase *ret_val {};
   ACE_NEW_THROW_EX (
     ret_val,
     AMH_somethingExceptionHolder (),
     ::CORBA::NO_MEMORY ());
-  return ret_val;
+  ::CORBA::ValueBase_var _tao_copy (ret_val);
+  ::TAO::Valuetype_Copy_Context::remember (this, _tao_copy.in ());
+  OBV_bug_1985_c::d::AMH_somethingExceptionHolder * const _tao_obv_copy = dynamic_cast<OBV_bug_1985_c::d::AMH_somethingExceptionHolder *> (_tao_copy.in ());
+  return _tao_copy._retn ();
 }
 
 ::CORBA::Boolean
@@ -5217,12 +5253,21 @@ OBV_Negotiator::AMH_UAV_NegotiatorExceptionHolder::~AMH_UAV_NegotiatorExceptionH
 ::CORBA::ValueBase *
 OBV_Negotiator::AMH_UAV_NegotiatorExceptionHolder::_copy_value ()
 {
+  ::TAO::Valuetype_Copy_Context _tao_copy_context;
+  if (::CORBA::ValueBase * const _tao_existing = ::TAO::Valuetype_Copy_Context::find (this))
+    {
+      _tao_existing->_add_ref ();
+      return _tao_existing;
+    }
   ::CORBA::ValueBase *ret_val {};
   ACE_NEW_THROW_EX (
     ret_val,
     AMH_UAV_NegotiatorExceptionHolder (),
     ::CORBA::NO_MEMORY ());
-  return ret_val;
+  ::CORBA::ValueBase_var _tao_copy (ret_val);
+  ::TAO::Valuetype_Copy_Context::remember (this, _tao_copy.in ());
+  OBV_Negotiator::AMH_UAV_NegotiatorExceptionHolder * const _tao_obv_copy = dynamic_cast<OBV_Negotiator::AMH_UAV_NegotiatorExceptionHolder *> (_tao_copy.in ());
+  return _tao_copy._retn ();
 }
 
 ::CORBA::Boolean

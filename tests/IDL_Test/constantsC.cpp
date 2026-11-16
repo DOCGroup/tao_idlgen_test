@@ -693,12 +693,21 @@ OBV_ClassConstants::AMH_IfaceExceptionHolder::~AMH_IfaceExceptionHolder ()
 ::CORBA::ValueBase *
 OBV_ClassConstants::AMH_IfaceExceptionHolder::_copy_value ()
 {
+  ::TAO::Valuetype_Copy_Context _tao_copy_context;
+  if (::CORBA::ValueBase * const _tao_existing = ::TAO::Valuetype_Copy_Context::find (this))
+    {
+      _tao_existing->_add_ref ();
+      return _tao_existing;
+    }
   ::CORBA::ValueBase *ret_val {};
   ACE_NEW_THROW_EX (
     ret_val,
     AMH_IfaceExceptionHolder (),
     ::CORBA::NO_MEMORY ());
-  return ret_val;
+  ::CORBA::ValueBase_var _tao_copy (ret_val);
+  ::TAO::Valuetype_Copy_Context::remember (this, _tao_copy.in ());
+  OBV_ClassConstants::AMH_IfaceExceptionHolder * const _tao_obv_copy = dynamic_cast<OBV_ClassConstants::AMH_IfaceExceptionHolder *> (_tao_copy.in ());
+  return _tao_copy._retn ();
 }
 
 ::CORBA::Boolean
@@ -718,12 +727,21 @@ OBV_ClassConstants::Vt::~Vt ()
 ::CORBA::ValueBase *
 OBV_ClassConstants::Vt::_copy_value ()
 {
+  ::TAO::Valuetype_Copy_Context _tao_copy_context;
+  if (::CORBA::ValueBase * const _tao_existing = ::TAO::Valuetype_Copy_Context::find (this))
+    {
+      _tao_existing->_add_ref ();
+      return _tao_existing;
+    }
   ::CORBA::ValueBase *ret_val {};
   ACE_NEW_THROW_EX (
     ret_val,
     Vt (),
     ::CORBA::NO_MEMORY ());
-  return ret_val;
+  ::CORBA::ValueBase_var _tao_copy (ret_val);
+  ::TAO::Valuetype_Copy_Context::remember (this, _tao_copy.in ());
+  OBV_ClassConstants::Vt * const _tao_obv_copy = dynamic_cast<OBV_ClassConstants::Vt *> (_tao_copy.in ());
+  return _tao_copy._retn ();
 }
 
 ::CORBA::Boolean

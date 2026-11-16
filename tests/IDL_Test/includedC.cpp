@@ -1741,12 +1741,21 @@ OBV_VT_Def::VT::~VT ()
 ::CORBA::ValueBase *
 OBV_VT_Def::VT::_copy_value ()
 {
+  ::TAO::Valuetype_Copy_Context _tao_copy_context;
+  if (::CORBA::ValueBase * const _tao_existing = ::TAO::Valuetype_Copy_Context::find (this))
+    {
+      _tao_existing->_add_ref ();
+      return _tao_existing;
+    }
   ::CORBA::ValueBase *ret_val {};
   ACE_NEW_THROW_EX (
     ret_val,
     VT (),
     ::CORBA::NO_MEMORY ());
-  return ret_val;
+  ::CORBA::ValueBase_var _tao_copy (ret_val);
+  ::TAO::Valuetype_Copy_Context::remember (this, _tao_copy.in ());
+  OBV_VT_Def::VT * const _tao_obv_copy = dynamic_cast<OBV_VT_Def::VT *> (_tao_copy.in ());
+  return _tao_copy._retn ();
 }
 
 ::CORBA::Boolean
@@ -1772,6 +1781,12 @@ OBV_IncludedBase::~OBV_IncludedBase ()
 ::CORBA::ValueBase *
 OBV_IncludedBase::_copy_value ()
 {
+  ::TAO::Valuetype_Copy_Context _tao_copy_context;
+  if (::CORBA::ValueBase * const _tao_existing = ::TAO::Valuetype_Copy_Context::find (this))
+    {
+      _tao_existing->_add_ref ();
+      return _tao_existing;
+    }
   ::CORBA::ValueBase *ret_val {};
   ACE_NEW_THROW_EX (
     ret_val,
@@ -1779,7 +1794,13 @@ OBV_IncludedBase::_copy_value ()
       DeprecatedMember ()
     ),
     ::CORBA::NO_MEMORY ());
-  return ret_val;
+  ::CORBA::ValueBase_var _tao_copy (ret_val);
+  ::TAO::Valuetype_Copy_Context::remember (this, _tao_copy.in ());
+  OBV_IncludedBase * const _tao_obv_copy = dynamic_cast<OBV_IncludedBase *> (_tao_copy.in ());
+  for (::CORBA::ULong _tao_i_0 {}; _tao_i_0 < _tao_obv_copy->DeprecatedMember ().length (); ++_tao_i_0)
+    {
+    }
+  return _tao_copy._retn ();
 }
 
 ::CORBA::Boolean
@@ -1835,12 +1856,21 @@ OBV_RootModule::SUBMODULE1::AMH_ParentIFExceptionHolder::~AMH_ParentIFExceptionH
 ::CORBA::ValueBase *
 OBV_RootModule::SUBMODULE1::AMH_ParentIFExceptionHolder::_copy_value ()
 {
+  ::TAO::Valuetype_Copy_Context _tao_copy_context;
+  if (::CORBA::ValueBase * const _tao_existing = ::TAO::Valuetype_Copy_Context::find (this))
+    {
+      _tao_existing->_add_ref ();
+      return _tao_existing;
+    }
   ::CORBA::ValueBase *ret_val {};
   ACE_NEW_THROW_EX (
     ret_val,
     AMH_ParentIFExceptionHolder (),
     ::CORBA::NO_MEMORY ());
-  return ret_val;
+  ::CORBA::ValueBase_var _tao_copy (ret_val);
+  ::TAO::Valuetype_Copy_Context::remember (this, _tao_copy.in ());
+  OBV_RootModule::SUBMODULE1::AMH_ParentIFExceptionHolder * const _tao_obv_copy = dynamic_cast<OBV_RootModule::SUBMODULE1::AMH_ParentIFExceptionHolder *> (_tao_copy.in ());
+  return _tao_copy._retn ();
 }
 
 ::CORBA::Boolean
@@ -1860,12 +1890,21 @@ OBV_AMH_AAAExceptionHolder::~OBV_AMH_AAAExceptionHolder ()
 ::CORBA::ValueBase *
 OBV_AMH_AAAExceptionHolder::_copy_value ()
 {
+  ::TAO::Valuetype_Copy_Context _tao_copy_context;
+  if (::CORBA::ValueBase * const _tao_existing = ::TAO::Valuetype_Copy_Context::find (this))
+    {
+      _tao_existing->_add_ref ();
+      return _tao_existing;
+    }
   ::CORBA::ValueBase *ret_val {};
   ACE_NEW_THROW_EX (
     ret_val,
     OBV_AMH_AAAExceptionHolder (),
     ::CORBA::NO_MEMORY ());
-  return ret_val;
+  ::CORBA::ValueBase_var _tao_copy (ret_val);
+  ::TAO::Valuetype_Copy_Context::remember (this, _tao_copy.in ());
+  OBV_AMH_AAAExceptionHolder * const _tao_obv_copy = dynamic_cast<OBV_AMH_AAAExceptionHolder *> (_tao_copy.in ());
+  return _tao_copy._retn ();
 }
 
 ::CORBA::Boolean

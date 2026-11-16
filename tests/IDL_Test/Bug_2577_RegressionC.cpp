@@ -967,6 +967,12 @@ OBV_Data_T::~OBV_Data_T ()
 ::CORBA::ValueBase *
 OBV_Data_T::_copy_value ()
 {
+  ::TAO::Valuetype_Copy_Context _tao_copy_context;
+  if (::CORBA::ValueBase * const _tao_existing = ::TAO::Valuetype_Copy_Context::find (this))
+    {
+      _tao_existing->_add_ref ();
+      return _tao_existing;
+    }
   ::CORBA::ValueBase *ret_val {};
   ACE_NEW_THROW_EX (
     ret_val,
@@ -974,7 +980,10 @@ OBV_Data_T::_copy_value ()
       whenLastUpdated ()
     ),
     ::CORBA::NO_MEMORY ());
-  return ret_val;
+  ::CORBA::ValueBase_var _tao_copy (ret_val);
+  ::TAO::Valuetype_Copy_Context::remember (this, _tao_copy.in ());
+  OBV_Data_T * const _tao_obv_copy = dynamic_cast<OBV_Data_T *> (_tao_copy.in ());
+  return _tao_copy._retn ();
 }
 
 ::CORBA::Boolean

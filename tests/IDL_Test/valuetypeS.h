@@ -36,6 +36,8 @@
 #include "tao/PortableServer/Object_SArg_Traits.h"
 #include "tao/PortableServer/Special_Basic_SArguments.h"
 #include "tao/PortableServer/UB_String_SArguments.h"
+#include "tao/PortableServer/Fixed_Array_SArgument_T.h"
+#include "tao/PortableServer/Var_Array_SArgument_T.h"
 #include "tao/PortableServer/Object_SArg_Traits.h"
 #include "tao/PortableServer/get_arg.h"
 #include "tao/Special_Basic_Arguments.h"
@@ -267,6 +269,40 @@ namespace TAO
 
 #endif /* end #if !defined */
 
+#if !defined (_SUPPORTED_INTERFACE_BASE__SARG_TRAITS_)
+#define _SUPPORTED_INTERFACE_BASE__SARG_TRAITS_
+
+  template<>
+  class SArg_Traits<::Supported_Interface_Base>
+    : public
+        Object_SArg_Traits_T<
+            ::Supported_Interface_Base *,
+            ::Supported_Interface_Base_var,
+            ::Supported_Interface_Base_out,
+            TAO::Any_Insert_Policy_Stream
+          >
+  {
+  };
+
+#endif /* end #if !defined */
+
+#if !defined (_SUPPORTED_INTERFACE_DERIVED__SARG_TRAITS_)
+#define _SUPPORTED_INTERFACE_DERIVED__SARG_TRAITS_
+
+  template<>
+  class SArg_Traits<::Supported_Interface_Derived>
+    : public
+        Object_SArg_Traits_T<
+            ::Supported_Interface_Derived *,
+            ::Supported_Interface_Derived_var,
+            ::Supported_Interface_Derived_out,
+            TAO::Any_Insert_Policy_Stream
+          >
+  {
+  };
+
+#endif /* end #if !defined */
+
 #if !defined (_FACTORY_INITIALIZED_VALUE__SARG_TRAITS_)
 #define _FACTORY_INITIALIZED_VALUE__SARG_TRAITS_
 
@@ -311,6 +347,23 @@ namespace TAO
             ::Copy_Derived *,
             ::Copy_Derived_var,
             ::Copy_Derived_out,
+            TAO::Any_Insert_Policy_Stream
+          >
+  {
+  };
+
+#endif /* end #if !defined */
+
+#if !defined (_COPY_OPERATION_DERIVED__SARG_TRAITS_)
+#define _COPY_OPERATION_DERIVED__SARG_TRAITS_
+
+  template<>
+  class SArg_Traits<::Copy_Operation_Derived>
+    : public
+        Object_SArg_Traits_T<
+            ::Copy_Operation_Derived *,
+            ::Copy_Operation_Derived_var,
+            ::Copy_Operation_Derived_out,
             TAO::Any_Insert_Policy_Stream
           >
   {
@@ -399,6 +452,81 @@ namespace TAO
             ::Copy_Struct_Holder *,
             ::Copy_Struct_Holder_var,
             ::Copy_Struct_Holder_out,
+            TAO::Any_Insert_Policy_Stream
+          >
+  {
+  };
+
+#endif /* end #if !defined */
+
+#if !defined (_COPY_NODE__SARG_TRAITS_)
+#define _COPY_NODE__SARG_TRAITS_
+
+  template<>
+  class SArg_Traits<::Copy_Node>
+    : public
+        Object_SArg_Traits_T<
+            ::Copy_Node *,
+            ::Copy_Node_var,
+            ::Copy_Node_out,
+            TAO::Any_Insert_Policy_Stream
+          >
+  {
+  };
+
+#endif /* end #if !defined */
+
+  template<>
+  class SArg_Traits<::Copy_Node_Sequence>
+    : public
+        Var_Size_SArg_Traits_T<
+            ::Copy_Node_Sequence,
+            TAO::Any_Insert_Policy_Stream
+          >
+  {
+  };
+
+  template<>
+  class SArg_Traits<::Copy_Leaf_Union>
+    : public
+        Var_Size_SArg_Traits_T<
+            ::Copy_Leaf_Union,
+            TAO::Any_Insert_Policy_Stream
+          >
+  {
+  };
+
+  template<>
+  class SArg_Traits<::Copy_Leaf_Array_tag>
+    : public
+        Var_Array_SArg_Traits_T<
+            ::Copy_Leaf_Array_out,
+            ::Copy_Leaf_Array_forany,
+            TAO::Any_Insert_Policy_Stream
+          >
+  {
+  };
+
+  template<>
+  class SArg_Traits<::Copy_Nested_Aggregate>
+    : public
+        Var_Size_SArg_Traits_T<
+            ::Copy_Nested_Aggregate,
+            TAO::Any_Insert_Policy_Stream
+          >
+  {
+  };
+
+#if !defined (_COPY_AGGREGATE_HOLDER__SARG_TRAITS_)
+#define _COPY_AGGREGATE_HOLDER__SARG_TRAITS_
+
+  template<>
+  class SArg_Traits<::Copy_Aggregate_Holder>
+    : public
+        Object_SArg_Traits_T<
+            ::Copy_Aggregate_Holder *,
+            ::Copy_Aggregate_Holder_var,
+            ::Copy_Aggregate_Holder_out,
             TAO::Any_Insert_Policy_Stream
           >
   {
