@@ -31,17 +31,3 @@ Accessor_Optimized_Value::_tao_obv_static_repository_id ()
 {
   return "IDL:Accessor_Optimized_Value:1.0";
 }
-/// Accessor to set the member.
-ACE_INLINE void
-Accessor_Optimized_Value::value (CORBA::Long const val)
-{
-  // Set the value.
-  this->_pd_value = val;
-}
-
-// Retrieve the member
-ACE_INLINE ::CORBA::Long
-Accessor_Optimized_Value::value () const
-{
-  return this->_pd_value;
-}

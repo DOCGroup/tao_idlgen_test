@@ -1085,21 +1085,12 @@ OBV_AMH_tdefExceptionHolder::~OBV_AMH_tdefExceptionHolder ()
 ::CORBA::ValueBase *
 OBV_AMH_tdefExceptionHolder::_copy_value ()
 {
-  ::TAO::Valuetype_Copy_Context _tao_copy_context;
-  if (::CORBA::ValueBase * const _tao_existing = ::TAO::Valuetype_Copy_Context::find (this))
-    {
-      _tao_existing->_add_ref ();
-      return _tao_existing;
-    }
   ::CORBA::ValueBase *ret_val {};
   ACE_NEW_THROW_EX (
     ret_val,
     OBV_AMH_tdefExceptionHolder (),
     ::CORBA::NO_MEMORY ());
-  ::CORBA::ValueBase_var _tao_copy (ret_val);
-  ::TAO::Valuetype_Copy_Context::remember (this, _tao_copy.in ());
-  OBV_AMH_tdefExceptionHolder * const _tao_obv_copy = dynamic_cast<OBV_AMH_tdefExceptionHolder *> (_tao_copy.in ());
-  return _tao_copy._retn ();
+  return ret_val;
 }
 
 ::CORBA::Boolean

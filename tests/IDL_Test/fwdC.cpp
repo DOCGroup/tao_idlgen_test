@@ -2626,21 +2626,12 @@ OBV_fwd_mixed_intf::AMH_concrete_parentExceptionHolder::~AMH_concrete_parentExce
 ::CORBA::ValueBase *
 OBV_fwd_mixed_intf::AMH_concrete_parentExceptionHolder::_copy_value ()
 {
-  ::TAO::Valuetype_Copy_Context _tao_copy_context;
-  if (::CORBA::ValueBase * const _tao_existing = ::TAO::Valuetype_Copy_Context::find (this))
-    {
-      _tao_existing->_add_ref ();
-      return _tao_existing;
-    }
   ::CORBA::ValueBase *ret_val {};
   ACE_NEW_THROW_EX (
     ret_val,
     AMH_concrete_parentExceptionHolder (),
     ::CORBA::NO_MEMORY ());
-  ::CORBA::ValueBase_var _tao_copy (ret_val);
-  ::TAO::Valuetype_Copy_Context::remember (this, _tao_copy.in ());
-  OBV_fwd_mixed_intf::AMH_concrete_parentExceptionHolder * const _tao_obv_copy = dynamic_cast<OBV_fwd_mixed_intf::AMH_concrete_parentExceptionHolder *> (_tao_copy.in ());
-  return _tao_copy._retn ();
+  return ret_val;
 }
 
 ::CORBA::Boolean
@@ -2666,28 +2657,16 @@ OBV_obv_fwd::EnclosingType::~EnclosingType ()
 ::CORBA::ValueBase *
 OBV_obv_fwd::EnclosingType::_copy_value ()
 {
-  ::TAO::Valuetype_Copy_Context _tao_copy_context;
-  if (::CORBA::ValueBase * const _tao_existing = ::TAO::Valuetype_Copy_Context::find (this))
-    {
-      _tao_existing->_add_ref ();
-      return _tao_existing;
-    }
   ::CORBA::ValueBase *ret_val {};
   ACE_NEW_THROW_EX (
     ret_val,
     EnclosingType (
-      forwarded ()
+      (forwarded () ?
+        obv_fwd::ForwardedType::_downcast (::CORBA::ValueBase_var (forwarded ()->_copy_value ()).in ())
+        : 0)
     ),
     ::CORBA::NO_MEMORY ());
-  ::CORBA::ValueBase_var _tao_copy (ret_val);
-  ::TAO::Valuetype_Copy_Context::remember (this, _tao_copy.in ());
-  OBV_obv_fwd::EnclosingType * const _tao_obv_copy = dynamic_cast<OBV_obv_fwd::EnclosingType *> (_tao_copy.in ());
-  if (_tao_obv_copy->forwarded () != nullptr)
-    {
-      ::CORBA::ValueBase_var _tao_nested_0 (_tao_obv_copy->forwarded ()->_copy_value ());
-      _tao_obv_copy->forwarded (obv_fwd::ForwardedType::_downcast (_tao_nested_0.in ()));
-    }
-  return _tao_copy._retn ();
+  return ret_val;
 }
 
 ::CORBA::Boolean
@@ -2727,12 +2706,6 @@ OBV_obv_fwd::ForwardedType::~ForwardedType ()
 ::CORBA::ValueBase *
 OBV_obv_fwd::ForwardedType::_copy_value ()
 {
-  ::TAO::Valuetype_Copy_Context _tao_copy_context;
-  if (::CORBA::ValueBase * const _tao_existing = ::TAO::Valuetype_Copy_Context::find (this))
-    {
-      _tao_existing->_add_ref ();
-      return _tao_existing;
-    }
   ::CORBA::ValueBase *ret_val {};
   ACE_NEW_THROW_EX (
     ret_val,
@@ -2740,10 +2713,7 @@ OBV_obv_fwd::ForwardedType::_copy_value ()
       number ()
     ),
     ::CORBA::NO_MEMORY ());
-  ::CORBA::ValueBase_var _tao_copy (ret_val);
-  ::TAO::Valuetype_Copy_Context::remember (this, _tao_copy.in ());
-  OBV_obv_fwd::ForwardedType * const _tao_obv_copy = dynamic_cast<OBV_obv_fwd::ForwardedType *> (_tao_copy.in ());
-  return _tao_copy._retn ();
+  return ret_val;
 }
 
 ::CORBA::Boolean

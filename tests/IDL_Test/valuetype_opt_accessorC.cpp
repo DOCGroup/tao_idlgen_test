@@ -120,14 +120,14 @@ Accessor_Optimized_Value::~Accessor_Optimized_Value ()
 Accessor_Optimized_Value::_tao_marshal_v (TAO_OutputCDR & strm) const
 {
   TAO_ChunkInfo ci (this->is_truncatable_ || this->chunking_);
-  return ::Accessor_Optimized_Value::_tao_marshal_state (strm, ci);
+  return this->_tao_marshal__Accessor_Optimized_Value (strm, ci);
 }
 
 ::CORBA::Boolean
 Accessor_Optimized_Value::_tao_unmarshal_v (TAO_InputCDR & strm)
 {
   TAO_ChunkInfo ci (this->is_truncatable_ || this->chunking_, 1);
-  return ::Accessor_Optimized_Value::_tao_unmarshal_state (strm,ci);
+  return this->_tao_unmarshal__Accessor_Optimized_Value (strm,ci);
 }
 
 ::CORBA::Boolean
@@ -215,6 +215,45 @@ OBV_Accessor_Optimized_Value::OBV_Accessor_Optimized_Value (
 
 OBV_Accessor_Optimized_Value::~OBV_Accessor_Optimized_Value ()
 {}
+
+::CORBA::ValueBase *
+OBV_Accessor_Optimized_Value::_copy_value ()
+{
+  ::CORBA::ValueBase *ret_val {};
+  ACE_NEW_THROW_EX (
+    ret_val,
+    OBV_Accessor_Optimized_Value (
+      value ()
+    ),
+    ::CORBA::NO_MEMORY ());
+  return ret_val;
+}
+
+::CORBA::Boolean
+OBV_Accessor_Optimized_Value::_tao_marshal__Accessor_Optimized_Value (TAO_OutputCDR &strm, TAO_ChunkInfo& ci) const
+{
+  return _tao_marshal_state (strm, ci);
+}
+
+::CORBA::Boolean
+OBV_Accessor_Optimized_Value::_tao_unmarshal__Accessor_Optimized_Value (TAO_InputCDR &strm, TAO_ChunkInfo& ci)
+{
+  return _tao_unmarshal_state (strm, ci);
+}
+/// Accessor to set the member.
+void
+OBV_Accessor_Optimized_Value::value (CORBA::Long const val)
+{
+  // Set the value.
+  this->_pd_value = val;
+}
+
+// Retrieve the member
+::CORBA::Long
+OBV_Accessor_Optimized_Value::value () const
+{
+  return this->_pd_value;
+}
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
@@ -329,7 +368,7 @@ operator>> (
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean
-::Accessor_Optimized_Value::_tao_marshal_state (TAO_OutputCDR &strm, TAO_ChunkInfo &ci) const
+OBV_Accessor_Optimized_Value::_tao_marshal_state (TAO_OutputCDR &strm, TAO_ChunkInfo &ci) const
 {
   if (! ci.start_chunk (strm))
     return false;
@@ -346,7 +385,7 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 }
 
 ::CORBA::Boolean
-::Accessor_Optimized_Value::_tao_unmarshal_state (TAO_InputCDR &strm, TAO_ChunkInfo &ci)
+OBV_Accessor_Optimized_Value::_tao_unmarshal_state (TAO_InputCDR &strm, TAO_ChunkInfo &ci)
 {
   if (!ci.handle_chunking (strm))
     return false;
@@ -365,7 +404,7 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 }
 
 void
-::Accessor_Optimized_Value::truncation_hook ()
+OBV_Accessor_Optimized_Value::truncation_hook ()
 {
   this->require_truncation_ = true;
 }

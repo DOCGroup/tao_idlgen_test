@@ -222,28 +222,16 @@ OBV_include_test::StringTest::~StringTest ()
 ::CORBA::ValueBase *
 OBV_include_test::StringTest::_copy_value ()
 {
-  ::TAO::Valuetype_Copy_Context _tao_copy_context;
-  if (::CORBA::ValueBase * const _tao_existing = ::TAO::Valuetype_Copy_Context::find (this))
-    {
-      _tao_existing->_add_ref ();
-      return _tao_existing;
-    }
   ::CORBA::ValueBase *ret_val {};
   ACE_NEW_THROW_EX (
     ret_val,
     StringTest (
-      my_string_value ()
+      (my_string_value () ?
+        CORBA::StringValue::_downcast (::CORBA::ValueBase_var (my_string_value ()->_copy_value ()).in ())
+        : 0)
     ),
     ::CORBA::NO_MEMORY ());
-  ::CORBA::ValueBase_var _tao_copy (ret_val);
-  ::TAO::Valuetype_Copy_Context::remember (this, _tao_copy.in ());
-  OBV_include_test::StringTest * const _tao_obv_copy = dynamic_cast<OBV_include_test::StringTest *> (_tao_copy.in ());
-  if (_tao_obv_copy->my_string_value () != nullptr)
-    {
-      ::CORBA::ValueBase_var _tao_nested_0 (_tao_obv_copy->my_string_value ()->_copy_value ());
-      _tao_obv_copy->my_string_value (CORBA::StringValue::_downcast (_tao_nested_0.in ()));
-    }
-  return _tao_copy._retn ();
+  return ret_val;
 }
 
 ::CORBA::Boolean

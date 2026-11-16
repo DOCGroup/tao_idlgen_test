@@ -94,8 +94,8 @@ public:
   ::CORBA::TypeCode_ptr _tao_type () const override;
 
 public:
-  void value (::CORBA::Long const);
-  ::CORBA::Long value () const;
+  virtual void value (::CORBA::Long const) = 0;
+  virtual ::CORBA::Long value () const = 0;
 
 protected:
   Accessor_Optimized_Value ();
@@ -110,13 +110,11 @@ private:
   void operator= (Accessor_Optimized_Value const &);
 
 protected:
-  ::CORBA::Boolean _tao_marshal_state (TAO_OutputCDR &) const;
-  ::CORBA::Boolean _tao_unmarshal_state (TAO_InputCDR &);
-  void truncation_hook () override;
+  virtual ::CORBA::Boolean
+  _tao_marshal__Accessor_Optimized_Value (TAO_OutputCDR &, TAO_ChunkInfo &) const = 0;
 
-private:
-
-  ::CORBA::Long _pd_value {};
+  virtual ::CORBA::Boolean
+  _tao_unmarshal__Accessor_Optimized_Value (TAO_InputCDR &, TAO_ChunkInfo &) = 0;
 };
 class TAO_IDL_TEST_STUB_Export Accessor_Optimized_Value_init
   : public virtual ::CORBA::ValueFactoryBase
@@ -182,7 +180,39 @@ namespace TAO
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-using OBV_Accessor_Optimized_Value = Accessor_Optimized_Value;
+// OBV_ class
+class TAO_IDL_TEST_STUB_Export OBV_Accessor_Optimized_Value
+  : public virtual Accessor_Optimized_Value,
+    public virtual ::CORBA::DefaultValueRefCountBase
+{
+
+public:
+  void value (::CORBA::Long const) override;
+  ::CORBA::Long value () const override;
+
+public:
+  OBV_Accessor_Optimized_Value () = default;
+  OBV_Accessor_Optimized_Value (
+      ::CORBA::Long _tao_init_value
+    );
+  ~OBV_Accessor_Optimized_Value () override;
+
+public:
+  ::CORBA::ValueBase *_copy_value () override;
+
+protected:
+  ::CORBA::Boolean _tao_marshal__Accessor_Optimized_Value (TAO_OutputCDR &, TAO_ChunkInfo &) const override;
+
+  ::CORBA::Boolean _tao_unmarshal__Accessor_Optimized_Value (TAO_InputCDR &, TAO_ChunkInfo &) override;
+
+  ::CORBA::Boolean _tao_marshal_state (TAO_OutputCDR &, TAO_ChunkInfo &) const;
+  ::CORBA::Boolean _tao_unmarshal_state (TAO_InputCDR &, TAO_ChunkInfo &);
+  void truncation_hook () override;
+
+private:
+  ::CORBA::Long _pd_value {};
+  CORBA::Boolean require_truncation_ {false};
+};
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
