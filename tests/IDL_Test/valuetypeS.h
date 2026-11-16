@@ -267,6 +267,91 @@ namespace TAO
 
 #endif /* end #if !defined */
 
+#if !defined (_ABSTRACT_REFCOUNT_BASE__SARG_TRAITS_)
+#define _ABSTRACT_REFCOUNT_BASE__SARG_TRAITS_
+
+  template<>
+  class SArg_Traits<::Abstract_Refcount_Base>
+    : public
+        Object_SArg_Traits_T<
+            ::Abstract_Refcount_Base *,
+            ::Abstract_Refcount_Base_var,
+            ::Abstract_Refcount_Base_out,
+            TAO::Any_Insert_Policy_Stream
+          >
+  {
+  };
+
+#endif /* end #if !defined */
+
+#if !defined (_ABSTRACT_REFCOUNT_DERIVED__SARG_TRAITS_)
+#define _ABSTRACT_REFCOUNT_DERIVED__SARG_TRAITS_
+
+  template<>
+  class SArg_Traits<::Abstract_Refcount_Derived>
+    : public
+        Object_SArg_Traits_T<
+            ::Abstract_Refcount_Derived *,
+            ::Abstract_Refcount_Derived_var,
+            ::Abstract_Refcount_Derived_out,
+            TAO::Any_Insert_Policy_Stream
+          >
+  {
+  };
+
+#endif /* end #if !defined */
+
+#if !defined (_CONCRETE_FROM_ABSTRACT__SARG_TRAITS_)
+#define _CONCRETE_FROM_ABSTRACT__SARG_TRAITS_
+
+  template<>
+  class SArg_Traits<::Concrete_From_Abstract>
+    : public
+        Object_SArg_Traits_T<
+            ::Concrete_From_Abstract *,
+            ::Concrete_From_Abstract_var,
+            ::Concrete_From_Abstract_out,
+            TAO::Any_Insert_Policy_Stream
+          >
+  {
+  };
+
+#endif /* end #if !defined */
+
+#if !defined (_SUPPORTED_INTERFACE_BASE__SARG_TRAITS_)
+#define _SUPPORTED_INTERFACE_BASE__SARG_TRAITS_
+
+  template<>
+  class SArg_Traits<::Supported_Interface_Base>
+    : public
+        Object_SArg_Traits_T<
+            ::Supported_Interface_Base *,
+            ::Supported_Interface_Base_var,
+            ::Supported_Interface_Base_out,
+            TAO::Any_Insert_Policy_Stream
+          >
+  {
+  };
+
+#endif /* end #if !defined */
+
+#if !defined (_SUPPORTED_INTERFACE_DERIVED__SARG_TRAITS_)
+#define _SUPPORTED_INTERFACE_DERIVED__SARG_TRAITS_
+
+  template<>
+  class SArg_Traits<::Supported_Interface_Derived>
+    : public
+        Object_SArg_Traits_T<
+            ::Supported_Interface_Derived *,
+            ::Supported_Interface_Derived_var,
+            ::Supported_Interface_Derived_out,
+            TAO::Any_Insert_Policy_Stream
+          >
+  {
+  };
+
+#endif /* end #if !defined */
+
 #if !defined (_FACTORY_INITIALIZED_VALUE__SARG_TRAITS_)
 #define _FACTORY_INITIALIZED_VALUE__SARG_TRAITS_
 
@@ -311,6 +396,23 @@ namespace TAO
             ::Copy_Derived *,
             ::Copy_Derived_var,
             ::Copy_Derived_out,
+            TAO::Any_Insert_Policy_Stream
+          >
+  {
+  };
+
+#endif /* end #if !defined */
+
+#if !defined (_COPY_OPERATION_DERIVED__SARG_TRAITS_)
+#define _COPY_OPERATION_DERIVED__SARG_TRAITS_
+
+  template<>
+  class SArg_Traits<::Copy_Operation_Derived>
+    : public
+        Object_SArg_Traits_T<
+            ::Copy_Operation_Derived *,
+            ::Copy_Operation_Derived_var,
+            ::Copy_Operation_Derived_out,
             TAO::Any_Insert_Policy_Stream
           >
   {

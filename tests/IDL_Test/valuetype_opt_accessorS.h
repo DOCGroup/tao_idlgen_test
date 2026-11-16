@@ -79,6 +79,40 @@ namespace TAO
   };
 
 #endif /* end #if !defined */
+
+#if !defined (_ACCESSOR_OPTIMIZED_BASE__SARG_TRAITS_)
+#define _ACCESSOR_OPTIMIZED_BASE__SARG_TRAITS_
+
+  template<>
+  class SArg_Traits<::Accessor_Optimized_Base>
+    : public
+        Object_SArg_Traits_T<
+            ::Accessor_Optimized_Base *,
+            ::Accessor_Optimized_Base_var,
+            ::Accessor_Optimized_Base_out,
+            TAO::Any_Insert_Policy_Stream
+          >
+  {
+  };
+
+#endif /* end #if !defined */
+
+#if !defined (_ACCESSOR_OPTIMIZED_DERIVED__SARG_TRAITS_)
+#define _ACCESSOR_OPTIMIZED_DERIVED__SARG_TRAITS_
+
+  template<>
+  class SArg_Traits<::Accessor_Optimized_Derived>
+    : public
+        Object_SArg_Traits_T<
+            ::Accessor_Optimized_Derived *,
+            ::Accessor_Optimized_Derived_var,
+            ::Accessor_Optimized_Derived_out,
+            TAO::Any_Insert_Policy_Stream
+          >
+  {
+  };
+
+#endif /* end #if !defined */
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
