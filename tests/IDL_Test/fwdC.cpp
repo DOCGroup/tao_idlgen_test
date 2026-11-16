@@ -2662,7 +2662,7 @@ OBV_obv_fwd::EnclosingType::_copy_value ()
     ret_val,
     EnclosingType (
       (forwarded () ?
-        obv_fwd::ForwardedType::_downcast (forwarded ()->_copy_value ())
+        obv_fwd::ForwardedType::_downcast (::CORBA::ValueBase_var (forwarded ()->_copy_value ()).in ())
         : 0)
     ),
     ::CORBA::NO_MEMORY ());

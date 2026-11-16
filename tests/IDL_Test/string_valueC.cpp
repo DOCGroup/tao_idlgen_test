@@ -227,7 +227,7 @@ OBV_include_test::StringTest::_copy_value ()
     ret_val,
     StringTest (
       (my_string_value () ?
-        CORBA::StringValue::_downcast (my_string_value ()->_copy_value ())
+        CORBA::StringValue::_downcast (::CORBA::ValueBase_var (my_string_value ()->_copy_value ()).in ())
         : 0)
     ),
     ::CORBA::NO_MEMORY ());

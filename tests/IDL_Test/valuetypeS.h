@@ -109,6 +109,303 @@ namespace TAO
 
 #endif /* end #if !defined */
 
+#if !defined (_VALUETYPE_OPERATION_BASE__SARG_TRAITS_)
+#define _VALUETYPE_OPERATION_BASE__SARG_TRAITS_
+
+  template<>
+  class  SArg_Traits<::Valuetype_Operation_Base>
+    : public Object_SArg_Traits_T<
+        ::Valuetype_Operation_Base_ptr,
+        ::Valuetype_Operation_Base_var,
+        ::Valuetype_Operation_Base_out,
+        TAO::Any_Insert_Policy_Stream>
+  {
+  };
+
+#endif /* end #if !defined */
+
+#if !defined (_AMH_VALUETYPE_OPERATION_BASEEXCEPTIONHOLDER__SARG_TRAITS_)
+#define _AMH_VALUETYPE_OPERATION_BASEEXCEPTIONHOLDER__SARG_TRAITS_
+
+  template<>
+  class SArg_Traits<::AMH_Valuetype_Operation_BaseExceptionHolder>
+    : public
+        Object_SArg_Traits_T<
+            ::AMH_Valuetype_Operation_BaseExceptionHolder *,
+            ::AMH_Valuetype_Operation_BaseExceptionHolder_var,
+            ::AMH_Valuetype_Operation_BaseExceptionHolder_out,
+            TAO::Any_Insert_Policy_Stream
+          >
+  {
+  };
+
+#endif /* end #if !defined */
+
+#if !defined (_AMI_VALUETYPE_OPERATION_BASEHANDLER__SARG_TRAITS_)
+#define _AMI_VALUETYPE_OPERATION_BASEHANDLER__SARG_TRAITS_
+
+  template<>
+  class  SArg_Traits<::AMI_Valuetype_Operation_BaseHandler>
+    : public Object_SArg_Traits_T<
+        ::AMI_Valuetype_Operation_BaseHandler_ptr,
+        ::AMI_Valuetype_Operation_BaseHandler_var,
+        ::AMI_Valuetype_Operation_BaseHandler_out,
+        TAO::Any_Insert_Policy_Stream>
+  {
+  };
+
+#endif /* end #if !defined */
+
+#if !defined (_EMPTY_VALUETYPE_OPERATION__SARG_TRAITS_)
+#define _EMPTY_VALUETYPE_OPERATION__SARG_TRAITS_
+
+  template<>
+  class  SArg_Traits<::Empty_Valuetype_Operation>
+    : public Object_SArg_Traits_T<
+        ::Empty_Valuetype_Operation_ptr,
+        ::Empty_Valuetype_Operation_var,
+        ::Empty_Valuetype_Operation_out,
+        TAO::Any_Insert_Policy_Stream>
+  {
+  };
+
+#endif /* end #if !defined */
+
+#if !defined (_AMH_EMPTY_VALUETYPE_OPERATIONEXCEPTIONHOLDER__SARG_TRAITS_)
+#define _AMH_EMPTY_VALUETYPE_OPERATIONEXCEPTIONHOLDER__SARG_TRAITS_
+
+  template<>
+  class SArg_Traits<::AMH_Empty_Valuetype_OperationExceptionHolder>
+    : public
+        Object_SArg_Traits_T<
+            ::AMH_Empty_Valuetype_OperationExceptionHolder *,
+            ::AMH_Empty_Valuetype_OperationExceptionHolder_var,
+            ::AMH_Empty_Valuetype_OperationExceptionHolder_out,
+            TAO::Any_Insert_Policy_Stream
+          >
+  {
+  };
+
+#endif /* end #if !defined */
+
+#if !defined (_AMI_EMPTY_VALUETYPE_OPERATIONHANDLER__SARG_TRAITS_)
+#define _AMI_EMPTY_VALUETYPE_OPERATIONHANDLER__SARG_TRAITS_
+
+  template<>
+  class  SArg_Traits<::AMI_Empty_Valuetype_OperationHandler>
+    : public Object_SArg_Traits_T<
+        ::AMI_Empty_Valuetype_OperationHandler_ptr,
+        ::AMI_Empty_Valuetype_OperationHandler_var,
+        ::AMI_Empty_Valuetype_OperationHandler_out,
+        TAO::Any_Insert_Policy_Stream>
+  {
+  };
+
+#endif /* end #if !defined */
+
+#if !defined (_SUPPORTS_INHERITED_OPERATION__SARG_TRAITS_)
+#define _SUPPORTS_INHERITED_OPERATION__SARG_TRAITS_
+
+  template<>
+  class SArg_Traits<::Supports_Inherited_Operation>
+    : public
+        Object_SArg_Traits_T<
+            ::Supports_Inherited_Operation *,
+            ::Supports_Inherited_Operation_var,
+            ::Supports_Inherited_Operation_out,
+            TAO::Any_Insert_Policy_Stream
+          >
+  {
+  };
+
+#endif /* end #if !defined */
+
+#if !defined (_EMPTY_VALUETYPE_INTERFACE__SARG_TRAITS_)
+#define _EMPTY_VALUETYPE_INTERFACE__SARG_TRAITS_
+
+  template<>
+  class  SArg_Traits<::Empty_Valuetype_Interface>
+    : public Object_SArg_Traits_T<
+        ::Empty_Valuetype_Interface_ptr,
+        ::Empty_Valuetype_Interface_var,
+        ::Empty_Valuetype_Interface_out,
+        TAO::Any_Insert_Policy_Stream>
+  {
+  };
+
+#endif /* end #if !defined */
+
+#if !defined (_AMH_EMPTY_VALUETYPE_INTERFACEEXCEPTIONHOLDER__SARG_TRAITS_)
+#define _AMH_EMPTY_VALUETYPE_INTERFACEEXCEPTIONHOLDER__SARG_TRAITS_
+
+  template<>
+  class SArg_Traits<::AMH_Empty_Valuetype_InterfaceExceptionHolder>
+    : public
+        Object_SArg_Traits_T<
+            ::AMH_Empty_Valuetype_InterfaceExceptionHolder *,
+            ::AMH_Empty_Valuetype_InterfaceExceptionHolder_var,
+            ::AMH_Empty_Valuetype_InterfaceExceptionHolder_out,
+            TAO::Any_Insert_Policy_Stream
+          >
+  {
+  };
+
+#endif /* end #if !defined */
+
+#if !defined (_AMI_EMPTY_VALUETYPE_INTERFACEHANDLER__SARG_TRAITS_)
+#define _AMI_EMPTY_VALUETYPE_INTERFACEHANDLER__SARG_TRAITS_
+
+  template<>
+  class  SArg_Traits<::AMI_Empty_Valuetype_InterfaceHandler>
+    : public Object_SArg_Traits_T<
+        ::AMI_Empty_Valuetype_InterfaceHandler_ptr,
+        ::AMI_Empty_Valuetype_InterfaceHandler_var,
+        ::AMI_Empty_Valuetype_InterfaceHandler_out,
+        TAO::Any_Insert_Policy_Stream>
+  {
+  };
+
+#endif /* end #if !defined */
+
+#if !defined (_FACTORY_INITIALIZED_VALUE__SARG_TRAITS_)
+#define _FACTORY_INITIALIZED_VALUE__SARG_TRAITS_
+
+  template<>
+  class SArg_Traits<::Factory_Initialized_Value>
+    : public
+        Object_SArg_Traits_T<
+            ::Factory_Initialized_Value *,
+            ::Factory_Initialized_Value_var,
+            ::Factory_Initialized_Value_out,
+            TAO::Any_Insert_Policy_Stream
+          >
+  {
+  };
+
+#endif /* end #if !defined */
+
+#if !defined (_COPY_BASE__SARG_TRAITS_)
+#define _COPY_BASE__SARG_TRAITS_
+
+  template<>
+  class SArg_Traits<::Copy_Base>
+    : public
+        Object_SArg_Traits_T<
+            ::Copy_Base *,
+            ::Copy_Base_var,
+            ::Copy_Base_out,
+            TAO::Any_Insert_Policy_Stream
+          >
+  {
+  };
+
+#endif /* end #if !defined */
+
+#if !defined (_COPY_DERIVED__SARG_TRAITS_)
+#define _COPY_DERIVED__SARG_TRAITS_
+
+  template<>
+  class SArg_Traits<::Copy_Derived>
+    : public
+        Object_SArg_Traits_T<
+            ::Copy_Derived *,
+            ::Copy_Derived_var,
+            ::Copy_Derived_out,
+            TAO::Any_Insert_Policy_Stream
+          >
+  {
+  };
+
+#endif /* end #if !defined */
+
+#if !defined (_COPY_LEAF__SARG_TRAITS_)
+#define _COPY_LEAF__SARG_TRAITS_
+
+  template<>
+  class SArg_Traits<::Copy_Leaf>
+    : public
+        Object_SArg_Traits_T<
+            ::Copy_Leaf *,
+            ::Copy_Leaf_var,
+            ::Copy_Leaf_out,
+            TAO::Any_Insert_Policy_Stream
+          >
+  {
+  };
+
+#endif /* end #if !defined */
+
+  template<>
+  class SArg_Traits<::Copy_Leaf_Sequence>
+    : public
+        Var_Size_SArg_Traits_T<
+            ::Copy_Leaf_Sequence,
+            TAO::Any_Insert_Policy_Stream
+          >
+  {
+  };
+
+  template<>
+  class SArg_Traits<::Copy_Leaf_Struct>
+    : public
+        Var_Size_SArg_Traits_T<
+            ::Copy_Leaf_Struct,
+            TAO::Any_Insert_Policy_Stream
+          >
+  {
+  };
+
+#if !defined (_COPY_ALIAS_HOLDER__SARG_TRAITS_)
+#define _COPY_ALIAS_HOLDER__SARG_TRAITS_
+
+  template<>
+  class SArg_Traits<::Copy_Alias_Holder>
+    : public
+        Object_SArg_Traits_T<
+            ::Copy_Alias_Holder *,
+            ::Copy_Alias_Holder_var,
+            ::Copy_Alias_Holder_out,
+            TAO::Any_Insert_Policy_Stream
+          >
+  {
+  };
+
+#endif /* end #if !defined */
+
+#if !defined (_COPY_SEQUENCE_HOLDER__SARG_TRAITS_)
+#define _COPY_SEQUENCE_HOLDER__SARG_TRAITS_
+
+  template<>
+  class SArg_Traits<::Copy_Sequence_Holder>
+    : public
+        Object_SArg_Traits_T<
+            ::Copy_Sequence_Holder *,
+            ::Copy_Sequence_Holder_var,
+            ::Copy_Sequence_Holder_out,
+            TAO::Any_Insert_Policy_Stream
+          >
+  {
+  };
+
+#endif /* end #if !defined */
+
+#if !defined (_COPY_STRUCT_HOLDER__SARG_TRAITS_)
+#define _COPY_STRUCT_HOLDER__SARG_TRAITS_
+
+  template<>
+  class SArg_Traits<::Copy_Struct_Holder>
+    : public
+        Object_SArg_Traits_T<
+            ::Copy_Struct_Holder *,
+            ::Copy_Struct_Holder_var,
+            ::Copy_Struct_Holder_out,
+            TAO::Any_Insert_Policy_Stream
+          >
+  {
+  };
+
+#endif /* end #if !defined */
+
   template<>
   class SArg_Traits<::ValueSort2>
     : public
@@ -263,6 +560,412 @@ namespace TAO
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
+
+class POA_AMH_Valuetype_Operation_Base;
+using POA_AMH_Valuetype_Operation_Base_ptr = POA_AMH_Valuetype_Operation_Base *;
+
+class TAO_IDL_TEST_STUB_Export POA_AMH_Valuetype_Operation_Base
+  : public virtual PortableServer::ServantBase
+{
+protected:
+  POA_AMH_Valuetype_Operation_Base ();
+
+public:
+  POA_AMH_Valuetype_Operation_Base (POA_AMH_Valuetype_Operation_Base const &rhs);
+  ~POA_AMH_Valuetype_Operation_Base () override = default;
+
+  ::CORBA::Boolean _is_a (char const *logical_type_id) override;
+
+  void _dispatch (
+      TAO_ServerRequest &req,
+      TAO::Portable_Server::Servant_Upcall *_servant_upcall) override;
+
+  Valuetype_Operation_Base *_this ();
+
+char const *_interface_repository_id () const override;
+static void inherited_operation_skel (
+    TAO_ServerRequest &_tao_req,
+    TAO::Portable_Server::Servant_Upcall *_tao_obj,
+    TAO_ServantBase *_tao_servant_upcall);
+
+virtual void inherited_operation (
+    AMH_Valuetype_Operation_BaseResponseHandler_ptr _tao_rh) = 0;
+
+};
+
+class POA_Valuetype_Operation_Base;
+using POA_Valuetype_Operation_Base_ptr = POA_Valuetype_Operation_Base *;
+
+class _TAO_Valuetype_Operation_Base_Direct_Proxy_Impl;
+
+class TAO_IDL_TEST_STUB_Export POA_Valuetype_Operation_Base
+  : public virtual PortableServer::ServantBase
+{
+protected:
+  POA_Valuetype_Operation_Base ();
+
+public:
+  /// Useful for template programming.
+  using _stub_type = ::Valuetype_Operation_Base;
+  using _stub_ptr_type = ::Valuetype_Operation_Base_ptr;
+  using _stub_var_type = ::Valuetype_Operation_Base_var;
+
+  POA_Valuetype_Operation_Base (POA_Valuetype_Operation_Base const &rhs) = default;
+  ~POA_Valuetype_Operation_Base () override = default;
+
+  ::CORBA::Boolean _is_a (char const *logical_type_id) override;
+
+  void _dispatch (
+      TAO_ServerRequest & req,
+      TAO::Portable_Server::Servant_Upcall *servant_upcall) override;
+
+  ::Valuetype_Operation_Base *_this ();
+
+  char const *_interface_repository_id () const override;
+  virtual void inherited_operation () = 0;
+
+  static void inherited_operation_skel (
+    TAO_ServerRequest &server_request,
+    TAO::Portable_Server::Servant_Upcall *servant_upcall,
+    TAO_ServantBase *servant);
+};
+
+class TAO_IDL_TEST_STUB_Export _TAO_Valuetype_Operation_Base_Direct_Proxy_Impl
+{
+public:
+  virtual ~_TAO_Valuetype_Operation_Base_Direct_Proxy_Impl ();
+  static void inherited_operation (TAO_Abstract_ServantBase *servant, TAO::Argument **);
+};
+
+class POA_TAO_AMH_Valuetype_Operation_BaseResponseHandler;
+using POA_TAO_AMH_Valuetype_Operation_BaseResponseHandler_ptr = POA_TAO_AMH_Valuetype_Operation_BaseResponseHandler *;
+
+class TAO_IDL_TEST_STUB_Export POA_TAO_AMH_Valuetype_Operation_BaseResponseHandler
+  : public TAO_AMH_Response_Handler,
+    public ::AMH_Valuetype_Operation_BaseResponseHandler
+{
+public:
+  POA_TAO_AMH_Valuetype_Operation_BaseResponseHandler () = default;
+  virtual ~POA_TAO_AMH_Valuetype_Operation_BaseResponseHandler () = default;
+  void inherited_operation () override;
+  void inherited_operation_excep (
+    ::AMH_Valuetype_Operation_BaseExceptionHolder * holder) override;
+};
+
+class POA_AMI_Valuetype_Operation_BaseHandler;
+using POA_AMI_Valuetype_Operation_BaseHandler_ptr = POA_AMI_Valuetype_Operation_BaseHandler *;
+
+class _TAO_AMI_Valuetype_Operation_BaseHandler_Direct_Proxy_Impl;
+
+class TAO_IDL_TEST_STUB_Export POA_AMI_Valuetype_Operation_BaseHandler
+  : public virtual POA_Messaging::ReplyHandler
+{
+protected:
+  POA_AMI_Valuetype_Operation_BaseHandler ();
+
+public:
+  /// Useful for template programming.
+  using _stub_type = ::AMI_Valuetype_Operation_BaseHandler;
+  using _stub_ptr_type = ::AMI_Valuetype_Operation_BaseHandler_ptr;
+  using _stub_var_type = ::AMI_Valuetype_Operation_BaseHandler_var;
+
+  POA_AMI_Valuetype_Operation_BaseHandler (POA_AMI_Valuetype_Operation_BaseHandler const &rhs) = default;
+  ~POA_AMI_Valuetype_Operation_BaseHandler () override = default;
+
+  ::CORBA::Boolean _is_a (char const *logical_type_id) override;
+
+  void _dispatch (
+      TAO_ServerRequest & req,
+      TAO::Portable_Server::Servant_Upcall *servant_upcall) override;
+
+  ::AMI_Valuetype_Operation_BaseHandler *_this ();
+
+  char const *_interface_repository_id () const override;
+  virtual void inherited_operation () = 0;
+
+  static void inherited_operation_skel (
+    TAO_ServerRequest &server_request,
+    TAO::Portable_Server::Servant_Upcall *servant_upcall,
+    TAO_ServantBase *servant);
+  virtual void inherited_operation_excep (
+    ::Messaging::ExceptionHolder * excep_holder) = 0;
+
+  static void inherited_operation_excep_skel (
+    TAO_ServerRequest &server_request,
+    TAO::Portable_Server::Servant_Upcall *servant_upcall,
+    TAO_ServantBase *servant);
+};
+
+class TAO_IDL_TEST_STUB_Export _TAO_AMI_Valuetype_Operation_BaseHandler_Direct_Proxy_Impl
+  : public virtual ::POA_Messaging::_TAO_ReplyHandler_Direct_Proxy_Impl
+{
+public:
+  virtual ~_TAO_AMI_Valuetype_Operation_BaseHandler_Direct_Proxy_Impl ();
+  static void inherited_operation (TAO_Abstract_ServantBase *servant, TAO::Argument **);
+  static void inherited_operation_excep (TAO_Abstract_ServantBase *servant, TAO::Argument **args);
+};
+
+class POA_AMH_Empty_Valuetype_Operation;
+using POA_AMH_Empty_Valuetype_Operation_ptr = POA_AMH_Empty_Valuetype_Operation *;
+
+class TAO_IDL_TEST_STUB_Export POA_AMH_Empty_Valuetype_Operation
+  : public virtual POA_AMH_Valuetype_Operation_Base
+
+{
+protected:
+  POA_AMH_Empty_Valuetype_Operation ();
+
+public:
+  POA_AMH_Empty_Valuetype_Operation (POA_AMH_Empty_Valuetype_Operation const &rhs);
+  ~POA_AMH_Empty_Valuetype_Operation () override = default;
+
+  ::CORBA::Boolean _is_a (char const *logical_type_id) override;
+
+  void _dispatch (
+      TAO_ServerRequest &req,
+      TAO::Portable_Server::Servant_Upcall *_servant_upcall) override;
+
+  Empty_Valuetype_Operation *_this ();
+
+char const *_interface_repository_id () const override;
+};
+
+class POA_Empty_Valuetype_Operation;
+using POA_Empty_Valuetype_Operation_ptr = POA_Empty_Valuetype_Operation *;
+
+class _TAO_Empty_Valuetype_Operation_Direct_Proxy_Impl;
+
+class TAO_IDL_TEST_STUB_Export POA_Empty_Valuetype_Operation
+  : public virtual POA_Valuetype_Operation_Base
+{
+protected:
+  POA_Empty_Valuetype_Operation ();
+
+public:
+  /// Useful for template programming.
+  using _stub_type = ::Empty_Valuetype_Operation;
+  using _stub_ptr_type = ::Empty_Valuetype_Operation_ptr;
+  using _stub_var_type = ::Empty_Valuetype_Operation_var;
+
+  POA_Empty_Valuetype_Operation (POA_Empty_Valuetype_Operation const &rhs) = default;
+  ~POA_Empty_Valuetype_Operation () override = default;
+
+  ::CORBA::Boolean _is_a (char const *logical_type_id) override;
+
+  void _dispatch (
+      TAO_ServerRequest & req,
+      TAO::Portable_Server::Servant_Upcall *servant_upcall) override;
+
+  ::Empty_Valuetype_Operation *_this ();
+
+  char const *_interface_repository_id () const override;
+};
+
+class TAO_IDL_TEST_STUB_Export _TAO_Empty_Valuetype_Operation_Direct_Proxy_Impl
+  : public virtual ::_TAO_Valuetype_Operation_Base_Direct_Proxy_Impl
+{
+public:
+  virtual ~_TAO_Empty_Valuetype_Operation_Direct_Proxy_Impl ();
+};
+
+class POA_TAO_AMH_Empty_Valuetype_OperationResponseHandler;
+using POA_TAO_AMH_Empty_Valuetype_OperationResponseHandler_ptr = POA_TAO_AMH_Empty_Valuetype_OperationResponseHandler *;
+
+class TAO_IDL_TEST_STUB_Export POA_TAO_AMH_Empty_Valuetype_OperationResponseHandler
+  : public TAO_AMH_Response_Handler,
+    public ::AMH_Empty_Valuetype_OperationResponseHandler
+{
+public:
+  POA_TAO_AMH_Empty_Valuetype_OperationResponseHandler () = default;
+  virtual ~POA_TAO_AMH_Empty_Valuetype_OperationResponseHandler () = default;
+};
+
+class POA_AMI_Empty_Valuetype_OperationHandler;
+using POA_AMI_Empty_Valuetype_OperationHandler_ptr = POA_AMI_Empty_Valuetype_OperationHandler *;
+
+class _TAO_AMI_Empty_Valuetype_OperationHandler_Direct_Proxy_Impl;
+
+class TAO_IDL_TEST_STUB_Export POA_AMI_Empty_Valuetype_OperationHandler
+  : public virtual POA_AMI_Valuetype_Operation_BaseHandler
+{
+protected:
+  POA_AMI_Empty_Valuetype_OperationHandler ();
+
+public:
+  /// Useful for template programming.
+  using _stub_type = ::AMI_Empty_Valuetype_OperationHandler;
+  using _stub_ptr_type = ::AMI_Empty_Valuetype_OperationHandler_ptr;
+  using _stub_var_type = ::AMI_Empty_Valuetype_OperationHandler_var;
+
+  POA_AMI_Empty_Valuetype_OperationHandler (POA_AMI_Empty_Valuetype_OperationHandler const &rhs) = default;
+  ~POA_AMI_Empty_Valuetype_OperationHandler () override = default;
+
+  ::CORBA::Boolean _is_a (char const *logical_type_id) override;
+
+  void _dispatch (
+      TAO_ServerRequest & req,
+      TAO::Portable_Server::Servant_Upcall *servant_upcall) override;
+
+  ::AMI_Empty_Valuetype_OperationHandler *_this ();
+
+  char const *_interface_repository_id () const override;
+};
+
+class TAO_IDL_TEST_STUB_Export _TAO_AMI_Empty_Valuetype_OperationHandler_Direct_Proxy_Impl
+  : public virtual ::_TAO_AMI_Valuetype_Operation_BaseHandler_Direct_Proxy_Impl
+{
+public:
+  virtual ~_TAO_AMI_Empty_Valuetype_OperationHandler_Direct_Proxy_Impl ();
+};
+
+class POA_Supports_Inherited_Operation;
+using POA_Supports_Inherited_Operation_ptr = POA_Supports_Inherited_Operation *;
+// Forward Classes Declaration
+class _TAO_Supports_Inherited_Operation_Direct_Proxy_Impl;
+
+class TAO_IDL_TEST_STUB_Export POA_Supports_Inherited_Operation
+  : public virtual POA_Empty_Valuetype_Operation,
+    public virtual ::Supports_Inherited_Operation
+{
+protected:
+  POA_Supports_Inherited_Operation ();
+
+public:
+  virtual ~POA_Supports_Inherited_Operation ();
+
+private:
+  POA_Supports_Inherited_Operation (POA_Supports_Inherited_Operation const &rhs);
+};
+
+class POA_AMH_Empty_Valuetype_Interface;
+using POA_AMH_Empty_Valuetype_Interface_ptr = POA_AMH_Empty_Valuetype_Interface *;
+
+class TAO_IDL_TEST_STUB_Export POA_AMH_Empty_Valuetype_Interface
+  : public virtual PortableServer::ServantBase
+{
+protected:
+  POA_AMH_Empty_Valuetype_Interface ();
+
+public:
+  POA_AMH_Empty_Valuetype_Interface (POA_AMH_Empty_Valuetype_Interface const &rhs);
+  ~POA_AMH_Empty_Valuetype_Interface () override = default;
+
+  ::CORBA::Boolean _is_a (char const *logical_type_id) override;
+
+  void _dispatch (
+      TAO_ServerRequest &req,
+      TAO::Portable_Server::Servant_Upcall *_servant_upcall) override;
+
+  Empty_Valuetype_Interface *_this ();
+
+char const *_interface_repository_id () const override;
+};
+
+class POA_Empty_Valuetype_Interface;
+using POA_Empty_Valuetype_Interface_ptr = POA_Empty_Valuetype_Interface *;
+
+class _TAO_Empty_Valuetype_Interface_Direct_Proxy_Impl;
+
+class TAO_IDL_TEST_STUB_Export POA_Empty_Valuetype_Interface
+  : public virtual PortableServer::ServantBase
+{
+protected:
+  POA_Empty_Valuetype_Interface ();
+
+public:
+  /// Useful for template programming.
+  using _stub_type = ::Empty_Valuetype_Interface;
+  using _stub_ptr_type = ::Empty_Valuetype_Interface_ptr;
+  using _stub_var_type = ::Empty_Valuetype_Interface_var;
+
+  POA_Empty_Valuetype_Interface (POA_Empty_Valuetype_Interface const &rhs) = default;
+  ~POA_Empty_Valuetype_Interface () override = default;
+
+  ::CORBA::Boolean _is_a (char const *logical_type_id) override;
+
+  void _dispatch (
+      TAO_ServerRequest & req,
+      TAO::Portable_Server::Servant_Upcall *servant_upcall) override;
+
+  ::Empty_Valuetype_Interface *_this ();
+
+  char const *_interface_repository_id () const override;
+};
+
+class TAO_IDL_TEST_STUB_Export _TAO_Empty_Valuetype_Interface_Direct_Proxy_Impl
+{
+public:
+  virtual ~_TAO_Empty_Valuetype_Interface_Direct_Proxy_Impl ();
+};
+
+class POA_TAO_AMH_Empty_Valuetype_InterfaceResponseHandler;
+using POA_TAO_AMH_Empty_Valuetype_InterfaceResponseHandler_ptr = POA_TAO_AMH_Empty_Valuetype_InterfaceResponseHandler *;
+
+class TAO_IDL_TEST_STUB_Export POA_TAO_AMH_Empty_Valuetype_InterfaceResponseHandler
+  : public TAO_AMH_Response_Handler,
+    public ::AMH_Empty_Valuetype_InterfaceResponseHandler
+{
+public:
+  POA_TAO_AMH_Empty_Valuetype_InterfaceResponseHandler () = default;
+  virtual ~POA_TAO_AMH_Empty_Valuetype_InterfaceResponseHandler () = default;
+};
+
+class POA_AMI_Empty_Valuetype_InterfaceHandler;
+using POA_AMI_Empty_Valuetype_InterfaceHandler_ptr = POA_AMI_Empty_Valuetype_InterfaceHandler *;
+
+class _TAO_AMI_Empty_Valuetype_InterfaceHandler_Direct_Proxy_Impl;
+
+class TAO_IDL_TEST_STUB_Export POA_AMI_Empty_Valuetype_InterfaceHandler
+  : public virtual POA_Messaging::ReplyHandler
+{
+protected:
+  POA_AMI_Empty_Valuetype_InterfaceHandler ();
+
+public:
+  /// Useful for template programming.
+  using _stub_type = ::AMI_Empty_Valuetype_InterfaceHandler;
+  using _stub_ptr_type = ::AMI_Empty_Valuetype_InterfaceHandler_ptr;
+  using _stub_var_type = ::AMI_Empty_Valuetype_InterfaceHandler_var;
+
+  POA_AMI_Empty_Valuetype_InterfaceHandler (POA_AMI_Empty_Valuetype_InterfaceHandler const &rhs) = default;
+  ~POA_AMI_Empty_Valuetype_InterfaceHandler () override = default;
+
+  ::CORBA::Boolean _is_a (char const *logical_type_id) override;
+
+  void _dispatch (
+      TAO_ServerRequest & req,
+      TAO::Portable_Server::Servant_Upcall *servant_upcall) override;
+
+  ::AMI_Empty_Valuetype_InterfaceHandler *_this ();
+
+  char const *_interface_repository_id () const override;
+};
+
+class TAO_IDL_TEST_STUB_Export _TAO_AMI_Empty_Valuetype_InterfaceHandler_Direct_Proxy_Impl
+  : public virtual ::POA_Messaging::_TAO_ReplyHandler_Direct_Proxy_Impl
+{
+public:
+  virtual ~_TAO_AMI_Empty_Valuetype_InterfaceHandler_Direct_Proxy_Impl ();
+};
+
+class POA_Factory_Initialized_Value;
+using POA_Factory_Initialized_Value_ptr = POA_Factory_Initialized_Value *;
+// Forward Classes Declaration
+class _TAO_Factory_Initialized_Value_Direct_Proxy_Impl;
+
+class TAO_IDL_TEST_STUB_Export POA_Factory_Initialized_Value
+  : public virtual POA_Empty_Valuetype_Interface,
+    public virtual ::Factory_Initialized_Value
+{
+protected:
+  POA_Factory_Initialized_Value ();
+
+public:
+  virtual ~POA_Factory_Initialized_Value ();
+
+private:
+  POA_Factory_Initialized_Value (POA_Factory_Initialized_Value const &rhs);
+};
 
 namespace POA_X_VALUETYPE
 {
