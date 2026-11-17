@@ -160,6 +160,33 @@ AMI_Empty_Valuetype_InterfaceHandler::AMI_Empty_Valuetype_InterfaceHandler (::IO
 {
 }
 ACE_INLINE
+Abstract_Refcount_Base::Abstract_Refcount_Base ()
+{}
+
+ACE_INLINE char const *
+Abstract_Refcount_Base::_tao_obv_static_repository_id ()
+{
+  return "IDL:Abstract_Refcount_Base:1.0";
+}
+ACE_INLINE
+Abstract_Refcount_Derived::Abstract_Refcount_Derived ()
+{}
+
+ACE_INLINE char const *
+Abstract_Refcount_Derived::_tao_obv_static_repository_id ()
+{
+  return "IDL:Abstract_Refcount_Derived:1.0";
+}
+ACE_INLINE
+Concrete_From_Abstract::Concrete_From_Abstract ()
+{}
+
+ACE_INLINE char const *
+Concrete_From_Abstract::_tao_obv_static_repository_id ()
+{
+  return "IDL:Concrete_From_Abstract:1.0";
+}
+ACE_INLINE
 Supported_Interface_Base::Supported_Interface_Base ()
 {}
 
