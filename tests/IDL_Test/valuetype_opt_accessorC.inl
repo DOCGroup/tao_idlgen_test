@@ -23,6 +23,29 @@
  **/
 
 ACE_INLINE
+Accessor_Optimized_Leaf::Accessor_Optimized_Leaf ()
+{}
+
+ACE_INLINE char const *
+Accessor_Optimized_Leaf::_tao_obv_static_repository_id ()
+{
+  return "IDL:Accessor_Optimized_Leaf:1.0";
+}
+/// Accessor to set the member.
+ACE_INLINE void
+Accessor_Optimized_Leaf::leaf_value (CORBA::Long const val)
+{
+  // Set the value.
+  this->_pd_leaf_value = val;
+}
+
+// Retrieve the member
+ACE_INLINE ::CORBA::Long
+Accessor_Optimized_Leaf::leaf_value () const
+{
+  return this->_pd_leaf_value;
+}
+ACE_INLINE
 Accessor_Optimized_Value::Accessor_Optimized_Value ()
 {}
 
@@ -45,28 +68,19 @@ Accessor_Optimized_Value::value () const
 {
   return this->_pd_value;
 }
-ACE_INLINE
-Accessor_Optimized_Base::Accessor_Optimized_Base ()
-{}
-
-ACE_INLINE char const *
-Accessor_Optimized_Base::_tao_obv_static_repository_id ()
-{
-  return "IDL:Accessor_Optimized_Base:1.0";
-}
 /// Accessor to set the member.
 ACE_INLINE void
-Accessor_Optimized_Base::value (CORBA::Long const val)
+Accessor_Optimized_Value::child (Accessor_Optimized_Leaf* val)
 {
-  // Set the value.
-  this->_pd_value = val;
+  ::CORBA::add_ref (val);
+  this->_pd_child = val;
 }
 
-// Retrieve the member
-ACE_INLINE ::CORBA::Long
-Accessor_Optimized_Base::value () const
+/// Retrieve the member
+ACE_INLINE Accessor_Optimized_Leaf *
+Accessor_Optimized_Value::child () const
 {
-  return this->_pd_value;
+  return this->_pd_child.in ();
 }
 ACE_INLINE
 Accessor_Optimized_Derived::Accessor_Optimized_Derived ()
@@ -76,4 +90,18 @@ ACE_INLINE char const *
 Accessor_Optimized_Derived::_tao_obv_static_repository_id ()
 {
   return "IDL:Accessor_Optimized_Derived:1.0";
+}
+/// Accessor to set the member.
+ACE_INLINE void
+Accessor_Optimized_Derived::derived_value (CORBA::Long const val)
+{
+  // Set the value.
+  this->_pd_derived_value = val;
+}
+
+// Retrieve the member
+ACE_INLINE ::CORBA::Long
+Accessor_Optimized_Derived::derived_value () const
+{
+  return this->_pd_derived_value;
 }

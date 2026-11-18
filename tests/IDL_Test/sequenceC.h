@@ -65,46 +65,6 @@
 #error This file should be regenerated with TAO_IDL
 #endif
 
-#if !defined (_OCTETSEQUENCETEST_CH_)
-#define _OCTETSEQUENCETEST_CH_
-
-class OctetSequenceTest;
-using OctetSequenceTest_var = ::TAO_FixedSeq_Var_T<OctetSequenceTest>;
-using OctetSequenceTest_out = ::TAO_Seq_Out_T<OctetSequenceTest>;
-
-class TAO_IDL_TEST_STUB_Export OctetSequenceTest
-  : public
-      ::TAO::unbounded_value_sequence<::CORBA::Octet>
-{
-public:
-  OctetSequenceTest () = default;
-  explicit OctetSequenceTest (::CORBA::ULong max);
-  OctetSequenceTest (
-    ::CORBA::ULong max,
-    ::CORBA::ULong length,
-    ::CORBA::Octet* buffer,
-    ::CORBA::Boolean release = false);
-  OctetSequenceTest (OctetSequenceTest const &) = default;
-  OctetSequenceTest (OctetSequenceTest &&) = default;
-  OctetSequenceTest& operator= (OctetSequenceTest const &) = default;
-  OctetSequenceTest& operator= (OctetSequenceTest &&) = default;
-  virtual ~OctetSequenceTest () = default;
-
-  using _var_type = OctetSequenceTest_var;
-  using _out_type = OctetSequenceTest_out;
-
-  static void _tao_any_destructor (void *);
-
-#if (TAO_NO_COPY_OCTET_SEQUENCES == 1)
-  OctetSequenceTest (::CORBA::ULong length, ACE_Message_Block const *mb)
-    : ::TAO::unbounded_value_sequence<::CORBA::Octet> (length, mb) {}
-
-#endif /* TAO_NO_COPY_OCTET_SEQUENCE == 1 */
-};
-
-#endif /* end #if !defined */
-extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_OctetSequenceTest;
-
 struct myfoostruct;
 using myfoostruct_var = ::TAO_Var_Var_T<myfoostruct>;
 using myfoostruct_out = ::TAO_Out_T<myfoostruct>;
@@ -590,16 +550,6 @@ namespace TAO
 #endif /* end #if !defined */
 
   template<>
-  class Arg_Traits<::OctetSequenceTest>
-    : public
-        Var_Size_Arg_Traits_T<
-            ::OctetSequenceTest,
-            TAO::Any_Insert_Policy_Stream
-          >
-  {
-  };
-
-  template<>
   class Arg_Traits<::myfoostructseq>
     : public
         Var_Size_Arg_Traits_T<
@@ -767,15 +717,6 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
 
-TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, ::OctetSequenceTest const &); // copying version
-TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, ::OctetSequenceTest*); // noncopying version
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, ::OctetSequenceTest const *&);
-}
-TAO_END_VERSIONED_NAMESPACE_DECL
-
-TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-namespace CORBA {
-
 TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, ::myfoostructseq const &); // copying version
 TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, ::myfoostructseq*); // noncopying version
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, ::myfoostructseq const *&);
@@ -916,17 +857,6 @@ TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, ::Deployment::Compone
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, ::Deployment::ComponentPackageDescription const *&);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
-
-#if !defined _TAO_CDR_OP_OctetSequenceTest_H_
-#define _TAO_CDR_OP_OctetSequenceTest_H_
-TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &strm, OctetSequenceTest const &_tao_sequence);
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &strm, OctetSequenceTest &_tao_sequence);
-
-TAO_END_VERSIONED_NAMESPACE_DECL
-
-#endif /* _TAO_CDR_OP_OctetSequenceTest_H_ */
 
 #if !defined _TAO_CDR_OP_myfoostructseq_H_
 #define _TAO_CDR_OP_myfoostructseq_H_

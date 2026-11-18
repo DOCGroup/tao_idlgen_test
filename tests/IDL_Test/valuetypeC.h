@@ -801,6 +801,7 @@ public:
 
   void _add_ref () override = 0;
   void _remove_ref () override = 0;
+  ::CORBA::ValueBase *_tao_to_value ();
 
 protected:
   Supports_Inherited_Operation ();
@@ -1071,121 +1072,32 @@ private:
 };
 extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_AMI_Empty_Valuetype_InterfaceHandler;
 
-#if !defined (_ABSTRACT_REFCOUNT_BASE__VAR_OUT_CH_)
-#define _ABSTRACT_REFCOUNT_BASE__VAR_OUT_CH_
+#if !defined (_SUPPORTED_INTERFACE_VALUE__VAR_OUT_CH_)
+#define _SUPPORTED_INTERFACE_VALUE__VAR_OUT_CH_
 
-class Abstract_Refcount_Base;
-using Abstract_Refcount_Base_var = TAO_Value_Var_T<Abstract_Refcount_Base>;
-using Abstract_Refcount_Base_out = TAO_Value_Out_T<Abstract_Refcount_Base>;
+class Supported_Interface_Value;
+using Supported_Interface_Value_var = TAO_Value_Var_T<Supported_Interface_Value>;
+using Supported_Interface_Value_out = TAO_Value_Out_T<Supported_Interface_Value>;
 
 #endif /* end #if !defined */
 
-class TAO_IDL_TEST_STUB_Export Abstract_Refcount_Base
-  : public virtual ::CORBA::ValueBase
+class TAO_IDL_TEST_STUB_Export Supported_Interface_Value
+  : public virtual ::CORBA::ValueBase,
+    public virtual ::Empty_Valuetype_Interface
 {
 public:
-  using _ptr_type = Abstract_Refcount_Base*;
-  using _var_type = Abstract_Refcount_Base_var;
-  using _out_type = Abstract_Refcount_Base_out;
+  using _ptr_type = Supported_Interface_Value*;
+  using _var_type = Supported_Interface_Value_var;
+  using _out_type = Supported_Interface_Value_out;
 
   static void _tao_any_destructor (void *);
 
-  static Abstract_Refcount_Base* _downcast (::CORBA::ValueBase *v);
+  static Supported_Interface_Value* _downcast (::CORBA::ValueBase *v);
 
   /// TAO extensions or internals
   static ::CORBA::Boolean _tao_unmarshal (
       TAO_InputCDR &strm,
-      Abstract_Refcount_Base *&new_object);
-
-  char const * _tao_obv_repository_id () const override;
-
-  void _tao_obv_truncatable_repo_ids (Repository_Id_List &) const override;
-
-  static char const * _tao_obv_static_repository_id ();
-
-  ::CORBA::TypeCode_ptr _tao_type () const override;
-
-protected:
-  Abstract_Refcount_Base ();
-  ~Abstract_Refcount_Base () override;
-
-private:
-  Abstract_Refcount_Base (Abstract_Refcount_Base const &);
-  void operator= (Abstract_Refcount_Base const &);
-
-};
-extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_Abstract_Refcount_Base;
-
-#if !defined (_ABSTRACT_REFCOUNT_DERIVED__VAR_OUT_CH_)
-#define _ABSTRACT_REFCOUNT_DERIVED__VAR_OUT_CH_
-
-class Abstract_Refcount_Derived;
-using Abstract_Refcount_Derived_var = TAO_Value_Var_T<Abstract_Refcount_Derived>;
-using Abstract_Refcount_Derived_out = TAO_Value_Out_T<Abstract_Refcount_Derived>;
-
-#endif /* end #if !defined */
-
-class TAO_IDL_TEST_STUB_Export Abstract_Refcount_Derived
-  : public virtual Abstract_Refcount_Base
-{
-public:
-  using _ptr_type = Abstract_Refcount_Derived*;
-  using _var_type = Abstract_Refcount_Derived_var;
-  using _out_type = Abstract_Refcount_Derived_out;
-
-  static void _tao_any_destructor (void *);
-
-  static Abstract_Refcount_Derived* _downcast (::CORBA::ValueBase *v);
-
-  /// TAO extensions or internals
-  static ::CORBA::Boolean _tao_unmarshal (
-      TAO_InputCDR &strm,
-      Abstract_Refcount_Derived *&new_object);
-
-  char const * _tao_obv_repository_id () const override;
-
-  void _tao_obv_truncatable_repo_ids (Repository_Id_List &) const override;
-
-  static char const * _tao_obv_static_repository_id ();
-
-  ::CORBA::TypeCode_ptr _tao_type () const override;
-
-protected:
-  Abstract_Refcount_Derived ();
-  ~Abstract_Refcount_Derived () override;
-
-private:
-  Abstract_Refcount_Derived (Abstract_Refcount_Derived const &);
-  void operator= (Abstract_Refcount_Derived const &);
-
-};
-extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_Abstract_Refcount_Derived;
-
-#if !defined (_CONCRETE_FROM_ABSTRACT__VAR_OUT_CH_)
-#define _CONCRETE_FROM_ABSTRACT__VAR_OUT_CH_
-
-class Concrete_From_Abstract;
-using Concrete_From_Abstract_var = TAO_Value_Var_T<Concrete_From_Abstract>;
-using Concrete_From_Abstract_out = TAO_Value_Out_T<Concrete_From_Abstract>;
-
-#endif /* end #if !defined */
-
-class TAO_IDL_TEST_STUB_Export Concrete_From_Abstract
-  : public virtual Abstract_Refcount_Derived
-{
-public:
-  using _ptr_type = Concrete_From_Abstract*;
-  using _var_type = Concrete_From_Abstract_var;
-  using _out_type = Concrete_From_Abstract_out;
-
-  static void _tao_any_destructor (void *);
-
-  static Concrete_From_Abstract* _downcast (::CORBA::ValueBase *v);
-
-  /// TAO extensions or internals
-  static ::CORBA::Boolean _tao_unmarshal (
-      TAO_InputCDR &strm,
-      Concrete_From_Abstract *&new_object);
+      Supported_Interface_Value *&new_object);
 
   char const * _tao_obv_repository_id () const override;
 
@@ -1199,32 +1111,38 @@ public:
   virtual void value (::CORBA::Long const) = 0;
   virtual ::CORBA::Long value () const = 0;
 
+public:
+
+  void _add_ref () override = 0;
+  void _remove_ref () override = 0;
+  ::CORBA::ValueBase *_tao_to_value ();
+
 protected:
-  Concrete_From_Abstract ();
-  ~Concrete_From_Abstract () override;
+  Supported_Interface_Value ();
+  ~Supported_Interface_Value () override;
 
   ::CORBA::Boolean _tao_marshal_v (TAO_OutputCDR &) const override;
   ::CORBA::Boolean _tao_unmarshal_v (TAO_InputCDR &) override;
   ::CORBA::Boolean _tao_match_formal_type (ptrdiff_t) const override;
 
 private:
-  Concrete_From_Abstract (Concrete_From_Abstract const &);
-  void operator= (Concrete_From_Abstract const &);
+  Supported_Interface_Value (Supported_Interface_Value const &);
+  void operator= (Supported_Interface_Value const &);
 
 protected:
   virtual ::CORBA::Boolean
-  _tao_marshal__Concrete_From_Abstract (TAO_OutputCDR &, TAO_ChunkInfo &) const = 0;
+  _tao_marshal__Supported_Interface_Value (TAO_OutputCDR &, TAO_ChunkInfo &) const = 0;
 
   virtual ::CORBA::Boolean
-  _tao_unmarshal__Concrete_From_Abstract (TAO_InputCDR &, TAO_ChunkInfo &) = 0;
+  _tao_unmarshal__Supported_Interface_Value (TAO_InputCDR &, TAO_ChunkInfo &) = 0;
 };
-class TAO_IDL_TEST_STUB_Export Concrete_From_Abstract_init
+class TAO_IDL_TEST_STUB_Export Supported_Interface_Value_init
   : public virtual ::CORBA::ValueFactoryBase
 {
 public:
-  Concrete_From_Abstract_init ();
+  Supported_Interface_Value_init ();
 
-  static Concrete_From_Abstract_init* _downcast (::CORBA::ValueFactoryBase *);
+  static Supported_Interface_Value_init* _downcast (::CORBA::ValueFactoryBase *);
 
   ::CORBA::ValueBase *create_for_unmarshal () override;
 
@@ -1233,86 +1151,35 @@ public:
   virtual char const * tao_repository_id ();
 
 protected:
-  virtual ~Concrete_From_Abstract_init ();
+  virtual ~Supported_Interface_Value_init ();
 };
-extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_Concrete_From_Abstract;
+extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_Supported_Interface_Value;
 
-#if !defined (_SUPPORTED_INTERFACE_BASE__VAR_OUT_CH_)
-#define _SUPPORTED_INTERFACE_BASE__VAR_OUT_CH_
+#if !defined (_APPLICATION_FACTORY_VALUE__VAR_OUT_CH_)
+#define _APPLICATION_FACTORY_VALUE__VAR_OUT_CH_
 
-class Supported_Interface_Base;
-using Supported_Interface_Base_var = TAO_Value_Var_T<Supported_Interface_Base>;
-using Supported_Interface_Base_out = TAO_Value_Out_T<Supported_Interface_Base>;
+class Application_Factory_Value;
+using Application_Factory_Value_var = TAO_Value_Var_T<Application_Factory_Value>;
+using Application_Factory_Value_out = TAO_Value_Out_T<Application_Factory_Value>;
 
 #endif /* end #if !defined */
 
-class TAO_IDL_TEST_STUB_Export Supported_Interface_Base
-  : public virtual ::CORBA::ValueBase,
-    public virtual ::Empty_Valuetype_Interface
+class TAO_IDL_TEST_STUB_Export Application_Factory_Value
+  : public virtual ::CORBA::ValueBase
 {
 public:
-  using _ptr_type = Supported_Interface_Base*;
-  using _var_type = Supported_Interface_Base_var;
-  using _out_type = Supported_Interface_Base_out;
+  using _ptr_type = Application_Factory_Value*;
+  using _var_type = Application_Factory_Value_var;
+  using _out_type = Application_Factory_Value_out;
 
   static void _tao_any_destructor (void *);
 
-  static Supported_Interface_Base* _downcast (::CORBA::ValueBase *v);
+  static Application_Factory_Value* _downcast (::CORBA::ValueBase *v);
 
   /// TAO extensions or internals
   static ::CORBA::Boolean _tao_unmarshal (
       TAO_InputCDR &strm,
-      Supported_Interface_Base *&new_object);
-
-  char const * _tao_obv_repository_id () const override;
-
-  void _tao_obv_truncatable_repo_ids (Repository_Id_List &) const override;
-
-  static char const * _tao_obv_static_repository_id ();
-
-  ::CORBA::TypeCode_ptr _tao_type () const override;
-
-public:
-
-  void _add_ref () override = 0;
-  void _remove_ref () override = 0;
-
-protected:
-  Supported_Interface_Base ();
-  ~Supported_Interface_Base () override;
-
-private:
-  Supported_Interface_Base (Supported_Interface_Base const &);
-  void operator= (Supported_Interface_Base const &);
-
-};
-extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_Supported_Interface_Base;
-
-#if !defined (_SUPPORTED_INTERFACE_DERIVED__VAR_OUT_CH_)
-#define _SUPPORTED_INTERFACE_DERIVED__VAR_OUT_CH_
-
-class Supported_Interface_Derived;
-using Supported_Interface_Derived_var = TAO_Value_Var_T<Supported_Interface_Derived>;
-using Supported_Interface_Derived_out = TAO_Value_Out_T<Supported_Interface_Derived>;
-
-#endif /* end #if !defined */
-
-class TAO_IDL_TEST_STUB_Export Supported_Interface_Derived
-  : public virtual Supported_Interface_Base
-{
-public:
-  using _ptr_type = Supported_Interface_Derived*;
-  using _var_type = Supported_Interface_Derived_var;
-  using _out_type = Supported_Interface_Derived_out;
-
-  static void _tao_any_destructor (void *);
-
-  static Supported_Interface_Derived* _downcast (::CORBA::ValueBase *v);
-
-  /// TAO extensions or internals
-  static ::CORBA::Boolean _tao_unmarshal (
-      TAO_InputCDR &strm,
-      Supported_Interface_Derived *&new_object);
+      Application_Factory_Value *&new_object);
 
   char const * _tao_obv_repository_id () const override;
 
@@ -1329,130 +1196,44 @@ public:
 public:
 
 protected:
-  Supported_Interface_Derived ();
-  ~Supported_Interface_Derived () override;
+  Application_Factory_Value ();
+  ~Application_Factory_Value () override;
 
   ::CORBA::Boolean _tao_marshal_v (TAO_OutputCDR &) const override;
   ::CORBA::Boolean _tao_unmarshal_v (TAO_InputCDR &) override;
   ::CORBA::Boolean _tao_match_formal_type (ptrdiff_t) const override;
 
 private:
-  Supported_Interface_Derived (Supported_Interface_Derived const &);
-  void operator= (Supported_Interface_Derived const &);
+  Application_Factory_Value (Application_Factory_Value const &);
+  void operator= (Application_Factory_Value const &);
 
 protected:
   virtual ::CORBA::Boolean
-  _tao_marshal__Supported_Interface_Derived (TAO_OutputCDR &, TAO_ChunkInfo &) const = 0;
+  _tao_marshal__Application_Factory_Value (TAO_OutputCDR &, TAO_ChunkInfo &) const = 0;
 
   virtual ::CORBA::Boolean
-  _tao_unmarshal__Supported_Interface_Derived (TAO_InputCDR &, TAO_ChunkInfo &) = 0;
+  _tao_unmarshal__Application_Factory_Value (TAO_InputCDR &, TAO_ChunkInfo &) = 0;
 };
-class TAO_IDL_TEST_STUB_Export Supported_Interface_Derived_init
+class TAO_IDL_TEST_STUB_Export Application_Factory_Value_init
   : public virtual ::CORBA::ValueFactoryBase
 {
 public:
 
-  virtual Supported_Interface_Derived* create_supported_interface_derived () = 0;
+  virtual Application_Factory_Value* create () = 0;
 
-  static Supported_Interface_Derived_init* _downcast (::CORBA::ValueFactoryBase *);
+  static Application_Factory_Value_init* _downcast (::CORBA::ValueFactoryBase *);
 
   // TAO-specific extensions
 public:
   virtual char const * tao_repository_id ();
 
 protected:
-  Supported_Interface_Derived_init ();
+  Application_Factory_Value_init ();
 
 protected:
-  virtual ~Supported_Interface_Derived_init ();
+  virtual ~Application_Factory_Value_init ();
 };
-extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_Supported_Interface_Derived;
-
-#if !defined (_FACTORY_INITIALIZED_VALUE__VAR_OUT_CH_)
-#define _FACTORY_INITIALIZED_VALUE__VAR_OUT_CH_
-
-class Factory_Initialized_Value;
-using Factory_Initialized_Value_var = TAO_Value_Var_T<Factory_Initialized_Value>;
-using Factory_Initialized_Value_out = TAO_Value_Out_T<Factory_Initialized_Value>;
-
-#endif /* end #if !defined */
-
-class TAO_IDL_TEST_STUB_Export Factory_Initialized_Value
-  : public virtual ::CORBA::ValueBase,
-    public virtual ::Empty_Valuetype_Interface
-{
-public:
-  using _ptr_type = Factory_Initialized_Value*;
-  using _var_type = Factory_Initialized_Value_var;
-  using _out_type = Factory_Initialized_Value_out;
-
-  static void _tao_any_destructor (void *);
-
-  static Factory_Initialized_Value* _downcast (::CORBA::ValueBase *v);
-
-  /// TAO extensions or internals
-  static ::CORBA::Boolean _tao_unmarshal (
-      TAO_InputCDR &strm,
-      Factory_Initialized_Value *&new_object);
-
-  char const * _tao_obv_repository_id () const override;
-
-  void _tao_obv_truncatable_repo_ids (Repository_Id_List &) const override;
-
-  static char const * _tao_obv_static_repository_id ();
-
-  ::CORBA::TypeCode_ptr _tao_type () const override;
-
-public:
-  virtual void value (::CORBA::Long const) = 0;
-  virtual ::CORBA::Long value () const = 0;
-
-public:
-
-public:
-
-  void _add_ref () override = 0;
-  void _remove_ref () override = 0;
-
-protected:
-  Factory_Initialized_Value ();
-  ~Factory_Initialized_Value () override;
-
-  ::CORBA::Boolean _tao_marshal_v (TAO_OutputCDR &) const override;
-  ::CORBA::Boolean _tao_unmarshal_v (TAO_InputCDR &) override;
-  ::CORBA::Boolean _tao_match_formal_type (ptrdiff_t) const override;
-
-private:
-  Factory_Initialized_Value (Factory_Initialized_Value const &);
-  void operator= (Factory_Initialized_Value const &);
-
-protected:
-  virtual ::CORBA::Boolean
-  _tao_marshal__Factory_Initialized_Value (TAO_OutputCDR &, TAO_ChunkInfo &) const = 0;
-
-  virtual ::CORBA::Boolean
-  _tao_unmarshal__Factory_Initialized_Value (TAO_InputCDR &, TAO_ChunkInfo &) = 0;
-};
-class TAO_IDL_TEST_STUB_Export Factory_Initialized_Value_init
-  : public virtual ::CORBA::ValueFactoryBase
-{
-public:
-
-  virtual Factory_Initialized_Value* create () = 0;
-
-  static Factory_Initialized_Value_init* _downcast (::CORBA::ValueFactoryBase *);
-
-  // TAO-specific extensions
-public:
-  virtual char const * tao_repository_id ();
-
-protected:
-  Factory_Initialized_Value_init ();
-
-protected:
-  virtual ~Factory_Initialized_Value_init ();
-};
-extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_Factory_Initialized_Value;
+extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_Application_Factory_Value;
 
 #if !defined (_COPY_BASE__VAR_OUT_CH_)
 #define _COPY_BASE__VAR_OUT_CH_
@@ -1492,8 +1273,6 @@ public:
   virtual void base_value (::CORBA::Long const) = 0;
   virtual ::CORBA::Long base_value () const = 0;
 
-public:
-
 protected:
   Copy_Base ();
   ~Copy_Base () override;
@@ -1517,17 +1296,15 @@ class TAO_IDL_TEST_STUB_Export Copy_Base_init
   : public virtual ::CORBA::ValueFactoryBase
 {
 public:
-
-  virtual Copy_Base* create_copy_base () = 0;
+  Copy_Base_init ();
 
   static Copy_Base_init* _downcast (::CORBA::ValueFactoryBase *);
+
+  ::CORBA::ValueBase *create_for_unmarshal () override;
 
   // TAO-specific extensions
 public:
   virtual char const * tao_repository_id ();
-
-protected:
-  Copy_Base_init ();
 
 protected:
   virtual ~Copy_Base_init ();
@@ -1647,7 +1424,7 @@ public:
 public:
 
 public:
-  virtual void operation () = 0;
+  virtual void op () = 0;
 
 protected:
   Copy_Operation_Derived ();
@@ -1803,10 +1580,6 @@ struct TAO_IDL_TEST_STUB_Export Copy_Leaf_Struct
   Copy_Leaf_Alias_var leaf {};
 };
 extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_Copy_Leaf_Struct;
-using Copy_Leaf_Struct_Alias = Copy_Leaf_Struct;
-using Copy_Leaf_Struct_Alias_var = Copy_Leaf_Struct_var;
-using Copy_Leaf_Struct_Alias_out = Copy_Leaf_Struct_out;
-extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_Copy_Leaf_Struct_Alias;
 
 #if !defined (_COPY_ALIAS_HOLDER__VAR_OUT_CH_)
 #define _COPY_ALIAS_HOLDER__VAR_OUT_CH_
@@ -1996,9 +1769,9 @@ public:
   ::CORBA::TypeCode_ptr _tao_type () const override;
 
 public:
-  virtual void value (Copy_Leaf_Struct_Alias const &) = 0;
-  virtual Copy_Leaf_Struct_Alias const &value () const = 0;
-  virtual Copy_Leaf_Struct_Alias &value () = 0;
+  virtual void value (Copy_Leaf_Struct const &) = 0;
+  virtual Copy_Leaf_Struct const &value () const = 0;
+  virtual Copy_Leaf_Struct &value () = 0;
 
 protected:
   Copy_Struct_Holder ();
@@ -2899,17 +2672,17 @@ namespace TAO
 
 #endif /* end #if !defined */
 
-#if !defined (_ABSTRACT_REFCOUNT_BASE__ARG_TRAITS_)
-#define _ABSTRACT_REFCOUNT_BASE__ARG_TRAITS_
+#if !defined (_SUPPORTED_INTERFACE_VALUE__ARG_TRAITS_)
+#define _SUPPORTED_INTERFACE_VALUE__ARG_TRAITS_
 
   template<>
-  class Arg_Traits<::Abstract_Refcount_Base>
+  class Arg_Traits<::Supported_Interface_Value>
     : public
         Object_Arg_Traits_T<
-            ::Abstract_Refcount_Base *,
-            ::Abstract_Refcount_Base_var,
-            ::Abstract_Refcount_Base_out,
-            TAO::Value_Traits<Abstract_Refcount_Base>,
+            ::Supported_Interface_Value *,
+            ::Supported_Interface_Value_var,
+            ::Supported_Interface_Value_out,
+            TAO::Value_Traits<Supported_Interface_Value>,
             TAO::Any_Insert_Policy_Stream
           >
   {
@@ -2917,89 +2690,17 @@ namespace TAO
 
 #endif /* end #if !defined */
 
-#if !defined (_ABSTRACT_REFCOUNT_DERIVED__ARG_TRAITS_)
-#define _ABSTRACT_REFCOUNT_DERIVED__ARG_TRAITS_
+#if !defined (_APPLICATION_FACTORY_VALUE__ARG_TRAITS_)
+#define _APPLICATION_FACTORY_VALUE__ARG_TRAITS_
 
   template<>
-  class Arg_Traits<::Abstract_Refcount_Derived>
+  class Arg_Traits<::Application_Factory_Value>
     : public
         Object_Arg_Traits_T<
-            ::Abstract_Refcount_Derived *,
-            ::Abstract_Refcount_Derived_var,
-            ::Abstract_Refcount_Derived_out,
-            TAO::Value_Traits<Abstract_Refcount_Derived>,
-            TAO::Any_Insert_Policy_Stream
-          >
-  {
-  };
-
-#endif /* end #if !defined */
-
-#if !defined (_CONCRETE_FROM_ABSTRACT__ARG_TRAITS_)
-#define _CONCRETE_FROM_ABSTRACT__ARG_TRAITS_
-
-  template<>
-  class Arg_Traits<::Concrete_From_Abstract>
-    : public
-        Object_Arg_Traits_T<
-            ::Concrete_From_Abstract *,
-            ::Concrete_From_Abstract_var,
-            ::Concrete_From_Abstract_out,
-            TAO::Value_Traits<Concrete_From_Abstract>,
-            TAO::Any_Insert_Policy_Stream
-          >
-  {
-  };
-
-#endif /* end #if !defined */
-
-#if !defined (_SUPPORTED_INTERFACE_BASE__ARG_TRAITS_)
-#define _SUPPORTED_INTERFACE_BASE__ARG_TRAITS_
-
-  template<>
-  class Arg_Traits<::Supported_Interface_Base>
-    : public
-        Object_Arg_Traits_T<
-            ::Supported_Interface_Base *,
-            ::Supported_Interface_Base_var,
-            ::Supported_Interface_Base_out,
-            TAO::Value_Traits<Supported_Interface_Base>,
-            TAO::Any_Insert_Policy_Stream
-          >
-  {
-  };
-
-#endif /* end #if !defined */
-
-#if !defined (_SUPPORTED_INTERFACE_DERIVED__ARG_TRAITS_)
-#define _SUPPORTED_INTERFACE_DERIVED__ARG_TRAITS_
-
-  template<>
-  class Arg_Traits<::Supported_Interface_Derived>
-    : public
-        Object_Arg_Traits_T<
-            ::Supported_Interface_Derived *,
-            ::Supported_Interface_Derived_var,
-            ::Supported_Interface_Derived_out,
-            TAO::Value_Traits<Supported_Interface_Derived>,
-            TAO::Any_Insert_Policy_Stream
-          >
-  {
-  };
-
-#endif /* end #if !defined */
-
-#if !defined (_FACTORY_INITIALIZED_VALUE__ARG_TRAITS_)
-#define _FACTORY_INITIALIZED_VALUE__ARG_TRAITS_
-
-  template<>
-  class Arg_Traits<::Factory_Initialized_Value>
-    : public
-        Object_Arg_Traits_T<
-            ::Factory_Initialized_Value *,
-            ::Factory_Initialized_Value_var,
-            ::Factory_Initialized_Value_out,
-            TAO::Value_Traits<Factory_Initialized_Value>,
+            ::Application_Factory_Value *,
+            ::Application_Factory_Value_var,
+            ::Application_Factory_Value_out,
+            TAO::Value_Traits<Application_Factory_Value>,
             TAO::Any_Insert_Policy_Stream
           >
   {
@@ -3316,8 +3017,7 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 
 // OBV_ class
 class TAO_IDL_TEST_STUB_Export OBV_MyValueType
-  : public virtual MyValueType,
-    public virtual ::CORBA::DefaultValueRefCountBase
+  : public virtual MyValueType
 {
 
 public:
@@ -3334,9 +3034,6 @@ public:
       char const * _tao_init_my_string_value
     );
   ~OBV_MyValueType () override;
-
-public:
-  ::CORBA::ValueBase *_copy_value () override;
 
 protected:
   ::CORBA::Boolean _tao_marshal__MyValueType (TAO_OutputCDR &, TAO_ChunkInfo &) const override;
@@ -3501,8 +3198,8 @@ private:
 };
 
 // OBV_ class
-class TAO_IDL_TEST_STUB_Export OBV_Concrete_From_Abstract
-  : public virtual Concrete_From_Abstract,
+class TAO_IDL_TEST_STUB_Export OBV_Supported_Interface_Value
+  : public virtual Supported_Interface_Value,
     public virtual ::CORBA::DefaultValueRefCountBase
 {
 
@@ -3510,20 +3207,23 @@ public:
   void value (::CORBA::Long const) override;
   ::CORBA::Long value () const override;
 
+  void _add_ref () override;
+  void _remove_ref () override;
+
 public:
-  OBV_Concrete_From_Abstract () = default;
-  OBV_Concrete_From_Abstract (
+  OBV_Supported_Interface_Value () = default;
+  OBV_Supported_Interface_Value (
       ::CORBA::Long _tao_init_value
     );
-  ~OBV_Concrete_From_Abstract () override;
+  ~OBV_Supported_Interface_Value () override;
 
 public:
   ::CORBA::ValueBase *_copy_value () override;
 
 protected:
-  ::CORBA::Boolean _tao_marshal__Concrete_From_Abstract (TAO_OutputCDR &, TAO_ChunkInfo &) const override;
+  ::CORBA::Boolean _tao_marshal__Supported_Interface_Value (TAO_OutputCDR &, TAO_ChunkInfo &) const override;
 
-  ::CORBA::Boolean _tao_unmarshal__Concrete_From_Abstract (TAO_InputCDR &, TAO_ChunkInfo &) override;
+  ::CORBA::Boolean _tao_unmarshal__Supported_Interface_Value (TAO_InputCDR &, TAO_ChunkInfo &) override;
 
   ::CORBA::Boolean _tao_marshal_state (TAO_OutputCDR &, TAO_ChunkInfo &) const;
   ::CORBA::Boolean _tao_unmarshal_state (TAO_InputCDR &, TAO_ChunkInfo &);
@@ -3535,9 +3235,8 @@ private:
 };
 
 // OBV_ class
-class TAO_IDL_TEST_STUB_Export OBV_Supported_Interface_Derived
-  : public virtual Supported_Interface_Derived,
-    public virtual ::CORBA::DefaultValueRefCountBase
+class TAO_IDL_TEST_STUB_Export OBV_Application_Factory_Value
+  : public virtual Application_Factory_Value
 {
 
 public:
@@ -3546,62 +3245,17 @@ public:
 
 public:
 
-  void _add_ref () override;
-  void _remove_ref () override;
-
 public:
-  OBV_Supported_Interface_Derived () = default;
-  OBV_Supported_Interface_Derived (
+  OBV_Application_Factory_Value () = default;
+  OBV_Application_Factory_Value (
       ::CORBA::Long _tao_init_value
     );
-  ~OBV_Supported_Interface_Derived () override;
-
-public:
-  ::CORBA::ValueBase *_copy_value () override;
+  ~OBV_Application_Factory_Value () override;
 
 protected:
-  ::CORBA::Boolean _tao_marshal__Supported_Interface_Derived (TAO_OutputCDR &, TAO_ChunkInfo &) const override;
+  ::CORBA::Boolean _tao_marshal__Application_Factory_Value (TAO_OutputCDR &, TAO_ChunkInfo &) const override;
 
-  ::CORBA::Boolean _tao_unmarshal__Supported_Interface_Derived (TAO_InputCDR &, TAO_ChunkInfo &) override;
-
-  ::CORBA::Boolean _tao_marshal_state (TAO_OutputCDR &, TAO_ChunkInfo &) const;
-  ::CORBA::Boolean _tao_unmarshal_state (TAO_InputCDR &, TAO_ChunkInfo &);
-  void truncation_hook () override;
-
-private:
-  ::CORBA::Long _pd_value {};
-  CORBA::Boolean require_truncation_ {false};
-};
-
-// OBV_ class
-class TAO_IDL_TEST_STUB_Export OBV_Factory_Initialized_Value
-  : public virtual Factory_Initialized_Value,
-    public virtual ::CORBA::DefaultValueRefCountBase
-{
-
-public:
-  void value (::CORBA::Long const) override;
-  ::CORBA::Long value () const override;
-
-public:
-
-  void _add_ref () override;
-  void _remove_ref () override;
-
-public:
-  OBV_Factory_Initialized_Value () = default;
-  OBV_Factory_Initialized_Value (
-      ::CORBA::Long _tao_init_value
-    );
-  ~OBV_Factory_Initialized_Value () override;
-
-public:
-  ::CORBA::ValueBase *_copy_value () override;
-
-protected:
-  ::CORBA::Boolean _tao_marshal__Factory_Initialized_Value (TAO_OutputCDR &, TAO_ChunkInfo &) const override;
-
-  ::CORBA::Boolean _tao_unmarshal__Factory_Initialized_Value (TAO_InputCDR &, TAO_ChunkInfo &) override;
+  ::CORBA::Boolean _tao_unmarshal__Application_Factory_Value (TAO_InputCDR &, TAO_ChunkInfo &) override;
 
   ::CORBA::Boolean _tao_marshal_state (TAO_OutputCDR &, TAO_ChunkInfo &) const;
   ::CORBA::Boolean _tao_unmarshal_state (TAO_InputCDR &, TAO_ChunkInfo &);
@@ -3621,8 +3275,6 @@ class TAO_IDL_TEST_STUB_Export OBV_Copy_Base
 public:
   void base_value (::CORBA::Long const) override;
   ::CORBA::Long base_value () const override;
-
-public:
 
 public:
   OBV_Copy_Base () = default;
@@ -3822,14 +3474,14 @@ class TAO_IDL_TEST_STUB_Export OBV_Copy_Struct_Holder
 {
 
 public:
-  void value (Copy_Leaf_Struct_Alias const &) override;
-  Copy_Leaf_Struct_Alias const &value () const override;
-  Copy_Leaf_Struct_Alias &value () override;
+  void value (Copy_Leaf_Struct const &) override;
+  Copy_Leaf_Struct const &value () const override;
+  Copy_Leaf_Struct &value () override;
 
 public:
   OBV_Copy_Struct_Holder () = default;
   OBV_Copy_Struct_Holder (
-      ::Copy_Leaf_Struct_Alias const & _tao_init_value
+      ::Copy_Leaf_Struct const & _tao_init_value
     );
   ~OBV_Copy_Struct_Holder () override;
 
@@ -3846,7 +3498,7 @@ protected:
   void truncation_hook () override;
 
 private:
-  Copy_Leaf_Struct_Alias _pd_value {};
+  Copy_Leaf_Struct _pd_value {};
   CORBA::Boolean require_truncation_ {false};
 };
 
@@ -4194,80 +3846,28 @@ namespace TAO
 
 #endif /* end #if !defined */
 
-#if !defined (_ABSTRACT_REFCOUNT_BASE__TRAITS_)
-#define _ABSTRACT_REFCOUNT_BASE__TRAITS_
+#if !defined (_SUPPORTED_INTERFACE_VALUE__TRAITS_)
+#define _SUPPORTED_INTERFACE_VALUE__TRAITS_
 
   template<>
-  struct TAO_IDL_TEST_STUB_Export Value_Traits<Abstract_Refcount_Base>
+  struct TAO_IDL_TEST_STUB_Export Value_Traits<Supported_Interface_Value>
   {
-    static void add_ref (Abstract_Refcount_Base *);
-    static void remove_ref (Abstract_Refcount_Base *);
-    static void release (Abstract_Refcount_Base *);
+    static void add_ref (Supported_Interface_Value *);
+    static void remove_ref (Supported_Interface_Value *);
+    static void release (Supported_Interface_Value *);
   };
 
 #endif /* end #if !defined */
 
-#if !defined (_ABSTRACT_REFCOUNT_DERIVED__TRAITS_)
-#define _ABSTRACT_REFCOUNT_DERIVED__TRAITS_
+#if !defined (_APPLICATION_FACTORY_VALUE__TRAITS_)
+#define _APPLICATION_FACTORY_VALUE__TRAITS_
 
   template<>
-  struct TAO_IDL_TEST_STUB_Export Value_Traits<Abstract_Refcount_Derived>
+  struct TAO_IDL_TEST_STUB_Export Value_Traits<Application_Factory_Value>
   {
-    static void add_ref (Abstract_Refcount_Derived *);
-    static void remove_ref (Abstract_Refcount_Derived *);
-    static void release (Abstract_Refcount_Derived *);
-  };
-
-#endif /* end #if !defined */
-
-#if !defined (_CONCRETE_FROM_ABSTRACT__TRAITS_)
-#define _CONCRETE_FROM_ABSTRACT__TRAITS_
-
-  template<>
-  struct TAO_IDL_TEST_STUB_Export Value_Traits<Concrete_From_Abstract>
-  {
-    static void add_ref (Concrete_From_Abstract *);
-    static void remove_ref (Concrete_From_Abstract *);
-    static void release (Concrete_From_Abstract *);
-  };
-
-#endif /* end #if !defined */
-
-#if !defined (_SUPPORTED_INTERFACE_BASE__TRAITS_)
-#define _SUPPORTED_INTERFACE_BASE__TRAITS_
-
-  template<>
-  struct TAO_IDL_TEST_STUB_Export Value_Traits<Supported_Interface_Base>
-  {
-    static void add_ref (Supported_Interface_Base *);
-    static void remove_ref (Supported_Interface_Base *);
-    static void release (Supported_Interface_Base *);
-  };
-
-#endif /* end #if !defined */
-
-#if !defined (_SUPPORTED_INTERFACE_DERIVED__TRAITS_)
-#define _SUPPORTED_INTERFACE_DERIVED__TRAITS_
-
-  template<>
-  struct TAO_IDL_TEST_STUB_Export Value_Traits<Supported_Interface_Derived>
-  {
-    static void add_ref (Supported_Interface_Derived *);
-    static void remove_ref (Supported_Interface_Derived *);
-    static void release (Supported_Interface_Derived *);
-  };
-
-#endif /* end #if !defined */
-
-#if !defined (_FACTORY_INITIALIZED_VALUE__TRAITS_)
-#define _FACTORY_INITIALIZED_VALUE__TRAITS_
-
-  template<>
-  struct TAO_IDL_TEST_STUB_Export Value_Traits<Factory_Initialized_Value>
-  {
-    static void add_ref (Factory_Initialized_Value *);
-    static void remove_ref (Factory_Initialized_Value *);
-    static void release (Factory_Initialized_Value *);
+    static void add_ref (Application_Factory_Value *);
+    static void remove_ref (Application_Factory_Value *);
+    static void release (Application_Factory_Value *);
   };
 
 #endif /* end #if !defined */
@@ -4581,54 +4181,18 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
 
-TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, Abstract_Refcount_Base *); // copying
-TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, Abstract_Refcount_Base **); // non-copying
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, Abstract_Refcount_Base *&);
+TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, Supported_Interface_Value *); // copying
+TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, Supported_Interface_Value **); // non-copying
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, Supported_Interface_Value *&);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 namespace CORBA {
 
-TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, Abstract_Refcount_Derived *); // copying
-TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, Abstract_Refcount_Derived **); // non-copying
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, Abstract_Refcount_Derived *&);
-}
-TAO_END_VERSIONED_NAMESPACE_DECL
-
-TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-namespace CORBA {
-
-TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, Concrete_From_Abstract *); // copying
-TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, Concrete_From_Abstract **); // non-copying
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, Concrete_From_Abstract *&);
-}
-TAO_END_VERSIONED_NAMESPACE_DECL
-
-TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-namespace CORBA {
-
-TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, Supported_Interface_Base *); // copying
-TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, Supported_Interface_Base **); // non-copying
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, Supported_Interface_Base *&);
-}
-TAO_END_VERSIONED_NAMESPACE_DECL
-
-TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-namespace CORBA {
-
-TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, Supported_Interface_Derived *); // copying
-TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, Supported_Interface_Derived **); // non-copying
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, Supported_Interface_Derived *&);
-}
-TAO_END_VERSIONED_NAMESPACE_DECL
-
-TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-namespace CORBA {
-
-TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, Factory_Initialized_Value *); // copying
-TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, Factory_Initialized_Value **); // non-copying
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, Factory_Initialized_Value *&);
+TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, Application_Factory_Value *); // copying
+TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, Application_Factory_Value **); // non-copying
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, Application_Factory_Value *&);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
@@ -4935,15 +4499,15 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 namespace CORBA
 {
-  extern TAO_IDL_TEST_STUB_Export void add_ref (Abstract_Refcount_Base *);
-  extern TAO_IDL_TEST_STUB_Export void remove_ref (Abstract_Refcount_Base *);
+  extern TAO_IDL_TEST_STUB_Export void add_ref (Supported_Interface_Value *);
+  extern TAO_IDL_TEST_STUB_Export void remove_ref (Supported_Interface_Value *);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, Abstract_Refcount_Base const *);
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, Abstract_Refcount_Base *&);
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, Supported_Interface_Value const *);
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, Supported_Interface_Value *&);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 
@@ -4951,79 +4515,15 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 namespace CORBA
 {
-  extern TAO_IDL_TEST_STUB_Export void add_ref (Abstract_Refcount_Derived *);
-  extern TAO_IDL_TEST_STUB_Export void remove_ref (Abstract_Refcount_Derived *);
+  extern TAO_IDL_TEST_STUB_Export void add_ref (Application_Factory_Value *);
+  extern TAO_IDL_TEST_STUB_Export void remove_ref (Application_Factory_Value *);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, Abstract_Refcount_Derived const *);
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, Abstract_Refcount_Derived *&);
-
-TAO_END_VERSIONED_NAMESPACE_DECL
-
-TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
-namespace CORBA
-{
-  extern TAO_IDL_TEST_STUB_Export void add_ref (Concrete_From_Abstract *);
-  extern TAO_IDL_TEST_STUB_Export void remove_ref (Concrete_From_Abstract *);
-}
-TAO_END_VERSIONED_NAMESPACE_DECL
-
-TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, Concrete_From_Abstract const *);
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, Concrete_From_Abstract *&);
-
-TAO_END_VERSIONED_NAMESPACE_DECL
-
-TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
-namespace CORBA
-{
-  extern TAO_IDL_TEST_STUB_Export void add_ref (Supported_Interface_Base *);
-  extern TAO_IDL_TEST_STUB_Export void remove_ref (Supported_Interface_Base *);
-}
-TAO_END_VERSIONED_NAMESPACE_DECL
-
-TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, Supported_Interface_Base const *);
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, Supported_Interface_Base *&);
-
-TAO_END_VERSIONED_NAMESPACE_DECL
-
-TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
-namespace CORBA
-{
-  extern TAO_IDL_TEST_STUB_Export void add_ref (Supported_Interface_Derived *);
-  extern TAO_IDL_TEST_STUB_Export void remove_ref (Supported_Interface_Derived *);
-}
-TAO_END_VERSIONED_NAMESPACE_DECL
-
-TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, Supported_Interface_Derived const *);
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, Supported_Interface_Derived *&);
-
-TAO_END_VERSIONED_NAMESPACE_DECL
-
-TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
-namespace CORBA
-{
-  extern TAO_IDL_TEST_STUB_Export void add_ref (Factory_Initialized_Value *);
-  extern TAO_IDL_TEST_STUB_Export void remove_ref (Factory_Initialized_Value *);
-}
-TAO_END_VERSIONED_NAMESPACE_DECL
-
-TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, Factory_Initialized_Value const *);
-TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, Factory_Initialized_Value *&);
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, Application_Factory_Value const *);
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, Application_Factory_Value *&);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 

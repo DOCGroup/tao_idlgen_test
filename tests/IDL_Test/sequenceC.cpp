@@ -41,7 +41,6 @@
 #include "tao/Messaging/Asynch_Invocation_Adapter.h"
 #include "tao/Messaging/ExceptionHolder_i.h"
 #include "tao/Valuetype/ValueFactory.h"
-#include "tao/ORB_Core.h"
 #include "tao/SystemException.h"
 #include "tao/CDR.h"
 #include "tao/AnyTypeCode/Any.h"
@@ -51,64 +50,6 @@
 #if !defined (__ACE_INLINE__)
 #include "sequenceC.inl"
 #endif /* !defined INLINE */
-
-#if !defined (_OCTETSEQUENCETEST_CS_)
-#define _OCTETSEQUENCETEST_CS_
-
-OctetSequenceTest::OctetSequenceTest (::CORBA::ULong max)
-  : ::TAO::unbounded_value_sequence<::CORBA::Octet> (max) {}
-
-OctetSequenceTest::OctetSequenceTest (::CORBA::ULong max,
-  ::CORBA::ULong length,
-  ::CORBA::Octet * buffer,
-  ::CORBA::Boolean release)
-  : ::TAO::unbounded_value_sequence<::CORBA::Octet>
-    (max, length, buffer, release)
-{}
-
-void OctetSequenceTest::_tao_any_destructor (
-    void * _tao_void_pointer)
-{
-  OctetSequenceTest *tmp = static_cast<OctetSequenceTest *> (_tao_void_pointer);
-  delete tmp;
-}
-
-#endif /* end #if !defined */
-
-#ifndef _TAO_TYPECODE_OctetSequenceTest_GUARD
-#define _TAO_TYPECODE_OctetSequenceTest_GUARD
-
-TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
-namespace TAO
-{
-  namespace TypeCode
-  {
-    namespace
-    {
-      TAO::TypeCode::Sequence<::CORBA::TypeCode_ptr const *, TAO::Null_RefCount_Policy> OctetSequenceTest_0 (
-        ::CORBA::tk_sequence, std::addressof (CORBA::_tc_octet), 0U);
-
-    ::CORBA::TypeCode_ptr const tc_OctetSequenceTest_0 =
-      std::addressof (OctetSequenceTest_0);
-  }
-}
-}
-
-TAO_END_VERSIONED_NAMESPACE_DECL
-
-#endif /* _TAO_TYPECODE_OctetSequenceTest_GUARD */
-
-static TAO::TypeCode::Alias<char const *,
-                            ::CORBA::TypeCode_ptr const *,
-                            TAO::Null_RefCount_Policy>
-  _tao_tc_OctetSequenceTest (
-    ::CORBA::tk_alias,
-    "IDL:OctetSequenceTest:1.0",
-    "OctetSequenceTest",
-    std::addressof (TAO::TypeCode::tc_OctetSequenceTest_0));
-
-::CORBA::TypeCode_ptr const _tc_OctetSequenceTest = std::addressof(_tao_tc_OctetSequenceTest);
 
 #if !defined (_MYFOOSTRUCTSEQ_CS_)
 #define _MYFOOSTRUCTSEQ_CS_
@@ -1053,47 +994,6 @@ namespace CORBA {
 /// Copying insertion.
 void operator<<= (
   ::CORBA::Any &_tao_any,
-  ::OctetSequenceTest const &_tao_elem)
-{
-  TAO::Any_Dual_Impl_T<::OctetSequenceTest>::insert_copy (
-    _tao_any,
-    ::OctetSequenceTest::_tao_any_destructor,
-    ::_tc_OctetSequenceTest,
-    _tao_elem);
-}
-
-/// Non-copying insertion.
-void operator<<= (
-  ::CORBA::Any &_tao_any,
-  ::OctetSequenceTest *_tao_elem)
-{
-  TAO::Any_Dual_Impl_T<::OctetSequenceTest>::insert (
-    _tao_any,
-    ::OctetSequenceTest::_tao_any_destructor,
-    ::_tc_OctetSequenceTest,
-    _tao_elem);
-}
-
-/// Extraction to const pointer.
-::CORBA::Boolean operator>>= (
-  ::CORBA::Any const &_tao_any,
-  ::OctetSequenceTest const *&_tao_elem)
-{
-  return TAO::Any_Dual_Impl_T<::OctetSequenceTest>::extract (
-    _tao_any,
-    ::OctetSequenceTest::_tao_any_destructor,
-    ::_tc_OctetSequenceTest,
-    _tao_elem);
-}
-}
-TAO_END_VERSIONED_NAMESPACE_DECL
-
-TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-namespace CORBA {
-
-/// Copying insertion.
-void operator<<= (
-  ::CORBA::Any &_tao_any,
   ::myfoostructseq const &_tao_elem)
 {
   TAO::Any_Dual_Impl_T<::myfoostructseq>::insert_copy (
@@ -1828,28 +1728,6 @@ void operator<<= (
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
-#if !defined _TAO_CDR_OP_OctetSequenceTest_CPP_
-#define _TAO_CDR_OP_OctetSequenceTest_CPP_
-
-TAO_BEGIN_VERSIONED_NAMESPACE_DECL
-
-::CORBA::Boolean operator<< (
-    TAO_OutputCDR &strm,
-    OctetSequenceTest const &_tao_sequence)
-{
-  return TAO::marshal_sequence(strm, _tao_sequence);
-}
-
-::CORBA::Boolean operator>> (
-    TAO_InputCDR &strm,
-    OctetSequenceTest &_tao_sequence)
-{
-  return TAO::demarshal_sequence(strm, _tao_sequence);
-}
-
-TAO_END_VERSIONED_NAMESPACE_DECL
-
-#endif /* _TAO_CDR_OP_OctetSequenceTest_CPP_ */
 #if !defined _TAO_CDR_OP_myfoostructseq_CPP_
 #define _TAO_CDR_OP_myfoostructseq_CPP_
 

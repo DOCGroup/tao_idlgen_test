@@ -267,16 +267,16 @@ namespace TAO
 
 #endif /* end #if !defined */
 
-#if !defined (_ABSTRACT_REFCOUNT_BASE__SARG_TRAITS_)
-#define _ABSTRACT_REFCOUNT_BASE__SARG_TRAITS_
+#if !defined (_SUPPORTED_INTERFACE_VALUE__SARG_TRAITS_)
+#define _SUPPORTED_INTERFACE_VALUE__SARG_TRAITS_
 
   template<>
-  class SArg_Traits<::Abstract_Refcount_Base>
+  class SArg_Traits<::Supported_Interface_Value>
     : public
         Object_SArg_Traits_T<
-            ::Abstract_Refcount_Base *,
-            ::Abstract_Refcount_Base_var,
-            ::Abstract_Refcount_Base_out,
+            ::Supported_Interface_Value *,
+            ::Supported_Interface_Value_var,
+            ::Supported_Interface_Value_out,
             TAO::Any_Insert_Policy_Stream
           >
   {
@@ -284,84 +284,16 @@ namespace TAO
 
 #endif /* end #if !defined */
 
-#if !defined (_ABSTRACT_REFCOUNT_DERIVED__SARG_TRAITS_)
-#define _ABSTRACT_REFCOUNT_DERIVED__SARG_TRAITS_
+#if !defined (_APPLICATION_FACTORY_VALUE__SARG_TRAITS_)
+#define _APPLICATION_FACTORY_VALUE__SARG_TRAITS_
 
   template<>
-  class SArg_Traits<::Abstract_Refcount_Derived>
+  class SArg_Traits<::Application_Factory_Value>
     : public
         Object_SArg_Traits_T<
-            ::Abstract_Refcount_Derived *,
-            ::Abstract_Refcount_Derived_var,
-            ::Abstract_Refcount_Derived_out,
-            TAO::Any_Insert_Policy_Stream
-          >
-  {
-  };
-
-#endif /* end #if !defined */
-
-#if !defined (_CONCRETE_FROM_ABSTRACT__SARG_TRAITS_)
-#define _CONCRETE_FROM_ABSTRACT__SARG_TRAITS_
-
-  template<>
-  class SArg_Traits<::Concrete_From_Abstract>
-    : public
-        Object_SArg_Traits_T<
-            ::Concrete_From_Abstract *,
-            ::Concrete_From_Abstract_var,
-            ::Concrete_From_Abstract_out,
-            TAO::Any_Insert_Policy_Stream
-          >
-  {
-  };
-
-#endif /* end #if !defined */
-
-#if !defined (_SUPPORTED_INTERFACE_BASE__SARG_TRAITS_)
-#define _SUPPORTED_INTERFACE_BASE__SARG_TRAITS_
-
-  template<>
-  class SArg_Traits<::Supported_Interface_Base>
-    : public
-        Object_SArg_Traits_T<
-            ::Supported_Interface_Base *,
-            ::Supported_Interface_Base_var,
-            ::Supported_Interface_Base_out,
-            TAO::Any_Insert_Policy_Stream
-          >
-  {
-  };
-
-#endif /* end #if !defined */
-
-#if !defined (_SUPPORTED_INTERFACE_DERIVED__SARG_TRAITS_)
-#define _SUPPORTED_INTERFACE_DERIVED__SARG_TRAITS_
-
-  template<>
-  class SArg_Traits<::Supported_Interface_Derived>
-    : public
-        Object_SArg_Traits_T<
-            ::Supported_Interface_Derived *,
-            ::Supported_Interface_Derived_var,
-            ::Supported_Interface_Derived_out,
-            TAO::Any_Insert_Policy_Stream
-          >
-  {
-  };
-
-#endif /* end #if !defined */
-
-#if !defined (_FACTORY_INITIALIZED_VALUE__SARG_TRAITS_)
-#define _FACTORY_INITIALIZED_VALUE__SARG_TRAITS_
-
-  template<>
-  class SArg_Traits<::Factory_Initialized_Value>
-    : public
-        Object_SArg_Traits_T<
-            ::Factory_Initialized_Value *,
-            ::Factory_Initialized_Value_var,
-            ::Factory_Initialized_Value_out,
+            ::Application_Factory_Value *,
+            ::Application_Factory_Value_var,
+            ::Application_Factory_Value_out,
             TAO::Any_Insert_Policy_Stream
           >
   {
@@ -1050,23 +982,23 @@ public:
   virtual ~_TAO_AMI_Empty_Valuetype_InterfaceHandler_Direct_Proxy_Impl ();
 };
 
-class POA_Factory_Initialized_Value;
-using POA_Factory_Initialized_Value_ptr = POA_Factory_Initialized_Value *;
+class POA_Supported_Interface_Value;
+using POA_Supported_Interface_Value_ptr = POA_Supported_Interface_Value *;
 // Forward Classes Declaration
-class _TAO_Factory_Initialized_Value_Direct_Proxy_Impl;
+class _TAO_Supported_Interface_Value_Direct_Proxy_Impl;
 
-class TAO_IDL_TEST_STUB_Export POA_Factory_Initialized_Value
+class TAO_IDL_TEST_STUB_Export POA_Supported_Interface_Value
   : public virtual POA_Empty_Valuetype_Interface,
-    public virtual ::Factory_Initialized_Value
+    public virtual ::Supported_Interface_Value
 {
 protected:
-  POA_Factory_Initialized_Value ();
+  POA_Supported_Interface_Value ();
 
 public:
-  virtual ~POA_Factory_Initialized_Value ();
+  virtual ~POA_Supported_Interface_Value ();
 
 private:
-  POA_Factory_Initialized_Value (POA_Factory_Initialized_Value const &rhs);
+  POA_Supported_Interface_Value (POA_Supported_Interface_Value const &rhs);
 };
 
 namespace POA_X_VALUETYPE

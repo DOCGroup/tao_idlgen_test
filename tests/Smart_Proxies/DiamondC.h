@@ -206,6 +206,11 @@ namespace Diamond
 
     virtual char * color ();
 
+    virtual ::CORBA::Long combine (
+      ::CORBA::Long first,
+      ::CORBA::Long & second,
+      ::CORBA::Long_out third);
+
     ::CORBA::Boolean _is_a (char const *type_id) override;
     char const *_interface_repository_id () const override;
     ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
@@ -282,6 +287,10 @@ namespace Diamond
     TAO_Stub *_stubobj () const override;
     TAO_Stub *_stubobj () override;
     char * color () override;
+    ::CORBA::Long combine (
+      ::CORBA::Long first,
+      ::CORBA::Long & second,
+      ::CORBA::Long_out third) override;
 
   protected:
     ::Diamond::Left_ptr get_proxy ();

@@ -63,6 +63,23 @@ namespace TAO
 
 #endif /* end #if !defined */
 
+#if !defined (_ACCESSOR_OPTIMIZED_LEAF__SARG_TRAITS_)
+#define _ACCESSOR_OPTIMIZED_LEAF__SARG_TRAITS_
+
+  template<>
+  class SArg_Traits<::Accessor_Optimized_Leaf>
+    : public
+        Object_SArg_Traits_T<
+            ::Accessor_Optimized_Leaf *,
+            ::Accessor_Optimized_Leaf_var,
+            ::Accessor_Optimized_Leaf_out,
+            TAO::Any_Insert_Policy_Stream
+          >
+  {
+  };
+
+#endif /* end #if !defined */
+
 #if !defined (_ACCESSOR_OPTIMIZED_VALUE__SARG_TRAITS_)
 #define _ACCESSOR_OPTIMIZED_VALUE__SARG_TRAITS_
 
@@ -73,23 +90,6 @@ namespace TAO
             ::Accessor_Optimized_Value *,
             ::Accessor_Optimized_Value_var,
             ::Accessor_Optimized_Value_out,
-            TAO::Any_Insert_Policy_Stream
-          >
-  {
-  };
-
-#endif /* end #if !defined */
-
-#if !defined (_ACCESSOR_OPTIMIZED_BASE__SARG_TRAITS_)
-#define _ACCESSOR_OPTIMIZED_BASE__SARG_TRAITS_
-
-  template<>
-  class SArg_Traits<::Accessor_Optimized_Base>
-    : public
-        Object_SArg_Traits_T<
-            ::Accessor_Optimized_Base *,
-            ::Accessor_Optimized_Base_var,
-            ::Accessor_Optimized_Base_out,
             TAO::Any_Insert_Policy_Stream
           >
   {

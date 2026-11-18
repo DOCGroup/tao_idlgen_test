@@ -26,32 +26,5 @@
 #define _TAO_IDL_VALUETYPE_OPT_ACCESSORS_CPP_
 
 #include "valuetype_opt_accessorS.h"
-#include "tao/PortableServer/Operation_Table_Perfect_Hash.h"
-#include <array>
-#include <cstddef>
-#include <cstring>
-#include <memory>
-#include "tao/PortableServer/Direct_Collocation_Upcall_Wrapper.h"
-#include "tao/Exception_Data.h"
-#include "tao/Messaging/ExceptionHolder_i.h"
-#include "tao/PortableServer/Upcall_Command.h"
-#include "tao/PortableServer/Upcall_Wrapper.h"
-#include "tao/TAO_Server_Request.h"
-#include "tao/ORB_Core.h"
-#include "tao/Profile.h"
-#include "tao/Stub.h"
-#include "tao/IFR_Client_Adapter.h"
-#include "tao/Object_T.h"
-#include "tao/AnyTypeCode/TypeCode.h"
-#include "tao/AnyTypeCode/DynamicC.h"
-#include "tao/CDR.h"
-#include "tao/operation_details.h"
-#include "tao/PortableInterceptor.h"
-#include "tao/Thread_Lane_Resources.h"
-#include "tao/Buffer_Allocator_T.h"
-#include "tao/Messaging/AMH_Skeletons.h"
-#include "ace/Auto_Functor.h"
-#include "ace/Dynamic_Service.h"
-#include "ace/Malloc_Allocator.h"
 
 #endif /* ifndef */

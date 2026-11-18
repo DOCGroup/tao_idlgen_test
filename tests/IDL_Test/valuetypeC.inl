@@ -160,58 +160,22 @@ AMI_Empty_Valuetype_InterfaceHandler::AMI_Empty_Valuetype_InterfaceHandler (::IO
 {
 }
 ACE_INLINE
-Abstract_Refcount_Base::Abstract_Refcount_Base ()
+Supported_Interface_Value::Supported_Interface_Value ()
 {}
 
 ACE_INLINE char const *
-Abstract_Refcount_Base::_tao_obv_static_repository_id ()
+Supported_Interface_Value::_tao_obv_static_repository_id ()
 {
-  return "IDL:Abstract_Refcount_Base:1.0";
+  return "IDL:Supported_Interface_Value:1.0";
 }
 ACE_INLINE
-Abstract_Refcount_Derived::Abstract_Refcount_Derived ()
+Application_Factory_Value::Application_Factory_Value ()
 {}
 
 ACE_INLINE char const *
-Abstract_Refcount_Derived::_tao_obv_static_repository_id ()
+Application_Factory_Value::_tao_obv_static_repository_id ()
 {
-  return "IDL:Abstract_Refcount_Derived:1.0";
-}
-ACE_INLINE
-Concrete_From_Abstract::Concrete_From_Abstract ()
-{}
-
-ACE_INLINE char const *
-Concrete_From_Abstract::_tao_obv_static_repository_id ()
-{
-  return "IDL:Concrete_From_Abstract:1.0";
-}
-ACE_INLINE
-Supported_Interface_Base::Supported_Interface_Base ()
-{}
-
-ACE_INLINE char const *
-Supported_Interface_Base::_tao_obv_static_repository_id ()
-{
-  return "IDL:Supported_Interface_Base:1.0";
-}
-ACE_INLINE
-Supported_Interface_Derived::Supported_Interface_Derived ()
-{}
-
-ACE_INLINE char const *
-Supported_Interface_Derived::_tao_obv_static_repository_id ()
-{
-  return "IDL:Supported_Interface_Derived:1.0";
-}
-ACE_INLINE
-Factory_Initialized_Value::Factory_Initialized_Value ()
-{}
-
-ACE_INLINE char const *
-Factory_Initialized_Value::_tao_obv_static_repository_id ()
-{
-  return "IDL:Factory_Initialized_Value:1.0";
+  return "IDL:Application_Factory_Value:1.0";
 }
 ACE_INLINE
 Copy_Base::Copy_Base ()

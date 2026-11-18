@@ -1360,10 +1360,10 @@ POA_AMI_Empty_Valuetype_InterfaceHandler::_this ()
     }
   return {};
 }
-POA_Factory_Initialized_Value::POA_Factory_Initialized_Value ()
+POA_Supported_Interface_Value::POA_Supported_Interface_Value ()
 {}
 
-POA_Factory_Initialized_Value::~POA_Factory_Initialized_Value ()
+POA_Supported_Interface_Value::~POA_Supported_Interface_Value ()
 {}
 
 #endif /* ifndef */
