@@ -118,7 +118,7 @@ TAO_AMH_Accessor_Optimized_Interface_Perfect_Hash_OpTable::lookup (char const *s
         {
           char const *s = wordlist[key].opname;
 
-          if (*str == *s && len == std::strlen (s) && !std::strncmp (str, s, len))
+          if (*str == *s && !std::strncmp (str, s, len) && s[len] == '\0')
             {
               return std::addressof (wordlist[key]);
             }
@@ -232,7 +232,7 @@ TAO_Accessor_Optimized_Interface_Perfect_Hash_OpTable::lookup (char const *str, 
         {
           char const *s = wordlist[key].opname;
 
-          if (*str == *s && len == std::strlen (s) && !std::strncmp (str, s, len))
+          if (*str == *s && !std::strncmp (str, s, len) && s[len] == '\0')
             {
               return std::addressof (wordlist[key]);
             }
@@ -348,7 +348,7 @@ TAO_AMI_Accessor_Optimized_InterfaceHandler_Perfect_Hash_OpTable::lookup (char c
         {
           char const *s = wordlist[key].opname;
 
-          if (*str == *s && len == std::strlen (s) && !std::strncmp (str, s, len))
+          if (*str == *s && !std::strncmp (str, s, len) && s[len] == '\0')
             {
               return std::addressof (wordlist[key]);
             }
@@ -465,7 +465,7 @@ TAO_AMH_Accessor_Optimized_Second_Interface_Perfect_Hash_OpTable::lookup (char c
         {
           char const *s = wordlist[key].opname;
 
-          if (*str == *s && len == std::strlen (s) && !std::strncmp (str, s, len))
+          if (*str == *s && !std::strncmp (str, s, len) && s[len] == '\0')
             {
               return std::addressof (wordlist[key]);
             }
@@ -580,7 +580,7 @@ TAO_Accessor_Optimized_Second_Interface_Perfect_Hash_OpTable::lookup (char const
         {
           char const *s = wordlist[key].opname;
 
-          if (*str == *s && len == std::strlen (s) && !std::strncmp (str, s, len))
+          if (*str == *s && !std::strncmp (str, s, len) && s[len] == '\0')
             {
               return std::addressof (wordlist[key]);
             }
@@ -697,7 +697,7 @@ TAO_AMI_Accessor_Optimized_Second_InterfaceHandler_Perfect_Hash_OpTable::lookup 
         {
           char const *s = wordlist[key].opname;
 
-          if (*str == *s && len == std::strlen (s) && !std::strncmp (str, s, len))
+          if (*str == *s && !std::strncmp (str, s, len) && s[len] == '\0')
             {
               return std::addressof (wordlist[key]);
             }

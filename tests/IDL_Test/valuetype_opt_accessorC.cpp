@@ -127,8 +127,9 @@ Accessor_Optimized_Leaf::_copy_value ()
     ret_val,
     Accessor_Optimized_Leaf (),
     ::CORBA::NO_MEMORY ());
+  ::CORBA::ValueBase_var ret_val_guard (ret_val);
   ret_val->leaf_value (this->leaf_value ());
-  return ret_val;
+  return ret_val_guard._retn ();
 }
 
 ::CORBA::Boolean
@@ -171,22 +172,32 @@ Accessor_Optimized_Leaf::_tao_unmarshal (
   ::CORBA::ValueBase_var owner (base);
 
   if (!retval)
+  {
     return false;
+  }
 
   if (is_null_object)
+  {
     return true;
+  }
 
   if (!is_indirected && !base->_tao_unmarshal_v (strm))
+  {
     return false;
+  }
 
   // Now base must point to the unmarshaled object.
   // Align the pointer to the right subobject.
   new_object = Accessor_Optimized_Leaf::_downcast (base);
   if (nullptr == new_object)
+  {
     return false;
+  }
 
   if (is_indirected)
+  {
     new_object->_add_ref ();
+  }
 
   owner._retn ();
   return true;
@@ -307,9 +318,10 @@ Accessor_Optimized_Value::_copy_value ()
     ret_val,
     Accessor_Optimized_Value (),
     ::CORBA::NO_MEMORY ());
+  ::CORBA::ValueBase_var ret_val_guard (ret_val);
   ret_val->value (this->value ());
   ret_val->child (this->child () ? Accessor_Optimized_Leaf::_downcast (::CORBA::ValueBase_var (this->child ()->_copy_value ()).in ()) : nullptr);
-  return ret_val;
+  return ret_val_guard._retn ();
 }
 
 ::CORBA::Boolean
@@ -352,22 +364,32 @@ Accessor_Optimized_Value::_tao_unmarshal (
   ::CORBA::ValueBase_var owner (base);
 
   if (!retval)
+  {
     return false;
+  }
 
   if (is_null_object)
+  {
     return true;
+  }
 
   if (!is_indirected && !base->_tao_unmarshal_v (strm))
+  {
     return false;
+  }
 
   // Now base must point to the unmarshaled object.
   // Align the pointer to the right subobject.
   new_object = Accessor_Optimized_Value::_downcast (base);
   if (nullptr == new_object)
+  {
     return false;
+  }
 
   if (is_indirected)
+  {
     new_object->_add_ref ();
+  }
 
   owner._retn ();
   return true;
@@ -487,10 +509,11 @@ Accessor_Optimized_Derived::_copy_value ()
     ret_val,
     Accessor_Optimized_Derived (),
     ::CORBA::NO_MEMORY ());
+  ::CORBA::ValueBase_var ret_val_guard (ret_val);
   ret_val->derived_value (this->derived_value ());
   ret_val->value (this->value ());
   ret_val->child (this->child () ? Accessor_Optimized_Leaf::_downcast (::CORBA::ValueBase_var (this->child ()->_copy_value ()).in ()) : nullptr);
-  return ret_val;
+  return ret_val_guard._retn ();
 }
 
 ::CORBA::Boolean
@@ -533,22 +556,32 @@ Accessor_Optimized_Derived::_tao_unmarshal (
   ::CORBA::ValueBase_var owner (base);
 
   if (!retval)
+  {
     return false;
+  }
 
   if (is_null_object)
+  {
     return true;
+  }
 
   if (!is_indirected && !base->_tao_unmarshal_v (strm))
+  {
     return false;
+  }
 
   // Now base must point to the unmarshaled object.
   // Align the pointer to the right subobject.
   new_object = Accessor_Optimized_Derived::_downcast (base);
   if (nullptr == new_object)
+  {
     return false;
+  }
 
   if (is_indirected)
+  {
     new_object->_add_ref ();
+  }
 
   owner._retn ();
   return true;
@@ -696,22 +729,32 @@ Accessor_Optimized_Operation_Derived::_tao_unmarshal (
   ::CORBA::ValueBase_var owner (base);
 
   if (!retval)
+  {
     return false;
+  }
 
   if (is_null_object)
+  {
     return true;
+  }
 
   if (!is_indirected && !base->_tao_unmarshal_v (strm))
+  {
     return false;
+  }
 
   // Now base must point to the unmarshaled object.
   // Align the pointer to the right subobject.
   new_object = Accessor_Optimized_Operation_Derived::_downcast (base);
   if (nullptr == new_object)
+  {
     return false;
+  }
 
   if (is_indirected)
+  {
     new_object->_add_ref ();
+  }
 
   owner._retn ();
   return true;
@@ -954,22 +997,32 @@ AMH_Accessor_Optimized_InterfaceExceptionHolder::_tao_unmarshal (
   ::CORBA::ValueBase_var owner (base);
 
   if (!retval)
+  {
     return false;
+  }
 
   if (is_null_object)
+  {
     return true;
+  }
 
   if (!is_indirected && !base->_tao_unmarshal_v (strm))
+  {
     return false;
+  }
 
   // Now base must point to the unmarshaled object.
   // Align the pointer to the right subobject.
   new_object = AMH_Accessor_Optimized_InterfaceExceptionHolder::_downcast (base);
   if (nullptr == new_object)
+  {
     return false;
+  }
 
   if (is_indirected)
+  {
     new_object->_add_ref ();
+  }
 
   owner._retn ();
   return true;
@@ -1482,22 +1535,32 @@ AMH_Accessor_Optimized_Second_InterfaceExceptionHolder::_tao_unmarshal (
   ::CORBA::ValueBase_var owner (base);
 
   if (!retval)
+  {
     return false;
+  }
 
   if (is_null_object)
+  {
     return true;
+  }
 
   if (!is_indirected && !base->_tao_unmarshal_v (strm))
+  {
     return false;
+  }
 
   // Now base must point to the unmarshaled object.
   // Align the pointer to the right subobject.
   new_object = AMH_Accessor_Optimized_Second_InterfaceExceptionHolder::_downcast (base);
   if (nullptr == new_object)
+  {
     return false;
+  }
 
   if (is_indirected)
+  {
     new_object->_add_ref ();
+  }
 
   owner._retn ();
   return true;
@@ -1856,8 +1919,9 @@ Accessor_Optimized_Refcount_Base::_copy_value ()
     ret_val,
     Accessor_Optimized_Refcount_Base (),
     ::CORBA::NO_MEMORY ());
+  ::CORBA::ValueBase_var ret_val_guard (ret_val);
   ret_val->base_value (this->base_value ());
-  return ret_val;
+  return ret_val_guard._retn ();
 }
 
 void
@@ -1912,22 +1976,32 @@ Accessor_Optimized_Refcount_Base::_tao_unmarshal (
   ::CORBA::ValueBase_var owner (base);
 
   if (!retval)
+  {
     return false;
+  }
 
   if (is_null_object)
+  {
     return true;
+  }
 
   if (!is_indirected && !base->_tao_unmarshal_v (strm))
+  {
     return false;
+  }
 
   // Now base must point to the unmarshaled object.
   // Align the pointer to the right subobject.
   new_object = Accessor_Optimized_Refcount_Base::_downcast (base);
   if (nullptr == new_object)
+  {
     return false;
+  }
 
   if (is_indirected)
+  {
     new_object->_add_ref ();
+  }
 
   owner._retn ();
   return true;
@@ -2053,9 +2127,10 @@ Accessor_Optimized_Refcount_Derived::_copy_value ()
     ret_val,
     Accessor_Optimized_Refcount_Derived (),
     ::CORBA::NO_MEMORY ());
+  ::CORBA::ValueBase_var ret_val_guard (ret_val);
   ret_val->derived_value (this->derived_value ());
   ret_val->base_value (this->base_value ());
-  return ret_val;
+  return ret_val_guard._retn ();
 }
 
 void
@@ -2110,22 +2185,32 @@ Accessor_Optimized_Refcount_Derived::_tao_unmarshal (
   ::CORBA::ValueBase_var owner (base);
 
   if (!retval)
+  {
     return false;
+  }
 
   if (is_null_object)
+  {
     return true;
+  }
 
   if (!is_indirected && !base->_tao_unmarshal_v (strm))
+  {
     return false;
+  }
 
   // Now base must point to the unmarshaled object.
   // Align the pointer to the right subobject.
   new_object = Accessor_Optimized_Refcount_Derived::_downcast (base);
   if (nullptr == new_object)
+  {
     return false;
+  }
 
   if (is_indirected)
+  {
     new_object->_add_ref ();
+  }
 
   owner._retn ();
   return true;
@@ -2245,9 +2330,10 @@ Accessor_Optimized_Refcount_Multi_Derived::_copy_value ()
     ret_val,
     Accessor_Optimized_Refcount_Multi_Derived (),
     ::CORBA::NO_MEMORY ());
+  ::CORBA::ValueBase_var ret_val_guard (ret_val);
   ret_val->multi_derived_value (this->multi_derived_value ());
   ret_val->base_value (this->base_value ());
-  return ret_val;
+  return ret_val_guard._retn ();
 }
 
 void
@@ -2302,22 +2388,32 @@ Accessor_Optimized_Refcount_Multi_Derived::_tao_unmarshal (
   ::CORBA::ValueBase_var owner (base);
 
   if (!retval)
+  {
     return false;
+  }
 
   if (is_null_object)
+  {
     return true;
+  }
 
   if (!is_indirected && !base->_tao_unmarshal_v (strm))
+  {
     return false;
+  }
 
   // Now base must point to the unmarshaled object.
   // Align the pointer to the right subobject.
   new_object = Accessor_Optimized_Refcount_Multi_Derived::_downcast (base);
   if (nullptr == new_object)
+  {
     return false;
+  }
 
   if (is_indirected)
+  {
     new_object->_add_ref ();
+  }
 
   owner._retn ();
   return true;
@@ -2443,8 +2539,9 @@ Accessor_Optimized_Refcount_Parent::_copy_value ()
     ret_val,
     Accessor_Optimized_Refcount_Parent (),
     ::CORBA::NO_MEMORY ());
+  ::CORBA::ValueBase_var ret_val_guard (ret_val);
   ret_val->parent_value (this->parent_value ());
-  return ret_val;
+  return ret_val_guard._retn ();
 }
 
 ::CORBA::Boolean
@@ -2487,22 +2584,32 @@ Accessor_Optimized_Refcount_Parent::_tao_unmarshal (
   ::CORBA::ValueBase_var owner (base);
 
   if (!retval)
+  {
     return false;
+  }
 
   if (is_null_object)
+  {
     return true;
+  }
 
   if (!is_indirected && !base->_tao_unmarshal_v (strm))
+  {
     return false;
+  }
 
   // Now base must point to the unmarshaled object.
   // Align the pointer to the right subobject.
   new_object = Accessor_Optimized_Refcount_Parent::_downcast (base);
   if (nullptr == new_object)
+  {
     return false;
+  }
 
   if (is_indirected)
+  {
     new_object->_add_ref ();
+  }
 
   owner._retn ();
   return true;
@@ -2622,9 +2729,10 @@ Accessor_Optimized_Refcount_Inherited::_copy_value ()
     ret_val,
     Accessor_Optimized_Refcount_Inherited (),
     ::CORBA::NO_MEMORY ());
+  ::CORBA::ValueBase_var ret_val_guard (ret_val);
   ret_val->inherited_value (this->inherited_value ());
   ret_val->parent_value (this->parent_value ());
-  return ret_val;
+  return ret_val_guard._retn ();
 }
 
 void
@@ -2679,22 +2787,32 @@ Accessor_Optimized_Refcount_Inherited::_tao_unmarshal (
   ::CORBA::ValueBase_var owner (base);
 
   if (!retval)
+  {
     return false;
+  }
 
   if (is_null_object)
+  {
     return true;
+  }
 
   if (!is_indirected && !base->_tao_unmarshal_v (strm))
+  {
     return false;
+  }
 
   // Now base must point to the unmarshaled object.
   // Align the pointer to the right subobject.
   new_object = Accessor_Optimized_Refcount_Inherited::_downcast (base);
   if (nullptr == new_object)
+  {
     return false;
+  }
 
   if (is_indirected)
+  {
     new_object->_add_ref ();
+  }
 
   owner._retn ();
   return true;
@@ -2852,22 +2970,32 @@ Accessor_Optimized_Base::_tao_unmarshal (
   ::CORBA::ValueBase_var owner (base);
 
   if (!retval)
+  {
     return false;
+  }
 
   if (is_null_object)
+  {
     return true;
+  }
 
   if (!is_indirected && !base->_tao_unmarshal_v (strm))
+  {
     return false;
+  }
 
   // Now base must point to the unmarshaled object.
   // Align the pointer to the right subobject.
   new_object = Accessor_Optimized_Base::_downcast (base);
   if (nullptr == new_object)
+  {
     return false;
+  }
 
   if (is_indirected)
+  {
     new_object->_add_ref ();
+  }
 
   owner._retn ();
   return true;
@@ -3004,22 +3132,32 @@ Accessor_Optimized_Factory_Derived::_tao_unmarshal (
   ::CORBA::ValueBase_var owner (base);
 
   if (!retval)
+  {
     return false;
+  }
 
   if (is_null_object)
+  {
     return true;
+  }
 
   if (!is_indirected && !base->_tao_unmarshal_v (strm))
+  {
     return false;
+  }
 
   // Now base must point to the unmarshaled object.
   // Align the pointer to the right subobject.
   new_object = Accessor_Optimized_Factory_Derived::_downcast (base);
   if (nullptr == new_object)
+  {
     return false;
+  }
 
   if (is_indirected)
+  {
     new_object->_add_ref ();
+  }
 
   owner._retn ();
   return true;

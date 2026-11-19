@@ -978,9 +978,6 @@ public:
   virtual ::CORBA::Long value () const = 0;
 
 public:
-  void ping () override = 0;
-
-public:
 
   void _add_ref () override = 0;
   void _remove_ref () override = 0;
@@ -1004,6 +1001,25 @@ protected:
 
   virtual ::CORBA::Boolean
   _tao_unmarshal__Supports_Abstract_Inherited_Operation (TAO_InputCDR &, TAO_ChunkInfo &) = 0;
+};
+class TAO_IDL_TEST_STUB_Export Supports_Abstract_Inherited_Operation_init
+  : public virtual ::CORBA::ValueFactoryBase
+{
+public:
+  Supports_Abstract_Inherited_Operation_init ();
+
+  static Supports_Abstract_Inherited_Operation_init* _downcast (::CORBA::ValueFactoryBase *);
+
+  ::CORBA::ValueBase *create_for_unmarshal () override;
+
+  ::CORBA::AbstractBase_ptr create_for_unmarshal_abstract () override;
+
+// TAO-specific extensions
+public:
+  virtual char const * tao_repository_id ();
+
+protected:
+  virtual ~Supports_Abstract_Inherited_Operation_init ();
 };
 extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_Supports_Abstract_Inherited_Operation;
 
@@ -3827,12 +3843,15 @@ public:
   void _add_ref () override;
   void _remove_ref () override;
 
-protected:
+public:
   OBV_Supports_Abstract_Inherited_Operation () = default;
   OBV_Supports_Abstract_Inherited_Operation (
       ::CORBA::Long _tao_init_value
     );
   ~OBV_Supports_Abstract_Inherited_Operation () override;
+
+public:
+  ::CORBA::ValueBase *_copy_value () override;
 
 protected:
   ::CORBA::Boolean _tao_marshal__Supports_Abstract_Inherited_Operation (TAO_OutputCDR &, TAO_ChunkInfo &) const override;
@@ -4132,6 +4151,9 @@ public:
     );
   ~OBV_Copy_Factory_Derived () override;
 
+public:
+  ::CORBA::ValueBase *_copy_value () override = 0;
+
 protected:
   ::CORBA::Boolean _tao_marshal__Copy_Factory_Derived (TAO_OutputCDR &, TAO_ChunkInfo &) const override;
 
@@ -4159,6 +4181,9 @@ protected:
       ::CORBA::Long _tao_init_derived_value
     );
   ~OBV_Copy_Factory_Operation_Derived () override;
+
+public:
+  ::CORBA::ValueBase *_copy_value () override = 0;
 
 protected:
   ::CORBA::Boolean _tao_marshal__Copy_Factory_Operation_Derived (TAO_OutputCDR &, TAO_ChunkInfo &) const override;

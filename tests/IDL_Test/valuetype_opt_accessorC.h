@@ -341,6 +341,8 @@ public:
 
   static void _tao_any_destructor (void *);
 
+  ::CORBA::ValueBase *_copy_value () override = 0;
+
   static Accessor_Optimized_Operation_Derived* _downcast (::CORBA::ValueBase *v);
 
   /// TAO extensions or internals
