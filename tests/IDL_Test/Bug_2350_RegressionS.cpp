@@ -120,7 +120,7 @@ TAO_AMH_Bug_2350_Regression_Perfect_Hash_OpTable::lookup (char const *str, size_
         {
           char const *s = wordlist[key].opname;
 
-          if (*str == *s && !std::strncmp (str, s, len) && s[len] == '\0')
+          if (*str == *s && !std::strncmp (str + 1, s + 1, len - 1))
             {
               return std::addressof (wordlist[key]);
             }
@@ -279,7 +279,7 @@ TAO_Bug_2350_Regression_Perfect_Hash_OpTable::lookup (char const *str, size_t le
         {
           char const *s = wordlist[key].opname;
 
-          if (*str == *s && !std::strncmp (str, s, len) && s[len] == '\0')
+          if (*str == *s && !std::strncmp (str + 1, s + 1, len - 1))
             {
               return std::addressof (wordlist[key]);
             }
@@ -509,7 +509,7 @@ TAO_AMI_Bug_2350_RegressionHandler_Perfect_Hash_OpTable::lookup (char const *str
         {
           char const *s = wordlist[key].opname;
 
-          if (*str == *s && !std::strncmp (str, s, len) && s[len] == '\0')
+          if (*str == *s && !std::strncmp (str + 1, s + 1, len - 1))
             {
               return std::addressof (wordlist[key]);
             }

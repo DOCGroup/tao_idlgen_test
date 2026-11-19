@@ -120,7 +120,7 @@ TAO_AMH_simple_Perfect_Hash_OpTable::lookup (char const *str, size_t len)
         {
           char const *s = wordlist[key].opname;
 
-          if (*str == *s && !std::strncmp (str, s, len) && s[len] == '\0')
+          if (*str == *s && !std::strncmp (str + 1, s + 1, len - 1))
             {
               return std::addressof (wordlist[key]);
             }
@@ -282,7 +282,7 @@ TAO_simple_Perfect_Hash_OpTable::lookup (char const *str, size_t len)
         {
           char const *s = wordlist[key].opname;
 
-          if (*str == *s && !std::strncmp (str, s, len) && s[len] == '\0')
+          if (*str == *s && !std::strncmp (str + 1, s + 1, len - 1))
             {
               return std::addressof (wordlist[key]);
             }
@@ -552,7 +552,7 @@ TAO_AMI_simpleHandler_Perfect_Hash_OpTable::lookup (char const *str, size_t len)
         {
           char const *s = wordlist[key].opname;
 
-          if (*str == *s && !std::strncmp (str, s, len) && s[len] == '\0')
+          if (*str == *s && !std::strncmp (str + 1, s + 1, len - 1))
             {
               return std::addressof (wordlist[key]);
             }
@@ -888,7 +888,7 @@ TAO_AMH_simple2_Perfect_Hash_OpTable::lookup (char const *str, size_t len)
         {
           char const *s = wordlist[key].opname;
 
-          if (*str == *s && !std::strncmp (str, s, len) && s[len] == '\0')
+          if (*str == *s && !std::strncmp (str + 1, s + 1, len - 1))
             {
               return std::addressof (wordlist[key]);
             }
@@ -1052,7 +1052,7 @@ TAO_simple2_Perfect_Hash_OpTable::lookup (char const *str, size_t len)
         {
           char const *s = wordlist[key].opname;
 
-          if (*str == *s && !std::strncmp (str, s, len) && s[len] == '\0')
+          if (*str == *s && !std::strncmp (str + 1, s + 1, len - 1))
             {
               return std::addressof (wordlist[key]);
             }
@@ -1322,7 +1322,7 @@ TAO_AMI_simple2Handler_Perfect_Hash_OpTable::lookup (char const *str, size_t len
         {
           char const *s = wordlist[key].opname;
 
-          if (*str == *s && !std::strncmp (str, s, len) && s[len] == '\0')
+          if (*str == *s && !std::strncmp (str + 1, s + 1, len - 1))
             {
               return std::addressof (wordlist[key]);
             }
