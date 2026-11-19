@@ -323,43 +323,6 @@ Diamond::Left::color ()
 
   return _tao_retval.retn ();
 }
-::CORBA::Long
-Diamond::Left::combine (
-  ::CORBA::Long first,
-  ::CORBA::Long & second,
-  ::CORBA::Long_out third)
-{
-  if (!this->is_evaluated ())
-    {
-      ::CORBA::Object::tao_object_initialize (this);
-    }
-
-  TAO::Arg_Traits<::CORBA::Long>::ret_val _tao_retval;
-  TAO::Arg_Traits<::CORBA::Long>::in_arg_val _tao_first (first);
-  TAO::Arg_Traits<::CORBA::Long>::inout_arg_val _tao_second (second);
-  TAO::Arg_Traits<::CORBA::Long>::out_arg_val _tao_third (third);
-
-  TAO::Argument *_the_tao_operation_signature [] =
-    {
-      std::addressof (_tao_retval),
-      std::addressof (_tao_first),
-      std::addressof (_tao_second),
-      std::addressof (_tao_third)
-    };
-
-  TAO::Invocation_Adapter _invocation_call (
-      this,
-      _the_tao_operation_signature,
-      4,
-      "combine",
-      7,
-      TAO::TAO_CO_NONE | TAO::TAO_CO_DIRECT_STRATEGY | TAO::TAO_CO_THRU_POA_STRATEGY
-    );
-
-  _invocation_call.invoke (nullptr, 0);
-
-  return _tao_retval.retn ();
-}
 
 Diamond::Left::Left ()
 {
@@ -512,18 +475,6 @@ char *
 Diamond::TAO_Diamond_Left_Smart_Proxy_Base::color ()
 {
   return this->get_proxy ()->color ();
-}
-
-::CORBA::Long
-Diamond::TAO_Diamond_Left_Smart_Proxy_Base::combine (
-  ::CORBA::Long first,
-  ::CORBA::Long & second,
-  ::CORBA::Long_out third)
-{
-  return this->get_proxy ()->combine (
-    first,
-    second,
-    third);
 }
 
 Diamond::Left_ptr

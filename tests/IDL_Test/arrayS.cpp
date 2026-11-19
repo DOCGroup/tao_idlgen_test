@@ -119,8 +119,10 @@ TAO_AMH_array_args_Perfect_Hash_OpTable::lookup (char const *str, size_t len)
         {
           char const *s = wordlist[key].opname;
 
-          if (*str == *s && !std::strncmp (str + 1, s + 1, len - 1))
-            return std::addressof (wordlist[key]);
+          if (*str == *s && len == std::strlen (s) && !std::strncmp (str, s, len))
+            {
+              return std::addressof (wordlist[key]);
+            }
         }
     }
   return nullptr;
@@ -284,8 +286,10 @@ TAO_array_args_Perfect_Hash_OpTable::lookup (char const *str, size_t len)
         {
           char const *s = wordlist[key].opname;
 
-          if (*str == *s && !std::strncmp (str + 1, s + 1, len - 1))
-            return std::addressof (wordlist[key]);
+          if (*str == *s && len == std::strlen (s) && !std::strncmp (str, s, len))
+            {
+              return std::addressof (wordlist[key]);
+            }
         }
     }
   return nullptr;
@@ -513,8 +517,10 @@ TAO_AMI_array_argsHandler_Perfect_Hash_OpTable::lookup (char const *str, size_t 
         {
           char const *s = wordlist[key].opname;
 
-          if (*str == *s && !std::strncmp (str + 1, s + 1, len - 1))
-            return std::addressof (wordlist[key]);
+          if (*str == *s && len == std::strlen (s) && !std::strncmp (str, s, len))
+            {
+              return std::addressof (wordlist[key]);
+            }
         }
     }
   return nullptr;
@@ -767,8 +773,10 @@ TAO_AMH_testdata_Perfect_Hash_OpTable::lookup (char const *str, size_t len)
         {
           char const *s = wordlist[key].opname;
 
-          if (*str == *s && !std::strncmp (str + 1, s + 1, len - 1))
-            return std::addressof (wordlist[key]);
+          if (*str == *s && len == std::strlen (s) && !std::strncmp (str, s, len))
+            {
+              return std::addressof (wordlist[key]);
+            }
         }
     }
   return nullptr;
@@ -878,8 +886,10 @@ TAO_testdata_Perfect_Hash_OpTable::lookup (char const *str, size_t len)
         {
           char const *s = wordlist[key].opname;
 
-          if (*str == *s && !std::strncmp (str + 1, s + 1, len - 1))
-            return std::addressof (wordlist[key]);
+          if (*str == *s && len == std::strlen (s) && !std::strncmp (str, s, len))
+            {
+              return std::addressof (wordlist[key]);
+            }
         }
     }
   return nullptr;
@@ -991,8 +1001,10 @@ TAO_AMI_testdataHandler_Perfect_Hash_OpTable::lookup (char const *str, size_t le
         {
           char const *s = wordlist[key].opname;
 
-          if (*str == *s && !std::strncmp (str + 1, s + 1, len - 1))
-            return std::addressof (wordlist[key]);
+          if (*str == *s && len == std::strlen (s) && !std::strncmp (str, s, len))
+            {
+              return std::addressof (wordlist[key]);
+            }
         }
     }
   return nullptr;
@@ -1107,8 +1119,10 @@ TAO_arraytest_AMH_MyTest_Perfect_Hash_OpTable::lookup (char const *str, size_t l
         {
           char const *s = wordlist[key].opname;
 
-          if (*str == *s && !std::strncmp (str + 1, s + 1, len - 1))
-            return std::addressof (wordlist[key]);
+          if (*str == *s && len == std::strlen (s) && !std::strncmp (str, s, len))
+            {
+              return std::addressof (wordlist[key]);
+            }
         }
     }
   return nullptr;
@@ -1254,8 +1268,10 @@ TAO_arraytest_MyTest_Perfect_Hash_OpTable::lookup (char const *str, size_t len)
         {
           char const *s = wordlist[key].opname;
 
-          if (*str == *s && !std::strncmp (str + 1, s + 1, len - 1))
-            return std::addressof (wordlist[key]);
+          if (*str == *s && len == std::strlen (s) && !std::strncmp (str, s, len))
+            {
+              return std::addressof (wordlist[key]);
+            }
         }
     }
   return nullptr;
@@ -1484,8 +1500,10 @@ TAO_arraytest_AMI_MyTestHandler_Perfect_Hash_OpTable::lookup (char const *str, s
         {
           char const *s = wordlist[key].opname;
 
-          if (*str == *s && !std::strncmp (str + 1, s + 1, len - 1))
-            return std::addressof (wordlist[key]);
+          if (*str == *s && len == std::strlen (s) && !std::strncmp (str, s, len))
+            {
+              return std::addressof (wordlist[key]);
+            }
         }
     }
   return nullptr;

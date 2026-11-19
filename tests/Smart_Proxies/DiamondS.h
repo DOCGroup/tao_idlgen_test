@@ -198,15 +198,6 @@ namespace POA_Diamond
       TAO_ServerRequest &server_request,
       TAO::Portable_Server::Servant_Upcall *servant_upcall,
       TAO_ServantBase *servant);
-    virtual ::CORBA::Long combine (
-      ::CORBA::Long first,
-      ::CORBA::Long & second,
-      ::CORBA::Long_out third) = 0;
-
-    static void combine_skel (
-      TAO_ServerRequest &server_request,
-      TAO::Portable_Server::Servant_Upcall *servant_upcall,
-      TAO_ServantBase *servant);
   };
 
   class Diamond_Export _TAO_Left_Direct_Proxy_Impl
@@ -215,7 +206,6 @@ namespace POA_Diamond
   public:
     virtual ~_TAO_Left_Direct_Proxy_Impl ();
     static void color (TAO_Abstract_ServantBase *servant, TAO::Argument **args);
-    static void combine (TAO_Abstract_ServantBase *servant, TAO::Argument **args);
   };
 
   class Right;

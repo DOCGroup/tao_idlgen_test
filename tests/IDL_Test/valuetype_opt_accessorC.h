@@ -43,8 +43,10 @@
 #include "tao/SystemException.h"
 #include "tao/Basic_Types.h"
 #include "tao/ORB_Constants.h"
+#include "tao/Object.h"
 #include "tao/Messaging/Messaging.h"
 #include "tao/Valuetype/Value_VarOut_T.h"
+#include "tao/Objref_VarOut_T.h"
 #include "tao/Arg_Traits_T.h"
 #include "tao/Basic_Arguments.h"
 #include "tao/Special_Basic_Arguments.h"
@@ -58,6 +60,14 @@
 #if TAO_MAJOR_VERSION != 4 || TAO_MINOR_VERSION != 0 || TAO_MICRO_VERSION != 8
 #error This file should be regenerated with TAO_IDL
 #endif
+
+TAO_BEGIN_VERSIONED_NAMESPACE_DECL
+
+namespace TAO
+{
+  template<typename T> class Narrow_Utils;
+}
+TAO_END_VERSIONED_NAMESPACE_DECL
 
 #if !defined (_ACCESSOR_OPTIMIZED_LEAF__VAR_OUT_CH_)
 #define _ACCESSOR_OPTIMIZED_LEAF__VAR_OUT_CH_
@@ -312,6 +322,1153 @@ protected:
 };
 extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_Accessor_Optimized_Derived;
 
+#if !defined (_ACCESSOR_OPTIMIZED_OPERATION_DERIVED__VAR_OUT_CH_)
+#define _ACCESSOR_OPTIMIZED_OPERATION_DERIVED__VAR_OUT_CH_
+
+class Accessor_Optimized_Operation_Derived;
+using Accessor_Optimized_Operation_Derived_var = TAO_Value_Var_T<Accessor_Optimized_Operation_Derived>;
+using Accessor_Optimized_Operation_Derived_out = TAO_Value_Out_T<Accessor_Optimized_Operation_Derived>;
+
+#endif /* end #if !defined */
+
+class TAO_IDL_TEST_STUB_Export Accessor_Optimized_Operation_Derived
+  : public virtual Accessor_Optimized_Value
+{
+public:
+  using _ptr_type = Accessor_Optimized_Operation_Derived*;
+  using _var_type = Accessor_Optimized_Operation_Derived_var;
+  using _out_type = Accessor_Optimized_Operation_Derived_out;
+
+  static void _tao_any_destructor (void *);
+
+  static Accessor_Optimized_Operation_Derived* _downcast (::CORBA::ValueBase *v);
+
+  /// TAO extensions or internals
+  static ::CORBA::Boolean _tao_unmarshal (
+      TAO_InputCDR &strm,
+      Accessor_Optimized_Operation_Derived *&new_object);
+
+  char const * _tao_obv_repository_id () const override;
+
+  void _tao_obv_truncatable_repo_ids (Repository_Id_List &) const override;
+
+  static char const * _tao_obv_static_repository_id ();
+
+  ::CORBA::TypeCode_ptr _tao_type () const override;
+
+public:
+
+public:
+  virtual void op () = 0;
+
+protected:
+  Accessor_Optimized_Operation_Derived ();
+  ~Accessor_Optimized_Operation_Derived () override;
+
+  ::CORBA::Boolean _tao_marshal_v (TAO_OutputCDR &) const override;
+  ::CORBA::Boolean _tao_unmarshal_v (TAO_InputCDR &) override;
+  ::CORBA::Boolean _tao_match_formal_type (ptrdiff_t) const override;
+
+private:
+  Accessor_Optimized_Operation_Derived (Accessor_Optimized_Operation_Derived const &);
+  void operator= (Accessor_Optimized_Operation_Derived const &);
+
+protected:
+  ::CORBA::Boolean _tao_marshal_state (TAO_OutputCDR &, TAO_ChunkInfo &) const;
+  ::CORBA::Boolean _tao_unmarshal_state (TAO_InputCDR &, TAO_ChunkInfo &);
+  void truncation_hook () override;
+
+private:
+
+  ::CORBA::Boolean require_truncation_ {false};
+};
+extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_Accessor_Optimized_Operation_Derived;
+
+#if !defined (_ACCESSOR_OPTIMIZED_INTERFACE__VAR_OUT_CH_)
+#define _ACCESSOR_OPTIMIZED_INTERFACE__VAR_OUT_CH_
+
+class AMI_Accessor_Optimized_InterfaceHandler;
+using AMI_Accessor_Optimized_InterfaceHandler_ptr = AMI_Accessor_Optimized_InterfaceHandler *;
+
+class Accessor_Optimized_Interface;
+using Accessor_Optimized_Interface_ptr = Accessor_Optimized_Interface*;
+using Accessor_Optimized_Interface_var = TAO_Objref_Var_T<Accessor_Optimized_Interface>;
+using Accessor_Optimized_Interface_out = TAO_Objref_Out_T<Accessor_Optimized_Interface>;
+
+#endif /* end #if !defined */
+
+class TAO_IDL_TEST_STUB_Export Accessor_Optimized_Interface
+  : public virtual ::CORBA::Object
+{
+public:
+  friend class TAO::Narrow_Utils<Accessor_Optimized_Interface>;
+  using _ptr_type = Accessor_Optimized_Interface_ptr;
+  using _var_type = Accessor_Optimized_Interface_var;
+  using _out_type = Accessor_Optimized_Interface_out;
+
+  static void _tao_any_destructor (void *);
+
+  // The static operations.
+  static Accessor_Optimized_Interface_ptr _duplicate (Accessor_Optimized_Interface_ptr obj);
+  static void _tao_release (Accessor_Optimized_Interface_ptr obj);
+  static Accessor_Optimized_Interface_ptr _narrow (::CORBA::Object_ptr obj);
+  static Accessor_Optimized_Interface_ptr _unchecked_narrow (::CORBA::Object_ptr obj);
+  static Accessor_Optimized_Interface_ptr _nil ();
+
+  ::CORBA::Boolean _is_a (char const *type_id) override;
+  char const *_interface_repository_id () const override;
+  static char const *_desc_repository_id ();
+  static char const *_desc_interface_name ();
+  ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
+
+protected:
+  // Concrete interface only.
+  Accessor_Optimized_Interface ();
+
+  // Concrete non-local interface only.
+  Accessor_Optimized_Interface (::IOP::IOR *ior, TAO_ORB_Core *orb_core);
+
+  // Non-local interface only.
+  Accessor_Optimized_Interface (
+    TAO_Stub *objref,
+    ::CORBA::Boolean _tao_collocated = false,
+    TAO_Abstract_ServantBase *servant = nullptr,
+    TAO_ORB_Core *orb_core = nullptr);
+
+  ~Accessor_Optimized_Interface () override = default;
+
+private:
+  Accessor_Optimized_Interface (Accessor_Optimized_Interface const &) = delete;
+  Accessor_Optimized_Interface (Accessor_Optimized_Interface &&) = delete;
+  Accessor_Optimized_Interface &operator= (Accessor_Optimized_Interface const &) = delete;
+  Accessor_Optimized_Interface &operator= (Accessor_Optimized_Interface &&) = delete;
+};
+extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_Accessor_Optimized_Interface;
+
+#if !defined (_AMH_ACCESSOR_OPTIMIZED_INTERFACEEXCEPTIONHOLDER__VAR_OUT_CH_)
+#define _AMH_ACCESSOR_OPTIMIZED_INTERFACEEXCEPTIONHOLDER__VAR_OUT_CH_
+
+class AMH_Accessor_Optimized_InterfaceExceptionHolder;
+using AMH_Accessor_Optimized_InterfaceExceptionHolder_var = TAO_Value_Var_T<AMH_Accessor_Optimized_InterfaceExceptionHolder>;
+using AMH_Accessor_Optimized_InterfaceExceptionHolder_out = TAO_Value_Out_T<AMH_Accessor_Optimized_InterfaceExceptionHolder>;
+
+#endif /* end #if !defined */
+
+class TAO_IDL_TEST_STUB_Export AMH_Accessor_Optimized_InterfaceExceptionHolder
+  : public virtual ::CORBA::DefaultValueRefCountBase
+{
+public:
+  using _ptr_type = AMH_Accessor_Optimized_InterfaceExceptionHolder*;
+  using _var_type = AMH_Accessor_Optimized_InterfaceExceptionHolder_var;
+  using _out_type = AMH_Accessor_Optimized_InterfaceExceptionHolder_out;
+
+  static void _tao_any_destructor (void *);
+
+  AMH_Accessor_Optimized_InterfaceExceptionHolder (::CORBA::Exception *ex)
+    : exception (ex)
+  {}
+
+  ~AMH_Accessor_Optimized_InterfaceExceptionHolder () override;
+  ::CORBA::ValueBase *_copy_value () override;
+
+  static AMH_Accessor_Optimized_InterfaceExceptionHolder* _downcast (::CORBA::ValueBase *v);
+
+  /// TAO extensions or internals
+  static ::CORBA::Boolean _tao_unmarshal (
+      TAO_InputCDR &strm,
+      AMH_Accessor_Optimized_InterfaceExceptionHolder *&new_object);
+
+  char const * _tao_obv_repository_id () const override;
+
+  void _tao_obv_truncatable_repo_ids (Repository_Id_List &) const override;
+
+  static char const * _tao_obv_static_repository_id ();
+
+  ::CORBA::TypeCode_ptr _tao_type () const override;
+
+protected:
+  AMH_Accessor_Optimized_InterfaceExceptionHolder ();
+  ::CORBA::Boolean _tao_marshal_v (TAO_OutputCDR &) const override;
+  ::CORBA::Boolean _tao_unmarshal_v (TAO_InputCDR &) override;
+  ::CORBA::Boolean _tao_match_formal_type (ptrdiff_t) const override;
+
+private:
+  AMH_Accessor_Optimized_InterfaceExceptionHolder (AMH_Accessor_Optimized_InterfaceExceptionHolder const &);
+  void operator= (AMH_Accessor_Optimized_InterfaceExceptionHolder const &);
+
+  ::CORBA::Exception *exception;
+  friend class AMH_Accessor_Optimized_InterfaceExceptionHolder_init;
+
+protected:
+  ::CORBA::Boolean _tao_marshal_state (TAO_OutputCDR &, TAO_ChunkInfo &) const;
+  ::CORBA::Boolean _tao_unmarshal_state (TAO_InputCDR &, TAO_ChunkInfo &);
+  void truncation_hook () override;
+
+private:
+
+  ::CORBA::Boolean require_truncation_ {false};
+};
+class TAO_IDL_TEST_STUB_Export AMH_Accessor_Optimized_InterfaceExceptionHolder_init
+  : public virtual ::CORBA::ValueFactoryBase
+{
+public:
+  AMH_Accessor_Optimized_InterfaceExceptionHolder_init ();
+
+  static AMH_Accessor_Optimized_InterfaceExceptionHolder_init* _downcast (::CORBA::ValueFactoryBase *);
+
+  ::CORBA::ValueBase *create_for_unmarshal () override;
+
+  // TAO-specific extensions
+public:
+  virtual char const * tao_repository_id ();
+
+protected:
+  virtual ~AMH_Accessor_Optimized_InterfaceExceptionHolder_init ();
+};
+extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_AMH_Accessor_Optimized_InterfaceExceptionHolder;
+
+#if !defined (_AMH_ACCESSOR_OPTIMIZED_INTERFACERESPONSEHANDLER__VAR_OUT_CH_)
+#define _AMH_ACCESSOR_OPTIMIZED_INTERFACERESPONSEHANDLER__VAR_OUT_CH_
+
+class AMI_AMH_Accessor_Optimized_InterfaceResponseHandlerHandler;
+using AMI_AMH_Accessor_Optimized_InterfaceResponseHandlerHandler_ptr = AMI_AMH_Accessor_Optimized_InterfaceResponseHandlerHandler *;
+
+class AMH_Accessor_Optimized_InterfaceResponseHandler;
+using AMH_Accessor_Optimized_InterfaceResponseHandler_ptr = AMH_Accessor_Optimized_InterfaceResponseHandler*;
+using AMH_Accessor_Optimized_InterfaceResponseHandler_var = TAO_Objref_Var_T<AMH_Accessor_Optimized_InterfaceResponseHandler>;
+using AMH_Accessor_Optimized_InterfaceResponseHandler_out = TAO_Objref_Out_T<AMH_Accessor_Optimized_InterfaceResponseHandler>;
+
+#endif /* end #if !defined */
+
+class TAO_IDL_TEST_STUB_Export AMH_Accessor_Optimized_InterfaceResponseHandler
+  : public virtual ::CORBA::Object
+{
+public:
+  using _ptr_type = AMH_Accessor_Optimized_InterfaceResponseHandler_ptr;
+  using _var_type = AMH_Accessor_Optimized_InterfaceResponseHandler_var;
+  using _out_type = AMH_Accessor_Optimized_InterfaceResponseHandler_out;
+
+  static void _tao_any_destructor (void *);
+
+  // The static operations.
+  static AMH_Accessor_Optimized_InterfaceResponseHandler_ptr _duplicate (AMH_Accessor_Optimized_InterfaceResponseHandler_ptr obj);
+  static void _tao_release (AMH_Accessor_Optimized_InterfaceResponseHandler_ptr obj);
+  static AMH_Accessor_Optimized_InterfaceResponseHandler_ptr _narrow (::CORBA::Object_ptr obj);
+  static AMH_Accessor_Optimized_InterfaceResponseHandler_ptr _unchecked_narrow (::CORBA::Object_ptr obj);
+  static AMH_Accessor_Optimized_InterfaceResponseHandler_ptr _nil ();
+
+  ::CORBA::Boolean _is_a (char const *type_id) override;
+  char const *_interface_repository_id () const override;
+  static char const *_desc_repository_id ();
+  static char const *_desc_interface_name ();
+  ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
+
+protected:
+  // Abstract or local interface only.
+  AMH_Accessor_Optimized_InterfaceResponseHandler ();
+
+  ~AMH_Accessor_Optimized_InterfaceResponseHandler () override = default;
+
+private:
+  AMH_Accessor_Optimized_InterfaceResponseHandler (AMH_Accessor_Optimized_InterfaceResponseHandler const &) = delete;
+  AMH_Accessor_Optimized_InterfaceResponseHandler (AMH_Accessor_Optimized_InterfaceResponseHandler &&) = delete;
+  AMH_Accessor_Optimized_InterfaceResponseHandler &operator= (AMH_Accessor_Optimized_InterfaceResponseHandler const &) = delete;
+  AMH_Accessor_Optimized_InterfaceResponseHandler &operator= (AMH_Accessor_Optimized_InterfaceResponseHandler &&) = delete;
+};
+extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_AMH_Accessor_Optimized_InterfaceResponseHandler;
+
+#if !defined (_AMI_ACCESSOR_OPTIMIZED_INTERFACEHANDLER__VAR_OUT_CH_)
+#define _AMI_ACCESSOR_OPTIMIZED_INTERFACEHANDLER__VAR_OUT_CH_
+
+class AMI_Accessor_Optimized_InterfaceHandler;
+using AMI_Accessor_Optimized_InterfaceHandler_ptr = AMI_Accessor_Optimized_InterfaceHandler*;
+using AMI_Accessor_Optimized_InterfaceHandler_var = TAO_Objref_Var_T<AMI_Accessor_Optimized_InterfaceHandler>;
+using AMI_Accessor_Optimized_InterfaceHandler_out = TAO_Objref_Out_T<AMI_Accessor_Optimized_InterfaceHandler>;
+
+#endif /* end #if !defined */
+
+class TAO_IDL_TEST_STUB_Export AMI_Accessor_Optimized_InterfaceHandler
+  : public virtual ::Messaging::ReplyHandler
+{
+public:
+  friend class TAO::Narrow_Utils<AMI_Accessor_Optimized_InterfaceHandler>;
+  using _ptr_type = AMI_Accessor_Optimized_InterfaceHandler_ptr;
+  using _var_type = AMI_Accessor_Optimized_InterfaceHandler_var;
+  using _out_type = AMI_Accessor_Optimized_InterfaceHandler_out;
+
+  static void _tao_any_destructor (void *);
+
+  // The static operations.
+  static AMI_Accessor_Optimized_InterfaceHandler_ptr _duplicate (AMI_Accessor_Optimized_InterfaceHandler_ptr obj);
+  static void _tao_release (AMI_Accessor_Optimized_InterfaceHandler_ptr obj);
+  static AMI_Accessor_Optimized_InterfaceHandler_ptr _narrow (::CORBA::Object_ptr obj);
+  static AMI_Accessor_Optimized_InterfaceHandler_ptr _unchecked_narrow (::CORBA::Object_ptr obj);
+  static AMI_Accessor_Optimized_InterfaceHandler_ptr _nil ();
+
+  ::CORBA::Boolean _is_a (char const *type_id) override;
+  char const *_interface_repository_id () const override;
+  static char const *_desc_repository_id ();
+  static char const *_desc_interface_name ();
+  ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
+
+protected:
+  // Concrete interface only.
+  AMI_Accessor_Optimized_InterfaceHandler ();
+
+  // Concrete non-local interface only.
+  AMI_Accessor_Optimized_InterfaceHandler (::IOP::IOR *ior, TAO_ORB_Core *orb_core);
+
+  // Non-local interface only.
+  AMI_Accessor_Optimized_InterfaceHandler (
+    TAO_Stub *objref,
+    ::CORBA::Boolean _tao_collocated = false,
+    TAO_Abstract_ServantBase *servant = nullptr,
+    TAO_ORB_Core *orb_core = nullptr);
+
+  ~AMI_Accessor_Optimized_InterfaceHandler () override = default;
+
+private:
+  AMI_Accessor_Optimized_InterfaceHandler (AMI_Accessor_Optimized_InterfaceHandler const &) = delete;
+  AMI_Accessor_Optimized_InterfaceHandler (AMI_Accessor_Optimized_InterfaceHandler &&) = delete;
+  AMI_Accessor_Optimized_InterfaceHandler &operator= (AMI_Accessor_Optimized_InterfaceHandler const &) = delete;
+  AMI_Accessor_Optimized_InterfaceHandler &operator= (AMI_Accessor_Optimized_InterfaceHandler &&) = delete;
+};
+extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_AMI_Accessor_Optimized_InterfaceHandler;
+
+#if !defined (_ACCESSOR_OPTIMIZED_SECOND_INTERFACE__VAR_OUT_CH_)
+#define _ACCESSOR_OPTIMIZED_SECOND_INTERFACE__VAR_OUT_CH_
+
+class AMI_Accessor_Optimized_Second_InterfaceHandler;
+using AMI_Accessor_Optimized_Second_InterfaceHandler_ptr = AMI_Accessor_Optimized_Second_InterfaceHandler *;
+
+class Accessor_Optimized_Second_Interface;
+using Accessor_Optimized_Second_Interface_ptr = Accessor_Optimized_Second_Interface*;
+using Accessor_Optimized_Second_Interface_var = TAO_Objref_Var_T<Accessor_Optimized_Second_Interface>;
+using Accessor_Optimized_Second_Interface_out = TAO_Objref_Out_T<Accessor_Optimized_Second_Interface>;
+
+#endif /* end #if !defined */
+
+class TAO_IDL_TEST_STUB_Export Accessor_Optimized_Second_Interface
+  : public virtual ::Accessor_Optimized_Interface
+{
+public:
+  friend class TAO::Narrow_Utils<Accessor_Optimized_Second_Interface>;
+  using _ptr_type = Accessor_Optimized_Second_Interface_ptr;
+  using _var_type = Accessor_Optimized_Second_Interface_var;
+  using _out_type = Accessor_Optimized_Second_Interface_out;
+
+  static void _tao_any_destructor (void *);
+
+  // The static operations.
+  static Accessor_Optimized_Second_Interface_ptr _duplicate (Accessor_Optimized_Second_Interface_ptr obj);
+  static void _tao_release (Accessor_Optimized_Second_Interface_ptr obj);
+  static Accessor_Optimized_Second_Interface_ptr _narrow (::CORBA::Object_ptr obj);
+  static Accessor_Optimized_Second_Interface_ptr _unchecked_narrow (::CORBA::Object_ptr obj);
+  static Accessor_Optimized_Second_Interface_ptr _nil ();
+
+  ::CORBA::Boolean _is_a (char const *type_id) override;
+  char const *_interface_repository_id () const override;
+  static char const *_desc_repository_id ();
+  static char const *_desc_interface_name ();
+  ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
+
+protected:
+  // Concrete interface only.
+  Accessor_Optimized_Second_Interface ();
+
+  // Concrete non-local interface only.
+  Accessor_Optimized_Second_Interface (::IOP::IOR *ior, TAO_ORB_Core *orb_core);
+
+  // Non-local interface only.
+  Accessor_Optimized_Second_Interface (
+    TAO_Stub *objref,
+    ::CORBA::Boolean _tao_collocated = false,
+    TAO_Abstract_ServantBase *servant = nullptr,
+    TAO_ORB_Core *orb_core = nullptr);
+
+  ~Accessor_Optimized_Second_Interface () override = default;
+
+private:
+  Accessor_Optimized_Second_Interface (Accessor_Optimized_Second_Interface const &) = delete;
+  Accessor_Optimized_Second_Interface (Accessor_Optimized_Second_Interface &&) = delete;
+  Accessor_Optimized_Second_Interface &operator= (Accessor_Optimized_Second_Interface const &) = delete;
+  Accessor_Optimized_Second_Interface &operator= (Accessor_Optimized_Second_Interface &&) = delete;
+};
+extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_Accessor_Optimized_Second_Interface;
+
+#if !defined (_AMH_ACCESSOR_OPTIMIZED_SECOND_INTERFACEEXCEPTIONHOLDER__VAR_OUT_CH_)
+#define _AMH_ACCESSOR_OPTIMIZED_SECOND_INTERFACEEXCEPTIONHOLDER__VAR_OUT_CH_
+
+class AMH_Accessor_Optimized_Second_InterfaceExceptionHolder;
+using AMH_Accessor_Optimized_Second_InterfaceExceptionHolder_var = TAO_Value_Var_T<AMH_Accessor_Optimized_Second_InterfaceExceptionHolder>;
+using AMH_Accessor_Optimized_Second_InterfaceExceptionHolder_out = TAO_Value_Out_T<AMH_Accessor_Optimized_Second_InterfaceExceptionHolder>;
+
+#endif /* end #if !defined */
+
+class TAO_IDL_TEST_STUB_Export AMH_Accessor_Optimized_Second_InterfaceExceptionHolder
+  : public virtual ::CORBA::DefaultValueRefCountBase
+{
+public:
+  using _ptr_type = AMH_Accessor_Optimized_Second_InterfaceExceptionHolder*;
+  using _var_type = AMH_Accessor_Optimized_Second_InterfaceExceptionHolder_var;
+  using _out_type = AMH_Accessor_Optimized_Second_InterfaceExceptionHolder_out;
+
+  static void _tao_any_destructor (void *);
+
+  AMH_Accessor_Optimized_Second_InterfaceExceptionHolder (::CORBA::Exception *ex)
+    : exception (ex)
+  {}
+
+  ~AMH_Accessor_Optimized_Second_InterfaceExceptionHolder () override;
+  ::CORBA::ValueBase *_copy_value () override;
+
+  static AMH_Accessor_Optimized_Second_InterfaceExceptionHolder* _downcast (::CORBA::ValueBase *v);
+
+  /// TAO extensions or internals
+  static ::CORBA::Boolean _tao_unmarshal (
+      TAO_InputCDR &strm,
+      AMH_Accessor_Optimized_Second_InterfaceExceptionHolder *&new_object);
+
+  char const * _tao_obv_repository_id () const override;
+
+  void _tao_obv_truncatable_repo_ids (Repository_Id_List &) const override;
+
+  static char const * _tao_obv_static_repository_id ();
+
+  ::CORBA::TypeCode_ptr _tao_type () const override;
+
+protected:
+  AMH_Accessor_Optimized_Second_InterfaceExceptionHolder ();
+  ::CORBA::Boolean _tao_marshal_v (TAO_OutputCDR &) const override;
+  ::CORBA::Boolean _tao_unmarshal_v (TAO_InputCDR &) override;
+  ::CORBA::Boolean _tao_match_formal_type (ptrdiff_t) const override;
+
+private:
+  AMH_Accessor_Optimized_Second_InterfaceExceptionHolder (AMH_Accessor_Optimized_Second_InterfaceExceptionHolder const &);
+  void operator= (AMH_Accessor_Optimized_Second_InterfaceExceptionHolder const &);
+
+  ::CORBA::Exception *exception;
+  friend class AMH_Accessor_Optimized_Second_InterfaceExceptionHolder_init;
+
+protected:
+  ::CORBA::Boolean _tao_marshal_state (TAO_OutputCDR &, TAO_ChunkInfo &) const;
+  ::CORBA::Boolean _tao_unmarshal_state (TAO_InputCDR &, TAO_ChunkInfo &);
+  void truncation_hook () override;
+
+private:
+
+  ::CORBA::Boolean require_truncation_ {false};
+};
+class TAO_IDL_TEST_STUB_Export AMH_Accessor_Optimized_Second_InterfaceExceptionHolder_init
+  : public virtual ::CORBA::ValueFactoryBase
+{
+public:
+  AMH_Accessor_Optimized_Second_InterfaceExceptionHolder_init ();
+
+  static AMH_Accessor_Optimized_Second_InterfaceExceptionHolder_init* _downcast (::CORBA::ValueFactoryBase *);
+
+  ::CORBA::ValueBase *create_for_unmarshal () override;
+
+  // TAO-specific extensions
+public:
+  virtual char const * tao_repository_id ();
+
+protected:
+  virtual ~AMH_Accessor_Optimized_Second_InterfaceExceptionHolder_init ();
+};
+extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_AMH_Accessor_Optimized_Second_InterfaceExceptionHolder;
+
+#if !defined (_AMH_ACCESSOR_OPTIMIZED_SECOND_INTERFACERESPONSEHANDLER__VAR_OUT_CH_)
+#define _AMH_ACCESSOR_OPTIMIZED_SECOND_INTERFACERESPONSEHANDLER__VAR_OUT_CH_
+
+class AMI_AMH_Accessor_Optimized_Second_InterfaceResponseHandlerHandler;
+using AMI_AMH_Accessor_Optimized_Second_InterfaceResponseHandlerHandler_ptr = AMI_AMH_Accessor_Optimized_Second_InterfaceResponseHandlerHandler *;
+
+class AMH_Accessor_Optimized_Second_InterfaceResponseHandler;
+using AMH_Accessor_Optimized_Second_InterfaceResponseHandler_ptr = AMH_Accessor_Optimized_Second_InterfaceResponseHandler*;
+using AMH_Accessor_Optimized_Second_InterfaceResponseHandler_var = TAO_Objref_Var_T<AMH_Accessor_Optimized_Second_InterfaceResponseHandler>;
+using AMH_Accessor_Optimized_Second_InterfaceResponseHandler_out = TAO_Objref_Out_T<AMH_Accessor_Optimized_Second_InterfaceResponseHandler>;
+
+#endif /* end #if !defined */
+
+class TAO_IDL_TEST_STUB_Export AMH_Accessor_Optimized_Second_InterfaceResponseHandler
+  : public virtual ::CORBA::Object
+{
+public:
+  using _ptr_type = AMH_Accessor_Optimized_Second_InterfaceResponseHandler_ptr;
+  using _var_type = AMH_Accessor_Optimized_Second_InterfaceResponseHandler_var;
+  using _out_type = AMH_Accessor_Optimized_Second_InterfaceResponseHandler_out;
+
+  static void _tao_any_destructor (void *);
+
+  // The static operations.
+  static AMH_Accessor_Optimized_Second_InterfaceResponseHandler_ptr _duplicate (AMH_Accessor_Optimized_Second_InterfaceResponseHandler_ptr obj);
+  static void _tao_release (AMH_Accessor_Optimized_Second_InterfaceResponseHandler_ptr obj);
+  static AMH_Accessor_Optimized_Second_InterfaceResponseHandler_ptr _narrow (::CORBA::Object_ptr obj);
+  static AMH_Accessor_Optimized_Second_InterfaceResponseHandler_ptr _unchecked_narrow (::CORBA::Object_ptr obj);
+  static AMH_Accessor_Optimized_Second_InterfaceResponseHandler_ptr _nil ();
+
+  ::CORBA::Boolean _is_a (char const *type_id) override;
+  char const *_interface_repository_id () const override;
+  static char const *_desc_repository_id ();
+  static char const *_desc_interface_name ();
+  ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
+
+protected:
+  // Abstract or local interface only.
+  AMH_Accessor_Optimized_Second_InterfaceResponseHandler ();
+
+  ~AMH_Accessor_Optimized_Second_InterfaceResponseHandler () override = default;
+
+private:
+  AMH_Accessor_Optimized_Second_InterfaceResponseHandler (AMH_Accessor_Optimized_Second_InterfaceResponseHandler const &) = delete;
+  AMH_Accessor_Optimized_Second_InterfaceResponseHandler (AMH_Accessor_Optimized_Second_InterfaceResponseHandler &&) = delete;
+  AMH_Accessor_Optimized_Second_InterfaceResponseHandler &operator= (AMH_Accessor_Optimized_Second_InterfaceResponseHandler const &) = delete;
+  AMH_Accessor_Optimized_Second_InterfaceResponseHandler &operator= (AMH_Accessor_Optimized_Second_InterfaceResponseHandler &&) = delete;
+};
+extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_AMH_Accessor_Optimized_Second_InterfaceResponseHandler;
+
+#if !defined (_AMI_ACCESSOR_OPTIMIZED_SECOND_INTERFACEHANDLER__VAR_OUT_CH_)
+#define _AMI_ACCESSOR_OPTIMIZED_SECOND_INTERFACEHANDLER__VAR_OUT_CH_
+
+class AMI_Accessor_Optimized_Second_InterfaceHandler;
+using AMI_Accessor_Optimized_Second_InterfaceHandler_ptr = AMI_Accessor_Optimized_Second_InterfaceHandler*;
+using AMI_Accessor_Optimized_Second_InterfaceHandler_var = TAO_Objref_Var_T<AMI_Accessor_Optimized_Second_InterfaceHandler>;
+using AMI_Accessor_Optimized_Second_InterfaceHandler_out = TAO_Objref_Out_T<AMI_Accessor_Optimized_Second_InterfaceHandler>;
+
+#endif /* end #if !defined */
+
+class TAO_IDL_TEST_STUB_Export AMI_Accessor_Optimized_Second_InterfaceHandler
+  : public virtual ::AMI_Accessor_Optimized_InterfaceHandler
+{
+public:
+  friend class TAO::Narrow_Utils<AMI_Accessor_Optimized_Second_InterfaceHandler>;
+  using _ptr_type = AMI_Accessor_Optimized_Second_InterfaceHandler_ptr;
+  using _var_type = AMI_Accessor_Optimized_Second_InterfaceHandler_var;
+  using _out_type = AMI_Accessor_Optimized_Second_InterfaceHandler_out;
+
+  static void _tao_any_destructor (void *);
+
+  // The static operations.
+  static AMI_Accessor_Optimized_Second_InterfaceHandler_ptr _duplicate (AMI_Accessor_Optimized_Second_InterfaceHandler_ptr obj);
+  static void _tao_release (AMI_Accessor_Optimized_Second_InterfaceHandler_ptr obj);
+  static AMI_Accessor_Optimized_Second_InterfaceHandler_ptr _narrow (::CORBA::Object_ptr obj);
+  static AMI_Accessor_Optimized_Second_InterfaceHandler_ptr _unchecked_narrow (::CORBA::Object_ptr obj);
+  static AMI_Accessor_Optimized_Second_InterfaceHandler_ptr _nil ();
+
+  ::CORBA::Boolean _is_a (char const *type_id) override;
+  char const *_interface_repository_id () const override;
+  static char const *_desc_repository_id ();
+  static char const *_desc_interface_name ();
+  ::CORBA::Boolean marshal (TAO_OutputCDR &cdr) override;
+
+protected:
+  // Concrete interface only.
+  AMI_Accessor_Optimized_Second_InterfaceHandler ();
+
+  // Concrete non-local interface only.
+  AMI_Accessor_Optimized_Second_InterfaceHandler (::IOP::IOR *ior, TAO_ORB_Core *orb_core);
+
+  // Non-local interface only.
+  AMI_Accessor_Optimized_Second_InterfaceHandler (
+    TAO_Stub *objref,
+    ::CORBA::Boolean _tao_collocated = false,
+    TAO_Abstract_ServantBase *servant = nullptr,
+    TAO_ORB_Core *orb_core = nullptr);
+
+  ~AMI_Accessor_Optimized_Second_InterfaceHandler () override = default;
+
+private:
+  AMI_Accessor_Optimized_Second_InterfaceHandler (AMI_Accessor_Optimized_Second_InterfaceHandler const &) = delete;
+  AMI_Accessor_Optimized_Second_InterfaceHandler (AMI_Accessor_Optimized_Second_InterfaceHandler &&) = delete;
+  AMI_Accessor_Optimized_Second_InterfaceHandler &operator= (AMI_Accessor_Optimized_Second_InterfaceHandler const &) = delete;
+  AMI_Accessor_Optimized_Second_InterfaceHandler &operator= (AMI_Accessor_Optimized_Second_InterfaceHandler &&) = delete;
+};
+extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_AMI_Accessor_Optimized_Second_InterfaceHandler;
+
+#if !defined (_ACCESSOR_OPTIMIZED_REFCOUNT_BASE__VAR_OUT_CH_)
+#define _ACCESSOR_OPTIMIZED_REFCOUNT_BASE__VAR_OUT_CH_
+
+class Accessor_Optimized_Refcount_Base;
+using Accessor_Optimized_Refcount_Base_var = TAO_Value_Var_T<Accessor_Optimized_Refcount_Base>;
+using Accessor_Optimized_Refcount_Base_out = TAO_Value_Out_T<Accessor_Optimized_Refcount_Base>;
+
+#endif /* end #if !defined */
+
+class TAO_IDL_TEST_STUB_Export Accessor_Optimized_Refcount_Base
+  : public virtual ::CORBA::ValueBase,
+    public virtual ::Accessor_Optimized_Interface,
+    public virtual ::CORBA::DefaultValueRefCountBase
+{
+public:
+  using _ptr_type = Accessor_Optimized_Refcount_Base*;
+  using _var_type = Accessor_Optimized_Refcount_Base_var;
+  using _out_type = Accessor_Optimized_Refcount_Base_out;
+
+  static void _tao_any_destructor (void *);
+
+  ::CORBA::ValueBase *_copy_value () override;
+
+  static Accessor_Optimized_Refcount_Base* _downcast (::CORBA::ValueBase *v);
+
+  /// TAO extensions or internals
+  static ::CORBA::Boolean _tao_unmarshal (
+      TAO_InputCDR &strm,
+      Accessor_Optimized_Refcount_Base *&new_object);
+
+  char const * _tao_obv_repository_id () const override;
+
+  void _tao_obv_truncatable_repo_ids (Repository_Id_List &) const override;
+
+  static char const * _tao_obv_static_repository_id ();
+
+  ::CORBA::TypeCode_ptr _tao_type () const override;
+
+public:
+  void base_value (::CORBA::Long const);
+  ::CORBA::Long base_value () const;
+
+public:
+
+  void _add_ref () override;
+  void _remove_ref () override;
+  ::CORBA::ValueBase *_tao_to_value ();
+
+protected:
+  Accessor_Optimized_Refcount_Base ();
+  ~Accessor_Optimized_Refcount_Base () override;
+
+  ::CORBA::Boolean _tao_marshal_v (TAO_OutputCDR &) const override;
+  ::CORBA::Boolean _tao_unmarshal_v (TAO_InputCDR &) override;
+  ::CORBA::Boolean _tao_match_formal_type (ptrdiff_t) const override;
+
+private:
+  Accessor_Optimized_Refcount_Base (Accessor_Optimized_Refcount_Base const &);
+  void operator= (Accessor_Optimized_Refcount_Base const &);
+  friend class Accessor_Optimized_Refcount_Base_init;
+
+protected:
+  ::CORBA::Boolean _tao_marshal_state (TAO_OutputCDR &, TAO_ChunkInfo &) const;
+  ::CORBA::Boolean _tao_unmarshal_state (TAO_InputCDR &, TAO_ChunkInfo &);
+  void truncation_hook () override;
+
+private:
+
+  ::CORBA::Long _pd_base_value {};
+  ::CORBA::Boolean require_truncation_ {false};
+};
+class TAO_IDL_TEST_STUB_Export Accessor_Optimized_Refcount_Base_init
+  : public virtual ::CORBA::ValueFactoryBase
+{
+public:
+  Accessor_Optimized_Refcount_Base_init ();
+
+  static Accessor_Optimized_Refcount_Base_init* _downcast (::CORBA::ValueFactoryBase *);
+
+  ::CORBA::ValueBase *create_for_unmarshal () override;
+
+  // TAO-specific extensions
+public:
+  virtual char const * tao_repository_id ();
+
+protected:
+  virtual ~Accessor_Optimized_Refcount_Base_init ();
+};
+extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_Accessor_Optimized_Refcount_Base;
+
+#if !defined (_ACCESSOR_OPTIMIZED_REFCOUNT_DERIVED__VAR_OUT_CH_)
+#define _ACCESSOR_OPTIMIZED_REFCOUNT_DERIVED__VAR_OUT_CH_
+
+class Accessor_Optimized_Refcount_Derived;
+using Accessor_Optimized_Refcount_Derived_var = TAO_Value_Var_T<Accessor_Optimized_Refcount_Derived>;
+using Accessor_Optimized_Refcount_Derived_out = TAO_Value_Out_T<Accessor_Optimized_Refcount_Derived>;
+
+#endif /* end #if !defined */
+
+class TAO_IDL_TEST_STUB_Export Accessor_Optimized_Refcount_Derived
+  : public virtual Accessor_Optimized_Refcount_Base
+{
+public:
+  using _ptr_type = Accessor_Optimized_Refcount_Derived*;
+  using _var_type = Accessor_Optimized_Refcount_Derived_var;
+  using _out_type = Accessor_Optimized_Refcount_Derived_out;
+
+  static void _tao_any_destructor (void *);
+
+  ::CORBA::ValueBase *_copy_value () override;
+
+  static Accessor_Optimized_Refcount_Derived* _downcast (::CORBA::ValueBase *v);
+
+  /// TAO extensions or internals
+  static ::CORBA::Boolean _tao_unmarshal (
+      TAO_InputCDR &strm,
+      Accessor_Optimized_Refcount_Derived *&new_object);
+
+  char const * _tao_obv_repository_id () const override;
+
+  void _tao_obv_truncatable_repo_ids (Repository_Id_List &) const override;
+
+  static char const * _tao_obv_static_repository_id ();
+
+  ::CORBA::TypeCode_ptr _tao_type () const override;
+
+public:
+  void derived_value (::CORBA::Long const);
+  ::CORBA::Long derived_value () const;
+
+public:
+
+  void _add_ref () override;
+  void _remove_ref () override;
+
+protected:
+  Accessor_Optimized_Refcount_Derived ();
+  ~Accessor_Optimized_Refcount_Derived () override;
+
+  ::CORBA::Boolean _tao_marshal_v (TAO_OutputCDR &) const override;
+  ::CORBA::Boolean _tao_unmarshal_v (TAO_InputCDR &) override;
+  ::CORBA::Boolean _tao_match_formal_type (ptrdiff_t) const override;
+
+private:
+  Accessor_Optimized_Refcount_Derived (Accessor_Optimized_Refcount_Derived const &);
+  void operator= (Accessor_Optimized_Refcount_Derived const &);
+  friend class Accessor_Optimized_Refcount_Derived_init;
+
+protected:
+  ::CORBA::Boolean _tao_marshal_state (TAO_OutputCDR &, TAO_ChunkInfo &) const;
+  ::CORBA::Boolean _tao_unmarshal_state (TAO_InputCDR &, TAO_ChunkInfo &);
+  void truncation_hook () override;
+
+private:
+
+  ::CORBA::Long _pd_derived_value {};
+  ::CORBA::Boolean require_truncation_ {false};
+};
+class TAO_IDL_TEST_STUB_Export Accessor_Optimized_Refcount_Derived_init
+  : public virtual ::CORBA::ValueFactoryBase
+{
+public:
+  Accessor_Optimized_Refcount_Derived_init ();
+
+  static Accessor_Optimized_Refcount_Derived_init* _downcast (::CORBA::ValueFactoryBase *);
+
+  ::CORBA::ValueBase *create_for_unmarshal () override;
+
+  // TAO-specific extensions
+public:
+  virtual char const * tao_repository_id ();
+
+protected:
+  virtual ~Accessor_Optimized_Refcount_Derived_init ();
+};
+extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_Accessor_Optimized_Refcount_Derived;
+
+#if !defined (_ACCESSOR_OPTIMIZED_REFCOUNT_MULTI_DERIVED__VAR_OUT_CH_)
+#define _ACCESSOR_OPTIMIZED_REFCOUNT_MULTI_DERIVED__VAR_OUT_CH_
+
+class Accessor_Optimized_Refcount_Multi_Derived;
+using Accessor_Optimized_Refcount_Multi_Derived_var = TAO_Value_Var_T<Accessor_Optimized_Refcount_Multi_Derived>;
+using Accessor_Optimized_Refcount_Multi_Derived_out = TAO_Value_Out_T<Accessor_Optimized_Refcount_Multi_Derived>;
+
+#endif /* end #if !defined */
+
+class TAO_IDL_TEST_STUB_Export Accessor_Optimized_Refcount_Multi_Derived
+  : public virtual Accessor_Optimized_Refcount_Base,
+    public virtual ::Accessor_Optimized_Second_Interface
+{
+public:
+  using _ptr_type = Accessor_Optimized_Refcount_Multi_Derived*;
+  using _var_type = Accessor_Optimized_Refcount_Multi_Derived_var;
+  using _out_type = Accessor_Optimized_Refcount_Multi_Derived_out;
+
+  static void _tao_any_destructor (void *);
+
+  ::CORBA::ValueBase *_copy_value () override;
+
+  static Accessor_Optimized_Refcount_Multi_Derived* _downcast (::CORBA::ValueBase *v);
+
+  /// TAO extensions or internals
+  static ::CORBA::Boolean _tao_unmarshal (
+      TAO_InputCDR &strm,
+      Accessor_Optimized_Refcount_Multi_Derived *&new_object);
+
+  char const * _tao_obv_repository_id () const override;
+
+  void _tao_obv_truncatable_repo_ids (Repository_Id_List &) const override;
+
+  static char const * _tao_obv_static_repository_id ();
+
+  ::CORBA::TypeCode_ptr _tao_type () const override;
+
+public:
+  void multi_derived_value (::CORBA::Long const);
+  ::CORBA::Long multi_derived_value () const;
+
+public:
+
+  void _add_ref () override;
+  void _remove_ref () override;
+  ::CORBA::ValueBase *_tao_to_value ();
+
+protected:
+  Accessor_Optimized_Refcount_Multi_Derived ();
+  ~Accessor_Optimized_Refcount_Multi_Derived () override;
+
+  ::CORBA::Boolean _tao_marshal_v (TAO_OutputCDR &) const override;
+  ::CORBA::Boolean _tao_unmarshal_v (TAO_InputCDR &) override;
+  ::CORBA::Boolean _tao_match_formal_type (ptrdiff_t) const override;
+
+private:
+  Accessor_Optimized_Refcount_Multi_Derived (Accessor_Optimized_Refcount_Multi_Derived const &);
+  void operator= (Accessor_Optimized_Refcount_Multi_Derived const &);
+  friend class Accessor_Optimized_Refcount_Multi_Derived_init;
+
+protected:
+  ::CORBA::Boolean _tao_marshal_state (TAO_OutputCDR &, TAO_ChunkInfo &) const;
+  ::CORBA::Boolean _tao_unmarshal_state (TAO_InputCDR &, TAO_ChunkInfo &);
+  void truncation_hook () override;
+
+private:
+
+  ::CORBA::Long _pd_multi_derived_value {};
+  ::CORBA::Boolean require_truncation_ {false};
+};
+class TAO_IDL_TEST_STUB_Export Accessor_Optimized_Refcount_Multi_Derived_init
+  : public virtual ::CORBA::ValueFactoryBase
+{
+public:
+  Accessor_Optimized_Refcount_Multi_Derived_init ();
+
+  static Accessor_Optimized_Refcount_Multi_Derived_init* _downcast (::CORBA::ValueFactoryBase *);
+
+  ::CORBA::ValueBase *create_for_unmarshal () override;
+
+  // TAO-specific extensions
+public:
+  virtual char const * tao_repository_id ();
+
+protected:
+  virtual ~Accessor_Optimized_Refcount_Multi_Derived_init ();
+};
+extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_Accessor_Optimized_Refcount_Multi_Derived;
+
+#if !defined (_ACCESSOR_OPTIMIZED_REFCOUNT_PARENT__VAR_OUT_CH_)
+#define _ACCESSOR_OPTIMIZED_REFCOUNT_PARENT__VAR_OUT_CH_
+
+class Accessor_Optimized_Refcount_Parent;
+using Accessor_Optimized_Refcount_Parent_var = TAO_Value_Var_T<Accessor_Optimized_Refcount_Parent>;
+using Accessor_Optimized_Refcount_Parent_out = TAO_Value_Out_T<Accessor_Optimized_Refcount_Parent>;
+
+#endif /* end #if !defined */
+
+class TAO_IDL_TEST_STUB_Export Accessor_Optimized_Refcount_Parent
+  : public virtual ::CORBA::ValueBase,
+    public virtual ::CORBA::DefaultValueRefCountBase
+{
+public:
+  using _ptr_type = Accessor_Optimized_Refcount_Parent*;
+  using _var_type = Accessor_Optimized_Refcount_Parent_var;
+  using _out_type = Accessor_Optimized_Refcount_Parent_out;
+
+  static void _tao_any_destructor (void *);
+
+  ::CORBA::ValueBase *_copy_value () override;
+
+  static Accessor_Optimized_Refcount_Parent* _downcast (::CORBA::ValueBase *v);
+
+  /// TAO extensions or internals
+  static ::CORBA::Boolean _tao_unmarshal (
+      TAO_InputCDR &strm,
+      Accessor_Optimized_Refcount_Parent *&new_object);
+
+  char const * _tao_obv_repository_id () const override;
+
+  void _tao_obv_truncatable_repo_ids (Repository_Id_List &) const override;
+
+  static char const * _tao_obv_static_repository_id ();
+
+  ::CORBA::TypeCode_ptr _tao_type () const override;
+
+public:
+  void parent_value (::CORBA::Long const);
+  ::CORBA::Long parent_value () const;
+
+protected:
+  Accessor_Optimized_Refcount_Parent ();
+  ~Accessor_Optimized_Refcount_Parent () override;
+
+  ::CORBA::Boolean _tao_marshal_v (TAO_OutputCDR &) const override;
+  ::CORBA::Boolean _tao_unmarshal_v (TAO_InputCDR &) override;
+  ::CORBA::Boolean _tao_match_formal_type (ptrdiff_t) const override;
+
+private:
+  Accessor_Optimized_Refcount_Parent (Accessor_Optimized_Refcount_Parent const &);
+  void operator= (Accessor_Optimized_Refcount_Parent const &);
+  friend class Accessor_Optimized_Refcount_Parent_init;
+
+protected:
+  ::CORBA::Boolean _tao_marshal_state (TAO_OutputCDR &, TAO_ChunkInfo &) const;
+  ::CORBA::Boolean _tao_unmarshal_state (TAO_InputCDR &, TAO_ChunkInfo &);
+  void truncation_hook () override;
+
+private:
+
+  ::CORBA::Long _pd_parent_value {};
+  ::CORBA::Boolean require_truncation_ {false};
+};
+class TAO_IDL_TEST_STUB_Export Accessor_Optimized_Refcount_Parent_init
+  : public virtual ::CORBA::ValueFactoryBase
+{
+public:
+  Accessor_Optimized_Refcount_Parent_init ();
+
+  static Accessor_Optimized_Refcount_Parent_init* _downcast (::CORBA::ValueFactoryBase *);
+
+  ::CORBA::ValueBase *create_for_unmarshal () override;
+
+  // TAO-specific extensions
+public:
+  virtual char const * tao_repository_id ();
+
+protected:
+  virtual ~Accessor_Optimized_Refcount_Parent_init ();
+};
+extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_Accessor_Optimized_Refcount_Parent;
+
+#if !defined (_ACCESSOR_OPTIMIZED_REFCOUNT_INHERITED__VAR_OUT_CH_)
+#define _ACCESSOR_OPTIMIZED_REFCOUNT_INHERITED__VAR_OUT_CH_
+
+class Accessor_Optimized_Refcount_Inherited;
+using Accessor_Optimized_Refcount_Inherited_var = TAO_Value_Var_T<Accessor_Optimized_Refcount_Inherited>;
+using Accessor_Optimized_Refcount_Inherited_out = TAO_Value_Out_T<Accessor_Optimized_Refcount_Inherited>;
+
+#endif /* end #if !defined */
+
+class TAO_IDL_TEST_STUB_Export Accessor_Optimized_Refcount_Inherited
+  : public virtual Accessor_Optimized_Refcount_Parent,
+    public virtual ::Accessor_Optimized_Interface
+{
+public:
+  using _ptr_type = Accessor_Optimized_Refcount_Inherited*;
+  using _var_type = Accessor_Optimized_Refcount_Inherited_var;
+  using _out_type = Accessor_Optimized_Refcount_Inherited_out;
+
+  static void _tao_any_destructor (void *);
+
+  ::CORBA::ValueBase *_copy_value () override;
+
+  static Accessor_Optimized_Refcount_Inherited* _downcast (::CORBA::ValueBase *v);
+
+  /// TAO extensions or internals
+  static ::CORBA::Boolean _tao_unmarshal (
+      TAO_InputCDR &strm,
+      Accessor_Optimized_Refcount_Inherited *&new_object);
+
+  char const * _tao_obv_repository_id () const override;
+
+  void _tao_obv_truncatable_repo_ids (Repository_Id_List &) const override;
+
+  static char const * _tao_obv_static_repository_id ();
+
+  ::CORBA::TypeCode_ptr _tao_type () const override;
+
+public:
+  void inherited_value (::CORBA::Long const);
+  ::CORBA::Long inherited_value () const;
+
+public:
+
+  void _add_ref () override;
+  void _remove_ref () override;
+  ::CORBA::ValueBase *_tao_to_value ();
+
+protected:
+  Accessor_Optimized_Refcount_Inherited ();
+  ~Accessor_Optimized_Refcount_Inherited () override;
+
+  ::CORBA::Boolean _tao_marshal_v (TAO_OutputCDR &) const override;
+  ::CORBA::Boolean _tao_unmarshal_v (TAO_InputCDR &) override;
+  ::CORBA::Boolean _tao_match_formal_type (ptrdiff_t) const override;
+
+private:
+  Accessor_Optimized_Refcount_Inherited (Accessor_Optimized_Refcount_Inherited const &);
+  void operator= (Accessor_Optimized_Refcount_Inherited const &);
+  friend class Accessor_Optimized_Refcount_Inherited_init;
+
+protected:
+  ::CORBA::Boolean _tao_marshal_state (TAO_OutputCDR &, TAO_ChunkInfo &) const;
+  ::CORBA::Boolean _tao_unmarshal_state (TAO_InputCDR &, TAO_ChunkInfo &);
+  void truncation_hook () override;
+
+private:
+
+  ::CORBA::Long _pd_inherited_value {};
+  ::CORBA::Boolean require_truncation_ {false};
+};
+class TAO_IDL_TEST_STUB_Export Accessor_Optimized_Refcount_Inherited_init
+  : public virtual ::CORBA::ValueFactoryBase
+{
+public:
+  Accessor_Optimized_Refcount_Inherited_init ();
+
+  static Accessor_Optimized_Refcount_Inherited_init* _downcast (::CORBA::ValueFactoryBase *);
+
+  ::CORBA::ValueBase *create_for_unmarshal () override;
+
+  // TAO-specific extensions
+public:
+  virtual char const * tao_repository_id ();
+
+protected:
+  virtual ~Accessor_Optimized_Refcount_Inherited_init ();
+};
+extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_Accessor_Optimized_Refcount_Inherited;
+
+#if !defined (_ACCESSOR_OPTIMIZED_BASE__VAR_OUT_CH_)
+#define _ACCESSOR_OPTIMIZED_BASE__VAR_OUT_CH_
+
+class Accessor_Optimized_Base;
+using Accessor_Optimized_Base_var = TAO_Value_Var_T<Accessor_Optimized_Base>;
+using Accessor_Optimized_Base_out = TAO_Value_Out_T<Accessor_Optimized_Base>;
+
+#endif /* end #if !defined */
+
+class TAO_IDL_TEST_STUB_Export Accessor_Optimized_Base
+  : public virtual ::CORBA::ValueBase
+{
+public:
+  using _ptr_type = Accessor_Optimized_Base*;
+  using _var_type = Accessor_Optimized_Base_var;
+  using _out_type = Accessor_Optimized_Base_out;
+
+  static void _tao_any_destructor (void *);
+
+  static Accessor_Optimized_Base* _downcast (::CORBA::ValueBase *v);
+
+  /// TAO extensions or internals
+  static ::CORBA::Boolean _tao_unmarshal (
+      TAO_InputCDR &strm,
+      Accessor_Optimized_Base *&new_object);
+
+  char const * _tao_obv_repository_id () const override;
+
+  void _tao_obv_truncatable_repo_ids (Repository_Id_List &) const override;
+
+  static char const * _tao_obv_static_repository_id ();
+
+  ::CORBA::TypeCode_ptr _tao_type () const override;
+
+public:
+  void value (::CORBA::Long const);
+  ::CORBA::Long value () const;
+
+public:
+
+protected:
+  Accessor_Optimized_Base ();
+  ~Accessor_Optimized_Base () override;
+
+  ::CORBA::Boolean _tao_marshal_v (TAO_OutputCDR &) const override;
+  ::CORBA::Boolean _tao_unmarshal_v (TAO_InputCDR &) override;
+  ::CORBA::Boolean _tao_match_formal_type (ptrdiff_t) const override;
+
+private:
+  Accessor_Optimized_Base (Accessor_Optimized_Base const &);
+  void operator= (Accessor_Optimized_Base const &);
+
+protected:
+  ::CORBA::Boolean _tao_marshal_state (TAO_OutputCDR &, TAO_ChunkInfo &) const;
+  ::CORBA::Boolean _tao_unmarshal_state (TAO_InputCDR &, TAO_ChunkInfo &);
+  void truncation_hook () override;
+
+private:
+
+  ::CORBA::Long _pd_value {};
+  ::CORBA::Boolean require_truncation_ {false};
+};
+class TAO_IDL_TEST_STUB_Export Accessor_Optimized_Base_init
+  : public virtual ::CORBA::ValueFactoryBase
+{
+public:
+
+  virtual Accessor_Optimized_Base* create () = 0;
+
+  static Accessor_Optimized_Base_init* _downcast (::CORBA::ValueFactoryBase *);
+
+  // TAO-specific extensions
+public:
+  virtual char const * tao_repository_id ();
+
+protected:
+  Accessor_Optimized_Base_init ();
+
+protected:
+  virtual ~Accessor_Optimized_Base_init ();
+};
+extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_Accessor_Optimized_Base;
+
+#if !defined (_ACCESSOR_OPTIMIZED_FACTORY_DERIVED__VAR_OUT_CH_)
+#define _ACCESSOR_OPTIMIZED_FACTORY_DERIVED__VAR_OUT_CH_
+
+class Accessor_Optimized_Factory_Derived;
+using Accessor_Optimized_Factory_Derived_var = TAO_Value_Var_T<Accessor_Optimized_Factory_Derived>;
+using Accessor_Optimized_Factory_Derived_out = TAO_Value_Out_T<Accessor_Optimized_Factory_Derived>;
+
+#endif /* end #if !defined */
+
+class TAO_IDL_TEST_STUB_Export Accessor_Optimized_Factory_Derived
+  : public virtual Accessor_Optimized_Base
+{
+public:
+  using _ptr_type = Accessor_Optimized_Factory_Derived*;
+  using _var_type = Accessor_Optimized_Factory_Derived_var;
+  using _out_type = Accessor_Optimized_Factory_Derived_out;
+
+  static void _tao_any_destructor (void *);
+
+  static Accessor_Optimized_Factory_Derived* _downcast (::CORBA::ValueBase *v);
+
+  /// TAO extensions or internals
+  static ::CORBA::Boolean _tao_unmarshal (
+      TAO_InputCDR &strm,
+      Accessor_Optimized_Factory_Derived *&new_object);
+
+  char const * _tao_obv_repository_id () const override;
+
+  void _tao_obv_truncatable_repo_ids (Repository_Id_List &) const override;
+
+  static char const * _tao_obv_static_repository_id ();
+
+  ::CORBA::TypeCode_ptr _tao_type () const override;
+
+public:
+
+public:
+  virtual void op () = 0;
+
+protected:
+  Accessor_Optimized_Factory_Derived ();
+  ~Accessor_Optimized_Factory_Derived () override;
+
+  ::CORBA::Boolean _tao_marshal_v (TAO_OutputCDR &) const override;
+  ::CORBA::Boolean _tao_unmarshal_v (TAO_InputCDR &) override;
+  ::CORBA::Boolean _tao_match_formal_type (ptrdiff_t) const override;
+
+private:
+  Accessor_Optimized_Factory_Derived (Accessor_Optimized_Factory_Derived const &);
+  void operator= (Accessor_Optimized_Factory_Derived const &);
+
+protected:
+  ::CORBA::Boolean _tao_marshal_state (TAO_OutputCDR &, TAO_ChunkInfo &) const;
+  ::CORBA::Boolean _tao_unmarshal_state (TAO_InputCDR &, TAO_ChunkInfo &);
+  void truncation_hook () override;
+
+private:
+
+  ::CORBA::Boolean require_truncation_ {false};
+};
+extern TAO_IDL_TEST_STUB_Export ::CORBA::TypeCode_ptr const _tc_Accessor_Optimized_Factory_Derived;
+
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 // Arg traits specializations.
@@ -389,6 +1546,250 @@ namespace TAO
   };
 
 #endif /* end #if !defined */
+
+#if !defined (_ACCESSOR_OPTIMIZED_OPERATION_DERIVED__ARG_TRAITS_)
+#define _ACCESSOR_OPTIMIZED_OPERATION_DERIVED__ARG_TRAITS_
+
+  template<>
+  class Arg_Traits<::Accessor_Optimized_Operation_Derived>
+    : public
+        Object_Arg_Traits_T<
+            ::Accessor_Optimized_Operation_Derived *,
+            ::Accessor_Optimized_Operation_Derived_var,
+            ::Accessor_Optimized_Operation_Derived_out,
+            TAO::Value_Traits<Accessor_Optimized_Operation_Derived>,
+            TAO::Any_Insert_Policy_Stream
+          >
+  {
+  };
+
+#endif /* end #if !defined */
+
+#if !defined (_ACCESSOR_OPTIMIZED_INTERFACE__ARG_TRAITS_)
+#define _ACCESSOR_OPTIMIZED_INTERFACE__ARG_TRAITS_
+
+  template<>
+  class  Arg_Traits<::Accessor_Optimized_Interface>
+    : public Object_Arg_Traits_T<
+        ::Accessor_Optimized_Interface_ptr,
+        ::Accessor_Optimized_Interface_var,
+        ::Accessor_Optimized_Interface_out,
+        TAO::Objref_Traits<Accessor_Optimized_Interface>,
+        TAO::Any_Insert_Policy_Stream>
+  {
+  };
+
+#endif /* end #if !defined */
+
+#if !defined (_AMH_ACCESSOR_OPTIMIZED_INTERFACEEXCEPTIONHOLDER__ARG_TRAITS_)
+#define _AMH_ACCESSOR_OPTIMIZED_INTERFACEEXCEPTIONHOLDER__ARG_TRAITS_
+
+  template<>
+  class Arg_Traits<::AMH_Accessor_Optimized_InterfaceExceptionHolder>
+    : public
+        Object_Arg_Traits_T<
+            ::AMH_Accessor_Optimized_InterfaceExceptionHolder *,
+            ::AMH_Accessor_Optimized_InterfaceExceptionHolder_var,
+            ::AMH_Accessor_Optimized_InterfaceExceptionHolder_out,
+            TAO::Value_Traits<AMH_Accessor_Optimized_InterfaceExceptionHolder>,
+            TAO::Any_Insert_Policy_Stream
+          >
+  {
+  };
+
+#endif /* end #if !defined */
+
+#if !defined (_AMI_ACCESSOR_OPTIMIZED_INTERFACEHANDLER__ARG_TRAITS_)
+#define _AMI_ACCESSOR_OPTIMIZED_INTERFACEHANDLER__ARG_TRAITS_
+
+  template<>
+  class  Arg_Traits<::AMI_Accessor_Optimized_InterfaceHandler>
+    : public Object_Arg_Traits_T<
+        ::AMI_Accessor_Optimized_InterfaceHandler_ptr,
+        ::AMI_Accessor_Optimized_InterfaceHandler_var,
+        ::AMI_Accessor_Optimized_InterfaceHandler_out,
+        TAO::Objref_Traits<AMI_Accessor_Optimized_InterfaceHandler>,
+        TAO::Any_Insert_Policy_Stream>
+  {
+  };
+
+#endif /* end #if !defined */
+
+#if !defined (_ACCESSOR_OPTIMIZED_SECOND_INTERFACE__ARG_TRAITS_)
+#define _ACCESSOR_OPTIMIZED_SECOND_INTERFACE__ARG_TRAITS_
+
+  template<>
+  class  Arg_Traits<::Accessor_Optimized_Second_Interface>
+    : public Object_Arg_Traits_T<
+        ::Accessor_Optimized_Second_Interface_ptr,
+        ::Accessor_Optimized_Second_Interface_var,
+        ::Accessor_Optimized_Second_Interface_out,
+        TAO::Objref_Traits<Accessor_Optimized_Second_Interface>,
+        TAO::Any_Insert_Policy_Stream>
+  {
+  };
+
+#endif /* end #if !defined */
+
+#if !defined (_AMH_ACCESSOR_OPTIMIZED_SECOND_INTERFACEEXCEPTIONHOLDER__ARG_TRAITS_)
+#define _AMH_ACCESSOR_OPTIMIZED_SECOND_INTERFACEEXCEPTIONHOLDER__ARG_TRAITS_
+
+  template<>
+  class Arg_Traits<::AMH_Accessor_Optimized_Second_InterfaceExceptionHolder>
+    : public
+        Object_Arg_Traits_T<
+            ::AMH_Accessor_Optimized_Second_InterfaceExceptionHolder *,
+            ::AMH_Accessor_Optimized_Second_InterfaceExceptionHolder_var,
+            ::AMH_Accessor_Optimized_Second_InterfaceExceptionHolder_out,
+            TAO::Value_Traits<AMH_Accessor_Optimized_Second_InterfaceExceptionHolder>,
+            TAO::Any_Insert_Policy_Stream
+          >
+  {
+  };
+
+#endif /* end #if !defined */
+
+#if !defined (_AMI_ACCESSOR_OPTIMIZED_SECOND_INTERFACEHANDLER__ARG_TRAITS_)
+#define _AMI_ACCESSOR_OPTIMIZED_SECOND_INTERFACEHANDLER__ARG_TRAITS_
+
+  template<>
+  class  Arg_Traits<::AMI_Accessor_Optimized_Second_InterfaceHandler>
+    : public Object_Arg_Traits_T<
+        ::AMI_Accessor_Optimized_Second_InterfaceHandler_ptr,
+        ::AMI_Accessor_Optimized_Second_InterfaceHandler_var,
+        ::AMI_Accessor_Optimized_Second_InterfaceHandler_out,
+        TAO::Objref_Traits<AMI_Accessor_Optimized_Second_InterfaceHandler>,
+        TAO::Any_Insert_Policy_Stream>
+  {
+  };
+
+#endif /* end #if !defined */
+
+#if !defined (_ACCESSOR_OPTIMIZED_REFCOUNT_BASE__ARG_TRAITS_)
+#define _ACCESSOR_OPTIMIZED_REFCOUNT_BASE__ARG_TRAITS_
+
+  template<>
+  class Arg_Traits<::Accessor_Optimized_Refcount_Base>
+    : public
+        Object_Arg_Traits_T<
+            ::Accessor_Optimized_Refcount_Base *,
+            ::Accessor_Optimized_Refcount_Base_var,
+            ::Accessor_Optimized_Refcount_Base_out,
+            TAO::Value_Traits<Accessor_Optimized_Refcount_Base>,
+            TAO::Any_Insert_Policy_Stream
+          >
+  {
+  };
+
+#endif /* end #if !defined */
+
+#if !defined (_ACCESSOR_OPTIMIZED_REFCOUNT_DERIVED__ARG_TRAITS_)
+#define _ACCESSOR_OPTIMIZED_REFCOUNT_DERIVED__ARG_TRAITS_
+
+  template<>
+  class Arg_Traits<::Accessor_Optimized_Refcount_Derived>
+    : public
+        Object_Arg_Traits_T<
+            ::Accessor_Optimized_Refcount_Derived *,
+            ::Accessor_Optimized_Refcount_Derived_var,
+            ::Accessor_Optimized_Refcount_Derived_out,
+            TAO::Value_Traits<Accessor_Optimized_Refcount_Derived>,
+            TAO::Any_Insert_Policy_Stream
+          >
+  {
+  };
+
+#endif /* end #if !defined */
+
+#if !defined (_ACCESSOR_OPTIMIZED_REFCOUNT_MULTI_DERIVED__ARG_TRAITS_)
+#define _ACCESSOR_OPTIMIZED_REFCOUNT_MULTI_DERIVED__ARG_TRAITS_
+
+  template<>
+  class Arg_Traits<::Accessor_Optimized_Refcount_Multi_Derived>
+    : public
+        Object_Arg_Traits_T<
+            ::Accessor_Optimized_Refcount_Multi_Derived *,
+            ::Accessor_Optimized_Refcount_Multi_Derived_var,
+            ::Accessor_Optimized_Refcount_Multi_Derived_out,
+            TAO::Value_Traits<Accessor_Optimized_Refcount_Multi_Derived>,
+            TAO::Any_Insert_Policy_Stream
+          >
+  {
+  };
+
+#endif /* end #if !defined */
+
+#if !defined (_ACCESSOR_OPTIMIZED_REFCOUNT_PARENT__ARG_TRAITS_)
+#define _ACCESSOR_OPTIMIZED_REFCOUNT_PARENT__ARG_TRAITS_
+
+  template<>
+  class Arg_Traits<::Accessor_Optimized_Refcount_Parent>
+    : public
+        Object_Arg_Traits_T<
+            ::Accessor_Optimized_Refcount_Parent *,
+            ::Accessor_Optimized_Refcount_Parent_var,
+            ::Accessor_Optimized_Refcount_Parent_out,
+            TAO::Value_Traits<Accessor_Optimized_Refcount_Parent>,
+            TAO::Any_Insert_Policy_Stream
+          >
+  {
+  };
+
+#endif /* end #if !defined */
+
+#if !defined (_ACCESSOR_OPTIMIZED_REFCOUNT_INHERITED__ARG_TRAITS_)
+#define _ACCESSOR_OPTIMIZED_REFCOUNT_INHERITED__ARG_TRAITS_
+
+  template<>
+  class Arg_Traits<::Accessor_Optimized_Refcount_Inherited>
+    : public
+        Object_Arg_Traits_T<
+            ::Accessor_Optimized_Refcount_Inherited *,
+            ::Accessor_Optimized_Refcount_Inherited_var,
+            ::Accessor_Optimized_Refcount_Inherited_out,
+            TAO::Value_Traits<Accessor_Optimized_Refcount_Inherited>,
+            TAO::Any_Insert_Policy_Stream
+          >
+  {
+  };
+
+#endif /* end #if !defined */
+
+#if !defined (_ACCESSOR_OPTIMIZED_BASE__ARG_TRAITS_)
+#define _ACCESSOR_OPTIMIZED_BASE__ARG_TRAITS_
+
+  template<>
+  class Arg_Traits<::Accessor_Optimized_Base>
+    : public
+        Object_Arg_Traits_T<
+            ::Accessor_Optimized_Base *,
+            ::Accessor_Optimized_Base_var,
+            ::Accessor_Optimized_Base_out,
+            TAO::Value_Traits<Accessor_Optimized_Base>,
+            TAO::Any_Insert_Policy_Stream
+          >
+  {
+  };
+
+#endif /* end #if !defined */
+
+#if !defined (_ACCESSOR_OPTIMIZED_FACTORY_DERIVED__ARG_TRAITS_)
+#define _ACCESSOR_OPTIMIZED_FACTORY_DERIVED__ARG_TRAITS_
+
+  template<>
+  class Arg_Traits<::Accessor_Optimized_Factory_Derived>
+    : public
+        Object_Arg_Traits_T<
+            ::Accessor_Optimized_Factory_Derived *,
+            ::Accessor_Optimized_Factory_Derived_var,
+            ::Accessor_Optimized_Factory_Derived_out,
+            TAO::Value_Traits<Accessor_Optimized_Factory_Derived>,
+            TAO::Any_Insert_Policy_Stream
+          >
+  {
+  };
+
+#endif /* end #if !defined */
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
@@ -398,6 +1799,26 @@ using OBV_Accessor_Optimized_Leaf = Accessor_Optimized_Leaf;
 using OBV_Accessor_Optimized_Value = Accessor_Optimized_Value;
 
 using OBV_Accessor_Optimized_Derived = Accessor_Optimized_Derived;
+
+using OBV_Accessor_Optimized_Operation_Derived = Accessor_Optimized_Operation_Derived;
+
+using OBV_AMH_Accessor_Optimized_InterfaceExceptionHolder = AMH_Accessor_Optimized_InterfaceExceptionHolder;
+
+using OBV_AMH_Accessor_Optimized_Second_InterfaceExceptionHolder = AMH_Accessor_Optimized_Second_InterfaceExceptionHolder;
+
+using OBV_Accessor_Optimized_Refcount_Base = Accessor_Optimized_Refcount_Base;
+
+using OBV_Accessor_Optimized_Refcount_Derived = Accessor_Optimized_Refcount_Derived;
+
+using OBV_Accessor_Optimized_Refcount_Multi_Derived = Accessor_Optimized_Refcount_Multi_Derived;
+
+using OBV_Accessor_Optimized_Refcount_Parent = Accessor_Optimized_Refcount_Parent;
+
+using OBV_Accessor_Optimized_Refcount_Inherited = Accessor_Optimized_Refcount_Inherited;
+
+using OBV_Accessor_Optimized_Base = Accessor_Optimized_Base;
+
+using OBV_Accessor_Optimized_Factory_Derived = Accessor_Optimized_Factory_Derived;
 
 TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
@@ -443,6 +1864,220 @@ namespace TAO
   };
 
 #endif /* end #if !defined */
+
+#if !defined (_ACCESSOR_OPTIMIZED_OPERATION_DERIVED__TRAITS_)
+#define _ACCESSOR_OPTIMIZED_OPERATION_DERIVED__TRAITS_
+
+  template<>
+  struct TAO_IDL_TEST_STUB_Export Value_Traits<Accessor_Optimized_Operation_Derived>
+  {
+    static void add_ref (Accessor_Optimized_Operation_Derived *);
+    static void remove_ref (Accessor_Optimized_Operation_Derived *);
+    static void release (Accessor_Optimized_Operation_Derived *);
+  };
+
+#endif /* end #if !defined */
+
+#if !defined (_ACCESSOR_OPTIMIZED_INTERFACE__TRAITS_)
+#define _ACCESSOR_OPTIMIZED_INTERFACE__TRAITS_
+
+  template<>
+  struct TAO_IDL_TEST_STUB_Export Objref_Traits<::Accessor_Optimized_Interface>
+  {
+    static ::Accessor_Optimized_Interface_ptr duplicate (::Accessor_Optimized_Interface_ptr p);
+    static void release (::Accessor_Optimized_Interface_ptr p);
+    static ::Accessor_Optimized_Interface_ptr nil ();
+    static ::CORBA::Boolean marshal (const ::Accessor_Optimized_Interface_ptr p,TAO_OutputCDR & cdr);
+  };
+
+#endif /* end #if !defined */
+
+#if !defined (_AMH_ACCESSOR_OPTIMIZED_INTERFACEEXCEPTIONHOLDER__TRAITS_)
+#define _AMH_ACCESSOR_OPTIMIZED_INTERFACEEXCEPTIONHOLDER__TRAITS_
+
+  template<>
+  struct TAO_IDL_TEST_STUB_Export Value_Traits<AMH_Accessor_Optimized_InterfaceExceptionHolder>
+  {
+    static void add_ref (AMH_Accessor_Optimized_InterfaceExceptionHolder *);
+    static void remove_ref (AMH_Accessor_Optimized_InterfaceExceptionHolder *);
+    static void release (AMH_Accessor_Optimized_InterfaceExceptionHolder *);
+  };
+
+#endif /* end #if !defined */
+
+#if !defined (_AMH_ACCESSOR_OPTIMIZED_INTERFACERESPONSEHANDLER__TRAITS_)
+#define _AMH_ACCESSOR_OPTIMIZED_INTERFACERESPONSEHANDLER__TRAITS_
+
+  template<>
+  struct TAO_IDL_TEST_STUB_Export Objref_Traits<::AMH_Accessor_Optimized_InterfaceResponseHandler>
+  {
+    static ::AMH_Accessor_Optimized_InterfaceResponseHandler_ptr duplicate (::AMH_Accessor_Optimized_InterfaceResponseHandler_ptr p);
+    static void release (::AMH_Accessor_Optimized_InterfaceResponseHandler_ptr p);
+    static ::AMH_Accessor_Optimized_InterfaceResponseHandler_ptr nil ();
+    static ::CORBA::Boolean marshal (const ::AMH_Accessor_Optimized_InterfaceResponseHandler_ptr p,TAO_OutputCDR & cdr);
+  };
+
+#endif /* end #if !defined */
+
+#if !defined (_AMI_ACCESSOR_OPTIMIZED_INTERFACEHANDLER__TRAITS_)
+#define _AMI_ACCESSOR_OPTIMIZED_INTERFACEHANDLER__TRAITS_
+
+  template<>
+  struct TAO_IDL_TEST_STUB_Export Objref_Traits<::AMI_Accessor_Optimized_InterfaceHandler>
+  {
+    static ::AMI_Accessor_Optimized_InterfaceHandler_ptr duplicate (::AMI_Accessor_Optimized_InterfaceHandler_ptr p);
+    static void release (::AMI_Accessor_Optimized_InterfaceHandler_ptr p);
+    static ::AMI_Accessor_Optimized_InterfaceHandler_ptr nil ();
+    static ::CORBA::Boolean marshal (const ::AMI_Accessor_Optimized_InterfaceHandler_ptr p,TAO_OutputCDR & cdr);
+  };
+
+#endif /* end #if !defined */
+
+#if !defined (_ACCESSOR_OPTIMIZED_SECOND_INTERFACE__TRAITS_)
+#define _ACCESSOR_OPTIMIZED_SECOND_INTERFACE__TRAITS_
+
+  template<>
+  struct TAO_IDL_TEST_STUB_Export Objref_Traits<::Accessor_Optimized_Second_Interface>
+  {
+    static ::Accessor_Optimized_Second_Interface_ptr duplicate (::Accessor_Optimized_Second_Interface_ptr p);
+    static void release (::Accessor_Optimized_Second_Interface_ptr p);
+    static ::Accessor_Optimized_Second_Interface_ptr nil ();
+    static ::CORBA::Boolean marshal (const ::Accessor_Optimized_Second_Interface_ptr p,TAO_OutputCDR & cdr);
+  };
+
+#endif /* end #if !defined */
+
+#if !defined (_AMH_ACCESSOR_OPTIMIZED_SECOND_INTERFACEEXCEPTIONHOLDER__TRAITS_)
+#define _AMH_ACCESSOR_OPTIMIZED_SECOND_INTERFACEEXCEPTIONHOLDER__TRAITS_
+
+  template<>
+  struct TAO_IDL_TEST_STUB_Export Value_Traits<AMH_Accessor_Optimized_Second_InterfaceExceptionHolder>
+  {
+    static void add_ref (AMH_Accessor_Optimized_Second_InterfaceExceptionHolder *);
+    static void remove_ref (AMH_Accessor_Optimized_Second_InterfaceExceptionHolder *);
+    static void release (AMH_Accessor_Optimized_Second_InterfaceExceptionHolder *);
+  };
+
+#endif /* end #if !defined */
+
+#if !defined (_AMH_ACCESSOR_OPTIMIZED_SECOND_INTERFACERESPONSEHANDLER__TRAITS_)
+#define _AMH_ACCESSOR_OPTIMIZED_SECOND_INTERFACERESPONSEHANDLER__TRAITS_
+
+  template<>
+  struct TAO_IDL_TEST_STUB_Export Objref_Traits<::AMH_Accessor_Optimized_Second_InterfaceResponseHandler>
+  {
+    static ::AMH_Accessor_Optimized_Second_InterfaceResponseHandler_ptr duplicate (::AMH_Accessor_Optimized_Second_InterfaceResponseHandler_ptr p);
+    static void release (::AMH_Accessor_Optimized_Second_InterfaceResponseHandler_ptr p);
+    static ::AMH_Accessor_Optimized_Second_InterfaceResponseHandler_ptr nil ();
+    static ::CORBA::Boolean marshal (const ::AMH_Accessor_Optimized_Second_InterfaceResponseHandler_ptr p,TAO_OutputCDR & cdr);
+  };
+
+#endif /* end #if !defined */
+
+#if !defined (_AMI_ACCESSOR_OPTIMIZED_SECOND_INTERFACEHANDLER__TRAITS_)
+#define _AMI_ACCESSOR_OPTIMIZED_SECOND_INTERFACEHANDLER__TRAITS_
+
+  template<>
+  struct TAO_IDL_TEST_STUB_Export Objref_Traits<::AMI_Accessor_Optimized_Second_InterfaceHandler>
+  {
+    static ::AMI_Accessor_Optimized_Second_InterfaceHandler_ptr duplicate (::AMI_Accessor_Optimized_Second_InterfaceHandler_ptr p);
+    static void release (::AMI_Accessor_Optimized_Second_InterfaceHandler_ptr p);
+    static ::AMI_Accessor_Optimized_Second_InterfaceHandler_ptr nil ();
+    static ::CORBA::Boolean marshal (const ::AMI_Accessor_Optimized_Second_InterfaceHandler_ptr p,TAO_OutputCDR & cdr);
+  };
+
+#endif /* end #if !defined */
+
+#if !defined (_ACCESSOR_OPTIMIZED_REFCOUNT_BASE__TRAITS_)
+#define _ACCESSOR_OPTIMIZED_REFCOUNT_BASE__TRAITS_
+
+  template<>
+  struct TAO_IDL_TEST_STUB_Export Value_Traits<Accessor_Optimized_Refcount_Base>
+  {
+    static void add_ref (Accessor_Optimized_Refcount_Base *);
+    static void remove_ref (Accessor_Optimized_Refcount_Base *);
+    static void release (Accessor_Optimized_Refcount_Base *);
+  };
+
+#endif /* end #if !defined */
+
+#if !defined (_ACCESSOR_OPTIMIZED_REFCOUNT_DERIVED__TRAITS_)
+#define _ACCESSOR_OPTIMIZED_REFCOUNT_DERIVED__TRAITS_
+
+  template<>
+  struct TAO_IDL_TEST_STUB_Export Value_Traits<Accessor_Optimized_Refcount_Derived>
+  {
+    static void add_ref (Accessor_Optimized_Refcount_Derived *);
+    static void remove_ref (Accessor_Optimized_Refcount_Derived *);
+    static void release (Accessor_Optimized_Refcount_Derived *);
+  };
+
+#endif /* end #if !defined */
+
+#if !defined (_ACCESSOR_OPTIMIZED_REFCOUNT_MULTI_DERIVED__TRAITS_)
+#define _ACCESSOR_OPTIMIZED_REFCOUNT_MULTI_DERIVED__TRAITS_
+
+  template<>
+  struct TAO_IDL_TEST_STUB_Export Value_Traits<Accessor_Optimized_Refcount_Multi_Derived>
+  {
+    static void add_ref (Accessor_Optimized_Refcount_Multi_Derived *);
+    static void remove_ref (Accessor_Optimized_Refcount_Multi_Derived *);
+    static void release (Accessor_Optimized_Refcount_Multi_Derived *);
+  };
+
+#endif /* end #if !defined */
+
+#if !defined (_ACCESSOR_OPTIMIZED_REFCOUNT_PARENT__TRAITS_)
+#define _ACCESSOR_OPTIMIZED_REFCOUNT_PARENT__TRAITS_
+
+  template<>
+  struct TAO_IDL_TEST_STUB_Export Value_Traits<Accessor_Optimized_Refcount_Parent>
+  {
+    static void add_ref (Accessor_Optimized_Refcount_Parent *);
+    static void remove_ref (Accessor_Optimized_Refcount_Parent *);
+    static void release (Accessor_Optimized_Refcount_Parent *);
+  };
+
+#endif /* end #if !defined */
+
+#if !defined (_ACCESSOR_OPTIMIZED_REFCOUNT_INHERITED__TRAITS_)
+#define _ACCESSOR_OPTIMIZED_REFCOUNT_INHERITED__TRAITS_
+
+  template<>
+  struct TAO_IDL_TEST_STUB_Export Value_Traits<Accessor_Optimized_Refcount_Inherited>
+  {
+    static void add_ref (Accessor_Optimized_Refcount_Inherited *);
+    static void remove_ref (Accessor_Optimized_Refcount_Inherited *);
+    static void release (Accessor_Optimized_Refcount_Inherited *);
+  };
+
+#endif /* end #if !defined */
+
+#if !defined (_ACCESSOR_OPTIMIZED_BASE__TRAITS_)
+#define _ACCESSOR_OPTIMIZED_BASE__TRAITS_
+
+  template<>
+  struct TAO_IDL_TEST_STUB_Export Value_Traits<Accessor_Optimized_Base>
+  {
+    static void add_ref (Accessor_Optimized_Base *);
+    static void remove_ref (Accessor_Optimized_Base *);
+    static void release (Accessor_Optimized_Base *);
+  };
+
+#endif /* end #if !defined */
+
+#if !defined (_ACCESSOR_OPTIMIZED_FACTORY_DERIVED__TRAITS_)
+#define _ACCESSOR_OPTIMIZED_FACTORY_DERIVED__TRAITS_
+
+  template<>
+  struct TAO_IDL_TEST_STUB_Export Value_Traits<Accessor_Optimized_Factory_Derived>
+  {
+    static void add_ref (Accessor_Optimized_Factory_Derived *);
+    static void remove_ref (Accessor_Optimized_Factory_Derived *);
+    static void release (Accessor_Optimized_Factory_Derived *);
+  };
+
+#endif /* end #if !defined */
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
@@ -470,6 +2105,150 @@ namespace CORBA {
 TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, Accessor_Optimized_Derived *); // copying
 TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, Accessor_Optimized_Derived **); // non-copying
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, Accessor_Optimized_Derived *&);
+}
+TAO_END_VERSIONED_NAMESPACE_DECL
+
+TAO_BEGIN_VERSIONED_NAMESPACE_DECL
+namespace CORBA {
+
+TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, Accessor_Optimized_Operation_Derived *); // copying
+TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, Accessor_Optimized_Operation_Derived **); // non-copying
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, Accessor_Optimized_Operation_Derived *&);
+}
+TAO_END_VERSIONED_NAMESPACE_DECL
+
+TAO_BEGIN_VERSIONED_NAMESPACE_DECL
+namespace CORBA {
+
+TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, Accessor_Optimized_Interface_ptr); // copying
+TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, Accessor_Optimized_Interface_ptr *); // non-copying
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, Accessor_Optimized_Interface_ptr &);
+}
+TAO_END_VERSIONED_NAMESPACE_DECL
+
+TAO_BEGIN_VERSIONED_NAMESPACE_DECL
+namespace CORBA {
+
+TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, AMH_Accessor_Optimized_InterfaceExceptionHolder *); // copying
+TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, AMH_Accessor_Optimized_InterfaceExceptionHolder **); // non-copying
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, AMH_Accessor_Optimized_InterfaceExceptionHolder *&);
+}
+TAO_END_VERSIONED_NAMESPACE_DECL
+
+TAO_BEGIN_VERSIONED_NAMESPACE_DECL
+namespace CORBA {
+
+TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, AMH_Accessor_Optimized_InterfaceResponseHandler_ptr); // copying
+TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, AMH_Accessor_Optimized_InterfaceResponseHandler_ptr *); // non-copying
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, AMH_Accessor_Optimized_InterfaceResponseHandler_ptr &);
+}
+TAO_END_VERSIONED_NAMESPACE_DECL
+
+TAO_BEGIN_VERSIONED_NAMESPACE_DECL
+namespace CORBA {
+
+TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, AMI_Accessor_Optimized_InterfaceHandler_ptr); // copying
+TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, AMI_Accessor_Optimized_InterfaceHandler_ptr *); // non-copying
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, AMI_Accessor_Optimized_InterfaceHandler_ptr &);
+}
+TAO_END_VERSIONED_NAMESPACE_DECL
+
+TAO_BEGIN_VERSIONED_NAMESPACE_DECL
+namespace CORBA {
+
+TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, Accessor_Optimized_Second_Interface_ptr); // copying
+TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, Accessor_Optimized_Second_Interface_ptr *); // non-copying
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, Accessor_Optimized_Second_Interface_ptr &);
+}
+TAO_END_VERSIONED_NAMESPACE_DECL
+
+TAO_BEGIN_VERSIONED_NAMESPACE_DECL
+namespace CORBA {
+
+TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, AMH_Accessor_Optimized_Second_InterfaceExceptionHolder *); // copying
+TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, AMH_Accessor_Optimized_Second_InterfaceExceptionHolder **); // non-copying
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, AMH_Accessor_Optimized_Second_InterfaceExceptionHolder *&);
+}
+TAO_END_VERSIONED_NAMESPACE_DECL
+
+TAO_BEGIN_VERSIONED_NAMESPACE_DECL
+namespace CORBA {
+
+TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, AMH_Accessor_Optimized_Second_InterfaceResponseHandler_ptr); // copying
+TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, AMH_Accessor_Optimized_Second_InterfaceResponseHandler_ptr *); // non-copying
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, AMH_Accessor_Optimized_Second_InterfaceResponseHandler_ptr &);
+}
+TAO_END_VERSIONED_NAMESPACE_DECL
+
+TAO_BEGIN_VERSIONED_NAMESPACE_DECL
+namespace CORBA {
+
+TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, AMI_Accessor_Optimized_Second_InterfaceHandler_ptr); // copying
+TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, AMI_Accessor_Optimized_Second_InterfaceHandler_ptr *); // non-copying
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, AMI_Accessor_Optimized_Second_InterfaceHandler_ptr &);
+}
+TAO_END_VERSIONED_NAMESPACE_DECL
+
+TAO_BEGIN_VERSIONED_NAMESPACE_DECL
+namespace CORBA {
+
+TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, Accessor_Optimized_Refcount_Base *); // copying
+TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, Accessor_Optimized_Refcount_Base **); // non-copying
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, Accessor_Optimized_Refcount_Base *&);
+}
+TAO_END_VERSIONED_NAMESPACE_DECL
+
+TAO_BEGIN_VERSIONED_NAMESPACE_DECL
+namespace CORBA {
+
+TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, Accessor_Optimized_Refcount_Derived *); // copying
+TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, Accessor_Optimized_Refcount_Derived **); // non-copying
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, Accessor_Optimized_Refcount_Derived *&);
+}
+TAO_END_VERSIONED_NAMESPACE_DECL
+
+TAO_BEGIN_VERSIONED_NAMESPACE_DECL
+namespace CORBA {
+
+TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, Accessor_Optimized_Refcount_Multi_Derived *); // copying
+TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, Accessor_Optimized_Refcount_Multi_Derived **); // non-copying
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, Accessor_Optimized_Refcount_Multi_Derived *&);
+}
+TAO_END_VERSIONED_NAMESPACE_DECL
+
+TAO_BEGIN_VERSIONED_NAMESPACE_DECL
+namespace CORBA {
+
+TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, Accessor_Optimized_Refcount_Parent *); // copying
+TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, Accessor_Optimized_Refcount_Parent **); // non-copying
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, Accessor_Optimized_Refcount_Parent *&);
+}
+TAO_END_VERSIONED_NAMESPACE_DECL
+
+TAO_BEGIN_VERSIONED_NAMESPACE_DECL
+namespace CORBA {
+
+TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, Accessor_Optimized_Refcount_Inherited *); // copying
+TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, Accessor_Optimized_Refcount_Inherited **); // non-copying
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, Accessor_Optimized_Refcount_Inherited *&);
+}
+TAO_END_VERSIONED_NAMESPACE_DECL
+
+TAO_BEGIN_VERSIONED_NAMESPACE_DECL
+namespace CORBA {
+
+TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, Accessor_Optimized_Base *); // copying
+TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, Accessor_Optimized_Base **); // non-copying
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, Accessor_Optimized_Base *&);
+}
+TAO_END_VERSIONED_NAMESPACE_DECL
+
+TAO_BEGIN_VERSIONED_NAMESPACE_DECL
+namespace CORBA {
+
+TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, Accessor_Optimized_Factory_Derived *); // copying
+TAO_IDL_TEST_STUB_Export void operator<<= (::CORBA::Any &, Accessor_Optimized_Factory_Derived **); // non-copying
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>>= (::CORBA::Any const &, Accessor_Optimized_Factory_Derived *&);
 }
 TAO_END_VERSIONED_NAMESPACE_DECL
 
@@ -518,6 +2297,194 @@ TAO_BEGIN_VERSIONED_NAMESPACE_DECL
 
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, Accessor_Optimized_Derived const *);
 TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, Accessor_Optimized_Derived *&);
+
+TAO_END_VERSIONED_NAMESPACE_DECL
+
+TAO_BEGIN_VERSIONED_NAMESPACE_DECL
+
+namespace CORBA
+{
+  extern TAO_IDL_TEST_STUB_Export void add_ref (Accessor_Optimized_Operation_Derived *);
+  extern TAO_IDL_TEST_STUB_Export void remove_ref (Accessor_Optimized_Operation_Derived *);
+}
+TAO_END_VERSIONED_NAMESPACE_DECL
+
+TAO_BEGIN_VERSIONED_NAMESPACE_DECL
+
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, Accessor_Optimized_Operation_Derived const *);
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, Accessor_Optimized_Operation_Derived *&);
+
+TAO_END_VERSIONED_NAMESPACE_DECL
+
+TAO_BEGIN_VERSIONED_NAMESPACE_DECL
+
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, Accessor_Optimized_Interface_ptr const);
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, Accessor_Optimized_Interface_ptr &);
+
+TAO_END_VERSIONED_NAMESPACE_DECL
+
+TAO_BEGIN_VERSIONED_NAMESPACE_DECL
+
+namespace CORBA
+{
+  extern TAO_IDL_TEST_STUB_Export void add_ref (AMH_Accessor_Optimized_InterfaceExceptionHolder *);
+  extern TAO_IDL_TEST_STUB_Export void remove_ref (AMH_Accessor_Optimized_InterfaceExceptionHolder *);
+}
+TAO_END_VERSIONED_NAMESPACE_DECL
+
+TAO_BEGIN_VERSIONED_NAMESPACE_DECL
+
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, AMH_Accessor_Optimized_InterfaceExceptionHolder const *);
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, AMH_Accessor_Optimized_InterfaceExceptionHolder *&);
+
+TAO_END_VERSIONED_NAMESPACE_DECL
+
+TAO_BEGIN_VERSIONED_NAMESPACE_DECL
+
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, AMI_Accessor_Optimized_InterfaceHandler_ptr const);
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, AMI_Accessor_Optimized_InterfaceHandler_ptr &);
+
+TAO_END_VERSIONED_NAMESPACE_DECL
+
+TAO_BEGIN_VERSIONED_NAMESPACE_DECL
+
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, Accessor_Optimized_Second_Interface_ptr const);
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, Accessor_Optimized_Second_Interface_ptr &);
+
+TAO_END_VERSIONED_NAMESPACE_DECL
+
+TAO_BEGIN_VERSIONED_NAMESPACE_DECL
+
+namespace CORBA
+{
+  extern TAO_IDL_TEST_STUB_Export void add_ref (AMH_Accessor_Optimized_Second_InterfaceExceptionHolder *);
+  extern TAO_IDL_TEST_STUB_Export void remove_ref (AMH_Accessor_Optimized_Second_InterfaceExceptionHolder *);
+}
+TAO_END_VERSIONED_NAMESPACE_DECL
+
+TAO_BEGIN_VERSIONED_NAMESPACE_DECL
+
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, AMH_Accessor_Optimized_Second_InterfaceExceptionHolder const *);
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, AMH_Accessor_Optimized_Second_InterfaceExceptionHolder *&);
+
+TAO_END_VERSIONED_NAMESPACE_DECL
+
+TAO_BEGIN_VERSIONED_NAMESPACE_DECL
+
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, AMI_Accessor_Optimized_Second_InterfaceHandler_ptr const);
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, AMI_Accessor_Optimized_Second_InterfaceHandler_ptr &);
+
+TAO_END_VERSIONED_NAMESPACE_DECL
+
+TAO_BEGIN_VERSIONED_NAMESPACE_DECL
+
+namespace CORBA
+{
+  extern TAO_IDL_TEST_STUB_Export void add_ref (Accessor_Optimized_Refcount_Base *);
+  extern TAO_IDL_TEST_STUB_Export void remove_ref (Accessor_Optimized_Refcount_Base *);
+}
+TAO_END_VERSIONED_NAMESPACE_DECL
+
+TAO_BEGIN_VERSIONED_NAMESPACE_DECL
+
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, Accessor_Optimized_Refcount_Base const *);
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, Accessor_Optimized_Refcount_Base *&);
+
+TAO_END_VERSIONED_NAMESPACE_DECL
+
+TAO_BEGIN_VERSIONED_NAMESPACE_DECL
+
+namespace CORBA
+{
+  extern TAO_IDL_TEST_STUB_Export void add_ref (Accessor_Optimized_Refcount_Derived *);
+  extern TAO_IDL_TEST_STUB_Export void remove_ref (Accessor_Optimized_Refcount_Derived *);
+}
+TAO_END_VERSIONED_NAMESPACE_DECL
+
+TAO_BEGIN_VERSIONED_NAMESPACE_DECL
+
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, Accessor_Optimized_Refcount_Derived const *);
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, Accessor_Optimized_Refcount_Derived *&);
+
+TAO_END_VERSIONED_NAMESPACE_DECL
+
+TAO_BEGIN_VERSIONED_NAMESPACE_DECL
+
+namespace CORBA
+{
+  extern TAO_IDL_TEST_STUB_Export void add_ref (Accessor_Optimized_Refcount_Multi_Derived *);
+  extern TAO_IDL_TEST_STUB_Export void remove_ref (Accessor_Optimized_Refcount_Multi_Derived *);
+}
+TAO_END_VERSIONED_NAMESPACE_DECL
+
+TAO_BEGIN_VERSIONED_NAMESPACE_DECL
+
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, Accessor_Optimized_Refcount_Multi_Derived const *);
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, Accessor_Optimized_Refcount_Multi_Derived *&);
+
+TAO_END_VERSIONED_NAMESPACE_DECL
+
+TAO_BEGIN_VERSIONED_NAMESPACE_DECL
+
+namespace CORBA
+{
+  extern TAO_IDL_TEST_STUB_Export void add_ref (Accessor_Optimized_Refcount_Parent *);
+  extern TAO_IDL_TEST_STUB_Export void remove_ref (Accessor_Optimized_Refcount_Parent *);
+}
+TAO_END_VERSIONED_NAMESPACE_DECL
+
+TAO_BEGIN_VERSIONED_NAMESPACE_DECL
+
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, Accessor_Optimized_Refcount_Parent const *);
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, Accessor_Optimized_Refcount_Parent *&);
+
+TAO_END_VERSIONED_NAMESPACE_DECL
+
+TAO_BEGIN_VERSIONED_NAMESPACE_DECL
+
+namespace CORBA
+{
+  extern TAO_IDL_TEST_STUB_Export void add_ref (Accessor_Optimized_Refcount_Inherited *);
+  extern TAO_IDL_TEST_STUB_Export void remove_ref (Accessor_Optimized_Refcount_Inherited *);
+}
+TAO_END_VERSIONED_NAMESPACE_DECL
+
+TAO_BEGIN_VERSIONED_NAMESPACE_DECL
+
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, Accessor_Optimized_Refcount_Inherited const *);
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, Accessor_Optimized_Refcount_Inherited *&);
+
+TAO_END_VERSIONED_NAMESPACE_DECL
+
+TAO_BEGIN_VERSIONED_NAMESPACE_DECL
+
+namespace CORBA
+{
+  extern TAO_IDL_TEST_STUB_Export void add_ref (Accessor_Optimized_Base *);
+  extern TAO_IDL_TEST_STUB_Export void remove_ref (Accessor_Optimized_Base *);
+}
+TAO_END_VERSIONED_NAMESPACE_DECL
+
+TAO_BEGIN_VERSIONED_NAMESPACE_DECL
+
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, Accessor_Optimized_Base const *);
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, Accessor_Optimized_Base *&);
+
+TAO_END_VERSIONED_NAMESPACE_DECL
+
+TAO_BEGIN_VERSIONED_NAMESPACE_DECL
+
+namespace CORBA
+{
+  extern TAO_IDL_TEST_STUB_Export void add_ref (Accessor_Optimized_Factory_Derived *);
+  extern TAO_IDL_TEST_STUB_Export void remove_ref (Accessor_Optimized_Factory_Derived *);
+}
+TAO_END_VERSIONED_NAMESPACE_DECL
+
+TAO_BEGIN_VERSIONED_NAMESPACE_DECL
+
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator<< (TAO_OutputCDR &, Accessor_Optimized_Factory_Derived const *);
+TAO_IDL_TEST_STUB_Export ::CORBA::Boolean operator>> (TAO_InputCDR &, Accessor_Optimized_Factory_Derived *&);
 
 TAO_END_VERSIONED_NAMESPACE_DECL
 

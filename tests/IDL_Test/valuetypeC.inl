@@ -114,6 +114,71 @@ AMI_Empty_Valuetype_OperationHandler::AMI_Empty_Valuetype_OperationHandler (::IO
   : ::CORBA::Object (ior, oc)
 {
 }
+
+ACE_INLINE
+Abstract_Operation_Interface::Abstract_Operation_Interface ()
+{}
+
+ACE_INLINE
+Abstract_Operation_Interface::Abstract_Operation_Interface (Abstract_Operation_Interface const &rhs)
+  : ::CORBA::AbstractBase (rhs)
+{}
+
+ACE_INLINE
+Abstract_Operation_Interface::Abstract_Operation_Interface (
+  TAO_Stub *objref, ::CORBA::Boolean _tao_collocated, TAO_Abstract_ServantBase *servant, TAO_ORB_Core *)
+  : ::CORBA::AbstractBase (
+        objref,
+        _tao_collocated,
+        servant
+      )
+{
+}
+
+ACE_INLINE
+Derived_Abstract_Operation_Interface::Derived_Abstract_Operation_Interface (
+  TAO_Stub *objref, ::CORBA::Boolean _tao_collocated, TAO_Abstract_ServantBase *servant, TAO_ORB_Core *oc)
+  : ::CORBA::AbstractBase (
+        objref,
+        _tao_collocated,
+        servant
+      ),
+    Abstract_Operation_Interface (
+        objref,
+        _tao_collocated,
+        servant
+      ),
+  ::CORBA::Object (objref, _tao_collocated, servant, oc)
+{
+}
+
+ACE_INLINE
+Derived_Abstract_Operation_Interface::Derived_Abstract_Operation_Interface (::IOP::IOR *ior, TAO_ORB_Core *oc)
+  : ::CORBA::Object (ior, oc)
+{
+}
+
+ACE_INLINE
+AMI_Derived_Abstract_Operation_InterfaceHandler::AMI_Derived_Abstract_Operation_InterfaceHandler (
+  TAO_Stub *objref, ::CORBA::Boolean _tao_collocated, TAO_Abstract_ServantBase *servant, TAO_ORB_Core *oc)
+  : ::CORBA::Object (objref, _tao_collocated, servant, oc)
+{
+}
+
+ACE_INLINE
+AMI_Derived_Abstract_Operation_InterfaceHandler::AMI_Derived_Abstract_Operation_InterfaceHandler (::IOP::IOR *ior, TAO_ORB_Core *oc)
+  : ::CORBA::Object (ior, oc)
+{
+}
+ACE_INLINE
+Supports_Abstract_Inherited_Operation::Supports_Abstract_Inherited_Operation ()
+{}
+
+ACE_INLINE char const *
+Supports_Abstract_Inherited_Operation::_tao_obv_static_repository_id ()
+{
+  return "IDL:Supports_Abstract_Inherited_Operation:1.0";
+}
 ACE_INLINE
 Supports_Inherited_Operation::Supports_Inherited_Operation ()
 {}
@@ -169,6 +234,24 @@ Supported_Interface_Value::_tao_obv_static_repository_id ()
   return "IDL:Supported_Interface_Value:1.0";
 }
 ACE_INLINE
+Abstract_Supported_Refcount_Base::Abstract_Supported_Refcount_Base ()
+{}
+
+ACE_INLINE char const *
+Abstract_Supported_Refcount_Base::_tao_obv_static_repository_id ()
+{
+  return "IDL:Abstract_Supported_Refcount_Base:1.0";
+}
+ACE_INLINE
+Concrete_Supported_Refcount_Derived::Concrete_Supported_Refcount_Derived ()
+{}
+
+ACE_INLINE char const *
+Concrete_Supported_Refcount_Derived::_tao_obv_static_repository_id ()
+{
+  return "IDL:Concrete_Supported_Refcount_Derived:1.0";
+}
+ACE_INLINE
 Application_Factory_Value::Application_Factory_Value ()
 {}
 
@@ -203,6 +286,24 @@ ACE_INLINE char const *
 Copy_Operation_Derived::_tao_obv_static_repository_id ()
 {
   return "IDL:Copy_Operation_Derived:1.0";
+}
+ACE_INLINE
+Copy_Factory_Derived::Copy_Factory_Derived ()
+{}
+
+ACE_INLINE char const *
+Copy_Factory_Derived::_tao_obv_static_repository_id ()
+{
+  return "IDL:Copy_Factory_Derived:1.0";
+}
+ACE_INLINE
+Copy_Factory_Operation_Derived::Copy_Factory_Operation_Derived ()
+{}
+
+ACE_INLINE char const *
+Copy_Factory_Operation_Derived::_tao_obv_static_repository_id ()
+{
+  return "IDL:Copy_Factory_Operation_Derived:1.0";
 }
 ACE_INLINE
 Copy_Leaf::Copy_Leaf ()

@@ -203,6 +203,68 @@ namespace TAO
 
 #endif /* end #if !defined */
 
+#if !defined (_ABSTRACT_OPERATION_INTERFACE__SARG_TRAITS_)
+#define _ABSTRACT_OPERATION_INTERFACE__SARG_TRAITS_
+
+  template<>
+  class  SArg_Traits<::Abstract_Operation_Interface>
+    : public Object_SArg_Traits_T<
+        ::Abstract_Operation_Interface_ptr,
+        ::Abstract_Operation_Interface_var,
+        ::Abstract_Operation_Interface_out,
+        TAO::Any_Insert_Policy_Stream>
+  {
+  };
+
+#endif /* end #if !defined */
+
+#if !defined (_DERIVED_ABSTRACT_OPERATION_INTERFACE__SARG_TRAITS_)
+#define _DERIVED_ABSTRACT_OPERATION_INTERFACE__SARG_TRAITS_
+
+  template<>
+  class  SArg_Traits<::Derived_Abstract_Operation_Interface>
+    : public Object_SArg_Traits_T<
+        ::Derived_Abstract_Operation_Interface_ptr,
+        ::Derived_Abstract_Operation_Interface_var,
+        ::Derived_Abstract_Operation_Interface_out,
+        TAO::Any_Insert_Policy_Stream>
+  {
+  };
+
+#endif /* end #if !defined */
+
+#if !defined (_AMI_DERIVED_ABSTRACT_OPERATION_INTERFACEHANDLER__SARG_TRAITS_)
+#define _AMI_DERIVED_ABSTRACT_OPERATION_INTERFACEHANDLER__SARG_TRAITS_
+
+  template<>
+  class  SArg_Traits<::AMI_Derived_Abstract_Operation_InterfaceHandler>
+    : public Object_SArg_Traits_T<
+        ::AMI_Derived_Abstract_Operation_InterfaceHandler_ptr,
+        ::AMI_Derived_Abstract_Operation_InterfaceHandler_var,
+        ::AMI_Derived_Abstract_Operation_InterfaceHandler_out,
+        TAO::Any_Insert_Policy_Stream>
+  {
+  };
+
+#endif /* end #if !defined */
+
+#if !defined (_SUPPORTS_ABSTRACT_INHERITED_OPERATION__SARG_TRAITS_)
+#define _SUPPORTS_ABSTRACT_INHERITED_OPERATION__SARG_TRAITS_
+
+  template<>
+  class SArg_Traits<::Supports_Abstract_Inherited_Operation>
+    : public
+        Object_SArg_Traits_T<
+            ::Supports_Abstract_Inherited_Operation *,
+            ::Supports_Abstract_Inherited_Operation_var,
+            ::Supports_Abstract_Inherited_Operation_out,
+            TAO::Any_Insert_Policy_Stream
+          >
+  {
+  };
+
+#endif /* end #if !defined */
+
 #if !defined (_SUPPORTS_INHERITED_OPERATION__SARG_TRAITS_)
 #define _SUPPORTS_INHERITED_OPERATION__SARG_TRAITS_
 
@@ -284,6 +346,40 @@ namespace TAO
 
 #endif /* end #if !defined */
 
+#if !defined (_ABSTRACT_SUPPORTED_REFCOUNT_BASE__SARG_TRAITS_)
+#define _ABSTRACT_SUPPORTED_REFCOUNT_BASE__SARG_TRAITS_
+
+  template<>
+  class SArg_Traits<::Abstract_Supported_Refcount_Base>
+    : public
+        Object_SArg_Traits_T<
+            ::Abstract_Supported_Refcount_Base *,
+            ::Abstract_Supported_Refcount_Base_var,
+            ::Abstract_Supported_Refcount_Base_out,
+            TAO::Any_Insert_Policy_Stream
+          >
+  {
+  };
+
+#endif /* end #if !defined */
+
+#if !defined (_CONCRETE_SUPPORTED_REFCOUNT_DERIVED__SARG_TRAITS_)
+#define _CONCRETE_SUPPORTED_REFCOUNT_DERIVED__SARG_TRAITS_
+
+  template<>
+  class SArg_Traits<::Concrete_Supported_Refcount_Derived>
+    : public
+        Object_SArg_Traits_T<
+            ::Concrete_Supported_Refcount_Derived *,
+            ::Concrete_Supported_Refcount_Derived_var,
+            ::Concrete_Supported_Refcount_Derived_out,
+            TAO::Any_Insert_Policy_Stream
+          >
+  {
+  };
+
+#endif /* end #if !defined */
+
 #if !defined (_APPLICATION_FACTORY_VALUE__SARG_TRAITS_)
 #define _APPLICATION_FACTORY_VALUE__SARG_TRAITS_
 
@@ -345,6 +441,40 @@ namespace TAO
             ::Copy_Operation_Derived *,
             ::Copy_Operation_Derived_var,
             ::Copy_Operation_Derived_out,
+            TAO::Any_Insert_Policy_Stream
+          >
+  {
+  };
+
+#endif /* end #if !defined */
+
+#if !defined (_COPY_FACTORY_DERIVED__SARG_TRAITS_)
+#define _COPY_FACTORY_DERIVED__SARG_TRAITS_
+
+  template<>
+  class SArg_Traits<::Copy_Factory_Derived>
+    : public
+        Object_SArg_Traits_T<
+            ::Copy_Factory_Derived *,
+            ::Copy_Factory_Derived_var,
+            ::Copy_Factory_Derived_out,
+            TAO::Any_Insert_Policy_Stream
+          >
+  {
+  };
+
+#endif /* end #if !defined */
+
+#if !defined (_COPY_FACTORY_OPERATION_DERIVED__SARG_TRAITS_)
+#define _COPY_FACTORY_OPERATION_DERIVED__SARG_TRAITS_
+
+  template<>
+  class SArg_Traits<::Copy_Factory_Operation_Derived>
+    : public
+        Object_SArg_Traits_T<
+            ::Copy_Factory_Operation_Derived *,
+            ::Copy_Factory_Operation_Derived_var,
+            ::Copy_Factory_Operation_Derived_out,
             TAO::Any_Insert_Policy_Stream
           >
   {
@@ -850,6 +980,107 @@ class TAO_IDL_TEST_STUB_Export _TAO_AMI_Empty_Valuetype_OperationHandler_Direct_
 {
 public:
   virtual ~_TAO_AMI_Empty_Valuetype_OperationHandler_Direct_Proxy_Impl ();
+};
+
+class POA_Derived_Abstract_Operation_Interface;
+using POA_Derived_Abstract_Operation_Interface_ptr = POA_Derived_Abstract_Operation_Interface *;
+
+class _TAO_Derived_Abstract_Operation_Interface_Direct_Proxy_Impl;
+
+class TAO_IDL_TEST_STUB_Export POA_Derived_Abstract_Operation_Interface
+  : public virtual PortableServer::ServantBase
+{
+protected:
+  POA_Derived_Abstract_Operation_Interface ();
+
+public:
+  /// Useful for template programming.
+  using _stub_type = ::Derived_Abstract_Operation_Interface;
+  using _stub_ptr_type = ::Derived_Abstract_Operation_Interface_ptr;
+  using _stub_var_type = ::Derived_Abstract_Operation_Interface_var;
+
+  POA_Derived_Abstract_Operation_Interface (POA_Derived_Abstract_Operation_Interface const &rhs) = default;
+  ~POA_Derived_Abstract_Operation_Interface () override = default;
+
+  ::CORBA::Boolean _is_a (char const *logical_type_id) override;
+
+  void _dispatch (
+      TAO_ServerRequest & req,
+      TAO::Portable_Server::Servant_Upcall *servant_upcall) override;
+
+  ::Derived_Abstract_Operation_Interface *_this ();
+
+  char const *_interface_repository_id () const override;
+  virtual void ping () = 0;
+
+  static void ping_skel (
+    TAO_ServerRequest &server_request,
+    TAO::Portable_Server::Servant_Upcall *servant_upcall,
+    TAO_ServantBase *servant);
+};
+
+class TAO_IDL_TEST_STUB_Export _TAO_Derived_Abstract_Operation_Interface_Direct_Proxy_Impl
+{
+public:
+  virtual ~_TAO_Derived_Abstract_Operation_Interface_Direct_Proxy_Impl ();
+  static void ping (TAO_Abstract_ServantBase *servant, TAO::Argument **);
+};
+
+class POA_AMI_Derived_Abstract_Operation_InterfaceHandler;
+using POA_AMI_Derived_Abstract_Operation_InterfaceHandler_ptr = POA_AMI_Derived_Abstract_Operation_InterfaceHandler *;
+
+class _TAO_AMI_Derived_Abstract_Operation_InterfaceHandler_Direct_Proxy_Impl;
+
+class TAO_IDL_TEST_STUB_Export POA_AMI_Derived_Abstract_Operation_InterfaceHandler
+  : public virtual POA_Messaging::ReplyHandler
+{
+protected:
+  POA_AMI_Derived_Abstract_Operation_InterfaceHandler ();
+
+public:
+  /// Useful for template programming.
+  using _stub_type = ::AMI_Derived_Abstract_Operation_InterfaceHandler;
+  using _stub_ptr_type = ::AMI_Derived_Abstract_Operation_InterfaceHandler_ptr;
+  using _stub_var_type = ::AMI_Derived_Abstract_Operation_InterfaceHandler_var;
+
+  POA_AMI_Derived_Abstract_Operation_InterfaceHandler (POA_AMI_Derived_Abstract_Operation_InterfaceHandler const &rhs) = default;
+  ~POA_AMI_Derived_Abstract_Operation_InterfaceHandler () override = default;
+
+  ::CORBA::Boolean _is_a (char const *logical_type_id) override;
+
+  void _dispatch (
+      TAO_ServerRequest & req,
+      TAO::Portable_Server::Servant_Upcall *servant_upcall) override;
+
+  ::AMI_Derived_Abstract_Operation_InterfaceHandler *_this ();
+
+  char const *_interface_repository_id () const override;
+};
+
+class TAO_IDL_TEST_STUB_Export _TAO_AMI_Derived_Abstract_Operation_InterfaceHandler_Direct_Proxy_Impl
+  : public virtual ::POA_Messaging::_TAO_ReplyHandler_Direct_Proxy_Impl
+{
+public:
+  virtual ~_TAO_AMI_Derived_Abstract_Operation_InterfaceHandler_Direct_Proxy_Impl ();
+};
+
+class POA_Supports_Abstract_Inherited_Operation;
+using POA_Supports_Abstract_Inherited_Operation_ptr = POA_Supports_Abstract_Inherited_Operation *;
+// Forward Classes Declaration
+class _TAO_Supports_Abstract_Inherited_Operation_Direct_Proxy_Impl;
+
+class TAO_IDL_TEST_STUB_Export POA_Supports_Abstract_Inherited_Operation
+  : public virtual POA_Derived_Abstract_Operation_Interface,
+    public virtual ::Supports_Abstract_Inherited_Operation
+{
+protected:
+  POA_Supports_Abstract_Inherited_Operation ();
+
+public:
+  virtual ~POA_Supports_Abstract_Inherited_Operation ();
+
+private:
+  POA_Supports_Abstract_Inherited_Operation (POA_Supports_Abstract_Inherited_Operation const &rhs);
 };
 
 class POA_Supports_Inherited_Operation;

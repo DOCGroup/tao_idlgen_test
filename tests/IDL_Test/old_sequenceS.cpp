@@ -128,11 +128,15 @@ TAO_AMH_TestSeq_Perfect_Hash_OpTable::lookup (char const *str, size_t len)
             {
               char const *s = wordlist[slot].opname;
 
-              if (*str == *s && !std::strncmp (str + 1, s + 1, len - 1))
-                return std::addressof (wordlist[slot]);
+              if (*str == *s && len == std::strlen (s) && !std::strncmp (str, s, len))
+                {
+                  return std::addressof (wordlist[slot]);
+                }
             }
           else if (slot < 0 && slot >= -MAX_HASH_VALUE)
-            return nullptr;
+            {
+              return nullptr;
+            }
           else
             {
               size_t const offset = slot > 0
@@ -142,8 +146,12 @@ TAO_AMH_TestSeq_Perfect_Hash_OpTable::lookup (char const *str, size_t len)
               TAO_operation_db_entry const *ptr = base + -lookup[offset + 1];
 
               while (--ptr >= base)
-                if (*str == *ptr->opname && !std::strncmp (str + 1, ptr->opname + 1, len - 1))
-                  return ptr;
+                {
+                  if (*str == *ptr->opname && len == std::strlen (ptr->opname) && !std::strncmp (str, ptr->opname, len))
+                  {
+                    return ptr;
+                  }
+                }
             }
         }
     }
@@ -344,11 +352,15 @@ TAO_TestSeq_Perfect_Hash_OpTable::lookup (char const *str, size_t len)
             {
               char const *s = wordlist[slot].opname;
 
-              if (*str == *s && !std::strncmp (str + 1, s + 1, len - 1))
-                return std::addressof (wordlist[slot]);
+              if (*str == *s && len == std::strlen (s) && !std::strncmp (str, s, len))
+                {
+                  return std::addressof (wordlist[slot]);
+                }
             }
           else if (slot < 0 && slot >= -MAX_HASH_VALUE)
-            return nullptr;
+            {
+              return nullptr;
+            }
           else
             {
               size_t const offset = slot > 0
@@ -358,8 +370,12 @@ TAO_TestSeq_Perfect_Hash_OpTable::lookup (char const *str, size_t len)
               TAO_operation_db_entry const *ptr = base + -lookup[offset + 1];
 
               while (--ptr >= base)
-                if (*str == *ptr->opname && !std::strncmp (str + 1, ptr->opname + 1, len - 1))
-                  return ptr;
+                {
+                  if (*str == *ptr->opname && len == std::strlen (ptr->opname) && !std::strncmp (str, ptr->opname, len))
+                  {
+                    return ptr;
+                  }
+                }
             }
         }
     }
@@ -681,8 +697,10 @@ TAO_AMI_TestSeqHandler_Perfect_Hash_OpTable::lookup (char const *str, size_t len
         {
           char const *s = wordlist[key].opname;
 
-          if (*str == *s && !std::strncmp (str + 1, s + 1, len - 1))
-            return std::addressof (wordlist[key]);
+          if (*str == *s && len == std::strlen (s) && !std::strncmp (str, s, len))
+            {
+              return std::addressof (wordlist[key]);
+            }
         }
     }
   return nullptr;

@@ -105,3 +105,231 @@ Accessor_Optimized_Derived::derived_value () const
 {
   return this->_pd_derived_value;
 }
+ACE_INLINE
+Accessor_Optimized_Operation_Derived::Accessor_Optimized_Operation_Derived ()
+{}
+
+ACE_INLINE char const *
+Accessor_Optimized_Operation_Derived::_tao_obv_static_repository_id ()
+{
+  return "IDL:Accessor_Optimized_Operation_Derived:1.0";
+}
+
+ACE_INLINE
+Accessor_Optimized_Interface::Accessor_Optimized_Interface (
+  TAO_Stub *objref, ::CORBA::Boolean _tao_collocated, TAO_Abstract_ServantBase *servant, TAO_ORB_Core *oc)
+  : ::CORBA::Object (objref, _tao_collocated, servant, oc)
+{
+}
+
+ACE_INLINE
+Accessor_Optimized_Interface::Accessor_Optimized_Interface (::IOP::IOR *ior, TAO_ORB_Core *oc)
+  : ::CORBA::Object (ior, oc)
+{
+}
+ACE_INLINE
+AMH_Accessor_Optimized_InterfaceExceptionHolder::AMH_Accessor_Optimized_InterfaceExceptionHolder ()
+  : exception (nullptr)
+{}
+
+ACE_INLINE char const *
+AMH_Accessor_Optimized_InterfaceExceptionHolder::_tao_obv_static_repository_id ()
+{
+  return "IDL:AMH_Accessor_Optimized_InterfaceExceptionHolder:1.0";
+}
+
+ACE_INLINE
+AMI_Accessor_Optimized_InterfaceHandler::AMI_Accessor_Optimized_InterfaceHandler (
+  TAO_Stub *objref, ::CORBA::Boolean _tao_collocated, TAO_Abstract_ServantBase *servant, TAO_ORB_Core *oc)
+  : ::CORBA::Object (objref, _tao_collocated, servant, oc)
+{
+}
+
+ACE_INLINE
+AMI_Accessor_Optimized_InterfaceHandler::AMI_Accessor_Optimized_InterfaceHandler (::IOP::IOR *ior, TAO_ORB_Core *oc)
+  : ::CORBA::Object (ior, oc)
+{
+}
+
+ACE_INLINE
+Accessor_Optimized_Second_Interface::Accessor_Optimized_Second_Interface (
+  TAO_Stub *objref, ::CORBA::Boolean _tao_collocated, TAO_Abstract_ServantBase *servant, TAO_ORB_Core *oc)
+  : ::CORBA::Object (objref, _tao_collocated, servant, oc)
+{
+}
+
+ACE_INLINE
+Accessor_Optimized_Second_Interface::Accessor_Optimized_Second_Interface (::IOP::IOR *ior, TAO_ORB_Core *oc)
+  : ::CORBA::Object (ior, oc)
+{
+}
+ACE_INLINE
+AMH_Accessor_Optimized_Second_InterfaceExceptionHolder::AMH_Accessor_Optimized_Second_InterfaceExceptionHolder ()
+  : exception (nullptr)
+{}
+
+ACE_INLINE char const *
+AMH_Accessor_Optimized_Second_InterfaceExceptionHolder::_tao_obv_static_repository_id ()
+{
+  return "IDL:AMH_Accessor_Optimized_Second_InterfaceExceptionHolder:1.0";
+}
+
+ACE_INLINE
+AMI_Accessor_Optimized_Second_InterfaceHandler::AMI_Accessor_Optimized_Second_InterfaceHandler (
+  TAO_Stub *objref, ::CORBA::Boolean _tao_collocated, TAO_Abstract_ServantBase *servant, TAO_ORB_Core *oc)
+  : ::CORBA::Object (objref, _tao_collocated, servant, oc)
+{
+}
+
+ACE_INLINE
+AMI_Accessor_Optimized_Second_InterfaceHandler::AMI_Accessor_Optimized_Second_InterfaceHandler (::IOP::IOR *ior, TAO_ORB_Core *oc)
+  : ::CORBA::Object (ior, oc)
+{
+}
+ACE_INLINE
+Accessor_Optimized_Refcount_Base::Accessor_Optimized_Refcount_Base ()
+{}
+
+ACE_INLINE char const *
+Accessor_Optimized_Refcount_Base::_tao_obv_static_repository_id ()
+{
+  return "IDL:Accessor_Optimized_Refcount_Base:1.0";
+}
+/// Accessor to set the member.
+ACE_INLINE void
+Accessor_Optimized_Refcount_Base::base_value (CORBA::Long const val)
+{
+  // Set the value.
+  this->_pd_base_value = val;
+}
+
+// Retrieve the member
+ACE_INLINE ::CORBA::Long
+Accessor_Optimized_Refcount_Base::base_value () const
+{
+  return this->_pd_base_value;
+}
+ACE_INLINE
+Accessor_Optimized_Refcount_Derived::Accessor_Optimized_Refcount_Derived ()
+{}
+
+ACE_INLINE char const *
+Accessor_Optimized_Refcount_Derived::_tao_obv_static_repository_id ()
+{
+  return "IDL:Accessor_Optimized_Refcount_Derived:1.0";
+}
+/// Accessor to set the member.
+ACE_INLINE void
+Accessor_Optimized_Refcount_Derived::derived_value (CORBA::Long const val)
+{
+  // Set the value.
+  this->_pd_derived_value = val;
+}
+
+// Retrieve the member
+ACE_INLINE ::CORBA::Long
+Accessor_Optimized_Refcount_Derived::derived_value () const
+{
+  return this->_pd_derived_value;
+}
+ACE_INLINE
+Accessor_Optimized_Refcount_Multi_Derived::Accessor_Optimized_Refcount_Multi_Derived ()
+{}
+
+ACE_INLINE char const *
+Accessor_Optimized_Refcount_Multi_Derived::_tao_obv_static_repository_id ()
+{
+  return "IDL:Accessor_Optimized_Refcount_Multi_Derived:1.0";
+}
+/// Accessor to set the member.
+ACE_INLINE void
+Accessor_Optimized_Refcount_Multi_Derived::multi_derived_value (CORBA::Long const val)
+{
+  // Set the value.
+  this->_pd_multi_derived_value = val;
+}
+
+// Retrieve the member
+ACE_INLINE ::CORBA::Long
+Accessor_Optimized_Refcount_Multi_Derived::multi_derived_value () const
+{
+  return this->_pd_multi_derived_value;
+}
+ACE_INLINE
+Accessor_Optimized_Refcount_Parent::Accessor_Optimized_Refcount_Parent ()
+{}
+
+ACE_INLINE char const *
+Accessor_Optimized_Refcount_Parent::_tao_obv_static_repository_id ()
+{
+  return "IDL:Accessor_Optimized_Refcount_Parent:1.0";
+}
+/// Accessor to set the member.
+ACE_INLINE void
+Accessor_Optimized_Refcount_Parent::parent_value (CORBA::Long const val)
+{
+  // Set the value.
+  this->_pd_parent_value = val;
+}
+
+// Retrieve the member
+ACE_INLINE ::CORBA::Long
+Accessor_Optimized_Refcount_Parent::parent_value () const
+{
+  return this->_pd_parent_value;
+}
+ACE_INLINE
+Accessor_Optimized_Refcount_Inherited::Accessor_Optimized_Refcount_Inherited ()
+{}
+
+ACE_INLINE char const *
+Accessor_Optimized_Refcount_Inherited::_tao_obv_static_repository_id ()
+{
+  return "IDL:Accessor_Optimized_Refcount_Inherited:1.0";
+}
+/// Accessor to set the member.
+ACE_INLINE void
+Accessor_Optimized_Refcount_Inherited::inherited_value (CORBA::Long const val)
+{
+  // Set the value.
+  this->_pd_inherited_value = val;
+}
+
+// Retrieve the member
+ACE_INLINE ::CORBA::Long
+Accessor_Optimized_Refcount_Inherited::inherited_value () const
+{
+  return this->_pd_inherited_value;
+}
+ACE_INLINE
+Accessor_Optimized_Base::Accessor_Optimized_Base ()
+{}
+
+ACE_INLINE char const *
+Accessor_Optimized_Base::_tao_obv_static_repository_id ()
+{
+  return "IDL:Accessor_Optimized_Base:1.0";
+}
+/// Accessor to set the member.
+ACE_INLINE void
+Accessor_Optimized_Base::value (CORBA::Long const val)
+{
+  // Set the value.
+  this->_pd_value = val;
+}
+
+// Retrieve the member
+ACE_INLINE ::CORBA::Long
+Accessor_Optimized_Base::value () const
+{
+  return this->_pd_value;
+}
+ACE_INLINE
+Accessor_Optimized_Factory_Derived::Accessor_Optimized_Factory_Derived ()
+{}
+
+ACE_INLINE char const *
+Accessor_Optimized_Factory_Derived::_tao_obv_static_repository_id ()
+{
+  return "IDL:Accessor_Optimized_Factory_Derived:1.0";
+}

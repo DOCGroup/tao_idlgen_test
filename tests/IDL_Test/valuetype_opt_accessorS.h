@@ -33,10 +33,19 @@
 #include "tao/PortableServer/Fixed_Size_SArgument_T.h"
 #include "tao/PortableServer/Var_Size_SArgument_T.h"
 #include "tao/PortableServer/Object_SArg_Traits.h"
+#include "tao/PortableServer/UB_String_SArguments.h"
+#include "tao/PortableServer/get_arg.h"
+#include "tao/Special_Basic_Arguments.h"
+#include "tao/UB_String_Arguments.h"
 
 #if !defined (ACE_LACKS_PRAGMA_ONCE)
 # pragma once
 #endif /* ACE_LACKS_PRAGMA_ONCE */
+
+#include "tao/Messaging/MessagingS.h"
+#include "tao/PortableServer/PortableServer.h"
+#include "tao/PortableServer/Servant_Base.h"
+#include "tao/Messaging/AMH_Response_Handler.h"
 
 #include /**/ "TAO_IDL_TEST_stub_export.h"
 
@@ -113,9 +122,520 @@ namespace TAO
   };
 
 #endif /* end #if !defined */
+
+#if !defined (_ACCESSOR_OPTIMIZED_OPERATION_DERIVED__SARG_TRAITS_)
+#define _ACCESSOR_OPTIMIZED_OPERATION_DERIVED__SARG_TRAITS_
+
+  template<>
+  class SArg_Traits<::Accessor_Optimized_Operation_Derived>
+    : public
+        Object_SArg_Traits_T<
+            ::Accessor_Optimized_Operation_Derived *,
+            ::Accessor_Optimized_Operation_Derived_var,
+            ::Accessor_Optimized_Operation_Derived_out,
+            TAO::Any_Insert_Policy_Stream
+          >
+  {
+  };
+
+#endif /* end #if !defined */
+
+#if !defined (_ACCESSOR_OPTIMIZED_INTERFACE__SARG_TRAITS_)
+#define _ACCESSOR_OPTIMIZED_INTERFACE__SARG_TRAITS_
+
+  template<>
+  class  SArg_Traits<::Accessor_Optimized_Interface>
+    : public Object_SArg_Traits_T<
+        ::Accessor_Optimized_Interface_ptr,
+        ::Accessor_Optimized_Interface_var,
+        ::Accessor_Optimized_Interface_out,
+        TAO::Any_Insert_Policy_Stream>
+  {
+  };
+
+#endif /* end #if !defined */
+
+#if !defined (_AMH_ACCESSOR_OPTIMIZED_INTERFACEEXCEPTIONHOLDER__SARG_TRAITS_)
+#define _AMH_ACCESSOR_OPTIMIZED_INTERFACEEXCEPTIONHOLDER__SARG_TRAITS_
+
+  template<>
+  class SArg_Traits<::AMH_Accessor_Optimized_InterfaceExceptionHolder>
+    : public
+        Object_SArg_Traits_T<
+            ::AMH_Accessor_Optimized_InterfaceExceptionHolder *,
+            ::AMH_Accessor_Optimized_InterfaceExceptionHolder_var,
+            ::AMH_Accessor_Optimized_InterfaceExceptionHolder_out,
+            TAO::Any_Insert_Policy_Stream
+          >
+  {
+  };
+
+#endif /* end #if !defined */
+
+#if !defined (_AMI_ACCESSOR_OPTIMIZED_INTERFACEHANDLER__SARG_TRAITS_)
+#define _AMI_ACCESSOR_OPTIMIZED_INTERFACEHANDLER__SARG_TRAITS_
+
+  template<>
+  class  SArg_Traits<::AMI_Accessor_Optimized_InterfaceHandler>
+    : public Object_SArg_Traits_T<
+        ::AMI_Accessor_Optimized_InterfaceHandler_ptr,
+        ::AMI_Accessor_Optimized_InterfaceHandler_var,
+        ::AMI_Accessor_Optimized_InterfaceHandler_out,
+        TAO::Any_Insert_Policy_Stream>
+  {
+  };
+
+#endif /* end #if !defined */
+
+#if !defined (_ACCESSOR_OPTIMIZED_SECOND_INTERFACE__SARG_TRAITS_)
+#define _ACCESSOR_OPTIMIZED_SECOND_INTERFACE__SARG_TRAITS_
+
+  template<>
+  class  SArg_Traits<::Accessor_Optimized_Second_Interface>
+    : public Object_SArg_Traits_T<
+        ::Accessor_Optimized_Second_Interface_ptr,
+        ::Accessor_Optimized_Second_Interface_var,
+        ::Accessor_Optimized_Second_Interface_out,
+        TAO::Any_Insert_Policy_Stream>
+  {
+  };
+
+#endif /* end #if !defined */
+
+#if !defined (_AMH_ACCESSOR_OPTIMIZED_SECOND_INTERFACEEXCEPTIONHOLDER__SARG_TRAITS_)
+#define _AMH_ACCESSOR_OPTIMIZED_SECOND_INTERFACEEXCEPTIONHOLDER__SARG_TRAITS_
+
+  template<>
+  class SArg_Traits<::AMH_Accessor_Optimized_Second_InterfaceExceptionHolder>
+    : public
+        Object_SArg_Traits_T<
+            ::AMH_Accessor_Optimized_Second_InterfaceExceptionHolder *,
+            ::AMH_Accessor_Optimized_Second_InterfaceExceptionHolder_var,
+            ::AMH_Accessor_Optimized_Second_InterfaceExceptionHolder_out,
+            TAO::Any_Insert_Policy_Stream
+          >
+  {
+  };
+
+#endif /* end #if !defined */
+
+#if !defined (_AMI_ACCESSOR_OPTIMIZED_SECOND_INTERFACEHANDLER__SARG_TRAITS_)
+#define _AMI_ACCESSOR_OPTIMIZED_SECOND_INTERFACEHANDLER__SARG_TRAITS_
+
+  template<>
+  class  SArg_Traits<::AMI_Accessor_Optimized_Second_InterfaceHandler>
+    : public Object_SArg_Traits_T<
+        ::AMI_Accessor_Optimized_Second_InterfaceHandler_ptr,
+        ::AMI_Accessor_Optimized_Second_InterfaceHandler_var,
+        ::AMI_Accessor_Optimized_Second_InterfaceHandler_out,
+        TAO::Any_Insert_Policy_Stream>
+  {
+  };
+
+#endif /* end #if !defined */
+
+#if !defined (_ACCESSOR_OPTIMIZED_REFCOUNT_BASE__SARG_TRAITS_)
+#define _ACCESSOR_OPTIMIZED_REFCOUNT_BASE__SARG_TRAITS_
+
+  template<>
+  class SArg_Traits<::Accessor_Optimized_Refcount_Base>
+    : public
+        Object_SArg_Traits_T<
+            ::Accessor_Optimized_Refcount_Base *,
+            ::Accessor_Optimized_Refcount_Base_var,
+            ::Accessor_Optimized_Refcount_Base_out,
+            TAO::Any_Insert_Policy_Stream
+          >
+  {
+  };
+
+#endif /* end #if !defined */
+
+#if !defined (_ACCESSOR_OPTIMIZED_REFCOUNT_DERIVED__SARG_TRAITS_)
+#define _ACCESSOR_OPTIMIZED_REFCOUNT_DERIVED__SARG_TRAITS_
+
+  template<>
+  class SArg_Traits<::Accessor_Optimized_Refcount_Derived>
+    : public
+        Object_SArg_Traits_T<
+            ::Accessor_Optimized_Refcount_Derived *,
+            ::Accessor_Optimized_Refcount_Derived_var,
+            ::Accessor_Optimized_Refcount_Derived_out,
+            TAO::Any_Insert_Policy_Stream
+          >
+  {
+  };
+
+#endif /* end #if !defined */
+
+#if !defined (_ACCESSOR_OPTIMIZED_REFCOUNT_MULTI_DERIVED__SARG_TRAITS_)
+#define _ACCESSOR_OPTIMIZED_REFCOUNT_MULTI_DERIVED__SARG_TRAITS_
+
+  template<>
+  class SArg_Traits<::Accessor_Optimized_Refcount_Multi_Derived>
+    : public
+        Object_SArg_Traits_T<
+            ::Accessor_Optimized_Refcount_Multi_Derived *,
+            ::Accessor_Optimized_Refcount_Multi_Derived_var,
+            ::Accessor_Optimized_Refcount_Multi_Derived_out,
+            TAO::Any_Insert_Policy_Stream
+          >
+  {
+  };
+
+#endif /* end #if !defined */
+
+#if !defined (_ACCESSOR_OPTIMIZED_REFCOUNT_PARENT__SARG_TRAITS_)
+#define _ACCESSOR_OPTIMIZED_REFCOUNT_PARENT__SARG_TRAITS_
+
+  template<>
+  class SArg_Traits<::Accessor_Optimized_Refcount_Parent>
+    : public
+        Object_SArg_Traits_T<
+            ::Accessor_Optimized_Refcount_Parent *,
+            ::Accessor_Optimized_Refcount_Parent_var,
+            ::Accessor_Optimized_Refcount_Parent_out,
+            TAO::Any_Insert_Policy_Stream
+          >
+  {
+  };
+
+#endif /* end #if !defined */
+
+#if !defined (_ACCESSOR_OPTIMIZED_REFCOUNT_INHERITED__SARG_TRAITS_)
+#define _ACCESSOR_OPTIMIZED_REFCOUNT_INHERITED__SARG_TRAITS_
+
+  template<>
+  class SArg_Traits<::Accessor_Optimized_Refcount_Inherited>
+    : public
+        Object_SArg_Traits_T<
+            ::Accessor_Optimized_Refcount_Inherited *,
+            ::Accessor_Optimized_Refcount_Inherited_var,
+            ::Accessor_Optimized_Refcount_Inherited_out,
+            TAO::Any_Insert_Policy_Stream
+          >
+  {
+  };
+
+#endif /* end #if !defined */
+
+#if !defined (_ACCESSOR_OPTIMIZED_BASE__SARG_TRAITS_)
+#define _ACCESSOR_OPTIMIZED_BASE__SARG_TRAITS_
+
+  template<>
+  class SArg_Traits<::Accessor_Optimized_Base>
+    : public
+        Object_SArg_Traits_T<
+            ::Accessor_Optimized_Base *,
+            ::Accessor_Optimized_Base_var,
+            ::Accessor_Optimized_Base_out,
+            TAO::Any_Insert_Policy_Stream
+          >
+  {
+  };
+
+#endif /* end #if !defined */
+
+#if !defined (_ACCESSOR_OPTIMIZED_FACTORY_DERIVED__SARG_TRAITS_)
+#define _ACCESSOR_OPTIMIZED_FACTORY_DERIVED__SARG_TRAITS_
+
+  template<>
+  class SArg_Traits<::Accessor_Optimized_Factory_Derived>
+    : public
+        Object_SArg_Traits_T<
+            ::Accessor_Optimized_Factory_Derived *,
+            ::Accessor_Optimized_Factory_Derived_var,
+            ::Accessor_Optimized_Factory_Derived_out,
+            TAO::Any_Insert_Policy_Stream
+          >
+  {
+  };
+
+#endif /* end #if !defined */
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
+
+class POA_AMH_Accessor_Optimized_Interface;
+using POA_AMH_Accessor_Optimized_Interface_ptr = POA_AMH_Accessor_Optimized_Interface *;
+
+class TAO_IDL_TEST_STUB_Export POA_AMH_Accessor_Optimized_Interface
+  : public virtual PortableServer::ServantBase
+{
+protected:
+  POA_AMH_Accessor_Optimized_Interface ();
+
+public:
+  POA_AMH_Accessor_Optimized_Interface (POA_AMH_Accessor_Optimized_Interface const &rhs);
+  ~POA_AMH_Accessor_Optimized_Interface () override = default;
+
+  ::CORBA::Boolean _is_a (char const *logical_type_id) override;
+
+  void _dispatch (
+      TAO_ServerRequest &req,
+      TAO::Portable_Server::Servant_Upcall *_servant_upcall) override;
+
+  Accessor_Optimized_Interface *_this ();
+
+char const *_interface_repository_id () const override;
+};
+
+class POA_Accessor_Optimized_Interface;
+using POA_Accessor_Optimized_Interface_ptr = POA_Accessor_Optimized_Interface *;
+
+class _TAO_Accessor_Optimized_Interface_Direct_Proxy_Impl;
+
+class TAO_IDL_TEST_STUB_Export POA_Accessor_Optimized_Interface
+  : public virtual PortableServer::ServantBase
+{
+protected:
+  POA_Accessor_Optimized_Interface ();
+
+public:
+  /// Useful for template programming.
+  using _stub_type = ::Accessor_Optimized_Interface;
+  using _stub_ptr_type = ::Accessor_Optimized_Interface_ptr;
+  using _stub_var_type = ::Accessor_Optimized_Interface_var;
+
+  POA_Accessor_Optimized_Interface (POA_Accessor_Optimized_Interface const &rhs) = default;
+  ~POA_Accessor_Optimized_Interface () override = default;
+
+  ::CORBA::Boolean _is_a (char const *logical_type_id) override;
+
+  void _dispatch (
+      TAO_ServerRequest & req,
+      TAO::Portable_Server::Servant_Upcall *servant_upcall) override;
+
+  ::Accessor_Optimized_Interface *_this ();
+
+  char const *_interface_repository_id () const override;
+};
+
+class TAO_IDL_TEST_STUB_Export _TAO_Accessor_Optimized_Interface_Direct_Proxy_Impl
+{
+public:
+  virtual ~_TAO_Accessor_Optimized_Interface_Direct_Proxy_Impl ();
+};
+
+class POA_TAO_AMH_Accessor_Optimized_InterfaceResponseHandler;
+using POA_TAO_AMH_Accessor_Optimized_InterfaceResponseHandler_ptr = POA_TAO_AMH_Accessor_Optimized_InterfaceResponseHandler *;
+
+class TAO_IDL_TEST_STUB_Export POA_TAO_AMH_Accessor_Optimized_InterfaceResponseHandler
+  : public TAO_AMH_Response_Handler,
+    public ::AMH_Accessor_Optimized_InterfaceResponseHandler
+{
+public:
+  POA_TAO_AMH_Accessor_Optimized_InterfaceResponseHandler () = default;
+  virtual ~POA_TAO_AMH_Accessor_Optimized_InterfaceResponseHandler () = default;
+};
+
+class POA_AMI_Accessor_Optimized_InterfaceHandler;
+using POA_AMI_Accessor_Optimized_InterfaceHandler_ptr = POA_AMI_Accessor_Optimized_InterfaceHandler *;
+
+class _TAO_AMI_Accessor_Optimized_InterfaceHandler_Direct_Proxy_Impl;
+
+class TAO_IDL_TEST_STUB_Export POA_AMI_Accessor_Optimized_InterfaceHandler
+  : public virtual POA_Messaging::ReplyHandler
+{
+protected:
+  POA_AMI_Accessor_Optimized_InterfaceHandler ();
+
+public:
+  /// Useful for template programming.
+  using _stub_type = ::AMI_Accessor_Optimized_InterfaceHandler;
+  using _stub_ptr_type = ::AMI_Accessor_Optimized_InterfaceHandler_ptr;
+  using _stub_var_type = ::AMI_Accessor_Optimized_InterfaceHandler_var;
+
+  POA_AMI_Accessor_Optimized_InterfaceHandler (POA_AMI_Accessor_Optimized_InterfaceHandler const &rhs) = default;
+  ~POA_AMI_Accessor_Optimized_InterfaceHandler () override = default;
+
+  ::CORBA::Boolean _is_a (char const *logical_type_id) override;
+
+  void _dispatch (
+      TAO_ServerRequest & req,
+      TAO::Portable_Server::Servant_Upcall *servant_upcall) override;
+
+  ::AMI_Accessor_Optimized_InterfaceHandler *_this ();
+
+  char const *_interface_repository_id () const override;
+};
+
+class TAO_IDL_TEST_STUB_Export _TAO_AMI_Accessor_Optimized_InterfaceHandler_Direct_Proxy_Impl
+  : public virtual ::POA_Messaging::_TAO_ReplyHandler_Direct_Proxy_Impl
+{
+public:
+  virtual ~_TAO_AMI_Accessor_Optimized_InterfaceHandler_Direct_Proxy_Impl ();
+};
+
+class POA_AMH_Accessor_Optimized_Second_Interface;
+using POA_AMH_Accessor_Optimized_Second_Interface_ptr = POA_AMH_Accessor_Optimized_Second_Interface *;
+
+class TAO_IDL_TEST_STUB_Export POA_AMH_Accessor_Optimized_Second_Interface
+  : public virtual POA_AMH_Accessor_Optimized_Interface
+
+{
+protected:
+  POA_AMH_Accessor_Optimized_Second_Interface ();
+
+public:
+  POA_AMH_Accessor_Optimized_Second_Interface (POA_AMH_Accessor_Optimized_Second_Interface const &rhs);
+  ~POA_AMH_Accessor_Optimized_Second_Interface () override = default;
+
+  ::CORBA::Boolean _is_a (char const *logical_type_id) override;
+
+  void _dispatch (
+      TAO_ServerRequest &req,
+      TAO::Portable_Server::Servant_Upcall *_servant_upcall) override;
+
+  Accessor_Optimized_Second_Interface *_this ();
+
+char const *_interface_repository_id () const override;
+};
+
+class POA_Accessor_Optimized_Second_Interface;
+using POA_Accessor_Optimized_Second_Interface_ptr = POA_Accessor_Optimized_Second_Interface *;
+
+class _TAO_Accessor_Optimized_Second_Interface_Direct_Proxy_Impl;
+
+class TAO_IDL_TEST_STUB_Export POA_Accessor_Optimized_Second_Interface
+  : public virtual POA_Accessor_Optimized_Interface
+{
+protected:
+  POA_Accessor_Optimized_Second_Interface ();
+
+public:
+  /// Useful for template programming.
+  using _stub_type = ::Accessor_Optimized_Second_Interface;
+  using _stub_ptr_type = ::Accessor_Optimized_Second_Interface_ptr;
+  using _stub_var_type = ::Accessor_Optimized_Second_Interface_var;
+
+  POA_Accessor_Optimized_Second_Interface (POA_Accessor_Optimized_Second_Interface const &rhs) = default;
+  ~POA_Accessor_Optimized_Second_Interface () override = default;
+
+  ::CORBA::Boolean _is_a (char const *logical_type_id) override;
+
+  void _dispatch (
+      TAO_ServerRequest & req,
+      TAO::Portable_Server::Servant_Upcall *servant_upcall) override;
+
+  ::Accessor_Optimized_Second_Interface *_this ();
+
+  char const *_interface_repository_id () const override;
+};
+
+class TAO_IDL_TEST_STUB_Export _TAO_Accessor_Optimized_Second_Interface_Direct_Proxy_Impl
+  : public virtual ::_TAO_Accessor_Optimized_Interface_Direct_Proxy_Impl
+{
+public:
+  virtual ~_TAO_Accessor_Optimized_Second_Interface_Direct_Proxy_Impl ();
+};
+
+class POA_TAO_AMH_Accessor_Optimized_Second_InterfaceResponseHandler;
+using POA_TAO_AMH_Accessor_Optimized_Second_InterfaceResponseHandler_ptr = POA_TAO_AMH_Accessor_Optimized_Second_InterfaceResponseHandler *;
+
+class TAO_IDL_TEST_STUB_Export POA_TAO_AMH_Accessor_Optimized_Second_InterfaceResponseHandler
+  : public TAO_AMH_Response_Handler,
+    public ::AMH_Accessor_Optimized_Second_InterfaceResponseHandler
+{
+public:
+  POA_TAO_AMH_Accessor_Optimized_Second_InterfaceResponseHandler () = default;
+  virtual ~POA_TAO_AMH_Accessor_Optimized_Second_InterfaceResponseHandler () = default;
+};
+
+class POA_AMI_Accessor_Optimized_Second_InterfaceHandler;
+using POA_AMI_Accessor_Optimized_Second_InterfaceHandler_ptr = POA_AMI_Accessor_Optimized_Second_InterfaceHandler *;
+
+class _TAO_AMI_Accessor_Optimized_Second_InterfaceHandler_Direct_Proxy_Impl;
+
+class TAO_IDL_TEST_STUB_Export POA_AMI_Accessor_Optimized_Second_InterfaceHandler
+  : public virtual POA_AMI_Accessor_Optimized_InterfaceHandler
+{
+protected:
+  POA_AMI_Accessor_Optimized_Second_InterfaceHandler ();
+
+public:
+  /// Useful for template programming.
+  using _stub_type = ::AMI_Accessor_Optimized_Second_InterfaceHandler;
+  using _stub_ptr_type = ::AMI_Accessor_Optimized_Second_InterfaceHandler_ptr;
+  using _stub_var_type = ::AMI_Accessor_Optimized_Second_InterfaceHandler_var;
+
+  POA_AMI_Accessor_Optimized_Second_InterfaceHandler (POA_AMI_Accessor_Optimized_Second_InterfaceHandler const &rhs) = default;
+  ~POA_AMI_Accessor_Optimized_Second_InterfaceHandler () override = default;
+
+  ::CORBA::Boolean _is_a (char const *logical_type_id) override;
+
+  void _dispatch (
+      TAO_ServerRequest & req,
+      TAO::Portable_Server::Servant_Upcall *servant_upcall) override;
+
+  ::AMI_Accessor_Optimized_Second_InterfaceHandler *_this ();
+
+  char const *_interface_repository_id () const override;
+};
+
+class TAO_IDL_TEST_STUB_Export _TAO_AMI_Accessor_Optimized_Second_InterfaceHandler_Direct_Proxy_Impl
+  : public virtual ::_TAO_AMI_Accessor_Optimized_InterfaceHandler_Direct_Proxy_Impl
+{
+public:
+  virtual ~_TAO_AMI_Accessor_Optimized_Second_InterfaceHandler_Direct_Proxy_Impl ();
+};
+
+class POA_Accessor_Optimized_Refcount_Base;
+using POA_Accessor_Optimized_Refcount_Base_ptr = POA_Accessor_Optimized_Refcount_Base *;
+// Forward Classes Declaration
+class _TAO_Accessor_Optimized_Refcount_Base_Direct_Proxy_Impl;
+
+class TAO_IDL_TEST_STUB_Export POA_Accessor_Optimized_Refcount_Base
+  : public virtual POA_Accessor_Optimized_Interface,
+    public virtual ::Accessor_Optimized_Refcount_Base
+{
+protected:
+  POA_Accessor_Optimized_Refcount_Base ();
+
+public:
+  virtual ~POA_Accessor_Optimized_Refcount_Base ();
+
+private:
+  POA_Accessor_Optimized_Refcount_Base (POA_Accessor_Optimized_Refcount_Base const &rhs);
+};
+
+class POA_Accessor_Optimized_Refcount_Multi_Derived;
+using POA_Accessor_Optimized_Refcount_Multi_Derived_ptr = POA_Accessor_Optimized_Refcount_Multi_Derived *;
+// Forward Classes Declaration
+class _TAO_Accessor_Optimized_Refcount_Multi_Derived_Direct_Proxy_Impl;
+
+class TAO_IDL_TEST_STUB_Export POA_Accessor_Optimized_Refcount_Multi_Derived
+  : public virtual POA_Accessor_Optimized_Second_Interface,
+    public virtual ::Accessor_Optimized_Refcount_Multi_Derived
+{
+protected:
+  POA_Accessor_Optimized_Refcount_Multi_Derived ();
+
+public:
+  virtual ~POA_Accessor_Optimized_Refcount_Multi_Derived ();
+
+private:
+  POA_Accessor_Optimized_Refcount_Multi_Derived (POA_Accessor_Optimized_Refcount_Multi_Derived const &rhs);
+};
+
+class POA_Accessor_Optimized_Refcount_Inherited;
+using POA_Accessor_Optimized_Refcount_Inherited_ptr = POA_Accessor_Optimized_Refcount_Inherited *;
+// Forward Classes Declaration
+class _TAO_Accessor_Optimized_Refcount_Inherited_Direct_Proxy_Impl;
+
+class TAO_IDL_TEST_STUB_Export POA_Accessor_Optimized_Refcount_Inherited
+  : public virtual POA_Accessor_Optimized_Interface,
+    public virtual ::Accessor_Optimized_Refcount_Inherited
+{
+protected:
+  POA_Accessor_Optimized_Refcount_Inherited ();
+
+public:
+  virtual ~POA_Accessor_Optimized_Refcount_Inherited ();
+
+private:
+  POA_Accessor_Optimized_Refcount_Inherited (POA_Accessor_Optimized_Refcount_Inherited const &rhs);
+};
 
 #include "valuetype_opt_accessorS_T.h"
 
