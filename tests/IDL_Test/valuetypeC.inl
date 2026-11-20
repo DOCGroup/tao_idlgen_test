@@ -180,6 +180,15 @@ Supports_Abstract_Inherited_Operation::_tao_obv_static_repository_id ()
   return "IDL:Supports_Abstract_Inherited_Operation:1.0";
 }
 ACE_INLINE
+Supports_Abstract_Operation::Supports_Abstract_Operation ()
+{}
+
+ACE_INLINE char const *
+Supports_Abstract_Operation::_tao_obv_static_repository_id ()
+{
+  return "IDL:Supports_Abstract_Operation:1.0";
+}
+ACE_INLINE
 Supports_Inherited_Operation::Supports_Inherited_Operation ()
 {}
 

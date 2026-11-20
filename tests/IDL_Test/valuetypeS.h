@@ -265,6 +265,23 @@ namespace TAO
 
 #endif /* end #if !defined */
 
+#if !defined (_SUPPORTS_ABSTRACT_OPERATION__SARG_TRAITS_)
+#define _SUPPORTS_ABSTRACT_OPERATION__SARG_TRAITS_
+
+  template<>
+  class SArg_Traits<::Supports_Abstract_Operation>
+    : public
+        Object_SArg_Traits_T<
+            ::Supports_Abstract_Operation *,
+            ::Supports_Abstract_Operation_var,
+            ::Supports_Abstract_Operation_out,
+            TAO::Any_Insert_Policy_Stream
+          >
+  {
+  };
+
+#endif /* end #if !defined */
+
 #if !defined (_SUPPORTS_INHERITED_OPERATION__SARG_TRAITS_)
 #define _SUPPORTS_INHERITED_OPERATION__SARG_TRAITS_
 

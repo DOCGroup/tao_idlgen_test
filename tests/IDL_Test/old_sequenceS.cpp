@@ -128,7 +128,7 @@ TAO_AMH_TestSeq_Perfect_Hash_OpTable::lookup (char const *str, size_t len)
             {
               char const *s = wordlist[slot].opname;
 
-              if (*str == *s && !std::strncmp (str + 1, s + 1, len - 1))
+              if (*str == *s && !std::strncmp (str + 1, s + 1, len - 1) && (s)[len] == '\0')
                 {
                   return std::addressof (wordlist[slot]);
                 }
@@ -147,7 +147,7 @@ TAO_AMH_TestSeq_Perfect_Hash_OpTable::lookup (char const *str, size_t len)
 
               while (--ptr >= base)
                 {
-                  if (*str == *ptr->opname && !std::strncmp (str + 1, ptr->opname + 1, len - 1))
+                  if (*str == *ptr->opname && !std::strncmp (str + 1, ptr->opname + 1, len - 1) && (ptr->opname)[len] == '\0')
                   {
                     return ptr;
                   }
@@ -352,7 +352,7 @@ TAO_TestSeq_Perfect_Hash_OpTable::lookup (char const *str, size_t len)
             {
               char const *s = wordlist[slot].opname;
 
-              if (*str == *s && !std::strncmp (str + 1, s + 1, len - 1))
+              if (*str == *s && !std::strncmp (str + 1, s + 1, len - 1) && (s)[len] == '\0')
                 {
                   return std::addressof (wordlist[slot]);
                 }
@@ -371,7 +371,7 @@ TAO_TestSeq_Perfect_Hash_OpTable::lookup (char const *str, size_t len)
 
               while (--ptr >= base)
                 {
-                  if (*str == *ptr->opname && !std::strncmp (str + 1, ptr->opname + 1, len - 1))
+                  if (*str == *ptr->opname && !std::strncmp (str + 1, ptr->opname + 1, len - 1) && (ptr->opname)[len] == '\0')
                   {
                     return ptr;
                   }
@@ -697,7 +697,7 @@ TAO_AMI_TestSeqHandler_Perfect_Hash_OpTable::lookup (char const *str, size_t len
         {
           char const *s = wordlist[key].opname;
 
-          if (*str == *s && !std::strncmp (str + 1, s + 1, len - 1))
+          if (*str == *s && !std::strncmp (str + 1, s + 1, len - 1) && (s)[len] == '\0')
             {
               return std::addressof (wordlist[key]);
             }

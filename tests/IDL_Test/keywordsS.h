@@ -93,6 +93,53 @@ namespace TAO
   {
   };
 
+#if !defined (_CON__SARG_TRAITS_)
+#define _CON__SARG_TRAITS_
+
+  template<>
+  class  SArg_Traits<::con>
+    : public Object_SArg_Traits_T<
+        ::con_ptr,
+        ::con_var,
+        ::con_out,
+        TAO::Any_Insert_Policy_Stream>
+  {
+  };
+
+#endif /* end #if !defined */
+
+#if !defined (_AMH_CONEXCEPTIONHOLDER__SARG_TRAITS_)
+#define _AMH_CONEXCEPTIONHOLDER__SARG_TRAITS_
+
+  template<>
+  class SArg_Traits<::AMH_conExceptionHolder>
+    : public
+        Object_SArg_Traits_T<
+            ::AMH_conExceptionHolder *,
+            ::AMH_conExceptionHolder_var,
+            ::AMH_conExceptionHolder_out,
+            TAO::Any_Insert_Policy_Stream
+          >
+  {
+  };
+
+#endif /* end #if !defined */
+
+#if !defined (_AMI_CONHANDLER__SARG_TRAITS_)
+#define _AMI_CONHANDLER__SARG_TRAITS_
+
+  template<>
+  class  SArg_Traits<::AMI_conHandler>
+    : public Object_SArg_Traits_T<
+        ::AMI_conHandler_ptr,
+        ::AMI_conHandler_var,
+        ::AMI_conHandler_out,
+        TAO::Any_Insert_Policy_Stream>
+  {
+  };
+
+#endif /* end #if !defined */
+
   template<>
   class SArg_Traits<::ObjectSeq>
     : public
@@ -162,6 +209,117 @@ namespace TAO
 }
 
 TAO_END_VERSIONED_NAMESPACE_DECL
+
+class POA_AMH_con;
+using POA_AMH_con_ptr = POA_AMH_con *;
+
+class TAO_IDL_TEST_STUB_Export POA_AMH_con
+  : public virtual PortableServer::ServantBase
+{
+protected:
+  POA_AMH_con ();
+
+public:
+  POA_AMH_con (POA_AMH_con const &rhs);
+  ~POA_AMH_con () override = default;
+
+  ::CORBA::Boolean _is_a (char const *logical_type_id) override;
+
+  void _dispatch (
+      TAO_ServerRequest &req,
+      TAO::Portable_Server::Servant_Upcall *_servant_upcall) override;
+
+  con *_this ();
+
+char const *_interface_repository_id () const override;
+};
+
+class POA_con;
+using POA_con_ptr = POA_con *;
+
+class _TAO_con_Direct_Proxy_Impl;
+
+class TAO_IDL_TEST_STUB_Export POA_con
+  : public virtual PortableServer::ServantBase
+{
+protected:
+  POA_con ();
+
+public:
+  /// Useful for template programming.
+  using _stub_type = ::con;
+  using _stub_ptr_type = ::con_ptr;
+  using _stub_var_type = ::con_var;
+
+  POA_con (POA_con const &rhs) = default;
+  ~POA_con () override = default;
+
+  ::CORBA::Boolean _is_a (char const *logical_type_id) override;
+
+  void _dispatch (
+      TAO_ServerRequest & req,
+      TAO::Portable_Server::Servant_Upcall *servant_upcall) override;
+
+  ::con *_this ();
+
+  char const *_interface_repository_id () const override;
+};
+
+class TAO_IDL_TEST_STUB_Export _TAO_con_Direct_Proxy_Impl
+{
+public:
+  virtual ~_TAO_con_Direct_Proxy_Impl ();
+};
+
+class POA_TAO_AMH_conResponseHandler;
+using POA_TAO_AMH_conResponseHandler_ptr = POA_TAO_AMH_conResponseHandler *;
+
+class TAO_IDL_TEST_STUB_Export POA_TAO_AMH_conResponseHandler
+  : public TAO_AMH_Response_Handler,
+    public ::AMH_conResponseHandler
+{
+public:
+  POA_TAO_AMH_conResponseHandler () = default;
+  virtual ~POA_TAO_AMH_conResponseHandler () = default;
+};
+
+class POA_AMI_conHandler;
+using POA_AMI_conHandler_ptr = POA_AMI_conHandler *;
+
+class _TAO_AMI_conHandler_Direct_Proxy_Impl;
+
+class TAO_IDL_TEST_STUB_Export POA_AMI_conHandler
+  : public virtual POA_Messaging::ReplyHandler
+{
+protected:
+  POA_AMI_conHandler ();
+
+public:
+  /// Useful for template programming.
+  using _stub_type = ::AMI_conHandler;
+  using _stub_ptr_type = ::AMI_conHandler_ptr;
+  using _stub_var_type = ::AMI_conHandler_var;
+
+  POA_AMI_conHandler (POA_AMI_conHandler const &rhs) = default;
+  ~POA_AMI_conHandler () override = default;
+
+  ::CORBA::Boolean _is_a (char const *logical_type_id) override;
+
+  void _dispatch (
+      TAO_ServerRequest & req,
+      TAO::Portable_Server::Servant_Upcall *servant_upcall) override;
+
+  ::AMI_conHandler *_this ();
+
+  char const *_interface_repository_id () const override;
+};
+
+class TAO_IDL_TEST_STUB_Export _TAO_AMI_conHandler_Direct_Proxy_Impl
+  : public virtual ::POA_Messaging::_TAO_ReplyHandler_Direct_Proxy_Impl
+{
+public:
+  virtual ~_TAO_AMI_conHandler_Direct_Proxy_Impl ();
+};
 
 class POA_AMH_Testing;
 using POA_AMH_Testing_ptr = POA_AMH_Testing *;

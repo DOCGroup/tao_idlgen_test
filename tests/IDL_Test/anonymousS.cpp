@@ -135,7 +135,7 @@ TAO_All_Anon_AMH_anon_bd_string_test_Perfect_Hash_OpTable::lookup (char const *s
             {
               char const *s = wordlist[slot].opname;
 
-              if (*str == *s && !std::strncmp (str + 1, s + 1, len - 1))
+              if (*str == *s && !std::strncmp (str + 1, s + 1, len - 1) && (s)[len] == '\0')
                 {
                   return std::addressof (wordlist[slot]);
                 }
@@ -154,7 +154,7 @@ TAO_All_Anon_AMH_anon_bd_string_test_Perfect_Hash_OpTable::lookup (char const *s
 
               while (--ptr >= base)
                 {
-                  if (*str == *ptr->opname && !std::strncmp (str + 1, ptr->opname + 1, len - 1))
+                  if (*str == *ptr->opname && !std::strncmp (str + 1, ptr->opname + 1, len - 1) && (ptr->opname)[len] == '\0')
                   {
                     return ptr;
                   }
@@ -595,7 +595,7 @@ TAO_All_Anon_anon_bd_string_test_Perfect_Hash_OpTable::lookup (char const *str, 
             {
               char const *s = wordlist[slot].opname;
 
-              if (*str == *s && !std::strncmp (str + 1, s + 1, len - 1))
+              if (*str == *s && !std::strncmp (str + 1, s + 1, len - 1) && (s)[len] == '\0')
                 {
                   return std::addressof (wordlist[slot]);
                 }
@@ -614,7 +614,7 @@ TAO_All_Anon_anon_bd_string_test_Perfect_Hash_OpTable::lookup (char const *str, 
 
               while (--ptr >= base)
                 {
-                  if (*str == *ptr->opname && !std::strncmp (str + 1, ptr->opname + 1, len - 1))
+                  if (*str == *ptr->opname && !std::strncmp (str + 1, ptr->opname + 1, len - 1) && (ptr->opname)[len] == '\0')
                   {
                     return ptr;
                   }
@@ -1613,7 +1613,7 @@ TAO_All_Anon_AMI_anon_bd_string_testHandler_Perfect_Hash_OpTable::lookup (char c
             {
               char const *s = wordlist[slot].opname;
 
-              if (*str == *s && !std::strncmp (str + 1, s + 1, len - 1))
+              if (*str == *s && !std::strncmp (str + 1, s + 1, len - 1) && (s)[len] == '\0')
                 {
                   return std::addressof (wordlist[slot]);
                 }
@@ -1632,7 +1632,7 @@ TAO_All_Anon_AMI_anon_bd_string_testHandler_Perfect_Hash_OpTable::lookup (char c
 
               while (--ptr >= base)
                 {
-                  if (*str == *ptr->opname && !std::strncmp (str + 1, ptr->opname + 1, len - 1))
+                  if (*str == *ptr->opname && !std::strncmp (str + 1, ptr->opname + 1, len - 1) && (ptr->opname)[len] == '\0')
                   {
                     return ptr;
                   }

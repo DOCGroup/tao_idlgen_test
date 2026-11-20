@@ -23,6 +23,42 @@
  **/
 
 ACE_INLINE
+con::con (
+  TAO_Stub *objref, ::CORBA::Boolean _tao_collocated, TAO_Abstract_ServantBase *servant, TAO_ORB_Core *oc)
+  : ::CORBA::Object (objref, _tao_collocated, servant, oc)
+{
+}
+
+ACE_INLINE
+con::con (::IOP::IOR *ior, TAO_ORB_Core *oc)
+  : ::CORBA::Object (ior, oc)
+{
+}
+ACE_INLINE
+AMH_conExceptionHolder::AMH_conExceptionHolder ()
+  : exception (nullptr)
+{}
+
+ACE_INLINE char const *
+AMH_conExceptionHolder::_tao_obv_static_repository_id ()
+{
+  return "IDL:AMH_conExceptionHolder:1.0";
+}
+
+ACE_INLINE
+AMI_conHandler::AMI_conHandler (
+  TAO_Stub *objref, ::CORBA::Boolean _tao_collocated, TAO_Abstract_ServantBase *servant, TAO_ORB_Core *oc)
+  : ::CORBA::Object (objref, _tao_collocated, servant, oc)
+{
+}
+
+ACE_INLINE
+AMI_conHandler::AMI_conHandler (::IOP::IOR *ior, TAO_ORB_Core *oc)
+  : ::CORBA::Object (ior, oc)
+{
+}
+
+ACE_INLINE
 Testing::Testing (
   TAO_Stub *objref, ::CORBA::Boolean _tao_collocated, TAO_Abstract_ServantBase *servant, TAO_ORB_Core *oc)
   : ::CORBA::Object (objref, _tao_collocated, servant, oc)
