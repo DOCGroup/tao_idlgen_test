@@ -42,6 +42,233 @@ DefaultInitializedValue::_tao_obv_static_repository_id ()
 {
   return "IDL:DefaultInitializedValue:1.0";
 }
+
+ACE_INLINE
+Valuetype_Operation_Base::Valuetype_Operation_Base (
+  TAO_Stub *objref, ::CORBA::Boolean _tao_collocated, TAO_Abstract_ServantBase *servant, TAO_ORB_Core *oc)
+  : ::CORBA::Object (objref, _tao_collocated, servant, oc)
+{
+}
+
+ACE_INLINE
+Valuetype_Operation_Base::Valuetype_Operation_Base (::IOP::IOR *ior, TAO_ORB_Core *oc)
+  : ::CORBA::Object (ior, oc)
+{
+}
+ACE_INLINE
+AMH_Valuetype_Operation_BaseExceptionHolder::AMH_Valuetype_Operation_BaseExceptionHolder ()
+  : exception (nullptr)
+{}
+
+ACE_INLINE char const *
+AMH_Valuetype_Operation_BaseExceptionHolder::_tao_obv_static_repository_id ()
+{
+  return "IDL:AMH_Valuetype_Operation_BaseExceptionHolder:1.0";
+}
+
+ACE_INLINE
+AMI_Valuetype_Operation_BaseHandler::AMI_Valuetype_Operation_BaseHandler (
+  TAO_Stub *objref, ::CORBA::Boolean _tao_collocated, TAO_Abstract_ServantBase *servant, TAO_ORB_Core *oc)
+  : ::CORBA::Object (objref, _tao_collocated, servant, oc)
+{
+}
+
+ACE_INLINE
+AMI_Valuetype_Operation_BaseHandler::AMI_Valuetype_Operation_BaseHandler (::IOP::IOR *ior, TAO_ORB_Core *oc)
+  : ::CORBA::Object (ior, oc)
+{
+}
+
+ACE_INLINE
+Abstract_Operation_Interface::Abstract_Operation_Interface ()
+{}
+
+ACE_INLINE
+Abstract_Operation_Interface::Abstract_Operation_Interface (Abstract_Operation_Interface const &rhs)
+  : ::CORBA::AbstractBase (rhs)
+{}
+
+ACE_INLINE
+Abstract_Operation_Interface::Abstract_Operation_Interface (
+  TAO_Stub *objref, ::CORBA::Boolean _tao_collocated, TAO_Abstract_ServantBase *servant, TAO_ORB_Core *)
+  : ::CORBA::AbstractBase (
+        objref,
+        _tao_collocated,
+        servant
+      )
+{
+}
+ACE_INLINE
+Supports_Abstract_Operation::Supports_Abstract_Operation ()
+{}
+
+ACE_INLINE char const *
+Supports_Abstract_Operation::_tao_obv_static_repository_id ()
+{
+  return "IDL:Supports_Abstract_Operation:1.0";
+}
+ACE_INLINE
+Supports_Inherited_Operation::Supports_Inherited_Operation ()
+{}
+
+ACE_INLINE char const *
+Supports_Inherited_Operation::_tao_obv_static_repository_id ()
+{
+  return "IDL:Supports_Inherited_Operation:1.0";
+}
+
+ACE_INLINE
+Empty_Valuetype_Interface::Empty_Valuetype_Interface (
+  TAO_Stub *objref, ::CORBA::Boolean _tao_collocated, TAO_Abstract_ServantBase *servant, TAO_ORB_Core *oc)
+  : ::CORBA::Object (objref, _tao_collocated, servant, oc)
+{
+}
+
+ACE_INLINE
+Empty_Valuetype_Interface::Empty_Valuetype_Interface (::IOP::IOR *ior, TAO_ORB_Core *oc)
+  : ::CORBA::Object (ior, oc)
+{
+}
+ACE_INLINE
+AMH_Empty_Valuetype_InterfaceExceptionHolder::AMH_Empty_Valuetype_InterfaceExceptionHolder ()
+  : exception (nullptr)
+{}
+
+ACE_INLINE char const *
+AMH_Empty_Valuetype_InterfaceExceptionHolder::_tao_obv_static_repository_id ()
+{
+  return "IDL:AMH_Empty_Valuetype_InterfaceExceptionHolder:1.0";
+}
+
+ACE_INLINE
+AMI_Empty_Valuetype_InterfaceHandler::AMI_Empty_Valuetype_InterfaceHandler (
+  TAO_Stub *objref, ::CORBA::Boolean _tao_collocated, TAO_Abstract_ServantBase *servant, TAO_ORB_Core *oc)
+  : ::CORBA::Object (objref, _tao_collocated, servant, oc)
+{
+}
+
+ACE_INLINE
+AMI_Empty_Valuetype_InterfaceHandler::AMI_Empty_Valuetype_InterfaceHandler (::IOP::IOR *ior, TAO_ORB_Core *oc)
+  : ::CORBA::Object (ior, oc)
+{
+}
+ACE_INLINE
+Supported_Interface_Value::Supported_Interface_Value ()
+{}
+
+ACE_INLINE char const *
+Supported_Interface_Value::_tao_obv_static_repository_id ()
+{
+  return "IDL:Supported_Interface_Value:1.0";
+}
+ACE_INLINE
+Abstract_Supported_Refcount_Base::Abstract_Supported_Refcount_Base ()
+{}
+
+ACE_INLINE char const *
+Abstract_Supported_Refcount_Base::_tao_obv_static_repository_id ()
+{
+  return "IDL:Abstract_Supported_Refcount_Base:1.0";
+}
+ACE_INLINE
+Concrete_Supported_Refcount_Derived::Concrete_Supported_Refcount_Derived ()
+{}
+
+ACE_INLINE char const *
+Concrete_Supported_Refcount_Derived::_tao_obv_static_repository_id ()
+{
+  return "IDL:Concrete_Supported_Refcount_Derived:1.0";
+}
+ACE_INLINE
+Application_Factory_Value::Application_Factory_Value ()
+{}
+
+ACE_INLINE char const *
+Application_Factory_Value::_tao_obv_static_repository_id ()
+{
+  return "IDL:Application_Factory_Value:1.0";
+}
+ACE_INLINE
+Copy_Base::Copy_Base ()
+{}
+
+ACE_INLINE char const *
+Copy_Base::_tao_obv_static_repository_id ()
+{
+  return "IDL:Copy_Base:1.0";
+}
+ACE_INLINE
+Copy_Derived::Copy_Derived ()
+{}
+
+ACE_INLINE char const *
+Copy_Derived::_tao_obv_static_repository_id ()
+{
+  return "IDL:Copy_Derived:1.0";
+}
+ACE_INLINE
+Copy_Operation_Derived::Copy_Operation_Derived ()
+{}
+
+ACE_INLINE char const *
+Copy_Operation_Derived::_tao_obv_static_repository_id ()
+{
+  return "IDL:Copy_Operation_Derived:1.0";
+}
+ACE_INLINE
+Copy_Factory_Derived::Copy_Factory_Derived ()
+{}
+
+ACE_INLINE char const *
+Copy_Factory_Derived::_tao_obv_static_repository_id ()
+{
+  return "IDL:Copy_Factory_Derived:1.0";
+}
+ACE_INLINE
+Copy_Factory_Operation_Derived::Copy_Factory_Operation_Derived ()
+{}
+
+ACE_INLINE char const *
+Copy_Factory_Operation_Derived::_tao_obv_static_repository_id ()
+{
+  return "IDL:Copy_Factory_Operation_Derived:1.0";
+}
+ACE_INLINE
+Copy_Leaf::Copy_Leaf ()
+{}
+
+ACE_INLINE char const *
+Copy_Leaf::_tao_obv_static_repository_id ()
+{
+  return "IDL:Copy_Leaf:1.0";
+}
+ACE_INLINE
+Copy_Alias_Holder::Copy_Alias_Holder ()
+{}
+
+ACE_INLINE char const *
+Copy_Alias_Holder::_tao_obv_static_repository_id ()
+{
+  return "IDL:Copy_Alias_Holder:1.0";
+}
+ACE_INLINE
+Copy_Sequence_Holder::Copy_Sequence_Holder ()
+{}
+
+ACE_INLINE char const *
+Copy_Sequence_Holder::_tao_obv_static_repository_id ()
+{
+  return "IDL:Copy_Sequence_Holder:1.0";
+}
+ACE_INLINE
+Copy_Struct_Holder::Copy_Struct_Holder ()
+{}
+
+ACE_INLINE char const *
+Copy_Struct_Holder::_tao_obv_static_repository_id ()
+{
+  return "IDL:Copy_Struct_Holder:1.0";
+}
 // *************************************************************
 // Inline operations for union MyValueTypeUnion
 // *************************************************************

@@ -315,22 +315,32 @@ AA::BB::AMH_x1ExceptionHolder::_tao_unmarshal (
   ::CORBA::ValueBase_var owner (base);
 
   if (!retval)
+  {
     return false;
+  }
 
   if (is_null_object)
+  {
     return true;
+  }
 
   if (!is_indirected && !base->_tao_unmarshal_v (strm))
+  {
     return false;
+  }
 
   // Now base must point to the unmarshaled object.
   // Align the pointer to the right subobject.
   new_object = AMH_x1ExceptionHolder::_downcast (base);
   if (nullptr == new_object)
+  {
     return false;
+  }
 
   if (is_indirected)
+  {
     new_object->_add_ref ();
+  }
 
   owner._retn ();
   return true;
@@ -1080,22 +1090,32 @@ AA::BB::CC::AMH_x2ExceptionHolder::_tao_unmarshal (
   ::CORBA::ValueBase_var owner (base);
 
   if (!retval)
+  {
     return false;
+  }
 
   if (is_null_object)
+  {
     return true;
+  }
 
   if (!is_indirected && !base->_tao_unmarshal_v (strm))
+  {
     return false;
+  }
 
   // Now base must point to the unmarshaled object.
   // Align the pointer to the right subobject.
   new_object = AMH_x2ExceptionHolder::_downcast (base);
   if (nullptr == new_object)
+  {
     return false;
+  }
 
   if (is_indirected)
+  {
     new_object->_add_ref ();
+  }
 
   owner._retn ();
   return true;
@@ -2118,22 +2138,32 @@ dot::AMH_PersonExceptionHolder::_tao_unmarshal (
   ::CORBA::ValueBase_var owner (base);
 
   if (!retval)
+  {
     return false;
+  }
 
   if (is_null_object)
+  {
     return true;
+  }
 
   if (!is_indirected && !base->_tao_unmarshal_v (strm))
+  {
     return false;
+  }
 
   // Now base must point to the unmarshaled object.
   // Align the pointer to the right subobject.
   new_object = AMH_PersonExceptionHolder::_downcast (base);
   if (nullptr == new_object)
+  {
     return false;
+  }
 
   if (is_indirected)
+  {
     new_object->_add_ref ();
+  }
 
   owner._retn ();
   return true;
@@ -3021,22 +3051,32 @@ dot::AMH_PartyExceptionHolder::_tao_unmarshal (
   ::CORBA::ValueBase_var owner (base);
 
   if (!retval)
+  {
     return false;
+  }
 
   if (is_null_object)
+  {
     return true;
+  }
 
   if (!is_indirected && !base->_tao_unmarshal_v (strm))
+  {
     return false;
+  }
 
   // Now base must point to the unmarshaled object.
   // Align the pointer to the right subobject.
   new_object = AMH_PartyExceptionHolder::_downcast (base);
   if (nullptr == new_object)
+  {
     return false;
+  }
 
   if (is_indirected)
+  {
     new_object->_add_ref ();
+  }
 
   owner._retn ();
   return true;
@@ -3917,22 +3957,32 @@ AMH_OpHolderExceptionHolder::_tao_unmarshal (
   ::CORBA::ValueBase_var owner (base);
 
   if (!retval)
+  {
     return false;
+  }
 
   if (is_null_object)
+  {
     return true;
+  }
 
   if (!is_indirected && !base->_tao_unmarshal_v (strm))
+  {
     return false;
+  }
 
   // Now base must point to the unmarshaled object.
   // Align the pointer to the right subobject.
   new_object = AMH_OpHolderExceptionHolder::_downcast (base);
   if (nullptr == new_object)
+  {
     return false;
+  }
 
   if (is_indirected)
+  {
     new_object->_add_ref ();
+  }
 
   owner._retn ();
   return true;
@@ -4648,22 +4698,32 @@ com::AMH_IFaceExceptionHolder::_tao_unmarshal (
   ::CORBA::ValueBase_var owner (base);
 
   if (!retval)
+  {
     return false;
+  }
 
   if (is_null_object)
+  {
     return true;
+  }
 
   if (!is_indirected && !base->_tao_unmarshal_v (strm))
+  {
     return false;
+  }
 
   // Now base must point to the unmarshaled object.
   // Align the pointer to the right subobject.
   new_object = AMH_IFaceExceptionHolder::_downcast (base);
   if (nullptr == new_object)
+  {
     return false;
+  }
 
   if (is_indirected)
+  {
     new_object->_add_ref ();
+  }
 
   owner._retn ();
   return true;
@@ -5303,22 +5363,32 @@ Y::AMH_ZExceptionHolder::_tao_unmarshal (
   ::CORBA::ValueBase_var owner (base);
 
   if (!retval)
+  {
     return false;
+  }
 
   if (is_null_object)
+  {
     return true;
+  }
 
   if (!is_indirected && !base->_tao_unmarshal_v (strm))
+  {
     return false;
+  }
 
   // Now base must point to the unmarshaled object.
   // Align the pointer to the right subobject.
   new_object = AMH_ZExceptionHolder::_downcast (base);
   if (nullptr == new_object)
+  {
     return false;
+  }
 
   if (is_indirected)
+  {
     new_object->_add_ref ();
+  }
 
   owner._retn ();
   return true;
@@ -6025,22 +6095,32 @@ X::AMH_BIExceptionHolder::_tao_unmarshal (
   ::CORBA::ValueBase_var owner (base);
 
   if (!retval)
+  {
     return false;
+  }
 
   if (is_null_object)
+  {
     return true;
+  }
 
   if (!is_indirected && !base->_tao_unmarshal_v (strm))
+  {
     return false;
+  }
 
   // Now base must point to the unmarshaled object.
   // Align the pointer to the right subobject.
   new_object = AMH_BIExceptionHolder::_downcast (base);
   if (nullptr == new_object)
+  {
     return false;
+  }
 
   if (is_indirected)
+  {
     new_object->_add_ref ();
+  }
 
   owner._retn ();
   return true;
@@ -6771,22 +6851,32 @@ XX::AMH_blah_intfcExceptionHolder::_tao_unmarshal (
   ::CORBA::ValueBase_var owner (base);
 
   if (!retval)
+  {
     return false;
+  }
 
   if (is_null_object)
+  {
     return true;
+  }
 
   if (!is_indirected && !base->_tao_unmarshal_v (strm))
+  {
     return false;
+  }
 
   // Now base must point to the unmarshaled object.
   // Align the pointer to the right subobject.
   new_object = AMH_blah_intfcExceptionHolder::_downcast (base);
   if (nullptr == new_object)
+  {
     return false;
+  }
 
   if (is_indirected)
+  {
     new_object->_add_ref ();
+  }
 
   owner._retn ();
   return true;
@@ -7475,22 +7565,32 @@ XX::AMH_blah0ExceptionHolder::_tao_unmarshal (
   ::CORBA::ValueBase_var owner (base);
 
   if (!retval)
+  {
     return false;
+  }
 
   if (is_null_object)
+  {
     return true;
+  }
 
   if (!is_indirected && !base->_tao_unmarshal_v (strm))
+  {
     return false;
+  }
 
   // Now base must point to the unmarshaled object.
   // Align the pointer to the right subobject.
   new_object = AMH_blah0ExceptionHolder::_downcast (base);
   if (nullptr == new_object)
+  {
     return false;
+  }
 
   if (is_indirected)
+  {
     new_object->_add_ref ();
+  }
 
   owner._retn ();
   return true;
@@ -8123,22 +8223,32 @@ frag::AMH_frag_ifaceExceptionHolder::_tao_unmarshal (
   ::CORBA::ValueBase_var owner (base);
 
   if (!retval)
+  {
     return false;
+  }
 
   if (is_null_object)
+  {
     return true;
+  }
 
   if (!is_indirected && !base->_tao_unmarshal_v (strm))
+  {
     return false;
+  }
 
   // Now base must point to the unmarshaled object.
   // Align the pointer to the right subobject.
   new_object = AMH_frag_ifaceExceptionHolder::_downcast (base);
   if (nullptr == new_object)
+  {
     return false;
+  }
 
   if (is_indirected)
+  {
     new_object->_add_ref ();
+  }
 
   owner._retn ();
   return true;
@@ -8756,22 +8866,32 @@ AMH_gatherExceptionHolder::_tao_unmarshal (
   ::CORBA::ValueBase_var owner (base);
 
   if (!retval)
+  {
     return false;
+  }
 
   if (is_null_object)
+  {
     return true;
+  }
 
   if (!is_indirected && !base->_tao_unmarshal_v (strm))
+  {
     return false;
+  }
 
   // Now base must point to the unmarshaled object.
   // Align the pointer to the right subobject.
   new_object = AMH_gatherExceptionHolder::_downcast (base);
   if (nullptr == new_object)
+  {
     return false;
+  }
 
   if (is_indirected)
+  {
     new_object->_add_ref ();
+  }
 
   owner._retn ();
   return true;
@@ -9568,22 +9688,32 @@ foo::AMH_objExceptionHolder::_tao_unmarshal (
   ::CORBA::ValueBase_var owner (base);
 
   if (!retval)
+  {
     return false;
+  }
 
   if (is_null_object)
+  {
     return true;
+  }
 
   if (!is_indirected && !base->_tao_unmarshal_v (strm))
+  {
     return false;
+  }
 
   // Now base must point to the unmarshaled object.
   // Align the pointer to the right subobject.
   new_object = AMH_objExceptionHolder::_downcast (base);
   if (nullptr == new_object)
+  {
     return false;
+  }
 
   if (is_indirected)
+  {
     new_object->_add_ref ();
+  }
 
   owner._retn ();
   return true;
@@ -10405,22 +10535,32 @@ A::B::AMH_X3ExceptionHolder::_tao_unmarshal (
   ::CORBA::ValueBase_var owner (base);
 
   if (!retval)
+  {
     return false;
+  }
 
   if (is_null_object)
+  {
     return true;
+  }
 
   if (!is_indirected && !base->_tao_unmarshal_v (strm))
+  {
     return false;
+  }
 
   // Now base must point to the unmarshaled object.
   // Align the pointer to the right subobject.
   new_object = AMH_X3ExceptionHolder::_downcast (base);
   if (nullptr == new_object)
+  {
     return false;
+  }
 
   if (is_indirected)
+  {
     new_object->_add_ref ();
+  }
 
   owner._retn ();
   return true;
@@ -11326,22 +11466,32 @@ mA::AMH_AExceptionHolder::_tao_unmarshal (
   ::CORBA::ValueBase_var owner (base);
 
   if (!retval)
+  {
     return false;
+  }
 
   if (is_null_object)
+  {
     return true;
+  }
 
   if (!is_indirected && !base->_tao_unmarshal_v (strm))
+  {
     return false;
+  }
 
   // Now base must point to the unmarshaled object.
   // Align the pointer to the right subobject.
   new_object = AMH_AExceptionHolder::_downcast (base);
   if (nullptr == new_object)
+  {
     return false;
+  }
 
   if (is_indirected)
+  {
     new_object->_add_ref ();
+  }
 
   owner._retn ();
   return true;
@@ -12230,22 +12380,32 @@ mB::AMH_BExceptionHolder::_tao_unmarshal (
   ::CORBA::ValueBase_var owner (base);
 
   if (!retval)
+  {
     return false;
+  }
 
   if (is_null_object)
+  {
     return true;
+  }
 
   if (!is_indirected && !base->_tao_unmarshal_v (strm))
+  {
     return false;
+  }
 
   // Now base must point to the unmarshaled object.
   // Align the pointer to the right subobject.
   new_object = AMH_BExceptionHolder::_downcast (base);
   if (nullptr == new_object)
+  {
     return false;
+  }
 
   if (is_indirected)
+  {
     new_object->_add_ref ();
+  }
 
   owner._retn ();
   return true;
@@ -13015,22 +13175,32 @@ mC::AMH_CExceptionHolder::_tao_unmarshal (
   ::CORBA::ValueBase_var owner (base);
 
   if (!retval)
+  {
     return false;
+  }
 
   if (is_null_object)
+  {
     return true;
+  }
 
   if (!is_indirected && !base->_tao_unmarshal_v (strm))
+  {
     return false;
+  }
 
   // Now base must point to the unmarshaled object.
   // Align the pointer to the right subobject.
   new_object = AMH_CExceptionHolder::_downcast (base);
   if (nullptr == new_object)
+  {
     return false;
+  }
 
   if (is_indirected)
+  {
     new_object->_add_ref ();
+  }
 
   owner._retn ();
   return true;
@@ -13579,22 +13749,32 @@ Schmoik::AMH_fooExceptionHolder::_tao_unmarshal (
   ::CORBA::ValueBase_var owner (base);
 
   if (!retval)
+  {
     return false;
+  }
 
   if (is_null_object)
+  {
     return true;
+  }
 
   if (!is_indirected && !base->_tao_unmarshal_v (strm))
+  {
     return false;
+  }
 
   // Now base must point to the unmarshaled object.
   // Align the pointer to the right subobject.
   new_object = AMH_fooExceptionHolder::_downcast (base);
   if (nullptr == new_object)
+  {
     return false;
+  }
 
   if (is_indirected)
+  {
     new_object->_add_ref ();
+  }
 
   owner._retn ();
   return true;
@@ -14294,22 +14474,32 @@ Thwoik::AMH_TestTypeExceptionHolder::_tao_unmarshal (
   ::CORBA::ValueBase_var owner (base);
 
   if (!retval)
+  {
     return false;
+  }
 
   if (is_null_object)
+  {
     return true;
+  }
 
   if (!is_indirected && !base->_tao_unmarshal_v (strm))
+  {
     return false;
+  }
 
   // Now base must point to the unmarshaled object.
   // Align the pointer to the right subobject.
   new_object = AMH_TestTypeExceptionHolder::_downcast (base);
   if (nullptr == new_object)
+  {
     return false;
+  }
 
   if (is_indirected)
+  {
     new_object->_add_ref ();
+  }
 
   owner._retn ();
   return true;
@@ -14845,22 +15035,32 @@ A_mod::AMH_FooExceptionHolder::_tao_unmarshal (
   ::CORBA::ValueBase_var owner (base);
 
   if (!retval)
+  {
     return false;
+  }
 
   if (is_null_object)
+  {
     return true;
+  }
 
   if (!is_indirected && !base->_tao_unmarshal_v (strm))
+  {
     return false;
+  }
 
   // Now base must point to the unmarshaled object.
   // Align the pointer to the right subobject.
   new_object = AMH_FooExceptionHolder::_downcast (base);
   if (nullptr == new_object)
+  {
     return false;
+  }
 
   if (is_indirected)
+  {
     new_object->_add_ref ();
+  }
 
   owner._retn ();
   return true;
@@ -15405,22 +15605,32 @@ A_mod::B_mod::AMH_FooExceptionHolder::_tao_unmarshal (
   ::CORBA::ValueBase_var owner (base);
 
   if (!retval)
+  {
     return false;
+  }
 
   if (is_null_object)
+  {
     return true;
+  }
 
   if (!is_indirected && !base->_tao_unmarshal_v (strm))
+  {
     return false;
+  }
 
   // Now base must point to the unmarshaled object.
   // Align the pointer to the right subobject.
   new_object = AMH_FooExceptionHolder::_downcast (base);
   if (nullptr == new_object)
+  {
     return false;
+  }
 
   if (is_indirected)
+  {
     new_object->_add_ref ();
+  }
 
   owner._retn ();
   return true;

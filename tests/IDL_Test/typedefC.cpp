@@ -499,22 +499,32 @@ TestModule::AMH_TestInterfaceExceptionHolder::_tao_unmarshal (
   ::CORBA::ValueBase_var owner (base);
 
   if (!retval)
+  {
     return false;
+  }
 
   if (is_null_object)
+  {
     return true;
+  }
 
   if (!is_indirected && !base->_tao_unmarshal_v (strm))
+  {
     return false;
+  }
 
   // Now base must point to the unmarshaled object.
   // Align the pointer to the right subobject.
   new_object = AMH_TestInterfaceExceptionHolder::_downcast (base);
   if (nullptr == new_object)
+  {
     return false;
+  }
 
   if (is_indirected)
+  {
     new_object->_add_ref ();
+  }
 
   owner._retn ();
   return true;
@@ -1343,22 +1353,32 @@ bug_2124::AMH_FooExceptionHolder::_tao_unmarshal (
   ::CORBA::ValueBase_var owner (base);
 
   if (!retval)
+  {
     return false;
+  }
 
   if (is_null_object)
+  {
     return true;
+  }
 
   if (!is_indirected && !base->_tao_unmarshal_v (strm))
+  {
     return false;
+  }
 
   // Now base must point to the unmarshaled object.
   // Align the pointer to the right subobject.
   new_object = AMH_FooExceptionHolder::_downcast (base);
   if (nullptr == new_object)
+  {
     return false;
+  }
 
   if (is_indirected)
+  {
     new_object->_add_ref ();
+  }
 
   owner._retn ();
   return true;
@@ -2124,22 +2144,32 @@ bug_2122::One::AMH_WhateverExceptionHolder::_tao_unmarshal (
   ::CORBA::ValueBase_var owner (base);
 
   if (!retval)
+  {
     return false;
+  }
 
   if (is_null_object)
+  {
     return true;
+  }
 
   if (!is_indirected && !base->_tao_unmarshal_v (strm))
+  {
     return false;
+  }
 
   // Now base must point to the unmarshaled object.
   // Align the pointer to the right subobject.
   new_object = AMH_WhateverExceptionHolder::_downcast (base);
   if (nullptr == new_object)
+  {
     return false;
+  }
 
   if (is_indirected)
+  {
     new_object->_add_ref ();
+  }
 
   owner._retn ();
   return true;
@@ -2778,22 +2808,32 @@ bug_2122::Two::AMH_WhoCaresExceptionHolder::_tao_unmarshal (
   ::CORBA::ValueBase_var owner (base);
 
   if (!retval)
+  {
     return false;
+  }
 
   if (is_null_object)
+  {
     return true;
+  }
 
   if (!is_indirected && !base->_tao_unmarshal_v (strm))
+  {
     return false;
+  }
 
   // Now base must point to the unmarshaled object.
   // Align the pointer to the right subobject.
   new_object = AMH_WhoCaresExceptionHolder::_downcast (base);
   if (nullptr == new_object)
+  {
     return false;
+  }
 
   if (is_indirected)
+  {
     new_object->_add_ref ();
+  }
 
   owner._retn ();
   return true;
@@ -3432,22 +3472,32 @@ bug_2122::Three::AMH_WhoCaresExceptionHolder::_tao_unmarshal (
   ::CORBA::ValueBase_var owner (base);
 
   if (!retval)
+  {
     return false;
+  }
 
   if (is_null_object)
+  {
     return true;
+  }
 
   if (!is_indirected && !base->_tao_unmarshal_v (strm))
+  {
     return false;
+  }
 
   // Now base must point to the unmarshaled object.
   // Align the pointer to the right subobject.
   new_object = AMH_WhoCaresExceptionHolder::_downcast (base);
   if (nullptr == new_object)
+  {
     return false;
+  }
 
   if (is_indirected)
+  {
     new_object->_add_ref ();
+  }
 
   owner._retn ();
   return true;

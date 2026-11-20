@@ -592,22 +592,32 @@ mod2::AMH_fullExceptionHolder::_tao_unmarshal (
   ::CORBA::ValueBase_var owner (base);
 
   if (!retval)
+  {
     return false;
+  }
 
   if (is_null_object)
+  {
     return true;
+  }
 
   if (!is_indirected && !base->_tao_unmarshal_v (strm))
+  {
     return false;
+  }
 
   // Now base must point to the unmarshaled object.
   // Align the pointer to the right subobject.
   new_object = AMH_fullExceptionHolder::_downcast (base);
   if (nullptr == new_object)
+  {
     return false;
+  }
 
   if (is_indirected)
+  {
     new_object->_add_ref ();
+  }
 
   owner._retn ();
   return true;
@@ -1322,22 +1332,32 @@ fwd_mixed_intf::AMH_concrete_parentExceptionHolder::_tao_unmarshal (
   ::CORBA::ValueBase_var owner (base);
 
   if (!retval)
+  {
     return false;
+  }
 
   if (is_null_object)
+  {
     return true;
+  }
 
   if (!is_indirected && !base->_tao_unmarshal_v (strm))
+  {
     return false;
+  }
 
   // Now base must point to the unmarshaled object.
   // Align the pointer to the right subobject.
   new_object = AMH_concrete_parentExceptionHolder::_downcast (base);
   if (nullptr == new_object)
+  {
     return false;
+  }
 
   if (is_indirected)
+  {
     new_object->_add_ref ();
+  }
 
   owner._retn ();
   return true;
@@ -2385,22 +2405,32 @@ obv_fwd::EnclosingType::_tao_unmarshal (
   ::CORBA::ValueBase_var owner (base);
 
   if (!retval)
+  {
     return false;
+  }
 
   if (is_null_object)
+  {
     return true;
+  }
 
   if (!is_indirected && !base->_tao_unmarshal_v (strm))
+  {
     return false;
+  }
 
   // Now base must point to the unmarshaled object.
   // Align the pointer to the right subobject.
   new_object = EnclosingType::_downcast (base);
   if (nullptr == new_object)
+  {
     return false;
+  }
 
   if (is_indirected)
+  {
     new_object->_add_ref ();
+  }
 
   owner._retn ();
   return true;
@@ -2555,22 +2585,32 @@ obv_fwd::ForwardedType::_tao_unmarshal (
   ::CORBA::ValueBase_var owner (base);
 
   if (!retval)
+  {
     return false;
+  }
 
   if (is_null_object)
+  {
     return true;
+  }
 
   if (!is_indirected && !base->_tao_unmarshal_v (strm))
+  {
     return false;
+  }
 
   // Now base must point to the unmarshaled object.
   // Align the pointer to the right subobject.
   new_object = ForwardedType::_downcast (base);
   if (nullptr == new_object)
+  {
     return false;
+  }
 
   if (is_indirected)
+  {
     new_object->_add_ref ();
+  }
 
   owner._retn ();
   return true;
@@ -2662,7 +2702,7 @@ OBV_obv_fwd::EnclosingType::_copy_value ()
     ret_val,
     EnclosingType (
       (forwarded () ?
-        obv_fwd::ForwardedType::_downcast (forwarded ()->_copy_value ())
+        obv_fwd::ForwardedType::_downcast (::CORBA::ValueBase_var (forwarded ()->_copy_value ()).in ())
         : 0)
     ),
     ::CORBA::NO_MEMORY ());
