@@ -4462,7 +4462,7 @@ operator>> (
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean
-::Accessor_Optimized_Leaf::_tao_marshal_state (TAO_OutputCDR &strm, TAO_ChunkInfo &ci) const
+Accessor_Optimized_Leaf::_tao_marshal_state (TAO_OutputCDR &strm, TAO_ChunkInfo &ci) const
 {
   if (! ci.start_chunk (strm))
     return false;
@@ -4479,7 +4479,7 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 }
 
 ::CORBA::Boolean
-::Accessor_Optimized_Leaf::_tao_unmarshal_state (TAO_InputCDR &strm, TAO_ChunkInfo &ci)
+Accessor_Optimized_Leaf::_tao_unmarshal_state (TAO_InputCDR &strm, TAO_ChunkInfo &ci)
 {
   if (!ci.handle_chunking (strm))
     return false;
@@ -4498,7 +4498,7 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 }
 
 void
-::Accessor_Optimized_Leaf::truncation_hook ()
+Accessor_Optimized_Leaf::truncation_hook ()
 {
   this->require_truncation_ = true;
 }
@@ -4549,7 +4549,7 @@ operator>> (
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean
-::Accessor_Optimized_Value::_tao_marshal_state (TAO_OutputCDR &strm, TAO_ChunkInfo &ci) const
+Accessor_Optimized_Value::_tao_marshal_state (TAO_OutputCDR &strm, TAO_ChunkInfo &ci) const
 {
   if (! ci.start_chunk (strm))
     return false;
@@ -4567,7 +4567,7 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 }
 
 ::CORBA::Boolean
-::Accessor_Optimized_Value::_tao_unmarshal_state (TAO_InputCDR &strm, TAO_ChunkInfo &ci)
+Accessor_Optimized_Value::_tao_unmarshal_state (TAO_InputCDR &strm, TAO_ChunkInfo &ci)
 {
   if (!ci.handle_chunking (strm))
     return false;
@@ -4587,7 +4587,7 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 }
 
 void
-::Accessor_Optimized_Value::truncation_hook ()
+Accessor_Optimized_Value::truncation_hook ()
 {
   this->require_truncation_ = true;
 }
@@ -4638,12 +4638,12 @@ operator>> (
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean
-::Accessor_Optimized_Derived::_tao_marshal_state (TAO_OutputCDR &strm, TAO_ChunkInfo &ci) const
+Accessor_Optimized_Derived::_tao_marshal_state (TAO_OutputCDR &strm, TAO_ChunkInfo &ci) const
 {
   if (! ci.start_chunk (strm))
     return false;
 
-  if (!this->::Accessor_Optimized_Value::_tao_marshal_state (strm, ci))
+  if (!this->Accessor_Optimized_Value::_tao_marshal_state (strm, ci))
     {
       return false;
     }
@@ -4666,12 +4666,12 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 }
 
 ::CORBA::Boolean
-::Accessor_Optimized_Derived::_tao_unmarshal_state (TAO_InputCDR &strm, TAO_ChunkInfo &ci)
+Accessor_Optimized_Derived::_tao_unmarshal_state (TAO_InputCDR &strm, TAO_ChunkInfo &ci)
 {
   if (!ci.handle_chunking (strm))
     return false;
 
-  if (!this->::Accessor_Optimized_Value::_tao_unmarshal_state (strm, ci))
+  if (!this->Accessor_Optimized_Value::_tao_unmarshal_state (strm, ci))
     {
       return false;
     }
@@ -4693,7 +4693,7 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 }
 
 void
-::Accessor_Optimized_Derived::truncation_hook ()
+Accessor_Optimized_Derived::truncation_hook ()
 {
   this->require_truncation_ = true;
 }
@@ -4744,12 +4744,12 @@ operator>> (
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean
-::Accessor_Optimized_Operation_Derived::_tao_marshal_state (TAO_OutputCDR &strm, TAO_ChunkInfo &ci) const
+Accessor_Optimized_Operation_Derived::_tao_marshal_state (TAO_OutputCDR &strm, TAO_ChunkInfo &ci) const
 {
   if (! ci.start_chunk (strm))
     return false;
 
-  if (!this->::Accessor_Optimized_Value::_tao_marshal_state (strm, ci))
+  if (!this->Accessor_Optimized_Value::_tao_marshal_state (strm, ci))
     {
       return false;
     }
@@ -4761,12 +4761,12 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 }
 
 ::CORBA::Boolean
-::Accessor_Optimized_Operation_Derived::_tao_unmarshal_state (TAO_InputCDR &strm, TAO_ChunkInfo &ci)
+Accessor_Optimized_Operation_Derived::_tao_unmarshal_state (TAO_InputCDR &strm, TAO_ChunkInfo &ci)
 {
   if (!ci.handle_chunking (strm))
     return false;
 
-  if (!this->::Accessor_Optimized_Value::_tao_unmarshal_state (strm, ci))
+  if (!this->Accessor_Optimized_Value::_tao_unmarshal_state (strm, ci))
     {
       return false;
     }
@@ -4775,7 +4775,7 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 }
 
 void
-::Accessor_Optimized_Operation_Derived::truncation_hook ()
+Accessor_Optimized_Operation_Derived::truncation_hook ()
 {
   this->require_truncation_ = true;
 }
@@ -4855,19 +4855,19 @@ operator>> (
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean
-::AMH_Accessor_Optimized_InterfaceExceptionHolder::_tao_marshal_state (TAO_OutputCDR &, TAO_ChunkInfo &) const
+AMH_Accessor_Optimized_InterfaceExceptionHolder::_tao_marshal_state (TAO_OutputCDR &, TAO_ChunkInfo &) const
 {
   return true;
 }
 
 ::CORBA::Boolean
-::AMH_Accessor_Optimized_InterfaceExceptionHolder::_tao_unmarshal_state (TAO_InputCDR &, TAO_ChunkInfo &)
+AMH_Accessor_Optimized_InterfaceExceptionHolder::_tao_unmarshal_state (TAO_InputCDR &, TAO_ChunkInfo &)
 {
   return true;
 }
 
 void
-::AMH_Accessor_Optimized_InterfaceExceptionHolder::truncation_hook ()
+AMH_Accessor_Optimized_InterfaceExceptionHolder::truncation_hook ()
 {
   this->require_truncation_ = true;
 }
@@ -4976,19 +4976,19 @@ operator>> (
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean
-::AMH_Accessor_Optimized_Second_InterfaceExceptionHolder::_tao_marshal_state (TAO_OutputCDR &, TAO_ChunkInfo &) const
+AMH_Accessor_Optimized_Second_InterfaceExceptionHolder::_tao_marshal_state (TAO_OutputCDR &, TAO_ChunkInfo &) const
 {
   return true;
 }
 
 ::CORBA::Boolean
-::AMH_Accessor_Optimized_Second_InterfaceExceptionHolder::_tao_unmarshal_state (TAO_InputCDR &, TAO_ChunkInfo &)
+AMH_Accessor_Optimized_Second_InterfaceExceptionHolder::_tao_unmarshal_state (TAO_InputCDR &, TAO_ChunkInfo &)
 {
   return true;
 }
 
 void
-::AMH_Accessor_Optimized_Second_InterfaceExceptionHolder::truncation_hook ()
+AMH_Accessor_Optimized_Second_InterfaceExceptionHolder::truncation_hook ()
 {
   this->require_truncation_ = true;
 }
@@ -5068,7 +5068,7 @@ operator>> (
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean
-::Accessor_Optimized_Refcount_Base::_tao_marshal_state (TAO_OutputCDR &strm, TAO_ChunkInfo &ci) const
+Accessor_Optimized_Refcount_Base::_tao_marshal_state (TAO_OutputCDR &strm, TAO_ChunkInfo &ci) const
 {
   if (! ci.start_chunk (strm))
     return false;
@@ -5085,7 +5085,7 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 }
 
 ::CORBA::Boolean
-::Accessor_Optimized_Refcount_Base::_tao_unmarshal_state (TAO_InputCDR &strm, TAO_ChunkInfo &ci)
+Accessor_Optimized_Refcount_Base::_tao_unmarshal_state (TAO_InputCDR &strm, TAO_ChunkInfo &ci)
 {
   if (!ci.handle_chunking (strm))
     return false;
@@ -5104,7 +5104,7 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 }
 
 void
-::Accessor_Optimized_Refcount_Base::truncation_hook ()
+Accessor_Optimized_Refcount_Base::truncation_hook ()
 {
   this->require_truncation_ = true;
 }
@@ -5155,12 +5155,12 @@ operator>> (
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean
-::Accessor_Optimized_Refcount_Derived::_tao_marshal_state (TAO_OutputCDR &strm, TAO_ChunkInfo &ci) const
+Accessor_Optimized_Refcount_Derived::_tao_marshal_state (TAO_OutputCDR &strm, TAO_ChunkInfo &ci) const
 {
   if (! ci.start_chunk (strm))
     return false;
 
-  if (!this->::Accessor_Optimized_Refcount_Base::_tao_marshal_state (strm, ci))
+  if (!this->Accessor_Optimized_Refcount_Base::_tao_marshal_state (strm, ci))
     {
       return false;
     }
@@ -5183,12 +5183,12 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 }
 
 ::CORBA::Boolean
-::Accessor_Optimized_Refcount_Derived::_tao_unmarshal_state (TAO_InputCDR &strm, TAO_ChunkInfo &ci)
+Accessor_Optimized_Refcount_Derived::_tao_unmarshal_state (TAO_InputCDR &strm, TAO_ChunkInfo &ci)
 {
   if (!ci.handle_chunking (strm))
     return false;
 
-  if (!this->::Accessor_Optimized_Refcount_Base::_tao_unmarshal_state (strm, ci))
+  if (!this->Accessor_Optimized_Refcount_Base::_tao_unmarshal_state (strm, ci))
     {
       return false;
     }
@@ -5210,7 +5210,7 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 }
 
 void
-::Accessor_Optimized_Refcount_Derived::truncation_hook ()
+Accessor_Optimized_Refcount_Derived::truncation_hook ()
 {
   this->require_truncation_ = true;
 }
@@ -5261,12 +5261,12 @@ operator>> (
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean
-::Accessor_Optimized_Refcount_Multi_Derived::_tao_marshal_state (TAO_OutputCDR &strm, TAO_ChunkInfo &ci) const
+Accessor_Optimized_Refcount_Multi_Derived::_tao_marshal_state (TAO_OutputCDR &strm, TAO_ChunkInfo &ci) const
 {
   if (! ci.start_chunk (strm))
     return false;
 
-  if (!this->::Accessor_Optimized_Refcount_Base::_tao_marshal_state (strm, ci))
+  if (!this->Accessor_Optimized_Refcount_Base::_tao_marshal_state (strm, ci))
     {
       return false;
     }
@@ -5289,12 +5289,12 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 }
 
 ::CORBA::Boolean
-::Accessor_Optimized_Refcount_Multi_Derived::_tao_unmarshal_state (TAO_InputCDR &strm, TAO_ChunkInfo &ci)
+Accessor_Optimized_Refcount_Multi_Derived::_tao_unmarshal_state (TAO_InputCDR &strm, TAO_ChunkInfo &ci)
 {
   if (!ci.handle_chunking (strm))
     return false;
 
-  if (!this->::Accessor_Optimized_Refcount_Base::_tao_unmarshal_state (strm, ci))
+  if (!this->Accessor_Optimized_Refcount_Base::_tao_unmarshal_state (strm, ci))
     {
       return false;
     }
@@ -5316,7 +5316,7 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 }
 
 void
-::Accessor_Optimized_Refcount_Multi_Derived::truncation_hook ()
+Accessor_Optimized_Refcount_Multi_Derived::truncation_hook ()
 {
   this->require_truncation_ = true;
 }
@@ -5367,7 +5367,7 @@ operator>> (
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean
-::Accessor_Optimized_Refcount_Parent::_tao_marshal_state (TAO_OutputCDR &strm, TAO_ChunkInfo &ci) const
+Accessor_Optimized_Refcount_Parent::_tao_marshal_state (TAO_OutputCDR &strm, TAO_ChunkInfo &ci) const
 {
   if (! ci.start_chunk (strm))
     return false;
@@ -5384,7 +5384,7 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 }
 
 ::CORBA::Boolean
-::Accessor_Optimized_Refcount_Parent::_tao_unmarshal_state (TAO_InputCDR &strm, TAO_ChunkInfo &ci)
+Accessor_Optimized_Refcount_Parent::_tao_unmarshal_state (TAO_InputCDR &strm, TAO_ChunkInfo &ci)
 {
   if (!ci.handle_chunking (strm))
     return false;
@@ -5403,7 +5403,7 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 }
 
 void
-::Accessor_Optimized_Refcount_Parent::truncation_hook ()
+Accessor_Optimized_Refcount_Parent::truncation_hook ()
 {
   this->require_truncation_ = true;
 }
@@ -5454,12 +5454,12 @@ operator>> (
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean
-::Accessor_Optimized_Refcount_Inherited::_tao_marshal_state (TAO_OutputCDR &strm, TAO_ChunkInfo &ci) const
+Accessor_Optimized_Refcount_Inherited::_tao_marshal_state (TAO_OutputCDR &strm, TAO_ChunkInfo &ci) const
 {
   if (! ci.start_chunk (strm))
     return false;
 
-  if (!this->::Accessor_Optimized_Refcount_Parent::_tao_marshal_state (strm, ci))
+  if (!this->Accessor_Optimized_Refcount_Parent::_tao_marshal_state (strm, ci))
     {
       return false;
     }
@@ -5482,12 +5482,12 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 }
 
 ::CORBA::Boolean
-::Accessor_Optimized_Refcount_Inherited::_tao_unmarshal_state (TAO_InputCDR &strm, TAO_ChunkInfo &ci)
+Accessor_Optimized_Refcount_Inherited::_tao_unmarshal_state (TAO_InputCDR &strm, TAO_ChunkInfo &ci)
 {
   if (!ci.handle_chunking (strm))
     return false;
 
-  if (!this->::Accessor_Optimized_Refcount_Parent::_tao_unmarshal_state (strm, ci))
+  if (!this->Accessor_Optimized_Refcount_Parent::_tao_unmarshal_state (strm, ci))
     {
       return false;
     }
@@ -5509,7 +5509,7 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 }
 
 void
-::Accessor_Optimized_Refcount_Inherited::truncation_hook ()
+Accessor_Optimized_Refcount_Inherited::truncation_hook ()
 {
   this->require_truncation_ = true;
 }
@@ -5560,7 +5560,7 @@ operator>> (
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean
-::Accessor_Optimized_Base::_tao_marshal_state (TAO_OutputCDR &strm, TAO_ChunkInfo &ci) const
+Accessor_Optimized_Base::_tao_marshal_state (TAO_OutputCDR &strm, TAO_ChunkInfo &ci) const
 {
   if (! ci.start_chunk (strm))
     return false;
@@ -5577,7 +5577,7 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 }
 
 ::CORBA::Boolean
-::Accessor_Optimized_Base::_tao_unmarshal_state (TAO_InputCDR &strm, TAO_ChunkInfo &ci)
+Accessor_Optimized_Base::_tao_unmarshal_state (TAO_InputCDR &strm, TAO_ChunkInfo &ci)
 {
   if (!ci.handle_chunking (strm))
     return false;
@@ -5596,7 +5596,7 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 }
 
 void
-::Accessor_Optimized_Base::truncation_hook ()
+Accessor_Optimized_Base::truncation_hook ()
 {
   this->require_truncation_ = true;
 }
@@ -5647,12 +5647,12 @@ operator>> (
 TAO_END_VERSIONED_NAMESPACE_DECL
 
 ::CORBA::Boolean
-::Accessor_Optimized_Factory_Derived::_tao_marshal_state (TAO_OutputCDR &strm, TAO_ChunkInfo &ci) const
+Accessor_Optimized_Factory_Derived::_tao_marshal_state (TAO_OutputCDR &strm, TAO_ChunkInfo &ci) const
 {
   if (! ci.start_chunk (strm))
     return false;
 
-  if (!this->::Accessor_Optimized_Base::_tao_marshal_state (strm, ci))
+  if (!this->Accessor_Optimized_Base::_tao_marshal_state (strm, ci))
     {
       return false;
     }
@@ -5664,12 +5664,12 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 }
 
 ::CORBA::Boolean
-::Accessor_Optimized_Factory_Derived::_tao_unmarshal_state (TAO_InputCDR &strm, TAO_ChunkInfo &ci)
+Accessor_Optimized_Factory_Derived::_tao_unmarshal_state (TAO_InputCDR &strm, TAO_ChunkInfo &ci)
 {
   if (!ci.handle_chunking (strm))
     return false;
 
-  if (!this->::Accessor_Optimized_Base::_tao_unmarshal_state (strm, ci))
+  if (!this->Accessor_Optimized_Base::_tao_unmarshal_state (strm, ci))
     {
       return false;
     }
@@ -5678,7 +5678,7 @@ TAO_END_VERSIONED_NAMESPACE_DECL
 }
 
 void
-::Accessor_Optimized_Factory_Derived::truncation_hook ()
+Accessor_Optimized_Factory_Derived::truncation_hook ()
 {
   this->require_truncation_ = true;
 }

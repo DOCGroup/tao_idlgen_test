@@ -2382,6 +2382,49 @@ Supports_Abstract_Operation::_tao_to_value ()
 {
   return this;
 }
+
+Supports_Abstract_Operation_init::Supports_Abstract_Operation_init ()
+{
+}
+
+Supports_Abstract_Operation_init::~Supports_Abstract_Operation_init ()
+{
+}
+
+Supports_Abstract_Operation_init *
+Supports_Abstract_Operation_init::_downcast (::CORBA::ValueFactoryBase *v)
+{
+  return dynamic_cast<::Supports_Abstract_Operation_init *> (v);
+}
+
+char const *
+Supports_Abstract_Operation_init::tao_repository_id ()
+{
+  return ::Supports_Abstract_Operation::_tao_obv_static_repository_id ();
+}
+
+::CORBA::ValueBase *
+Supports_Abstract_Operation_init::create_for_unmarshal ()
+{
+  ::CORBA::ValueBase *ret_val {};
+  ACE_NEW_THROW_EX (
+      ret_val,
+      OBV_Supports_Abstract_Operation,
+      ::CORBA::NO_MEMORY ());
+  return ret_val;
+}
+
+::CORBA::AbstractBase_ptr
+Supports_Abstract_Operation_init::create_for_unmarshal_abstract ()
+{
+  ::CORBA::AbstractBase *ret_val {};
+  ACE_NEW_THROW_EX (
+      ret_val,
+      OBV_Supports_Abstract_Operation,
+      ::CORBA::NO_MEMORY ()
+    );
+  return ret_val;
+}
 static TAO::TypeCode::Value_Field<char const *, ::CORBA::TypeCode_ptr const *> const _tao_fields_Supports_Inherited_Operation[] =
   {
     { "value", std::addressof (CORBA::_tc_long), ::CORBA::PUBLIC_MEMBER }
@@ -6835,6 +6878,19 @@ OBV_Supports_Abstract_Operation::OBV_Supports_Abstract_Operation (
 
 OBV_Supports_Abstract_Operation::~OBV_Supports_Abstract_Operation ()
 {}
+
+::CORBA::ValueBase *
+OBV_Supports_Abstract_Operation::_copy_value ()
+{
+  ::CORBA::ValueBase *ret_val {};
+  ACE_NEW_THROW_EX (
+    ret_val,
+    OBV_Supports_Abstract_Operation (
+      value ()
+    ),
+    ::CORBA::NO_MEMORY ());
+  return ret_val;
+}
 
 ::CORBA::Boolean
 OBV_Supports_Abstract_Operation::_tao_marshal__Supports_Abstract_Operation (TAO_OutputCDR &strm, TAO_ChunkInfo& ci) const
