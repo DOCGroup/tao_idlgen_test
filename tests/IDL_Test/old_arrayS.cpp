@@ -131,7 +131,7 @@ TAO_OldArray_AMH_A_i_Perfect_Hash_OpTable::lookup (char const *str, size_t len)
             {
               char const *s = wordlist[slot].opname;
 
-              if (*str == *s && !std::strncmp (str + 1, s + 1, len - 1) && (s)[len] == '\0')
+              if (len == std::strlen (s) && *str == *s && !std::strncmp (str + 1, s + 1, len - 1))
                 {
                   return std::addressof (wordlist[slot]);
                 }
@@ -150,7 +150,7 @@ TAO_OldArray_AMH_A_i_Perfect_Hash_OpTable::lookup (char const *str, size_t len)
 
               while (--ptr >= base)
                 {
-                  if (*str == *ptr->opname && !std::strncmp (str + 1, ptr->opname + 1, len - 1) && (ptr->opname)[len] == '\0')
+                  if (len == std::strlen (ptr->opname) && *str == *ptr->opname && !std::strncmp (str + 1, ptr->opname + 1, len - 1))
                   {
                     return ptr;
                   }
@@ -505,7 +505,7 @@ TAO_OldArray_A_i_Perfect_Hash_OpTable::lookup (char const *str, size_t len)
             {
               char const *s = wordlist[slot].opname;
 
-              if (*str == *s && !std::strncmp (str + 1, s + 1, len - 1) && (s)[len] == '\0')
+              if (len == std::strlen (s) && *str == *s && !std::strncmp (str + 1, s + 1, len - 1))
                 {
                   return std::addressof (wordlist[slot]);
                 }
@@ -524,7 +524,7 @@ TAO_OldArray_A_i_Perfect_Hash_OpTable::lookup (char const *str, size_t len)
 
               while (--ptr >= base)
                 {
-                  if (*str == *ptr->opname && !std::strncmp (str + 1, ptr->opname + 1, len - 1) && (ptr->opname)[len] == '\0')
+                  if (len == std::strlen (ptr->opname) && *str == *ptr->opname && !std::strncmp (str + 1, ptr->opname + 1, len - 1))
                   {
                     return ptr;
                   }
@@ -1312,7 +1312,7 @@ TAO_OldArray_AMI_A_iHandler_Perfect_Hash_OpTable::lookup (char const *str, size_
             {
               char const *s = wordlist[slot].opname;
 
-              if (*str == *s && !std::strncmp (str + 1, s + 1, len - 1) && (s)[len] == '\0')
+              if (len == std::strlen (s) && *str == *s && !std::strncmp (str + 1, s + 1, len - 1))
                 {
                   return std::addressof (wordlist[slot]);
                 }
@@ -1331,7 +1331,7 @@ TAO_OldArray_AMI_A_iHandler_Perfect_Hash_OpTable::lookup (char const *str, size_
 
               while (--ptr >= base)
                 {
-                  if (*str == *ptr->opname && !std::strncmp (str + 1, ptr->opname + 1, len - 1) && (ptr->opname)[len] == '\0')
+                  if (len == std::strlen (ptr->opname) && *str == *ptr->opname && !std::strncmp (str + 1, ptr->opname + 1, len - 1))
                   {
                     return ptr;
                   }

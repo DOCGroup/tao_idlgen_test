@@ -80,42 +80,6 @@ AMI_Valuetype_Operation_BaseHandler::AMI_Valuetype_Operation_BaseHandler (::IOP:
 }
 
 ACE_INLINE
-Empty_Valuetype_Operation::Empty_Valuetype_Operation (
-  TAO_Stub *objref, ::CORBA::Boolean _tao_collocated, TAO_Abstract_ServantBase *servant, TAO_ORB_Core *oc)
-  : ::CORBA::Object (objref, _tao_collocated, servant, oc)
-{
-}
-
-ACE_INLINE
-Empty_Valuetype_Operation::Empty_Valuetype_Operation (::IOP::IOR *ior, TAO_ORB_Core *oc)
-  : ::CORBA::Object (ior, oc)
-{
-}
-ACE_INLINE
-AMH_Empty_Valuetype_OperationExceptionHolder::AMH_Empty_Valuetype_OperationExceptionHolder ()
-  : exception (nullptr)
-{}
-
-ACE_INLINE char const *
-AMH_Empty_Valuetype_OperationExceptionHolder::_tao_obv_static_repository_id ()
-{
-  return "IDL:AMH_Empty_Valuetype_OperationExceptionHolder:1.0";
-}
-
-ACE_INLINE
-AMI_Empty_Valuetype_OperationHandler::AMI_Empty_Valuetype_OperationHandler (
-  TAO_Stub *objref, ::CORBA::Boolean _tao_collocated, TAO_Abstract_ServantBase *servant, TAO_ORB_Core *oc)
-  : ::CORBA::Object (objref, _tao_collocated, servant, oc)
-{
-}
-
-ACE_INLINE
-AMI_Empty_Valuetype_OperationHandler::AMI_Empty_Valuetype_OperationHandler (::IOP::IOR *ior, TAO_ORB_Core *oc)
-  : ::CORBA::Object (ior, oc)
-{
-}
-
-ACE_INLINE
 Abstract_Operation_Interface::Abstract_Operation_Interface ()
 {}
 
@@ -133,51 +97,6 @@ Abstract_Operation_Interface::Abstract_Operation_Interface (
         servant
       )
 {
-}
-
-ACE_INLINE
-Derived_Abstract_Operation_Interface::Derived_Abstract_Operation_Interface (
-  TAO_Stub *objref, ::CORBA::Boolean _tao_collocated, TAO_Abstract_ServantBase *servant, TAO_ORB_Core *oc)
-  : ::CORBA::AbstractBase (
-        objref,
-        _tao_collocated,
-        servant
-      ),
-    Abstract_Operation_Interface (
-        objref,
-        _tao_collocated,
-        servant
-      ),
-  ::CORBA::Object (objref, _tao_collocated, servant, oc)
-{
-}
-
-ACE_INLINE
-Derived_Abstract_Operation_Interface::Derived_Abstract_Operation_Interface (::IOP::IOR *ior, TAO_ORB_Core *oc)
-  : ::CORBA::Object (ior, oc)
-{
-}
-
-ACE_INLINE
-AMI_Derived_Abstract_Operation_InterfaceHandler::AMI_Derived_Abstract_Operation_InterfaceHandler (
-  TAO_Stub *objref, ::CORBA::Boolean _tao_collocated, TAO_Abstract_ServantBase *servant, TAO_ORB_Core *oc)
-  : ::CORBA::Object (objref, _tao_collocated, servant, oc)
-{
-}
-
-ACE_INLINE
-AMI_Derived_Abstract_Operation_InterfaceHandler::AMI_Derived_Abstract_Operation_InterfaceHandler (::IOP::IOR *ior, TAO_ORB_Core *oc)
-  : ::CORBA::Object (ior, oc)
-{
-}
-ACE_INLINE
-Supports_Abstract_Inherited_Operation::Supports_Abstract_Inherited_Operation ()
-{}
-
-ACE_INLINE char const *
-Supports_Abstract_Inherited_Operation::_tao_obv_static_repository_id ()
-{
-  return "IDL:Supports_Abstract_Inherited_Operation:1.0";
 }
 ACE_INLINE
 Supports_Abstract_Operation::Supports_Abstract_Operation ()

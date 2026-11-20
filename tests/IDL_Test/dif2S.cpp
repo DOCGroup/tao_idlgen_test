@@ -127,7 +127,7 @@ TAO_OldDif2_AMH_ex1_Perfect_Hash_OpTable::lookup (char const *str, size_t len)
         {
           char const *s = wordlist[key].opname;
 
-          if (*str == *s && !std::strncmp (str + 1, s + 1, len - 1) && (s)[len] == '\0')
+          if (len == std::strlen (s) && *str == *s && !std::strncmp (str + 1, s + 1, len - 1))
             {
               return std::addressof (wordlist[key]);
             }
@@ -560,7 +560,7 @@ TAO_OldDif2_ex1_Perfect_Hash_OpTable::lookup (char const *str, size_t len)
         {
           char const *s = wordlist[key].opname;
 
-          if (*str == *s && !std::strncmp (str + 1, s + 1, len - 1) && (s)[len] == '\0')
+          if (len == std::strlen (s) && *str == *s && !std::strncmp (str + 1, s + 1, len - 1))
             {
               return std::addressof (wordlist[key]);
             }
@@ -1663,7 +1663,7 @@ TAO_OldDif2_AMI_ex1Handler_Perfect_Hash_OpTable::lookup (char const *str, size_t
             {
               char const *s = wordlist[slot].opname;
 
-              if (*str == *s && !std::strncmp (str + 1, s + 1, len - 1) && (s)[len] == '\0')
+              if (len == std::strlen (s) && *str == *s && !std::strncmp (str + 1, s + 1, len - 1))
                 {
                   return std::addressof (wordlist[slot]);
                 }
@@ -1682,7 +1682,7 @@ TAO_OldDif2_AMI_ex1Handler_Perfect_Hash_OpTable::lookup (char const *str, size_t
 
               while (--ptr >= base)
                 {
-                  if (*str == *ptr->opname && !std::strncmp (str + 1, ptr->opname + 1, len - 1) && (ptr->opname)[len] == '\0')
+                  if (len == std::strlen (ptr->opname) && *str == *ptr->opname && !std::strncmp (str + 1, ptr->opname + 1, len - 1))
                   {
                     return ptr;
                   }
@@ -3129,7 +3129,7 @@ TAO_OldDif2_AMH_ex2_Perfect_Hash_OpTable::lookup (char const *str, size_t len)
         {
           char const *s = wordlist[key].opname;
 
-          if (*str == *s && !std::strncmp (str + 1, s + 1, len - 1) && (s)[len] == '\0')
+          if (len == std::strlen (s) && *str == *s && !std::strncmp (str + 1, s + 1, len - 1))
             {
               return std::addressof (wordlist[key]);
             }
@@ -3528,7 +3528,7 @@ TAO_OldDif2_ex2_Perfect_Hash_OpTable::lookup (char const *str, size_t len)
         {
           char const *s = wordlist[key].opname;
 
-          if (*str == *s && !std::strncmp (str + 1, s + 1, len - 1) && (s)[len] == '\0')
+          if (len == std::strlen (s) && *str == *s && !std::strncmp (str + 1, s + 1, len - 1))
             {
               return std::addressof (wordlist[key]);
             }
@@ -4508,7 +4508,7 @@ TAO_OldDif2_AMI_ex2Handler_Perfect_Hash_OpTable::lookup (char const *str, size_t
             {
               char const *s = wordlist[slot].opname;
 
-              if (*str == *s && !std::strncmp (str + 1, s + 1, len - 1) && (s)[len] == '\0')
+              if (len == std::strlen (s) && *str == *s && !std::strncmp (str + 1, s + 1, len - 1))
                 {
                   return std::addressof (wordlist[slot]);
                 }
@@ -4527,7 +4527,7 @@ TAO_OldDif2_AMI_ex2Handler_Perfect_Hash_OpTable::lookup (char const *str, size_t
 
               while (--ptr >= base)
                 {
-                  if (*str == *ptr->opname && !std::strncmp (str + 1, ptr->opname + 1, len - 1) && (ptr->opname)[len] == '\0')
+                  if (len == std::strlen (ptr->opname) && *str == *ptr->opname && !std::strncmp (str + 1, ptr->opname + 1, len - 1))
                   {
                     return ptr;
                   }
@@ -5797,7 +5797,7 @@ TAO_OldDif2_AMH_ex3_Perfect_Hash_OpTable::lookup (char const *str, size_t len)
             {
               char const *s = wordlist[slot].opname;
 
-              if (*str == *s && !std::strncmp (str + 1, s + 1, len - 1) && (s)[len] == '\0')
+              if (len == std::strlen (s) && *str == *s && !std::strncmp (str + 1, s + 1, len - 1))
                 {
                   return std::addressof (wordlist[slot]);
                 }
@@ -5816,7 +5816,7 @@ TAO_OldDif2_AMH_ex3_Perfect_Hash_OpTable::lookup (char const *str, size_t len)
 
               while (--ptr >= base)
                 {
-                  if (*str == *ptr->opname && !std::strncmp (str + 1, ptr->opname + 1, len - 1) && (ptr->opname)[len] == '\0')
+                  if (len == std::strlen (ptr->opname) && *str == *ptr->opname && !std::strncmp (str + 1, ptr->opname + 1, len - 1))
                   {
                     return ptr;
                   }
@@ -6216,7 +6216,7 @@ TAO_OldDif2_ex3_Perfect_Hash_OpTable::lookup (char const *str, size_t len)
             {
               char const *s = wordlist[slot].opname;
 
-              if (*str == *s && !std::strncmp (str + 1, s + 1, len - 1) && (s)[len] == '\0')
+              if (len == std::strlen (s) && *str == *s && !std::strncmp (str + 1, s + 1, len - 1))
                 {
                   return std::addressof (wordlist[slot]);
                 }
@@ -6235,7 +6235,7 @@ TAO_OldDif2_ex3_Perfect_Hash_OpTable::lookup (char const *str, size_t len)
 
               while (--ptr >= base)
                 {
-                  if (*str == *ptr->opname && !std::strncmp (str + 1, ptr->opname + 1, len - 1) && (ptr->opname)[len] == '\0')
+                  if (len == std::strlen (ptr->opname) && *str == *ptr->opname && !std::strncmp (str + 1, ptr->opname + 1, len - 1))
                   {
                     return ptr;
                   }
@@ -7129,7 +7129,7 @@ TAO_OldDif2_AMI_ex3Handler_Perfect_Hash_OpTable::lookup (char const *str, size_t
             {
               char const *s = wordlist[slot].opname;
 
-              if (*str == *s && !std::strncmp (str + 1, s + 1, len - 1) && (s)[len] == '\0')
+              if (len == std::strlen (s) && *str == *s && !std::strncmp (str + 1, s + 1, len - 1))
                 {
                   return std::addressof (wordlist[slot]);
                 }
@@ -7148,7 +7148,7 @@ TAO_OldDif2_AMI_ex3Handler_Perfect_Hash_OpTable::lookup (char const *str, size_t
 
               while (--ptr >= base)
                 {
-                  if (*str == *ptr->opname && !std::strncmp (str + 1, ptr->opname + 1, len - 1) && (ptr->opname)[len] == '\0')
+                  if (len == std::strlen (ptr->opname) && *str == *ptr->opname && !std::strncmp (str + 1, ptr->opname + 1, len - 1))
                   {
                     return ptr;
                   }
@@ -8513,68 +8513,68 @@ TAO_OldDif2_AMH_ex4_Perfect_Hash_OpTable::lookup (char const *str, size_t len)
                   break;
                 case  19:
                   resword = std::addressof (wordlist[16]);
-                  if (*str == *resword->opname && !std::strncmp (str + 1, resword->opname + 1, len - 1) && (resword->opname)[len] == '\0')
+                  if (len == std::strlen (resword->opname) && *str == *resword->opname && !std::strncmp (str + 1, resword->opname + 1, len - 1))
                     {
                       return resword;
                     }
                   resword = std::addressof (wordlist[17]);
-                  if (*str == *resword->opname && !std::strncmp (str + 1, resword->opname + 1, len - 1) && (resword->opname)[len] == '\0')
+                  if (len == std::strlen (resword->opname) && *str == *resword->opname && !std::strncmp (str + 1, resword->opname + 1, len - 1))
                     {
                       return resword;
                     }
                   return nullptr;
                 case  20:
                   resword = std::addressof (wordlist[18]);
-                  if (*str == *resword->opname && !std::strncmp (str + 1, resword->opname + 1, len - 1) && (resword->opname)[len] == '\0')
+                  if (len == std::strlen (resword->opname) && *str == *resword->opname && !std::strncmp (str + 1, resword->opname + 1, len - 1))
                     {
                       return resword;
                     }
                   resword = std::addressof (wordlist[19]);
-                  if (*str == *resword->opname && !std::strncmp (str + 1, resword->opname + 1, len - 1) && (resword->opname)[len] == '\0')
+                  if (len == std::strlen (resword->opname) && *str == *resword->opname && !std::strncmp (str + 1, resword->opname + 1, len - 1))
                     {
                       return resword;
                     }
                   resword = std::addressof (wordlist[20]);
-                  if (*str == *resword->opname && !std::strncmp (str + 1, resword->opname + 1, len - 1) && (resword->opname)[len] == '\0')
+                  if (len == std::strlen (resword->opname) && *str == *resword->opname && !std::strncmp (str + 1, resword->opname + 1, len - 1))
                     {
                       return resword;
                     }
                   resword = std::addressof (wordlist[21]);
-                  if (*str == *resword->opname && !std::strncmp (str + 1, resword->opname + 1, len - 1) && (resword->opname)[len] == '\0')
+                  if (len == std::strlen (resword->opname) && *str == *resword->opname && !std::strncmp (str + 1, resword->opname + 1, len - 1))
                     {
                       return resword;
                     }
                   return nullptr;
                 case  21:
                   resword = std::addressof (wordlist[22]);
-                  if (*str == *resword->opname && !std::strncmp (str + 1, resword->opname + 1, len - 1) && (resword->opname)[len] == '\0')
+                  if (len == std::strlen (resword->opname) && *str == *resword->opname && !std::strncmp (str + 1, resword->opname + 1, len - 1))
                     {
                       return resword;
                     }
                   resword = std::addressof (wordlist[23]);
-                  if (*str == *resword->opname && !std::strncmp (str + 1, resword->opname + 1, len - 1) && (resword->opname)[len] == '\0')
+                  if (len == std::strlen (resword->opname) && *str == *resword->opname && !std::strncmp (str + 1, resword->opname + 1, len - 1))
                     {
                       return resword;
                     }
                   resword = std::addressof (wordlist[24]);
-                  if (*str == *resword->opname && !std::strncmp (str + 1, resword->opname + 1, len - 1) && (resword->opname)[len] == '\0')
+                  if (len == std::strlen (resword->opname) && *str == *resword->opname && !std::strncmp (str + 1, resword->opname + 1, len - 1))
                     {
                       return resword;
                     }
                   resword = std::addressof (wordlist[25]);
-                  if (*str == *resword->opname && !std::strncmp (str + 1, resword->opname + 1, len - 1) && (resword->opname)[len] == '\0')
+                  if (len == std::strlen (resword->opname) && *str == *resword->opname && !std::strncmp (str + 1, resword->opname + 1, len - 1))
                     {
                       return resword;
                     }
                   return nullptr;
                 case  22:
                   resword = std::addressof (wordlist[26]);
-                  if (*str == *resword->opname && !std::strncmp (str + 1, resword->opname + 1, len - 1) && (resword->opname)[len] == '\0')
+                  if (len == std::strlen (resword->opname) && *str == *resword->opname && !std::strncmp (str + 1, resword->opname + 1, len - 1))
                     {
                       return resword;
                     }
                   resword = std::addressof (wordlist[27]);
-                  if (*str == *resword->opname && !std::strncmp (str + 1, resword->opname + 1, len - 1) && (resword->opname)[len] == '\0')
+                  if (len == std::strlen (resword->opname) && *str == *resword->opname && !std::strncmp (str + 1, resword->opname + 1, len - 1))
                     {
                       return resword;
                     }
@@ -8593,17 +8593,17 @@ TAO_OldDif2_AMH_ex4_Perfect_Hash_OpTable::lookup (char const *str, size_t len)
                   break;
                 case  29:
                   resword = std::addressof (wordlist[32]);
-                  if (*str == *resword->opname && !std::strncmp (str + 1, resword->opname + 1, len - 1) && (resword->opname)[len] == '\0')
+                  if (len == std::strlen (resword->opname) && *str == *resword->opname && !std::strncmp (str + 1, resword->opname + 1, len - 1))
                     {
                       return resword;
                     }
                   resword = std::addressof (wordlist[33]);
-                  if (*str == *resword->opname && !std::strncmp (str + 1, resword->opname + 1, len - 1) && (resword->opname)[len] == '\0')
+                  if (len == std::strlen (resword->opname) && *str == *resword->opname && !std::strncmp (str + 1, resword->opname + 1, len - 1))
                     {
                       return resword;
                     }
                   resword = std::addressof (wordlist[34]);
-                  if (*str == *resword->opname && !std::strncmp (str + 1, resword->opname + 1, len - 1) && (resword->opname)[len] == '\0')
+                  if (len == std::strlen (resword->opname) && *str == *resword->opname && !std::strncmp (str + 1, resword->opname + 1, len - 1))
                     {
                       return resword;
                     }
@@ -8619,7 +8619,7 @@ TAO_OldDif2_AMH_ex4_Perfect_Hash_OpTable::lookup (char const *str, size_t len)
                   break;
                 default: return nullptr;
                 }
-              if (*str == *resword->opname && !std::strncmp (str + 1, resword->opname + 1, len - 1) && (resword->opname)[len] == '\0')
+              if (len == std::strlen (resword->opname) && *str == *resword->opname && !std::strncmp (str + 1, resword->opname + 1, len - 1))
                 {
                   return resword;
                 }
@@ -9183,68 +9183,68 @@ TAO_OldDif2_ex4_Perfect_Hash_OpTable::lookup (char const *str, size_t len)
                   break;
                 case  19:
                   resword = std::addressof (wordlist[16]);
-                  if (*str == *resword->opname && !std::strncmp (str + 1, resword->opname + 1, len - 1) && (resword->opname)[len] == '\0')
+                  if (len == std::strlen (resword->opname) && *str == *resword->opname && !std::strncmp (str + 1, resword->opname + 1, len - 1))
                     {
                       return resword;
                     }
                   resword = std::addressof (wordlist[17]);
-                  if (*str == *resword->opname && !std::strncmp (str + 1, resword->opname + 1, len - 1) && (resword->opname)[len] == '\0')
+                  if (len == std::strlen (resword->opname) && *str == *resword->opname && !std::strncmp (str + 1, resword->opname + 1, len - 1))
                     {
                       return resword;
                     }
                   return nullptr;
                 case  20:
                   resword = std::addressof (wordlist[18]);
-                  if (*str == *resword->opname && !std::strncmp (str + 1, resword->opname + 1, len - 1) && (resword->opname)[len] == '\0')
+                  if (len == std::strlen (resword->opname) && *str == *resword->opname && !std::strncmp (str + 1, resword->opname + 1, len - 1))
                     {
                       return resword;
                     }
                   resword = std::addressof (wordlist[19]);
-                  if (*str == *resword->opname && !std::strncmp (str + 1, resword->opname + 1, len - 1) && (resword->opname)[len] == '\0')
+                  if (len == std::strlen (resword->opname) && *str == *resword->opname && !std::strncmp (str + 1, resword->opname + 1, len - 1))
                     {
                       return resword;
                     }
                   resword = std::addressof (wordlist[20]);
-                  if (*str == *resword->opname && !std::strncmp (str + 1, resword->opname + 1, len - 1) && (resword->opname)[len] == '\0')
+                  if (len == std::strlen (resword->opname) && *str == *resword->opname && !std::strncmp (str + 1, resword->opname + 1, len - 1))
                     {
                       return resword;
                     }
                   resword = std::addressof (wordlist[21]);
-                  if (*str == *resword->opname && !std::strncmp (str + 1, resword->opname + 1, len - 1) && (resword->opname)[len] == '\0')
+                  if (len == std::strlen (resword->opname) && *str == *resword->opname && !std::strncmp (str + 1, resword->opname + 1, len - 1))
                     {
                       return resword;
                     }
                   return nullptr;
                 case  21:
                   resword = std::addressof (wordlist[22]);
-                  if (*str == *resword->opname && !std::strncmp (str + 1, resword->opname + 1, len - 1) && (resword->opname)[len] == '\0')
+                  if (len == std::strlen (resword->opname) && *str == *resword->opname && !std::strncmp (str + 1, resword->opname + 1, len - 1))
                     {
                       return resword;
                     }
                   resword = std::addressof (wordlist[23]);
-                  if (*str == *resword->opname && !std::strncmp (str + 1, resword->opname + 1, len - 1) && (resword->opname)[len] == '\0')
+                  if (len == std::strlen (resword->opname) && *str == *resword->opname && !std::strncmp (str + 1, resword->opname + 1, len - 1))
                     {
                       return resword;
                     }
                   resword = std::addressof (wordlist[24]);
-                  if (*str == *resword->opname && !std::strncmp (str + 1, resword->opname + 1, len - 1) && (resword->opname)[len] == '\0')
+                  if (len == std::strlen (resword->opname) && *str == *resword->opname && !std::strncmp (str + 1, resword->opname + 1, len - 1))
                     {
                       return resword;
                     }
                   resword = std::addressof (wordlist[25]);
-                  if (*str == *resword->opname && !std::strncmp (str + 1, resword->opname + 1, len - 1) && (resword->opname)[len] == '\0')
+                  if (len == std::strlen (resword->opname) && *str == *resword->opname && !std::strncmp (str + 1, resword->opname + 1, len - 1))
                     {
                       return resword;
                     }
                   return nullptr;
                 case  22:
                   resword = std::addressof (wordlist[26]);
-                  if (*str == *resword->opname && !std::strncmp (str + 1, resword->opname + 1, len - 1) && (resword->opname)[len] == '\0')
+                  if (len == std::strlen (resword->opname) && *str == *resword->opname && !std::strncmp (str + 1, resword->opname + 1, len - 1))
                     {
                       return resword;
                     }
                   resword = std::addressof (wordlist[27]);
-                  if (*str == *resword->opname && !std::strncmp (str + 1, resword->opname + 1, len - 1) && (resword->opname)[len] == '\0')
+                  if (len == std::strlen (resword->opname) && *str == *resword->opname && !std::strncmp (str + 1, resword->opname + 1, len - 1))
                     {
                       return resword;
                     }
@@ -9263,17 +9263,17 @@ TAO_OldDif2_ex4_Perfect_Hash_OpTable::lookup (char const *str, size_t len)
                   break;
                 case  29:
                   resword = std::addressof (wordlist[32]);
-                  if (*str == *resword->opname && !std::strncmp (str + 1, resword->opname + 1, len - 1) && (resword->opname)[len] == '\0')
+                  if (len == std::strlen (resword->opname) && *str == *resword->opname && !std::strncmp (str + 1, resword->opname + 1, len - 1))
                     {
                       return resword;
                     }
                   resword = std::addressof (wordlist[33]);
-                  if (*str == *resword->opname && !std::strncmp (str + 1, resword->opname + 1, len - 1) && (resword->opname)[len] == '\0')
+                  if (len == std::strlen (resword->opname) && *str == *resword->opname && !std::strncmp (str + 1, resword->opname + 1, len - 1))
                     {
                       return resword;
                     }
                   resword = std::addressof (wordlist[34]);
-                  if (*str == *resword->opname && !std::strncmp (str + 1, resword->opname + 1, len - 1) && (resword->opname)[len] == '\0')
+                  if (len == std::strlen (resword->opname) && *str == *resword->opname && !std::strncmp (str + 1, resword->opname + 1, len - 1))
                     {
                       return resword;
                     }
@@ -9289,7 +9289,7 @@ TAO_OldDif2_ex4_Perfect_Hash_OpTable::lookup (char const *str, size_t len)
                   break;
                 default: return nullptr;
                 }
-              if (*str == *resword->opname && !std::strncmp (str + 1, resword->opname + 1, len - 1) && (resword->opname)[len] == '\0')
+              if (len == std::strlen (resword->opname) && *str == *resword->opname && !std::strncmp (str + 1, resword->opname + 1, len - 1))
                 {
                   return resword;
                 }
@@ -10547,69 +10547,69 @@ TAO_OldDif2_AMI_ex4Handler_Perfect_Hash_OpTable::lookup (char const *str, size_t
                   break;
                 case   9:
                   resword = std::addressof (wordlist[7]);
-                  if (*str == *resword->opname && !std::strncmp (str + 1, resword->opname + 1, len - 1) && (resword->opname)[len] == '\0')
+                  if (len == std::strlen (resword->opname) && *str == *resword->opname && !std::strncmp (str + 1, resword->opname + 1, len - 1))
                     {
                       return resword;
                     }
                   resword = std::addressof (wordlist[8]);
-                  if (*str == *resword->opname && !std::strncmp (str + 1, resword->opname + 1, len - 1) && (resword->opname)[len] == '\0')
+                  if (len == std::strlen (resword->opname) && *str == *resword->opname && !std::strncmp (str + 1, resword->opname + 1, len - 1))
                     {
                       return resword;
                     }
                   resword = std::addressof (wordlist[9]);
-                  if (*str == *resword->opname && !std::strncmp (str + 1, resword->opname + 1, len - 1) && (resword->opname)[len] == '\0')
+                  if (len == std::strlen (resword->opname) && *str == *resword->opname && !std::strncmp (str + 1, resword->opname + 1, len - 1))
                     {
                       return resword;
                     }
                   resword = std::addressof (wordlist[10]);
-                  if (*str == *resword->opname && !std::strncmp (str + 1, resword->opname + 1, len - 1) && (resword->opname)[len] == '\0')
+                  if (len == std::strlen (resword->opname) && *str == *resword->opname && !std::strncmp (str + 1, resword->opname + 1, len - 1))
                     {
                       return resword;
                     }
                   resword = std::addressof (wordlist[11]);
-                  if (*str == *resword->opname && !std::strncmp (str + 1, resword->opname + 1, len - 1) && (resword->opname)[len] == '\0')
+                  if (len == std::strlen (resword->opname) && *str == *resword->opname && !std::strncmp (str + 1, resword->opname + 1, len - 1))
                     {
                       return resword;
                     }
                   resword = std::addressof (wordlist[12]);
-                  if (*str == *resword->opname && !std::strncmp (str + 1, resword->opname + 1, len - 1) && (resword->opname)[len] == '\0')
+                  if (len == std::strlen (resword->opname) && *str == *resword->opname && !std::strncmp (str + 1, resword->opname + 1, len - 1))
                     {
                       return resword;
                     }
                   resword = std::addressof (wordlist[13]);
-                  if (*str == *resword->opname && !std::strncmp (str + 1, resword->opname + 1, len - 1) && (resword->opname)[len] == '\0')
+                  if (len == std::strlen (resword->opname) && *str == *resword->opname && !std::strncmp (str + 1, resword->opname + 1, len - 1))
                     {
                       return resword;
                     }
                   resword = std::addressof (wordlist[14]);
-                  if (*str == *resword->opname && !std::strncmp (str + 1, resword->opname + 1, len - 1) && (resword->opname)[len] == '\0')
+                  if (len == std::strlen (resword->opname) && *str == *resword->opname && !std::strncmp (str + 1, resword->opname + 1, len - 1))
                     {
                       return resword;
                     }
                   resword = std::addressof (wordlist[15]);
-                  if (*str == *resword->opname && !std::strncmp (str + 1, resword->opname + 1, len - 1) && (resword->opname)[len] == '\0')
+                  if (len == std::strlen (resword->opname) && *str == *resword->opname && !std::strncmp (str + 1, resword->opname + 1, len - 1))
                     {
                       return resword;
                     }
                   resword = std::addressof (wordlist[16]);
-                  if (*str == *resword->opname && !std::strncmp (str + 1, resword->opname + 1, len - 1) && (resword->opname)[len] == '\0')
+                  if (len == std::strlen (resword->opname) && *str == *resword->opname && !std::strncmp (str + 1, resword->opname + 1, len - 1))
                     {
                       return resword;
                     }
                   return nullptr;
                 case  10:
                   resword = std::addressof (wordlist[17]);
-                  if (*str == *resword->opname && !std::strncmp (str + 1, resword->opname + 1, len - 1) && (resword->opname)[len] == '\0')
+                  if (len == std::strlen (resword->opname) && *str == *resword->opname && !std::strncmp (str + 1, resword->opname + 1, len - 1))
                     {
                       return resword;
                     }
                   resword = std::addressof (wordlist[18]);
-                  if (*str == *resword->opname && !std::strncmp (str + 1, resword->opname + 1, len - 1) && (resword->opname)[len] == '\0')
+                  if (len == std::strlen (resword->opname) && *str == *resword->opname && !std::strncmp (str + 1, resword->opname + 1, len - 1))
                     {
                       return resword;
                     }
                   resword = std::addressof (wordlist[19]);
-                  if (*str == *resword->opname && !std::strncmp (str + 1, resword->opname + 1, len - 1) && (resword->opname)[len] == '\0')
+                  if (len == std::strlen (resword->opname) && *str == *resword->opname && !std::strncmp (str + 1, resword->opname + 1, len - 1))
                     {
                       return resword;
                     }
@@ -10631,41 +10631,41 @@ TAO_OldDif2_AMI_ex4Handler_Perfect_Hash_OpTable::lookup (char const *str, size_t
                   break;
                 case  24:
                   resword = std::addressof (wordlist[25]);
-                  if (*str == *resword->opname && !std::strncmp (str + 1, resword->opname + 1, len - 1) && (resword->opname)[len] == '\0')
+                  if (len == std::strlen (resword->opname) && *str == *resword->opname && !std::strncmp (str + 1, resword->opname + 1, len - 1))
                     {
                       return resword;
                     }
                   resword = std::addressof (wordlist[26]);
-                  if (*str == *resword->opname && !std::strncmp (str + 1, resword->opname + 1, len - 1) && (resword->opname)[len] == '\0')
+                  if (len == std::strlen (resword->opname) && *str == *resword->opname && !std::strncmp (str + 1, resword->opname + 1, len - 1))
                     {
                       return resword;
                     }
                   return nullptr;
                 case  25:
                   resword = std::addressof (wordlist[27]);
-                  if (*str == *resword->opname && !std::strncmp (str + 1, resword->opname + 1, len - 1) && (resword->opname)[len] == '\0')
+                  if (len == std::strlen (resword->opname) && *str == *resword->opname && !std::strncmp (str + 1, resword->opname + 1, len - 1))
                     {
                       return resword;
                     }
                   resword = std::addressof (wordlist[28]);
-                  if (*str == *resword->opname && !std::strncmp (str + 1, resword->opname + 1, len - 1) && (resword->opname)[len] == '\0')
+                  if (len == std::strlen (resword->opname) && *str == *resword->opname && !std::strncmp (str + 1, resword->opname + 1, len - 1))
                     {
                       return resword;
                     }
                   resword = std::addressof (wordlist[29]);
-                  if (*str == *resword->opname && !std::strncmp (str + 1, resword->opname + 1, len - 1) && (resword->opname)[len] == '\0')
+                  if (len == std::strlen (resword->opname) && *str == *resword->opname && !std::strncmp (str + 1, resword->opname + 1, len - 1))
                     {
                       return resword;
                     }
                   return nullptr;
                 case  26:
                   resword = std::addressof (wordlist[30]);
-                  if (*str == *resword->opname && !std::strncmp (str + 1, resword->opname + 1, len - 1) && (resword->opname)[len] == '\0')
+                  if (len == std::strlen (resword->opname) && *str == *resword->opname && !std::strncmp (str + 1, resword->opname + 1, len - 1))
                     {
                       return resword;
                     }
                   resword = std::addressof (wordlist[31]);
-                  if (*str == *resword->opname && !std::strncmp (str + 1, resword->opname + 1, len - 1) && (resword->opname)[len] == '\0')
+                  if (len == std::strlen (resword->opname) && *str == *resword->opname && !std::strncmp (str + 1, resword->opname + 1, len - 1))
                     {
                       return resword;
                     }
@@ -10687,12 +10687,12 @@ TAO_OldDif2_AMI_ex4Handler_Perfect_Hash_OpTable::lookup (char const *str, size_t
                   break;
                 case  34:
                   resword = std::addressof (wordlist[37]);
-                  if (*str == *resword->opname && !std::strncmp (str + 1, resword->opname + 1, len - 1) && (resword->opname)[len] == '\0')
+                  if (len == std::strlen (resword->opname) && *str == *resword->opname && !std::strncmp (str + 1, resword->opname + 1, len - 1))
                     {
                       return resword;
                     }
                   resword = std::addressof (wordlist[38]);
-                  if (*str == *resword->opname && !std::strncmp (str + 1, resword->opname + 1, len - 1) && (resword->opname)[len] == '\0')
+                  if (len == std::strlen (resword->opname) && *str == *resword->opname && !std::strncmp (str + 1, resword->opname + 1, len - 1))
                     {
                       return resword;
                     }
@@ -10702,12 +10702,12 @@ TAO_OldDif2_AMI_ex4Handler_Perfect_Hash_OpTable::lookup (char const *str, size_t
                   break;
                 case  36:
                   resword = std::addressof (wordlist[40]);
-                  if (*str == *resword->opname && !std::strncmp (str + 1, resword->opname + 1, len - 1) && (resword->opname)[len] == '\0')
+                  if (len == std::strlen (resword->opname) && *str == *resword->opname && !std::strncmp (str + 1, resword->opname + 1, len - 1))
                     {
                       return resword;
                     }
                   resword = std::addressof (wordlist[41]);
-                  if (*str == *resword->opname && !std::strncmp (str + 1, resword->opname + 1, len - 1) && (resword->opname)[len] == '\0')
+                  if (len == std::strlen (resword->opname) && *str == *resword->opname && !std::strncmp (str + 1, resword->opname + 1, len - 1))
                     {
                       return resword;
                     }
@@ -10717,41 +10717,41 @@ TAO_OldDif2_AMI_ex4Handler_Perfect_Hash_OpTable::lookup (char const *str, size_t
                   break;
                 case  38:
                   resword = std::addressof (wordlist[43]);
-                  if (*str == *resword->opname && !std::strncmp (str + 1, resword->opname + 1, len - 1) && (resword->opname)[len] == '\0')
+                  if (len == std::strlen (resword->opname) && *str == *resword->opname && !std::strncmp (str + 1, resword->opname + 1, len - 1))
                     {
                       return resword;
                     }
                   resword = std::addressof (wordlist[44]);
-                  if (*str == *resword->opname && !std::strncmp (str + 1, resword->opname + 1, len - 1) && (resword->opname)[len] == '\0')
+                  if (len == std::strlen (resword->opname) && *str == *resword->opname && !std::strncmp (str + 1, resword->opname + 1, len - 1))
                     {
                       return resword;
                     }
                   return nullptr;
                 case  39:
                   resword = std::addressof (wordlist[45]);
-                  if (*str == *resword->opname && !std::strncmp (str + 1, resword->opname + 1, len - 1) && (resword->opname)[len] == '\0')
+                  if (len == std::strlen (resword->opname) && *str == *resword->opname && !std::strncmp (str + 1, resword->opname + 1, len - 1))
                     {
                       return resword;
                     }
                   resword = std::addressof (wordlist[46]);
-                  if (*str == *resword->opname && !std::strncmp (str + 1, resword->opname + 1, len - 1) && (resword->opname)[len] == '\0')
+                  if (len == std::strlen (resword->opname) && *str == *resword->opname && !std::strncmp (str + 1, resword->opname + 1, len - 1))
                     {
                       return resword;
                     }
                   resword = std::addressof (wordlist[47]);
-                  if (*str == *resword->opname && !std::strncmp (str + 1, resword->opname + 1, len - 1) && (resword->opname)[len] == '\0')
+                  if (len == std::strlen (resword->opname) && *str == *resword->opname && !std::strncmp (str + 1, resword->opname + 1, len - 1))
                     {
                       return resword;
                     }
                   return nullptr;
                 case  40:
                   resword = std::addressof (wordlist[48]);
-                  if (*str == *resword->opname && !std::strncmp (str + 1, resword->opname + 1, len - 1) && (resword->opname)[len] == '\0')
+                  if (len == std::strlen (resword->opname) && *str == *resword->opname && !std::strncmp (str + 1, resword->opname + 1, len - 1))
                     {
                       return resword;
                     }
                   resword = std::addressof (wordlist[49]);
-                  if (*str == *resword->opname && !std::strncmp (str + 1, resword->opname + 1, len - 1) && (resword->opname)[len] == '\0')
+                  if (len == std::strlen (resword->opname) && *str == *resword->opname && !std::strncmp (str + 1, resword->opname + 1, len - 1))
                     {
                       return resword;
                     }
@@ -10770,12 +10770,12 @@ TAO_OldDif2_AMI_ex4Handler_Perfect_Hash_OpTable::lookup (char const *str, size_t
                   break;
                 case  48:
                   resword = std::addressof (wordlist[54]);
-                  if (*str == *resword->opname && !std::strncmp (str + 1, resword->opname + 1, len - 1) && (resword->opname)[len] == '\0')
+                  if (len == std::strlen (resword->opname) && *str == *resword->opname && !std::strncmp (str + 1, resword->opname + 1, len - 1))
                     {
                       return resword;
                     }
                   resword = std::addressof (wordlist[55]);
-                  if (*str == *resword->opname && !std::strncmp (str + 1, resword->opname + 1, len - 1) && (resword->opname)[len] == '\0')
+                  if (len == std::strlen (resword->opname) && *str == *resword->opname && !std::strncmp (str + 1, resword->opname + 1, len - 1))
                     {
                       return resword;
                     }
@@ -10785,12 +10785,12 @@ TAO_OldDif2_AMI_ex4Handler_Perfect_Hash_OpTable::lookup (char const *str, size_t
                   break;
                 case  50:
                   resword = std::addressof (wordlist[57]);
-                  if (*str == *resword->opname && !std::strncmp (str + 1, resword->opname + 1, len - 1) && (resword->opname)[len] == '\0')
+                  if (len == std::strlen (resword->opname) && *str == *resword->opname && !std::strncmp (str + 1, resword->opname + 1, len - 1))
                     {
                       return resword;
                     }
                   resword = std::addressof (wordlist[58]);
-                  if (*str == *resword->opname && !std::strncmp (str + 1, resword->opname + 1, len - 1) && (resword->opname)[len] == '\0')
+                  if (len == std::strlen (resword->opname) && *str == *resword->opname && !std::strncmp (str + 1, resword->opname + 1, len - 1))
                     {
                       return resword;
                     }
@@ -10824,7 +10824,7 @@ TAO_OldDif2_AMI_ex4Handler_Perfect_Hash_OpTable::lookup (char const *str, size_t
                   break;
                 default: return nullptr;
                 }
-              if (*str == *resword->opname && !std::strncmp (str + 1, resword->opname + 1, len - 1) && (resword->opname)[len] == '\0')
+              if (len == std::strlen (resword->opname) && *str == *resword->opname && !std::strncmp (str + 1, resword->opname + 1, len - 1))
                 {
                   return resword;
                 }
