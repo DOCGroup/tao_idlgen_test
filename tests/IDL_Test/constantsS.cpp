@@ -118,7 +118,7 @@ TAO_ClassConstants_AMH_Iface_Perfect_Hash_OpTable::lookup (char const *str, size
         {
           char const *s = wordlist[key].opname;
 
-          if (len != 0 && *str == *s && len == std::strlen (s) && !std::strncmp (str + 1, s + 1, len - 1))
+          if (*str == *s && len == std::strlen (s) && !std::strncmp (str + 1, s + 1, len - 1))
             {
               return std::addressof (wordlist[key]);
             }
@@ -231,7 +231,7 @@ TAO_ClassConstants_Iface_Perfect_Hash_OpTable::lookup (char const *str, size_t l
         {
           char const *s = wordlist[key].opname;
 
-          if (len != 0 && *str == *s && len == std::strlen (s) && !std::strncmp (str + 1, s + 1, len - 1))
+          if (*str == *s && len == std::strlen (s) && !std::strncmp (str + 1, s + 1, len - 1))
             {
               return std::addressof (wordlist[key]);
             }
@@ -346,7 +346,7 @@ TAO_ClassConstants_AMI_IfaceHandler_Perfect_Hash_OpTable::lookup (char const *st
         {
           char const *s = wordlist[key].opname;
 
-          if (len != 0 && *str == *s && len == std::strlen (s) && !std::strncmp (str + 1, s + 1, len - 1))
+          if (*str == *s && len == std::strlen (s) && !std::strncmp (str + 1, s + 1, len - 1))
             {
               return std::addressof (wordlist[key]);
             }

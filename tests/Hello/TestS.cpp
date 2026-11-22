@@ -115,7 +115,7 @@ TAO_Test_Hello_Perfect_Hash_OpTable::lookup (char const *str, size_t len)
         {
           char const *s = wordlist[key].opname;
 
-          if (len != 0 && *str == *s && len == std::strlen (s) && !std::strncmp (str + 1, s + 1, len - 1))
+          if (*str == *s && len == std::strlen (s) && !std::strncmp (str + 1, s + 1, len - 1))
             {
               return std::addressof (wordlist[key]);
             }

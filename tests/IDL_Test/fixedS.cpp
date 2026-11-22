@@ -128,7 +128,7 @@ TAO_FixedPoint_AMH_FixedOperations_Perfect_Hash_OpTable::lookup (char const *str
             {
               char const *s = wordlist[slot].opname;
 
-              if (len != 0 && *str == *s && len == std::strlen (s) && !std::strncmp (str + 1, s + 1, len - 1))
+              if (*str == *s && len == std::strlen (s) && !std::strncmp (str + 1, s + 1, len - 1))
                 {
                   return std::addressof (wordlist[slot]);
                 }
@@ -147,7 +147,7 @@ TAO_FixedPoint_AMH_FixedOperations_Perfect_Hash_OpTable::lookup (char const *str
 
               while (--ptr >= base)
                 {
-                  if (len != 0 && *str == *ptr->opname && len == std::strlen (ptr->opname) && !std::strncmp (str + 1, ptr->opname + 1, len - 1))
+                  if (*str == *ptr->opname && len == std::strlen (ptr->opname) && !std::strncmp (str + 1, ptr->opname + 1, len - 1))
                   {
                     return ptr;
                   }
@@ -352,7 +352,7 @@ TAO_FixedPoint_FixedOperations_Perfect_Hash_OpTable::lookup (char const *str, si
             {
               char const *s = wordlist[slot].opname;
 
-              if (len != 0 && *str == *s && len == std::strlen (s) && !std::strncmp (str + 1, s + 1, len - 1))
+              if (*str == *s && len == std::strlen (s) && !std::strncmp (str + 1, s + 1, len - 1))
                 {
                   return std::addressof (wordlist[slot]);
                 }
@@ -371,7 +371,7 @@ TAO_FixedPoint_FixedOperations_Perfect_Hash_OpTable::lookup (char const *str, si
 
               while (--ptr >= base)
                 {
-                  if (len != 0 && *str == *ptr->opname && len == std::strlen (ptr->opname) && !std::strncmp (str + 1, ptr->opname + 1, len - 1))
+                  if (*str == *ptr->opname && len == std::strlen (ptr->opname) && !std::strncmp (str + 1, ptr->opname + 1, len - 1))
                   {
                     return ptr;
                   }
@@ -710,7 +710,7 @@ TAO_FixedPoint_AMI_FixedOperationsHandler_Perfect_Hash_OpTable::lookup (char con
         {
           char const *s = wordlist[key].opname;
 
-          if (len != 0 && *str == *s && len == std::strlen (s) && !std::strncmp (str + 1, s + 1, len - 1))
+          if (*str == *s && len == std::strlen (s) && !std::strncmp (str + 1, s + 1, len - 1))
             {
               return std::addressof (wordlist[key]);
             }

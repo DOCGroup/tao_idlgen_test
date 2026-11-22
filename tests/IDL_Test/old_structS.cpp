@@ -120,7 +120,7 @@ TAO_AMH_foo1_Perfect_Hash_OpTable::lookup (char const *str, size_t len)
         {
           char const *s = wordlist[key].opname;
 
-          if (len != 0 && *str == *s && len == std::strlen (s) && !std::strncmp (str + 1, s + 1, len - 1))
+          if (*str == *s && len == std::strlen (s) && !std::strncmp (str + 1, s + 1, len - 1))
             {
               return std::addressof (wordlist[key]);
             }
@@ -279,7 +279,7 @@ TAO_foo1_Perfect_Hash_OpTable::lookup (char const *str, size_t len)
         {
           char const *s = wordlist[key].opname;
 
-          if (len != 0 && *str == *s && len == std::strlen (s) && !std::strncmp (str + 1, s + 1, len - 1))
+          if (*str == *s && len == std::strlen (s) && !std::strncmp (str + 1, s + 1, len - 1))
             {
               return std::addressof (wordlist[key]);
             }
@@ -528,7 +528,7 @@ TAO_AMI_foo1Handler_Perfect_Hash_OpTable::lookup (char const *str, size_t len)
         {
           char const *s = wordlist[key].opname;
 
-          if (len != 0 && *str == *s && len == std::strlen (s) && !std::strncmp (str + 1, s + 1, len - 1))
+          if (*str == *s && len == std::strlen (s) && !std::strncmp (str + 1, s + 1, len - 1))
             {
               return std::addressof (wordlist[key]);
             }
@@ -823,7 +823,7 @@ TAO_AMH_foo2_Perfect_Hash_OpTable::lookup (char const *str, size_t len)
         {
           char const *s = wordlist[key].opname;
 
-          if (len != 0 && *str == *s && len == std::strlen (s) && !std::strncmp (str + 1, s + 1, len - 1))
+          if (*str == *s && len == std::strlen (s) && !std::strncmp (str + 1, s + 1, len - 1))
             {
               return std::addressof (wordlist[key]);
             }
@@ -1029,7 +1029,7 @@ TAO_foo2_Perfect_Hash_OpTable::lookup (char const *str, size_t len)
         {
           char const *s = wordlist[key].opname;
 
-          if (len != 0 && *str == *s && len == std::strlen (s) && !std::strncmp (str + 1, s + 1, len - 1))
+          if (*str == *s && len == std::strlen (s) && !std::strncmp (str + 1, s + 1, len - 1))
             {
               return std::addressof (wordlist[key]);
             }
@@ -1404,7 +1404,7 @@ TAO_AMI_foo2Handler_Perfect_Hash_OpTable::lookup (char const *str, size_t len)
             {
               char const *s = wordlist[slot].opname;
 
-              if (len != 0 && *str == *s && len == std::strlen (s) && !std::strncmp (str + 1, s + 1, len - 1))
+              if (*str == *s && len == std::strlen (s) && !std::strncmp (str + 1, s + 1, len - 1))
                 {
                   return std::addressof (wordlist[slot]);
                 }
@@ -1423,7 +1423,7 @@ TAO_AMI_foo2Handler_Perfect_Hash_OpTable::lookup (char const *str, size_t len)
 
               while (--ptr >= base)
                 {
-                  if (len != 0 && *str == *ptr->opname && len == std::strlen (ptr->opname) && !std::strncmp (str + 1, ptr->opname + 1, len - 1))
+                  if (*str == *ptr->opname && len == std::strlen (ptr->opname) && !std::strncmp (str + 1, ptr->opname + 1, len - 1))
                   {
                     return ptr;
                   }
