@@ -66,6 +66,16 @@ namespace TAO
 #endif /* end #if !defined */
 
   template<>
+  class SArg_Traits<::OctetSequenceTest>
+    : public
+        Var_Size_SArg_Traits_T<
+            ::OctetSequenceTest,
+            TAO::Any_Insert_Policy_Stream
+          >
+  {
+  };
+
+  template<>
   class SArg_Traits<::myfoostructseq>
     : public
         Var_Size_SArg_Traits_T<

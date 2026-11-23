@@ -40,6 +40,7 @@
 #include "tao/ORB_Constants.h"
 #include "tao/Object.h"
 #include "tao/SmartProxies/Smart_Proxies.h"
+#include "tao/TAO_Singleton.h"
 #include "tao/Objref_VarOut_T.h"
 #include "tao/Arg_Traits_T.h"
 #include "tao/Basic_Arguments.h"
